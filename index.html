@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>机器人研究日报 · Robotics Research Daily</title>
+  <meta name="description" content="每日10:00与17:00，追踪VLA、世界动作模型、强化学习和机器人理论。原文证据、实验分析与研究展望。">
+  <meta name="theme-color" content="#1647d9"><link rel="icon" href="./favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<a class="skip" href="#main">跳到日报内容</a>
+<aside class="sidebar">
+  <a class="brand" href="./"><span class="brandmark" aria-hidden="true">R<span>•</span></span><span>机器人研究日报<small>ROBOTICS RESEARCH DAILY</small></span></a>
+  <div class="nav-label">研究方向</div><nav id="categories" aria-label="研究分类"></nav>
+  <div class="sidebar-bottom"><div class="schedule-label">每日两次 · 北京时间</div><div class="schedule"><span>10:00</span><i>／</i><span>17:00</span></div><p>追踪研究进展，积累可连接的思路。</p><a href="#method">检索范围与收录规则 ↗</a></div>
+</aside>
+<div class="workspace">
+  <header class="topbar"><span class="breadcrumb">研究动态 <span>/</span> 日报归档</span><span class="edition-label">Asia/Shanghai · UTC+8</span></header>
+  <main id="main">
+    <div class="heading"><div><div class="eyebrow">RESEARCH BRIEFING</div><h1>机器人研究日报</h1></div><div class="update"><span class="status-dot"></span><span id="last-update">正在读取日报</span></div></div>
+    <div class="overview" id="overview"></div>
+    <section class="reading" aria-label="日报筛选与内容">
+      <div class="toolbar"><label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="搜索论文、关键词或研究思路" aria-label="搜索日报"></label><label class="select-label">期次<select id="edition" aria-label="选择日报期次"></select></label></div>
+      <div id="edition-note" class="edition-note"></div>
+      <div class="result-heading"><h2 id="result-title">全部研究</h2><span id="result-count" aria-live="polite"></span></div>
+      <div id="reports" aria-live="polite"></div>
+    </section>
+    <section class="method" id="method"><div class="section-head"><div class="eyebrow">SOURCES & METHODOLOGY</div><h2>每一条判断，都回到证据</h2></div><div class="method-grid"><div><h3>滚动检索，增量收录</h3><p>arXiv 与 Hugging Face 回看 7 天，机构与中文平台回看 14 天，X 回看 3–7 天；每周扩大至 30 天补漏。优先以 arXiv 编号、DOI、规范链接合并同一研究。</p></div><div><h3>原文事实与研究判断分开</h3><p>每篇分为背景、创新点、实验、结论、评价和发展方向。实验注明证据范围；评价与组合设想属于编辑分析。没有定量证据时不补写数字。</p></div><div><h3>保留时间与版本</h3><p>发布日期用于判断新近性，收录时间用于日报归档。补录与实质修订单独标注；同一论文的转载、项目页和代码链接合并记录。</p></div></div><details class="coverage"><summary>查看本期来源覆盖与限制</summary><div id="source-checks"></div></details></section>
+    <footer><span>机器人研究日报 · 持续归档</span><a href="https://dieofao.github.io/xiaozhi-daily/" target="_blank" rel="noopener noreferrer">版式参考：小小志科研知识库 ↗</a><span>10:00 / 17:00 为检索启动时间，核验后发布</span></footer>
+  </main>
+</div>
+<noscript><p>请启用 JavaScript 阅读分类日报；原始记录保存在 <a href="./data.json">日报数据</a>。</p></noscript>
+<script src="./data.js"></script><script src="./app.js"></script>
+</body></html>
