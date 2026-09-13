@@ -1622,6 +1622,1855 @@
         ],
         "checkedAt": "2026-09-13T09:28:36.599606+00:00"
       }
+    },
+    {
+      "id": "arxiv:2609.05178",
+      "title": "LIBERO-RECOVER: Beyond Task Success Towards Failure Recovery in Robotic Manipulation Models",
+      "zhTitle": "LIBERO-RECOVER：把失败后的恢复能力纳入评测",
+      "category": "vla",
+      "contentTypes": [
+        "paper"
+      ],
+      "innovation": "在 LIBERO 仿真中运行策略采集自然失败，借助视频模型定位和标注失败过程，再划分动作重试、动作调整、物体状态恢复、环境恢复四级。除恢复成功率，还考察失败前后退化与任务间一致性，并收集遥操作恢复轨迹用于训练分析。",
+      "canonicalUrl": "https://arxiv.org/abs/2609.05178",
+      "publishedAt": "2026-09-04T14:15:27Z",
+      "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
+      "evidence": "已核对 HTML 正文及 PDF 表格、末页；v1 存在报告细节待澄清，未做独立复现。",
+      "evidenceDetails": [
+        {
+          "url": "https://arxiv.org/abs/2609.05178",
+          "location": "Abstract；Submission history",
+          "supports": "创新点概述及原始提交时间"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.05178v1",
+          "location": "§3.2–3.5；§4.1–4.2",
+          "supports": "执行诱发且可恢复的失败定义；四级划分；2,178 个场景；恢复成功率与 RC 的定义。"
+        },
+        {
+          "url": "https://arxiv.org/pdf/2609.05178",
+          "location": "第10页 Table 2、Table 3 与 Key Finding 6–7",
+          "supports": "OpenVLA-OFT 混合训练后的恢复均值 20.8%→25.4%，标准 LIBERO 97.1%→96.6%；初始帧提示实验。"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.05178v1",
+          "location": "§3.4 Stage 1；§3.5；§5.1；§5.2.3",
+          "supports": "方法列出多类失败生成器而统计段称 three models；实验为 LIBERO 仿真；动作块长度与恢复实验。"
+        },
+        {
+          "url": "https://arxiv.org/pdf/2609.05178",
+          "location": "第13页 Appendix A",
+          "supports": "附录保留占位文字，未提供正文所指的附加实验细节。"
+        }
+      ],
+      "status": "已完成原文分析",
+      "lastCheckedAt": "2026-09-13T09:48:19.649891+00:00",
+      "aliasIds": [],
+      "lastSeenAt": "2026-09-13T09:50:12.980635+00:00",
+      "updatedAt": "2026-09-13T09:50:12.980635+00:00",
+      "links": [
+        {
+          "label": "原始来源",
+          "url": "https://arxiv.org/abs/2609.05178"
+        },
+        {
+          "label": "论文全文",
+          "url": "https://arxiv.org/html/2609.05178v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2609.05178"
+        }
+      ],
+      "revisionEvents": [],
+      "authors": [
+        "Lin Liu",
+        "Zhicheng Bao",
+        "Lu Zhang",
+        "Ziying Song",
+        "Wu Yang",
+        "Shuai Tao",
+        "Wulong Liu",
+        "Huchuan Lu"
+      ],
+      "tags": [
+        "vla",
+        "wam",
+        "失败恢复",
+        "评测",
+        "LIBERO"
+      ],
+      "type": "研究论文 / 预印本",
+      "version": "v1",
+      "source": "arXiv",
+      "analysisCompletedAt": "2026-09-13T09:48:19.649891+00:00",
+      "reviewNote": "本站补齐既有线索的完整分析；未确认原研究发生新的实质修订。",
+      "featured": false,
+      "popularity": {
+        "score": null,
+        "status": "unmeasured",
+        "basis": "本次未取得可核验的 GitHub stars 或 Hugging Face 论文投票数；缺失不等于零。",
+        "evidence": [],
+        "metrics": {
+          "githubStars": null,
+          "hfUpvotes": null
+        },
+        "checkedAt": "2026-09-13T09:48:19.649891+00:00"
+      },
+      "summary": "把评测起点移到真实策略执行产生的失败状态，揭示“原任务分数高”与“出错后能恢复”之间的差距。",
+      "background": "常见操作基准从预设有效状态出发，用最终是否完成任务评分；物体被撞偏、容器翻倒等执行后果很少被单独评估。手工扰动初始场景也难覆盖机器人自己造成的、需要先修复状态才能继续的失败。",
+      "experiments": "正文报告 2,178 个恢复场景，比较 OpenVLA-OFT、π0/FAST、GR00T 和两类 WAM，全部属于仿真评估。Table 2 中，混合恢复数据后 OpenVLA-OFT 平均恢复成功率从 20.8% 升至 25.4%，标准 LIBERO 平均成功率却由 97.1% 降至 96.6%；短动作块及加入初始帧也改善恢复。",
+      "conclusion": "在失败状态上学会恢复，尚不足以保证策略从正常初态执行时能识别并修复自身错误。论文支持把在线失败识别、状态修复与继续执行分别评测，不能将结果直接解释为真实硬件可靠性。",
+      "evaluation": "编辑分析：最有价值的是恢复能力迁移不足这一诊断。复现信息仍不完整：v1 的生成器列表与统计段数量不一致，PDF 附录仍为占位内容；一致性指标只反映分散程度，高分也可能对应“稳定地失败”。报告应结合恢复成功率阅读。",
+      "futureDirections": "研究假设：可把 FARM 的风险读出接入恢复触发器，再用 MaP-WAM 的历史计划提供失败前参考状态。应在同一失败分布上分别消融触发、记忆和恢复动作，检验闭环收益，并另做真机接触失败测试。",
+      "verificationCaveats": [
+        "作者项目页本次未能读取，未确认基准下载与训练脚本已发布。",
+        "数字只作同表条件下比较；模型生成数量与附录内容仍需作者澄清。"
+      ],
+      "changeType": "analysis-completed",
+      "briefHistory": [
+        {
+          "promotedAt": "2026-09-13T09:50:12.980635+00:00",
+          "previous": {
+            "id": "arxiv:2609.05178",
+            "title": "LIBERO-RECOVER: Beyond Task Success Towards Failure Recovery in Robotic Manipulation Models",
+            "zhTitle": "LIBERO-RECOVER：把失败后的恢复能力纳入评测",
+            "category": "vla",
+            "contentTypes": [
+              "paper"
+            ],
+            "innovation": "从真实模型执行失败构造恢复场景，按动作重试、动作调整、物体状态恢复和环境恢复四层组织，补充只看初始状态任务成功率的评测盲点。",
+            "canonicalUrl": "https://arxiv.org/abs/2609.05178",
+            "publishedAt": "2026-09-04T14:15:27Z",
+            "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
+            "evidence": "已核对 arXiv 原始摘要与提交记录；尚未逐项核验全文方法、实验和开源情况。",
+            "evidenceDetails": [
+              {
+                "url": "https://arxiv.org/abs/2609.05178",
+                "location": "Abstract；Submission history",
+                "supports": "创新点概述及原始提交时间"
+              }
+            ],
+            "status": "待全文核验",
+            "lastCheckedAt": "2026-09-13T09:28:36.599606+00:00",
+            "aliasIds": [],
+            "lastSeenAt": "2026-09-13T09:28:36.599606+00:00",
+            "updatedAt": "2026-09-13T09:19:18.102185+00:00",
+            "links": [
+              {
+                "label": "原始来源",
+                "url": "https://arxiv.org/abs/2609.05178"
+              }
+            ],
+            "revisionEvents": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "arxiv:2609.06009",
+      "title": "How to Learn from What a Human Would Avoid? Intervention-Aware World Models with Real-World RL for Dexterous Manipulation",
+      "zhTitle": "WHIRL：从人类接管信号学习提前避险",
+      "category": "rl",
+      "contentTypes": [
+        "paper"
+      ],
+      "innovation": "冻结示范行为先验，在低维手部协同空间学习残差；一步潜空间世界模型同时预测动态、奖励、终止和下一步接管概率。接管概率只塑造 actor 的风险偏好，不加入 Bellman 奖励目标，避免把操作员习惯直接写成任务回报。",
+      "canonicalUrl": "https://arxiv.org/abs/2609.06009",
+      "publishedAt": "2026-09-05T10:28:23Z",
+      "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
+      "evidence": "已核对 HTML 方法、训练/自主评估协议、主结果叙述与限制；未逐格读取未展开的 Table 1，未独立复现。",
+      "evidenceDetails": [
+        {
+          "url": "https://arxiv.org/abs/2609.06009",
+          "location": "Abstract；Submission history",
+          "supports": "创新点概述及原始提交时间"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.06009v1",
+          "location": "§3.1–3.3，Eq. 3–6",
+          "supports": "脚踏板介入标注、冻结行为先验、手部协同残差、下一步接管预测以及只在 actor 侧使用风险项。"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.06009v1",
+          "location": "§4.1–4.4",
+          "supports": "五项真机任务；相同行为先验；最终成功率评估禁用纠正通道；每个任务—方法组合一个种子和一个操作员。"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.06009v1",
+          "location": "§4.5 Q1、Q2、Q3；§5 Limitations",
+          "supports": "正文报告成功率差值 +15–30 个百分点；Pull Drawer 滚动五回合按步加权接管比例 0.113→0.018（约84%）；actor 风险消融；工作区内泛化和统计限制。"
+        }
+      ],
+      "status": "已完成原文分析",
+      "lastCheckedAt": "2026-09-13T09:48:19.649891+00:00",
+      "aliasIds": [],
+      "lastSeenAt": "2026-09-13T09:50:12.980635+00:00",
+      "updatedAt": "2026-09-13T09:50:12.980635+00:00",
+      "links": [
+        {
+          "label": "原始来源",
+          "url": "https://arxiv.org/abs/2609.06009"
+        },
+        {
+          "label": "论文全文",
+          "url": "https://arxiv.org/html/2609.06009v1"
+        }
+      ],
+      "revisionEvents": [],
+      "authors": [
+        "Jiaju Yin",
+        "Zhenhui Zhang",
+        "Lixin Xu",
+        "Heng Zhang",
+        "Jun Shao",
+        "Yating Feng",
+        "Arash Ajoudani",
+        "Renjing Xu"
+      ],
+      "tags": [
+        "rl",
+        "世界模型",
+        "人类干预",
+        "灵巧手",
+        "残差策略"
+      ],
+      "type": "研究论文 / 预印本",
+      "version": "v1",
+      "source": "arXiv",
+      "analysisCompletedAt": "2026-09-13T09:48:19.649891+00:00",
+      "reviewNote": "本站补齐既有线索的完整分析；未确认原研究发生新的实质修订。",
+      "featured": false,
+      "popularity": {
+        "score": null,
+        "status": "unmeasured",
+        "basis": "本次未取得可核验的 GitHub stars 或 Hugging Face 论文投票数；缺失不等于零。",
+        "evidence": [],
+        "metrics": {
+          "githubStars": null,
+          "hfUpvotes": null
+        },
+        "checkedAt": "2026-09-13T09:48:19.649891+00:00"
+      },
+      "summary": "把人类何时接管机器人学成提前可预测的风险信号，在真实灵巧操作的在线强化学习中减少持续救援。",
+      "background": "人类接管通常被当作纠正动作，接管时机中包含的危险判断没有被充分利用。灵巧手的高维接触探索代价大，仅依赖终止失败信号往往太晚，也增加了操作员和硬件负担。",
+      "experiments": "使用 Franka FR3 与 LEAP Hand 完成抓方块、抓 LEGO、放置、拉抽屉及开抽屉—放物—关抽屉五项真机任务。各方法从相同行为先验开始，最终评估关闭人工纠正；正文报告较最强无模型残差基线提高 15–30 个百分点。抽屉任务末段按控制步数加权的接管比例由 0.113 降至 0.018，约减少 84%；不是接管次数减少 84%。",
+      "conclusion": "受控实验支持“预测接管并在 actor 使用”能降低介入负担；移除该风险项的消融也延迟收敛。验证主要覆盖训练工作区内的位姿随机变化，尚不能推出对陌生物体、操作员或机器人手普遍有效。",
+      "evaluation": "编辑分析：将人类偏好风险与任务价值分开处理，有清楚的工程动机。但每个任务—方法组合只有单个训练种子和操作员，抽屉与长程任务的成功率差异证据较弱；预测的是接管习惯，不能当作形式化安全保证。",
+      "futureDirections": "研究假设：可与触觉滑移检测及显式安全约束结合，让触觉提供早期接触信号、预测头降低危险探索频率。需跨操作员校准风险概率，并比较仅有安全屏障、仅有风险塑形和二者结合时的成功率、干预时长与实际违规数。",
+      "verificationCaveats": [
+        "官方项目页和 PDF 本次未能读取；完整分析依据已读 HTML 正文，未确认代码或权重发布。"
+      ],
+      "changeType": "analysis-completed",
+      "briefHistory": [
+        {
+          "promotedAt": "2026-09-13T09:50:12.980635+00:00",
+          "previous": {
+            "id": "arxiv:2609.06009",
+            "title": "How to Learn from What a Human Would Avoid? Intervention-Aware World Models with Real-World RL for Dexterous Manipulation",
+            "zhTitle": "WHIRL：从人类接管信号学习提前避险",
+            "category": "rl",
+            "contentTypes": [
+              "paper"
+            ],
+            "innovation": "在潜空间世界模型中增加人类接管概率预测头，把操作员何时介入转为未来风险信号，并用于策略侧风险塑形，尝试减少真实灵巧手训练中的介入负担。",
+            "canonicalUrl": "https://arxiv.org/abs/2609.06009",
+            "publishedAt": "2026-09-05T10:28:23Z",
+            "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
+            "evidence": "已核对 arXiv 原始摘要与提交记录；尚未逐项核验全文方法、实验和开源情况。",
+            "evidenceDetails": [
+              {
+                "url": "https://arxiv.org/abs/2609.06009",
+                "location": "Abstract；Submission history",
+                "supports": "创新点概述及原始提交时间"
+              }
+            ],
+            "status": "待全文核验",
+            "lastCheckedAt": "2026-09-13T09:28:36.599606+00:00",
+            "aliasIds": [],
+            "lastSeenAt": "2026-09-13T09:28:36.599606+00:00",
+            "updatedAt": "2026-09-13T09:19:18.102185+00:00",
+            "links": [
+              {
+                "label": "原始来源",
+                "url": "https://arxiv.org/abs/2609.06009"
+              }
+            ],
+            "revisionEvents": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "arxiv:2609.10706",
+      "title": "HuRo: Robotizing Human Videos for Scalable VLA Pretraining",
+      "zhTitle": "HuRo：将人类视频转成机器人观测与动作",
+      "category": "vla",
+      "contentTypes": [
+        "paper"
+      ],
+      "innovation": "按源数据缺失程度补齐相机、手姿与语言标注；在共同坐标中优化机体对齐及动作轨迹，再去除人类手臂、叠加同一轨迹渲染的机器人。由多源视频构建约 63 万片段、1.42 亿帧，并联合预训练视觉与动作路径。",
+      "canonicalUrl": "https://arxiv.org/abs/2609.10706",
+      "publishedAt": "2026-09-09T18:02:05Z",
+      "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
+      "evidence": "已核对 HTML 正文及附录 A–E 的任务、评分与消融；未独立复现，未确认全部数据与代码下载状态。",
+      "evidenceDetails": [
+        {
+          "url": "https://arxiv.org/abs/2609.10706",
+          "location": "Abstract；Submission history",
+          "supports": "创新点概述及原始提交时间"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.10706v1",
+          "location": "§3.1–3.2；Appendix D Table 5",
+          "supports": "观测与动作共同 robotization；约630K片段与142.2M帧；共享相机—机器人对齐及视觉/动作联合训练。"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.10706v1",
+          "location": "§4.1–4.3；Appendix A Table 1、Table 2、§A.3",
+          "supports": "四项ALLEX真机任务；51.5%→80.3%、OOD 34.9%→72.2%；no-overlay OOD 55.7%；部分得分及 ID/OOD 等权总体均值。"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.10706v1",
+          "location": "§4.4–4.5；Appendix B–C、E",
+          "supports": "视觉与动作路径迁移消融；匹配帧预算下的视频生成基线；OpenArm需目标机体微调的迁移验证。"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.10706v1",
+          "location": "§6 Limitations",
+          "supports": "视觉遮挡/补画伪影；无力和触觉监督；运动学重定向不处理自碰撞与物理接触，不保证轨迹可执行。"
+        }
+      ],
+      "status": "已完成原文分析",
+      "lastCheckedAt": "2026-09-13T09:48:19.649891+00:00",
+      "aliasIds": [],
+      "lastSeenAt": "2026-09-13T09:50:12.980635+00:00",
+      "updatedAt": "2026-09-13T09:50:12.980635+00:00",
+      "links": [
+        {
+          "label": "原始来源",
+          "url": "https://arxiv.org/abs/2609.10706"
+        },
+        {
+          "label": "论文全文",
+          "url": "https://arxiv.org/html/2609.10706v1"
+        }
+      ],
+      "revisionEvents": [],
+      "authors": [
+        "Jinho Jeong",
+        "Se June Joo",
+        "Jaehyun Kang",
+        "Dongyun Kim",
+        "Yena Kim",
+        "Hanjung Kim",
+        "Seon Joo Kim"
+      ],
+      "tags": [
+        "vla",
+        "人类视频",
+        "预训练",
+        "数据",
+        "跨机体"
+      ],
+      "type": "研究论文 / 预印本",
+      "version": "v1",
+      "source": "arXiv",
+      "analysisCompletedAt": "2026-09-13T09:48:19.649891+00:00",
+      "reviewNote": "本站补齐既有线索的完整分析；未确认原研究发生新的实质修订。",
+      "featured": false,
+      "popularity": {
+        "score": null,
+        "status": "unmeasured",
+        "basis": "本次未取得可核验的 GitHub stars 或 Hugging Face 论文投票数；缺失不等于零。",
+        "evidence": [],
+        "metrics": {
+          "githubStars": null,
+          "hfUpvotes": null
+        },
+        "checkedAt": "2026-09-13T09:48:19.649891+00:00"
+      },
+      "summary": "把人类视频同时转换为机器人外观和动作监督，研究这种联合对齐如何改善 VLA 的真机完成度与分布外表现。",
+      "background": "人类视频规模大、场景丰富，但相机运动、手部形态和动作接口都与机器人不同。只迁移视觉表征或只重定向动作，会留下观测与执行监督不一致的问题。",
+      "experiments": "在 ALLEX 四项真机操作上保持优化预算、改变预训练数据规模。全量数据使总体完成度由 51.5% 升至 80.3%，OOD 完成度由 34.9% 升至 72.2%；去掉机器人视觉叠加时 OOD 为 55.7%。附录明确：苹果任务按成功计分，其余任务允许分阶段部分得分；80.3% 是 ID/OOD 平均完成度，不能称为整项任务成功率。",
+      "conclusion": "受控消融支持同时对齐机器人观测与动作，比单独迁移视觉或保留人类外观更利于当前设置下的泛化。附录也验证了另一机体上的微调迁移，但仍需要目标任务机器人示范。",
+      "evaluation": "编辑分析：数据处理流程与消融比单一成绩更值得复用。轨迹提供视觉和运动学监督，未包含力、触觉或完整碰撞约束；遮挡与补画亦存在伪影，不能直接当作可执行机器人示范。试验回合有限，完成度与实际部署可靠性要分开。",
+      "futureDirections": "研究假设：可将 HuRo 用于 OpenWAM 的多源预训练，并通过约束流形上的 IK 或碰撞过滤提高动作监督质量。应固定视频数量比较几何过滤、接触提示和真实力觉数据混训，检验是否改善接触任务而非只改善视觉迁移。",
+      "verificationCaveats": [
+        "作者项目链接可从论文原页追溯，但本次未稳定读取项目正文，未将论文宣称的数据与代码发布等同于已核实下载。"
+      ],
+      "changeType": "analysis-completed",
+      "briefHistory": [
+        {
+          "promotedAt": "2026-09-13T09:50:12.980635+00:00",
+          "previous": {
+            "id": "arxiv:2609.10706",
+            "title": "HuRo: Robotizing Human Videos for Scalable VLA Pretraining",
+            "zhTitle": "HuRo：将人类视频转成机器人观测与动作",
+            "category": "vla",
+            "contentTypes": [
+              "paper"
+            ],
+            "innovation": "将异构人类视频共同转换为机器人对齐的视觉观测和动作轨迹，推断不同标注层级缺少的中间信号，用于扩大 VLA 的人类视频预训练。",
+            "canonicalUrl": "https://arxiv.org/abs/2609.10706",
+            "publishedAt": "2026-09-09T18:02:05Z",
+            "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
+            "evidence": "已核对 arXiv 原始摘要与提交记录；尚未逐项核验全文方法、实验和开源情况。",
+            "evidenceDetails": [
+              {
+                "url": "https://arxiv.org/abs/2609.10706",
+                "location": "Abstract；Submission history",
+                "supports": "创新点概述及原始提交时间"
+              }
+            ],
+            "status": "待全文核验",
+            "lastCheckedAt": "2026-09-13T09:28:36.599606+00:00",
+            "aliasIds": [],
+            "lastSeenAt": "2026-09-13T09:28:36.599606+00:00",
+            "updatedAt": "2026-09-13T09:19:18.102185+00:00",
+            "links": [
+              {
+                "label": "原始来源",
+                "url": "https://arxiv.org/abs/2609.10706"
+              }
+            ],
+            "revisionEvents": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "arxiv:2609.10522",
+      "title": "Show-Harness: Just a VLM Agent Can Play Robots",
+      "zhTitle": "Show-Harness：用语义动作接口连接 VLM 与机器人",
+      "category": "vla",
+      "contentTypes": [
+        "paper"
+      ],
+      "innovation": "模型选择平移、旋转、夹爪等语义单元，机体解释器负责尺度、坐标转换及低层控制；感知、子任务规划、历史和恢复模块形成反馈循环。GUMI 让人与代理通过同样的按钮采集示范，小模型可沿用原生词表学习动作，无需新增动作头。",
+      "canonicalUrl": "https://arxiv.org/abs/2609.10522",
+      "publishedAt": "2026-09-09T17:53:38Z",
+      "discoveredAt": "2026-09-13T09:14:59+00:00",
+      "evidence": "已读 HTML 方法与消融、PDF Table 2、官方项目、代码仓库和模型卡；未独立运行代码或真机复现。",
+      "evidenceDetails": [
+        {
+          "url": "https://arxiv.org/abs/2609.10522",
+          "location": "Abstract；Submission history",
+          "supports": "创新点概述及原始提交时间"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.10522v1",
+          "location": "§3.1–3.4；§4；§5.4.3–5.4.4",
+          "supports": "语义动作与确定性解释器、GUMI 同接口数据采集、原生词表微调；反馈/恢复及动作约定消融。"
+        },
+        {
+          "url": "https://arxiv.org/pdf/2609.10522",
+          "location": "第10页 §5.1–5.2；第11页 Table 2",
+          "supports": "十任务各十次；跨任务成功率 ZS89%、FT86%、最高基线57%；Sim-to-real FT13/20而π0.5/GR00T均0/20；FT跨机体为联合训练。"
+        },
+        {
+          "url": "https://github.com/showlab/Show-Harness",
+          "location": "Folders and files；Quick Start；Released checkpoints and data",
+          "supports": "实际存在 core/interpreters/gumi/plugins/train 目录，README 给出部署及已发布模型、数据入口；未运行验证。"
+        },
+        {
+          "url": "https://huggingface.co/showlab/Show-Harness-VLMs",
+          "location": "Adapters；Two contracts that fail silently",
+          "supports": "LoRA适配器说明，训练对话模板与方向映射需保持一致。"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.10522v1",
+          "location": "§5.3.1 与 §6；PDF 第12页 Figure 6",
+          "supports": "夹爪平台局限；精细控制正文数字与图表/官网存在差异，未把该组数字写成统一结论。"
+        }
+      ],
+      "status": "已完成原文分析",
+      "lastCheckedAt": "2026-09-13T09:48:19.649891+00:00",
+      "aliasIds": [
+        "pending:arxiv:2609.10522"
+      ],
+      "lastSeenAt": "2026-09-13T09:50:12.980635+00:00",
+      "updatedAt": "2026-09-13T09:50:12.980635+00:00",
+      "links": [
+        {
+          "label": "原始来源",
+          "url": "https://arxiv.org/abs/2609.10522"
+        },
+        {
+          "label": "论文全文",
+          "url": "https://arxiv.org/html/2609.10522v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2609.10522"
+        },
+        {
+          "label": "项目主页",
+          "url": "https://showlab.github.io/Show-Harness/"
+        },
+        {
+          "label": "代码",
+          "url": "https://github.com/showlab/Show-Harness"
+        },
+        {
+          "label": "LoRA 模型",
+          "url": "https://huggingface.co/showlab/Show-Harness-VLMs"
+        },
+        {
+          "label": "示范数据",
+          "url": "https://huggingface.co/datasets/showlab/Show-Harness-Data"
+        }
+      ],
+      "revisionEvents": [],
+      "authors": [
+        "Yanzhe Chen",
+        "Zechen Bai",
+        "Zhijun Cao",
+        "Wenzheng Zeng",
+        "Kevin Qinghong Lin",
+        "Yiqi Lin",
+        "Guoqiang Liang",
+        "Kevin Yuchen Ma",
+        "Qiming Huang",
+        "Mike Zheng Shou"
+      ],
+      "tags": [
+        "vla",
+        "VLM代理",
+        "语义动作",
+        "遥操作",
+        "跨机体"
+      ],
+      "type": "研究论文 / 预印本",
+      "version": "v1",
+      "source": "arXiv",
+      "analysisCompletedAt": "2026-09-13T09:48:19.649891+00:00",
+      "reviewNote": "本站补齐既有线索的完整分析；未确认原研究发生新的实质修订。",
+      "featured": false,
+      "popularity": {
+        "score": 155.11,
+        "status": "verified",
+        "basis": "GitHub 累计 stars 277；Hugging Face 论文 upvotes 139。按已核验公开信号计算；累计关注不代表当天增量，也不代表论文质量。",
+        "evidence": [
+          {
+            "url": "https://github.com/showlab/Show-Harness",
+            "metric": "github_stars",
+            "value": 277,
+            "checkedAt": "2026-09-13T09:48:19.649891+00:00",
+            "scope": "公开仓库页面累计 stars；页面缓存可能滞后"
+          },
+          {
+            "url": "https://huggingface.co/papers/2609.10522",
+            "metric": "hf_paper_upvotes",
+            "value": 139,
+            "checkedAt": "2026-09-13T09:48:19.649891+00:00",
+            "scope": "公开论文页面累计投票"
+          }
+        ],
+        "metrics": {
+          "githubStars": 277,
+          "hfUpvotes": 139
+        },
+        "checkedAt": "2026-09-13T09:48:19.649891+00:00"
+      },
+      "summary": "以离散语义动作和确定性机体解释器连接 VLM 与真实机器人，同一接口兼顾零样本控制、小模型微调和示范采集。",
+      "background": "VLM 能理解任务，却难稳定生成连续机器人控制量。把完整技能交给外部执行器又隐藏了细粒度决策。论文研究如何给模型一套既能理解、又能逐步纠正的动作接口。",
+      "experiments": "Franka 与 AgileX 真机评估覆盖十个物体—容器任务，每任务十次。PDF Table 2 中，Gemini 零样本模式成功率 89%，微调 Qwen 小模型为 86%，最强比较基线为 57%；各可训练方法使用同源示范。仅用仿真示范训练后，FT 真机成功 13/20，两种可训练 VLA 基线为 0/20。微调的跨机体实验共同使用两种机体数据，并非从未见过目标机体。",
+      "conclusion": "在当前夹爪操作范围内，语义接口能保留 VLM 的任务理解能力，并将机体差异集中到解释器。消融说明坐标约定、近距离视觉反馈和失败重试都很关键，收益不能全部归于模型本身。",
+      "evaluation": "编辑分析：代码仓库已含执行器、GUMI、插件和训练目录，适合作为可拆解的机器人代理实验平台；模型卡还明确了方向约定与对话模板等复现条件。零样本大模型的决策延迟、离散动作精度及夹爪任务覆盖仍有限；论文部分精细控制数值与图/官网不一致，此处采用已对齐的主表结果。",
+      "futureDirections": "研究假设：可与 CASD 的阶段语义或任务/运动规划器连接，把粗粒度技能约束转成可解释动作，再用局部反馈控制完成高频接触。应比较纯语义步进与混合控制的接触成功率、总用时和错误恢复能力，确认速度提升不牺牲反馈频率。",
+      "verificationCaveats": [
+        "未下载或运行代码、模型及示范数据；论文主表与公开页面对齐的数字才纳入正文。"
+      ],
+      "changeType": "analysis-completed",
+      "briefHistory": [
+        {
+          "promotedAt": "2026-09-13T09:50:12.980635+00:00",
+          "previous": {
+            "id": "arxiv:2609.10522",
+            "title": "Show-Harness: Just a VLM Agent Can Play Robots",
+            "zhTitle": "Show-Harness：用语义动作接口连接 VLM 与机器人",
+            "category": "vla",
+            "contentTypes": [
+              "paper"
+            ],
+            "innovation": "向 VLM 暴露可推理的离散语义动作单元，再由各机器人解释器确定性落地；同一接口延伸为图形示范采集工具，降低控制与遥操作接口门槛。",
+            "canonicalUrl": "https://arxiv.org/abs/2609.10522",
+            "publishedAt": "2026-09-09T17:53:38Z",
+            "discoveredAt": "2026-09-13T09:14:59+00:00",
+            "evidence": "已核对 arXiv 原始摘要与提交记录；尚未逐项核验全文方法、实验和开源情况。",
+            "evidenceDetails": [
+              {
+                "url": "https://arxiv.org/abs/2609.10522",
+                "location": "Abstract；Submission history",
+                "supports": "创新点概述及原始提交时间"
+              }
+            ],
+            "status": "待全文核验",
+            "lastCheckedAt": "2026-09-13T09:28:36.599606+00:00",
+            "aliasIds": [
+              "pending:arxiv:2609.10522"
+            ],
+            "lastSeenAt": "2026-09-13T09:28:36.599606+00:00",
+            "updatedAt": "2026-09-13T09:14:59+00:00",
+            "links": [
+              {
+                "label": "原始来源",
+                "url": "https://arxiv.org/abs/2609.10522"
+              }
+            ],
+            "revisionEvents": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "arxiv:2609.09155",
+      "title": "SyncWorld: Visual Calibration Enables World Models as Zero-Shot Simulators",
+      "zhTitle": "SyncWorld：用视觉校准对齐跨相机、跨机体的动作语义",
+      "category": "wam",
+      "contentTypes": [
+        "paper"
+      ],
+      "innovation": "用覆盖平移和旋转自由度的短帧—动作片段建立上下文校准；训练时扰动动作坐标，避免模型死记固定约定，并蒸馏出仅靠交互历史的推断模式。测试时由VLA提案、世界模型预测、VLM评分筛选动作。",
+      "canonicalUrl": "https://arxiv.org/abs/2609.09155",
+      "publishedAt": "2026-09-08T17:59:47Z",
+      "discoveredAt": "2026-09-13T09:14:59+00:00",
+      "evidence": "原始论文及方法、实验、局限已核对 · 作者报告 · 未独立复现",
+      "evidenceDetails": [
+        {
+          "url": "https://arxiv.org/abs/2609.09155",
+          "location": "Authors；Submission history",
+          "supports": "作者及v1原始提交时间2026-09-08 17:59:47 UTC"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.09155v1",
+          "location": "§3.1–3.4；§4.1–4.5；Tables 1、3、4；Appendix C.4.3/Table 8；Appendix E",
+          "supports": "校准、坐标扰动和蒸馏；三个诊断任务每项50次，52/56/48%与58/72/60%；筛选任务条件；VLM排序失败及预测局限"
+        },
+        {
+          "url": "https://umass-embodied-agi.github.io/SyncWorld/",
+          "location": "Visual Calibration；Zero-Shot Policy Improvement",
+          "supports": "项目对校准上下文及候选动作筛选的说明"
+        },
+        {
+          "url": "https://github.com/UMass-Embodied-AGI/SyncWorld",
+          "location": "README · News；Relation to the paper",
+          "supports": "代码和评估入口公开；发布版Cosmos3-Nano与论文Wan2.2、动作单位/注意力/校准配置差异"
+        },
+        {
+          "url": "https://huggingface.co/yyuncong/SyncWorld/tree/main",
+          "location": "Files · config.json；model-00001-of-00007.safetensors等",
+          "supports": "实际可见模型配置与权重分片，不仅是模型占位页"
+        }
+      ],
+      "status": "已完成原文分析",
+      "lastCheckedAt": "2026-09-13T09:48:23.408050+00:00",
+      "aliasIds": [
+        "pending:arxiv:2609.09155"
+      ],
+      "lastSeenAt": "2026-09-13T09:50:12.980635+00:00",
+      "updatedAt": "2026-09-13T09:50:12.980635+00:00",
+      "links": [
+        {
+          "label": "原始来源",
+          "url": "https://arxiv.org/abs/2609.09155"
+        },
+        {
+          "label": "论文全文",
+          "url": "https://arxiv.org/html/2609.09155v1"
+        },
+        {
+          "label": "项目与演示",
+          "url": "https://umass-embodied-agi.github.io/SyncWorld/"
+        },
+        {
+          "label": "代码仓库",
+          "url": "https://github.com/UMass-Embodied-AGI/SyncWorld"
+        },
+        {
+          "label": "模型权重",
+          "url": "https://huggingface.co/yyuncong/SyncWorld"
+        }
+      ],
+      "revisionEvents": [],
+      "version": "v1",
+      "type": "arXiv预印本",
+      "reviewCompletedAt": "2026-09-13T09:48:23.408050+00:00",
+      "changeType": "analysis-completed",
+      "dateNote": "滚动回看补录，保留原始发表和首次发现时间；本次补全编辑分析，不表示论文发生实质修订。",
+      "authors": [
+        "Yuncong Yang",
+        "Zhengtao Han",
+        "Furkan Ozyurt",
+        "Zeyuan Yang",
+        "Han Yang",
+        "Junyi Cao",
+        "Haoyu Zhen",
+        "Yilun Du",
+        "Chuang Gan"
+      ],
+      "tags": [
+        "世界模型",
+        "视觉校准",
+        "跨机体",
+        "测试时规划",
+        "开源实现差异"
+      ],
+      "summary": "把动作在当前相机和机体下的视觉含义写入校准上下文，支持新设置下的动作结果预测与候选动作筛选。",
+      "background": "同一个数值动作在不同相机、基座位置和机械臂上会产生不同像素运动，混合数据中的监督容易冲突。仅增加视频量或固定动作编码，未必能解释新设置中的控制语义。",
+      "experiments": "在未见LIBERO、ManiSkill及xArm视频上比较IRASim、WorldGym、Ctrl-World。策略实验每任务50次：三个经真实模拟器诊断有提升空间的任务，成功率从52/56/48%变为58/72/60%。这不是LIBERO全套平均，也不是真机闭环成功率。",
+      "conclusion": "结果支持视觉校准改善动作条件预测和特定任务的候选排序；无显式校准时仍能利用历史。附录同时显示，若VLM排序本身不可靠，即使用真实未来视频也可能降低策略表现。",
+      "evaluation": "【编辑评价】适合研究跨相机和跨机体的动作语义统一；对新物体、极端视角和细粒度运动仍有预测失真。代码与权重可读，但发布版改用Cosmos3-Nano，论文使用Wan2.2，连动作单位、注意力方式和校准片段数也有变化，不能直接视作论文成绩已复现。",
+      "futureDirections": "【研究假设】可给OpenWAM式预训练加入校准上下文，再把预测器接到MPC候选筛选；需分别控制相机、动作单位、物体分布，测量真实接触误差及闭环延迟，并对低置信预测允许拒绝执行。",
+      "popularity": {
+        "score": 84.12,
+        "basis": "GitHub 累计 stars 19；Hugging Face 论文 upvotes 14。仅为可测公开信号；缺失项不等于零，累计关注不能代表论文质量或当天新增热度。",
+        "status": "verified",
+        "evidence": [
+          {
+            "url": "https://github.com/UMass-Embodied-AGI/SyncWorld",
+            "metric": "github_stars",
+            "value": 19,
+            "checkedAt": "2026-09-13T09:48:23.408050+00:00",
+            "location": "Repository sidebar · Stars",
+            "scope": "仓库累计关注；不是本日新增；网页缓存可能滞后"
+          },
+          {
+            "url": "https://huggingface.co/papers/2609.09155",
+            "metric": "hf_paper_upvotes",
+            "value": 14,
+            "checkedAt": "2026-09-13T09:48:23.408050+00:00",
+            "location": "论文页标题下 Upvote",
+            "scope": "公开论文页面累计投票；不是本日新增"
+          }
+        ],
+        "metrics": {
+          "githubStars": 19,
+          "hfUpvotes": 14
+        },
+        "missingMetrics": [],
+        "checkedAt": "2026-09-13T09:48:23.408050+00:00"
+      },
+      "analysisCompletedAt": "2026-09-13T09:48:23.408050+00:00",
+      "reviewNote": "本站补齐既有线索的完整分析；未确认原研究发生新的实质修订。",
+      "briefHistory": [
+        {
+          "promotedAt": "2026-09-13T09:50:12.980635+00:00",
+          "previous": {
+            "id": "arxiv:2609.09155",
+            "title": "SyncWorld: Visual Calibration Enables World Models as Zero-Shot Simulators",
+            "zhTitle": "SyncWorld：用视觉校准说明动作如何改变画面",
+            "category": "wam",
+            "contentTypes": [
+              "paper"
+            ],
+            "innovation": "利用覆盖可控自由度的帧—动作校准片段，在上下文中建立特定相机、场景和机体下的动作—视觉映射，帮助世界模型在新设置下模拟动作结果。",
+            "canonicalUrl": "https://arxiv.org/abs/2609.09155",
+            "publishedAt": "2026-09-08T17:59:47Z",
+            "discoveredAt": "2026-09-13T09:14:59+00:00",
+            "evidence": "已核对 arXiv 原始摘要与提交记录；尚未逐项核验全文方法、实验和开源情况。",
+            "evidenceDetails": [
+              {
+                "url": "https://arxiv.org/abs/2609.09155",
+                "location": "Abstract；Submission history",
+                "supports": "创新点概述及原始提交时间"
+              }
+            ],
+            "status": "待全文核验",
+            "lastCheckedAt": "2026-09-13T09:28:36.599606+00:00",
+            "aliasIds": [
+              "pending:arxiv:2609.09155"
+            ],
+            "lastSeenAt": "2026-09-13T09:28:36.599606+00:00",
+            "updatedAt": "2026-09-13T09:14:59+00:00",
+            "links": [
+              {
+                "label": "原始来源",
+                "url": "https://arxiv.org/abs/2609.09155"
+              }
+            ],
+            "revisionEvents": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "arxiv:2609.05324",
+      "title": "RoboSPA: Can VLA Models Go Beyond Simple Scenes and Short-Horizon Tasks?",
+      "zhTitle": "RoboSPA：把空间辨认、动作执行和长程记忆的失败分开诊断",
+      "category": "vla",
+      "contentTypes": [
+        "paper"
+      ],
+      "innovation": "围绕空间推理与长程规划建立56个基础任务、五级难度、280个变体，报告约52.7万条仿真轨迹。用校正随机选择的目标准确度和子任务进度指标补充终局成功率，并提供细分失败类型。",
+      "canonicalUrl": "https://arxiv.org/abs/2609.05324",
+      "publishedAt": "2026-09-04T16:19:01Z",
+      "discoveredAt": "2026-09-13T09:14:59+00:00",
+      "evidence": "原始论文及方法、实验、局限已核对 · 作者报告 · 未独立复现",
+      "evidenceDetails": [
+        {
+          "url": "https://arxiv.org/abs/2609.05324",
+          "location": "Authors；Comments；Submission history",
+          "supports": "作者、作者声明EMNLP 2026主会录用、原始提交时间2026-09-04 16:19:01 UTC"
+        },
+        {
+          "url": "https://arxiv.org/pdf/2609.05324",
+          "location": "pp.1、6–9；§3.3、§4.1–4.5；Table 2；Limitations",
+          "supports": "56任务、5难度、280变体、527K轨迹；单任务Aloha仿真每变体100次；π0.5 55.2%到22.3%；最高难度记忆任务终局失败及仿真限制"
+        },
+        {
+          "url": "https://github.com/fanzhenxuan/RoboSPA",
+          "location": "README · Overview；Quick Start；Released Dataset",
+          "supports": "诊断指标、已发布代码/采集评测入口与作者的数据发布声明"
+        },
+        {
+          "url": "https://huggingface.co/datasets/zxfan/RoboSPA/tree/main",
+          "location": "Files at main · 8f5f053",
+          "supports": "本次文件树仅.gitattributes与README.md，总2.53kB，未见声明的预采集轨迹文件"
+        }
+      ],
+      "status": "已完成原文分析",
+      "lastCheckedAt": "2026-09-13T09:48:23.408050+00:00",
+      "aliasIds": [
+        "pending:arxiv:2609.05324"
+      ],
+      "lastSeenAt": "2026-09-13T09:50:12.980635+00:00",
+      "updatedAt": "2026-09-13T09:50:12.980635+00:00",
+      "links": [
+        {
+          "label": "原始来源",
+          "url": "https://arxiv.org/abs/2609.05324"
+        },
+        {
+          "label": "论文PDF",
+          "url": "https://arxiv.org/pdf/2609.05324"
+        },
+        {
+          "label": "代码与评测",
+          "url": "https://github.com/fanzhenxuan/RoboSPA"
+        },
+        {
+          "label": "数据发布状态",
+          "url": "https://huggingface.co/datasets/zxfan/RoboSPA/tree/main"
+        }
+      ],
+      "revisionEvents": [],
+      "version": "v1",
+      "type": "论文 / EMNLP 2026（arXiv作者声明）",
+      "reviewCompletedAt": "2026-09-13T09:48:23.408050+00:00",
+      "changeType": "analysis-completed",
+      "dateNote": "滚动回看补录，保留原始发表和首次发现时间；本次补全编辑分析，不表示论文发生实质修订。",
+      "authors": [
+        "Zhenxuan Fan",
+        "Bo Zhang",
+        "Yutong Lin",
+        "Yuqian Yuan",
+        "Juekai Lin",
+        "Liang Liang",
+        "Zhuoyi Huang",
+        "Wenqiao Zhang",
+        "Juncheng Li",
+        "Siliang Tang",
+        "Jun Xiao",
+        "Yueting Zhuang"
+      ],
+      "tags": [
+        "VLA评测",
+        "空间推理",
+        "长程规划",
+        "记忆",
+        "仿真数据"
+      ],
+      "summary": "通过逐级增加空间歧义和程序长度，区分选错目标、执行失误、记忆丢失和顺序错误，解释VLA成功率为何下降。",
+      "background": "只给任务成功率，很难区分模型究竟是没认对目标、不会操作，还是忘记已经完成的步骤。常见短流程、固定难度测试也容易掩盖推理能力随场景复杂度上升而退化的问题。",
+      "experiments": "RDT、GO-1、π0.5和X-VLA均按基础任务独立训练，主实验使用Aloha-AgileX干净仿真场景，每个变体100次。π0.5总体成功率由最低难度55.2%降至最高难度22.3%；所有受测模型在最难记忆任务上的终局成功率均为零。",
+      "conclusion": "强模型在简单任务上的优势并未消除复杂关系辨认和长程状态维护瓶颈。进度分数高于终局成功率，提示部分模型能完成早期步骤，却在排序、记忆或后段执行中失效。",
+      "evaluation": "【编辑评价】适合做模块消融和难度曲线，不应把单任务仿真结果外推为通用真机能力。代码、采集和评测流程已公开；README虽称数据已发布，本次实际HF文件树只有配置追踪文件和空说明，尚不能确认预采集轨迹可下载。",
+      "futureDirections": "【研究假设】可分别接入CASD阶段表征、MaP-WAM记忆及执行后验证，观察它们降低的是哪类错误；应保持示范量、动作预算和难度划分一致，并另设未见任务及真机迁移测试，防止只记住模板。",
+      "popularity": {
+        "score": 95.07,
+        "basis": "GitHub 累计 stars 15；Hugging Face 论文 upvotes 28。仅为可测公开信号；缺失项不等于零，累计关注不能代表论文质量或当天新增热度。",
+        "status": "verified",
+        "evidence": [
+          {
+            "url": "https://github.com/fanzhenxuan/RoboSPA",
+            "metric": "github_stars",
+            "value": 15,
+            "checkedAt": "2026-09-13T09:48:23.408050+00:00",
+            "location": "Repository sidebar · Stars",
+            "scope": "仓库累计关注；不是本日新增；网页缓存可能滞后"
+          },
+          {
+            "url": "https://huggingface.co/papers/2609.05324",
+            "metric": "hf_paper_upvotes",
+            "value": 28,
+            "checkedAt": "2026-09-13T09:48:23.408050+00:00",
+            "location": "论文页标题下 Upvote",
+            "scope": "公开论文页面累计投票；不是本日新增"
+          }
+        ],
+        "metrics": {
+          "githubStars": 15,
+          "hfUpvotes": 28
+        },
+        "missingMetrics": [],
+        "checkedAt": "2026-09-13T09:48:23.408050+00:00"
+      },
+      "analysisCompletedAt": "2026-09-13T09:48:23.408050+00:00",
+      "reviewNote": "本站补齐既有线索的完整分析；未确认原研究发生新的实质修订。",
+      "briefHistory": [
+        {
+          "promotedAt": "2026-09-13T09:50:12.980635+00:00",
+          "previous": {
+            "id": "arxiv:2609.05324",
+            "title": "RoboSPA: Can VLA Models Go Beyond Simple Scenes and Short-Horizon Tasks?",
+            "zhTitle": "RoboSPA：诊断空间推理与长程规划",
+            "category": "vla",
+            "contentTypes": [
+              "paper"
+            ],
+            "innovation": "把细粒度空间关系与长时程过程规划分开诊断，按难度递增组织任务，并增加成功率之外的诊断指标，定位复杂场景下的推理、执行与记忆短板。",
+            "canonicalUrl": "https://arxiv.org/abs/2609.05324",
+            "publishedAt": "2026-09-04T16:19:01Z",
+            "discoveredAt": "2026-09-13T09:14:59+00:00",
+            "evidence": "已核对 arXiv 原始摘要与提交记录；尚未逐项核验全文方法、实验和开源情况。",
+            "evidenceDetails": [
+              {
+                "url": "https://arxiv.org/abs/2609.05324",
+                "location": "Abstract；Submission history",
+                "supports": "创新点概述及原始提交时间"
+              }
+            ],
+            "status": "待全文核验",
+            "lastCheckedAt": "2026-09-13T09:28:36.599606+00:00",
+            "aliasIds": [
+              "pending:arxiv:2609.05324"
+            ],
+            "lastSeenAt": "2026-09-13T09:28:36.599606+00:00",
+            "updatedAt": "2026-09-13T09:14:59+00:00",
+            "links": [
+              {
+                "label": "原始来源",
+                "url": "https://arxiv.org/abs/2609.05324"
+              }
+            ],
+            "revisionEvents": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "arxiv:2609.09158",
+      "title": "TANGO: Humanoid Navigation in Cluttered Environments with a Whole-Body Vision-Language-Action Model",
+      "zhTitle": "TANGO：让人形导航直接考虑手臂、躯干和步态的通行空间",
+      "category": "embodied",
+      "contentTypes": [
+        "paper"
+      ],
+      "innovation": "PET流程先规划路线、再编辑全身避障动作，以RL跟踪器筛掉不可执行样本。VLA由前向/下视RGB、语言和本体状态预测29自由度关节及基座朝向参考，实时动作分块后交给底层跟踪器执行。",
+      "canonicalUrl": "https://arxiv.org/abs/2609.09158",
+      "publishedAt": "2026-09-08T17:59:55Z",
+      "discoveredAt": "2026-09-13T09:14:59+00:00",
+      "evidence": "原始论文及方法、实验、局限已核对 · 作者报告 · 未独立复现",
+      "evidenceDetails": [
+        {
+          "url": "https://arxiv.org/abs/2609.09158",
+          "location": "Authors；Submission history",
+          "supports": "作者及原始提交时间2026-09-08 17:59:55 UTC"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.09158v1",
+          "location": "§3.1–3.4；§4.2/Table 2；§4.3；§4.4；§5 Limitation",
+          "supports": "29自由度及基座参考、PET与跟踪；43.75/41.88%成功率、9.90/15.81%碰撞回合率；三设置每类15真机试验、显式穿越指令和控制器/RGB限制"
+        },
+        {
+          "url": "https://tango-vla.github.io/",
+          "location": "标题、Method、Deployment及页面链接",
+          "supports": "作者声明CoRL 2026；真机服务端VLA和机载跟踪；本次官网只见论文与视频入口"
+        }
+      ],
+      "status": "已完成原文分析",
+      "lastCheckedAt": "2026-09-13T09:48:23.408050+00:00",
+      "aliasIds": [
+        "pending:arxiv:2609.09158"
+      ],
+      "lastSeenAt": "2026-09-13T09:50:12.980635+00:00",
+      "updatedAt": "2026-09-13T09:50:12.980635+00:00",
+      "links": [
+        {
+          "label": "原始来源",
+          "url": "https://arxiv.org/abs/2609.09158"
+        },
+        {
+          "label": "论文全文",
+          "url": "https://arxiv.org/html/2609.09158v1"
+        },
+        {
+          "label": "项目与演示",
+          "url": "https://tango-vla.github.io/"
+        },
+        {
+          "label": "HF讨论",
+          "url": "https://huggingface.co/papers/2609.09158"
+        }
+      ],
+      "revisionEvents": [],
+      "version": "v1",
+      "type": "论文 / CoRL 2026（作者官网）",
+      "reviewCompletedAt": "2026-09-13T09:48:23.408050+00:00",
+      "changeType": "analysis-completed",
+      "dateNote": "滚动回看补录，保留原始发表和首次发现时间；本次补全编辑分析，不表示论文发生实质修订。",
+      "authors": [
+        "Anqi Li",
+        "Yuxin Chen",
+        "Zhaobo Li",
+        "Zhuo Cao",
+        "Junli Ren",
+        "Masayoshi Tomizuka",
+        "Dhruv Shah"
+      ],
+      "tags": [
+        "人形机器人",
+        "全身VLA",
+        "视觉语言导航",
+        "动作分块",
+        "仿真到真机"
+      ],
+      "summary": "把语言导航输出扩展为全身动作参考，用仿真规划、避障动作编辑和跟踪校验生成监督，处理侧身、下蹲与跨越。",
+      "background": "二维路线可通行，不代表人形机器人的手臂、躯干和脚步都能通过。把导航与低层行走完全分开，会丢失绕障所需的全身几何协调，尤其容易在狭窄和高低障碍组合中失败。",
+      "experiments": "增强VLNVerse未见场景中，成功率43.75%，对照InternVLA-N1+HumanoidPF为41.88%；发生过碰撞的回合比例9.90%对15.81%。G1真机测试含三类设置，每类15次；复杂穿越指令明确指定侧身、跨越或弯腰行为，结果不能等同自主发现任意通行策略。",
+      "conclusion": "仿真及小规模真机结果支持把全身动作表示与避障监督纳入语言导航；动作编辑、连续动作分块和跟踪能力均影响表现。零样本迁移指未用真实导航数据再训练，并不意味着去掉底层控制器。",
+      "evaluation": "【编辑评价】对全身导航与经典规划的结合有价值，但目前真机样本有限，楼梯等复杂运动受跟踪器能力约束，RGB还会受遮挡和弱光影响。官网可读演示，论文计划开放代码和权重，本次未核实可用下载入口。",
+      "futureDirections": "【研究假设】可将约束流形上的规划或控制屏障约束接在动作参考与跟踪器之间，并加入深度信息；需检验安全修正会否破坏步态连续性，在未提示动作类型、动态障碍和不同跟踪器上评测。",
+      "popularity": {
+        "score": 62.71,
+        "basis": "GitHub stars 未核实；Hugging Face 论文 upvotes 22。仅为可测公开信号；缺失项不等于零，累计关注不能代表论文质量或当天新增热度。",
+        "status": "verified",
+        "evidence": [
+          {
+            "url": "https://huggingface.co/papers/2609.09158",
+            "metric": "hf_paper_upvotes",
+            "value": 22,
+            "checkedAt": "2026-09-13T09:48:23.408050+00:00",
+            "location": "论文页标题下 Upvote",
+            "scope": "公开论文页面累计投票；不是本日新增"
+          }
+        ],
+        "metrics": {
+          "githubStars": null,
+          "hfUpvotes": 22
+        },
+        "missingMetrics": [
+          "githubStars"
+        ],
+        "checkedAt": "2026-09-13T09:48:23.408050+00:00"
+      },
+      "analysisCompletedAt": "2026-09-13T09:48:23.408050+00:00",
+      "reviewNote": "本站补齐既有线索的完整分析；未确认原研究发生新的实质修订。",
+      "briefHistory": [
+        {
+          "promotedAt": "2026-09-13T09:50:12.980635+00:00",
+          "previous": {
+            "id": "arxiv:2609.09158",
+            "title": "TANGO: Humanoid Navigation in Cluttered Environments with a Whole-Body Vision-Language-Action Model",
+            "zhTitle": "TANGO：从视觉语言指令到人形全身穿行",
+            "category": "embodied",
+            "contentTypes": [
+              "paper"
+            ],
+            "innovation": "直接由第一视角 RGB 与语言预测全身关节动作；用路径规划、全身运动生成、避障编辑和 RL 跟踪在仿真中合成训练监督，将导航扩展到手臂、躯干与步态协同。",
+            "canonicalUrl": "https://arxiv.org/abs/2609.09158",
+            "publishedAt": "2026-09-08T17:59:55Z",
+            "discoveredAt": "2026-09-13T09:14:59+00:00",
+            "evidence": "已核对 arXiv 原始摘要与提交记录；尚未逐项核验全文方法、实验和开源情况。",
+            "evidenceDetails": [
+              {
+                "url": "https://arxiv.org/abs/2609.09158",
+                "location": "Abstract；Submission history",
+                "supports": "创新点概述及原始提交时间"
+              }
+            ],
+            "status": "待全文核验",
+            "lastCheckedAt": "2026-09-13T09:28:36.599606+00:00",
+            "aliasIds": [
+              "pending:arxiv:2609.09158"
+            ],
+            "lastSeenAt": "2026-09-13T09:28:36.599606+00:00",
+            "updatedAt": "2026-09-13T09:14:59+00:00",
+            "links": [
+              {
+                "label": "原始来源",
+                "url": "https://arxiv.org/abs/2609.09158"
+              }
+            ],
+            "revisionEvents": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "arxiv:2609.01281",
+      "title": "EmbodiedSkills: A Unified Framework for Orchestrating, Training, and Deploying VLA Agents",
+      "zhTitle": "EmbodiedSkills：用可执行技能契约连接规划、VLA和结果验证",
+      "category": "systems",
+      "contentTypes": [
+        "paper"
+      ],
+      "innovation": "技能使用带类型的输入输出、前置条件和失败状态；运行时检查有效性与证据新鲜度，再执行有限动作块并收集验证结果。统一轨迹记录支持分别训练规划器、验证器和底层VLA，而无需改写整个闭环。",
+      "canonicalUrl": "https://arxiv.org/abs/2609.01281",
+      "publishedAt": "2026-09-01T14:14:47Z",
+      "discoveredAt": "2026-09-13T09:14:59+00:00",
+      "evidence": "原始论文及方法、实验、局限已核对 · 作者报告 · 未独立复现",
+      "evidenceDetails": [
+        {
+          "url": "https://arxiv.org/abs/2609.01281",
+          "location": "Authors；Submission history",
+          "supports": "作者及原始提交时间2026-09-01 14:14:47 UTC"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.01281v1",
+          "location": "§3.2–3.8；§4.3；§5.1–5.5/Tables 2–5；§6 Limitations",
+          "supports": "技能契约与运行循环；任务适配政策；50任务每项100次；86.20%、48.2%、LIBERO97.40%和RMBench12.5%；在线优化可选；语义/延迟/任务专家局限"
+        },
+        {
+          "url": "https://github.com/DCDmllm/EmbodiedSkills",
+          "location": "README · Results；System；Training；Repository layout",
+          "supports": "官方实现的运行/训练接口、同条件消融；源码不包含生成数据、实验检查点和历史RL实验"
+        },
+        {
+          "url": "https://huggingface.co/papers/2609.01281",
+          "location": "作者Thinkitin的Community说明",
+          "supports": "作者说明观察、规划、预检、执行、验证、恢复的六阶段闭环与独立适配"
+        }
+      ],
+      "status": "已完成原文分析",
+      "lastCheckedAt": "2026-09-13T09:48:23.408050+00:00",
+      "aliasIds": [
+        "pending:arxiv:2609.01281"
+      ],
+      "lastSeenAt": "2026-09-13T09:50:12.980635+00:00",
+      "updatedAt": "2026-09-13T09:50:12.980635+00:00",
+      "links": [
+        {
+          "label": "原始来源",
+          "url": "https://arxiv.org/abs/2609.01281"
+        },
+        {
+          "label": "论文全文",
+          "url": "https://arxiv.org/html/2609.01281v1"
+        },
+        {
+          "label": "代码仓库",
+          "url": "https://github.com/DCDmllm/EmbodiedSkills"
+        },
+        {
+          "label": "作者讨论",
+          "url": "https://huggingface.co/papers/2609.01281"
+        }
+      ],
+      "revisionEvents": [],
+      "version": "v1",
+      "type": "arXiv预印本",
+      "reviewCompletedAt": "2026-09-13T09:48:23.408050+00:00",
+      "changeType": "analysis-completed",
+      "dateNote": "滚动回看补录，保留原始发表和首次发现时间；本次补全编辑分析，不表示论文发生实质修订。",
+      "authors": [
+        "Wei Wang",
+        "Wenqiao Zhang",
+        "Yutong Lin",
+        "Yuqian Yuan",
+        "Tianwei Lin",
+        "Jinhao Mao",
+        "Zhenxuan Fan",
+        "Mingjian Gao",
+        "Yang Dai",
+        "Wentong Li",
+        "Zheqi Lv",
+        "Zheng Dong",
+        "Yingjie Niu",
+        "Jiaqi Zhu",
+        "Jun Xiao",
+        "Chao Li",
+        "Yueting Zhuang"
+      ],
+      "tags": [
+        "VLA系统",
+        "技能编排",
+        "执行验证",
+        "失败恢复",
+        "模块训练"
+      ],
+      "summary": "把模型提出的技能与真正执行分开：先检查证据和前提，再限步执行、验证与恢复，让不同VLA共享可追踪的运行接口。",
+      "background": "VLA能预测动作，却不自动检查当前子目标能否执行、观察是否过期或目标是否已完成。长程任务一旦出错，单纯动作输出也难以定位是规划、执行还是验证环节的问题。",
+      "experiments": "RoboTwin 50任务采用任务适配π0.5，每任务100次；完整闭环平均86.20%，同条件去掉中间验证降至48.2%。LIBERO四套平均97.40%；四个RMBench记忆任务仅12.5%。这些结果及消融来自仿真，不能把任务专家的分数当成单一通用策略成绩。",
+      "conclusion": "受控消融支持语义子任务、结果验证及按进度续执行的组合；高分主要建立在适配后的执行策略上。技能接口提高可检查性，但记忆任务结果显示，结构化闭环本身还没有解决长时记忆。",
+      "evaluation": "【编辑评价】契约能拦截格式、状态和过期证据错误，却不能保证语义判断正确；误识别也可能满足契约。任务专家、多次VLM调用增加训练维护与延迟。官方仓库含运行和监督训练代码，实验检查点未随源码提供。",
+      "futureDirections": "【研究假设】可把策略失败检测器接入验证阶段，把MaP-WAM式记忆接入共享状态，再用RoboSPA测量记忆、顺序与重复错误；需固定低层策略，分别统计误报恢复、任务收益和额外推理成本。",
+      "popularity": {
+        "score": 94.28,
+        "basis": "GitHub 累计 stars 42；Hugging Face 论文 upvotes 16。仅为可测公开信号；缺失项不等于零，累计关注不能代表论文质量或当天新增热度。",
+        "status": "verified",
+        "evidence": [
+          {
+            "url": "https://github.com/DCDmllm/EmbodiedSkills",
+            "metric": "github_stars",
+            "value": 42,
+            "checkedAt": "2026-09-13T09:48:23.408050+00:00",
+            "location": "Repository sidebar · Stars",
+            "scope": "仓库累计关注；不是本日新增；网页缓存可能滞后"
+          },
+          {
+            "url": "https://huggingface.co/papers/2609.01281",
+            "metric": "hf_paper_upvotes",
+            "value": 16,
+            "checkedAt": "2026-09-13T09:48:23.408050+00:00",
+            "location": "论文页标题下 Upvote",
+            "scope": "公开论文页面累计投票；不是本日新增"
+          }
+        ],
+        "metrics": {
+          "githubStars": 42,
+          "hfUpvotes": 16
+        },
+        "missingMetrics": [],
+        "checkedAt": "2026-09-13T09:48:23.408050+00:00"
+      },
+      "analysisCompletedAt": "2026-09-13T09:48:23.408050+00:00",
+      "reviewNote": "本站补齐既有线索的完整分析；未确认原研究发生新的实质修订。",
+      "briefHistory": [
+        {
+          "promotedAt": "2026-09-13T09:50:12.980635+00:00",
+          "previous": {
+            "id": "arxiv:2609.01281",
+            "title": "EmbodiedSkills: A Unified Framework for Orchestrating, Training, and Deploying VLA Agents",
+            "zhTitle": "EmbodiedSkills：执行前检查、执行后验证",
+            "category": "systems",
+            "contentTypes": [
+              "paper"
+            ],
+            "innovation": "把每次技能选择视作待执行提案，通过统一接口检查前提、限制底层执行并验证结果；结构化记录规划、执行、验证与恢复事件，允许替换底层 VLA。",
+            "canonicalUrl": "https://arxiv.org/abs/2609.01281",
+            "publishedAt": "2026-09-01T14:14:47Z",
+            "discoveredAt": "2026-09-13T09:14:59+00:00",
+            "evidence": "已核对 arXiv 原始摘要与提交记录；尚未逐项核验全文方法、实验和开源情况。",
+            "evidenceDetails": [
+              {
+                "url": "https://arxiv.org/abs/2609.01281",
+                "location": "Abstract；Submission history",
+                "supports": "创新点概述及原始提交时间"
+              }
+            ],
+            "status": "待全文核验",
+            "lastCheckedAt": "2026-09-13T09:28:36.599606+00:00",
+            "aliasIds": [
+              "pending:arxiv:2609.01281"
+            ],
+            "lastSeenAt": "2026-09-13T09:28:36.599606+00:00",
+            "updatedAt": "2026-09-13T09:14:59+00:00",
+            "links": [
+              {
+                "label": "原始来源",
+                "url": "https://arxiv.org/abs/2609.01281"
+              }
+            ],
+            "revisionEvents": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "arxiv:2609.05533",
+      "title": "SimpleMemVLA: A Simple but Effective Native-Video Memory for Vision-Language-Action Models",
+      "zhTitle": "SimpleMemVLA：把视频历史保留到决策时，再选择需要的记忆",
+      "category": "vla",
+      "contentTypes": [
+        "paper"
+      ],
+      "innovation": "让原生视频VLM在决策时读取完整采样窗口，由生成子任务的隐藏状态连接流匹配动作头；执行当前动作块时预填充共享前缀。",
+      "canonicalUrl": "https://arxiv.org/abs/2609.05533",
+      "publishedAt": "2026-09-02T02:23:39Z",
+      "discoveredAt": "2026-09-13T09:14:59+00:00",
+      "evidence": "论文全文与官方仓库已核对 · 定量结果为作者仿真评测 · 真机仅三次示范 · 未独立复现",
+      "evidenceDetails": [
+        {
+          "url": "https://arxiv.org/abs/2609.05533",
+          "location": "Authors；Submission history",
+          "supports": "作者与v1提交日期2026-09-02 02:23:39 UTC"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.05533v1",
+          "location": "§3.2–3.4；§4.1–4.3；Tables 1–2",
+          "supports": "原生视频与子任务隐藏状态接口；每套件单模型；RMBench九项94.0%；RoboMME 88.3%及同骨干变体31.5/22.6/20.6%"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.05533v1",
+          "location": "§4.4–4.6；Figure 6",
+          "supports": "历史因果干预；H100/BF16/batch1/60秒历史下1.02→0.68秒；后台预填充和缓存增长、窗口遗忘限制"
+        },
+        {
+          "url": "https://github.com/wadeKeith/SimpleMemVLA",
+          "location": "Data & Checkpoints；Evaluation；Real-Robot Deployment",
+          "supports": "训练评测与各套件权重入口；定量表均为仿真；三个不同布局真机示范而非系统成功率统计"
+        }
+      ],
+      "status": "已完成原文分析",
+      "lastCheckedAt": "2026-09-13T09:47:05.092971Z",
+      "aliasIds": [
+        "pending:arxiv:2609.05533"
+      ],
+      "lastSeenAt": "2026-09-13T09:50:12.980635+00:00",
+      "updatedAt": "2026-09-13T09:50:12.980635+00:00",
+      "links": [
+        {
+          "label": "原始来源",
+          "url": "https://arxiv.org/abs/2609.05533"
+        },
+        {
+          "label": "论文全文",
+          "url": "https://arxiv.org/html/2609.05533v1"
+        },
+        {
+          "label": "代码与权重入口",
+          "url": "https://github.com/wadeKeith/SimpleMemVLA"
+        }
+      ],
+      "revisionEvents": [],
+      "changeType": "analysis-completed",
+      "featured": false,
+      "tags": [
+        "视频记忆",
+        "长程操作",
+        "流匹配",
+        "异步预填充"
+      ],
+      "type": "arXiv预印本 · 完整分析",
+      "version": "v1",
+      "authors": [
+        "Cheng Yin",
+        "Wang Xu",
+        "Junpeng Yang",
+        "Sikyuen Tam",
+        "Hanyu Liu",
+        "Yuan Yao",
+        "Xiangrui Zeng",
+        "Junbo Cui",
+        "Yequan Wang",
+        "Zhouping Yin",
+        "Yankai Lin"
+      ],
+      "summary": "直接以带时间戳的视频历史作为VLA记忆，并在动作执行时预处理共享上下文，减少提前压缩造成的信息损失。",
+      "background": "长程操作所需证据可能早已离开当前视野；预先检索或压缩历史，容易丢掉后来才有用的细节。",
+      "experiments": "仿真中，RMBench九项可比任务平均成功率94.0%；RoboMME为88.3%，同骨干检索、压缩、递归变体为31.5%、22.6%、20.6%。单H100、BF16、batch=1、60秒历史下，决策延迟由1.02降至0.68秒。仓库另给三次真机遮盖示范，未报告系统真机成功率。",
+      "conclusion": "遮挡或替换历史证据会改变当前行为，支持策略确实读取历史；主要定量结论仍来自各套件分别训练的仿真模型。",
+      "evaluation": "【编辑分析】同骨干消融比单纯榜单比较更有说服力；但不能据此否定全部记忆压缩方法。窗口外信息仍会遗失，后台预填充和缓存开销也随历史增长。仓库已提供训练、评测代码及各套件权重入口。",
+      "futureDirections": "【研究假设】可把CASD的阶段标签用作子任务监督，并与MaP-WAM比较“完整历史读取”和“记忆转计划”的代价。应在同骨干、同演示、同显存预算下测试长程真机任务及窗口越界后的恢复。",
+      "dateNote": "9月2日原始论文；本次将既有候选补全为全文分析。仓库真机示范仅标注2026年9月，未将其视为今天新发布。",
+      "popularity": {
+        "score": 81.97,
+        "status": "verified",
+        "basis": "GitHub累计stars 29；Hugging Face论文upvotes 10。只合计可测信号，缺失项不是零，累计关注不代表当天热度或论文质量。",
+        "evidence": [
+          {
+            "url": "https://github.com/wadeKeith/SimpleMemVLA",
+            "metric": "github_stars",
+            "value": 29,
+            "checkedAt": "2026-09-13T09:47:48.983681Z",
+            "scope": "官方仓库网页可见累计stars；非本日新增；网页缓存可能滞后"
+          },
+          {
+            "url": "https://huggingface.co/papers/2609.05533",
+            "metric": "hf_paper_upvotes",
+            "value": 10,
+            "checkedAt": "2026-09-13T09:47:48.983681Z",
+            "scope": "论文页面可见累计投票；非本日新增"
+          }
+        ],
+        "metrics": {
+          "githubStars": 29,
+          "hfUpvotes": 10
+        },
+        "missingMetrics": [],
+        "checkedAt": "2026-09-13T09:47:48.983681Z"
+      },
+      "analysisCompletedAt": "2026-09-13T09:47:05.092971Z",
+      "reviewNote": "本站补齐既有线索的完整分析；未确认原研究发生新的实质修订。",
+      "briefHistory": [
+        {
+          "promotedAt": "2026-09-13T09:50:12.980635+00:00",
+          "previous": {
+            "id": "arxiv:2609.05533",
+            "title": "SimpleMemVLA: A Simple but Effective Native-Video Memory for Vision-Language-Action Models",
+            "zhTitle": "SimpleMemVLA：以原生视频上下文保留历史",
+            "category": "vla",
+            "contentTypes": [
+              "paper"
+            ],
+            "innovation": "保留带时间戳的采样视频历史，交给原生视频 VLM 处理，以生成子任务的隐藏状态连接动作头；在动作执行期间预填充共享前缀，减少反复处理长历史的开销。",
+            "canonicalUrl": "https://arxiv.org/abs/2609.05533",
+            "publishedAt": "2026-09-02T02:23:39Z",
+            "discoveredAt": "2026-09-13T09:14:59+00:00",
+            "evidence": "已核对 arXiv 原始摘要与提交记录；尚未逐项核验全文方法、实验和开源情况。",
+            "evidenceDetails": [
+              {
+                "url": "https://arxiv.org/abs/2609.05533",
+                "location": "Abstract；Submission history",
+                "supports": "创新点概述及原始提交时间"
+              }
+            ],
+            "status": "待全文核验",
+            "lastCheckedAt": "2026-09-13T09:28:36.599606+00:00",
+            "aliasIds": [
+              "pending:arxiv:2609.05533"
+            ],
+            "lastSeenAt": "2026-09-13T09:28:36.599606+00:00",
+            "updatedAt": "2026-09-13T09:14:59+00:00",
+            "links": [
+              {
+                "label": "原始来源",
+                "url": "https://arxiv.org/abs/2609.05533"
+              }
+            ],
+            "revisionEvents": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "arxiv:2608.29768",
+      "title": "SmoothRL: Online Reinforcement Learning During Asynchronous Execution",
+      "zhTitle": "SmoothRL：让在线强化学习只优化异步执行中真正发生的动作",
+      "category": "rl",
+      "contentTypes": [
+        "paper",
+        "news"
+      ],
+      "innovation": "在固定时延预算下划定动作块三段，价值函数保留完整执行上下文，策略梯度只穿过执行段。实例冻结π0.5，以动作空间残差网络在线纠偏，并加入平滑惩罚。",
+      "canonicalUrl": "https://arxiv.org/abs/2608.29768",
+      "publishedAt": "2026-08-30T12:56:09Z",
+      "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
+      "evidence": "论文全文已核对 · 三项真机任务 · 小样本同配置评测 · 未独立复现",
+      "evidenceDetails": [
+        {
+          "url": "https://arxiv.org/abs/2608.29768",
+          "location": "Authors；Submission history",
+          "supports": "四位作者、v1提交时间2026-08-30 12:56:09 UTC"
+        },
+        {
+          "url": "https://arxiv.org/html/2608.29768v1",
+          "location": "§3.1–3.4；Equation 5；Algorithm 1",
+          "supports": "固定时延预算、执行段梯度截断、冻结基础策略上的动作残差与平滑正则"
+        },
+        {
+          "url": "https://arxiv.org/html/2608.29768v1",
+          "location": "§4.1；§4.3–4.5；Table 1；Figure 7 caption",
+          "supports": "Astribot S1；250回合后三项成功率39→94、8→83、30→90%；分别18/12/10次评测；单次RL运行、同训练初始配置、人类干预及成功判定"
+        },
+        {
+          "url": "https://arxiv.org/html/2608.29768v1",
+          "location": "§5 Limitations and Future Work",
+          "supports": "固定推理预算超时与有限残差表达能力的限制"
+        }
+      ],
+      "status": "已完成原文分析",
+      "lastCheckedAt": "2026-09-13T09:47:05.092971Z",
+      "links": [
+        {
+          "label": "研究原文",
+          "url": "https://arxiv.org/abs/2608.29768"
+        },
+        {
+          "label": "9 月 4 日发布报道",
+          "url": "https://www.x-techcon.com/article/183034.html"
+        },
+        {
+          "label": "论文全文",
+          "url": "https://arxiv.org/html/2608.29768v1"
+        },
+        {
+          "label": "官方项目",
+          "url": "https://www.astribot.com/research/SmoothRL/"
+        }
+      ],
+      "dateNote": "8月30日原始论文，9月4日出现媒体跟进；此次保留论文身份并补全分析。",
+      "aliasIds": [
+        "smoothrl:news-lead-20260904"
+      ],
+      "lastSeenAt": "2026-09-13T09:50:12.980635+00:00",
+      "updatedAt": "2026-09-13T09:50:12.980635+00:00",
+      "revisionEvents": [],
+      "changeType": "analysis-completed",
+      "featured": false,
+      "tags": [
+        "在线强化学习",
+        "异步控制",
+        "动作块",
+        "真机残差学习"
+      ],
+      "type": "arXiv预印本 · 真机研究",
+      "version": "v1",
+      "authors": [
+        "Guang Gao",
+        "Yuxuan Nong",
+        "Baifu Huang",
+        "Jianan Wang"
+      ],
+      "summary": "把异步动作块的已提交、实际执行和被替换部分分开，仅对实际执行部分回传价值梯度，校正在线学习与部署的错位。",
+      "background": "大模型推理与动作执行重叠时，生成的动作并非全部落地；照同步流程训练，会让价值梯度优化从未执行的片段。",
+      "experiments": "Astribot S1真机经250个交互回合后，投掷成功率39%→94%、套笔帽8%→83%、开盒30%→90%。每任务仅一条RL训练运行，各检查点分别评测18、12、10次；初始配置与在线训练相同。已有任务演示用于基础策略训练，在线过程含人工接管和奖励判定。",
+      "conclusion": "在所测动态和精密双臂任务上，执行段梯度配合在线残差调整改善了冻结基础策略的系统性偏差。",
+      "evaluation": "【编辑分析】训练与部署动作对齐是可迁移的关键思路，但当前评测规模小、未展示跨初始配置泛化，也未隔离所有组件贡献。固定推理预算超时会破坏交接，局部残差难以修复基础策略完全错误的行为。",
+      "futureDirections": "【研究假设】可将DLSRL的潜变量探索与此执行段约束结合，但需保证潜变量梯度对应实际动作；再用控制屏障过滤器处理约束。应比较变时延、未见物体和随机初态，并报告接管次数与风险事件。",
+      "popularity": {
+        "score": null,
+        "status": "unmeasured",
+        "basis": "HF论文页面本次读取失败，未取得专属代码仓库可核验关注数；两项均为未知，暂不评分。",
+        "evidence": [],
+        "metrics": {
+          "githubStars": null,
+          "hfUpvotes": null
+        },
+        "missingMetrics": [
+          "github_stars",
+          "hf_paper_upvotes"
+        ],
+        "checkedAt": "2026-09-13T09:47:48.983681Z"
+      },
+      "analysisCompletedAt": "2026-09-13T09:47:05.092971Z",
+      "reviewNote": "本站补齐既有线索的完整分析；未确认原研究发生新的实质修订。",
+      "briefHistory": [
+        {
+          "promotedAt": "2026-09-13T09:50:12.980635+00:00",
+          "previous": {
+            "id": "arxiv:2608.29768",
+            "title": "SmoothRL: Online Reinforcement Learning During Asynchronous Execution",
+            "zhTitle": "SmoothRL：只从异步过程中实际执行的动作学习",
+            "category": "rl",
+            "contentTypes": [
+              "paper",
+              "news"
+            ],
+            "innovation": "按异步执行状态把动作块划成已提交、实际执行和丢弃三段，仅对实际执行段回传价值梯度，使在线 RL 更新与真正发生的轨迹分布对齐。",
+            "canonicalUrl": "https://arxiv.org/abs/2608.29768",
+            "publishedAt": "2026-08-30T12:56:09Z",
+            "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
+            "evidence": "已核对 arXiv 原始摘要与提交记录；尚未逐项核验全文方法、实验和开源情况。",
+            "evidenceDetails": [
+              {
+                "url": "https://arxiv.org/abs/2608.29768",
+                "location": "Abstract；Submission history",
+                "supports": "创新点概述及原始提交时间"
+              }
+            ],
+            "status": "待全文核验",
+            "lastCheckedAt": "2026-09-13T09:28:36.599606+00:00",
+            "links": [
+              {
+                "label": "研究原文",
+                "url": "https://arxiv.org/abs/2608.29768"
+              },
+              {
+                "label": "9 月 4 日发布报道",
+                "url": "https://www.x-techcon.com/article/183034.html"
+              }
+            ],
+            "dateNote": "8 月 30 日原始论文；9 月 4 日媒体报道。此次追溯后统一使用论文身份。",
+            "aliasIds": [
+              "smoothrl:news-lead-20260904"
+            ],
+            "lastSeenAt": "2026-09-13T09:28:36.599606+00:00",
+            "updatedAt": "2026-09-13T09:19:18.102185+00:00",
+            "revisionEvents": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "pending:nvidia-cosmos-edge-20260819",
+      "title": "Post-Train NVIDIA Cosmos 3 Edge for On-Device Robot Control",
+      "zhTitle": "Cosmos 3 Edge：把世界模型后训练成端侧机器人策略",
+      "category": "wam",
+      "contentTypes": [
+        "blog"
+      ],
+      "innovation": "把4B Cosmos 3 Edge后训练为动作块策略，以三相机观测和关节状态生成动作，通过OpenPI协议接入滚动重规划；世界预测可与动作共同检查。",
+      "canonicalUrl": "https://developer.nvidia.com/blog/post-train-nvidia-cosmos-3-edge-for-on-device-robot-control/",
+      "publishedAt": "2026-08-19",
+      "discoveredAt": "2026-09-13T09:14:59+00:00",
+      "evidence": "官方博客全文与模型卡已核对 · 逐配置引用作者指标 · 训练迭代口径仍有不一致 · 未独立复现",
+      "evidenceDetails": [
+        {
+          "url": "https://developer.nvidia.com/blog/post-train-nvidia-cosmos-3-edge-for-on-device-robot-control/",
+          "location": "发布日期；What you’ll build；Table 1；Evaluate the policy in a closed-loop simulation",
+          "supports": "8月19日教程；4B模型、三相机和关节状态、动作块部署；RoboLab仿真成功率22.9%"
+        },
+        {
+          "url": "https://huggingface.co/nvidia/Cosmos3-Edge-Policy-DROID",
+          "location": "PBR → Real-time PyTorch Policy DROID with [32, 8] action chunks",
+          "supports": "T5000 MAXN/1575MHz；640×540观测映射544×736；4步UniPC、guidance3.0；16次请求中位1.528秒、范围1.503–1.673秒；15Hz动作块时域2.133秒"
+        },
+        {
+          "url": "https://huggingface.co/nvidia/Cosmos3-Edge-Policy-DROID",
+          "location": "PBR默认[16,8]与vLLM-Omni[32,8]独立表；Model Versions",
+          "supports": "不同输入、动作块、去噪和运行时的时延不得直接比较；Edge/Policy版本日期7月20日"
+        },
+        {
+          "url": "https://developer.nvidia.com/blog/post-train-nvidia-cosmos-3-edge-for-on-device-robot-control/",
+          "location": "Prerequisites正文；Table 1 → Schedule",
+          "supports": "正文64×4 GB200、60K迭代，与表中10K迭代口径未对齐，不据此承诺训练成本"
+        }
+      ],
+      "status": "已完成原文分析",
+      "lastCheckedAt": "2026-09-13T09:47:05.092971Z",
+      "aliasIds": [],
+      "lastSeenAt": "2026-09-13T09:50:12.980635+00:00",
+      "updatedAt": "2026-09-13T09:50:12.980635+00:00",
+      "links": [
+        {
+          "label": "原始来源",
+          "url": "https://developer.nvidia.com/blog/post-train-nvidia-cosmos-3-edge-for-on-device-robot-control/"
+        },
+        {
+          "label": "策略权重与模型卡",
+          "url": "https://huggingface.co/nvidia/Cosmos3-Edge-Policy-DROID"
+        },
+        {
+          "label": "Cosmos框架",
+          "url": "https://github.com/NVIDIA/cosmos-framework"
+        }
+      ],
+      "revisionEvents": [],
+      "changeType": "analysis-completed",
+      "featured": false,
+      "tags": [
+        "世界模型",
+        "端侧部署",
+        "DROID",
+        "Jetson Thor"
+      ],
+      "type": "官方技术博客 · 部署教程",
+      "version": "2026-08-19教程 / 2026-09-13核验",
+      "authors": [
+        "Saeed Babamohamadi",
+        "NVIDIA"
+      ],
+      "summary": "官方教程连通DROID数据、世界模型后训练和Jetson本机控制；当前模型卡已明确区分不同动作块与推理配置。",
+      "background": "世界模型的物理先验要用于本机控制，还必须满足显存和端到端时延约束，且适配具体传感器与动作空间。",
+      "experiments": "博客报告RoboLab仿真套件成功率22.9%。模型卡的PyTorch专项测试：T5000、640×540输入、4步去噪、32个动作、16次计时请求，中位端到端时延1.528秒，低于15Hz动作块的2.133秒时域；这不是15Hz重新推理，也不是未限定配置的真机成功率。",
+      "conclusion": "所列配置支持动作执行覆盖下一次推理的时间，提供端侧策略部署路径；闭环质量仍受任务成功率和重规划时域约束。",
+      "evaluation": "【编辑分析】工程配置现已能逐表区分：模型卡还列16步默认与32步vLLM测试，不能混用其时延。训练成本也不同于端侧推理：博客正文写60K迭代，Table1写10K，尚不能给出唯一可复现训练预算。",
+      "futureDirections": "【研究假设】可接入SmoothRL的实际执行段学习，并让CLF-CBF控制层检查动作约束；需要固定检查点、动作块和去噪设置，报告长时间推理尾延迟、功耗、真机成功率以及安全层干预率。",
+      "dateNote": "8月19日博客；模型卡列7月20日Edge/Policy版本释放。本次补充配置核验，不视为9月13日新模型发布。",
+      "popularity": {
+        "score": null,
+        "status": "unmeasured",
+        "basis": "未取得可归属于本篇教程的GitHub stars或HF论文upvotes；已读到策略模型11个likes，但模型likes与论文upvotes口径不同，未混入评分；共享Cosmos框架stars也未归属本篇。",
+        "evidence": [],
+        "metrics": {
+          "githubStars": null,
+          "hfUpvotes": null
+        },
+        "missingMetrics": [
+          "github_stars",
+          "hf_paper_upvotes"
+        ],
+        "checkedAt": "2026-09-13T09:47:48.983681Z"
+      },
+      "analysisCompletedAt": "2026-09-13T09:47:05.092971Z",
+      "reviewNote": "本站补齐既有线索的完整分析；未确认原研究发生新的实质修订。",
+      "briefHistory": [
+        {
+          "promotedAt": "2026-09-13T09:50:12.980635+00:00",
+          "previous": {
+            "id": "pending:nvidia-cosmos-edge-20260819",
+            "title": "Post-Train NVIDIA Cosmos 3 Edge for On-Device Robot Control",
+            "zhTitle": "Cosmos 3 Edge：面向机器人端侧的后训练教程",
+            "category": "wam",
+            "contentTypes": [
+              "blog"
+            ],
+            "innovation": "将世界模型的物理先验转成动作块策略，串联 DROID 数据准备、后训练、Jetson Thor 本机部署和滚动重规划评估。博客与模型卡的运行配置需要进一步对齐，暂不引用实时性能数值。",
+            "canonicalUrl": "https://developer.nvidia.com/blog/post-train-nvidia-cosmos-3-edge-for-on-device-robot-control/",
+            "publishedAt": "2026-08-19",
+            "discoveredAt": "2026-09-13T09:14:59+00:00",
+            "evidence": "已读官方博客正文；模型卡与博客的动作时域、推理配置以及训练迭代信息存在待对齐项。",
+            "evidenceDetails": [
+              {
+                "url": "https://developer.nvidia.com/blog/post-train-nvidia-cosmos-3-edge-for-on-device-robot-control/",
+                "location": "What you’ll build；Why post-train；What data does the policy train on；Table 1",
+                "supports": "教程流程与暂不合并性能配置的依据"
+              }
+            ],
+            "status": "待全文核验",
+            "lastCheckedAt": "2026-09-13T09:28:36.599606+00:00",
+            "aliasIds": [],
+            "lastSeenAt": "2026-09-13T09:28:36.599606+00:00",
+            "updatedAt": "2026-09-13T09:14:59+00:00",
+            "links": [
+              {
+                "label": "原始来源",
+                "url": "https://developer.nvidia.com/blog/post-train-nvidia-cosmos-3-edge-for-on-device-robot-control/"
+              }
+            ],
+            "revisionEvents": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "unitree:unifolm-wla-1.0",
+      "title": "UnifoLM-WLA-1.0 / ER-1 / ER-Flow分阶段开放",
+      "zhTitle": "UnifoLM-WLA：用动态区域与分部位动作表示连接推理和全身操作",
+      "category": "vla",
+      "contentTypes": [
+        "report",
+        "news"
+      ],
+      "innovation": "从光流提取未来动态区域，经VQ-VAE离散化；末端位姿、手部关节、下肢关节分别用RVQ编码，与语言视觉共同训练ER-Flow，再连接MMDiT连续动作专家。",
+      "canonicalUrl": "https://unigen-x.github.io/unifolm-wla.github.io/",
+      "publishedAt": "2026-09-11",
+      "dateNote": "此日期对应官方仓库 ER-1、ER-Flow 权重发布公告，不代表完整 WLA 系统同日全面开源。",
+      "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
+      "evidence": "官方项目、仓库及两张模型卡已核对 · ER理解评测有数值 · 完整WLA真机证据主要为演示 · 未独立复现",
+      "evidenceDetails": [
+        {
+          "url": "https://unigen-x.github.io/unifolm-wla.github.io/",
+          "location": "Dynamic Region Prediction；Discrete Action Learning；Training Setup",
+          "supports": "光流动态区域、VQ-VAE、三部位RVQ与MMDiT动作专家接口"
+        },
+        {
+          "url": "https://unigen-x.github.io/unifolm-wla.github.io/",
+          "location": "Multi-Source Data；Real-robot tests",
+          "supports": "约2500小时训练数据；54项桌面和10项全身操作演示，未给完整逐任务试验统计"
+        },
+        {
+          "url": "https://huggingface.co/unitreerobotics/UnifoLM-ER-1",
+          "location": "Benchmark Results → Where2Place列",
+          "supports": "ER-1 82.0与Qwen3-VL-4B 63.0是空间理解分数，非真机成功率"
+        },
+        {
+          "url": "https://github.com/unitreerobotics/unifolm-wla",
+          "location": "News；Open-Source Plan",
+          "supports": "9月11日已释放ER-1与ER-Flow；WLA-Base和后训练代码尚属计划"
+        },
+        {
+          "url": "https://huggingface.co/unitreerobotics/UnifoLM-ER-Flow",
+          "location": "Dynamic Region Prediction；Discrete Action Learning；Unified Training Signals",
+          "supports": "已发布ER-Flow的交互预测及分部位离散动作接口"
+        }
+      ],
+      "status": "已完成原文分析",
+      "lastCheckedAt": "2026-09-13T09:47:05.092971Z",
+      "aliasIds": [],
+      "lastSeenAt": "2026-09-13T09:50:12.980635+00:00",
+      "updatedAt": "2026-09-13T09:50:12.980635+00:00",
+      "links": [
+        {
+          "label": "原始来源",
+          "url": "https://unigen-x.github.io/unifolm-wla.github.io/"
+        },
+        {
+          "label": "开放计划",
+          "url": "https://github.com/unitreerobotics/unifolm-wla"
+        },
+        {
+          "label": "ER-1权重",
+          "url": "https://huggingface.co/unitreerobotics/UnifoLM-ER-1"
+        },
+        {
+          "label": "ER-Flow权重",
+          "url": "https://huggingface.co/unitreerobotics/UnifoLM-ER-Flow"
+        }
+      ],
+      "revisionEvents": [],
+      "changeType": "analysis-completed",
+      "featured": false,
+      "tags": [
+        "具身推理",
+        "人形机器人",
+        "动作量化",
+        "部分模型开放"
+      ],
+      "type": "官方项目报告 · 分阶段模型发布",
+      "version": "WLA-1.0 / ER-1与ER-Flow发布",
+      "authors": [
+        "Unitree Robotics"
+      ],
+      "summary": "将未来动态区域、离散动作与连续动作专家连接起来；当前可下载的是ER-1和ER-Flow，完整WLA-Base与后训练代码仍在计划中。",
+      "background": "人形机器人既要理解空间关系，也要预测交互引起的变化，并协调不同夹爪、手指和下肢动作；单一视觉问答能力不足以覆盖执行链。",
+      "experiments": "官方称以约2500小时机器人数据训练，展示54项桌面与10项全身操作。ER-1的Where2Place为82.0，Qwen3-VL-4B为63.0；这是空间理解评测分数。项目未提供足够的逐任务真机试验次数与总成功率，64项演示不能等同64项稳定通过。",
+      "conclusion": "现有资料支持统一表示与模块化训练路线，并可使用已释放的ER模块研究空间理解和交互预测；完整WLA控制能力目前主要由官方演示支持。",
+      "evaluation": "【编辑分析】动态区域比整帧生成更聚焦交互，但可能忽略静态约束和远处风险。仓库9月11日明确释放ER-1、ER-Flow权重；WLA-Base、后训练代码仍列开放计划，暂不能声称完整系统可复现。",
+      "futureDirections": "【研究假设】可让动态区域预测为WAM规划提供接触候选，再用经典运动学与碰撞约束校验连续动作。应消融区域预测和分部位量化，并测试未见末端执行器、接触失败及长期动作漂移。",
+      "popularity": {
+        "score": 36.38,
+        "status": "verified",
+        "basis": "GitHub累计stars 37。只合计可测信号，缺失项不是零，累计关注不代表当天热度或论文质量。",
+        "evidence": [
+          {
+            "url": "https://github.com/unitreerobotics/unifolm-wla",
+            "metric": "github_stars",
+            "value": 37,
+            "checkedAt": "2026-09-13T09:47:48.983681Z",
+            "scope": "官方仓库网页可见累计stars；非本日新增；网页缓存可能滞后"
+          }
+        ],
+        "metrics": {
+          "githubStars": 37,
+          "hfUpvotes": null
+        },
+        "missingMetrics": [
+          "hf_paper_upvotes"
+        ],
+        "checkedAt": "2026-09-13T09:47:48.983681Z"
+      },
+      "analysisCompletedAt": "2026-09-13T09:47:05.092971Z",
+      "reviewNote": "本站补齐既有线索的完整分析；未确认原研究发生新的实质修订。",
+      "briefHistory": [
+        {
+          "promotedAt": "2026-09-13T09:50:12.980635+00:00",
+          "previous": {
+            "id": "unitree:unifolm-wla-1.0",
+            "title": "UnifoLM-WLA-1.0 / ER-1 / ER-Flow分阶段开放",
+            "zhTitle": "UnifoLM-WLA：统一动态区域、离散动作与全身控制",
+            "category": "vla",
+            "contentTypes": [
+              "report",
+              "news"
+            ],
+            "innovation": "以未来动态区域的离散表示和分部位动作量化对齐视觉、语言与动作，再接连续动作专家。9 月 11 日明确释放的是 ER-1 与 ER-Flow 权重；完整 WLA-Base 与后训练代码仍列在开放计划中。",
+            "canonicalUrl": "https://unigen-x.github.io/unifolm-wla.github.io/",
+            "publishedAt": "2026-09-11",
+            "dateNote": "此日期对应官方仓库 ER-1、ER-Flow 权重发布公告，不代表完整 WLA 系统同日全面开源。",
+            "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
+            "evidence": "已核对官方项目页与仓库 News/Open-Source Plan；完整技术报告和系统真机评测仍待核验。",
+            "evidenceDetails": [
+              {
+                "url": "https://unigen-x.github.io/unifolm-wla.github.io/",
+                "location": "Future Dynamic-Region Prediction；Discrete Action Learning；WLA Training",
+                "supports": "动态区域、动作量化与连续动作专家的设计"
+              },
+              {
+                "url": "https://github.com/unitreerobotics/unifolm-wla",
+                "location": "News；Open-Source Plan",
+                "supports": "9 月 11 日已释放 ER-1、ER-Flow，WLA-Base/后训练代码仍属计划"
+              }
+            ],
+            "status": "待全文核验",
+            "lastCheckedAt": "2026-09-13T09:28:36.599606+00:00",
+            "aliasIds": [],
+            "lastSeenAt": "2026-09-13T09:28:36.599606+00:00",
+            "updatedAt": "2026-09-13T09:19:18.102185+00:00",
+            "links": [
+              {
+                "label": "原始来源",
+                "url": "https://unigen-x.github.io/unifolm-wla.github.io/"
+              }
+            ],
+            "revisionEvents": []
+          }
+        }
+      ]
     }
   ],
   "editions": [
@@ -3221,518 +5070,2039 @@
         "unitree:unifolm-wla-1.0"
       ],
       "rankedIds": [
+        "arxiv:2609.10522",
         "arxiv:2609.04196",
+        "arxiv:2609.05324",
+        "arxiv:2609.01281",
+        "arxiv:2609.09155",
+        "arxiv:2609.05533",
         "arxiv:2609.05588",
+        "arxiv:2609.09158",
         "report:nvidia-compass-agent-workflow-20260826",
+        "unitree:unifolm-wla-1.0",
         "arxiv:2608.29967",
         "arxiv:2609.11445",
-        "unitree:unifolm-wla-1.0",
         "arxiv:2609.11875",
         "arxiv:2609.11661",
         "arxiv:2609.11433",
         "arxiv:2609.10706",
-        "arxiv:2609.10522",
-        "arxiv:2609.09158",
-        "arxiv:2609.09155",
         "arxiv:2609.06009",
-        "arxiv:2609.05324",
         "arxiv:2609.05178",
-        "arxiv:2609.05533",
-        "arxiv:2609.01281",
         "arxiv:2608.29769",
         "arxiv:2608.29768",
         "arxiv:2608.19443",
         "pending:nvidia-cosmos-edge-20260819"
       ],
       "featuredIds": [
+        "arxiv:2609.10522",
         "arxiv:2609.04196",
+        "arxiv:2609.05324",
+        "arxiv:2609.01281",
+        "arxiv:2609.09155",
+        "arxiv:2609.05533",
         "arxiv:2609.05588",
+        "arxiv:2609.09158",
         "report:nvidia-compass-agent-workflow-20260826",
+        "unitree:unifolm-wla-1.0",
         "arxiv:2608.29967",
         "arxiv:2609.11445",
         "arxiv:2609.11875",
         "arxiv:2609.11661",
         "arxiv:2609.11433",
+        "arxiv:2609.10706",
+        "arxiv:2609.06009",
+        "arxiv:2609.05178",
         "arxiv:2608.29769",
-        "arxiv:2608.19443"
-      ],
-      "analysisNeededIds": [
-        "unitree:unifolm-wla-1.0",
-        "arxiv:2609.10706",
-        "arxiv:2609.10522",
-        "arxiv:2609.09158",
-        "arxiv:2609.09155",
-        "arxiv:2609.06009",
-        "arxiv:2609.05324",
-        "arxiv:2609.05178",
-        "arxiv:2609.05533",
-        "arxiv:2609.01281",
         "arxiv:2608.29768",
+        "arxiv:2608.19443",
         "pending:nvidia-cosmos-edge-20260819"
       ],
-      "briefIds": [
-        "unitree:unifolm-wla-1.0",
-        "arxiv:2609.10706",
-        "arxiv:2609.10522",
-        "arxiv:2609.09158",
-        "arxiv:2609.09155",
-        "arxiv:2609.06009",
-        "arxiv:2609.05324",
-        "arxiv:2609.05178",
-        "arxiv:2609.05533",
-        "arxiv:2609.01281",
-        "arxiv:2608.29768",
-        "pending:nvidia-cosmos-edge-20260819"
-      ],
+      "analysisNeededIds": [],
+      "briefIds": [],
       "candidateCount": 22,
-      "rankingNote": "5 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 站内热度代理分 = 10×ln(1+已核验 GitHub 累计 stars) + 20×ln(1+已核验 Hugging Face 论文 upvotes)。缺失项为 null，仅合计可测项；全部缺失则不评分。GitHub 指标来自官方 API，HF 指标来自公开论文页面；页面缓存可能滞后。stars 是仓库长期累计关注，旧仓库及包含多篇工作的框架会受益，不能解释为本日新增热度或论文质量。仅比较本站已收录且存在可测信号的记录，不是全网最热排名。",
+      "rankingNote": "12 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 站内热度代理分 = 10×ln(1+已核验 GitHub 累计 stars) + 20×ln(1+已核验 Hugging Face 论文 upvotes)。缺失项为 null，仅合计可测项；全部缺失则不评分。GitHub 指标来自官方 API，HF 指标来自公开论文页面；页面缓存可能滞后。stars 是仓库长期累计关注，旧仓库及包含多篇工作的框架会受益，不能解释为本日新增热度或论文质量。仅比较本站已收录且存在可测信号的记录，不是全网最热排名。",
+      "rankingVersion": 1
+    },
+    {
+      "id": "2026-09-13-reader-followup",
+      "label": "9月13日 · 全文分析补充",
+      "kind": "editorial-review",
+      "startedAt": "2026-09-13T09:50:12.980635+00:00",
+      "completedAt": "2026-09-13T09:50:12.980635+00:00",
+      "windowStart": "2026-09-13T09:19:18.102185+00:00",
+      "windowEnd": "2026-09-13T09:50:12.980635+00:00",
+      "status": "partial",
+      "summary": "补齐12条既有研究的全文或官方报告分析；未新增研究身份。合并本日29项研究并重新核实公开热度。COCO Matrix原始采访仍无法读取，留待核验。",
+      "sourceChecks": [
+        {
+          "name": "既有 arXiv 候选全文",
+          "status": "ok",
+          "note": "逐篇复核10篇既有候选的HTML/PDF及可用附录；不是一次全来源新稿检索。",
+          "queries": [
+            "https://arxiv.org/abs/2609.05178",
+            "https://arxiv.org/abs/2609.06009",
+            "https://arxiv.org/abs/2609.10706",
+            "https://arxiv.org/abs/2609.10522",
+            "https://arxiv.org/abs/2609.09155",
+            "https://arxiv.org/abs/2609.05324",
+            "https://arxiv.org/abs/2609.09158",
+            "https://arxiv.org/abs/2609.01281",
+            "https://arxiv.org/abs/2609.05533",
+            "https://arxiv.org/abs/2608.29768"
+          ]
+        },
+        {
+          "name": "官方博客与机构报告",
+          "status": "ok",
+          "note": "核对Cosmos 3 Edge完整教程/模型卡与UnifoLM官方项目/开放计划；配置差异与未披露实验均在条目中保留。",
+          "queries": [
+            "https://developer.nvidia.com/blog/post-train-nvidia-cosmos-3-edge-for-on-device-robot-control/",
+            "https://unigen-x.github.io/unifolm-wla.github.io/"
+          ]
+        },
+        {
+          "name": "公开关注度",
+          "status": "partial",
+          "note": "本次12条中7条取得官方GitHub或HF论文指标，其余指标缺失，不视为0；累计关注度不等于当天增量。"
+        },
+        {
+          "name": "COCO Matrix 原始采访",
+          "status": "failed",
+          "note": "再次读取量子位原始采访超时；仍未取得可读原文，未扩写成报告。",
+          "queries": [
+            "https://www.qbitai.com/2026/09/484897.html"
+          ]
+        }
+      ],
+      "collectionNote": "此期为既有候选补充核验与编辑归档；例行广泛检索仍按10:00/17:00任务执行。",
+      "addedIds": [],
+      "updatedIds": [],
+      "promotedIds": [
+        "arxiv:2609.05178",
+        "arxiv:2609.06009",
+        "arxiv:2609.10706",
+        "arxiv:2609.10522",
+        "arxiv:2609.09155",
+        "arxiv:2609.05324",
+        "arxiv:2609.09158",
+        "arxiv:2609.01281",
+        "arxiv:2609.05533",
+        "arxiv:2608.29768",
+        "pending:nvidia-cosmos-edge-20260819",
+        "unitree:unifolm-wla-1.0"
+      ],
+      "briefAddedIds": [],
+      "briefUpdatedIds": [],
+      "candidateIds": [
+        "arxiv:2609.05178",
+        "arxiv:2609.06009",
+        "arxiv:2609.10706",
+        "arxiv:2609.10522",
+        "arxiv:2609.09155",
+        "arxiv:2609.05324",
+        "arxiv:2609.09158",
+        "arxiv:2609.01281",
+        "arxiv:2609.05533",
+        "arxiv:2608.29768",
+        "pending:nvidia-cosmos-edge-20260819",
+        "unitree:unifolm-wla-1.0"
+      ],
+      "recordsSnapshot": [
+        {
+          "id": "arxiv:2609.05178",
+          "title": "LIBERO-RECOVER: Beyond Task Success Towards Failure Recovery in Robotic Manipulation Models",
+          "zhTitle": "LIBERO-RECOVER：把失败后的恢复能力纳入评测",
+          "category": "vla",
+          "contentTypes": [
+            "paper"
+          ],
+          "innovation": "在 LIBERO 仿真中运行策略采集自然失败，借助视频模型定位和标注失败过程，再划分动作重试、动作调整、物体状态恢复、环境恢复四级。除恢复成功率，还考察失败前后退化与任务间一致性，并收集遥操作恢复轨迹用于训练分析。",
+          "canonicalUrl": "https://arxiv.org/abs/2609.05178",
+          "publishedAt": "2026-09-04T14:15:27Z",
+          "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
+          "evidence": "已核对 HTML 正文及 PDF 表格、末页；v1 存在报告细节待澄清，未做独立复现。",
+          "evidenceDetails": [
+            {
+              "url": "https://arxiv.org/abs/2609.05178",
+              "location": "Abstract；Submission history",
+              "supports": "创新点概述及原始提交时间"
+            },
+            {
+              "url": "https://arxiv.org/html/2609.05178v1",
+              "location": "§3.2–3.5；§4.1–4.2",
+              "supports": "执行诱发且可恢复的失败定义；四级划分；2,178 个场景；恢复成功率与 RC 的定义。"
+            },
+            {
+              "url": "https://arxiv.org/pdf/2609.05178",
+              "location": "第10页 Table 2、Table 3 与 Key Finding 6–7",
+              "supports": "OpenVLA-OFT 混合训练后的恢复均值 20.8%→25.4%，标准 LIBERO 97.1%→96.6%；初始帧提示实验。"
+            },
+            {
+              "url": "https://arxiv.org/html/2609.05178v1",
+              "location": "§3.4 Stage 1；§3.5；§5.1；§5.2.3",
+              "supports": "方法列出多类失败生成器而统计段称 three models；实验为 LIBERO 仿真；动作块长度与恢复实验。"
+            },
+            {
+              "url": "https://arxiv.org/pdf/2609.05178",
+              "location": "第13页 Appendix A",
+              "supports": "附录保留占位文字，未提供正文所指的附加实验细节。"
+            }
+          ],
+          "status": "已完成原文分析",
+          "lastCheckedAt": "2026-09-13T09:48:19.649891+00:00",
+          "aliasIds": [],
+          "lastSeenAt": "2026-09-13T09:50:12.980635+00:00",
+          "updatedAt": "2026-09-13T09:50:12.980635+00:00",
+          "links": [
+            {
+              "label": "原始来源",
+              "url": "https://arxiv.org/abs/2609.05178"
+            },
+            {
+              "label": "论文全文",
+              "url": "https://arxiv.org/html/2609.05178v1"
+            },
+            {
+              "label": "PDF",
+              "url": "https://arxiv.org/pdf/2609.05178"
+            }
+          ],
+          "authors": [
+            "Lin Liu",
+            "Zhicheng Bao",
+            "Lu Zhang",
+            "Ziying Song",
+            "Wu Yang",
+            "Shuai Tao",
+            "Wulong Liu",
+            "Huchuan Lu"
+          ],
+          "tags": [
+            "vla",
+            "wam",
+            "失败恢复",
+            "评测",
+            "LIBERO"
+          ],
+          "type": "研究论文 / 预印本",
+          "version": "v1",
+          "source": "arXiv",
+          "analysisCompletedAt": "2026-09-13T09:48:19.649891+00:00",
+          "reviewNote": "本站补齐既有线索的完整分析；未确认原研究发生新的实质修订。",
+          "featured": false,
+          "popularity": {
+            "score": null,
+            "status": "unmeasured",
+            "basis": "本次未取得可核验的 GitHub stars 或 Hugging Face 论文投票数；缺失不等于零。",
+            "evidence": [],
+            "metrics": {
+              "githubStars": null,
+              "hfUpvotes": null
+            },
+            "checkedAt": "2026-09-13T09:48:19.649891+00:00"
+          },
+          "summary": "把评测起点移到真实策略执行产生的失败状态，揭示“原任务分数高”与“出错后能恢复”之间的差距。",
+          "background": "常见操作基准从预设有效状态出发，用最终是否完成任务评分；物体被撞偏、容器翻倒等执行后果很少被单独评估。手工扰动初始场景也难覆盖机器人自己造成的、需要先修复状态才能继续的失败。",
+          "experiments": "正文报告 2,178 个恢复场景，比较 OpenVLA-OFT、π0/FAST、GR00T 和两类 WAM，全部属于仿真评估。Table 2 中，混合恢复数据后 OpenVLA-OFT 平均恢复成功率从 20.8% 升至 25.4%，标准 LIBERO 平均成功率却由 97.1% 降至 96.6%；短动作块及加入初始帧也改善恢复。",
+          "conclusion": "在失败状态上学会恢复，尚不足以保证策略从正常初态执行时能识别并修复自身错误。论文支持把在线失败识别、状态修复与继续执行分别评测，不能将结果直接解释为真实硬件可靠性。",
+          "evaluation": "编辑分析：最有价值的是恢复能力迁移不足这一诊断。复现信息仍不完整：v1 的生成器列表与统计段数量不一致，PDF 附录仍为占位内容；一致性指标只反映分散程度，高分也可能对应“稳定地失败”。报告应结合恢复成功率阅读。",
+          "futureDirections": "研究假设：可把 FARM 的风险读出接入恢复触发器，再用 MaP-WAM 的历史计划提供失败前参考状态。应在同一失败分布上分别消融触发、记忆和恢复动作，检验闭环收益，并另做真机接触失败测试。",
+          "verificationCaveats": [
+            "作者项目页本次未能读取，未确认基准下载与训练脚本已发布。",
+            "数字只作同表条件下比较；模型生成数量与附录内容仍需作者澄清。"
+          ],
+          "changeType": "analysis-completed",
+          "briefHistory": [
+            {
+              "promotedAt": "2026-09-13T09:50:12.980635+00:00",
+              "previous": {
+                "id": "arxiv:2609.05178",
+                "title": "LIBERO-RECOVER: Beyond Task Success Towards Failure Recovery in Robotic Manipulation Models",
+                "zhTitle": "LIBERO-RECOVER：把失败后的恢复能力纳入评测",
+                "category": "vla",
+                "contentTypes": [
+                  "paper"
+                ],
+                "innovation": "从真实模型执行失败构造恢复场景，按动作重试、动作调整、物体状态恢复和环境恢复四层组织，补充只看初始状态任务成功率的评测盲点。",
+                "canonicalUrl": "https://arxiv.org/abs/2609.05178",
+                "publishedAt": "2026-09-04T14:15:27Z",
+                "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
+                "evidence": "已核对 arXiv 原始摘要与提交记录；尚未逐项核验全文方法、实验和开源情况。",
+                "evidenceDetails": [
+                  {
+                    "url": "https://arxiv.org/abs/2609.05178",
+                    "location": "Abstract；Submission history",
+                    "supports": "创新点概述及原始提交时间"
+                  }
+                ],
+                "status": "待全文核验",
+                "lastCheckedAt": "2026-09-13T09:28:36.599606+00:00",
+                "aliasIds": [],
+                "lastSeenAt": "2026-09-13T09:28:36.599606+00:00",
+                "updatedAt": "2026-09-13T09:19:18.102185+00:00",
+                "links": [
+                  {
+                    "label": "原始来源",
+                    "url": "https://arxiv.org/abs/2609.05178"
+                  }
+                ],
+                "revisionEvents": []
+              }
+            }
+          ]
+        },
+        {
+          "id": "arxiv:2609.06009",
+          "title": "How to Learn from What a Human Would Avoid? Intervention-Aware World Models with Real-World RL for Dexterous Manipulation",
+          "zhTitle": "WHIRL：从人类接管信号学习提前避险",
+          "category": "rl",
+          "contentTypes": [
+            "paper"
+          ],
+          "innovation": "冻结示范行为先验，在低维手部协同空间学习残差；一步潜空间世界模型同时预测动态、奖励、终止和下一步接管概率。接管概率只塑造 actor 的风险偏好，不加入 Bellman 奖励目标，避免把操作员习惯直接写成任务回报。",
+          "canonicalUrl": "https://arxiv.org/abs/2609.06009",
+          "publishedAt": "2026-09-05T10:28:23Z",
+          "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
+          "evidence": "已核对 HTML 方法、训练/自主评估协议、主结果叙述与限制；未逐格读取未展开的 Table 1，未独立复现。",
+          "evidenceDetails": [
+            {
+              "url": "https://arxiv.org/abs/2609.06009",
+              "location": "Abstract；Submission history",
+              "supports": "创新点概述及原始提交时间"
+            },
+            {
+              "url": "https://arxiv.org/html/2609.06009v1",
+              "location": "§3.1–3.3，Eq. 3–6",
+              "supports": "脚踏板介入标注、冻结行为先验、手部协同残差、下一步接管预测以及只在 actor 侧使用风险项。"
+            },
+            {
+              "url": "https://arxiv.org/html/2609.06009v1",
+              "location": "§4.1–4.4",
+              "supports": "五项真机任务；相同行为先验；最终成功率评估禁用纠正通道；每个任务—方法组合一个种子和一个操作员。"
+            },
+            {
+              "url": "https://arxiv.org/html/2609.06009v1",
+              "location": "§4.5 Q1、Q2、Q3；§5 Limitations",
+              "supports": "正文报告成功率差值 +15–30 个百分点；Pull Drawer 滚动五回合按步加权接管比例 0.113→0.018（约84%）；actor 风险消融；工作区内泛化和统计限制。"
+            }
+          ],
+          "status": "已完成原文分析",
+          "lastCheckedAt": "2026-09-13T09:48:19.649891+00:00",
+          "aliasIds": [],
+          "lastSeenAt": "2026-09-13T09:50:12.980635+00:00",
+          "updatedAt": "2026-09-13T09:50:12.980635+00:00",
+          "links": [
+            {
+              "label": "原始来源",
+              "url": "https://arxiv.org/abs/2609.06009"
+            },
+            {
+              "label": "论文全文",
+              "url": "https://arxiv.org/html/2609.06009v1"
+            }
+          ],
+          "authors": [
+            "Jiaju Yin",
+            "Zhenhui Zhang",
+            "Lixin Xu",
+            "Heng Zhang",
+            "Jun Shao",
+            "Yating Feng",
+            "Arash Ajoudani",
+            "Renjing Xu"
+          ],
+          "tags": [
+            "rl",
+            "世界模型",
+            "人类干预",
+            "灵巧手",
+            "残差策略"
+          ],
+          "type": "研究论文 / 预印本",
+          "version": "v1",
+          "source": "arXiv",
+          "analysisCompletedAt": "2026-09-13T09:48:19.649891+00:00",
+          "reviewNote": "本站补齐既有线索的完整分析；未确认原研究发生新的实质修订。",
+          "featured": false,
+          "popularity": {
+            "score": null,
+            "status": "unmeasured",
+            "basis": "本次未取得可核验的 GitHub stars 或 Hugging Face 论文投票数；缺失不等于零。",
+            "evidence": [],
+            "metrics": {
+              "githubStars": null,
+              "hfUpvotes": null
+            },
+            "checkedAt": "2026-09-13T09:48:19.649891+00:00"
+          },
+          "summary": "把人类何时接管机器人学成提前可预测的风险信号，在真实灵巧操作的在线强化学习中减少持续救援。",
+          "background": "人类接管通常被当作纠正动作，接管时机中包含的危险判断没有被充分利用。灵巧手的高维接触探索代价大，仅依赖终止失败信号往往太晚，也增加了操作员和硬件负担。",
+          "experiments": "使用 Franka FR3 与 LEAP Hand 完成抓方块、抓 LEGO、放置、拉抽屉及开抽屉—放物—关抽屉五项真机任务。各方法从相同行为先验开始，最终评估关闭人工纠正；正文报告较最强无模型残差基线提高 15–30 个百分点。抽屉任务末段按控制步数加权的接管比例由 0.113 降至 0.018，约减少 84%；不是接管次数减少 84%。",
+          "conclusion": "受控实验支持“预测接管并在 actor 使用”能降低介入负担；移除该风险项的消融也延迟收敛。验证主要覆盖训练工作区内的位姿随机变化，尚不能推出对陌生物体、操作员或机器人手普遍有效。",
+          "evaluation": "编辑分析：将人类偏好风险与任务价值分开处理，有清楚的工程动机。但每个任务—方法组合只有单个训练种子和操作员，抽屉与长程任务的成功率差异证据较弱；预测的是接管习惯，不能当作形式化安全保证。",
+          "futureDirections": "研究假设：可与触觉滑移检测及显式安全约束结合，让触觉提供早期接触信号、预测头降低危险探索频率。需跨操作员校准风险概率，并比较仅有安全屏障、仅有风险塑形和二者结合时的成功率、干预时长与实际违规数。",
+          "verificationCaveats": [
+            "官方项目页和 PDF 本次未能读取；完整分析依据已读 HTML 正文，未确认代码或权重发布。"
+          ],
+          "changeType": "analysis-completed",
+          "briefHistory": [
+            {
+              "promotedAt": "2026-09-13T09:50:12.980635+00:00",
+              "previous": {
+                "id": "arxiv:2609.06009",
+                "title": "How to Learn from What a Human Would Avoid? Intervention-Aware World Models with Real-World RL for Dexterous Manipulation",
+                "zhTitle": "WHIRL：从人类接管信号学习提前避险",
+                "category": "rl",
+                "contentTypes": [
+                  "paper"
+                ],
+                "innovation": "在潜空间世界模型中增加人类接管概率预测头，把操作员何时介入转为未来风险信号，并用于策略侧风险塑形，尝试减少真实灵巧手训练中的介入负担。",
+                "canonicalUrl": "https://arxiv.org/abs/2609.06009",
+                "publishedAt": "2026-09-05T10:28:23Z",
+                "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
+                "evidence": "已核对 arXiv 原始摘要与提交记录；尚未逐项核验全文方法、实验和开源情况。",
+                "evidenceDetails": [
+                  {
+                    "url": "https://arxiv.org/abs/2609.06009",
+                    "location": "Abstract；Submission history",
+                    "supports": "创新点概述及原始提交时间"
+                  }
+                ],
+                "status": "待全文核验",
+                "lastCheckedAt": "2026-09-13T09:28:36.599606+00:00",
+                "aliasIds": [],
+                "lastSeenAt": "2026-09-13T09:28:36.599606+00:00",
+                "updatedAt": "2026-09-13T09:19:18.102185+00:00",
+                "links": [
+                  {
+                    "label": "原始来源",
+                    "url": "https://arxiv.org/abs/2609.06009"
+                  }
+                ],
+                "revisionEvents": []
+              }
+            }
+          ]
+        },
+        {
+          "id": "arxiv:2609.10706",
+          "title": "HuRo: Robotizing Human Videos for Scalable VLA Pretraining",
+          "zhTitle": "HuRo：将人类视频转成机器人观测与动作",
+          "category": "vla",
+          "contentTypes": [
+            "paper"
+          ],
+          "innovation": "按源数据缺失程度补齐相机、手姿与语言标注；在共同坐标中优化机体对齐及动作轨迹，再去除人类手臂、叠加同一轨迹渲染的机器人。由多源视频构建约 63 万片段、1.42 亿帧，并联合预训练视觉与动作路径。",
+          "canonicalUrl": "https://arxiv.org/abs/2609.10706",
+          "publishedAt": "2026-09-09T18:02:05Z",
+          "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
+          "evidence": "已核对 HTML 正文及附录 A–E 的任务、评分与消融；未独立复现，未确认全部数据与代码下载状态。",
+          "evidenceDetails": [
+            {
+              "url": "https://arxiv.org/abs/2609.10706",
+              "location": "Abstract；Submission history",
+              "supports": "创新点概述及原始提交时间"
+            },
+            {
+              "url": "https://arxiv.org/html/2609.10706v1",
+              "location": "§3.1–3.2；Appendix D Table 5",
+              "supports": "观测与动作共同 robotization；约630K片段与142.2M帧；共享相机—机器人对齐及视觉/动作联合训练。"
+            },
+            {
+              "url": "https://arxiv.org/html/2609.10706v1",
+              "location": "§4.1–4.3；Appendix A Table 1、Table 2、§A.3",
+              "supports": "四项ALLEX真机任务；51.5%→80.3%、OOD 34.9%→72.2%；no-overlay OOD 55.7%；部分得分及 ID/OOD 等权总体均值。"
+            },
+            {
+              "url": "https://arxiv.org/html/2609.10706v1",
+              "location": "§4.4–4.5；Appendix B–C、E",
+              "supports": "视觉与动作路径迁移消融；匹配帧预算下的视频生成基线；OpenArm需目标机体微调的迁移验证。"
+            },
+            {
+              "url": "https://arxiv.org/html/2609.10706v1",
+              "location": "§6 Limitations",
+              "supports": "视觉遮挡/补画伪影；无力和触觉监督；运动学重定向不处理自碰撞与物理接触，不保证轨迹可执行。"
+            }
+          ],
+          "status": "已完成原文分析",
+          "lastCheckedAt": "2026-09-13T09:48:19.649891+00:00",
+          "aliasIds": [],
+          "lastSeenAt": "2026-09-13T09:50:12.980635+00:00",
+          "updatedAt": "2026-09-13T09:50:12.980635+00:00",
+          "links": [
+            {
+              "label": "原始来源",
+              "url": "https://arxiv.org/abs/2609.10706"
+            },
+            {
+              "label": "论文全文",
+              "url": "https://arxiv.org/html/2609.10706v1"
+            }
+          ],
+          "authors": [
+            "Jinho Jeong",
+            "Se June Joo",
+            "Jaehyun Kang",
+            "Dongyun Kim",
+            "Yena Kim",
+            "Hanjung Kim",
+            "Seon Joo Kim"
+          ],
+          "tags": [
+            "vla",
+            "人类视频",
+            "预训练",
+            "数据",
+            "跨机体"
+          ],
+          "type": "研究论文 / 预印本",
+          "version": "v1",
+          "source": "arXiv",
+          "analysisCompletedAt": "2026-09-13T09:48:19.649891+00:00",
+          "reviewNote": "本站补齐既有线索的完整分析；未确认原研究发生新的实质修订。",
+          "featured": false,
+          "popularity": {
+            "score": null,
+            "status": "unmeasured",
+            "basis": "本次未取得可核验的 GitHub stars 或 Hugging Face 论文投票数；缺失不等于零。",
+            "evidence": [],
+            "metrics": {
+              "githubStars": null,
+              "hfUpvotes": null
+            },
+            "checkedAt": "2026-09-13T09:48:19.649891+00:00"
+          },
+          "summary": "把人类视频同时转换为机器人外观和动作监督，研究这种联合对齐如何改善 VLA 的真机完成度与分布外表现。",
+          "background": "人类视频规模大、场景丰富，但相机运动、手部形态和动作接口都与机器人不同。只迁移视觉表征或只重定向动作，会留下观测与执行监督不一致的问题。",
+          "experiments": "在 ALLEX 四项真机操作上保持优化预算、改变预训练数据规模。全量数据使总体完成度由 51.5% 升至 80.3%，OOD 完成度由 34.9% 升至 72.2%；去掉机器人视觉叠加时 OOD 为 55.7%。附录明确：苹果任务按成功计分，其余任务允许分阶段部分得分；80.3% 是 ID/OOD 平均完成度，不能称为整项任务成功率。",
+          "conclusion": "受控消融支持同时对齐机器人观测与动作，比单独迁移视觉或保留人类外观更利于当前设置下的泛化。附录也验证了另一机体上的微调迁移，但仍需要目标任务机器人示范。",
+          "evaluation": "编辑分析：数据处理流程与消融比单一成绩更值得复用。轨迹提供视觉和运动学监督，未包含力、触觉或完整碰撞约束；遮挡与补画亦存在伪影，不能直接当作可执行机器人示范。试验回合有限，完成度与实际部署可靠性要分开。",
+          "futureDirections": "研究假设：可将 HuRo 用于 OpenWAM 的多源预训练，并通过约束流形上的 IK 或碰撞过滤提高动作监督质量。应固定视频数量比较几何过滤、接触提示和真实力觉数据混训，检验是否改善接触任务而非只改善视觉迁移。",
+          "verificationCaveats": [
+            "作者项目链接可从论文原页追溯，但本次未稳定读取项目正文，未将论文宣称的数据与代码发布等同于已核实下载。"
+          ],
+          "changeType": "analysis-completed",
+          "briefHistory": [
+            {
+              "promotedAt": "2026-09-13T09:50:12.980635+00:00",
+              "previous": {
+                "id": "arxiv:2609.10706",
+                "title": "HuRo: Robotizing Human Videos for Scalable VLA Pretraining",
+                "zhTitle": "HuRo：将人类视频转成机器人观测与动作",
+                "category": "vla",
+                "contentTypes": [
+                  "paper"
+                ],
+                "innovation": "将异构人类视频共同转换为机器人对齐的视觉观测和动作轨迹，推断不同标注层级缺少的中间信号，用于扩大 VLA 的人类视频预训练。",
+                "canonicalUrl": "https://arxiv.org/abs/2609.10706",
+                "publishedAt": "2026-09-09T18:02:05Z",
+                "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
+                "evidence": "已核对 arXiv 原始摘要与提交记录；尚未逐项核验全文方法、实验和开源情况。",
+                "evidenceDetails": [
+                  {
+                    "url": "https://arxiv.org/abs/2609.10706",
+                    "location": "Abstract；Submission history",
+                    "supports": "创新点概述及原始提交时间"
+                  }
+                ],
+                "status": "待全文核验",
+                "lastCheckedAt": "2026-09-13T09:28:36.599606+00:00",
+                "aliasIds": [],
+                "lastSeenAt": "2026-09-13T09:28:36.599606+00:00",
+                "updatedAt": "2026-09-13T09:19:18.102185+00:00",
+                "links": [
+                  {
+                    "label": "原始来源",
+                    "url": "https://arxiv.org/abs/2609.10706"
+                  }
+                ],
+                "revisionEvents": []
+              }
+            }
+          ]
+        },
+        {
+          "id": "arxiv:2609.10522",
+          "title": "Show-Harness: Just a VLM Agent Can Play Robots",
+          "zhTitle": "Show-Harness：用语义动作接口连接 VLM 与机器人",
+          "category": "vla",
+          "contentTypes": [
+            "paper"
+          ],
+          "innovation": "模型选择平移、旋转、夹爪等语义单元，机体解释器负责尺度、坐标转换及低层控制；感知、子任务规划、历史和恢复模块形成反馈循环。GUMI 让人与代理通过同样的按钮采集示范，小模型可沿用原生词表学习动作，无需新增动作头。",
+          "canonicalUrl": "https://arxiv.org/abs/2609.10522",
+          "publishedAt": "2026-09-09T17:53:38Z",
+          "discoveredAt": "2026-09-13T09:14:59+00:00",
+          "evidence": "已读 HTML 方法与消融、PDF Table 2、官方项目、代码仓库和模型卡；未独立运行代码或真机复现。",
+          "evidenceDetails": [
+            {
+              "url": "https://arxiv.org/abs/2609.10522",
+              "location": "Abstract；Submission history",
+              "supports": "创新点概述及原始提交时间"
+            },
+            {
+              "url": "https://arxiv.org/html/2609.10522v1",
+              "location": "§3.1–3.4；§4；§5.4.3–5.4.4",
+              "supports": "语义动作与确定性解释器、GUMI 同接口数据采集、原生词表微调；反馈/恢复及动作约定消融。"
+            },
+            {
+              "url": "https://arxiv.org/pdf/2609.10522",
+              "location": "第10页 §5.1–5.2；第11页 Table 2",
+              "supports": "十任务各十次；跨任务成功率 ZS89%、FT86%、最高基线57%；Sim-to-real FT13/20而π0.5/GR00T均0/20；FT跨机体为联合训练。"
+            },
+            {
+              "url": "https://github.com/showlab/Show-Harness",
+              "location": "Folders and files；Quick Start；Released checkpoints and data",
+              "supports": "实际存在 core/interpreters/gumi/plugins/train 目录，README 给出部署及已发布模型、数据入口；未运行验证。"
+            },
+            {
+              "url": "https://huggingface.co/showlab/Show-Harness-VLMs",
+              "location": "Adapters；Two contracts that fail silently",
+              "supports": "LoRA适配器说明，训练对话模板与方向映射需保持一致。"
+            },
+            {
+              "url": "https://arxiv.org/html/2609.10522v1",
+              "location": "§5.3.1 与 §6；PDF 第12页 Figure 6",
+              "supports": "夹爪平台局限；精细控制正文数字与图表/官网存在差异，未把该组数字写成统一结论。"
+            }
+          ],
+          "status": "已完成原文分析",
+          "lastCheckedAt": "2026-09-13T09:48:19.649891+00:00",
+          "aliasIds": [
+            "pending:arxiv:2609.10522"
+          ],
+          "lastSeenAt": "2026-09-13T09:50:12.980635+00:00",
+          "updatedAt": "2026-09-13T09:50:12.980635+00:00",
+          "links": [
+            {
+              "label": "原始来源",
+              "url": "https://arxiv.org/abs/2609.10522"
+            },
+            {
+              "label": "论文全文",
+              "url": "https://arxiv.org/html/2609.10522v1"
+            },
+            {
+              "label": "PDF",
+              "url": "https://arxiv.org/pdf/2609.10522"
+            },
+            {
+              "label": "项目主页",
+              "url": "https://showlab.github.io/Show-Harness/"
+            },
+            {
+              "label": "代码",
+              "url": "https://github.com/showlab/Show-Harness"
+            },
+            {
+              "label": "LoRA 模型",
+              "url": "https://huggingface.co/showlab/Show-Harness-VLMs"
+            },
+            {
+              "label": "示范数据",
+              "url": "https://huggingface.co/datasets/showlab/Show-Harness-Data"
+            }
+          ],
+          "authors": [
+            "Yanzhe Chen",
+            "Zechen Bai",
+            "Zhijun Cao",
+            "Wenzheng Zeng",
+            "Kevin Qinghong Lin",
+            "Yiqi Lin",
+            "Guoqiang Liang",
+            "Kevin Yuchen Ma",
+            "Qiming Huang",
+            "Mike Zheng Shou"
+          ],
+          "tags": [
+            "vla",
+            "VLM代理",
+            "语义动作",
+            "遥操作",
+            "跨机体"
+          ],
+          "type": "研究论文 / 预印本",
+          "version": "v1",
+          "source": "arXiv",
+          "analysisCompletedAt": "2026-09-13T09:48:19.649891+00:00",
+          "reviewNote": "本站补齐既有线索的完整分析；未确认原研究发生新的实质修订。",
+          "featured": false,
+          "popularity": {
+            "score": 155.11,
+            "status": "verified",
+            "basis": "GitHub 累计 stars 277；Hugging Face 论文 upvotes 139。按已核验公开信号计算；累计关注不代表当天增量，也不代表论文质量。",
+            "evidence": [
+              {
+                "url": "https://github.com/showlab/Show-Harness",
+                "metric": "github_stars",
+                "value": 277,
+                "checkedAt": "2026-09-13T09:48:19.649891+00:00",
+                "scope": "公开仓库页面累计 stars；页面缓存可能滞后"
+              },
+              {
+                "url": "https://huggingface.co/papers/2609.10522",
+                "metric": "hf_paper_upvotes",
+                "value": 139,
+                "checkedAt": "2026-09-13T09:48:19.649891+00:00",
+                "scope": "公开论文页面累计投票"
+              }
+            ],
+            "metrics": {
+              "githubStars": 277,
+              "hfUpvotes": 139
+            },
+            "checkedAt": "2026-09-13T09:48:19.649891+00:00"
+          },
+          "summary": "以离散语义动作和确定性机体解释器连接 VLM 与真实机器人，同一接口兼顾零样本控制、小模型微调和示范采集。",
+          "background": "VLM 能理解任务，却难稳定生成连续机器人控制量。把完整技能交给外部执行器又隐藏了细粒度决策。论文研究如何给模型一套既能理解、又能逐步纠正的动作接口。",
+          "experiments": "Franka 与 AgileX 真机评估覆盖十个物体—容器任务，每任务十次。PDF Table 2 中，Gemini 零样本模式成功率 89%，微调 Qwen 小模型为 86%，最强比较基线为 57%；各可训练方法使用同源示范。仅用仿真示范训练后，FT 真机成功 13/20，两种可训练 VLA 基线为 0/20。微调的跨机体实验共同使用两种机体数据，并非从未见过目标机体。",
+          "conclusion": "在当前夹爪操作范围内，语义接口能保留 VLM 的任务理解能力，并将机体差异集中到解释器。消融说明坐标约定、近距离视觉反馈和失败重试都很关键，收益不能全部归于模型本身。",
+          "evaluation": "编辑分析：代码仓库已含执行器、GUMI、插件和训练目录，适合作为可拆解的机器人代理实验平台；模型卡还明确了方向约定与对话模板等复现条件。零样本大模型的决策延迟、离散动作精度及夹爪任务覆盖仍有限；论文部分精细控制数值与图/官网不一致，此处采用已对齐的主表结果。",
+          "futureDirections": "研究假设：可与 CASD 的阶段语义或任务/运动规划器连接，把粗粒度技能约束转成可解释动作，再用局部反馈控制完成高频接触。应比较纯语义步进与混合控制的接触成功率、总用时和错误恢复能力，确认速度提升不牺牲反馈频率。",
+          "verificationCaveats": [
+            "未下载或运行代码、模型及示范数据；论文主表与公开页面对齐的数字才纳入正文。"
+          ],
+          "changeType": "analysis-completed",
+          "briefHistory": [
+            {
+              "promotedAt": "2026-09-13T09:50:12.980635+00:00",
+              "previous": {
+                "id": "arxiv:2609.10522",
+                "title": "Show-Harness: Just a VLM Agent Can Play Robots",
+                "zhTitle": "Show-Harness：用语义动作接口连接 VLM 与机器人",
+                "category": "vla",
+                "contentTypes": [
+                  "paper"
+                ],
+                "innovation": "向 VLM 暴露可推理的离散语义动作单元，再由各机器人解释器确定性落地；同一接口延伸为图形示范采集工具，降低控制与遥操作接口门槛。",
+                "canonicalUrl": "https://arxiv.org/abs/2609.10522",
+                "publishedAt": "2026-09-09T17:53:38Z",
+                "discoveredAt": "2026-09-13T09:14:59+00:00",
+                "evidence": "已核对 arXiv 原始摘要与提交记录；尚未逐项核验全文方法、实验和开源情况。",
+                "evidenceDetails": [
+                  {
+                    "url": "https://arxiv.org/abs/2609.10522",
+                    "location": "Abstract；Submission history",
+                    "supports": "创新点概述及原始提交时间"
+                  }
+                ],
+                "status": "待全文核验",
+                "lastCheckedAt": "2026-09-13T09:28:36.599606+00:00",
+                "aliasIds": [
+                  "pending:arxiv:2609.10522"
+                ],
+                "lastSeenAt": "2026-09-13T09:28:36.599606+00:00",
+                "updatedAt": "2026-09-13T09:14:59+00:00",
+                "links": [
+                  {
+                    "label": "原始来源",
+                    "url": "https://arxiv.org/abs/2609.10522"
+                  }
+                ],
+                "revisionEvents": []
+              }
+            }
+          ]
+        },
+        {
+          "id": "arxiv:2609.09155",
+          "title": "SyncWorld: Visual Calibration Enables World Models as Zero-Shot Simulators",
+          "zhTitle": "SyncWorld：用视觉校准对齐跨相机、跨机体的动作语义",
+          "category": "wam",
+          "contentTypes": [
+            "paper"
+          ],
+          "innovation": "用覆盖平移和旋转自由度的短帧—动作片段建立上下文校准；训练时扰动动作坐标，避免模型死记固定约定，并蒸馏出仅靠交互历史的推断模式。测试时由VLA提案、世界模型预测、VLM评分筛选动作。",
+          "canonicalUrl": "https://arxiv.org/abs/2609.09155",
+          "publishedAt": "2026-09-08T17:59:47Z",
+          "discoveredAt": "2026-09-13T09:14:59+00:00",
+          "evidence": "原始论文及方法、实验、局限已核对 · 作者报告 · 未独立复现",
+          "evidenceDetails": [
+            {
+              "url": "https://arxiv.org/abs/2609.09155",
+              "location": "Authors；Submission history",
+              "supports": "作者及v1原始提交时间2026-09-08 17:59:47 UTC"
+            },
+            {
+              "url": "https://arxiv.org/html/2609.09155v1",
+              "location": "§3.1–3.4；§4.1–4.5；Tables 1、3、4；Appendix C.4.3/Table 8；Appendix E",
+              "supports": "校准、坐标扰动和蒸馏；三个诊断任务每项50次，52/56/48%与58/72/60%；筛选任务条件；VLM排序失败及预测局限"
+            },
+            {
+              "url": "https://umass-embodied-agi.github.io/SyncWorld/",
+              "location": "Visual Calibration；Zero-Shot Policy Improvement",
+              "supports": "项目对校准上下文及候选动作筛选的说明"
+            },
+            {
+              "url": "https://github.com/UMass-Embodied-AGI/SyncWorld",
+              "location": "README · News；Relation to the paper",
+              "supports": "代码和评估入口公开；发布版Cosmos3-Nano与论文Wan2.2、动作单位/注意力/校准配置差异"
+            },
+            {
+              "url": "https://huggingface.co/yyuncong/SyncWorld/tree/main",
+              "location": "Files · config.json；model-00001-of-00007.safetensors等",
+              "supports": "实际可见模型配置与权重分片，不仅是模型占位页"
+            }
+          ],
+          "status": "已完成原文分析",
+          "lastCheckedAt": "2026-09-13T09:48:23.408050+00:00",
+          "aliasIds": [
+            "pending:arxiv:2609.09155"
+          ],
+          "lastSeenAt": "2026-09-13T09:50:12.980635+00:00",
+          "updatedAt": "2026-09-13T09:50:12.980635+00:00",
+          "links": [
+            {
+              "label": "原始来源",
+              "url": "https://arxiv.org/abs/2609.09155"
+            },
+            {
+              "label": "论文全文",
+              "url": "https://arxiv.org/html/2609.09155v1"
+            },
+            {
+              "label": "项目与演示",
+              "url": "https://umass-embodied-agi.github.io/SyncWorld/"
+            },
+            {
+              "label": "代码仓库",
+              "url": "https://github.com/UMass-Embodied-AGI/SyncWorld"
+            },
+            {
+              "label": "模型权重",
+              "url": "https://huggingface.co/yyuncong/SyncWorld"
+            }
+          ],
+          "version": "v1",
+          "type": "arXiv预印本",
+          "reviewCompletedAt": "2026-09-13T09:48:23.408050+00:00",
+          "changeType": "analysis-completed",
+          "dateNote": "滚动回看补录，保留原始发表和首次发现时间；本次补全编辑分析，不表示论文发生实质修订。",
+          "authors": [
+            "Yuncong Yang",
+            "Zhengtao Han",
+            "Furkan Ozyurt",
+            "Zeyuan Yang",
+            "Han Yang",
+            "Junyi Cao",
+            "Haoyu Zhen",
+            "Yilun Du",
+            "Chuang Gan"
+          ],
+          "tags": [
+            "世界模型",
+            "视觉校准",
+            "跨机体",
+            "测试时规划",
+            "开源实现差异"
+          ],
+          "summary": "把动作在当前相机和机体下的视觉含义写入校准上下文，支持新设置下的动作结果预测与候选动作筛选。",
+          "background": "同一个数值动作在不同相机、基座位置和机械臂上会产生不同像素运动，混合数据中的监督容易冲突。仅增加视频量或固定动作编码，未必能解释新设置中的控制语义。",
+          "experiments": "在未见LIBERO、ManiSkill及xArm视频上比较IRASim、WorldGym、Ctrl-World。策略实验每任务50次：三个经真实模拟器诊断有提升空间的任务，成功率从52/56/48%变为58/72/60%。这不是LIBERO全套平均，也不是真机闭环成功率。",
+          "conclusion": "结果支持视觉校准改善动作条件预测和特定任务的候选排序；无显式校准时仍能利用历史。附录同时显示，若VLM排序本身不可靠，即使用真实未来视频也可能降低策略表现。",
+          "evaluation": "【编辑评价】适合研究跨相机和跨机体的动作语义统一；对新物体、极端视角和细粒度运动仍有预测失真。代码与权重可读，但发布版改用Cosmos3-Nano，论文使用Wan2.2，连动作单位、注意力方式和校准片段数也有变化，不能直接视作论文成绩已复现。",
+          "futureDirections": "【研究假设】可给OpenWAM式预训练加入校准上下文，再把预测器接到MPC候选筛选；需分别控制相机、动作单位、物体分布，测量真实接触误差及闭环延迟，并对低置信预测允许拒绝执行。",
+          "popularity": {
+            "score": 84.12,
+            "basis": "GitHub 累计 stars 19；Hugging Face 论文 upvotes 14。仅为可测公开信号；缺失项不等于零，累计关注不能代表论文质量或当天新增热度。",
+            "status": "verified",
+            "evidence": [
+              {
+                "url": "https://github.com/UMass-Embodied-AGI/SyncWorld",
+                "metric": "github_stars",
+                "value": 19,
+                "checkedAt": "2026-09-13T09:48:23.408050+00:00",
+                "location": "Repository sidebar · Stars",
+                "scope": "仓库累计关注；不是本日新增；网页缓存可能滞后"
+              },
+              {
+                "url": "https://huggingface.co/papers/2609.09155",
+                "metric": "hf_paper_upvotes",
+                "value": 14,
+                "checkedAt": "2026-09-13T09:48:23.408050+00:00",
+                "location": "论文页标题下 Upvote",
+                "scope": "公开论文页面累计投票；不是本日新增"
+              }
+            ],
+            "metrics": {
+              "githubStars": 19,
+              "hfUpvotes": 14
+            },
+            "missingMetrics": [],
+            "checkedAt": "2026-09-13T09:48:23.408050+00:00"
+          },
+          "analysisCompletedAt": "2026-09-13T09:48:23.408050+00:00",
+          "reviewNote": "本站补齐既有线索的完整分析；未确认原研究发生新的实质修订。",
+          "briefHistory": [
+            {
+              "promotedAt": "2026-09-13T09:50:12.980635+00:00",
+              "previous": {
+                "id": "arxiv:2609.09155",
+                "title": "SyncWorld: Visual Calibration Enables World Models as Zero-Shot Simulators",
+                "zhTitle": "SyncWorld：用视觉校准说明动作如何改变画面",
+                "category": "wam",
+                "contentTypes": [
+                  "paper"
+                ],
+                "innovation": "利用覆盖可控自由度的帧—动作校准片段，在上下文中建立特定相机、场景和机体下的动作—视觉映射，帮助世界模型在新设置下模拟动作结果。",
+                "canonicalUrl": "https://arxiv.org/abs/2609.09155",
+                "publishedAt": "2026-09-08T17:59:47Z",
+                "discoveredAt": "2026-09-13T09:14:59+00:00",
+                "evidence": "已核对 arXiv 原始摘要与提交记录；尚未逐项核验全文方法、实验和开源情况。",
+                "evidenceDetails": [
+                  {
+                    "url": "https://arxiv.org/abs/2609.09155",
+                    "location": "Abstract；Submission history",
+                    "supports": "创新点概述及原始提交时间"
+                  }
+                ],
+                "status": "待全文核验",
+                "lastCheckedAt": "2026-09-13T09:28:36.599606+00:00",
+                "aliasIds": [
+                  "pending:arxiv:2609.09155"
+                ],
+                "lastSeenAt": "2026-09-13T09:28:36.599606+00:00",
+                "updatedAt": "2026-09-13T09:14:59+00:00",
+                "links": [
+                  {
+                    "label": "原始来源",
+                    "url": "https://arxiv.org/abs/2609.09155"
+                  }
+                ],
+                "revisionEvents": []
+              }
+            }
+          ]
+        },
+        {
+          "id": "arxiv:2609.05324",
+          "title": "RoboSPA: Can VLA Models Go Beyond Simple Scenes and Short-Horizon Tasks?",
+          "zhTitle": "RoboSPA：把空间辨认、动作执行和长程记忆的失败分开诊断",
+          "category": "vla",
+          "contentTypes": [
+            "paper"
+          ],
+          "innovation": "围绕空间推理与长程规划建立56个基础任务、五级难度、280个变体，报告约52.7万条仿真轨迹。用校正随机选择的目标准确度和子任务进度指标补充终局成功率，并提供细分失败类型。",
+          "canonicalUrl": "https://arxiv.org/abs/2609.05324",
+          "publishedAt": "2026-09-04T16:19:01Z",
+          "discoveredAt": "2026-09-13T09:14:59+00:00",
+          "evidence": "原始论文及方法、实验、局限已核对 · 作者报告 · 未独立复现",
+          "evidenceDetails": [
+            {
+              "url": "https://arxiv.org/abs/2609.05324",
+              "location": "Authors；Comments；Submission history",
+              "supports": "作者、作者声明EMNLP 2026主会录用、原始提交时间2026-09-04 16:19:01 UTC"
+            },
+            {
+              "url": "https://arxiv.org/pdf/2609.05324",
+              "location": "pp.1、6–9；§3.3、§4.1–4.5；Table 2；Limitations",
+              "supports": "56任务、5难度、280变体、527K轨迹；单任务Aloha仿真每变体100次；π0.5 55.2%到22.3%；最高难度记忆任务终局失败及仿真限制"
+            },
+            {
+              "url": "https://github.com/fanzhenxuan/RoboSPA",
+              "location": "README · Overview；Quick Start；Released Dataset",
+              "supports": "诊断指标、已发布代码/采集评测入口与作者的数据发布声明"
+            },
+            {
+              "url": "https://huggingface.co/datasets/zxfan/RoboSPA/tree/main",
+              "location": "Files at main · 8f5f053",
+              "supports": "本次文件树仅.gitattributes与README.md，总2.53kB，未见声明的预采集轨迹文件"
+            }
+          ],
+          "status": "已完成原文分析",
+          "lastCheckedAt": "2026-09-13T09:48:23.408050+00:00",
+          "aliasIds": [
+            "pending:arxiv:2609.05324"
+          ],
+          "lastSeenAt": "2026-09-13T09:50:12.980635+00:00",
+          "updatedAt": "2026-09-13T09:50:12.980635+00:00",
+          "links": [
+            {
+              "label": "原始来源",
+              "url": "https://arxiv.org/abs/2609.05324"
+            },
+            {
+              "label": "论文PDF",
+              "url": "https://arxiv.org/pdf/2609.05324"
+            },
+            {
+              "label": "代码与评测",
+              "url": "https://github.com/fanzhenxuan/RoboSPA"
+            },
+            {
+              "label": "数据发布状态",
+              "url": "https://huggingface.co/datasets/zxfan/RoboSPA/tree/main"
+            }
+          ],
+          "version": "v1",
+          "type": "论文 / EMNLP 2026（arXiv作者声明）",
+          "reviewCompletedAt": "2026-09-13T09:48:23.408050+00:00",
+          "changeType": "analysis-completed",
+          "dateNote": "滚动回看补录，保留原始发表和首次发现时间；本次补全编辑分析，不表示论文发生实质修订。",
+          "authors": [
+            "Zhenxuan Fan",
+            "Bo Zhang",
+            "Yutong Lin",
+            "Yuqian Yuan",
+            "Juekai Lin",
+            "Liang Liang",
+            "Zhuoyi Huang",
+            "Wenqiao Zhang",
+            "Juncheng Li",
+            "Siliang Tang",
+            "Jun Xiao",
+            "Yueting Zhuang"
+          ],
+          "tags": [
+            "VLA评测",
+            "空间推理",
+            "长程规划",
+            "记忆",
+            "仿真数据"
+          ],
+          "summary": "通过逐级增加空间歧义和程序长度，区分选错目标、执行失误、记忆丢失和顺序错误，解释VLA成功率为何下降。",
+          "background": "只给任务成功率，很难区分模型究竟是没认对目标、不会操作，还是忘记已经完成的步骤。常见短流程、固定难度测试也容易掩盖推理能力随场景复杂度上升而退化的问题。",
+          "experiments": "RDT、GO-1、π0.5和X-VLA均按基础任务独立训练，主实验使用Aloha-AgileX干净仿真场景，每个变体100次。π0.5总体成功率由最低难度55.2%降至最高难度22.3%；所有受测模型在最难记忆任务上的终局成功率均为零。",
+          "conclusion": "强模型在简单任务上的优势并未消除复杂关系辨认和长程状态维护瓶颈。进度分数高于终局成功率，提示部分模型能完成早期步骤，却在排序、记忆或后段执行中失效。",
+          "evaluation": "【编辑评价】适合做模块消融和难度曲线，不应把单任务仿真结果外推为通用真机能力。代码、采集和评测流程已公开；README虽称数据已发布，本次实际HF文件树只有配置追踪文件和空说明，尚不能确认预采集轨迹可下载。",
+          "futureDirections": "【研究假设】可分别接入CASD阶段表征、MaP-WAM记忆及执行后验证，观察它们降低的是哪类错误；应保持示范量、动作预算和难度划分一致，并另设未见任务及真机迁移测试，防止只记住模板。",
+          "popularity": {
+            "score": 95.07,
+            "basis": "GitHub 累计 stars 15；Hugging Face 论文 upvotes 28。仅为可测公开信号；缺失项不等于零，累计关注不能代表论文质量或当天新增热度。",
+            "status": "verified",
+            "evidence": [
+              {
+                "url": "https://github.com/fanzhenxuan/RoboSPA",
+                "metric": "github_stars",
+                "value": 15,
+                "checkedAt": "2026-09-13T09:48:23.408050+00:00",
+                "location": "Repository sidebar · Stars",
+                "scope": "仓库累计关注；不是本日新增；网页缓存可能滞后"
+              },
+              {
+                "url": "https://huggingface.co/papers/2609.05324",
+                "metric": "hf_paper_upvotes",
+                "value": 28,
+                "checkedAt": "2026-09-13T09:48:23.408050+00:00",
+                "location": "论文页标题下 Upvote",
+                "scope": "公开论文页面累计投票；不是本日新增"
+              }
+            ],
+            "metrics": {
+              "githubStars": 15,
+              "hfUpvotes": 28
+            },
+            "missingMetrics": [],
+            "checkedAt": "2026-09-13T09:48:23.408050+00:00"
+          },
+          "analysisCompletedAt": "2026-09-13T09:48:23.408050+00:00",
+          "reviewNote": "本站补齐既有线索的完整分析；未确认原研究发生新的实质修订。",
+          "briefHistory": [
+            {
+              "promotedAt": "2026-09-13T09:50:12.980635+00:00",
+              "previous": {
+                "id": "arxiv:2609.05324",
+                "title": "RoboSPA: Can VLA Models Go Beyond Simple Scenes and Short-Horizon Tasks?",
+                "zhTitle": "RoboSPA：诊断空间推理与长程规划",
+                "category": "vla",
+                "contentTypes": [
+                  "paper"
+                ],
+                "innovation": "把细粒度空间关系与长时程过程规划分开诊断，按难度递增组织任务，并增加成功率之外的诊断指标，定位复杂场景下的推理、执行与记忆短板。",
+                "canonicalUrl": "https://arxiv.org/abs/2609.05324",
+                "publishedAt": "2026-09-04T16:19:01Z",
+                "discoveredAt": "2026-09-13T09:14:59+00:00",
+                "evidence": "已核对 arXiv 原始摘要与提交记录；尚未逐项核验全文方法、实验和开源情况。",
+                "evidenceDetails": [
+                  {
+                    "url": "https://arxiv.org/abs/2609.05324",
+                    "location": "Abstract；Submission history",
+                    "supports": "创新点概述及原始提交时间"
+                  }
+                ],
+                "status": "待全文核验",
+                "lastCheckedAt": "2026-09-13T09:28:36.599606+00:00",
+                "aliasIds": [
+                  "pending:arxiv:2609.05324"
+                ],
+                "lastSeenAt": "2026-09-13T09:28:36.599606+00:00",
+                "updatedAt": "2026-09-13T09:14:59+00:00",
+                "links": [
+                  {
+                    "label": "原始来源",
+                    "url": "https://arxiv.org/abs/2609.05324"
+                  }
+                ],
+                "revisionEvents": []
+              }
+            }
+          ]
+        },
+        {
+          "id": "arxiv:2609.09158",
+          "title": "TANGO: Humanoid Navigation in Cluttered Environments with a Whole-Body Vision-Language-Action Model",
+          "zhTitle": "TANGO：让人形导航直接考虑手臂、躯干和步态的通行空间",
+          "category": "embodied",
+          "contentTypes": [
+            "paper"
+          ],
+          "innovation": "PET流程先规划路线、再编辑全身避障动作，以RL跟踪器筛掉不可执行样本。VLA由前向/下视RGB、语言和本体状态预测29自由度关节及基座朝向参考，实时动作分块后交给底层跟踪器执行。",
+          "canonicalUrl": "https://arxiv.org/abs/2609.09158",
+          "publishedAt": "2026-09-08T17:59:55Z",
+          "discoveredAt": "2026-09-13T09:14:59+00:00",
+          "evidence": "原始论文及方法、实验、局限已核对 · 作者报告 · 未独立复现",
+          "evidenceDetails": [
+            {
+              "url": "https://arxiv.org/abs/2609.09158",
+              "location": "Authors；Submission history",
+              "supports": "作者及原始提交时间2026-09-08 17:59:55 UTC"
+            },
+            {
+              "url": "https://arxiv.org/html/2609.09158v1",
+              "location": "§3.1–3.4；§4.2/Table 2；§4.3；§4.4；§5 Limitation",
+              "supports": "29自由度及基座参考、PET与跟踪；43.75/41.88%成功率、9.90/15.81%碰撞回合率；三设置每类15真机试验、显式穿越指令和控制器/RGB限制"
+            },
+            {
+              "url": "https://tango-vla.github.io/",
+              "location": "标题、Method、Deployment及页面链接",
+              "supports": "作者声明CoRL 2026；真机服务端VLA和机载跟踪；本次官网只见论文与视频入口"
+            }
+          ],
+          "status": "已完成原文分析",
+          "lastCheckedAt": "2026-09-13T09:48:23.408050+00:00",
+          "aliasIds": [
+            "pending:arxiv:2609.09158"
+          ],
+          "lastSeenAt": "2026-09-13T09:50:12.980635+00:00",
+          "updatedAt": "2026-09-13T09:50:12.980635+00:00",
+          "links": [
+            {
+              "label": "原始来源",
+              "url": "https://arxiv.org/abs/2609.09158"
+            },
+            {
+              "label": "论文全文",
+              "url": "https://arxiv.org/html/2609.09158v1"
+            },
+            {
+              "label": "项目与演示",
+              "url": "https://tango-vla.github.io/"
+            },
+            {
+              "label": "HF讨论",
+              "url": "https://huggingface.co/papers/2609.09158"
+            }
+          ],
+          "version": "v1",
+          "type": "论文 / CoRL 2026（作者官网）",
+          "reviewCompletedAt": "2026-09-13T09:48:23.408050+00:00",
+          "changeType": "analysis-completed",
+          "dateNote": "滚动回看补录，保留原始发表和首次发现时间；本次补全编辑分析，不表示论文发生实质修订。",
+          "authors": [
+            "Anqi Li",
+            "Yuxin Chen",
+            "Zhaobo Li",
+            "Zhuo Cao",
+            "Junli Ren",
+            "Masayoshi Tomizuka",
+            "Dhruv Shah"
+          ],
+          "tags": [
+            "人形机器人",
+            "全身VLA",
+            "视觉语言导航",
+            "动作分块",
+            "仿真到真机"
+          ],
+          "summary": "把语言导航输出扩展为全身动作参考，用仿真规划、避障动作编辑和跟踪校验生成监督，处理侧身、下蹲与跨越。",
+          "background": "二维路线可通行，不代表人形机器人的手臂、躯干和脚步都能通过。把导航与低层行走完全分开，会丢失绕障所需的全身几何协调，尤其容易在狭窄和高低障碍组合中失败。",
+          "experiments": "增强VLNVerse未见场景中，成功率43.75%，对照InternVLA-N1+HumanoidPF为41.88%；发生过碰撞的回合比例9.90%对15.81%。G1真机测试含三类设置，每类15次；复杂穿越指令明确指定侧身、跨越或弯腰行为，结果不能等同自主发现任意通行策略。",
+          "conclusion": "仿真及小规模真机结果支持把全身动作表示与避障监督纳入语言导航；动作编辑、连续动作分块和跟踪能力均影响表现。零样本迁移指未用真实导航数据再训练，并不意味着去掉底层控制器。",
+          "evaluation": "【编辑评价】对全身导航与经典规划的结合有价值，但目前真机样本有限，楼梯等复杂运动受跟踪器能力约束，RGB还会受遮挡和弱光影响。官网可读演示，论文计划开放代码和权重，本次未核实可用下载入口。",
+          "futureDirections": "【研究假设】可将约束流形上的规划或控制屏障约束接在动作参考与跟踪器之间，并加入深度信息；需检验安全修正会否破坏步态连续性，在未提示动作类型、动态障碍和不同跟踪器上评测。",
+          "popularity": {
+            "score": 62.71,
+            "basis": "GitHub stars 未核实；Hugging Face 论文 upvotes 22。仅为可测公开信号；缺失项不等于零，累计关注不能代表论文质量或当天新增热度。",
+            "status": "verified",
+            "evidence": [
+              {
+                "url": "https://huggingface.co/papers/2609.09158",
+                "metric": "hf_paper_upvotes",
+                "value": 22,
+                "checkedAt": "2026-09-13T09:48:23.408050+00:00",
+                "location": "论文页标题下 Upvote",
+                "scope": "公开论文页面累计投票；不是本日新增"
+              }
+            ],
+            "metrics": {
+              "githubStars": null,
+              "hfUpvotes": 22
+            },
+            "missingMetrics": [
+              "githubStars"
+            ],
+            "checkedAt": "2026-09-13T09:48:23.408050+00:00"
+          },
+          "analysisCompletedAt": "2026-09-13T09:48:23.408050+00:00",
+          "reviewNote": "本站补齐既有线索的完整分析；未确认原研究发生新的实质修订。",
+          "briefHistory": [
+            {
+              "promotedAt": "2026-09-13T09:50:12.980635+00:00",
+              "previous": {
+                "id": "arxiv:2609.09158",
+                "title": "TANGO: Humanoid Navigation in Cluttered Environments with a Whole-Body Vision-Language-Action Model",
+                "zhTitle": "TANGO：从视觉语言指令到人形全身穿行",
+                "category": "embodied",
+                "contentTypes": [
+                  "paper"
+                ],
+                "innovation": "直接由第一视角 RGB 与语言预测全身关节动作；用路径规划、全身运动生成、避障编辑和 RL 跟踪在仿真中合成训练监督，将导航扩展到手臂、躯干与步态协同。",
+                "canonicalUrl": "https://arxiv.org/abs/2609.09158",
+                "publishedAt": "2026-09-08T17:59:55Z",
+                "discoveredAt": "2026-09-13T09:14:59+00:00",
+                "evidence": "已核对 arXiv 原始摘要与提交记录；尚未逐项核验全文方法、实验和开源情况。",
+                "evidenceDetails": [
+                  {
+                    "url": "https://arxiv.org/abs/2609.09158",
+                    "location": "Abstract；Submission history",
+                    "supports": "创新点概述及原始提交时间"
+                  }
+                ],
+                "status": "待全文核验",
+                "lastCheckedAt": "2026-09-13T09:28:36.599606+00:00",
+                "aliasIds": [
+                  "pending:arxiv:2609.09158"
+                ],
+                "lastSeenAt": "2026-09-13T09:28:36.599606+00:00",
+                "updatedAt": "2026-09-13T09:14:59+00:00",
+                "links": [
+                  {
+                    "label": "原始来源",
+                    "url": "https://arxiv.org/abs/2609.09158"
+                  }
+                ],
+                "revisionEvents": []
+              }
+            }
+          ]
+        },
+        {
+          "id": "arxiv:2609.01281",
+          "title": "EmbodiedSkills: A Unified Framework for Orchestrating, Training, and Deploying VLA Agents",
+          "zhTitle": "EmbodiedSkills：用可执行技能契约连接规划、VLA和结果验证",
+          "category": "systems",
+          "contentTypes": [
+            "paper"
+          ],
+          "innovation": "技能使用带类型的输入输出、前置条件和失败状态；运行时检查有效性与证据新鲜度，再执行有限动作块并收集验证结果。统一轨迹记录支持分别训练规划器、验证器和底层VLA，而无需改写整个闭环。",
+          "canonicalUrl": "https://arxiv.org/abs/2609.01281",
+          "publishedAt": "2026-09-01T14:14:47Z",
+          "discoveredAt": "2026-09-13T09:14:59+00:00",
+          "evidence": "原始论文及方法、实验、局限已核对 · 作者报告 · 未独立复现",
+          "evidenceDetails": [
+            {
+              "url": "https://arxiv.org/abs/2609.01281",
+              "location": "Authors；Submission history",
+              "supports": "作者及原始提交时间2026-09-01 14:14:47 UTC"
+            },
+            {
+              "url": "https://arxiv.org/html/2609.01281v1",
+              "location": "§3.2–3.8；§4.3；§5.1–5.5/Tables 2–5；§6 Limitations",
+              "supports": "技能契约与运行循环；任务适配政策；50任务每项100次；86.20%、48.2%、LIBERO97.40%和RMBench12.5%；在线优化可选；语义/延迟/任务专家局限"
+            },
+            {
+              "url": "https://github.com/DCDmllm/EmbodiedSkills",
+              "location": "README · Results；System；Training；Repository layout",
+              "supports": "官方实现的运行/训练接口、同条件消融；源码不包含生成数据、实验检查点和历史RL实验"
+            },
+            {
+              "url": "https://huggingface.co/papers/2609.01281",
+              "location": "作者Thinkitin的Community说明",
+              "supports": "作者说明观察、规划、预检、执行、验证、恢复的六阶段闭环与独立适配"
+            }
+          ],
+          "status": "已完成原文分析",
+          "lastCheckedAt": "2026-09-13T09:48:23.408050+00:00",
+          "aliasIds": [
+            "pending:arxiv:2609.01281"
+          ],
+          "lastSeenAt": "2026-09-13T09:50:12.980635+00:00",
+          "updatedAt": "2026-09-13T09:50:12.980635+00:00",
+          "links": [
+            {
+              "label": "原始来源",
+              "url": "https://arxiv.org/abs/2609.01281"
+            },
+            {
+              "label": "论文全文",
+              "url": "https://arxiv.org/html/2609.01281v1"
+            },
+            {
+              "label": "代码仓库",
+              "url": "https://github.com/DCDmllm/EmbodiedSkills"
+            },
+            {
+              "label": "作者讨论",
+              "url": "https://huggingface.co/papers/2609.01281"
+            }
+          ],
+          "version": "v1",
+          "type": "arXiv预印本",
+          "reviewCompletedAt": "2026-09-13T09:48:23.408050+00:00",
+          "changeType": "analysis-completed",
+          "dateNote": "滚动回看补录，保留原始发表和首次发现时间；本次补全编辑分析，不表示论文发生实质修订。",
+          "authors": [
+            "Wei Wang",
+            "Wenqiao Zhang",
+            "Yutong Lin",
+            "Yuqian Yuan",
+            "Tianwei Lin",
+            "Jinhao Mao",
+            "Zhenxuan Fan",
+            "Mingjian Gao",
+            "Yang Dai",
+            "Wentong Li",
+            "Zheqi Lv",
+            "Zheng Dong",
+            "Yingjie Niu",
+            "Jiaqi Zhu",
+            "Jun Xiao",
+            "Chao Li",
+            "Yueting Zhuang"
+          ],
+          "tags": [
+            "VLA系统",
+            "技能编排",
+            "执行验证",
+            "失败恢复",
+            "模块训练"
+          ],
+          "summary": "把模型提出的技能与真正执行分开：先检查证据和前提，再限步执行、验证与恢复，让不同VLA共享可追踪的运行接口。",
+          "background": "VLA能预测动作，却不自动检查当前子目标能否执行、观察是否过期或目标是否已完成。长程任务一旦出错，单纯动作输出也难以定位是规划、执行还是验证环节的问题。",
+          "experiments": "RoboTwin 50任务采用任务适配π0.5，每任务100次；完整闭环平均86.20%，同条件去掉中间验证降至48.2%。LIBERO四套平均97.40%；四个RMBench记忆任务仅12.5%。这些结果及消融来自仿真，不能把任务专家的分数当成单一通用策略成绩。",
+          "conclusion": "受控消融支持语义子任务、结果验证及按进度续执行的组合；高分主要建立在适配后的执行策略上。技能接口提高可检查性，但记忆任务结果显示，结构化闭环本身还没有解决长时记忆。",
+          "evaluation": "【编辑评价】契约能拦截格式、状态和过期证据错误，却不能保证语义判断正确；误识别也可能满足契约。任务专家、多次VLM调用增加训练维护与延迟。官方仓库含运行和监督训练代码，实验检查点未随源码提供。",
+          "futureDirections": "【研究假设】可把策略失败检测器接入验证阶段，把MaP-WAM式记忆接入共享状态，再用RoboSPA测量记忆、顺序与重复错误；需固定低层策略，分别统计误报恢复、任务收益和额外推理成本。",
+          "popularity": {
+            "score": 94.28,
+            "basis": "GitHub 累计 stars 42；Hugging Face 论文 upvotes 16。仅为可测公开信号；缺失项不等于零，累计关注不能代表论文质量或当天新增热度。",
+            "status": "verified",
+            "evidence": [
+              {
+                "url": "https://github.com/DCDmllm/EmbodiedSkills",
+                "metric": "github_stars",
+                "value": 42,
+                "checkedAt": "2026-09-13T09:48:23.408050+00:00",
+                "location": "Repository sidebar · Stars",
+                "scope": "仓库累计关注；不是本日新增；网页缓存可能滞后"
+              },
+              {
+                "url": "https://huggingface.co/papers/2609.01281",
+                "metric": "hf_paper_upvotes",
+                "value": 16,
+                "checkedAt": "2026-09-13T09:48:23.408050+00:00",
+                "location": "论文页标题下 Upvote",
+                "scope": "公开论文页面累计投票；不是本日新增"
+              }
+            ],
+            "metrics": {
+              "githubStars": 42,
+              "hfUpvotes": 16
+            },
+            "missingMetrics": [],
+            "checkedAt": "2026-09-13T09:48:23.408050+00:00"
+          },
+          "analysisCompletedAt": "2026-09-13T09:48:23.408050+00:00",
+          "reviewNote": "本站补齐既有线索的完整分析；未确认原研究发生新的实质修订。",
+          "briefHistory": [
+            {
+              "promotedAt": "2026-09-13T09:50:12.980635+00:00",
+              "previous": {
+                "id": "arxiv:2609.01281",
+                "title": "EmbodiedSkills: A Unified Framework for Orchestrating, Training, and Deploying VLA Agents",
+                "zhTitle": "EmbodiedSkills：执行前检查、执行后验证",
+                "category": "systems",
+                "contentTypes": [
+                  "paper"
+                ],
+                "innovation": "把每次技能选择视作待执行提案，通过统一接口检查前提、限制底层执行并验证结果；结构化记录规划、执行、验证与恢复事件，允许替换底层 VLA。",
+                "canonicalUrl": "https://arxiv.org/abs/2609.01281",
+                "publishedAt": "2026-09-01T14:14:47Z",
+                "discoveredAt": "2026-09-13T09:14:59+00:00",
+                "evidence": "已核对 arXiv 原始摘要与提交记录；尚未逐项核验全文方法、实验和开源情况。",
+                "evidenceDetails": [
+                  {
+                    "url": "https://arxiv.org/abs/2609.01281",
+                    "location": "Abstract；Submission history",
+                    "supports": "创新点概述及原始提交时间"
+                  }
+                ],
+                "status": "待全文核验",
+                "lastCheckedAt": "2026-09-13T09:28:36.599606+00:00",
+                "aliasIds": [
+                  "pending:arxiv:2609.01281"
+                ],
+                "lastSeenAt": "2026-09-13T09:28:36.599606+00:00",
+                "updatedAt": "2026-09-13T09:14:59+00:00",
+                "links": [
+                  {
+                    "label": "原始来源",
+                    "url": "https://arxiv.org/abs/2609.01281"
+                  }
+                ],
+                "revisionEvents": []
+              }
+            }
+          ]
+        },
+        {
+          "id": "arxiv:2609.05533",
+          "title": "SimpleMemVLA: A Simple but Effective Native-Video Memory for Vision-Language-Action Models",
+          "zhTitle": "SimpleMemVLA：把视频历史保留到决策时，再选择需要的记忆",
+          "category": "vla",
+          "contentTypes": [
+            "paper"
+          ],
+          "innovation": "让原生视频VLM在决策时读取完整采样窗口，由生成子任务的隐藏状态连接流匹配动作头；执行当前动作块时预填充共享前缀。",
+          "canonicalUrl": "https://arxiv.org/abs/2609.05533",
+          "publishedAt": "2026-09-02T02:23:39Z",
+          "discoveredAt": "2026-09-13T09:14:59+00:00",
+          "evidence": "论文全文与官方仓库已核对 · 定量结果为作者仿真评测 · 真机仅三次示范 · 未独立复现",
+          "evidenceDetails": [
+            {
+              "url": "https://arxiv.org/abs/2609.05533",
+              "location": "Authors；Submission history",
+              "supports": "作者与v1提交日期2026-09-02 02:23:39 UTC"
+            },
+            {
+              "url": "https://arxiv.org/html/2609.05533v1",
+              "location": "§3.2–3.4；§4.1–4.3；Tables 1–2",
+              "supports": "原生视频与子任务隐藏状态接口；每套件单模型；RMBench九项94.0%；RoboMME 88.3%及同骨干变体31.5/22.6/20.6%"
+            },
+            {
+              "url": "https://arxiv.org/html/2609.05533v1",
+              "location": "§4.4–4.6；Figure 6",
+              "supports": "历史因果干预；H100/BF16/batch1/60秒历史下1.02→0.68秒；后台预填充和缓存增长、窗口遗忘限制"
+            },
+            {
+              "url": "https://github.com/wadeKeith/SimpleMemVLA",
+              "location": "Data & Checkpoints；Evaluation；Real-Robot Deployment",
+              "supports": "训练评测与各套件权重入口；定量表均为仿真；三个不同布局真机示范而非系统成功率统计"
+            }
+          ],
+          "status": "已完成原文分析",
+          "lastCheckedAt": "2026-09-13T09:47:05.092971Z",
+          "aliasIds": [
+            "pending:arxiv:2609.05533"
+          ],
+          "lastSeenAt": "2026-09-13T09:50:12.980635+00:00",
+          "updatedAt": "2026-09-13T09:50:12.980635+00:00",
+          "links": [
+            {
+              "label": "原始来源",
+              "url": "https://arxiv.org/abs/2609.05533"
+            },
+            {
+              "label": "论文全文",
+              "url": "https://arxiv.org/html/2609.05533v1"
+            },
+            {
+              "label": "代码与权重入口",
+              "url": "https://github.com/wadeKeith/SimpleMemVLA"
+            }
+          ],
+          "changeType": "analysis-completed",
+          "featured": false,
+          "tags": [
+            "视频记忆",
+            "长程操作",
+            "流匹配",
+            "异步预填充"
+          ],
+          "type": "arXiv预印本 · 完整分析",
+          "version": "v1",
+          "authors": [
+            "Cheng Yin",
+            "Wang Xu",
+            "Junpeng Yang",
+            "Sikyuen Tam",
+            "Hanyu Liu",
+            "Yuan Yao",
+            "Xiangrui Zeng",
+            "Junbo Cui",
+            "Yequan Wang",
+            "Zhouping Yin",
+            "Yankai Lin"
+          ],
+          "summary": "直接以带时间戳的视频历史作为VLA记忆，并在动作执行时预处理共享上下文，减少提前压缩造成的信息损失。",
+          "background": "长程操作所需证据可能早已离开当前视野；预先检索或压缩历史，容易丢掉后来才有用的细节。",
+          "experiments": "仿真中，RMBench九项可比任务平均成功率94.0%；RoboMME为88.3%，同骨干检索、压缩、递归变体为31.5%、22.6%、20.6%。单H100、BF16、batch=1、60秒历史下，决策延迟由1.02降至0.68秒。仓库另给三次真机遮盖示范，未报告系统真机成功率。",
+          "conclusion": "遮挡或替换历史证据会改变当前行为，支持策略确实读取历史；主要定量结论仍来自各套件分别训练的仿真模型。",
+          "evaluation": "【编辑分析】同骨干消融比单纯榜单比较更有说服力；但不能据此否定全部记忆压缩方法。窗口外信息仍会遗失，后台预填充和缓存开销也随历史增长。仓库已提供训练、评测代码及各套件权重入口。",
+          "futureDirections": "【研究假设】可把CASD的阶段标签用作子任务监督，并与MaP-WAM比较“完整历史读取”和“记忆转计划”的代价。应在同骨干、同演示、同显存预算下测试长程真机任务及窗口越界后的恢复。",
+          "dateNote": "9月2日原始论文；本次将既有候选补全为全文分析。仓库真机示范仅标注2026年9月，未将其视为今天新发布。",
+          "popularity": {
+            "score": 81.97,
+            "status": "verified",
+            "basis": "GitHub累计stars 29；Hugging Face论文upvotes 10。只合计可测信号，缺失项不是零，累计关注不代表当天热度或论文质量。",
+            "evidence": [
+              {
+                "url": "https://github.com/wadeKeith/SimpleMemVLA",
+                "metric": "github_stars",
+                "value": 29,
+                "checkedAt": "2026-09-13T09:47:48.983681Z",
+                "scope": "官方仓库网页可见累计stars；非本日新增；网页缓存可能滞后"
+              },
+              {
+                "url": "https://huggingface.co/papers/2609.05533",
+                "metric": "hf_paper_upvotes",
+                "value": 10,
+                "checkedAt": "2026-09-13T09:47:48.983681Z",
+                "scope": "论文页面可见累计投票；非本日新增"
+              }
+            ],
+            "metrics": {
+              "githubStars": 29,
+              "hfUpvotes": 10
+            },
+            "missingMetrics": [],
+            "checkedAt": "2026-09-13T09:47:48.983681Z"
+          },
+          "analysisCompletedAt": "2026-09-13T09:47:05.092971Z",
+          "reviewNote": "本站补齐既有线索的完整分析；未确认原研究发生新的实质修订。",
+          "briefHistory": [
+            {
+              "promotedAt": "2026-09-13T09:50:12.980635+00:00",
+              "previous": {
+                "id": "arxiv:2609.05533",
+                "title": "SimpleMemVLA: A Simple but Effective Native-Video Memory for Vision-Language-Action Models",
+                "zhTitle": "SimpleMemVLA：以原生视频上下文保留历史",
+                "category": "vla",
+                "contentTypes": [
+                  "paper"
+                ],
+                "innovation": "保留带时间戳的采样视频历史，交给原生视频 VLM 处理，以生成子任务的隐藏状态连接动作头；在动作执行期间预填充共享前缀，减少反复处理长历史的开销。",
+                "canonicalUrl": "https://arxiv.org/abs/2609.05533",
+                "publishedAt": "2026-09-02T02:23:39Z",
+                "discoveredAt": "2026-09-13T09:14:59+00:00",
+                "evidence": "已核对 arXiv 原始摘要与提交记录；尚未逐项核验全文方法、实验和开源情况。",
+                "evidenceDetails": [
+                  {
+                    "url": "https://arxiv.org/abs/2609.05533",
+                    "location": "Abstract；Submission history",
+                    "supports": "创新点概述及原始提交时间"
+                  }
+                ],
+                "status": "待全文核验",
+                "lastCheckedAt": "2026-09-13T09:28:36.599606+00:00",
+                "aliasIds": [
+                  "pending:arxiv:2609.05533"
+                ],
+                "lastSeenAt": "2026-09-13T09:28:36.599606+00:00",
+                "updatedAt": "2026-09-13T09:14:59+00:00",
+                "links": [
+                  {
+                    "label": "原始来源",
+                    "url": "https://arxiv.org/abs/2609.05533"
+                  }
+                ],
+                "revisionEvents": []
+              }
+            }
+          ]
+        },
+        {
+          "id": "arxiv:2608.29768",
+          "title": "SmoothRL: Online Reinforcement Learning During Asynchronous Execution",
+          "zhTitle": "SmoothRL：让在线强化学习只优化异步执行中真正发生的动作",
+          "category": "rl",
+          "contentTypes": [
+            "paper",
+            "news"
+          ],
+          "innovation": "在固定时延预算下划定动作块三段，价值函数保留完整执行上下文，策略梯度只穿过执行段。实例冻结π0.5，以动作空间残差网络在线纠偏，并加入平滑惩罚。",
+          "canonicalUrl": "https://arxiv.org/abs/2608.29768",
+          "publishedAt": "2026-08-30T12:56:09Z",
+          "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
+          "evidence": "论文全文已核对 · 三项真机任务 · 小样本同配置评测 · 未独立复现",
+          "evidenceDetails": [
+            {
+              "url": "https://arxiv.org/abs/2608.29768",
+              "location": "Authors；Submission history",
+              "supports": "四位作者、v1提交时间2026-08-30 12:56:09 UTC"
+            },
+            {
+              "url": "https://arxiv.org/html/2608.29768v1",
+              "location": "§3.1–3.4；Equation 5；Algorithm 1",
+              "supports": "固定时延预算、执行段梯度截断、冻结基础策略上的动作残差与平滑正则"
+            },
+            {
+              "url": "https://arxiv.org/html/2608.29768v1",
+              "location": "§4.1；§4.3–4.5；Table 1；Figure 7 caption",
+              "supports": "Astribot S1；250回合后三项成功率39→94、8→83、30→90%；分别18/12/10次评测；单次RL运行、同训练初始配置、人类干预及成功判定"
+            },
+            {
+              "url": "https://arxiv.org/html/2608.29768v1",
+              "location": "§5 Limitations and Future Work",
+              "supports": "固定推理预算超时与有限残差表达能力的限制"
+            }
+          ],
+          "status": "已完成原文分析",
+          "lastCheckedAt": "2026-09-13T09:47:05.092971Z",
+          "links": [
+            {
+              "label": "研究原文",
+              "url": "https://arxiv.org/abs/2608.29768"
+            },
+            {
+              "label": "9 月 4 日发布报道",
+              "url": "https://www.x-techcon.com/article/183034.html"
+            },
+            {
+              "label": "论文全文",
+              "url": "https://arxiv.org/html/2608.29768v1"
+            },
+            {
+              "label": "官方项目",
+              "url": "https://www.astribot.com/research/SmoothRL/"
+            }
+          ],
+          "dateNote": "8月30日原始论文，9月4日出现媒体跟进；此次保留论文身份并补全分析。",
+          "aliasIds": [
+            "smoothrl:news-lead-20260904"
+          ],
+          "lastSeenAt": "2026-09-13T09:50:12.980635+00:00",
+          "updatedAt": "2026-09-13T09:50:12.980635+00:00",
+          "changeType": "analysis-completed",
+          "featured": false,
+          "tags": [
+            "在线强化学习",
+            "异步控制",
+            "动作块",
+            "真机残差学习"
+          ],
+          "type": "arXiv预印本 · 真机研究",
+          "version": "v1",
+          "authors": [
+            "Guang Gao",
+            "Yuxuan Nong",
+            "Baifu Huang",
+            "Jianan Wang"
+          ],
+          "summary": "把异步动作块的已提交、实际执行和被替换部分分开，仅对实际执行部分回传价值梯度，校正在线学习与部署的错位。",
+          "background": "大模型推理与动作执行重叠时，生成的动作并非全部落地；照同步流程训练，会让价值梯度优化从未执行的片段。",
+          "experiments": "Astribot S1真机经250个交互回合后，投掷成功率39%→94%、套笔帽8%→83%、开盒30%→90%。每任务仅一条RL训练运行，各检查点分别评测18、12、10次；初始配置与在线训练相同。已有任务演示用于基础策略训练，在线过程含人工接管和奖励判定。",
+          "conclusion": "在所测动态和精密双臂任务上，执行段梯度配合在线残差调整改善了冻结基础策略的系统性偏差。",
+          "evaluation": "【编辑分析】训练与部署动作对齐是可迁移的关键思路，但当前评测规模小、未展示跨初始配置泛化，也未隔离所有组件贡献。固定推理预算超时会破坏交接，局部残差难以修复基础策略完全错误的行为。",
+          "futureDirections": "【研究假设】可将DLSRL的潜变量探索与此执行段约束结合，但需保证潜变量梯度对应实际动作；再用控制屏障过滤器处理约束。应比较变时延、未见物体和随机初态，并报告接管次数与风险事件。",
+          "popularity": {
+            "score": null,
+            "status": "unmeasured",
+            "basis": "HF论文页面本次读取失败，未取得专属代码仓库可核验关注数；两项均为未知，暂不评分。",
+            "evidence": [],
+            "metrics": {
+              "githubStars": null,
+              "hfUpvotes": null
+            },
+            "missingMetrics": [
+              "github_stars",
+              "hf_paper_upvotes"
+            ],
+            "checkedAt": "2026-09-13T09:47:48.983681Z"
+          },
+          "analysisCompletedAt": "2026-09-13T09:47:05.092971Z",
+          "reviewNote": "本站补齐既有线索的完整分析；未确认原研究发生新的实质修订。",
+          "briefHistory": [
+            {
+              "promotedAt": "2026-09-13T09:50:12.980635+00:00",
+              "previous": {
+                "id": "arxiv:2608.29768",
+                "title": "SmoothRL: Online Reinforcement Learning During Asynchronous Execution",
+                "zhTitle": "SmoothRL：只从异步过程中实际执行的动作学习",
+                "category": "rl",
+                "contentTypes": [
+                  "paper",
+                  "news"
+                ],
+                "innovation": "按异步执行状态把动作块划成已提交、实际执行和丢弃三段，仅对实际执行段回传价值梯度，使在线 RL 更新与真正发生的轨迹分布对齐。",
+                "canonicalUrl": "https://arxiv.org/abs/2608.29768",
+                "publishedAt": "2026-08-30T12:56:09Z",
+                "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
+                "evidence": "已核对 arXiv 原始摘要与提交记录；尚未逐项核验全文方法、实验和开源情况。",
+                "evidenceDetails": [
+                  {
+                    "url": "https://arxiv.org/abs/2608.29768",
+                    "location": "Abstract；Submission history",
+                    "supports": "创新点概述及原始提交时间"
+                  }
+                ],
+                "status": "待全文核验",
+                "lastCheckedAt": "2026-09-13T09:28:36.599606+00:00",
+                "links": [
+                  {
+                    "label": "研究原文",
+                    "url": "https://arxiv.org/abs/2608.29768"
+                  },
+                  {
+                    "label": "9 月 4 日发布报道",
+                    "url": "https://www.x-techcon.com/article/183034.html"
+                  }
+                ],
+                "dateNote": "8 月 30 日原始论文；9 月 4 日媒体报道。此次追溯后统一使用论文身份。",
+                "aliasIds": [
+                  "smoothrl:news-lead-20260904"
+                ],
+                "lastSeenAt": "2026-09-13T09:28:36.599606+00:00",
+                "updatedAt": "2026-09-13T09:19:18.102185+00:00",
+                "revisionEvents": []
+              }
+            }
+          ]
+        },
+        {
+          "id": "pending:nvidia-cosmos-edge-20260819",
+          "title": "Post-Train NVIDIA Cosmos 3 Edge for On-Device Robot Control",
+          "zhTitle": "Cosmos 3 Edge：把世界模型后训练成端侧机器人策略",
+          "category": "wam",
+          "contentTypes": [
+            "blog"
+          ],
+          "innovation": "把4B Cosmos 3 Edge后训练为动作块策略，以三相机观测和关节状态生成动作，通过OpenPI协议接入滚动重规划；世界预测可与动作共同检查。",
+          "canonicalUrl": "https://developer.nvidia.com/blog/post-train-nvidia-cosmos-3-edge-for-on-device-robot-control/",
+          "publishedAt": "2026-08-19",
+          "discoveredAt": "2026-09-13T09:14:59+00:00",
+          "evidence": "官方博客全文与模型卡已核对 · 逐配置引用作者指标 · 训练迭代口径仍有不一致 · 未独立复现",
+          "evidenceDetails": [
+            {
+              "url": "https://developer.nvidia.com/blog/post-train-nvidia-cosmos-3-edge-for-on-device-robot-control/",
+              "location": "发布日期；What you’ll build；Table 1；Evaluate the policy in a closed-loop simulation",
+              "supports": "8月19日教程；4B模型、三相机和关节状态、动作块部署；RoboLab仿真成功率22.9%"
+            },
+            {
+              "url": "https://huggingface.co/nvidia/Cosmos3-Edge-Policy-DROID",
+              "location": "PBR → Real-time PyTorch Policy DROID with [32, 8] action chunks",
+              "supports": "T5000 MAXN/1575MHz；640×540观测映射544×736；4步UniPC、guidance3.0；16次请求中位1.528秒、范围1.503–1.673秒；15Hz动作块时域2.133秒"
+            },
+            {
+              "url": "https://huggingface.co/nvidia/Cosmos3-Edge-Policy-DROID",
+              "location": "PBR默认[16,8]与vLLM-Omni[32,8]独立表；Model Versions",
+              "supports": "不同输入、动作块、去噪和运行时的时延不得直接比较；Edge/Policy版本日期7月20日"
+            },
+            {
+              "url": "https://developer.nvidia.com/blog/post-train-nvidia-cosmos-3-edge-for-on-device-robot-control/",
+              "location": "Prerequisites正文；Table 1 → Schedule",
+              "supports": "正文64×4 GB200、60K迭代，与表中10K迭代口径未对齐，不据此承诺训练成本"
+            }
+          ],
+          "status": "已完成原文分析",
+          "lastCheckedAt": "2026-09-13T09:47:05.092971Z",
+          "aliasIds": [],
+          "lastSeenAt": "2026-09-13T09:50:12.980635+00:00",
+          "updatedAt": "2026-09-13T09:50:12.980635+00:00",
+          "links": [
+            {
+              "label": "原始来源",
+              "url": "https://developer.nvidia.com/blog/post-train-nvidia-cosmos-3-edge-for-on-device-robot-control/"
+            },
+            {
+              "label": "策略权重与模型卡",
+              "url": "https://huggingface.co/nvidia/Cosmos3-Edge-Policy-DROID"
+            },
+            {
+              "label": "Cosmos框架",
+              "url": "https://github.com/NVIDIA/cosmos-framework"
+            }
+          ],
+          "changeType": "analysis-completed",
+          "featured": false,
+          "tags": [
+            "世界模型",
+            "端侧部署",
+            "DROID",
+            "Jetson Thor"
+          ],
+          "type": "官方技术博客 · 部署教程",
+          "version": "2026-08-19教程 / 2026-09-13核验",
+          "authors": [
+            "Saeed Babamohamadi",
+            "NVIDIA"
+          ],
+          "summary": "官方教程连通DROID数据、世界模型后训练和Jetson本机控制；当前模型卡已明确区分不同动作块与推理配置。",
+          "background": "世界模型的物理先验要用于本机控制，还必须满足显存和端到端时延约束，且适配具体传感器与动作空间。",
+          "experiments": "博客报告RoboLab仿真套件成功率22.9%。模型卡的PyTorch专项测试：T5000、640×540输入、4步去噪、32个动作、16次计时请求，中位端到端时延1.528秒，低于15Hz动作块的2.133秒时域；这不是15Hz重新推理，也不是未限定配置的真机成功率。",
+          "conclusion": "所列配置支持动作执行覆盖下一次推理的时间，提供端侧策略部署路径；闭环质量仍受任务成功率和重规划时域约束。",
+          "evaluation": "【编辑分析】工程配置现已能逐表区分：模型卡还列16步默认与32步vLLM测试，不能混用其时延。训练成本也不同于端侧推理：博客正文写60K迭代，Table1写10K，尚不能给出唯一可复现训练预算。",
+          "futureDirections": "【研究假设】可接入SmoothRL的实际执行段学习，并让CLF-CBF控制层检查动作约束；需要固定检查点、动作块和去噪设置，报告长时间推理尾延迟、功耗、真机成功率以及安全层干预率。",
+          "dateNote": "8月19日博客；模型卡列7月20日Edge/Policy版本释放。本次补充配置核验，不视为9月13日新模型发布。",
+          "popularity": {
+            "score": null,
+            "status": "unmeasured",
+            "basis": "未取得可归属于本篇教程的GitHub stars或HF论文upvotes；已读到策略模型11个likes，但模型likes与论文upvotes口径不同，未混入评分；共享Cosmos框架stars也未归属本篇。",
+            "evidence": [],
+            "metrics": {
+              "githubStars": null,
+              "hfUpvotes": null
+            },
+            "missingMetrics": [
+              "github_stars",
+              "hf_paper_upvotes"
+            ],
+            "checkedAt": "2026-09-13T09:47:48.983681Z"
+          },
+          "analysisCompletedAt": "2026-09-13T09:47:05.092971Z",
+          "reviewNote": "本站补齐既有线索的完整分析；未确认原研究发生新的实质修订。",
+          "briefHistory": [
+            {
+              "promotedAt": "2026-09-13T09:50:12.980635+00:00",
+              "previous": {
+                "id": "pending:nvidia-cosmos-edge-20260819",
+                "title": "Post-Train NVIDIA Cosmos 3 Edge for On-Device Robot Control",
+                "zhTitle": "Cosmos 3 Edge：面向机器人端侧的后训练教程",
+                "category": "wam",
+                "contentTypes": [
+                  "blog"
+                ],
+                "innovation": "将世界模型的物理先验转成动作块策略，串联 DROID 数据准备、后训练、Jetson Thor 本机部署和滚动重规划评估。博客与模型卡的运行配置需要进一步对齐，暂不引用实时性能数值。",
+                "canonicalUrl": "https://developer.nvidia.com/blog/post-train-nvidia-cosmos-3-edge-for-on-device-robot-control/",
+                "publishedAt": "2026-08-19",
+                "discoveredAt": "2026-09-13T09:14:59+00:00",
+                "evidence": "已读官方博客正文；模型卡与博客的动作时域、推理配置以及训练迭代信息存在待对齐项。",
+                "evidenceDetails": [
+                  {
+                    "url": "https://developer.nvidia.com/blog/post-train-nvidia-cosmos-3-edge-for-on-device-robot-control/",
+                    "location": "What you’ll build；Why post-train；What data does the policy train on；Table 1",
+                    "supports": "教程流程与暂不合并性能配置的依据"
+                  }
+                ],
+                "status": "待全文核验",
+                "lastCheckedAt": "2026-09-13T09:28:36.599606+00:00",
+                "aliasIds": [],
+                "lastSeenAt": "2026-09-13T09:28:36.599606+00:00",
+                "updatedAt": "2026-09-13T09:14:59+00:00",
+                "links": [
+                  {
+                    "label": "原始来源",
+                    "url": "https://developer.nvidia.com/blog/post-train-nvidia-cosmos-3-edge-for-on-device-robot-control/"
+                  }
+                ],
+                "revisionEvents": []
+              }
+            }
+          ]
+        },
+        {
+          "id": "unitree:unifolm-wla-1.0",
+          "title": "UnifoLM-WLA-1.0 / ER-1 / ER-Flow分阶段开放",
+          "zhTitle": "UnifoLM-WLA：用动态区域与分部位动作表示连接推理和全身操作",
+          "category": "vla",
+          "contentTypes": [
+            "report",
+            "news"
+          ],
+          "innovation": "从光流提取未来动态区域，经VQ-VAE离散化；末端位姿、手部关节、下肢关节分别用RVQ编码，与语言视觉共同训练ER-Flow，再连接MMDiT连续动作专家。",
+          "canonicalUrl": "https://unigen-x.github.io/unifolm-wla.github.io/",
+          "publishedAt": "2026-09-11",
+          "dateNote": "此日期对应官方仓库 ER-1、ER-Flow 权重发布公告，不代表完整 WLA 系统同日全面开源。",
+          "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
+          "evidence": "官方项目、仓库及两张模型卡已核对 · ER理解评测有数值 · 完整WLA真机证据主要为演示 · 未独立复现",
+          "evidenceDetails": [
+            {
+              "url": "https://unigen-x.github.io/unifolm-wla.github.io/",
+              "location": "Dynamic Region Prediction；Discrete Action Learning；Training Setup",
+              "supports": "光流动态区域、VQ-VAE、三部位RVQ与MMDiT动作专家接口"
+            },
+            {
+              "url": "https://unigen-x.github.io/unifolm-wla.github.io/",
+              "location": "Multi-Source Data；Real-robot tests",
+              "supports": "约2500小时训练数据；54项桌面和10项全身操作演示，未给完整逐任务试验统计"
+            },
+            {
+              "url": "https://huggingface.co/unitreerobotics/UnifoLM-ER-1",
+              "location": "Benchmark Results → Where2Place列",
+              "supports": "ER-1 82.0与Qwen3-VL-4B 63.0是空间理解分数，非真机成功率"
+            },
+            {
+              "url": "https://github.com/unitreerobotics/unifolm-wla",
+              "location": "News；Open-Source Plan",
+              "supports": "9月11日已释放ER-1与ER-Flow；WLA-Base和后训练代码尚属计划"
+            },
+            {
+              "url": "https://huggingface.co/unitreerobotics/UnifoLM-ER-Flow",
+              "location": "Dynamic Region Prediction；Discrete Action Learning；Unified Training Signals",
+              "supports": "已发布ER-Flow的交互预测及分部位离散动作接口"
+            }
+          ],
+          "status": "已完成原文分析",
+          "lastCheckedAt": "2026-09-13T09:47:05.092971Z",
+          "aliasIds": [],
+          "lastSeenAt": "2026-09-13T09:50:12.980635+00:00",
+          "updatedAt": "2026-09-13T09:50:12.980635+00:00",
+          "links": [
+            {
+              "label": "原始来源",
+              "url": "https://unigen-x.github.io/unifolm-wla.github.io/"
+            },
+            {
+              "label": "开放计划",
+              "url": "https://github.com/unitreerobotics/unifolm-wla"
+            },
+            {
+              "label": "ER-1权重",
+              "url": "https://huggingface.co/unitreerobotics/UnifoLM-ER-1"
+            },
+            {
+              "label": "ER-Flow权重",
+              "url": "https://huggingface.co/unitreerobotics/UnifoLM-ER-Flow"
+            }
+          ],
+          "changeType": "analysis-completed",
+          "featured": false,
+          "tags": [
+            "具身推理",
+            "人形机器人",
+            "动作量化",
+            "部分模型开放"
+          ],
+          "type": "官方项目报告 · 分阶段模型发布",
+          "version": "WLA-1.0 / ER-1与ER-Flow发布",
+          "authors": [
+            "Unitree Robotics"
+          ],
+          "summary": "将未来动态区域、离散动作与连续动作专家连接起来；当前可下载的是ER-1和ER-Flow，完整WLA-Base与后训练代码仍在计划中。",
+          "background": "人形机器人既要理解空间关系，也要预测交互引起的变化，并协调不同夹爪、手指和下肢动作；单一视觉问答能力不足以覆盖执行链。",
+          "experiments": "官方称以约2500小时机器人数据训练，展示54项桌面与10项全身操作。ER-1的Where2Place为82.0，Qwen3-VL-4B为63.0；这是空间理解评测分数。项目未提供足够的逐任务真机试验次数与总成功率，64项演示不能等同64项稳定通过。",
+          "conclusion": "现有资料支持统一表示与模块化训练路线，并可使用已释放的ER模块研究空间理解和交互预测；完整WLA控制能力目前主要由官方演示支持。",
+          "evaluation": "【编辑分析】动态区域比整帧生成更聚焦交互，但可能忽略静态约束和远处风险。仓库9月11日明确释放ER-1、ER-Flow权重；WLA-Base、后训练代码仍列开放计划，暂不能声称完整系统可复现。",
+          "futureDirections": "【研究假设】可让动态区域预测为WAM规划提供接触候选，再用经典运动学与碰撞约束校验连续动作。应消融区域预测和分部位量化，并测试未见末端执行器、接触失败及长期动作漂移。",
+          "popularity": {
+            "score": 36.38,
+            "status": "verified",
+            "basis": "GitHub累计stars 37。只合计可测信号，缺失项不是零，累计关注不代表当天热度或论文质量。",
+            "evidence": [
+              {
+                "url": "https://github.com/unitreerobotics/unifolm-wla",
+                "metric": "github_stars",
+                "value": 37,
+                "checkedAt": "2026-09-13T09:47:48.983681Z",
+                "scope": "官方仓库网页可见累计stars；非本日新增；网页缓存可能滞后"
+              }
+            ],
+            "metrics": {
+              "githubStars": 37,
+              "hfUpvotes": null
+            },
+            "missingMetrics": [
+              "hf_paper_upvotes"
+            ],
+            "checkedAt": "2026-09-13T09:47:48.983681Z"
+          },
+          "analysisCompletedAt": "2026-09-13T09:47:05.092971Z",
+          "reviewNote": "本站补齐既有线索的完整分析；未确认原研究发生新的实质修订。",
+          "briefHistory": [
+            {
+              "promotedAt": "2026-09-13T09:50:12.980635+00:00",
+              "previous": {
+                "id": "unitree:unifolm-wla-1.0",
+                "title": "UnifoLM-WLA-1.0 / ER-1 / ER-Flow分阶段开放",
+                "zhTitle": "UnifoLM-WLA：统一动态区域、离散动作与全身控制",
+                "category": "vla",
+                "contentTypes": [
+                  "report",
+                  "news"
+                ],
+                "innovation": "以未来动态区域的离散表示和分部位动作量化对齐视觉、语言与动作，再接连续动作专家。9 月 11 日明确释放的是 ER-1 与 ER-Flow 权重；完整 WLA-Base 与后训练代码仍列在开放计划中。",
+                "canonicalUrl": "https://unigen-x.github.io/unifolm-wla.github.io/",
+                "publishedAt": "2026-09-11",
+                "dateNote": "此日期对应官方仓库 ER-1、ER-Flow 权重发布公告，不代表完整 WLA 系统同日全面开源。",
+                "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
+                "evidence": "已核对官方项目页与仓库 News/Open-Source Plan；完整技术报告和系统真机评测仍待核验。",
+                "evidenceDetails": [
+                  {
+                    "url": "https://unigen-x.github.io/unifolm-wla.github.io/",
+                    "location": "Future Dynamic-Region Prediction；Discrete Action Learning；WLA Training",
+                    "supports": "动态区域、动作量化与连续动作专家的设计"
+                  },
+                  {
+                    "url": "https://github.com/unitreerobotics/unifolm-wla",
+                    "location": "News；Open-Source Plan",
+                    "supports": "9 月 11 日已释放 ER-1、ER-Flow，WLA-Base/后训练代码仍属计划"
+                  }
+                ],
+                "status": "待全文核验",
+                "lastCheckedAt": "2026-09-13T09:28:36.599606+00:00",
+                "aliasIds": [],
+                "lastSeenAt": "2026-09-13T09:28:36.599606+00:00",
+                "updatedAt": "2026-09-13T09:19:18.102185+00:00",
+                "links": [
+                  {
+                    "label": "原始来源",
+                    "url": "https://unigen-x.github.io/unifolm-wla.github.io/"
+                  }
+                ],
+                "revisionEvents": []
+              }
+            }
+          ]
+        }
+      ],
+      "briefsSnapshot": [],
+      "rankedIds": [
+        "arxiv:2609.10522",
+        "arxiv:2609.05324",
+        "arxiv:2609.01281",
+        "arxiv:2609.09155",
+        "arxiv:2609.05533",
+        "arxiv:2609.09158",
+        "unitree:unifolm-wla-1.0",
+        "arxiv:2609.10706",
+        "arxiv:2609.06009",
+        "arxiv:2609.05178",
+        "arxiv:2608.29768",
+        "pending:nvidia-cosmos-edge-20260819"
+      ],
+      "featuredIds": [
+        "arxiv:2609.10522",
+        "arxiv:2609.05324",
+        "arxiv:2609.01281",
+        "arxiv:2609.09155",
+        "arxiv:2609.05533",
+        "arxiv:2609.09158",
+        "unitree:unifolm-wla-1.0",
+        "arxiv:2609.10706",
+        "arxiv:2609.06009",
+        "arxiv:2609.05178",
+        "arxiv:2608.29768",
+        "pending:nvidia-cosmos-edge-20260819"
+      ],
+      "analysisNeededIds": [],
+      "briefIds": [],
+      "candidateCount": 12,
+      "rankingNote": "7 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 站内热度代理分 = 10×ln(1+已核验 GitHub 累计 stars) + 20×ln(1+已核验 Hugging Face 论文 upvotes)。缺失项为 null，仅合计可测项；全部缺失则不评分。GitHub 指标来自官方 API，HF 指标来自公开论文页面；页面缓存可能滞后。stars 是仓库长期累计关注，旧仓库及包含多篇工作的框架会受益，不能解释为本日新增热度或论文质量。仅比较本站已收录且存在可测信号的记录，不是全网最热排名。",
       "rankingVersion": 1
     }
   ],
-  "lastScanAt": "2026-09-13T09:19:18.102185+00:00",
-  "briefs": [
-    {
-      "id": "arxiv:2609.05178",
-      "title": "LIBERO-RECOVER: Beyond Task Success Towards Failure Recovery in Robotic Manipulation Models",
-      "zhTitle": "LIBERO-RECOVER：把失败后的恢复能力纳入评测",
-      "category": "vla",
-      "contentTypes": [
-        "paper"
-      ],
-      "innovation": "从真实模型执行失败构造恢复场景，按动作重试、动作调整、物体状态恢复和环境恢复四层组织，补充只看初始状态任务成功率的评测盲点。",
-      "canonicalUrl": "https://arxiv.org/abs/2609.05178",
-      "publishedAt": "2026-09-04T14:15:27Z",
-      "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
-      "evidence": "已核对 arXiv 原始摘要与提交记录；尚未逐项核验全文方法、实验和开源情况。",
-      "evidenceDetails": [
-        {
-          "url": "https://arxiv.org/abs/2609.05178",
-          "location": "Abstract；Submission history",
-          "supports": "创新点概述及原始提交时间"
-        }
-      ],
-      "status": "待全文核验",
-      "lastCheckedAt": "2026-09-13T09:28:36.599606+00:00",
-      "aliasIds": [],
-      "lastSeenAt": "2026-09-13T09:28:36.599606+00:00",
-      "updatedAt": "2026-09-13T09:19:18.102185+00:00",
-      "links": [
-        {
-          "label": "原始来源",
-          "url": "https://arxiv.org/abs/2609.05178"
-        }
-      ],
-      "revisionEvents": []
-    },
-    {
-      "id": "arxiv:2609.06009",
-      "title": "How to Learn from What a Human Would Avoid? Intervention-Aware World Models with Real-World RL for Dexterous Manipulation",
-      "zhTitle": "WHIRL：从人类接管信号学习提前避险",
-      "category": "rl",
-      "contentTypes": [
-        "paper"
-      ],
-      "innovation": "在潜空间世界模型中增加人类接管概率预测头，把操作员何时介入转为未来风险信号，并用于策略侧风险塑形，尝试减少真实灵巧手训练中的介入负担。",
-      "canonicalUrl": "https://arxiv.org/abs/2609.06009",
-      "publishedAt": "2026-09-05T10:28:23Z",
-      "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
-      "evidence": "已核对 arXiv 原始摘要与提交记录；尚未逐项核验全文方法、实验和开源情况。",
-      "evidenceDetails": [
-        {
-          "url": "https://arxiv.org/abs/2609.06009",
-          "location": "Abstract；Submission history",
-          "supports": "创新点概述及原始提交时间"
-        }
-      ],
-      "status": "待全文核验",
-      "lastCheckedAt": "2026-09-13T09:28:36.599606+00:00",
-      "aliasIds": [],
-      "lastSeenAt": "2026-09-13T09:28:36.599606+00:00",
-      "updatedAt": "2026-09-13T09:19:18.102185+00:00",
-      "links": [
-        {
-          "label": "原始来源",
-          "url": "https://arxiv.org/abs/2609.06009"
-        }
-      ],
-      "revisionEvents": []
-    },
-    {
-      "id": "arxiv:2609.10706",
-      "title": "HuRo: Robotizing Human Videos for Scalable VLA Pretraining",
-      "zhTitle": "HuRo：将人类视频转成机器人观测与动作",
-      "category": "vla",
-      "contentTypes": [
-        "paper"
-      ],
-      "innovation": "将异构人类视频共同转换为机器人对齐的视觉观测和动作轨迹，推断不同标注层级缺少的中间信号，用于扩大 VLA 的人类视频预训练。",
-      "canonicalUrl": "https://arxiv.org/abs/2609.10706",
-      "publishedAt": "2026-09-09T18:02:05Z",
-      "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
-      "evidence": "已核对 arXiv 原始摘要与提交记录；尚未逐项核验全文方法、实验和开源情况。",
-      "evidenceDetails": [
-        {
-          "url": "https://arxiv.org/abs/2609.10706",
-          "location": "Abstract；Submission history",
-          "supports": "创新点概述及原始提交时间"
-        }
-      ],
-      "status": "待全文核验",
-      "lastCheckedAt": "2026-09-13T09:28:36.599606+00:00",
-      "aliasIds": [],
-      "lastSeenAt": "2026-09-13T09:28:36.599606+00:00",
-      "updatedAt": "2026-09-13T09:19:18.102185+00:00",
-      "links": [
-        {
-          "label": "原始来源",
-          "url": "https://arxiv.org/abs/2609.10706"
-        }
-      ],
-      "revisionEvents": []
-    },
-    {
-      "id": "arxiv:2609.10522",
-      "title": "Show-Harness: Just a VLM Agent Can Play Robots",
-      "zhTitle": "Show-Harness：用语义动作接口连接 VLM 与机器人",
-      "category": "vla",
-      "contentTypes": [
-        "paper"
-      ],
-      "innovation": "向 VLM 暴露可推理的离散语义动作单元，再由各机器人解释器确定性落地；同一接口延伸为图形示范采集工具，降低控制与遥操作接口门槛。",
-      "canonicalUrl": "https://arxiv.org/abs/2609.10522",
-      "publishedAt": "2026-09-09T17:53:38Z",
-      "discoveredAt": "2026-09-13T09:14:59+00:00",
-      "evidence": "已核对 arXiv 原始摘要与提交记录；尚未逐项核验全文方法、实验和开源情况。",
-      "evidenceDetails": [
-        {
-          "url": "https://arxiv.org/abs/2609.10522",
-          "location": "Abstract；Submission history",
-          "supports": "创新点概述及原始提交时间"
-        }
-      ],
-      "status": "待全文核验",
-      "lastCheckedAt": "2026-09-13T09:28:36.599606+00:00",
-      "aliasIds": [
-        "pending:arxiv:2609.10522"
-      ],
-      "lastSeenAt": "2026-09-13T09:28:36.599606+00:00",
-      "updatedAt": "2026-09-13T09:14:59+00:00",
-      "links": [
-        {
-          "label": "原始来源",
-          "url": "https://arxiv.org/abs/2609.10522"
-        }
-      ],
-      "revisionEvents": []
-    },
-    {
-      "id": "arxiv:2609.09155",
-      "title": "SyncWorld: Visual Calibration Enables World Models as Zero-Shot Simulators",
-      "zhTitle": "SyncWorld：用视觉校准说明动作如何改变画面",
-      "category": "wam",
-      "contentTypes": [
-        "paper"
-      ],
-      "innovation": "利用覆盖可控自由度的帧—动作校准片段，在上下文中建立特定相机、场景和机体下的动作—视觉映射，帮助世界模型在新设置下模拟动作结果。",
-      "canonicalUrl": "https://arxiv.org/abs/2609.09155",
-      "publishedAt": "2026-09-08T17:59:47Z",
-      "discoveredAt": "2026-09-13T09:14:59+00:00",
-      "evidence": "已核对 arXiv 原始摘要与提交记录；尚未逐项核验全文方法、实验和开源情况。",
-      "evidenceDetails": [
-        {
-          "url": "https://arxiv.org/abs/2609.09155",
-          "location": "Abstract；Submission history",
-          "supports": "创新点概述及原始提交时间"
-        }
-      ],
-      "status": "待全文核验",
-      "lastCheckedAt": "2026-09-13T09:28:36.599606+00:00",
-      "aliasIds": [
-        "pending:arxiv:2609.09155"
-      ],
-      "lastSeenAt": "2026-09-13T09:28:36.599606+00:00",
-      "updatedAt": "2026-09-13T09:14:59+00:00",
-      "links": [
-        {
-          "label": "原始来源",
-          "url": "https://arxiv.org/abs/2609.09155"
-        }
-      ],
-      "revisionEvents": []
-    },
-    {
-      "id": "arxiv:2609.05324",
-      "title": "RoboSPA: Can VLA Models Go Beyond Simple Scenes and Short-Horizon Tasks?",
-      "zhTitle": "RoboSPA：诊断空间推理与长程规划",
-      "category": "vla",
-      "contentTypes": [
-        "paper"
-      ],
-      "innovation": "把细粒度空间关系与长时程过程规划分开诊断，按难度递增组织任务，并增加成功率之外的诊断指标，定位复杂场景下的推理、执行与记忆短板。",
-      "canonicalUrl": "https://arxiv.org/abs/2609.05324",
-      "publishedAt": "2026-09-04T16:19:01Z",
-      "discoveredAt": "2026-09-13T09:14:59+00:00",
-      "evidence": "已核对 arXiv 原始摘要与提交记录；尚未逐项核验全文方法、实验和开源情况。",
-      "evidenceDetails": [
-        {
-          "url": "https://arxiv.org/abs/2609.05324",
-          "location": "Abstract；Submission history",
-          "supports": "创新点概述及原始提交时间"
-        }
-      ],
-      "status": "待全文核验",
-      "lastCheckedAt": "2026-09-13T09:28:36.599606+00:00",
-      "aliasIds": [
-        "pending:arxiv:2609.05324"
-      ],
-      "lastSeenAt": "2026-09-13T09:28:36.599606+00:00",
-      "updatedAt": "2026-09-13T09:14:59+00:00",
-      "links": [
-        {
-          "label": "原始来源",
-          "url": "https://arxiv.org/abs/2609.05324"
-        }
-      ],
-      "revisionEvents": []
-    },
-    {
-      "id": "arxiv:2609.09158",
-      "title": "TANGO: Humanoid Navigation in Cluttered Environments with a Whole-Body Vision-Language-Action Model",
-      "zhTitle": "TANGO：从视觉语言指令到人形全身穿行",
-      "category": "embodied",
-      "contentTypes": [
-        "paper"
-      ],
-      "innovation": "直接由第一视角 RGB 与语言预测全身关节动作；用路径规划、全身运动生成、避障编辑和 RL 跟踪在仿真中合成训练监督，将导航扩展到手臂、躯干与步态协同。",
-      "canonicalUrl": "https://arxiv.org/abs/2609.09158",
-      "publishedAt": "2026-09-08T17:59:55Z",
-      "discoveredAt": "2026-09-13T09:14:59+00:00",
-      "evidence": "已核对 arXiv 原始摘要与提交记录；尚未逐项核验全文方法、实验和开源情况。",
-      "evidenceDetails": [
-        {
-          "url": "https://arxiv.org/abs/2609.09158",
-          "location": "Abstract；Submission history",
-          "supports": "创新点概述及原始提交时间"
-        }
-      ],
-      "status": "待全文核验",
-      "lastCheckedAt": "2026-09-13T09:28:36.599606+00:00",
-      "aliasIds": [
-        "pending:arxiv:2609.09158"
-      ],
-      "lastSeenAt": "2026-09-13T09:28:36.599606+00:00",
-      "updatedAt": "2026-09-13T09:14:59+00:00",
-      "links": [
-        {
-          "label": "原始来源",
-          "url": "https://arxiv.org/abs/2609.09158"
-        }
-      ],
-      "revisionEvents": []
-    },
-    {
-      "id": "arxiv:2609.01281",
-      "title": "EmbodiedSkills: A Unified Framework for Orchestrating, Training, and Deploying VLA Agents",
-      "zhTitle": "EmbodiedSkills：执行前检查、执行后验证",
-      "category": "systems",
-      "contentTypes": [
-        "paper"
-      ],
-      "innovation": "把每次技能选择视作待执行提案，通过统一接口检查前提、限制底层执行并验证结果；结构化记录规划、执行、验证与恢复事件，允许替换底层 VLA。",
-      "canonicalUrl": "https://arxiv.org/abs/2609.01281",
-      "publishedAt": "2026-09-01T14:14:47Z",
-      "discoveredAt": "2026-09-13T09:14:59+00:00",
-      "evidence": "已核对 arXiv 原始摘要与提交记录；尚未逐项核验全文方法、实验和开源情况。",
-      "evidenceDetails": [
-        {
-          "url": "https://arxiv.org/abs/2609.01281",
-          "location": "Abstract；Submission history",
-          "supports": "创新点概述及原始提交时间"
-        }
-      ],
-      "status": "待全文核验",
-      "lastCheckedAt": "2026-09-13T09:28:36.599606+00:00",
-      "aliasIds": [
-        "pending:arxiv:2609.01281"
-      ],
-      "lastSeenAt": "2026-09-13T09:28:36.599606+00:00",
-      "updatedAt": "2026-09-13T09:14:59+00:00",
-      "links": [
-        {
-          "label": "原始来源",
-          "url": "https://arxiv.org/abs/2609.01281"
-        }
-      ],
-      "revisionEvents": []
-    },
-    {
-      "id": "arxiv:2609.05533",
-      "title": "SimpleMemVLA: A Simple but Effective Native-Video Memory for Vision-Language-Action Models",
-      "zhTitle": "SimpleMemVLA：以原生视频上下文保留历史",
-      "category": "vla",
-      "contentTypes": [
-        "paper"
-      ],
-      "innovation": "保留带时间戳的采样视频历史，交给原生视频 VLM 处理，以生成子任务的隐藏状态连接动作头；在动作执行期间预填充共享前缀，减少反复处理长历史的开销。",
-      "canonicalUrl": "https://arxiv.org/abs/2609.05533",
-      "publishedAt": "2026-09-02T02:23:39Z",
-      "discoveredAt": "2026-09-13T09:14:59+00:00",
-      "evidence": "已核对 arXiv 原始摘要与提交记录；尚未逐项核验全文方法、实验和开源情况。",
-      "evidenceDetails": [
-        {
-          "url": "https://arxiv.org/abs/2609.05533",
-          "location": "Abstract；Submission history",
-          "supports": "创新点概述及原始提交时间"
-        }
-      ],
-      "status": "待全文核验",
-      "lastCheckedAt": "2026-09-13T09:28:36.599606+00:00",
-      "aliasIds": [
-        "pending:arxiv:2609.05533"
-      ],
-      "lastSeenAt": "2026-09-13T09:28:36.599606+00:00",
-      "updatedAt": "2026-09-13T09:14:59+00:00",
-      "links": [
-        {
-          "label": "原始来源",
-          "url": "https://arxiv.org/abs/2609.05533"
-        }
-      ],
-      "revisionEvents": []
-    },
-    {
-      "id": "arxiv:2608.29768",
-      "title": "SmoothRL: Online Reinforcement Learning During Asynchronous Execution",
-      "zhTitle": "SmoothRL：只从异步过程中实际执行的动作学习",
-      "category": "rl",
-      "contentTypes": [
-        "paper",
-        "news"
-      ],
-      "innovation": "按异步执行状态把动作块划成已提交、实际执行和丢弃三段，仅对实际执行段回传价值梯度，使在线 RL 更新与真正发生的轨迹分布对齐。",
-      "canonicalUrl": "https://arxiv.org/abs/2608.29768",
-      "publishedAt": "2026-08-30T12:56:09Z",
-      "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
-      "evidence": "已核对 arXiv 原始摘要与提交记录；尚未逐项核验全文方法、实验和开源情况。",
-      "evidenceDetails": [
-        {
-          "url": "https://arxiv.org/abs/2608.29768",
-          "location": "Abstract；Submission history",
-          "supports": "创新点概述及原始提交时间"
-        }
-      ],
-      "status": "待全文核验",
-      "lastCheckedAt": "2026-09-13T09:28:36.599606+00:00",
-      "links": [
-        {
-          "label": "研究原文",
-          "url": "https://arxiv.org/abs/2608.29768"
-        },
-        {
-          "label": "9 月 4 日发布报道",
-          "url": "https://www.x-techcon.com/article/183034.html"
-        }
-      ],
-      "dateNote": "8 月 30 日原始论文；9 月 4 日媒体报道。此次追溯后统一使用论文身份。",
-      "aliasIds": [
-        "smoothrl:news-lead-20260904"
-      ],
-      "lastSeenAt": "2026-09-13T09:28:36.599606+00:00",
-      "updatedAt": "2026-09-13T09:19:18.102185+00:00",
-      "revisionEvents": []
-    },
-    {
-      "id": "pending:nvidia-cosmos-edge-20260819",
-      "title": "Post-Train NVIDIA Cosmos 3 Edge for On-Device Robot Control",
-      "zhTitle": "Cosmos 3 Edge：面向机器人端侧的后训练教程",
-      "category": "wam",
-      "contentTypes": [
-        "blog"
-      ],
-      "innovation": "将世界模型的物理先验转成动作块策略，串联 DROID 数据准备、后训练、Jetson Thor 本机部署和滚动重规划评估。博客与模型卡的运行配置需要进一步对齐，暂不引用实时性能数值。",
-      "canonicalUrl": "https://developer.nvidia.com/blog/post-train-nvidia-cosmos-3-edge-for-on-device-robot-control/",
-      "publishedAt": "2026-08-19",
-      "discoveredAt": "2026-09-13T09:14:59+00:00",
-      "evidence": "已读官方博客正文；模型卡与博客的动作时域、推理配置以及训练迭代信息存在待对齐项。",
-      "evidenceDetails": [
-        {
-          "url": "https://developer.nvidia.com/blog/post-train-nvidia-cosmos-3-edge-for-on-device-robot-control/",
-          "location": "What you’ll build；Why post-train；What data does the policy train on；Table 1",
-          "supports": "教程流程与暂不合并性能配置的依据"
-        }
-      ],
-      "status": "待全文核验",
-      "lastCheckedAt": "2026-09-13T09:28:36.599606+00:00",
-      "aliasIds": [],
-      "lastSeenAt": "2026-09-13T09:28:36.599606+00:00",
-      "updatedAt": "2026-09-13T09:14:59+00:00",
-      "links": [
-        {
-          "label": "原始来源",
-          "url": "https://developer.nvidia.com/blog/post-train-nvidia-cosmos-3-edge-for-on-device-robot-control/"
-        }
-      ],
-      "revisionEvents": []
-    },
-    {
-      "id": "unitree:unifolm-wla-1.0",
-      "title": "UnifoLM-WLA-1.0 / ER-1 / ER-Flow分阶段开放",
-      "zhTitle": "UnifoLM-WLA：统一动态区域、离散动作与全身控制",
-      "category": "vla",
-      "contentTypes": [
-        "report",
-        "news"
-      ],
-      "innovation": "以未来动态区域的离散表示和分部位动作量化对齐视觉、语言与动作，再接连续动作专家。9 月 11 日明确释放的是 ER-1 与 ER-Flow 权重；完整 WLA-Base 与后训练代码仍列在开放计划中。",
-      "canonicalUrl": "https://unigen-x.github.io/unifolm-wla.github.io/",
-      "publishedAt": "2026-09-11",
-      "dateNote": "此日期对应官方仓库 ER-1、ER-Flow 权重发布公告，不代表完整 WLA 系统同日全面开源。",
-      "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
-      "evidence": "已核对官方项目页与仓库 News/Open-Source Plan；完整技术报告和系统真机评测仍待核验。",
-      "evidenceDetails": [
-        {
-          "url": "https://unigen-x.github.io/unifolm-wla.github.io/",
-          "location": "Future Dynamic-Region Prediction；Discrete Action Learning；WLA Training",
-          "supports": "动态区域、动作量化与连续动作专家的设计"
-        },
-        {
-          "url": "https://github.com/unitreerobotics/unifolm-wla",
-          "location": "News；Open-Source Plan",
-          "supports": "9 月 11 日已释放 ER-1、ER-Flow，WLA-Base/后训练代码仍属计划"
-        }
-      ],
-      "status": "待全文核验",
-      "lastCheckedAt": "2026-09-13T09:28:36.599606+00:00",
-      "aliasIds": [],
-      "lastSeenAt": "2026-09-13T09:28:36.599606+00:00",
-      "updatedAt": "2026-09-13T09:19:18.102185+00:00",
-      "links": [
-        {
-          "label": "原始来源",
-          "url": "https://unigen-x.github.io/unifolm-wla.github.io/"
-        }
-      ],
-      "revisionEvents": []
-    }
-  ],
+  "lastScanAt": "2026-09-13T09:50:12.980635+00:00",
+  "briefs": [],
   "dailyHighlights": {
     "2026-09-13": {
       "top5Ids": [
+        "arxiv:2609.10522",
         "arxiv:2609.07398",
         "arxiv:2609.04196",
-        "arxiv:2609.11561",
-        "arxiv:2609.05588",
-        "report:nvidia-compass-agent-workflow-20260826"
+        "arxiv:2609.05324",
+        "arxiv:2609.01281"
       ],
-      "summary": "OpenWAM：用开放模块化实验寻找世界动作模型的预训练配方：提供模块化Infra、受控Study和OpenWAM-α。实验归纳出独立动作容量、世界到动作的信息流、同步联合去噪与人类第一视角/机器人数据单阶段共训的重要性。\n\nPuffin-World：给生成世界加入重力方向与深度，减少视角漂移：把重力与纬度、深度、外观作为原生状态；Omni-Camera融合绝对朝向与相对射线几何，并沿已知相机轨迹传播重力参照。\n\nMaP-WAM：把长期记忆转成计划，让执行上下文保持固定：把已完成片段存为语言与稀疏视觉记录，先生成下一段语言—视觉计划，再由WAP联合预测动作和进度。记忆在规划时使用，执行器保持固定上下文，并用计划—观测匹配校准进度。\n\nGE-Act 2.0：从零预训练生成与动作模块，用动作兼容性连接想象和执行：生成与动作组件从零初始化；CoAE压缩控制相关视觉信息，单步SVP与IDM分别利用无动作视频和含动作轨迹。KASO按IDM响应筛选兼容未来，再联合反向传播。\n\nCOMPASS工程跟进：把残差导航训练、场景准备与部署连成可检查流程：工程贡献是串联既有COMPASS/X-Mobility流程：残差RL修正基础速度动作，专家数据可蒸馏为共享策略；新增教程覆盖内置仓库、SAGE-10K及NuRec重建场景，并保留人工检查节点。",
-      "rankingNote": "9 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 站内热度代理分 = 10×ln(1+已核验 GitHub 累计 stars) + 20×ln(1+已核验 Hugging Face 论文 upvotes)。缺失项为 null，仅合计可测项；全部缺失则不评分。GitHub 指标来自官方 API，HF 指标来自公开论文页面；页面缓存可能滞后。stars 是仓库长期累计关注，旧仓库及包含多篇工作的框架会受益，不能解释为本日新增热度或论文质量。仅比较本站已收录且存在可测信号的记录，不是全网最热排名。",
+      "summary": "Show-Harness：用语义动作接口连接 VLM 与机器人：模型选择平移、旋转、夹爪等语义单元，机体解释器负责尺度、坐标转换及低层控制；感知、子任务规划、历史和恢复模块形成反馈循环。GUMI 让人与代理通过同样的按钮采集示范，小模型可沿用原生词表学习动作，无需新增动作头。\n\nOpenWAM：用开放模块化实验寻找世界动作模型的预训练配方：提供模块化Infra、受控Study和OpenWAM-α。实验归纳出独立动作容量、世界到动作的信息流、同步联合去噪与人类第一视角/机器人数据单阶段共训的重要性。\n\nPuffin-World：给生成世界加入重力方向与深度，减少视角漂移：把重力与纬度、深度、外观作为原生状态；Omni-Camera融合绝对朝向与相对射线几何，并沿已知相机轨迹传播重力参照。\n\nRoboSPA：把空间辨认、动作执行和长程记忆的失败分开诊断：围绕空间推理与长程规划建立56个基础任务、五级难度、280个变体，报告约52.7万条仿真轨迹。用校正随机选择的目标准确度和子任务进度指标补充终局成功率，并提供细分失败类型。\n\nEmbodiedSkills：用可执行技能契约连接规划、VLA和结果验证：技能使用带类型的输入输出、前置条件和失败状态；运行时检查有效性与证据新鲜度，再执行有限动作块并收集验证结果。统一轨迹记录支持分别训练规划器、验证器和底层VLA，而无需改写整个闭环。",
+      "rankingNote": "16 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 站内热度代理分 = 10×ln(1+已核验 GitHub 累计 stars) + 20×ln(1+已核验 Hugging Face 论文 upvotes)。缺失项为 null，仅合计可测项；全部缺失则不评分。GitHub 指标来自官方 API，HF 指标来自公开论文页面；页面缓存可能滞后。stars 是仓库长期累计关注，旧仓库及包含多篇工作的框架会受益，不能解释为本日新增热度或论文质量。仅比较本站已收录且存在可测信号的记录，不是全网最热排名。",
       "editionIds": [
         "2026-09-13-initial",
-        "2026-09-13-1700"
+        "2026-09-13-1700",
+        "2026-09-13-reader-followup"
       ],
       "candidateCount": 29
     }
   },
   "rankingMethodNote": "站内热度代理分 = 10×ln(1+已核验 GitHub 累计 stars) + 20×ln(1+已核验 Hugging Face 论文 upvotes)。缺失项为 null，仅合计可测项；全部缺失则不评分。GitHub 指标来自官方 API，HF 指标来自公开论文页面；页面缓存可能滞后。stars 是仓库长期累计关注，旧仓库及包含多篇工作的框架会受益，不能解释为本日新增热度或论文质量。仅比较本站已收录且存在可测信号的记录，不是全网最热排名。",
-  "popularityCheckedAt": "2026-09-13T09:28:36.599606+00:00"
+  "popularityCheckedAt": "2026-09-13T09:50:12.980635+00:00"
 }

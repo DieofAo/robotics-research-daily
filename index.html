@@ -6,9 +6,9 @@
   <meta name="description" content="按日期与研究方向探索机器人研究，阅读重点分析，收藏与跟踪值得关注的工作。">
   <meta name="theme-color" content="#17674d">
   <title>机器人研究日报 · Robotics Daily</title>
-  <link rel="icon" href="./favicon.svg?v=c69c9202f93f36420a9e" type="image/svg+xml">
-  <link rel="stylesheet" href="./style.css?v=c69c9202f93f36420a9e">
-<meta name="robotics-build" content="c69c9202f93f36420a9e"></head>
+  <link rel="icon" href="./favicon.svg?v=26fc3576a251389f1138" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css?v=26fc3576a251389f1138">
+<meta name="robotics-build" content="26fc3576a251389f1138"></head>
 <body>
 <a class="skip" href="#main">跳到日报内容</a>
 <header class="masthead">
@@ -17,7 +17,8 @@
 </header>
 <div id="version-banner" class="version-banner" hidden></div>
 <div class="page-shell">
-  <aside class="sidebar" aria-label="日期与研究筛选">
+  <button type="button" id="toggle-filters" class="mobile-filters-button" aria-controls="sidebar-filters" aria-expanded="false">▦ 日期与研究方向 <span aria-hidden="true">⌄</span></button>
+  <aside id="sidebar-filters" class="sidebar" aria-label="日期与研究筛选">
     <div class="sidebar-heading"><h2>阅读日历</h2><button type="button" id="latest-day" class="text-button">最新一期 ↗</button></div>
     <section class="calendar" aria-label="选择日报日期"><div class="calendar-heading"><button type="button" id="month-prev" aria-label="上一个月">‹</button><h3 id="calendar-month"></h3><button type="button" id="month-next" aria-label="下一个月">›</button></div><div class="weekdays" aria-hidden="true"><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span><span>日</span></div><div id="calendar-days" class="calendar-days"></div><label class="date-picker"><span>选择日期</span><input type="date" id="date-input" aria-label="选择日报日期"></label><button type="button" id="all-history" class="history-button">查看全部历史 <span aria-hidden="true">↗</span></button></section>
     <section class="direction-section"><div class="sidebar-heading"><h2>研究方向</h2><span class="filter-label">TOPICS</span></div><nav id="categories" aria-label="按研究方向筛选"></nav></section>
@@ -39,6 +40,6 @@
   </main>
 </div>
 <noscript><p class="noscript">请启用 JavaScript 阅读日报。也可以查看 <a href="./data.json">完整归档数据</a>。</p></noscript>
-<script src="./data.js?v=c69c9202f93f36420a9e"></script><script src="./app.js?v=c69c9202f93f36420a9e"></script>
+<script src="./data.js?v=26fc3576a251389f1138"></script><script src="./app.js?v=26fc3576a251389f1138"></script>
 </body>
 </html>

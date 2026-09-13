@@ -10,6 +10,7 @@ const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&a
 const safeUrl = value => { try { const url = new URL(value); return ['https:', 'http:'].includes(url.protocol) ? url.href : '#'; } catch { return '#'; } };
 const validDate = value => value && !Number.isNaN(new Date(value).getTime());
 const dayOf = value => validDate(value) ? new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Shanghai', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date(value)) : '';
+const sourceDate = value => /^\d{4}-\d{2}-\d{2}/.exec(String(value || ''))?.[0] || '';
 const shortTime = value => validDate(value) ? new Intl.DateTimeFormat('zh-CN', { timeZone: 'Asia/Shanghai', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hour12: false }).format(new Date(value)) : '待更新';
 const titleOf = value => categories.find(category => category[0] === value)?.[1] || '其他研究';
 const shortCategory = value => titleOf(value).split(' · ')[0];
@@ -46,12 +47,16 @@ function normalize(value) { return String(value || '').normalize('NFKC').toLocal
 function searchText(record) { return [record.title, record.zhTitle, record.summary, record.background, record.innovation, record.experiments, record.conclusion, record.evaluation, record.futureDirections, ...array(record.tags), ...array(record.authors)].filter(Boolean).join(' '); }
 function withinEditDistance(a, b, limit = 1) {
   if (Math.abs(a.length - b.length) > limit) return false;
-  let previous = Array.from({ length: b.length + 1 }, (_, index) => index);
+  let previous = Array.from({ length: b.length + 1 }, (_, index) => index), beforePrevious;
   for (let i = 1; i <= a.length; i++) {
     const row = [i]; let lowest = i;
-    for (let j = 1; j <= b.length; j++) { row[j] = Math.min(row[j - 1] + 1, previous[j] + 1, previous[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1)); lowest = Math.min(lowest, row[j]); }
+    for (let j = 1; j <= b.length; j++) {
+      row[j] = Math.min(row[j - 1] + 1, previous[j] + 1, previous[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+      if (i > 1 && j > 1 && a[i - 1] === b[j - 2] && a[i - 2] === b[j - 1]) row[j] = Math.min(row[j], beforePrevious[j - 2] + 1);
+      lowest = Math.min(lowest, row[j]);
+    }
     if (lowest > limit) return false;
-    previous = row;
+    beforePrevious = previous; previous = row;
   }
   return previous[b.length] <= limit;
 }
@@ -148,11 +153,11 @@ function revisionNote(record) {
 function card(record) {
   const fields = [['研究背景', 'background'], ['核心创新', 'innovation'], ['实验与证据', 'experiments'], ['研究结论', 'conclusion'], ['评价与局限', 'evaluation'], ['可能的发展方向', 'futureDirections']];
   const anchor = 'paper-' + record.id;
-  return `<article class="paper" id="${esc(anchor)}" data-record-id="${esc(record.id)}"><div class="paper-top"><div class="paper-heading-row"><div class="paper-meta">${badges(record)}</div>${favoriteButton(record)}</div><h3><a href="${esc(safeUrl(record.canonicalUrl))}" target="_blank" rel="noopener noreferrer">${esc(recordTitle(record))}</a></h3>${record.zhTitle && record.title ? `<p class="en-title">${esc(record.title)}</p>` : ''}<p class="paper-summary">${esc(record.summary || record.innovation || '')}</p><div class="paper-footer"><div class="record-date">发布 ${esc(dayOf(record.publishedAt) || '日期待核实')}${record.version ? ' · ' + esc(record.version) : ''}<br>收录 ${esc(shortTime(record.discoveredAt))}${record.updatedAt && record.updatedAt !== record.discoveredAt ? ' · 更新 ' + esc(shortTime(record.updatedAt)) : ''}</div><div class="links">${recordLinks(record)}</div></div>${state.mode === 'favorites' ? `<p class="favorite-source">跟踪原始来源：<a href="${esc(safeUrl(record.canonicalUrl))}" target="_blank" rel="noopener noreferrer">${esc(record.canonicalUrl || '待补充')}</a></p>` : ''}</div>${revisionNote(record)}<details class="analysis-details"><summary>阅读完整分析 <span class="analysis-hint">背景 · 创新 · 实验 · 结论 · 评价 · 展望</span></summary><div class="analysis-grid">${fields.map(([label, key], index) => `<section class="analysis-section ${index >= 4 ? 'editorial' : ''}"><h4><span>0${index + 1}</span>${label}${index >= 4 ? ' · 编辑分析' : ''}</h4><p>${esc(record[key] || '目前没有足够原文证据，待核实补充。').replace(/\n/g, '<br>')}</p></section>`).join('')}</div><div class="evidence-notes"><h4>原文依据 · ${esc(record.evidence || '以所列原始资料为准')}</h4>${array(record.evidenceDetails).map(evidence => `<p><a href="${esc(safeUrl(evidence.url))}" target="_blank" rel="noopener noreferrer">${esc(evidence.location || '原文')} ↗</a> · ${esc(evidence.supports)}</p>`).join('')}${record.popularity?.basis ? `<p>关注度依据：${esc(record.popularity.basis)}</p>` : ''}</div></details></article>`;
+  return `<article class="paper" id="${esc(anchor)}" data-record-id="${esc(record.id)}"><div class="paper-top"><div class="paper-heading-row"><div class="paper-meta">${badges(record)}</div>${favoriteButton(record)}</div><h3><a href="${esc(safeUrl(record.canonicalUrl))}" target="_blank" rel="noopener noreferrer">${esc(recordTitle(record))}</a></h3>${record.zhTitle && record.title ? `<p class="en-title">${esc(record.title)}</p>` : ''}<p class="paper-summary">${esc(record.summary || record.innovation || '')}</p><div class="paper-footer"><div class="record-date">原文日期 ${esc(sourceDate(record.publishedAt) || '日期待核实')}${record.version ? ' · ' + esc(record.version) : ''}<br>收录 ${esc(shortTime(record.discoveredAt))}${record.updatedAt && record.updatedAt !== record.discoveredAt ? ' · 更新 ' + esc(shortTime(record.updatedAt)) : ''}</div><div class="links">${recordLinks(record)}</div></div>${state.mode === 'favorites' ? `<p class="favorite-source">跟踪原始来源：<a href="${esc(safeUrl(record.canonicalUrl))}" target="_blank" rel="noopener noreferrer">${esc(record.canonicalUrl || '待补充')}</a></p>` : ''}</div>${revisionNote(record)}<details class="analysis-details"><summary>阅读完整分析 <span class="analysis-hint">背景 · 创新 · 实验 · 结论 · 评价 · 展望</span></summary><div class="analysis-grid">${fields.map(([label, key], index) => `<section class="analysis-section ${index >= 4 ? 'editorial' : ''}"><h4><span>0${index + 1}</span>${label}${index >= 4 ? ' · 编辑分析' : ''}</h4><p>${esc(record[key] || '目前没有足够原文证据，待核实补充。').replace(/\n/g, '<br>')}</p></section>`).join('')}</div><div class="evidence-notes"><h4>原文依据 · ${esc(record.evidence || '以所列原始资料为准')}</h4>${array(record.evidenceDetails).map(evidence => `<p><a href="${esc(safeUrl(evidence.url))}" target="_blank" rel="noopener noreferrer">${esc(evidence.location || '原文')} ↗</a> · ${esc(evidence.supports)}</p>`).join('')}${record.popularity?.basis ? `<p>关注度依据：${esc(record.popularity.basis)}</p>` : ''}</div></details></article>`;
 }
 function briefCard(record, unresolved = false) {
   const status = unresolved ? '待全文核验' : '创新点速览';
-  return `<article class="brief-card" id="paper-${esc(record.id)}" data-record-id="${esc(record.id)}"><div class="paper-heading-row"><div class="paper-meta">${badges(record)}<span class="tag ${unresolved ? 'amber' : 'neutral'}">${status}</span></div>${favoriteButton(record)}</div><h3>${esc(recordTitle(record))}</h3><p>${esc(record.innovation || record.summary || '创新点仍待核实。')}</p><div class="links">${recordLinks(record)}</div><p class="brief-meta">${record.publishedAt ? '发布 ' + esc(dayOf(record.publishedAt)) + ' · ' : ''}${esc(record.evidence || (unresolved ? '当前为候选线索，尚未完成全文核验。' : '已归档，保留核心创新点。'))}</p>${state.mode === 'favorites' ? `<p class="favorite-source">跟踪原始来源：<a href="${esc(safeUrl(record.canonicalUrl))}" target="_blank" rel="noopener noreferrer">${esc(record.canonicalUrl || '待补充')}</a></p>` : ''}${revisionNote(record)}</article>`;
+  return `<article class="brief-card" id="paper-${esc(record.id)}" data-record-id="${esc(record.id)}"><div class="paper-heading-row"><div class="paper-meta">${badges(record)}<span class="tag ${unresolved ? 'amber' : 'neutral'}">${status}</span></div>${favoriteButton(record)}</div><h3>${esc(recordTitle(record))}</h3><p>${esc(record.innovation || record.summary || '创新点仍待核实。')}</p><div class="links">${recordLinks(record)}</div><p class="brief-meta">${record.publishedAt ? '原文日期 ' + esc(sourceDate(record.publishedAt)) + ' · ' : ''}${esc(record.evidence || (unresolved ? '当前为候选线索，尚未完成全文核验。' : '已归档，保留核心创新点。'))}</p>${state.mode === 'favorites' ? `<p class="favorite-source">跟踪原始来源：<a href="${esc(safeUrl(record.canonicalUrl))}" target="_blank" rel="noopener noreferrer">${esc(record.canonicalUrl || '待补充')}</a></p>` : ''}${revisionNote(record)}</article>`;
 }
 function renderCalendar() {
   const [year, month] = state.month.split('-').map(Number), first = new Date(Date.UTC(year, month - 1, 1)), offset = (first.getUTCDay() + 6) % 7, days = new Date(Date.UTC(year, month, 0)).getUTCDate();
@@ -179,7 +184,7 @@ function renderHighlights() {
   if (!top.length) { node.hidden = true; node.innerHTML = ''; return; }
   const note = daily?.rankingNote || '有可核实关注度证据的研究优先；证据不足时，结合研究价值与新近程度选读。此处不代表全网绝对热度排名。';
   node.hidden = false;
-  node.innerHTML = `<div class="section-heading"><h2>本日 <em>Top ${top.length}</em></h2><p>${esc(daily?.summary && daily.summary.length <= 70 ? daily.summary : '从今天的研究中，先读这几篇。')}</p></div><div class="highlights-grid">${top.map((record, index) => `<article class="highlight-card"><span class="highlight-number">${String(index + 1).padStart(2, '0')}</span><span class="highlight-category">${esc(shortCategory(record.category))}${!record.background ? ' · 待全文核验' : ''}</span><h3><a href="#${encodeURIComponent('paper-' + record.id)}" data-jump="${esc(record.id)}">${esc(recordTitle(record))}<span class="highlight-arrow" aria-hidden="true">↗</span></a></h3><p>${esc(record.highlightSummary || record.summary || record.innovation || '')}</p></article>`).join('')}</div><details class="ranking-note"><summary>ⓘ 排序依据</summary><p>${esc(note)}</p></details>`;
+  node.innerHTML = `<div class="section-heading"><h2>本日 <em>Top ${top.length}</em></h2><p>${esc(daily?.summary && daily.summary.length <= 70 ? daily.summary : '从今天的研究中，先读这几篇。')}</p></div><div class="highlights-grid">${top.map((record, index) => `<article class="highlight-card"><span class="highlight-number">${String(index + 1).padStart(2, '0')}</span><span class="highlight-category">${esc(shortCategory(record.category))}${!record.background ? ' · 待全文核验' : ''}</span><h3><a href="#${encodeURIComponent('paper-' + record.id)}" data-jump="${esc(record.id)}">${esc(recordTitle(record))}<span class="highlight-arrow" aria-hidden="true">↗</span></a></h3><p>${esc(record.highlightSummary || record.innovation || record.summary || '')}</p></article>`).join('')}</div><details class="ranking-note"><summary>ⓘ 排序依据</summary><p>${esc(note)}</p></details>`;
 }
 function render() {
   normalizeFavoriteAliases();
@@ -192,7 +197,7 @@ function render() {
   $('page-title').textContent = favorites ? '我的研究收藏' : state.day === 'all' ? '所有值得读的研究' : '值得读的机器人研究';
   const dateLabel = state.day === 'all' ? '全部历史' : `${state.day.slice(0, 4)} 年 ${Number(state.day.slice(5, 7))} 月 ${Number(state.day.slice(8, 10))} 日`;
   const missing = [...favoriteIds].filter(id => !lookup.has(id)).length;
-  $('page-subtitle').textContent = favorites ? `${favoriteIds.size} 项收藏 · 持续积累自己的研究线索${missing ? ' · ' + missing + ' 项暂不在当前归档' : ''}` : `${dateLabel} · ${records.length} 项研究${state.day !== 'all' && group?.editions.length > 1 ? ' · 已合并本日 ' + group.editions.length + ' 次收录' : ''}`;
+  $('page-subtitle').textContent = favorites ? `${favoriteIds.size} 项收藏 · 持续积累自己的研究线索${missing ? ' · ' + missing + ' 项暂不在当前归档' : ''}` : `${dateLabel} · ${records.length} 项研究${state.day !== 'all' && group?.editions.length > 1 ? ' · 已合并本日 ' + group.editions.length + ' 次更新' : ''}`;
   $('day-stamp').textContent = favorites ? '★' : state.day === 'all' ? '∞' : state.day.slice(8, 10);
   const complete = [], briefs = [], candidates = [];
   for (const record of filtered) {
@@ -283,6 +288,11 @@ $('all-history').addEventListener('click', () => setDay('all'));
 $('clear-filters').addEventListener('click', resetFilters);
 $('search').addEventListener('input', event => { state.query = event.target.value.trim(); clearTimeout(refreshTimer); refreshTimer = setTimeout(render, 120); });
 $('refresh').addEventListener('click', () => refreshData(true));
+$('toggle-filters').addEventListener('click', () => {
+  const expanded = $('toggle-filters').getAttribute('aria-expanded') !== 'true';
+  $('toggle-filters').setAttribute('aria-expanded', String(expanded));
+  $('sidebar-filters').classList.toggle('is-open', expanded);
+});
 window.addEventListener('hashchange', () => { if (location.hash === '#favorites') { state.mode = 'favorites'; resetFilters(); } else if (location.hash === '#daily' || !location.hash) { state.mode = 'daily'; resetFilters(); } });
 window.addEventListener('storage', event => { if (event.key === FAVORITES_KEY || event.key === FAVORITES_SEEN_KEY) { const saved = readStored(FAVORITES_KEY, { ids: [] }); favoriteIds = new Set(array(saved.ids).filter(id => typeof id === 'string' && id.length < 300)); favoriteSeen = readStored(FAVORITES_SEEN_KEY, {}); if (!favoriteSeen || typeof favoriteSeen !== 'object' || Array.isArray(favoriteSeen)) favoriteSeen = {}; render(); } });
 $('export-favorites').addEventListener('click', () => {
