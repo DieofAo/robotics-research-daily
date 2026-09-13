@@ -276,8 +276,14 @@ document.addEventListener('click', event => {
   }
   if (button.dataset.seen) { const record = lookup.get(button.dataset.seen); if (record) { favoriteSeen[record.id] = signature(record); storeFavorites(); render(); } }
   if (button.dataset.jump) {
+    event.preventDefault();
     const target = document.getElementById('paper-' + button.dataset.jump);
-    if (target) { target.closest('.brief-section')?.setAttribute('open', ''); target.querySelector('.analysis-details')?.setAttribute('open', ''); }
+    if (target) {
+      target.closest('.brief-section')?.setAttribute('open', '');
+      target.querySelector('.analysis-details')?.setAttribute('open', '');
+      history.replaceState(null, '', location.pathname + location.search + '#' + encodeURIComponent(target.id));
+      target.scrollIntoView({ block: 'start', behavior: 'smooth' });
+    }
   }
 });
 $('month-prev').addEventListener('click', () => moveMonth(-1));
