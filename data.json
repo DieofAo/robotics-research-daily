@@ -71,7 +71,39 @@
       "futureDirections": "【研究假设】可把CASD的自动阶段标注接入记忆分段，并研究学习式视觉匹配；需验证误分段是否会在记忆与进度环节放大。",
       "featured": true,
       "changeType": "new_work",
-      "announcementDate": "2026-09-11"
+      "announcementDate": "2026-09-11",
+      "contentTypes": [
+        "paper"
+      ],
+      "popularity": {
+        "score": 89.59,
+        "basis": "GitHub 累计 stars 5；Hugging Face 论文 upvotes 35。仅为可测公开信号，缺失项不等于零。",
+        "status": "verified",
+        "evidence": [
+          {
+            "url": "https://github.com/aipixel/MaP-WAM",
+            "apiUrl": "https://api.github.com/repos/aipixel/MaP-WAM",
+            "metric": "github_stars",
+            "value": 5,
+            "checkedAt": "2026-09-13T09:25:34.400529+00:00",
+            "scope": "仓库累计关注；非本日新增",
+            "repositoryCreatedAt": "2026-09-10T12:58:02Z"
+          },
+          {
+            "url": "https://huggingface.co/papers/2609.11561",
+            "metric": "hf_paper_upvotes",
+            "value": 35,
+            "checkedAt": "2026-09-13T09:28:36.599606+00:00",
+            "scope": "公开论文页面累计投票；非本日新增"
+          }
+        ],
+        "metrics": {
+          "githubStars": 5,
+          "hfUpvotes": 35
+        },
+        "missingMetrics": [],
+        "checkedAt": "2026-09-13T09:28:36.599606+00:00"
+      }
     },
     {
       "id": "arxiv:2609.08638",
@@ -128,7 +160,25 @@
       "futureDirections": "【研究假设】与MaP-WAM的进度/记忆联用，给动作块加入有序子区间目标；通过相同训练预算消融和执行中重标注检验收益。",
       "featured": false,
       "changeType": "new_work",
-      "announcementDate": null
+      "announcementDate": null,
+      "contentTypes": [
+        "paper"
+      ],
+      "popularity": {
+        "score": null,
+        "basis": "尚未获得可核验的数值热度信号，暂不评分。",
+        "status": "unmeasured",
+        "evidence": [],
+        "metrics": {
+          "githubStars": null,
+          "hfUpvotes": null
+        },
+        "missingMetrics": [
+          "github_stars",
+          "hf_paper_upvotes"
+        ],
+        "checkedAt": "2026-09-13T09:28:36.599606+00:00"
+      }
     },
     {
       "id": "arxiv:2609.11270",
@@ -194,7 +244,34 @@
       "futureDirections": "【研究假设】可在世界模型中预适应双潜变量，再小规模真机校准；部署时与CBF安全过滤结合，评估过滤是否改变潜空间价值估计。",
       "featured": false,
       "changeType": "new_work",
-      "announcementDate": "2026-09-11"
+      "announcementDate": "2026-09-11",
+      "contentTypes": [
+        "paper"
+      ],
+      "popularity": {
+        "score": 0,
+        "basis": "GitHub 累计 stars 0。仅为可测公开信号，缺失项不等于零。",
+        "status": "verified",
+        "evidence": [
+          {
+            "url": "https://github.com/xianchaoxiu/DLSRL",
+            "apiUrl": "https://api.github.com/repos/xianchaoxiu/DLSRL",
+            "metric": "github_stars",
+            "value": 0,
+            "checkedAt": "2026-09-13T09:25:34.400529+00:00",
+            "scope": "仓库累计关注；非本日新增",
+            "repositoryCreatedAt": "2026-08-07T02:01:25Z"
+          }
+        ],
+        "metrics": {
+          "githubStars": 0,
+          "hfUpvotes": null
+        },
+        "missingMetrics": [
+          "hf_paper_upvotes"
+        ],
+        "checkedAt": "2026-09-13T09:28:36.599606+00:00"
+      }
     },
     {
       "id": "arxiv:2609.11746",
@@ -250,7 +327,25 @@
       "futureDirections": "【研究假设】可用学习方法搜索权重，再以解析或形式化方法验证；与RL策略结合时，应进一步处理输入饱和、模型误差与实时求解。",
       "featured": false,
       "changeType": "new_work",
-      "announcementDate": null
+      "announcementDate": null,
+      "contentTypes": [
+        "paper"
+      ],
+      "popularity": {
+        "score": null,
+        "basis": "尚未获得可核验的数值热度信号，暂不评分。",
+        "status": "unmeasured",
+        "evidence": [],
+        "metrics": {
+          "githubStars": null,
+          "hfUpvotes": null
+        },
+        "missingMetrics": [
+          "github_stars",
+          "hf_paper_upvotes"
+        ],
+        "checkedAt": "2026-09-13T09:28:36.599606+00:00"
+      }
     },
     {
       "id": "arxiv:2609.10905",
@@ -319,7 +414,34 @@
       "futureDirections": "【研究假设】可把VLA/WAM的末端目标交给此规划层生成满足运动学约束的轨迹；进一步加入接触力和动力学可行性，验证闭环误差。",
       "featured": false,
       "changeType": "new_work",
-      "announcementDate": "2026-09-11"
+      "announcementDate": "2026-09-11",
+      "contentTypes": [
+        "paper"
+      ],
+      "popularity": {
+        "score": 10.99,
+        "basis": "GitHub 累计 stars 2。仅为可测公开信号，缺失项不等于零。",
+        "status": "verified",
+        "evidence": [
+          {
+            "url": "https://github.com/cohnt/constraint-manifold-charts-ift",
+            "apiUrl": "https://api.github.com/repos/cohnt/constraint-manifold-charts-ift",
+            "metric": "github_stars",
+            "value": 2,
+            "checkedAt": "2026-09-13T09:25:34.400529+00:00",
+            "scope": "仓库累计关注；非本日新增",
+            "repositoryCreatedAt": "2026-09-10T17:11:38Z"
+          }
+        ],
+        "metrics": {
+          "githubStars": 2,
+          "hfUpvotes": null
+        },
+        "missingMetrics": [
+          "hf_paper_upvotes"
+        ],
+        "checkedAt": "2026-09-13T09:28:36.599606+00:00"
+      }
     },
     {
       "id": "skild:s1",
@@ -382,7 +504,26 @@
       "changeType": "follow_up_report",
       "announcementDate": null,
       "dateNote": "9月10日是NVIDIA报道日期。Skild原文引用写August 2026，故按既有研究的跟进记录，不把S1当作本周首次发布。",
-      "originalWorkDate": "2026-08"
+      "originalWorkDate": "2026-08",
+      "contentTypes": [
+        "news",
+        "blog"
+      ],
+      "popularity": {
+        "score": null,
+        "basis": "尚未获得可核验的数值热度信号，暂不评分。",
+        "status": "unmeasured",
+        "evidence": [],
+        "metrics": {
+          "githubStars": null,
+          "hfUpvotes": null
+        },
+        "missingMetrics": [
+          "github_stars",
+          "hf_paper_upvotes"
+        ],
+        "checkedAt": "2026-09-13T09:28:36.599606+00:00"
+      }
     },
     {
       "id": "arxiv:2609.07398",
@@ -488,7 +629,39 @@
       "futureDirections": "【研究假设】可在同一Infra中对照加入CASD语义、MaP-WAM长期记忆或RL后训练；作者也提出UMI类数据和更稳健紧凑视觉表征，宜用同预算实验验证组合收益。",
       "featured": true,
       "changeType": "new_work",
-      "dateNote": "以arXiv v1提交时间9月7日为发表日期。Hugging Face上的Submitted by作者收录日期为9月9日，不能替代论文提交日；未独立确认arXiv公告批次日期。"
+      "dateNote": "以arXiv v1提交时间9月7日为发表日期。Hugging Face上的Submitted by作者收录日期为9月9日，不能替代论文提交日；未独立确认arXiv公告批次日期。",
+      "contentTypes": [
+        "paper"
+      ],
+      "popularity": {
+        "score": 148.83,
+        "basis": "GitHub 累计 stars 560；Hugging Face 论文 upvotes 71。仅为可测公开信号，缺失项不等于零。",
+        "status": "verified",
+        "evidence": [
+          {
+            "url": "https://github.com/OpenWAM-Official/OpenWAM",
+            "apiUrl": "https://api.github.com/repos/OpenWAM-Official/OpenWAM",
+            "metric": "github_stars",
+            "value": 560,
+            "checkedAt": "2026-09-13T09:25:34.400529+00:00",
+            "scope": "仓库累计关注；非本日新增",
+            "repositoryCreatedAt": "2026-09-06T06:21:09Z"
+          },
+          {
+            "url": "https://huggingface.co/papers/2609.07398",
+            "metric": "hf_paper_upvotes",
+            "value": 71,
+            "checkedAt": "2026-09-13T09:28:36.599606+00:00",
+            "scope": "公开论文页面累计投票；非本日新增"
+          }
+        ],
+        "metrics": {
+          "githubStars": 560,
+          "hfUpvotes": 71
+        },
+        "missingMetrics": [],
+        "checkedAt": "2026-09-13T09:28:36.599606+00:00"
+      }
     },
     {
       "id": "arxiv:2609.11433",
@@ -548,7 +721,25 @@
       "evaluation": "任务集中在两类操作，真机样本很少；这里的“安全感知”是经验避障改进，不能解释为无碰撞保证。已查论文没有可核实的作者代码链接。9月10日原稿在本次17:00更新补录。",
       "futureDirections": "【研究假设】可让 VLA 产生子目标，再由局部 GP 技能执行；也可叠加 CBF 安全约束。需要验证高层目标误差、控制输入限制及安全约束是否破坏技能的可达性。",
       "dateNote": "2026-09-10提交；本期滚动回看首次补录，不代表9月13日新发表。",
-      "revisionEvents": []
+      "revisionEvents": [],
+      "contentTypes": [
+        "paper"
+      ],
+      "popularity": {
+        "score": null,
+        "basis": "尚未获得可核验的数值热度信号，暂不评分。",
+        "status": "unmeasured",
+        "evidence": [],
+        "metrics": {
+          "githubStars": null,
+          "hfUpvotes": null
+        },
+        "missingMetrics": [
+          "github_stars",
+          "hf_paper_upvotes"
+        ],
+        "checkedAt": "2026-09-13T09:28:36.599606+00:00"
+      }
     },
     {
       "id": "arxiv:2609.11445",
@@ -620,7 +811,34 @@
       "evaluation": "零样本跨任务结果不稳定，严格未见任务也非所有比较项最优；全轨迹 AUROC 不能替代提前预警时长或安全性。公开仓库含读出器训练与评估，未提供真实数据、权重及主干特征提取。9月10日原稿本次补录。",
       "futureDirections": "【研究假设】可把风险读出接入 DLSRL 或 CorrectVLA 的恢复触发器。应先测误报、提前量及风险校准，再比较加入干预后的闭环成功率与额外计算成本。",
       "dateNote": "2026-09-10提交；本期滚动回看首次补录，不代表9月13日新发表。",
-      "revisionEvents": []
+      "revisionEvents": [],
+      "contentTypes": [
+        "paper"
+      ],
+      "popularity": {
+        "score": 10.99,
+        "basis": "GitHub 累计 stars 2。仅为可测公开信号，缺失项不等于零。",
+        "status": "verified",
+        "evidence": [
+          {
+            "url": "https://github.com/HaoranPei-casia/FARM",
+            "apiUrl": "https://api.github.com/repos/HaoranPei-casia/FARM",
+            "metric": "github_stars",
+            "value": 2,
+            "checkedAt": "2026-09-13T09:25:34.400529+00:00",
+            "scope": "仓库累计关注；非本日新增",
+            "repositoryCreatedAt": "2026-09-10T08:14:21Z"
+          }
+        ],
+        "metrics": {
+          "githubStars": 2,
+          "hfUpvotes": null
+        },
+        "missingMetrics": [
+          "hf_paper_upvotes"
+        ],
+        "checkedAt": "2026-09-13T09:28:36.599606+00:00"
+      }
     },
     {
       "id": "arxiv:2609.11875",
@@ -691,7 +909,25 @@
       "evaluation": "跨两平台验证不等于零样本跨机器人迁移。记忆预训练成本应计入总训练成本；当前轨迹在执行结束后才写入记忆。所查主页未见可核实代码链接；TPAMI是投稿状态。9月10日原稿本次补录。",
       "futureDirections": "【研究假设】可与 MaP-WAM 的高层记忆规划组合：MaP-WAM选择阶段目标，UniMPA 检索局部可执行原型。需测试记忆污染、错误检索以及执行中同步更新记忆的稳定性。",
       "dateNote": "2026-09-10提交；本期滚动回看首次补录，不代表9月13日新发表。",
-      "revisionEvents": []
+      "revisionEvents": [],
+      "contentTypes": [
+        "paper"
+      ],
+      "popularity": {
+        "score": null,
+        "basis": "尚未获得可核验的数值热度信号，暂不评分。",
+        "status": "unmeasured",
+        "evidence": [],
+        "metrics": {
+          "githubStars": null,
+          "hfUpvotes": null
+        },
+        "missingMetrics": [
+          "github_stars",
+          "hf_paper_upvotes"
+        ],
+        "checkedAt": "2026-09-13T09:28:36.599606+00:00"
+      }
     },
     {
       "id": "arxiv:2608.29967",
@@ -770,7 +1006,34 @@
       "evaluation": "反馈在初始确定时可能需要多轮调整，同一修正依赖失败模式一致；不能由有限基座位移实验推断普遍分布外恢复。代码已公开，尚未独立复现。保留8月30日原始日期，作为本次17:00更新的30天补录。",
       "futureDirections": "【研究假设】可结合 FARM 先识别风险，再判断是否属于可修正的执行错位；加入动作可行域和碰撞约束，并学习反馈幅度，验证自动触发是否比固定人工修正更可靠。",
       "dateNote": "2026-08-30提交；本期滚动回看首次补录，不代表9月13日新发表。本条来自本周30天补查。",
-      "revisionEvents": []
+      "revisionEvents": [],
+      "contentTypes": [
+        "paper"
+      ],
+      "popularity": {
+        "score": 13.86,
+        "basis": "GitHub 累计 stars 3；仓库创建于 3 月，不能把累计 stars 视为 8 月论文的当日热度。仅为可测公开信号，缺失项不等于零。",
+        "status": "verified",
+        "evidence": [
+          {
+            "url": "https://github.com/owenk3/correct_vla",
+            "apiUrl": "https://api.github.com/repos/owenk3/correct_vla",
+            "metric": "github_stars",
+            "value": 3,
+            "checkedAt": "2026-09-13T09:25:34.400529+00:00",
+            "scope": "仓库累计关注；非本日新增",
+            "repositoryCreatedAt": "2026-03-18T00:29:37Z"
+          }
+        ],
+        "metrics": {
+          "githubStars": 3,
+          "hfUpvotes": null
+        },
+        "missingMetrics": [
+          "hf_paper_upvotes"
+        ],
+        "checkedAt": "2026-09-13T09:28:36.599606+00:00"
+      }
     },
     {
       "id": "arxiv:2609.05588",
@@ -845,7 +1108,33 @@
       "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
       "updatedAt": "2026-09-13T09:19:18.102185+00:00",
       "lastSeenAt": "2026-09-13T09:19:18.102185+00:00",
-      "revisionEvents": []
+      "revisionEvents": [],
+      "contentTypes": [
+        "paper",
+        "report"
+      ],
+      "popularity": {
+        "score": 80.15,
+        "basis": "Hugging Face 论文 upvotes 54。仅为可测公开信号，缺失项不等于零。",
+        "status": "verified",
+        "evidence": [
+          {
+            "url": "https://huggingface.co/papers/2609.05588",
+            "metric": "hf_paper_upvotes",
+            "value": 54,
+            "checkedAt": "2026-09-13T09:28:36.599606+00:00",
+            "scope": "公开论文页面累计投票；非本日新增"
+          }
+        ],
+        "metrics": {
+          "githubStars": null,
+          "hfUpvotes": 54
+        },
+        "missingMetrics": [
+          "github_stars"
+        ],
+        "checkedAt": "2026-09-13T09:28:36.599606+00:00"
+      }
     },
     {
       "id": "report:nvidia-compass-agent-workflow-20260826",
@@ -921,7 +1210,34 @@
       "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
       "updatedAt": "2026-09-13T09:19:18.102185+00:00",
       "lastSeenAt": "2026-09-13T09:19:18.102185+00:00",
-      "revisionEvents": []
+      "revisionEvents": [],
+      "contentTypes": [
+        "blog"
+      ],
+      "popularity": {
+        "score": 49.56,
+        "basis": "GitHub 累计 stars 141；仓库早于本篇材料，关注数包含此前项目积累。仅为可测公开信号，缺失项不等于零。",
+        "status": "verified",
+        "evidence": [
+          {
+            "url": "https://github.com/NVlabs/COMPASS",
+            "apiUrl": "https://api.github.com/repos/NVlabs/COMPASS",
+            "metric": "github_stars",
+            "value": 141,
+            "checkedAt": "2026-09-13T09:25:34.400529+00:00",
+            "scope": "仓库累计关注；非本日新增",
+            "repositoryCreatedAt": "2025-02-21T21:25:39Z"
+          }
+        ],
+        "metrics": {
+          "githubStars": 141,
+          "hfUpvotes": null
+        },
+        "missingMetrics": [
+          "hf_paper_upvotes"
+        ],
+        "checkedAt": "2026-09-13T09:28:36.599606+00:00"
+      }
     },
     {
       "id": "arxiv:2609.04196",
@@ -1016,7 +1332,39 @@
       "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
       "updatedAt": "2026-09-13T09:19:18.102185+00:00",
       "lastSeenAt": "2026-09-13T09:19:18.102185+00:00",
-      "revisionEvents": []
+      "revisionEvents": [],
+      "contentTypes": [
+        "paper"
+      ],
+      "popularity": {
+        "score": 146.5,
+        "basis": "GitHub 累计 stars 483；Hugging Face 论文 upvotes 68；仓库早于本篇材料，关注数包含此前项目积累。仅为可测公开信号，缺失项不等于零。",
+        "status": "verified",
+        "evidence": [
+          {
+            "url": "https://github.com/KangLiao929/Puffin",
+            "apiUrl": "https://api.github.com/repos/KangLiao929/Puffin",
+            "metric": "github_stars",
+            "value": 483,
+            "checkedAt": "2026-09-13T09:25:34.400529+00:00",
+            "scope": "仓库累计关注；非本日新增",
+            "repositoryCreatedAt": "2025-10-07T08:34:34Z"
+          },
+          {
+            "url": "https://huggingface.co/papers/2609.04196",
+            "metric": "hf_paper_upvotes",
+            "value": 68,
+            "checkedAt": "2026-09-13T09:28:36.599606+00:00",
+            "scope": "公开论文页面累计投票；非本日新增"
+          }
+        ],
+        "metrics": {
+          "githubStars": 483,
+          "hfUpvotes": 68
+        },
+        "missingMetrics": [],
+        "checkedAt": "2026-09-13T09:28:36.599606+00:00"
+      }
     },
     {
       "id": "arxiv:2608.29769",
@@ -1098,7 +1446,26 @@
       "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
       "updatedAt": "2026-09-13T09:19:18.102185+00:00",
       "lastSeenAt": "2026-09-13T09:19:18.102185+00:00",
-      "revisionEvents": []
+      "revisionEvents": [],
+      "contentTypes": [
+        "paper",
+        "news"
+      ],
+      "popularity": {
+        "score": null,
+        "basis": "尚未获得可核验的数值热度信号，暂不评分。",
+        "status": "unmeasured",
+        "evidence": [],
+        "metrics": {
+          "githubStars": null,
+          "hfUpvotes": null
+        },
+        "missingMetrics": [
+          "github_stars",
+          "hf_paper_upvotes"
+        ],
+        "checkedAt": "2026-09-13T09:28:36.599606+00:00"
+      }
     },
     {
       "id": "arxiv:2609.11661",
@@ -1157,7 +1524,25 @@
       "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
       "updatedAt": "2026-09-13T09:19:18.102185+00:00",
       "lastSeenAt": "2026-09-13T09:19:18.102185+00:00",
-      "revisionEvents": []
+      "revisionEvents": [],
+      "contentTypes": [
+        "paper"
+      ],
+      "popularity": {
+        "score": null,
+        "basis": "尚未获得可核验的数值热度信号，暂不评分。",
+        "status": "unmeasured",
+        "evidence": [],
+        "metrics": {
+          "githubStars": null,
+          "hfUpvotes": null
+        },
+        "missingMetrics": [
+          "github_stars",
+          "hf_paper_upvotes"
+        ],
+        "checkedAt": "2026-09-13T09:28:36.599606+00:00"
+      }
     },
     {
       "id": "arxiv:2608.19443",
@@ -1218,7 +1603,25 @@
       "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
       "updatedAt": "2026-09-13T09:19:18.102185+00:00",
       "lastSeenAt": "2026-09-13T09:19:18.102185+00:00",
-      "revisionEvents": []
+      "revisionEvents": [],
+      "contentTypes": [
+        "paper"
+      ],
+      "popularity": {
+        "score": null,
+        "basis": "尚未获得可核验的数值热度信号，暂不评分。",
+        "status": "unmeasured",
+        "evidence": [],
+        "metrics": {
+          "githubStars": null,
+          "hfUpvotes": null
+        },
+        "missingMetrics": [
+          "github_stars",
+          "hf_paper_upvotes"
+        ],
+        "checkedAt": "2026-09-13T09:28:36.599606+00:00"
+      }
     }
   ],
   "editions": [
@@ -1760,7 +2163,30 @@
           "changeType": "new_work",
           "dateNote": "以arXiv v1提交时间9月7日为发表日期。Hugging Face上的Submitted by作者收录日期为9月9日，不能替代论文提交日；未独立确认arXiv公告批次日期。"
         }
-      ]
+      ],
+      "rankedIds": [
+        "arxiv:2609.07398",
+        "arxiv:2609.11561",
+        "arxiv:2609.10905",
+        "arxiv:2609.11270",
+        "arxiv:2609.11746",
+        "skild:s1",
+        "arxiv:2609.08638"
+      ],
+      "featuredIds": [
+        "arxiv:2609.07398",
+        "arxiv:2609.11561",
+        "arxiv:2609.10905",
+        "arxiv:2609.11270",
+        "arxiv:2609.11746",
+        "skild:s1",
+        "arxiv:2609.08638"
+      ],
+      "analysisNeededIds": [],
+      "briefIds": [],
+      "candidateCount": 7,
+      "rankingNote": "4 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 站内热度代理分 = 10×ln(1+已核验 GitHub 累计 stars) + 20×ln(1+已核验 Hugging Face 论文 upvotes)。缺失项为 null，仅合计可测项；全部缺失则不评分。GitHub 指标来自官方 API，HF 指标来自公开论文页面；页面缓存可能滞后。stars 是仓库长期累计关注，旧仓库及包含多篇工作的框架会受益，不能解释为本日新增热度或论文质量。仅比较本站已收录且存在可测信号的记录，不是全网最热排名。",
+      "rankingVersion": 1
     },
     {
       "id": "2026-09-13-1700",
@@ -2755,8 +3181,558 @@
           "updatedAt": "2026-09-13T09:19:18.102185+00:00",
           "lastSeenAt": "2026-09-13T09:19:18.102185+00:00"
         }
-      ]
+      ],
+      "supplementalBriefIds": [
+        "arxiv:2609.05178",
+        "arxiv:2609.06009",
+        "arxiv:2609.10706",
+        "arxiv:2609.10522",
+        "arxiv:2609.09155",
+        "arxiv:2609.05324",
+        "arxiv:2609.09158",
+        "arxiv:2609.01281",
+        "arxiv:2609.05533",
+        "arxiv:2608.29768",
+        "pending:nvidia-cosmos-edge-20260819",
+        "unitree:unifolm-wla-1.0"
+      ],
+      "candidateIds": [
+        "arxiv:2609.11433",
+        "arxiv:2609.11445",
+        "arxiv:2609.11875",
+        "arxiv:2608.29967",
+        "arxiv:2609.05588",
+        "report:nvidia-compass-agent-workflow-20260826",
+        "arxiv:2609.04196",
+        "arxiv:2608.29769",
+        "arxiv:2609.11661",
+        "arxiv:2608.19443",
+        "arxiv:2609.05178",
+        "arxiv:2609.06009",
+        "arxiv:2609.10706",
+        "arxiv:2609.10522",
+        "arxiv:2609.09155",
+        "arxiv:2609.05324",
+        "arxiv:2609.09158",
+        "arxiv:2609.01281",
+        "arxiv:2609.05533",
+        "arxiv:2608.29768",
+        "pending:nvidia-cosmos-edge-20260819",
+        "unitree:unifolm-wla-1.0"
+      ],
+      "rankedIds": [
+        "arxiv:2609.04196",
+        "arxiv:2609.05588",
+        "report:nvidia-compass-agent-workflow-20260826",
+        "arxiv:2608.29967",
+        "arxiv:2609.11445",
+        "unitree:unifolm-wla-1.0",
+        "arxiv:2609.11875",
+        "arxiv:2609.11661",
+        "arxiv:2609.11433",
+        "arxiv:2609.10706",
+        "arxiv:2609.10522",
+        "arxiv:2609.09158",
+        "arxiv:2609.09155",
+        "arxiv:2609.06009",
+        "arxiv:2609.05324",
+        "arxiv:2609.05178",
+        "arxiv:2609.05533",
+        "arxiv:2609.01281",
+        "arxiv:2608.29769",
+        "arxiv:2608.29768",
+        "arxiv:2608.19443",
+        "pending:nvidia-cosmos-edge-20260819"
+      ],
+      "featuredIds": [
+        "arxiv:2609.04196",
+        "arxiv:2609.05588",
+        "report:nvidia-compass-agent-workflow-20260826",
+        "arxiv:2608.29967",
+        "arxiv:2609.11445",
+        "arxiv:2609.11875",
+        "arxiv:2609.11661",
+        "arxiv:2609.11433",
+        "arxiv:2608.29769",
+        "arxiv:2608.19443"
+      ],
+      "analysisNeededIds": [
+        "unitree:unifolm-wla-1.0",
+        "arxiv:2609.10706",
+        "arxiv:2609.10522",
+        "arxiv:2609.09158",
+        "arxiv:2609.09155",
+        "arxiv:2609.06009",
+        "arxiv:2609.05324",
+        "arxiv:2609.05178",
+        "arxiv:2609.05533",
+        "arxiv:2609.01281",
+        "arxiv:2608.29768",
+        "pending:nvidia-cosmos-edge-20260819"
+      ],
+      "briefIds": [
+        "unitree:unifolm-wla-1.0",
+        "arxiv:2609.10706",
+        "arxiv:2609.10522",
+        "arxiv:2609.09158",
+        "arxiv:2609.09155",
+        "arxiv:2609.06009",
+        "arxiv:2609.05324",
+        "arxiv:2609.05178",
+        "arxiv:2609.05533",
+        "arxiv:2609.01281",
+        "arxiv:2608.29768",
+        "pending:nvidia-cosmos-edge-20260819"
+      ],
+      "candidateCount": 22,
+      "rankingNote": "5 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 站内热度代理分 = 10×ln(1+已核验 GitHub 累计 stars) + 20×ln(1+已核验 Hugging Face 论文 upvotes)。缺失项为 null，仅合计可测项；全部缺失则不评分。GitHub 指标来自官方 API，HF 指标来自公开论文页面；页面缓存可能滞后。stars 是仓库长期累计关注，旧仓库及包含多篇工作的框架会受益，不能解释为本日新增热度或论文质量。仅比较本站已收录且存在可测信号的记录，不是全网最热排名。",
+      "rankingVersion": 1
     }
   ],
-  "lastScanAt": "2026-09-13T09:19:18.102185+00:00"
+  "lastScanAt": "2026-09-13T09:19:18.102185+00:00",
+  "briefs": [
+    {
+      "id": "arxiv:2609.05178",
+      "title": "LIBERO-RECOVER: Beyond Task Success Towards Failure Recovery in Robotic Manipulation Models",
+      "zhTitle": "LIBERO-RECOVER：把失败后的恢复能力纳入评测",
+      "category": "vla",
+      "contentTypes": [
+        "paper"
+      ],
+      "innovation": "从真实模型执行失败构造恢复场景，按动作重试、动作调整、物体状态恢复和环境恢复四层组织，补充只看初始状态任务成功率的评测盲点。",
+      "canonicalUrl": "https://arxiv.org/abs/2609.05178",
+      "publishedAt": "2026-09-04T14:15:27Z",
+      "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
+      "evidence": "已核对 arXiv 原始摘要与提交记录；尚未逐项核验全文方法、实验和开源情况。",
+      "evidenceDetails": [
+        {
+          "url": "https://arxiv.org/abs/2609.05178",
+          "location": "Abstract；Submission history",
+          "supports": "创新点概述及原始提交时间"
+        }
+      ],
+      "status": "待全文核验",
+      "lastCheckedAt": "2026-09-13T09:28:36.599606+00:00",
+      "aliasIds": [],
+      "lastSeenAt": "2026-09-13T09:28:36.599606+00:00",
+      "updatedAt": "2026-09-13T09:19:18.102185+00:00",
+      "links": [
+        {
+          "label": "原始来源",
+          "url": "https://arxiv.org/abs/2609.05178"
+        }
+      ],
+      "revisionEvents": []
+    },
+    {
+      "id": "arxiv:2609.06009",
+      "title": "How to Learn from What a Human Would Avoid? Intervention-Aware World Models with Real-World RL for Dexterous Manipulation",
+      "zhTitle": "WHIRL：从人类接管信号学习提前避险",
+      "category": "rl",
+      "contentTypes": [
+        "paper"
+      ],
+      "innovation": "在潜空间世界模型中增加人类接管概率预测头，把操作员何时介入转为未来风险信号，并用于策略侧风险塑形，尝试减少真实灵巧手训练中的介入负担。",
+      "canonicalUrl": "https://arxiv.org/abs/2609.06009",
+      "publishedAt": "2026-09-05T10:28:23Z",
+      "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
+      "evidence": "已核对 arXiv 原始摘要与提交记录；尚未逐项核验全文方法、实验和开源情况。",
+      "evidenceDetails": [
+        {
+          "url": "https://arxiv.org/abs/2609.06009",
+          "location": "Abstract；Submission history",
+          "supports": "创新点概述及原始提交时间"
+        }
+      ],
+      "status": "待全文核验",
+      "lastCheckedAt": "2026-09-13T09:28:36.599606+00:00",
+      "aliasIds": [],
+      "lastSeenAt": "2026-09-13T09:28:36.599606+00:00",
+      "updatedAt": "2026-09-13T09:19:18.102185+00:00",
+      "links": [
+        {
+          "label": "原始来源",
+          "url": "https://arxiv.org/abs/2609.06009"
+        }
+      ],
+      "revisionEvents": []
+    },
+    {
+      "id": "arxiv:2609.10706",
+      "title": "HuRo: Robotizing Human Videos for Scalable VLA Pretraining",
+      "zhTitle": "HuRo：将人类视频转成机器人观测与动作",
+      "category": "vla",
+      "contentTypes": [
+        "paper"
+      ],
+      "innovation": "将异构人类视频共同转换为机器人对齐的视觉观测和动作轨迹，推断不同标注层级缺少的中间信号，用于扩大 VLA 的人类视频预训练。",
+      "canonicalUrl": "https://arxiv.org/abs/2609.10706",
+      "publishedAt": "2026-09-09T18:02:05Z",
+      "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
+      "evidence": "已核对 arXiv 原始摘要与提交记录；尚未逐项核验全文方法、实验和开源情况。",
+      "evidenceDetails": [
+        {
+          "url": "https://arxiv.org/abs/2609.10706",
+          "location": "Abstract；Submission history",
+          "supports": "创新点概述及原始提交时间"
+        }
+      ],
+      "status": "待全文核验",
+      "lastCheckedAt": "2026-09-13T09:28:36.599606+00:00",
+      "aliasIds": [],
+      "lastSeenAt": "2026-09-13T09:28:36.599606+00:00",
+      "updatedAt": "2026-09-13T09:19:18.102185+00:00",
+      "links": [
+        {
+          "label": "原始来源",
+          "url": "https://arxiv.org/abs/2609.10706"
+        }
+      ],
+      "revisionEvents": []
+    },
+    {
+      "id": "arxiv:2609.10522",
+      "title": "Show-Harness: Just a VLM Agent Can Play Robots",
+      "zhTitle": "Show-Harness：用语义动作接口连接 VLM 与机器人",
+      "category": "vla",
+      "contentTypes": [
+        "paper"
+      ],
+      "innovation": "向 VLM 暴露可推理的离散语义动作单元，再由各机器人解释器确定性落地；同一接口延伸为图形示范采集工具，降低控制与遥操作接口门槛。",
+      "canonicalUrl": "https://arxiv.org/abs/2609.10522",
+      "publishedAt": "2026-09-09T17:53:38Z",
+      "discoveredAt": "2026-09-13T09:14:59+00:00",
+      "evidence": "已核对 arXiv 原始摘要与提交记录；尚未逐项核验全文方法、实验和开源情况。",
+      "evidenceDetails": [
+        {
+          "url": "https://arxiv.org/abs/2609.10522",
+          "location": "Abstract；Submission history",
+          "supports": "创新点概述及原始提交时间"
+        }
+      ],
+      "status": "待全文核验",
+      "lastCheckedAt": "2026-09-13T09:28:36.599606+00:00",
+      "aliasIds": [
+        "pending:arxiv:2609.10522"
+      ],
+      "lastSeenAt": "2026-09-13T09:28:36.599606+00:00",
+      "updatedAt": "2026-09-13T09:14:59+00:00",
+      "links": [
+        {
+          "label": "原始来源",
+          "url": "https://arxiv.org/abs/2609.10522"
+        }
+      ],
+      "revisionEvents": []
+    },
+    {
+      "id": "arxiv:2609.09155",
+      "title": "SyncWorld: Visual Calibration Enables World Models as Zero-Shot Simulators",
+      "zhTitle": "SyncWorld：用视觉校准说明动作如何改变画面",
+      "category": "wam",
+      "contentTypes": [
+        "paper"
+      ],
+      "innovation": "利用覆盖可控自由度的帧—动作校准片段，在上下文中建立特定相机、场景和机体下的动作—视觉映射，帮助世界模型在新设置下模拟动作结果。",
+      "canonicalUrl": "https://arxiv.org/abs/2609.09155",
+      "publishedAt": "2026-09-08T17:59:47Z",
+      "discoveredAt": "2026-09-13T09:14:59+00:00",
+      "evidence": "已核对 arXiv 原始摘要与提交记录；尚未逐项核验全文方法、实验和开源情况。",
+      "evidenceDetails": [
+        {
+          "url": "https://arxiv.org/abs/2609.09155",
+          "location": "Abstract；Submission history",
+          "supports": "创新点概述及原始提交时间"
+        }
+      ],
+      "status": "待全文核验",
+      "lastCheckedAt": "2026-09-13T09:28:36.599606+00:00",
+      "aliasIds": [
+        "pending:arxiv:2609.09155"
+      ],
+      "lastSeenAt": "2026-09-13T09:28:36.599606+00:00",
+      "updatedAt": "2026-09-13T09:14:59+00:00",
+      "links": [
+        {
+          "label": "原始来源",
+          "url": "https://arxiv.org/abs/2609.09155"
+        }
+      ],
+      "revisionEvents": []
+    },
+    {
+      "id": "arxiv:2609.05324",
+      "title": "RoboSPA: Can VLA Models Go Beyond Simple Scenes and Short-Horizon Tasks?",
+      "zhTitle": "RoboSPA：诊断空间推理与长程规划",
+      "category": "vla",
+      "contentTypes": [
+        "paper"
+      ],
+      "innovation": "把细粒度空间关系与长时程过程规划分开诊断，按难度递增组织任务，并增加成功率之外的诊断指标，定位复杂场景下的推理、执行与记忆短板。",
+      "canonicalUrl": "https://arxiv.org/abs/2609.05324",
+      "publishedAt": "2026-09-04T16:19:01Z",
+      "discoveredAt": "2026-09-13T09:14:59+00:00",
+      "evidence": "已核对 arXiv 原始摘要与提交记录；尚未逐项核验全文方法、实验和开源情况。",
+      "evidenceDetails": [
+        {
+          "url": "https://arxiv.org/abs/2609.05324",
+          "location": "Abstract；Submission history",
+          "supports": "创新点概述及原始提交时间"
+        }
+      ],
+      "status": "待全文核验",
+      "lastCheckedAt": "2026-09-13T09:28:36.599606+00:00",
+      "aliasIds": [
+        "pending:arxiv:2609.05324"
+      ],
+      "lastSeenAt": "2026-09-13T09:28:36.599606+00:00",
+      "updatedAt": "2026-09-13T09:14:59+00:00",
+      "links": [
+        {
+          "label": "原始来源",
+          "url": "https://arxiv.org/abs/2609.05324"
+        }
+      ],
+      "revisionEvents": []
+    },
+    {
+      "id": "arxiv:2609.09158",
+      "title": "TANGO: Humanoid Navigation in Cluttered Environments with a Whole-Body Vision-Language-Action Model",
+      "zhTitle": "TANGO：从视觉语言指令到人形全身穿行",
+      "category": "embodied",
+      "contentTypes": [
+        "paper"
+      ],
+      "innovation": "直接由第一视角 RGB 与语言预测全身关节动作；用路径规划、全身运动生成、避障编辑和 RL 跟踪在仿真中合成训练监督，将导航扩展到手臂、躯干与步态协同。",
+      "canonicalUrl": "https://arxiv.org/abs/2609.09158",
+      "publishedAt": "2026-09-08T17:59:55Z",
+      "discoveredAt": "2026-09-13T09:14:59+00:00",
+      "evidence": "已核对 arXiv 原始摘要与提交记录；尚未逐项核验全文方法、实验和开源情况。",
+      "evidenceDetails": [
+        {
+          "url": "https://arxiv.org/abs/2609.09158",
+          "location": "Abstract；Submission history",
+          "supports": "创新点概述及原始提交时间"
+        }
+      ],
+      "status": "待全文核验",
+      "lastCheckedAt": "2026-09-13T09:28:36.599606+00:00",
+      "aliasIds": [
+        "pending:arxiv:2609.09158"
+      ],
+      "lastSeenAt": "2026-09-13T09:28:36.599606+00:00",
+      "updatedAt": "2026-09-13T09:14:59+00:00",
+      "links": [
+        {
+          "label": "原始来源",
+          "url": "https://arxiv.org/abs/2609.09158"
+        }
+      ],
+      "revisionEvents": []
+    },
+    {
+      "id": "arxiv:2609.01281",
+      "title": "EmbodiedSkills: A Unified Framework for Orchestrating, Training, and Deploying VLA Agents",
+      "zhTitle": "EmbodiedSkills：执行前检查、执行后验证",
+      "category": "systems",
+      "contentTypes": [
+        "paper"
+      ],
+      "innovation": "把每次技能选择视作待执行提案，通过统一接口检查前提、限制底层执行并验证结果；结构化记录规划、执行、验证与恢复事件，允许替换底层 VLA。",
+      "canonicalUrl": "https://arxiv.org/abs/2609.01281",
+      "publishedAt": "2026-09-01T14:14:47Z",
+      "discoveredAt": "2026-09-13T09:14:59+00:00",
+      "evidence": "已核对 arXiv 原始摘要与提交记录；尚未逐项核验全文方法、实验和开源情况。",
+      "evidenceDetails": [
+        {
+          "url": "https://arxiv.org/abs/2609.01281",
+          "location": "Abstract；Submission history",
+          "supports": "创新点概述及原始提交时间"
+        }
+      ],
+      "status": "待全文核验",
+      "lastCheckedAt": "2026-09-13T09:28:36.599606+00:00",
+      "aliasIds": [
+        "pending:arxiv:2609.01281"
+      ],
+      "lastSeenAt": "2026-09-13T09:28:36.599606+00:00",
+      "updatedAt": "2026-09-13T09:14:59+00:00",
+      "links": [
+        {
+          "label": "原始来源",
+          "url": "https://arxiv.org/abs/2609.01281"
+        }
+      ],
+      "revisionEvents": []
+    },
+    {
+      "id": "arxiv:2609.05533",
+      "title": "SimpleMemVLA: A Simple but Effective Native-Video Memory for Vision-Language-Action Models",
+      "zhTitle": "SimpleMemVLA：以原生视频上下文保留历史",
+      "category": "vla",
+      "contentTypes": [
+        "paper"
+      ],
+      "innovation": "保留带时间戳的采样视频历史，交给原生视频 VLM 处理，以生成子任务的隐藏状态连接动作头；在动作执行期间预填充共享前缀，减少反复处理长历史的开销。",
+      "canonicalUrl": "https://arxiv.org/abs/2609.05533",
+      "publishedAt": "2026-09-02T02:23:39Z",
+      "discoveredAt": "2026-09-13T09:14:59+00:00",
+      "evidence": "已核对 arXiv 原始摘要与提交记录；尚未逐项核验全文方法、实验和开源情况。",
+      "evidenceDetails": [
+        {
+          "url": "https://arxiv.org/abs/2609.05533",
+          "location": "Abstract；Submission history",
+          "supports": "创新点概述及原始提交时间"
+        }
+      ],
+      "status": "待全文核验",
+      "lastCheckedAt": "2026-09-13T09:28:36.599606+00:00",
+      "aliasIds": [
+        "pending:arxiv:2609.05533"
+      ],
+      "lastSeenAt": "2026-09-13T09:28:36.599606+00:00",
+      "updatedAt": "2026-09-13T09:14:59+00:00",
+      "links": [
+        {
+          "label": "原始来源",
+          "url": "https://arxiv.org/abs/2609.05533"
+        }
+      ],
+      "revisionEvents": []
+    },
+    {
+      "id": "arxiv:2608.29768",
+      "title": "SmoothRL: Online Reinforcement Learning During Asynchronous Execution",
+      "zhTitle": "SmoothRL：只从异步过程中实际执行的动作学习",
+      "category": "rl",
+      "contentTypes": [
+        "paper",
+        "news"
+      ],
+      "innovation": "按异步执行状态把动作块划成已提交、实际执行和丢弃三段，仅对实际执行段回传价值梯度，使在线 RL 更新与真正发生的轨迹分布对齐。",
+      "canonicalUrl": "https://arxiv.org/abs/2608.29768",
+      "publishedAt": "2026-08-30T12:56:09Z",
+      "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
+      "evidence": "已核对 arXiv 原始摘要与提交记录；尚未逐项核验全文方法、实验和开源情况。",
+      "evidenceDetails": [
+        {
+          "url": "https://arxiv.org/abs/2608.29768",
+          "location": "Abstract；Submission history",
+          "supports": "创新点概述及原始提交时间"
+        }
+      ],
+      "status": "待全文核验",
+      "lastCheckedAt": "2026-09-13T09:28:36.599606+00:00",
+      "links": [
+        {
+          "label": "研究原文",
+          "url": "https://arxiv.org/abs/2608.29768"
+        },
+        {
+          "label": "9 月 4 日发布报道",
+          "url": "https://www.x-techcon.com/article/183034.html"
+        }
+      ],
+      "dateNote": "8 月 30 日原始论文；9 月 4 日媒体报道。此次追溯后统一使用论文身份。",
+      "aliasIds": [
+        "smoothrl:news-lead-20260904"
+      ],
+      "lastSeenAt": "2026-09-13T09:28:36.599606+00:00",
+      "updatedAt": "2026-09-13T09:19:18.102185+00:00",
+      "revisionEvents": []
+    },
+    {
+      "id": "pending:nvidia-cosmos-edge-20260819",
+      "title": "Post-Train NVIDIA Cosmos 3 Edge for On-Device Robot Control",
+      "zhTitle": "Cosmos 3 Edge：面向机器人端侧的后训练教程",
+      "category": "wam",
+      "contentTypes": [
+        "blog"
+      ],
+      "innovation": "将世界模型的物理先验转成动作块策略，串联 DROID 数据准备、后训练、Jetson Thor 本机部署和滚动重规划评估。博客与模型卡的运行配置需要进一步对齐，暂不引用实时性能数值。",
+      "canonicalUrl": "https://developer.nvidia.com/blog/post-train-nvidia-cosmos-3-edge-for-on-device-robot-control/",
+      "publishedAt": "2026-08-19",
+      "discoveredAt": "2026-09-13T09:14:59+00:00",
+      "evidence": "已读官方博客正文；模型卡与博客的动作时域、推理配置以及训练迭代信息存在待对齐项。",
+      "evidenceDetails": [
+        {
+          "url": "https://developer.nvidia.com/blog/post-train-nvidia-cosmos-3-edge-for-on-device-robot-control/",
+          "location": "What you’ll build；Why post-train；What data does the policy train on；Table 1",
+          "supports": "教程流程与暂不合并性能配置的依据"
+        }
+      ],
+      "status": "待全文核验",
+      "lastCheckedAt": "2026-09-13T09:28:36.599606+00:00",
+      "aliasIds": [],
+      "lastSeenAt": "2026-09-13T09:28:36.599606+00:00",
+      "updatedAt": "2026-09-13T09:14:59+00:00",
+      "links": [
+        {
+          "label": "原始来源",
+          "url": "https://developer.nvidia.com/blog/post-train-nvidia-cosmos-3-edge-for-on-device-robot-control/"
+        }
+      ],
+      "revisionEvents": []
+    },
+    {
+      "id": "unitree:unifolm-wla-1.0",
+      "title": "UnifoLM-WLA-1.0 / ER-1 / ER-Flow分阶段开放",
+      "zhTitle": "UnifoLM-WLA：统一动态区域、离散动作与全身控制",
+      "category": "vla",
+      "contentTypes": [
+        "report",
+        "news"
+      ],
+      "innovation": "以未来动态区域的离散表示和分部位动作量化对齐视觉、语言与动作，再接连续动作专家。9 月 11 日明确释放的是 ER-1 与 ER-Flow 权重；完整 WLA-Base 与后训练代码仍列在开放计划中。",
+      "canonicalUrl": "https://unigen-x.github.io/unifolm-wla.github.io/",
+      "publishedAt": "2026-09-11",
+      "dateNote": "此日期对应官方仓库 ER-1、ER-Flow 权重发布公告，不代表完整 WLA 系统同日全面开源。",
+      "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
+      "evidence": "已核对官方项目页与仓库 News/Open-Source Plan；完整技术报告和系统真机评测仍待核验。",
+      "evidenceDetails": [
+        {
+          "url": "https://unigen-x.github.io/unifolm-wla.github.io/",
+          "location": "Future Dynamic-Region Prediction；Discrete Action Learning；WLA Training",
+          "supports": "动态区域、动作量化与连续动作专家的设计"
+        },
+        {
+          "url": "https://github.com/unitreerobotics/unifolm-wla",
+          "location": "News；Open-Source Plan",
+          "supports": "9 月 11 日已释放 ER-1、ER-Flow，WLA-Base/后训练代码仍属计划"
+        }
+      ],
+      "status": "待全文核验",
+      "lastCheckedAt": "2026-09-13T09:28:36.599606+00:00",
+      "aliasIds": [],
+      "lastSeenAt": "2026-09-13T09:28:36.599606+00:00",
+      "updatedAt": "2026-09-13T09:19:18.102185+00:00",
+      "links": [
+        {
+          "label": "原始来源",
+          "url": "https://unigen-x.github.io/unifolm-wla.github.io/"
+        }
+      ],
+      "revisionEvents": []
+    }
+  ],
+  "dailyHighlights": {
+    "2026-09-13": {
+      "top5Ids": [
+        "arxiv:2609.07398",
+        "arxiv:2609.04196",
+        "arxiv:2609.11561",
+        "arxiv:2609.05588",
+        "report:nvidia-compass-agent-workflow-20260826"
+      ],
+      "summary": "OpenWAM：用开放模块化实验寻找世界动作模型的预训练配方：提供模块化Infra、受控Study和OpenWAM-α。实验归纳出独立动作容量、世界到动作的信息流、同步联合去噪与人类第一视角/机器人数据单阶段共训的重要性。\n\nPuffin-World：给生成世界加入重力方向与深度，减少视角漂移：把重力与纬度、深度、外观作为原生状态；Omni-Camera融合绝对朝向与相对射线几何，并沿已知相机轨迹传播重力参照。\n\nMaP-WAM：把长期记忆转成计划，让执行上下文保持固定：把已完成片段存为语言与稀疏视觉记录，先生成下一段语言—视觉计划，再由WAP联合预测动作和进度。记忆在规划时使用，执行器保持固定上下文，并用计划—观测匹配校准进度。\n\nGE-Act 2.0：从零预训练生成与动作模块，用动作兼容性连接想象和执行：生成与动作组件从零初始化；CoAE压缩控制相关视觉信息，单步SVP与IDM分别利用无动作视频和含动作轨迹。KASO按IDM响应筛选兼容未来，再联合反向传播。\n\nCOMPASS工程跟进：把残差导航训练、场景准备与部署连成可检查流程：工程贡献是串联既有COMPASS/X-Mobility流程：残差RL修正基础速度动作，专家数据可蒸馏为共享策略；新增教程覆盖内置仓库、SAGE-10K及NuRec重建场景，并保留人工检查节点。",
+      "rankingNote": "9 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 站内热度代理分 = 10×ln(1+已核验 GitHub 累计 stars) + 20×ln(1+已核验 Hugging Face 论文 upvotes)。缺失项为 null，仅合计可测项；全部缺失则不评分。GitHub 指标来自官方 API，HF 指标来自公开论文页面；页面缓存可能滞后。stars 是仓库长期累计关注，旧仓库及包含多篇工作的框架会受益，不能解释为本日新增热度或论文质量。仅比较本站已收录且存在可测信号的记录，不是全网最热排名。",
+      "editionIds": [
+        "2026-09-13-initial",
+        "2026-09-13-1700"
+      ],
+      "candidateCount": 29
+    }
+  },
+  "rankingMethodNote": "站内热度代理分 = 10×ln(1+已核验 GitHub 累计 stars) + 20×ln(1+已核验 Hugging Face 论文 upvotes)。缺失项为 null，仅合计可测项；全部缺失则不评分。GitHub 指标来自官方 API，HF 指标来自公开论文页面；页面缓存可能滞后。stars 是仓库长期累计关注，旧仓库及包含多篇工作的框架会受益，不能解释为本日新增热度或论文质量。仅比较本站已收录且存在可测信号的记录，不是全网最热排名。",
+  "popularityCheckedAt": "2026-09-13T09:28:36.599606+00:00"
 }

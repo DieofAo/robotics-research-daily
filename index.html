@@ -1,33 +1,44 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>机器人研究日报 · Robotics Research Daily</title>
-  <meta name="description" content="每日10:00与17:00，追踪VLA、世界动作模型、强化学习和机器人理论。原文证据、实验分析与研究展望。">
-  <meta name="theme-color" content="#1647d9"><link rel="icon" href="./favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="./style.css">
-</head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="按日期与研究方向探索机器人研究，阅读重点分析，收藏与跟踪值得关注的工作。">
+  <meta name="theme-color" content="#17674d">
+  <title>机器人研究日报 · Robotics Daily</title>
+  <link rel="icon" href="./favicon.svg?v=c69c9202f93f36420a9e" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css?v=c69c9202f93f36420a9e">
+<meta name="robotics-build" content="c69c9202f93f36420a9e"></head>
 <body>
 <a class="skip" href="#main">跳到日报内容</a>
-<aside class="sidebar">
-  <a class="brand" href="./"><span class="brandmark" aria-hidden="true">R<span>•</span></span><span>机器人研究日报<small>ROBOTICS RESEARCH DAILY</small></span></a>
-  <div class="nav-label">研究方向</div><nav id="categories" aria-label="研究分类"></nav>
-  <div class="sidebar-bottom"><div class="schedule-label">每日两次 · 北京时间</div><div class="schedule"><span>10:00</span><i>／</i><span>17:00</span></div><p>追踪研究进展，积累可连接的思路。</p><a href="#method">检索范围与收录规则 ↗</a></div>
-</aside>
-<div class="workspace">
-  <header class="topbar"><span class="breadcrumb">研究动态 <span>/</span> 日报归档</span><span class="edition-label">Asia/Shanghai · UTC+8</span></header>
-  <main id="main">
-    <div class="heading"><div><div class="eyebrow">RESEARCH BRIEFING</div><h1>机器人研究日报</h1></div><div class="update"><span class="status-dot"></span><span id="last-update">正在读取日报</span></div></div>
-    <div class="overview" id="overview"></div>
-    <section class="reading" aria-label="日报筛选与内容">
-      <div class="toolbar"><label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="搜索论文、关键词或研究思路" aria-label="搜索日报"></label><label class="select-label">期次<select id="edition" aria-label="选择日报期次"></select></label></div>
-      <div id="edition-note" class="edition-note"></div>
-      <div class="result-heading"><h2 id="result-title">全部研究</h2><span id="result-count" aria-live="polite"></span></div>
-      <div id="reports" aria-live="polite"></div>
+<header class="masthead">
+  <a class="brand" href="#daily" aria-label="机器人研究日报首页"><span class="brandmark" aria-hidden="true">R<span>·</span></span><span>机器人研究日报<small>ROBOTICS DAILY</small></span></a>
+  <div class="header-actions"><button type="button" id="refresh" class="quiet-button" aria-label="刷新到最新版本"><span aria-hidden="true">↻</span> 刷新</button><a id="favorites-link" class="favorite-link" href="#favorites"><span aria-hidden="true">☆</span> 我的收藏 <span id="favorite-count">0</span></a></div>
+</header>
+<div id="version-banner" class="version-banner" hidden></div>
+<div class="page-shell">
+  <aside class="sidebar" aria-label="日期与研究筛选">
+    <div class="sidebar-heading"><h2>阅读日历</h2><button type="button" id="latest-day" class="text-button">最新一期 ↗</button></div>
+    <section class="calendar" aria-label="选择日报日期"><div class="calendar-heading"><button type="button" id="month-prev" aria-label="上一个月">‹</button><h3 id="calendar-month"></h3><button type="button" id="month-next" aria-label="下一个月">›</button></div><div class="weekdays" aria-hidden="true"><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span><span>日</span></div><div id="calendar-days" class="calendar-days"></div><label class="date-picker"><span>选择日期</span><input type="date" id="date-input" aria-label="选择日报日期"></label><button type="button" id="all-history" class="history-button">查看全部历史 <span aria-hidden="true">↗</span></button></section>
+    <section class="direction-section"><div class="sidebar-heading"><h2>研究方向</h2><span class="filter-label">TOPICS</span></div><nav id="categories" aria-label="按研究方向筛选"></nav></section>
+    <div class="sidebar-foot"><span class="live-dot" aria-hidden="true"></span><span id="last-update">正在读取归档</span></div>
+  </aside>
+  <main id="main" tabindex="-1">
+    <div class="page-heading"><div><p class="eyebrow" id="page-eyebrow">RESEARCH NOTEBOOK</p><h1 id="page-title">值得读的机器人研究</h1><p id="page-subtitle" class="page-subtitle"></p></div><span id="day-stamp" class="day-stamp" aria-hidden="true"></span></div>
+    <section id="favorites-tools" class="favorites-tools" hidden aria-label="收藏管理"><p>收藏保存在当前浏览器。可导出备份，在另一台设备导入；清除浏览器数据会删除本机收藏。</p><div class="tool-row"><button type="button" id="export-favorites" class="outlined-button">↓ 导出收藏</button><label class="outlined-button import-label">↑ 导入收藏<input type="file" id="import-favorites" accept="application/json,.json"></label></div><p class="small-note" id="favorites-feedback" role="status"></p></section>
+    <section id="highlights" class="highlights" aria-label="当日最值得关注的五项研究"></section>
+    <section class="reading" aria-label="筛选与阅读研究">
+      <div class="search-row"><label class="search"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m16 16 5 5"></path></svg><input id="search" type="search" autocomplete="off" maxlength="160" placeholder="搜索标题、研究内容、关键思路…" aria-label="搜索标题或研究内容，支持模糊匹配"></label><button type="button" id="clear-filters" class="quiet-button">重置筛选</button></div>
+      <div class="type-filter-row"><span class="filter-caption">内容类型</span><div id="content-types" class="type-filters" role="group" aria-label="按论文、新闻、报告或博客筛选"></div></div>
+      <div class="result-heading"><h2 id="result-title">本日研究</h2><span id="result-count" role="status" aria-live="polite"></span></div>
+      <div id="filter-note" class="filter-note" hidden></div>
+      <div id="reports"></div>
+      <div id="briefs"></div>
     </section>
-    <section class="method" id="method"><div class="section-head"><div class="eyebrow">SOURCES & METHODOLOGY</div><h2>每一条判断，都回到证据</h2></div><div class="method-grid"><div><h3>滚动检索，增量收录</h3><p>arXiv 与 Hugging Face 回看 7 天，机构与中文平台回看 14 天，X 回看 3–7 天；每周扩大至 30 天补漏。优先以 arXiv 编号、DOI、规范链接合并同一研究。</p></div><div><h3>原文事实与研究判断分开</h3><p>每篇分为背景、创新点、实验、结论、评价和发展方向。实验注明证据范围；评价与组合设想属于编辑分析。没有定量证据时不补写数字。</p></div><div><h3>保留时间与版本</h3><p>发布日期用于判断新近性，收录时间用于日报归档。补录与实质修订单独标注；同一论文的转载、项目页和代码链接合并记录。</p></div></div><details class="coverage"><summary>查看本期来源覆盖与限制</summary><div id="source-checks"></div></details></section>
-    <footer><span>机器人研究日报 · 持续归档</span><a href="https://dieofao.github.io/xiaozhi-daily/" target="_blank" rel="noopener noreferrer">版式参考：小小志科研知识库 ↗</a><span>10:00 / 17:00 为检索启动时间，核验后发布</span></footer>
+    <footer><span>机器人研究日报</span><span id="archive-count"></span><span id="refresh-status" role="status" aria-live="polite"></span></footer>
   </main>
 </div>
-<noscript><p>请启用 JavaScript 阅读分类日报；原始记录保存在 <a href="./data.json">日报数据</a>。</p></noscript>
-<script src="./data.js"></script><script src="./app.js"></script>
-</body></html>
+<noscript><p class="noscript">请启用 JavaScript 阅读日报。也可以查看 <a href="./data.json">完整归档数据</a>。</p></noscript>
+<script src="./data.js?v=c69c9202f93f36420a9e"></script><script src="./app.js?v=c69c9202f93f36420a9e"></script>
+</body>
+</html>
