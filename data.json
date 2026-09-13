@@ -489,6 +489,736 @@
       "featured": true,
       "changeType": "new_work",
       "dateNote": "以arXiv v1提交时间9月7日为发表日期。Hugging Face上的Submitted by作者收录日期为9月9日，不能替代论文提交日；未独立确认arXiv公告批次日期。"
+    },
+    {
+      "id": "arxiv:2609.11433",
+      "version": "v1",
+      "canonicalUrl": "https://arxiv.org/abs/2609.11433",
+      "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
+      "lastSeenAt": "2026-09-13T09:19:18.102185+00:00",
+      "updatedAt": "2026-09-13T09:19:18.102185+00:00",
+      "evidence": "全文方法、实验与限制已核对 · 作者报告 · 未独立复现",
+      "type": "arXiv预印本",
+      "changeType": "backfill",
+      "featured": false,
+      "title": "Safety-aware Skill Adaptation for Reinforcement Learning in Dynamic Environments",
+      "zhTitle": "Dist-GPRL：用局部技能调整与安全先验应对动态障碍",
+      "category": "rl",
+      "tags": [
+        "技能适应",
+        "高斯过程",
+        "安全探索",
+        "本次补录"
+      ],
+      "publishedAt": "2026-09-10T12:05:54Z",
+      "announcementDate": "2026-09-11",
+      "authors": [
+        "A K M Nadimul Haque",
+        "Sheila Sutjipto",
+        "Marc G. Carmichael",
+        "Teresa Vidal-Calleja"
+      ],
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2609.11433"
+        },
+        {
+          "label": "论文全文",
+          "url": "https://arxiv.org/html/2609.11433v1"
+        }
+      ],
+      "evidenceDetails": [
+        {
+          "url": "https://arxiv.org/abs/2609.11433",
+          "location": "Submission history; Comments",
+          "supports": "2026-09-10 v1；作者标注已接收 IROS 2026"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.11433v1",
+          "location": "方法部分；§V-C/Table I；§V-D/Table II；Discussion",
+          "supports": "局部 GP 技能与 HAP 安全先验；两类仿真成功率89%/98%；真机10次中的9次成功和1次碰撞"
+        }
+      ],
+      "summary": "把整段示范技能的强化学习适应，拆为重叠局部窗口，并用安全规划先验指导探索。两类动态操作实验显示成功率提高，但真机仍出现碰撞。",
+      "background": "示范技能在障碍物移动后需要在线调整；一次优化整段高维轨迹既难分配奖励，也容易在探索中碰撞。",
+      "innovation": "用高斯过程表示技能，在重叠窗口内调整稀疏轨迹节点；相关性约束保持变化连贯，Hausdorff 近似规划器提供安全子空间先验，距离场奖励和运动学正则兼顾避障与示范形态。",
+      "experiments": "Table I 的动态推方块、动态杆件操作仿真中，Dist-GPRL 成功率为89%和98%，对应 GPRL 为18%和44%。Table II 真机杆件操作仅10次随机初始条件测试，成功9次、碰撞1次；GPRL 成功1次、碰撞7次。",
+      "conclusion": "作者结果支持把全局技能适应拆为局部、有先验的策略调整，从而改善动态环境里的探索效率和任务表现。",
+      "evaluation": "任务集中在两类操作，真机样本很少；这里的“安全感知”是经验避障改进，不能解释为无碰撞保证。已查论文没有可核实的作者代码链接。9月10日原稿在本次17:00更新补录。",
+      "futureDirections": "【研究假设】可让 VLA 产生子目标，再由局部 GP 技能执行；也可叠加 CBF 安全约束。需要验证高层目标误差、控制输入限制及安全约束是否破坏技能的可达性。",
+      "dateNote": "2026-09-10提交；本期滚动回看首次补录，不代表9月13日新发表。",
+      "revisionEvents": []
+    },
+    {
+      "id": "arxiv:2609.11445",
+      "version": "v1",
+      "canonicalUrl": "https://arxiv.org/abs/2609.11445",
+      "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
+      "lastSeenAt": "2026-09-13T09:19:18.102185+00:00",
+      "updatedAt": "2026-09-13T09:19:18.102185+00:00",
+      "evidence": "全文方法、实验与限制已核对 · 作者报告 · 未独立复现",
+      "type": "arXiv预印本",
+      "changeType": "backfill",
+      "featured": true,
+      "title": "FARM: Reading Failure Signals from the Internal Predictive States of a Frozen Robotic World Model",
+      "zhTitle": "FARM：从冻结世界模型内部状态读取失败风险",
+      "category": "wam",
+      "tags": [
+        "失败检测",
+        "世界模型",
+        "少样本适应",
+        "本次补录"
+      ],
+      "publishedAt": "2026-09-10T12:14:37Z",
+      "announcementDate": "2026-09-11",
+      "authors": [
+        "Haoran Pei",
+        "Mingrui Luo",
+        "Senbao Wang",
+        "Haoran Lv",
+        "Jie Guo",
+        "Sheng Zhong",
+        "Ruixi Ci"
+      ],
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2609.11445"
+        },
+        {
+          "label": "论文全文",
+          "url": "https://arxiv.org/html/2609.11445v1"
+        },
+        {
+          "label": "代码仓库",
+          "url": "https://github.com/HaoranPei-casia/FARM"
+        }
+      ],
+      "evidenceDetails": [
+        {
+          "url": "https://arxiv.org/abs/2609.11445",
+          "location": "Submission history",
+          "supports": "2026-09-10 v1"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.11445v1",
+          "location": "§III；§IV/Table II–III；§IV-E；§V",
+          "supports": "33,985参数读出器；350轨迹/7任务 OOF AUROC85.68；严格未见任务65.67；35样本适应75.78；0.2256ms仅GPU读出器"
+        },
+        {
+          "url": "https://github.com/HaoranPei-casia/FARM",
+          "location": "README: Scope; Data manifest",
+          "supports": "MIT最小公开实现；不含真实轨迹、模型权重及冻结主干特征提取"
+        }
+      ],
+      "summary": "世界模型的预测状态可能已含有失败线索。FARM 在冻结主干上训练小型读出器，输出轨迹风险；有用的监测信号尚不等于已经实现恢复控制。",
+      "background": "机器人策略常只输出动作，部署时缺少可靠的失败监测；重新训练大模型来增加监测能力成本较高。",
+      "innovation": "读取冻结视觉世界模型的内部预测状态，训练33,985参数的监督读出器，逐时刻预测失败概率，再以已观察片段的最大风险给轨迹打分。",
+      "experiments": "7任务350轨迹的分组交叉验证中，整体 AUROC 为85.68（0–100标度）。另一个匹配基准的严格未见任务 AUROC 为65.67，35样本适应后为75.78。RTX 5090 上0.2256ms仅指特征已驻留 GPU 后的读出器均值，不含世界模型推理。",
+      "conclusion": "冻结预测表征可支持轻量失败识别，少量目标域标签有助于适应；目前验证的是检测表现，并未直接证明干预后的任务成功率提高。",
+      "evaluation": "零样本跨任务结果不稳定，严格未见任务也非所有比较项最优；全轨迹 AUROC 不能替代提前预警时长或安全性。公开仓库含读出器训练与评估，未提供真实数据、权重及主干特征提取。9月10日原稿本次补录。",
+      "futureDirections": "【研究假设】可把风险读出接入 DLSRL 或 CorrectVLA 的恢复触发器。应先测误报、提前量及风险校准，再比较加入干预后的闭环成功率与额外计算成本。",
+      "dateNote": "2026-09-10提交；本期滚动回看首次补录，不代表9月13日新发表。",
+      "revisionEvents": []
+    },
+    {
+      "id": "arxiv:2609.11875",
+      "version": "v1",
+      "canonicalUrl": "https://arxiv.org/abs/2609.11875",
+      "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
+      "lastSeenAt": "2026-09-13T09:19:18.102185+00:00",
+      "updatedAt": "2026-09-13T09:19:18.102185+00:00",
+      "evidence": "全文方法、实验与限制已核对 · 作者报告 · 未独立复现",
+      "type": "arXiv预印本",
+      "changeType": "backfill",
+      "featured": false,
+      "title": "UniMPA: A Unified Memory-Prediction-Action Model via Action-Grounded Transition Modeling",
+      "zhTitle": "UniMPA：让未来预测检索经验，再引导动作生成",
+      "category": "wam",
+      "tags": [
+        "记忆检索",
+        "动作原型",
+        "Flow Matching",
+        "本次补录"
+      ],
+      "publishedAt": "2026-09-10T17:45:03Z",
+      "announcementDate": "2026-09-11",
+      "authors": [
+        "Wei Li",
+        "Rui Shao",
+        "Jie He",
+        "Lingsen Zhang",
+        "Ziwei Liu",
+        "Liqiang Nie"
+      ],
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2609.11875"
+        },
+        {
+          "label": "论文全文",
+          "url": "https://arxiv.org/html/2609.11875v1"
+        },
+        {
+          "label": "项目主页",
+          "url": "https://jiutian-vl.github.io/UniMPA-page/"
+        }
+      ],
+      "evidenceDetails": [
+        {
+          "url": "https://arxiv.org/abs/2609.11875",
+          "location": "Submission history; Comments",
+          "supports": "2026-09-10 v1；仅标注 submitted to TPAMI"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.11875v1",
+          "location": "§III；§IV-A/IV-D；Appendix G",
+          "supports": "双记忆库与原型偏置流；每任务25次；R1 Lite和Cobot Magic的TSR/CSR；分平台/任务套件训练；当前轨迹结束后才更新记忆"
+        },
+        {
+          "url": "https://jiutian-vl.github.io/UniMPA-page/",
+          "location": "Method; Real-world Results",
+          "supports": "作者方法介绍与两平台演示；当前所查主页没有可核实的代码入口"
+        }
+      ],
+      "summary": "用预测的状态转移检索已经实现过的经验，再以动作原型引导流模型采样，把记忆、预测与动作连接到同一执行过程。",
+      "background": "视觉上合理的未来不一定能执行，历史动作也未必适合当前场景；长程操作需要同时判断进度、检索经验和调整动作。",
+      "innovation": "组合持续的潜空间预测与关键转移的像素预测；通过视觉—动作和动作—视觉记忆库检索可执行经验，再将动作原型作为流模型初始分布的偏置。",
+      "experiments": "真机每任务25次：R1 Lite的21项任务整体任务成功率77.7%、累计检查点成功率86.3%，π0.5为65.3%/75.6%；Cobot Magic的7项任务对应74.9%/86.4%，π0.5为62.3%/74.9%。两种成功率口径不同，且按平台及任务套件训练。",
+      "conclusion": "作者实验支持把预测作为记忆检索条件、再用检索结果约束动作生成，能改善所测长程操作的完整任务成功率。",
+      "evaluation": "跨两平台验证不等于零样本跨机器人迁移。记忆预训练成本应计入总训练成本；当前轨迹在执行结束后才写入记忆。所查主页未见可核实代码链接；TPAMI是投稿状态。9月10日原稿本次补录。",
+      "futureDirections": "【研究假设】可与 MaP-WAM 的高层记忆规划组合：MaP-WAM选择阶段目标，UniMPA 检索局部可执行原型。需测试记忆污染、错误检索以及执行中同步更新记忆的稳定性。",
+      "dateNote": "2026-09-10提交；本期滚动回看首次补录，不代表9月13日新发表。",
+      "revisionEvents": []
+    },
+    {
+      "id": "arxiv:2608.29967",
+      "version": "v1",
+      "canonicalUrl": "https://arxiv.org/abs/2608.29967",
+      "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
+      "lastSeenAt": "2026-09-13T09:19:18.102185+00:00",
+      "updatedAt": "2026-09-13T09:19:18.102185+00:00",
+      "evidence": "全文方法、实验与限制已核对 · 作者报告 · 未独立复现",
+      "type": "arXiv预印本",
+      "changeType": "backfill",
+      "featured": false,
+      "title": "Training-Free Action Correction for VLA Model Failures via Language Feedback",
+      "zhTitle": "CorrectVLA：不用重训，以语言反馈修正执行幅度",
+      "category": "vla",
+      "tags": [
+        "失败恢复",
+        "语言反馈",
+        "推理时修正",
+        "30天补查",
+        "本次补录"
+      ],
+      "publishedAt": "2026-08-30T18:54:03Z",
+      "announcementDate": null,
+      "authors": [
+        "Owen Kwon",
+        "Pablo Ortega-Kral",
+        "Arthur Bucker",
+        "Jean Oh"
+      ],
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2608.29967"
+        },
+        {
+          "label": "论文全文",
+          "url": "https://arxiv.org/html/2608.29967v1"
+        },
+        {
+          "label": "项目主页",
+          "url": "https://correctvla.github.io/"
+        },
+        {
+          "label": "代码仓库",
+          "url": "https://github.com/owenk3/correct_vla"
+        }
+      ],
+      "evidenceDetails": [
+        {
+          "url": "https://arxiv.org/abs/2608.29967",
+          "location": "Submission history",
+          "supports": "2026-08-30 v1；本周30天回溯发现"
+        },
+        {
+          "url": "https://arxiv.org/html/2608.29967v1",
+          "location": "Method；Table I–II；§VIII Limitations",
+          "supports": "结构化语言到加性动作修正；ID2000次93.0→96.3%；OOD450次27.1→34.4%；挪动基座后真机20次2→19成功；失败类别及反馈迭代限制"
+        },
+        {
+          "url": "https://correctvla.github.io/",
+          "location": "Simulation Results; Real-Robot Experiments; Operational boundary",
+          "supports": "修正只用于执行错位任务；真机为xArm7抓放、三个位置/物体条件"
+        },
+        {
+          "url": "https://github.com/owenk3/correct_vla",
+          "location": "README; public file tree",
+          "supports": "公开修正脚本、策略接口和LIBERO评估入口；未实际运行复现"
+        }
+      ],
+      "summary": "当 VLA 找对目标却抓得过浅、推得不足时，可把一次任务级语言反馈转成定时动作偏置，复用到多次执行。8月30日论文由本周30天回溯补录。",
+      "background": "部署分布变化可能使 VLA 保留正确任务策略，却错误估计动作幅度；重新训练成本高，逐次遥操作又耗费人力。",
+      "innovation": "从人类反馈提取动作维度、方向、幅度和时间窗，在指定片段叠加平滑动作修正，保持策略权重不变；同一任务级修正复用于多条轨迹。",
+      "experiments": "π0.5在40个同分布任务共2000次执行中，由1861/2000提高到1926/2000；90个OOD任务共450次由122提高到155。xArm7基座移动后的有限抓放实验共20次，由2次成功提高到19次，并非通用真机任务95%成功率。",
+      "conclusion": "结果支持在“目标正确、执行幅度错误”的特定失败类别上进行免训练修正；语义误解、感知错误等问题仍需其他机制。",
+      "evaluation": "反馈在初始确定时可能需要多轮调整，同一修正依赖失败模式一致；不能由有限基座位移实验推断普遍分布外恢复。代码已公开，尚未独立复现。保留8月30日原始日期，作为本次17:00更新的30天补录。",
+      "futureDirections": "【研究假设】可结合 FARM 先识别风险，再判断是否属于可修正的执行错位；加入动作可行域和碰撞约束，并学习反馈幅度，验证自动触发是否比固定人工修正更可靠。",
+      "dateNote": "2026-08-30提交；本期滚动回看首次补录，不代表9月13日新发表。本条来自本周30天补查。",
+      "revisionEvents": []
+    },
+    {
+      "id": "arxiv:2609.05588",
+      "title": "GE-Act 2.0: Pretraining and Scaling a World-Action Model for Robotic Manipulation",
+      "zhTitle": "GE-Act 2.0：从零预训练生成与动作模块，用动作兼容性连接想象和执行",
+      "category": "wam",
+      "tags": [
+        "WAM预训练",
+        "动作兼容性",
+        "数据规模",
+        "跨具身",
+        "补录"
+      ],
+      "type": "机构技术报告 / arXiv预印本",
+      "publishedAt": "2026-09-04T17:16:48Z",
+      "canonicalUrl": "https://arxiv.org/abs/2609.05588",
+      "version": "v1",
+      "authors": [
+        "AgiBot Research Team"
+      ],
+      "summary": "把视觉规划与逆动力学分别预训练，再筛选与示范动作兼容的预测未来进行联合训练，考察操作数据扩展带来的零样本能力。",
+      "background": "WAM常继承视频生成器，但生成的未来可能是另一种有效动作的结果，与现有示范动作错配；直接联合监督会损失动作多样性。",
+      "innovation": "生成与动作组件从零初始化；CoAE压缩控制相关视觉信息，单步SVP与IDM分别利用无动作视频和含动作轨迹。KASO按IDM响应筛选兼容未来，再联合反向传播。",
+      "experiments": "两个真机平台各评估100项任务，每任务每数据规模10次，无任务专属微调。联合训练数据从300增至30,000小时，G1-OP成功率17.1%→44.1%，G2-90D为13.4%→31.1%。这些规模不含此前SVP/IDM的39,000/32,000小时预训练。",
+      "conclusion": "在已测范围内，扩大联合数据可提高分布外操作能力；稀有本体也受益。但规模比较并未固定总计算量，不能独立归因于数据量。",
+      "evaluation": "【编辑分析】受控对齐消融比仅展示视频更能支持KASO的作用；单任务试验数量有限，广泛能力还不等于高可靠部署。作者仍将显式规划、记忆和自纠错列为后续工作。项目页代码标注Coming soon，本次未发现可确认的公开权重。",
+      "futureDirections": "【研究假设】可在OpenWAM的世界—动作接口中对照加入兼容性筛选，测试同等算力下是否保留多模态动作；再把MaP-WAM的记忆计划作为SVP条件，验证长程成功率与错误恢复。",
+      "links": [
+        {
+          "label": "论文",
+          "url": "https://arxiv.org/abs/2609.05588"
+        },
+        {
+          "label": "论文全文",
+          "url": "https://arxiv.org/html/2609.05588v1"
+        },
+        {
+          "label": "作者项目",
+          "url": "https://ge-act-v2.github.io/"
+        },
+        {
+          "label": "Hugging Face收录",
+          "url": "https://huggingface.co/papers/2609.05588"
+        }
+      ],
+      "evidence": "论文方法、实验及局限章节已核验 · 作者报告 · 未独立复现",
+      "evidenceDetails": [
+        {
+          "url": "https://arxiv.org/abs/2609.05588",
+          "location": "Submission history",
+          "supports": "v1为2026-09-04 17:16:48 UTC；AgiBot技术报告身份"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.05588v1",
+          "location": "World-Action Alignment and KASO；Controlled Real-Robot Ablation；Table 2；Scaling with Training Data Volume；Limitations and Outlook",
+          "supports": "兼容性筛选、真机对齐消融、100项任务/每项10次、17.1→44.1%与13.4→31.1%、39k/32k小时组件预训练、非同算力数据扩展、记忆规划限制"
+        },
+        {
+          "url": "https://ge-act-v2.github.io/",
+          "location": "标题区域 Code · Coming soon；Scaling Zero-Shot Manipulation Skills；Evaluation protocol",
+          "supports": "代码尚待公开、真机零样本协议、每任务每规模10次；无公开权重入口被核实"
+        },
+        {
+          "url": "https://huggingface.co/papers/2609.05588",
+          "location": "Published on Sep 4；Submitted by Ryan Chen on Sep 9",
+          "supports": "论文提交日与HF收录日区别"
+        }
+      ],
+      "featured": true,
+      "changeType": "backfill",
+      "dateNote": "原研究9月4日提交，Hugging Face于9月9日收录；本期为滚动检索首次补录，不作为9月13日新发表。",
+      "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
+      "updatedAt": "2026-09-13T09:19:18.102185+00:00",
+      "lastSeenAt": "2026-09-13T09:19:18.102185+00:00",
+      "revisionEvents": []
+    },
+    {
+      "id": "report:nvidia-compass-agent-workflow-20260826",
+      "title": "How to Train a Cross-Embodiment Robot Navigation Policy with AI Agents",
+      "zhTitle": "COMPASS工程跟进：把残差导航训练、场景准备与部署连成可检查流程",
+      "category": "systems",
+      "tags": [
+        "导航",
+        "残差RL",
+        "跨具身",
+        "仿真",
+        "工程跟进",
+        "30天补录"
+      ],
+      "type": "NVIDIA机构技术教程 / 既有研究跟进",
+      "publishedAt": "2026-08-26",
+      "canonicalUrl": "https://developer.nvidia.com/blog/how-to-train-a-cross-embodiment-robot-navigation-policy-with-ai-agents/",
+      "version": "机构教程（2026-08-26）",
+      "authors": [
+        "Yan Chang",
+        "Mihir Acharya",
+        "Wei Liu",
+        "Katie Washabaugh",
+        "Aishwarya Singh"
+      ],
+      "summary": "以Spot为参考，把COMPASS的残差策略适配落实为场景检查、训练诊断、配对评估与ROS 2部署流程。",
+      "background": "导航策略迁移到新机器人或场景时，资产、状态估计和训练接口的重复集成会增加成本，也使失败原因难以追踪。",
+      "innovation": "工程贡献是串联既有COMPASS/X-Mobility流程：残差RL修正基础速度动作，专家数据可蒸馏为共享策略；新增教程覆盖内置仓库、SAGE-10K及NuRec重建场景，并保留人工检查节点。",
+      "experiments": "本文以Spot的仿真训练与场景演示说明流程，要求同种子、目标和滚动条件比较基础策略与候选检查点，报告到达率、跌倒率、行驶时间。教程未给出新的配对性能数表，不能视作新增真机基准结论。",
+      "conclusion": "可复用价值在于训练和部署证据的可追踪性。编码代理参与开发流程；运行时导航由已训练策略和控制器执行。",
+      "evaluation": "【编辑分析】适合已有导航基础策略、希望做新本体适配的团队；资产尺度、碰撞网格和里程计误差仍需分别核验。公开仓库确有训练、蒸馏及ROS 2代码，采用Apache-2.0；仿真资产与基础权重另有下载条款。原方法2025年已发表，本条是教程补录。",
+      "futureDirections": "【研究假设】可在/cmd_vel出口加入CBF或MPC约束过滤，以相同场景比较残差策略单独运行与带过滤器运行的到达率、碰撞率和延迟；同步随机化定位误差，检查安全收益是否因状态偏差消失。",
+      "links": [
+        {
+          "label": "机构教程",
+          "url": "https://developer.nvidia.com/blog/how-to-train-a-cross-embodiment-robot-navigation-policy-with-ai-agents/"
+        },
+        {
+          "label": "公开代码",
+          "url": "https://github.com/NVlabs/COMPASS"
+        },
+        {
+          "label": "项目页",
+          "url": "https://nvlabs.github.io/COMPASS/"
+        },
+        {
+          "label": "开发文档",
+          "url": "https://nvlabs.github.io/COMPASS/docs/"
+        }
+      ],
+      "evidence": "机构教程全文与代码目录已核验 · 本文无新增量化性能表 · 未运行复现",
+      "evidenceDetails": [
+        {
+          "url": "https://developer.nvidia.com/blog/how-to-train-a-cross-embodiment-robot-navigation-policy-with-ai-agents/",
+          "location": "Aug 26, 2026；What is COMPASS?；Steps 2–5；runtime integration",
+          "supports": "日期、Spot参考流程、三种场景、残差训练、配对评估指标、代理仅参与开发及速度接口"
+        },
+        {
+          "url": "https://github.com/NVlabs/COMPASS",
+          "location": "Files；Overview；Quick start；License；Citation",
+          "supports": "实际训练、蒸馏与ros2_deployment目录，Apache-2.0，原研究2025年"
+        },
+        {
+          "url": "https://arxiv.org/abs/2502.16372",
+          "location": "Submission history",
+          "supports": "原COMPASS论文v1于2025-02-22提交；本教程不代表原方法新发表"
+        }
+      ],
+      "featured": false,
+      "changeType": "follow_up_report",
+      "originalWorkDate": "2025-02-22",
+      "dateNote": "8月26日为技术教程发布日期，周首次30天窗口补录；COMPASS原论文2025年已发表，本期未核实新增算法或首开源事件。",
+      "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
+      "updatedAt": "2026-09-13T09:19:18.102185+00:00",
+      "lastSeenAt": "2026-09-13T09:19:18.102185+00:00",
+      "revisionEvents": []
+    },
+    {
+      "id": "arxiv:2609.04196",
+      "title": "Puffin-World: Scaling a Unified Multimodal Model with Native 3D World States",
+      "zhTitle": "Puffin-World：给生成世界加入重力方向与深度，减少视角漂移",
+      "category": "systems",
+      "tags": [
+        "世界模型",
+        "空间感知",
+        "相机控制",
+        "开放权重",
+        "30天补录"
+      ],
+      "type": "arXiv预印本 / 作者项目与模型发布",
+      "publishedAt": "2026-09-03T17:59:13Z",
+      "version": "v1",
+      "canonicalUrl": "https://arxiv.org/abs/2609.04196",
+      "authors": [
+        "Kang Liao",
+        "Yihang Luo",
+        "Xiao-Ming Wu",
+        "Linyi Jin",
+        "Size Wu",
+        "Chunyu Lin",
+        "Yao Zhao",
+        "Fei Wang",
+        "Wei Li",
+        "Chen Change Loy"
+      ],
+      "summary": "统一预测外观、深度和重力方向，为具身仿真提供可控视角；目前主要验证静态场景，尚非机器人接触动力学模型。",
+      "background": "只生成RGB容易出现视角和重力方向漂移；理解相机、生成新视图与重建几何通常分属不同模块。",
+      "innovation": "把重力与纬度、深度、外观作为原生状态；Omni-Camera融合绝对朝向与相对射线几何，并沿已知相机轨迹传播重力参照。",
+      "experiments": "作者在RealEstate10K的50个留出片段上报告PSNR 17.22、LPIPS 0.318；Puffin-Traj-Bench为100个片段。相机误差由本模型理解分支重新估计，不能视为独立测量。",
+      "conclusion": "作者结果支持显式相机与几何状态改善多视图一致性；Puffin-16M包含1500万图文相机三元组和100万轨迹，已提供代码与权重。",
+      "evaluation": "【编辑分析】适合作为空间感知和仿真基础。模型卡限定静态场景，所谓物理主要是重力方向与纬度；尚未证明接触力学或机器人操作收益。自家理解分支参与评测也需独立复核。",
+      "futureDirections": "【研究假设】可把生成的RGB-D与相机位姿接到VLA的视角增强流程，或作为WAM的几何辅助监督；用留出真机任务检验成功率，并控制生成伪影和几何误差。",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2609.04196"
+        },
+        {
+          "label": "论文全文",
+          "url": "https://arxiv.org/html/2609.04196v1"
+        },
+        {
+          "label": "作者项目页",
+          "url": "https://kangliao929.github.io/projects/puffin-world/"
+        },
+        {
+          "label": "代码",
+          "url": "https://github.com/KangLiao929/Puffin"
+        },
+        {
+          "label": "模型权重",
+          "url": "https://huggingface.co/ACERobotics/Puffin-World/tree/main"
+        }
+      ],
+      "evidence": "论文方法与实验表、作者模型卡和权重文件目录已核对 · 未独立复现",
+      "evidenceDetails": [
+        {
+          "url": "https://arxiv.org/abs/2609.04196",
+          "location": "Submission history",
+          "supports": "v1提交时间2026-09-03 17:59:13 UTC"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.04196v1",
+          "location": "§3; §5.3–5.4; Table 5",
+          "supports": "Omni-Camera与物理传播；50/100片段；PSNR/LPIPS；由同一Puffin理解分支重新估计相机误差"
+        },
+        {
+          "url": "https://huggingface.co/ACERobotics/Puffin-World",
+          "location": "Overview; Highlights; Limitations",
+          "supports": "三类原生状态；Puffin-16M规模；静态场景以及重力/纬度的物理状态限制"
+        },
+        {
+          "url": "https://huggingface.co/ACERobotics/Puffin-World/tree/main",
+          "location": "Files: Puffin-World-Base.pth / Caption.pth / Pro.pth",
+          "supports": "已存在实际权重文件，非仅发布计划；本次未下载或运行"
+        },
+        {
+          "url": "https://github.com/KangLiao929/Puffin",
+          "location": "Changelog & News",
+          "supports": "作者记载8月22日代码、8月23日权重、9月4日arXiv公开；不是9月10日首次研究发布"
+        }
+      ],
+      "featured": false,
+      "changeType": "backfill",
+      "announcementDate": "2026-09-04",
+      "dateNote": "30天回看补录。9月10日机器之心产业索引提供发现线索；原稿9月3日提交、作者记载9月4日公开，代码/权重在8月已发布。",
+      "originalWorkDate": "2026-09-03",
+      "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
+      "updatedAt": "2026-09-13T09:19:18.102185+00:00",
+      "lastSeenAt": "2026-09-13T09:19:18.102185+00:00",
+      "revisionEvents": []
+    },
+    {
+      "id": "arxiv:2608.29769",
+      "title": "Learning Agile Perceptive Traversal of Sparse 3D Structures for Humanoids",
+      "zhTitle": "人形穿越猴架：原始激光雷达感知与分阶段RL协同",
+      "category": "embodied",
+      "tags": [
+        "人形机器人",
+        "强化学习",
+        "稀疏几何",
+        "多教师蒸馏",
+        "30天补录"
+      ],
+      "type": "arXiv预印本 / IEEE Spectrum跟进线索",
+      "publishedAt": "2026-08-30T12:56:43Z",
+      "version": "v1",
+      "canonicalUrl": "https://arxiv.org/abs/2608.29769",
+      "authors": [
+        "Efe Ongan",
+        "Chong Zhang",
+        "Boyang Sun",
+        "Andrei Cramariuc",
+        "Cesar Cadena",
+        "Marco Hutter"
+      ],
+      "summary": "以头部激光雷达驱动跳起、摆荡、落地完整流程，展示稀疏悬空结构的感知控制；硬件使用被动钩，评估范围有限。",
+      "background": "细横杆和悬空结构难以用常见地形表示捕捉，摆荡时又必须精确接触，感知误差与执行器极限共同影响迁移。",
+      "innovation": "先训练跳起、摆荡和落地教师，再分阶段蒸馏给带注意力编码器与GRU记忆的激光雷达学生；建模雷达噪声、电池压降与电机热限制，并以被动钩替换手。",
+      "experiments": "改装PM-01在3种横杆配置、15次真机试验中完成14次完整流程，最高摆荡速度0.5米/秒。另行训练的钻越策略通过10次2×2厘米木杆测试；不是同一通用策略覆盖两类任务。",
+      "conclusion": "作者结果表明原始激光雷达能支撑稀疏结构上的动态接触，针对传感器和驱动器的建模有助于向真机迁移。",
+      "evaluation": "【编辑分析】可复用价值在感知与硬件约束联合设计。15次试验仍少，被动钩改变了接触条件，不能推断普通灵巧手或任意室外结构也能达到同等表现。当前仅有少量独立任务策略。",
+      "futureDirections": "【研究假设】可把教师蒸馏流程接入更长程技能调度，并以局部结构记忆处理遮挡；与模型预测控制结合时，让其约束电流和接触力，再验证跨杆材质、长时连续运行及失抓恢复。",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2608.29769"
+        },
+        {
+          "label": "论文全文",
+          "url": "https://arxiv.org/html/2608.29769v1"
+        },
+        {
+          "label": "作者项目页",
+          "url": "https://nemantor.github.io/sparse-3d-traversal-website/"
+        },
+        {
+          "label": "IEEE Spectrum跟进",
+          "url": "https://spectrum.ieee.org/video-friday-disaster-response-robots"
+        }
+      ],
+      "evidence": "论文方法、真机表与限制及作者项目页已核对 · 未独立复现",
+      "evidenceDetails": [
+        {
+          "url": "https://arxiv.org/abs/2608.29769",
+          "location": "Submission history",
+          "supports": "v1提交时间2026-08-30 12:56:43 UTC"
+        },
+        {
+          "url": "https://arxiv.org/html/2608.29769v1",
+          "location": "§III-A; §IV-E–H; §V; Table V; §VI-C; §VII",
+          "supports": "被动钩替换手；多教师蒸馏；电池、热、雷达建模；3种配置共14/15完整流程；单独钻越策略10次测试及几何泛化限制"
+        },
+        {
+          "url": "https://nemantor.github.io/sparse-3d-traversal-website/",
+          "location": "Abstract; Approach; Monkey-bar traversal; Ducking under thin obstacles",
+          "supports": "作者项目概览、0.5米/秒、独立钻越策略与视频演示"
+        },
+        {
+          "url": "https://spectrum.ieee.org/video-friday-disaster-response-robots",
+          "location": "Video Friday: Humanoid Robot Takes On Monkey Bars; ETH Zurich Robotic Systems Lab link",
+          "supports": "本周新闻线索直接链接作者项目；不替代原始研究日期"
+        }
+      ],
+      "featured": false,
+      "changeType": "backfill",
+      "announcementDate": null,
+      "dateNote": "30天回看补录，由本周IEEE Spectrum Video Friday追溯发现；原稿8月30日提交，不作为今天新发表研究。",
+      "originalWorkDate": "2026-08-30",
+      "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
+      "updatedAt": "2026-09-13T09:19:18.102185+00:00",
+      "lastSeenAt": "2026-09-13T09:19:18.102185+00:00",
+      "revisionEvents": []
+    },
+    {
+      "id": "arxiv:2609.11661",
+      "title": "Contact-Aware Incremental Model Predictive Control for an Underactuated Aerial Manipulator",
+      "zhTitle": "接触感知 MPC + INDI：让欠驱动飞行机械臂稳定贴墙书写",
+      "category": "theory",
+      "tags": [
+        "空中操作",
+        "MPC",
+        "INDI",
+        "接触控制",
+        "embodied"
+      ],
+      "type": "arXiv预印本",
+      "publishedAt": "2026-09-10T15:03:02Z",
+      "version": "v1",
+      "canonicalUrl": "https://arxiv.org/abs/2609.11661",
+      "authors": [
+        "Darwin Liu",
+        "Tamas Keviczky",
+        "Sihao Sun"
+      ],
+      "changeType": "backfill",
+      "dateNote": "9月10日提交，9月13日17:00轮次回看补录，并非本日新发表。",
+      "featured": false,
+      "summary": "把接触力规划和快速扰动补偿分层处理，改善飞行机械臂在摩擦、侧风下的贴面操作。",
+      "background": "欠驱动飞行机械臂贴墙滑动时，接触摩擦会通过机械臂干扰机身。单独依靠模型预测控制，难以及时抵消模型外的力和力矩。",
+      "innovation": "外层接触感知 NMPC 规划末端位姿与法向力，内层级联 INDI 利用加速度反馈补偿扰动。力估计来自机载惯性与推力信息，控制无需机载力传感器。",
+      "experiments": "仿真比较接触 MPC 与阻抗控制；真机在动捕定位下进行竖直、倾斜白板和粉笔书写。约5 m/s侧风时，完整控制器的末端峰值误差为11 cm，仅姿态 INDI 为20 cm。该数字来自单次工况轨迹，不是多次成功率。",
+      "conclusion": "实验支持快速内环对摩擦与风扰动的补偿价值，且外层位置 INDI 在较强扰动下有额外收益。不能据此宣称已实现未知环境下的自主空中作业。",
+      "evaluation": "编辑分析：这是规划与经典反馈控制的实用组合。限制包括已知接触平面、外部动捕和准静态机械臂力估计；接触瞬间还会破坏 INDI 的时间尺度假设。工程复现要关注力估计偏差与执行带宽。",
+      "futureDirections": "研究设想：可让视觉或 WAM 上层提供接触面、书写路径及目标力，由该控制器执行；先在可控表面估计误差和突变摩擦下测量力峰值、脱离接触次数与轨迹误差，再验证加入置信度约束能否稳定收益。",
+      "evidence": "全文已核对 · 仿真 + 真机 · 已知平面/外部动捕",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2609.11661"
+        },
+        {
+          "label": "论文全文",
+          "url": "https://arxiv.org/html/2609.11661v1"
+        }
+      ],
+      "evidenceDetails": [
+        {
+          "url": "https://arxiv.org/abs/2609.11661",
+          "location": "Submission history",
+          "supports": "v1提交日期与作者。"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.11661v1",
+          "location": "§III-B–D；§IV-A/C/D；Fig.6",
+          "supports": "接触/INDI设计、已知表面与Vicon条件；约5 m/s侧风中峰值11 cm对20 cm，单次轨迹。"
+        }
+      ],
+      "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
+      "updatedAt": "2026-09-13T09:19:18.102185+00:00",
+      "lastSeenAt": "2026-09-13T09:19:18.102185+00:00",
+      "revisionEvents": []
+    },
+    {
+      "id": "arxiv:2608.19443",
+      "title": "Hybrid Feedback Sampling for Sample-Efficient Model Predictive Control",
+      "zhTitle": "FS-MPC：用反馈策略改善采样，再保留全局探索",
+      "category": "theory",
+      "tags": [
+        "MPC",
+        "采样规划",
+        "rl",
+        "人形机器人"
+      ],
+      "type": "arXiv预印本",
+      "publishedAt": "2026-08-19T20:56:18Z",
+      "version": "v1",
+      "canonicalUrl": "https://arxiv.org/abs/2608.19443",
+      "authors": [
+        "Chaoyi Pan",
+        "Zeji Yi",
+        "John Zhang",
+        "Zachary Manchester",
+        "Guannan Qu",
+        "Guanya Shi"
+      ],
+      "changeType": "backfill",
+      "dateNote": "8月19日原稿；本周30天回看补录，不是9月13日的新论文。",
+      "featured": false,
+      "summary": "把 iLQR 或 RL 反馈作为 MPC 的局部采样器，并混入全局采样，兼顾稳定轨迹与跳出局部最优。",
+      "background": "MPPI 在长时域、开环不稳定系统中容易把采样预算耗在发散轨迹上；只沿局部反馈采样，又可能难以跨过接触任务中的局部最优。",
+      "innovation": "论文在特定线性二次条件下联系最优高斯采样与反馈控制，再为非线性问题混合局部反馈和全局采样。可微系统用 iLQR，非可微系统允许用预训练 RL 策略形成采样分布。",
+      "experiments": "覆盖经典控制、四足、人形搬运和灵巧手仿真，并在 H1 真机验证行走与放置。真机行走误差：FS-MPC 0.70±0.66 m，iLQR 0.93±1.00 m，MPPI未完成；各任务成本不是通用成功率，真机依赖外部动捕。",
+      "conclusion": "混合采样在所测任务中同时利用反馈稳定性和搜索能力。真实行走相对 iLQR 的改善有限，表中方差较大，不能解释为已经证明广泛显著优势。",
+      "evaluation": "编辑分析：其价值在于给“RL先验加在线规划”提供具体接口。理论结论有线性二次、理想提议分布等条件，不能直接外推为任意接触系统的全局保证；接触状态估计与在线计算仍是部署约束。",
+      "futureDirections": "研究设想：可将 DLSRL 等生成策略的动作先验作为局部提议，再用显式动力学与约束筛选。比较相同总计算预算下的失稳率、约束违例、任务成本及延迟，才能判断策略与 MPC 组合是否优于单独微调策略。",
+      "evidence": "全文已核对 · 条件性理论 + 仿真 + H1真机",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2608.19443"
+        },
+        {
+          "label": "论文全文",
+          "url": "https://arxiv.org/html/2608.19443v1"
+        }
+      ],
+      "evidenceDetails": [
+        {
+          "url": "https://arxiv.org/abs/2608.19443",
+          "location": "Submission history",
+          "supports": "8月19日v1，周回看补录。"
+        },
+        {
+          "url": "https://arxiv.org/html/2608.19443v1",
+          "location": "§IV-B–D；§V-C/D，Table III；§VI",
+          "supports": "理论适用条件、iLQR/RL提议接口、H1真机误差和动捕限制；误差为米，非成功率。"
+        }
+      ],
+      "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
+      "updatedAt": "2026-09-13T09:19:18.102185+00:00",
+      "lastSeenAt": "2026-09-13T09:19:18.102185+00:00",
+      "revisionEvents": []
     }
   ],
   "editions": [
@@ -1031,7 +1761,1002 @@
           "dateNote": "以arXiv v1提交时间9月7日为发表日期。Hugging Face上的Submitted by作者收录日期为9月9日，不能替代论文提交日；未独立确认arXiv公告批次日期。"
         }
       ]
+    },
+    {
+      "id": "2026-09-13-1700",
+      "label": "2026-09-13 · 17:00",
+      "scheduledAt": "2026-09-13T17:00:00+08:00",
+      "startedAt": "2026-09-13T09:05:37Z",
+      "completedAt": "2026-09-13T09:19:18.102185+00:00",
+      "windowStart": "2026-09-13T08:39:46+00:00",
+      "windowEnd": "2026-09-13T09:19:18.102185+00:00",
+      "status": "completed_with_source_gaps",
+      "weeklyCatchup": true,
+      "weeklyCatchupDays": 30,
+      "summary": "本期首次收录10篇：9篇研究论文与1篇工程跟进。均为滚动回看及本周30天补查发现，保留原始日期；已有6篇arXiv版本无实质变化。重点关注GE-Act 2.0、策略失败检测、安全技能适应与可组合的MPC控制。arXiv接口限流，社交/中文平台公开覆盖有限。",
+      "sourceChecks": [
+        {
+          "name": "arXiv",
+          "status": "部分核验（API限流）",
+          "note": "本次单连接首个API请求（cs.RO、lastUpdatedDate降序、100条）返回HTTP 429，已停止API且未请求RSS。降级阅读官方cs.RO近期列表（344条元数据）及9月11日公告（70条，含新稿、交叉分类和替换），按机器人学习主题筛选并核对选中文章原始页与全文。既有6篇arXiv均仍为v1。最近7天全部新稿及修订未完成全量索引；首个周任务另对2026-08-14起30天做定向网页补查，不代表该窗口穷尽。4篇均为本次补录，不是上次记录后新投稿。",
+          "queries": [
+            "API: search_query=cat:cs.RO&start=0&max_results=100&sortBy=lastUpdatedDate&sortOrder=descending → HTTP 429",
+            "https://arxiv.org/list/cs.RO/recent?skip=0&show=2000",
+            "https://arxiv.org/list/cs.RO/new",
+            "site.arxiv.org/abs/2608 \"robot\" \"reinforcement\" \"Submitted on 2\"",
+            "site.arxiv.org/abs/2608 \"vision-language-action\" \"Submitted on 3\"",
+            "site.arxiv.org/abs/2609 \"world action\" \"failure\"",
+            "site:arxiv.org \"robot\" \"reinforcement learning\" after:2026-08-14 before:2026-09-14",
+            "site:arxiv.org \"world-action\" after:2026-08-14 before:2026-09-14",
+            "逐页核对既有6篇abs页Submission history，并阅读全文选定论文的方法、实验与限制部分"
+          ],
+          "windowStart": "2026-09-06T00:00:00+08:00",
+          "windowEnd": "2026-09-13T17:00:00+08:00",
+          "weeklyLookbackStart": "2026-08-14T00:00:00+08:00",
+          "lastSuccessScope": "官方网页与单篇原文核验；非API全量索引",
+          "checkedAt": "2026-09-13T09:16:00Z",
+          "webCheckedAt": "2026-09-13T09:16:00Z"
+        },
+        {
+          "name": "Hugging Face",
+          "status": "部分核验",
+          "note": "逐页检查9月7—11日Daily Papers，9月6日入口回跳9月4日，9月12/13入口读取失败；同时读取博客、LeRobot近期模型/数据/活动列表。专题全站排序页读取失败，覆盖不完整。OpenWAM与MaP-WAM已去重；GE-Act 2.0原稿9月4日、HF9月9日收录，补录1篇；其余候选保存待核验。",
+          "queries": [
+            "https://huggingface.co/papers/date/2026-09-06",
+            "https://huggingface.co/papers/date/2026-09-07",
+            "https://huggingface.co/papers/date/2026-09-08",
+            "https://huggingface.co/papers/date/2026-09-09",
+            "https://huggingface.co/papers/date/2026-09-10",
+            "https://huggingface.co/papers/date/2026-09-11",
+            "https://huggingface.co/papers/date/2026-09-12",
+            "https://huggingface.co/papers/date/2026-09-13",
+            "https://huggingface.co/blog",
+            "https://huggingface.co/lerobot",
+            "https://huggingface.co/models?pipeline_tag=robotics&sort=lastModified",
+            "https://huggingface.co/datasets?other=robotics&sort=lastModified"
+          ],
+          "windowStart": "2026-09-06T00:00:00+08:00",
+          "windowEnd": "2026-09-13T09:14:59+00:00"
+        },
+        {
+          "name": "机构博客 / 报告",
+          "status": "部分核验",
+          "note": "常规14天与周首次30天定向补查已执行。核对NVIDIA机器人分类与2篇技术教程、PI重定向后的研究博客、TRI及DeepMind公开目录、SAIL博客与BAIR索引；未保证机构全部页面覆盖。补录8月26日COMPASS教程；Cosmos Edge教程与当前模型卡配置/性能差异进入待核验。",
+          "queries": [
+            "site:physicalintelligence.company \"2026\" \"August\"",
+            "site:physicalintelligence.company \"2026\" \"September\"",
+            "site:deepmind.google robotics September 2026",
+            "site:developer.nvidia.com/blog robotics after:2026-08-14 before:2026-09-14",
+            "site:tri.global \"2026\" \"September\"",
+            "site:bair.berkeley.edu/blog after:2026-08-14 robot",
+            "site:ai.stanford.edu/blog after:2026-08-14 robot",
+            "https://www.pi.website/blog",
+            "https://deepmind.google/blog/",
+            "https://www.tri.global/news",
+            "https://ai.stanford.edu/blog/",
+            "https://developer.nvidia.com/blog/category/robotics/"
+          ],
+          "windowStart": "2026-08-14T00:00:00+08:00",
+          "windowEnd": "2026-09-13T09:14:59+00:00"
+        },
+        {
+          "name": "X / Twitter公开索引",
+          "status": "公开索引有限",
+          "note": "普通来源回看3天、重点机构7天，并定向补查30天。搜索主要返回帮助中心和广告案例，未获得可核验研究帖；未访问登录时间线，不代表平台无新增。",
+          "queries": [
+            "site:x.com (robotics OR \"world action\" OR \"vision language action\") after:2026-09-10 before:2026-09-14",
+            "site:x.com (Physical_Int OR nvidia OR GoogleDeepMind OR HuggingFace) robot after:2026-09-06 before:2026-09-14",
+            "site:x.com \"robotics\" \"Sep 2026\" [recency:7]",
+            "site:x.com \"Puffin-World\"",
+            "site:x.com Physical_Int robotics [recency:7]",
+            "site:twitter.com robotics \"September\" \"2026\" [recency:3]",
+            "site:x.com \"robot\" after:2026-08-14 before:2026-09-14 \"paper\""
+          ],
+          "windowStart": "2026-08-14T00:00:00+08:00",
+          "windowEnd": "2026-09-13T17:09:30+08:00"
+        },
+        {
+          "name": "微信公众号公开索引",
+          "status": "公开索引有限",
+          "note": "14天常规与30天定向检索未获得可核实公众号文章原文。机器之心和量子位公开网站仅作为新闻来源单列，不能等同微信平台全量覆盖。",
+          "queries": [
+            "site:mp.weixin.qq.com 机器人 \"2026\" \"9月\" VLA",
+            "site:mp.weixin.qq.com \"Puffin\" \"2026\"",
+            "site:mp.weixin.qq.com 机器人 强化学习 after:2026-08-30 before:2026-09-14",
+            "site:mp.weixin.qq.com \"机器人\" \"世界模型\" after:2026-08-14 before:2026-09-14"
+          ],
+          "windowStart": "2026-08-14T00:00:00+08:00",
+          "windowEnd": "2026-09-13T17:09:30+08:00"
+        },
+        {
+          "name": "小红书公开索引",
+          "status": "公开索引有限",
+          "note": "14天常规与30天定向检索仅返回不相关帮助页或没有相关条目，未获得可核验研究笔记，不声称平台无新增。",
+          "queries": [
+            "site:xiaohongshu.com (机器人 OR VLA OR 世界动作模型) \"2026\" \"9月\"",
+            "site:xiaohongshu.com \"OpenWAM\"",
+            "site:xiaohongshu.com \"机器人\" \"强化学习\" after:2026-08-14 before:2026-09-14"
+          ],
+          "windowStart": "2026-08-14T00:00:00+08:00",
+          "windowEnd": "2026-09-13T17:09:30+08:00"
+        },
+        {
+          "name": "IEEE Spectrum",
+          "status": "部分核验",
+          "note": "检索近7天、阅读机器人栏目及本周Video Friday与触觉报道，并做30天定向补查。追溯Sparse 3D Traversal原稿入库；UnifoLM候选保留开源状态差异；T-Rex原稿为6月，不当新稿重复录入。非全站穷尽。",
+          "queries": [
+            "site:spectrum.ieee.org robotics September 2026 [recency:7]",
+            "open https://spectrum.ieee.org/topic/robotics/",
+            "open https://spectrum.ieee.org/tactile-data-robots",
+            "open https://spectrum.ieee.org/video-friday-disaster-response-robots",
+            "\"Robots Are Learning to Feel\" \"September\"",
+            "\"Video Friday\" \"Humanoid Robot Takes On Monkey Bars\" date",
+            "site:spectrum.ieee.org robotics \"August\" \"2026\" [recency:30]"
+          ],
+          "windowStart": "2026-08-14T00:00:00+08:00",
+          "windowEnd": "2026-09-13T17:09:30+08:00",
+          "lastSuccessAt": "2026-09-13T17:09:30+08:00"
+        },
+        {
+          "name": "MIT Technology Review",
+          "status": "访问受限",
+          "note": "搜索服务报告technologyreview.com被robots.txt阻止。仅见活动页或旧期刊，不视为完成近期正文覆盖，保留缺口。",
+          "queries": [
+            "site:technologyreview.com robot September 2026 [recency:7]",
+            "site:technologyreview.com/2026/ robot [recency:30]"
+          ],
+          "windowStart": "2026-08-14T00:00:00+08:00",
+          "windowEnd": "2026-09-13T17:09:30+08:00"
+        },
+        {
+          "name": "Reuters公开索引",
+          "status": "未检出可核验条目",
+          "note": "已用近7天与30天定向查询，未得到本窗口可核实的机器人研究报道；这是索引检索结果，不代表Reuters没有相关文章。",
+          "queries": [
+            "site:reuters.com robotics September 2026 [recency:7]",
+            "site:reuters.com \"robot\" \"September\" \"2026\" [recency:7]",
+            "site:reuters.com \"robot\" \"2026-09\" [recency:30]",
+            "site:reuters.com/technology/ robotics September 2026",
+            "site:reuters.com \"robots\" after:2026-09-06 before:2026-09-14"
+          ],
+          "windowStart": "2026-08-14T00:00:00+08:00",
+          "windowEnd": "2026-09-13T17:09:30+08:00"
+        },
+        {
+          "name": "机器之心公开网站",
+          "status": "部分核验",
+          "note": "近7天检索及30天定向补查，产业索引显示9月10日Puffin-World线索，已追溯作者全文、版本和实际权重。部分直接页面只呈现简短壳内容，依赖索引发现后回到原始来源，未穷尽网站。",
+          "queries": [
+            "site:jiqizhixin.com 机器人 2026 9月 [recency:7]",
+            "open https://pro.jiqizhixin.com/industry",
+            "site:jiqizhixin.com \"Puffin-World\"",
+            "site:jiqizhixin.com \"VLA\" \"2026\" \"8月\" [recency:30]"
+          ],
+          "windowStart": "2026-08-14T00:00:00+08:00",
+          "windowEnd": "2026-09-13T17:09:30+08:00",
+          "lastSuccessAt": "2026-09-13T17:09:30+08:00"
+        },
+        {
+          "name": "量子位公开网站",
+          "status": "部分核验",
+          "note": "首页直接打开报错但公开检索与个别文章可读。近7天和30天定向补查发现COCO Matrix ICL采访、SmoothRL线索，缺乏已读论文和完整评测证据，暂留待核验。Skild S1采访内容按已有身份去重，不重复入库。",
+          "queries": [
+            "site:qbitai.com 机器人 \"2026\" \"09\" VLA [recency:7]",
+            "site:qbitai.com \"机器人\" \"2026年9月\" [recency:30]",
+            "site:qbitai.com/2026/09/ \"机器人\" \"论文\"",
+            "\"机器人不能停下来等模型\" \"SmoothRL\"",
+            "site:qbitai.com \"SmoothRL\""
+          ],
+          "windowStart": "2026-08-14T00:00:00+08:00",
+          "windowEnd": "2026-09-13T17:09:30+08:00",
+          "lastSuccessAt": "2026-09-13T17:09:30+08:00"
+        },
+        {
+          "name": "经典控制与规划 · 专项补查",
+          "status": "已核对候选全文",
+          "note": "回看7天及本周30天控制/规划候选，补录空中接触MPC与FS-MPC；专项搜索不代表arXiv全量覆盖。",
+          "windowStart": "2026-08-14T09:05:37Z",
+          "windowEnd": "2026-09-13T09:14:59Z",
+          "queries": [
+            "site:arxiv.org/abs \"robot\" \"Sep\" \"2026\" \"barrier\" after:2026-09-06 before:2026-09-14",
+            "site:arxiv.org/abs \"September\" \"2026\" \"contact\" \"control\" robot after:2026-09-06",
+            "site:arxiv.org/abs \"Safety-aware Skill Adaptation\"",
+            "site:arxiv.org/abs robot \"model predictive control\" \"2026\" after:2026-08-14 before:2026-09-14"
+          ]
+        }
+      ],
+      "versionChecks": [
+        {
+          "id": "arxiv:2609.11561",
+          "previousVersion": "v1",
+          "currentVersion": "v1",
+          "changed": false,
+          "checkedAt": "2026-09-13T09:16:00Z",
+          "canonicalUrl": "https://arxiv.org/abs/2609.11561",
+          "evidence": "本次重新打开官方abs页，Submission history仅显示v1。仅确认此6篇版本，不能推断整个7天修订索引已覆盖。"
+        },
+        {
+          "id": "arxiv:2609.08638",
+          "previousVersion": "v1",
+          "currentVersion": "v1",
+          "changed": false,
+          "checkedAt": "2026-09-13T09:16:00Z",
+          "canonicalUrl": "https://arxiv.org/abs/2609.08638",
+          "evidence": "本次重新打开官方abs页，Submission history仅显示v1。仅确认此6篇版本，不能推断整个7天修订索引已覆盖。"
+        },
+        {
+          "id": "arxiv:2609.11270",
+          "previousVersion": "v1",
+          "currentVersion": "v1",
+          "changed": false,
+          "checkedAt": "2026-09-13T09:16:00Z",
+          "canonicalUrl": "https://arxiv.org/abs/2609.11270",
+          "evidence": "本次重新打开官方abs页，Submission history仅显示v1。仅确认此6篇版本，不能推断整个7天修订索引已覆盖。"
+        },
+        {
+          "id": "arxiv:2609.11746",
+          "previousVersion": "v1",
+          "currentVersion": "v1",
+          "changed": false,
+          "checkedAt": "2026-09-13T09:16:00Z",
+          "canonicalUrl": "https://arxiv.org/abs/2609.11746",
+          "evidence": "本次重新打开官方abs页，Submission history仅显示v1。仅确认此6篇版本，不能推断整个7天修订索引已覆盖。"
+        },
+        {
+          "id": "arxiv:2609.10905",
+          "previousVersion": "v1",
+          "currentVersion": "v1",
+          "changed": false,
+          "checkedAt": "2026-09-13T09:16:00Z",
+          "canonicalUrl": "https://arxiv.org/abs/2609.10905",
+          "evidence": "本次重新打开官方abs页，Submission history仅显示v1。仅确认此6篇版本，不能推断整个7天修订索引已覆盖。"
+        },
+        {
+          "id": "arxiv:2609.07398",
+          "previousVersion": "v1",
+          "currentVersion": "v1",
+          "changed": false,
+          "checkedAt": "2026-09-13T09:16:00Z",
+          "canonicalUrl": "https://arxiv.org/abs/2609.07398",
+          "evidence": "本次重新打开官方abs页，Submission history仅显示v1。仅确认此6篇版本，不能推断整个7天修订索引已覆盖。"
+        }
+      ],
+      "addedIds": [
+        "arxiv:2609.11433",
+        "arxiv:2609.11445",
+        "arxiv:2609.11875",
+        "arxiv:2608.29967",
+        "arxiv:2609.05588",
+        "report:nvidia-compass-agent-workflow-20260826",
+        "arxiv:2609.04196",
+        "arxiv:2608.29769",
+        "arxiv:2609.11661",
+        "arxiv:2608.19443"
+      ],
+      "updatedIds": [],
+      "recordsSnapshot": [
+        {
+          "id": "arxiv:2609.11433",
+          "version": "v1",
+          "canonicalUrl": "https://arxiv.org/abs/2609.11433",
+          "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
+          "lastSeenAt": "2026-09-13T09:19:18.102185+00:00",
+          "updatedAt": "2026-09-13T09:19:18.102185+00:00",
+          "evidence": "全文方法、实验与限制已核对 · 作者报告 · 未独立复现",
+          "type": "arXiv预印本",
+          "changeType": "backfill",
+          "featured": false,
+          "title": "Safety-aware Skill Adaptation for Reinforcement Learning in Dynamic Environments",
+          "zhTitle": "Dist-GPRL：用局部技能调整与安全先验应对动态障碍",
+          "category": "rl",
+          "tags": [
+            "技能适应",
+            "高斯过程",
+            "安全探索",
+            "本次补录"
+          ],
+          "publishedAt": "2026-09-10T12:05:54Z",
+          "announcementDate": "2026-09-11",
+          "authors": [
+            "A K M Nadimul Haque",
+            "Sheila Sutjipto",
+            "Marc G. Carmichael",
+            "Teresa Vidal-Calleja"
+          ],
+          "links": [
+            {
+              "label": "arXiv",
+              "url": "https://arxiv.org/abs/2609.11433"
+            },
+            {
+              "label": "论文全文",
+              "url": "https://arxiv.org/html/2609.11433v1"
+            }
+          ],
+          "evidenceDetails": [
+            {
+              "url": "https://arxiv.org/abs/2609.11433",
+              "location": "Submission history; Comments",
+              "supports": "2026-09-10 v1；作者标注已接收 IROS 2026"
+            },
+            {
+              "url": "https://arxiv.org/html/2609.11433v1",
+              "location": "方法部分；§V-C/Table I；§V-D/Table II；Discussion",
+              "supports": "局部 GP 技能与 HAP 安全先验；两类仿真成功率89%/98%；真机10次中的9次成功和1次碰撞"
+            }
+          ],
+          "summary": "把整段示范技能的强化学习适应，拆为重叠局部窗口，并用安全规划先验指导探索。两类动态操作实验显示成功率提高，但真机仍出现碰撞。",
+          "background": "示范技能在障碍物移动后需要在线调整；一次优化整段高维轨迹既难分配奖励，也容易在探索中碰撞。",
+          "innovation": "用高斯过程表示技能，在重叠窗口内调整稀疏轨迹节点；相关性约束保持变化连贯，Hausdorff 近似规划器提供安全子空间先验，距离场奖励和运动学正则兼顾避障与示范形态。",
+          "experiments": "Table I 的动态推方块、动态杆件操作仿真中，Dist-GPRL 成功率为89%和98%，对应 GPRL 为18%和44%。Table II 真机杆件操作仅10次随机初始条件测试，成功9次、碰撞1次；GPRL 成功1次、碰撞7次。",
+          "conclusion": "作者结果支持把全局技能适应拆为局部、有先验的策略调整，从而改善动态环境里的探索效率和任务表现。",
+          "evaluation": "任务集中在两类操作，真机样本很少；这里的“安全感知”是经验避障改进，不能解释为无碰撞保证。已查论文没有可核实的作者代码链接。9月10日原稿在本次17:00更新补录。",
+          "futureDirections": "【研究假设】可让 VLA 产生子目标，再由局部 GP 技能执行；也可叠加 CBF 安全约束。需要验证高层目标误差、控制输入限制及安全约束是否破坏技能的可达性。",
+          "dateNote": "2026-09-10提交；本期滚动回看首次补录，不代表9月13日新发表。"
+        },
+        {
+          "id": "arxiv:2609.11445",
+          "version": "v1",
+          "canonicalUrl": "https://arxiv.org/abs/2609.11445",
+          "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
+          "lastSeenAt": "2026-09-13T09:19:18.102185+00:00",
+          "updatedAt": "2026-09-13T09:19:18.102185+00:00",
+          "evidence": "全文方法、实验与限制已核对 · 作者报告 · 未独立复现",
+          "type": "arXiv预印本",
+          "changeType": "backfill",
+          "featured": true,
+          "title": "FARM: Reading Failure Signals from the Internal Predictive States of a Frozen Robotic World Model",
+          "zhTitle": "FARM：从冻结世界模型内部状态读取失败风险",
+          "category": "wam",
+          "tags": [
+            "失败检测",
+            "世界模型",
+            "少样本适应",
+            "本次补录"
+          ],
+          "publishedAt": "2026-09-10T12:14:37Z",
+          "announcementDate": "2026-09-11",
+          "authors": [
+            "Haoran Pei",
+            "Mingrui Luo",
+            "Senbao Wang",
+            "Haoran Lv",
+            "Jie Guo",
+            "Sheng Zhong",
+            "Ruixi Ci"
+          ],
+          "links": [
+            {
+              "label": "arXiv",
+              "url": "https://arxiv.org/abs/2609.11445"
+            },
+            {
+              "label": "论文全文",
+              "url": "https://arxiv.org/html/2609.11445v1"
+            },
+            {
+              "label": "代码仓库",
+              "url": "https://github.com/HaoranPei-casia/FARM"
+            }
+          ],
+          "evidenceDetails": [
+            {
+              "url": "https://arxiv.org/abs/2609.11445",
+              "location": "Submission history",
+              "supports": "2026-09-10 v1"
+            },
+            {
+              "url": "https://arxiv.org/html/2609.11445v1",
+              "location": "§III；§IV/Table II–III；§IV-E；§V",
+              "supports": "33,985参数读出器；350轨迹/7任务 OOF AUROC85.68；严格未见任务65.67；35样本适应75.78；0.2256ms仅GPU读出器"
+            },
+            {
+              "url": "https://github.com/HaoranPei-casia/FARM",
+              "location": "README: Scope; Data manifest",
+              "supports": "MIT最小公开实现；不含真实轨迹、模型权重及冻结主干特征提取"
+            }
+          ],
+          "summary": "世界模型的预测状态可能已含有失败线索。FARM 在冻结主干上训练小型读出器，输出轨迹风险；有用的监测信号尚不等于已经实现恢复控制。",
+          "background": "机器人策略常只输出动作，部署时缺少可靠的失败监测；重新训练大模型来增加监测能力成本较高。",
+          "innovation": "读取冻结视觉世界模型的内部预测状态，训练33,985参数的监督读出器，逐时刻预测失败概率，再以已观察片段的最大风险给轨迹打分。",
+          "experiments": "7任务350轨迹的分组交叉验证中，整体 AUROC 为85.68（0–100标度）。另一个匹配基准的严格未见任务 AUROC 为65.67，35样本适应后为75.78。RTX 5090 上0.2256ms仅指特征已驻留 GPU 后的读出器均值，不含世界模型推理。",
+          "conclusion": "冻结预测表征可支持轻量失败识别，少量目标域标签有助于适应；目前验证的是检测表现，并未直接证明干预后的任务成功率提高。",
+          "evaluation": "零样本跨任务结果不稳定，严格未见任务也非所有比较项最优；全轨迹 AUROC 不能替代提前预警时长或安全性。公开仓库含读出器训练与评估，未提供真实数据、权重及主干特征提取。9月10日原稿本次补录。",
+          "futureDirections": "【研究假设】可把风险读出接入 DLSRL 或 CorrectVLA 的恢复触发器。应先测误报、提前量及风险校准，再比较加入干预后的闭环成功率与额外计算成本。",
+          "dateNote": "2026-09-10提交；本期滚动回看首次补录，不代表9月13日新发表。"
+        },
+        {
+          "id": "arxiv:2609.11875",
+          "version": "v1",
+          "canonicalUrl": "https://arxiv.org/abs/2609.11875",
+          "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
+          "lastSeenAt": "2026-09-13T09:19:18.102185+00:00",
+          "updatedAt": "2026-09-13T09:19:18.102185+00:00",
+          "evidence": "全文方法、实验与限制已核对 · 作者报告 · 未独立复现",
+          "type": "arXiv预印本",
+          "changeType": "backfill",
+          "featured": false,
+          "title": "UniMPA: A Unified Memory-Prediction-Action Model via Action-Grounded Transition Modeling",
+          "zhTitle": "UniMPA：让未来预测检索经验，再引导动作生成",
+          "category": "wam",
+          "tags": [
+            "记忆检索",
+            "动作原型",
+            "Flow Matching",
+            "本次补录"
+          ],
+          "publishedAt": "2026-09-10T17:45:03Z",
+          "announcementDate": "2026-09-11",
+          "authors": [
+            "Wei Li",
+            "Rui Shao",
+            "Jie He",
+            "Lingsen Zhang",
+            "Ziwei Liu",
+            "Liqiang Nie"
+          ],
+          "links": [
+            {
+              "label": "arXiv",
+              "url": "https://arxiv.org/abs/2609.11875"
+            },
+            {
+              "label": "论文全文",
+              "url": "https://arxiv.org/html/2609.11875v1"
+            },
+            {
+              "label": "项目主页",
+              "url": "https://jiutian-vl.github.io/UniMPA-page/"
+            }
+          ],
+          "evidenceDetails": [
+            {
+              "url": "https://arxiv.org/abs/2609.11875",
+              "location": "Submission history; Comments",
+              "supports": "2026-09-10 v1；仅标注 submitted to TPAMI"
+            },
+            {
+              "url": "https://arxiv.org/html/2609.11875v1",
+              "location": "§III；§IV-A/IV-D；Appendix G",
+              "supports": "双记忆库与原型偏置流；每任务25次；R1 Lite和Cobot Magic的TSR/CSR；分平台/任务套件训练；当前轨迹结束后才更新记忆"
+            },
+            {
+              "url": "https://jiutian-vl.github.io/UniMPA-page/",
+              "location": "Method; Real-world Results",
+              "supports": "作者方法介绍与两平台演示；当前所查主页没有可核实的代码入口"
+            }
+          ],
+          "summary": "用预测的状态转移检索已经实现过的经验，再以动作原型引导流模型采样，把记忆、预测与动作连接到同一执行过程。",
+          "background": "视觉上合理的未来不一定能执行，历史动作也未必适合当前场景；长程操作需要同时判断进度、检索经验和调整动作。",
+          "innovation": "组合持续的潜空间预测与关键转移的像素预测；通过视觉—动作和动作—视觉记忆库检索可执行经验，再将动作原型作为流模型初始分布的偏置。",
+          "experiments": "真机每任务25次：R1 Lite的21项任务整体任务成功率77.7%、累计检查点成功率86.3%，π0.5为65.3%/75.6%；Cobot Magic的7项任务对应74.9%/86.4%，π0.5为62.3%/74.9%。两种成功率口径不同，且按平台及任务套件训练。",
+          "conclusion": "作者实验支持把预测作为记忆检索条件、再用检索结果约束动作生成，能改善所测长程操作的完整任务成功率。",
+          "evaluation": "跨两平台验证不等于零样本跨机器人迁移。记忆预训练成本应计入总训练成本；当前轨迹在执行结束后才写入记忆。所查主页未见可核实代码链接；TPAMI是投稿状态。9月10日原稿本次补录。",
+          "futureDirections": "【研究假设】可与 MaP-WAM 的高层记忆规划组合：MaP-WAM选择阶段目标，UniMPA 检索局部可执行原型。需测试记忆污染、错误检索以及执行中同步更新记忆的稳定性。",
+          "dateNote": "2026-09-10提交；本期滚动回看首次补录，不代表9月13日新发表。"
+        },
+        {
+          "id": "arxiv:2608.29967",
+          "version": "v1",
+          "canonicalUrl": "https://arxiv.org/abs/2608.29967",
+          "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
+          "lastSeenAt": "2026-09-13T09:19:18.102185+00:00",
+          "updatedAt": "2026-09-13T09:19:18.102185+00:00",
+          "evidence": "全文方法、实验与限制已核对 · 作者报告 · 未独立复现",
+          "type": "arXiv预印本",
+          "changeType": "backfill",
+          "featured": false,
+          "title": "Training-Free Action Correction for VLA Model Failures via Language Feedback",
+          "zhTitle": "CorrectVLA：不用重训，以语言反馈修正执行幅度",
+          "category": "vla",
+          "tags": [
+            "失败恢复",
+            "语言反馈",
+            "推理时修正",
+            "30天补查",
+            "本次补录"
+          ],
+          "publishedAt": "2026-08-30T18:54:03Z",
+          "announcementDate": null,
+          "authors": [
+            "Owen Kwon",
+            "Pablo Ortega-Kral",
+            "Arthur Bucker",
+            "Jean Oh"
+          ],
+          "links": [
+            {
+              "label": "arXiv",
+              "url": "https://arxiv.org/abs/2608.29967"
+            },
+            {
+              "label": "论文全文",
+              "url": "https://arxiv.org/html/2608.29967v1"
+            },
+            {
+              "label": "项目主页",
+              "url": "https://correctvla.github.io/"
+            },
+            {
+              "label": "代码仓库",
+              "url": "https://github.com/owenk3/correct_vla"
+            }
+          ],
+          "evidenceDetails": [
+            {
+              "url": "https://arxiv.org/abs/2608.29967",
+              "location": "Submission history",
+              "supports": "2026-08-30 v1；本周30天回溯发现"
+            },
+            {
+              "url": "https://arxiv.org/html/2608.29967v1",
+              "location": "Method；Table I–II；§VIII Limitations",
+              "supports": "结构化语言到加性动作修正；ID2000次93.0→96.3%；OOD450次27.1→34.4%；挪动基座后真机20次2→19成功；失败类别及反馈迭代限制"
+            },
+            {
+              "url": "https://correctvla.github.io/",
+              "location": "Simulation Results; Real-Robot Experiments; Operational boundary",
+              "supports": "修正只用于执行错位任务；真机为xArm7抓放、三个位置/物体条件"
+            },
+            {
+              "url": "https://github.com/owenk3/correct_vla",
+              "location": "README; public file tree",
+              "supports": "公开修正脚本、策略接口和LIBERO评估入口；未实际运行复现"
+            }
+          ],
+          "summary": "当 VLA 找对目标却抓得过浅、推得不足时，可把一次任务级语言反馈转成定时动作偏置，复用到多次执行。8月30日论文由本周30天回溯补录。",
+          "background": "部署分布变化可能使 VLA 保留正确任务策略，却错误估计动作幅度；重新训练成本高，逐次遥操作又耗费人力。",
+          "innovation": "从人类反馈提取动作维度、方向、幅度和时间窗，在指定片段叠加平滑动作修正，保持策略权重不变；同一任务级修正复用于多条轨迹。",
+          "experiments": "π0.5在40个同分布任务共2000次执行中，由1861/2000提高到1926/2000；90个OOD任务共450次由122提高到155。xArm7基座移动后的有限抓放实验共20次，由2次成功提高到19次，并非通用真机任务95%成功率。",
+          "conclusion": "结果支持在“目标正确、执行幅度错误”的特定失败类别上进行免训练修正；语义误解、感知错误等问题仍需其他机制。",
+          "evaluation": "反馈在初始确定时可能需要多轮调整，同一修正依赖失败模式一致；不能由有限基座位移实验推断普遍分布外恢复。代码已公开，尚未独立复现。保留8月30日原始日期，作为本次17:00更新的30天补录。",
+          "futureDirections": "【研究假设】可结合 FARM 先识别风险，再判断是否属于可修正的执行错位；加入动作可行域和碰撞约束，并学习反馈幅度，验证自动触发是否比固定人工修正更可靠。",
+          "dateNote": "2026-08-30提交；本期滚动回看首次补录，不代表9月13日新发表。本条来自本周30天补查。"
+        },
+        {
+          "id": "arxiv:2609.05588",
+          "title": "GE-Act 2.0: Pretraining and Scaling a World-Action Model for Robotic Manipulation",
+          "zhTitle": "GE-Act 2.0：从零预训练生成与动作模块，用动作兼容性连接想象和执行",
+          "category": "wam",
+          "tags": [
+            "WAM预训练",
+            "动作兼容性",
+            "数据规模",
+            "跨具身",
+            "补录"
+          ],
+          "type": "机构技术报告 / arXiv预印本",
+          "publishedAt": "2026-09-04T17:16:48Z",
+          "canonicalUrl": "https://arxiv.org/abs/2609.05588",
+          "version": "v1",
+          "authors": [
+            "AgiBot Research Team"
+          ],
+          "summary": "把视觉规划与逆动力学分别预训练，再筛选与示范动作兼容的预测未来进行联合训练，考察操作数据扩展带来的零样本能力。",
+          "background": "WAM常继承视频生成器，但生成的未来可能是另一种有效动作的结果，与现有示范动作错配；直接联合监督会损失动作多样性。",
+          "innovation": "生成与动作组件从零初始化；CoAE压缩控制相关视觉信息，单步SVP与IDM分别利用无动作视频和含动作轨迹。KASO按IDM响应筛选兼容未来，再联合反向传播。",
+          "experiments": "两个真机平台各评估100项任务，每任务每数据规模10次，无任务专属微调。联合训练数据从300增至30,000小时，G1-OP成功率17.1%→44.1%，G2-90D为13.4%→31.1%。这些规模不含此前SVP/IDM的39,000/32,000小时预训练。",
+          "conclusion": "在已测范围内，扩大联合数据可提高分布外操作能力；稀有本体也受益。但规模比较并未固定总计算量，不能独立归因于数据量。",
+          "evaluation": "【编辑分析】受控对齐消融比仅展示视频更能支持KASO的作用；单任务试验数量有限，广泛能力还不等于高可靠部署。作者仍将显式规划、记忆和自纠错列为后续工作。项目页代码标注Coming soon，本次未发现可确认的公开权重。",
+          "futureDirections": "【研究假设】可在OpenWAM的世界—动作接口中对照加入兼容性筛选，测试同等算力下是否保留多模态动作；再把MaP-WAM的记忆计划作为SVP条件，验证长程成功率与错误恢复。",
+          "links": [
+            {
+              "label": "论文",
+              "url": "https://arxiv.org/abs/2609.05588"
+            },
+            {
+              "label": "论文全文",
+              "url": "https://arxiv.org/html/2609.05588v1"
+            },
+            {
+              "label": "作者项目",
+              "url": "https://ge-act-v2.github.io/"
+            },
+            {
+              "label": "Hugging Face收录",
+              "url": "https://huggingface.co/papers/2609.05588"
+            }
+          ],
+          "evidence": "论文方法、实验及局限章节已核验 · 作者报告 · 未独立复现",
+          "evidenceDetails": [
+            {
+              "url": "https://arxiv.org/abs/2609.05588",
+              "location": "Submission history",
+              "supports": "v1为2026-09-04 17:16:48 UTC；AgiBot技术报告身份"
+            },
+            {
+              "url": "https://arxiv.org/html/2609.05588v1",
+              "location": "World-Action Alignment and KASO；Controlled Real-Robot Ablation；Table 2；Scaling with Training Data Volume；Limitations and Outlook",
+              "supports": "兼容性筛选、真机对齐消融、100项任务/每项10次、17.1→44.1%与13.4→31.1%、39k/32k小时组件预训练、非同算力数据扩展、记忆规划限制"
+            },
+            {
+              "url": "https://ge-act-v2.github.io/",
+              "location": "标题区域 Code · Coming soon；Scaling Zero-Shot Manipulation Skills；Evaluation protocol",
+              "supports": "代码尚待公开、真机零样本协议、每任务每规模10次；无公开权重入口被核实"
+            },
+            {
+              "url": "https://huggingface.co/papers/2609.05588",
+              "location": "Published on Sep 4；Submitted by Ryan Chen on Sep 9",
+              "supports": "论文提交日与HF收录日区别"
+            }
+          ],
+          "featured": true,
+          "changeType": "backfill",
+          "dateNote": "原研究9月4日提交，Hugging Face于9月9日收录；本期为滚动检索首次补录，不作为9月13日新发表。",
+          "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
+          "updatedAt": "2026-09-13T09:19:18.102185+00:00",
+          "lastSeenAt": "2026-09-13T09:19:18.102185+00:00"
+        },
+        {
+          "id": "report:nvidia-compass-agent-workflow-20260826",
+          "title": "How to Train a Cross-Embodiment Robot Navigation Policy with AI Agents",
+          "zhTitle": "COMPASS工程跟进：把残差导航训练、场景准备与部署连成可检查流程",
+          "category": "systems",
+          "tags": [
+            "导航",
+            "残差RL",
+            "跨具身",
+            "仿真",
+            "工程跟进",
+            "30天补录"
+          ],
+          "type": "NVIDIA机构技术教程 / 既有研究跟进",
+          "publishedAt": "2026-08-26",
+          "canonicalUrl": "https://developer.nvidia.com/blog/how-to-train-a-cross-embodiment-robot-navigation-policy-with-ai-agents/",
+          "version": "机构教程（2026-08-26）",
+          "authors": [
+            "Yan Chang",
+            "Mihir Acharya",
+            "Wei Liu",
+            "Katie Washabaugh",
+            "Aishwarya Singh"
+          ],
+          "summary": "以Spot为参考，把COMPASS的残差策略适配落实为场景检查、训练诊断、配对评估与ROS 2部署流程。",
+          "background": "导航策略迁移到新机器人或场景时，资产、状态估计和训练接口的重复集成会增加成本，也使失败原因难以追踪。",
+          "innovation": "工程贡献是串联既有COMPASS/X-Mobility流程：残差RL修正基础速度动作，专家数据可蒸馏为共享策略；新增教程覆盖内置仓库、SAGE-10K及NuRec重建场景，并保留人工检查节点。",
+          "experiments": "本文以Spot的仿真训练与场景演示说明流程，要求同种子、目标和滚动条件比较基础策略与候选检查点，报告到达率、跌倒率、行驶时间。教程未给出新的配对性能数表，不能视作新增真机基准结论。",
+          "conclusion": "可复用价值在于训练和部署证据的可追踪性。编码代理参与开发流程；运行时导航由已训练策略和控制器执行。",
+          "evaluation": "【编辑分析】适合已有导航基础策略、希望做新本体适配的团队；资产尺度、碰撞网格和里程计误差仍需分别核验。公开仓库确有训练、蒸馏及ROS 2代码，采用Apache-2.0；仿真资产与基础权重另有下载条款。原方法2025年已发表，本条是教程补录。",
+          "futureDirections": "【研究假设】可在/cmd_vel出口加入CBF或MPC约束过滤，以相同场景比较残差策略单独运行与带过滤器运行的到达率、碰撞率和延迟；同步随机化定位误差，检查安全收益是否因状态偏差消失。",
+          "links": [
+            {
+              "label": "机构教程",
+              "url": "https://developer.nvidia.com/blog/how-to-train-a-cross-embodiment-robot-navigation-policy-with-ai-agents/"
+            },
+            {
+              "label": "公开代码",
+              "url": "https://github.com/NVlabs/COMPASS"
+            },
+            {
+              "label": "项目页",
+              "url": "https://nvlabs.github.io/COMPASS/"
+            },
+            {
+              "label": "开发文档",
+              "url": "https://nvlabs.github.io/COMPASS/docs/"
+            }
+          ],
+          "evidence": "机构教程全文与代码目录已核验 · 本文无新增量化性能表 · 未运行复现",
+          "evidenceDetails": [
+            {
+              "url": "https://developer.nvidia.com/blog/how-to-train-a-cross-embodiment-robot-navigation-policy-with-ai-agents/",
+              "location": "Aug 26, 2026；What is COMPASS?；Steps 2–5；runtime integration",
+              "supports": "日期、Spot参考流程、三种场景、残差训练、配对评估指标、代理仅参与开发及速度接口"
+            },
+            {
+              "url": "https://github.com/NVlabs/COMPASS",
+              "location": "Files；Overview；Quick start；License；Citation",
+              "supports": "实际训练、蒸馏与ros2_deployment目录，Apache-2.0，原研究2025年"
+            },
+            {
+              "url": "https://arxiv.org/abs/2502.16372",
+              "location": "Submission history",
+              "supports": "原COMPASS论文v1于2025-02-22提交；本教程不代表原方法新发表"
+            }
+          ],
+          "featured": false,
+          "changeType": "follow_up_report",
+          "originalWorkDate": "2025-02-22",
+          "dateNote": "8月26日为技术教程发布日期，周首次30天窗口补录；COMPASS原论文2025年已发表，本期未核实新增算法或首开源事件。",
+          "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
+          "updatedAt": "2026-09-13T09:19:18.102185+00:00",
+          "lastSeenAt": "2026-09-13T09:19:18.102185+00:00"
+        },
+        {
+          "id": "arxiv:2609.04196",
+          "title": "Puffin-World: Scaling a Unified Multimodal Model with Native 3D World States",
+          "zhTitle": "Puffin-World：给生成世界加入重力方向与深度，减少视角漂移",
+          "category": "systems",
+          "tags": [
+            "世界模型",
+            "空间感知",
+            "相机控制",
+            "开放权重",
+            "30天补录"
+          ],
+          "type": "arXiv预印本 / 作者项目与模型发布",
+          "publishedAt": "2026-09-03T17:59:13Z",
+          "version": "v1",
+          "canonicalUrl": "https://arxiv.org/abs/2609.04196",
+          "authors": [
+            "Kang Liao",
+            "Yihang Luo",
+            "Xiao-Ming Wu",
+            "Linyi Jin",
+            "Size Wu",
+            "Chunyu Lin",
+            "Yao Zhao",
+            "Fei Wang",
+            "Wei Li",
+            "Chen Change Loy"
+          ],
+          "summary": "统一预测外观、深度和重力方向，为具身仿真提供可控视角；目前主要验证静态场景，尚非机器人接触动力学模型。",
+          "background": "只生成RGB容易出现视角和重力方向漂移；理解相机、生成新视图与重建几何通常分属不同模块。",
+          "innovation": "把重力与纬度、深度、外观作为原生状态；Omni-Camera融合绝对朝向与相对射线几何，并沿已知相机轨迹传播重力参照。",
+          "experiments": "作者在RealEstate10K的50个留出片段上报告PSNR 17.22、LPIPS 0.318；Puffin-Traj-Bench为100个片段。相机误差由本模型理解分支重新估计，不能视为独立测量。",
+          "conclusion": "作者结果支持显式相机与几何状态改善多视图一致性；Puffin-16M包含1500万图文相机三元组和100万轨迹，已提供代码与权重。",
+          "evaluation": "【编辑分析】适合作为空间感知和仿真基础。模型卡限定静态场景，所谓物理主要是重力方向与纬度；尚未证明接触力学或机器人操作收益。自家理解分支参与评测也需独立复核。",
+          "futureDirections": "【研究假设】可把生成的RGB-D与相机位姿接到VLA的视角增强流程，或作为WAM的几何辅助监督；用留出真机任务检验成功率，并控制生成伪影和几何误差。",
+          "links": [
+            {
+              "label": "arXiv",
+              "url": "https://arxiv.org/abs/2609.04196"
+            },
+            {
+              "label": "论文全文",
+              "url": "https://arxiv.org/html/2609.04196v1"
+            },
+            {
+              "label": "作者项目页",
+              "url": "https://kangliao929.github.io/projects/puffin-world/"
+            },
+            {
+              "label": "代码",
+              "url": "https://github.com/KangLiao929/Puffin"
+            },
+            {
+              "label": "模型权重",
+              "url": "https://huggingface.co/ACERobotics/Puffin-World/tree/main"
+            }
+          ],
+          "evidence": "论文方法与实验表、作者模型卡和权重文件目录已核对 · 未独立复现",
+          "evidenceDetails": [
+            {
+              "url": "https://arxiv.org/abs/2609.04196",
+              "location": "Submission history",
+              "supports": "v1提交时间2026-09-03 17:59:13 UTC"
+            },
+            {
+              "url": "https://arxiv.org/html/2609.04196v1",
+              "location": "§3; §5.3–5.4; Table 5",
+              "supports": "Omni-Camera与物理传播；50/100片段；PSNR/LPIPS；由同一Puffin理解分支重新估计相机误差"
+            },
+            {
+              "url": "https://huggingface.co/ACERobotics/Puffin-World",
+              "location": "Overview; Highlights; Limitations",
+              "supports": "三类原生状态；Puffin-16M规模；静态场景以及重力/纬度的物理状态限制"
+            },
+            {
+              "url": "https://huggingface.co/ACERobotics/Puffin-World/tree/main",
+              "location": "Files: Puffin-World-Base.pth / Caption.pth / Pro.pth",
+              "supports": "已存在实际权重文件，非仅发布计划；本次未下载或运行"
+            },
+            {
+              "url": "https://github.com/KangLiao929/Puffin",
+              "location": "Changelog & News",
+              "supports": "作者记载8月22日代码、8月23日权重、9月4日arXiv公开；不是9月10日首次研究发布"
+            }
+          ],
+          "featured": false,
+          "changeType": "backfill",
+          "announcementDate": "2026-09-04",
+          "dateNote": "30天回看补录。9月10日机器之心产业索引提供发现线索；原稿9月3日提交、作者记载9月4日公开，代码/权重在8月已发布。",
+          "originalWorkDate": "2026-09-03",
+          "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
+          "updatedAt": "2026-09-13T09:19:18.102185+00:00",
+          "lastSeenAt": "2026-09-13T09:19:18.102185+00:00"
+        },
+        {
+          "id": "arxiv:2608.29769",
+          "title": "Learning Agile Perceptive Traversal of Sparse 3D Structures for Humanoids",
+          "zhTitle": "人形穿越猴架：原始激光雷达感知与分阶段RL协同",
+          "category": "embodied",
+          "tags": [
+            "人形机器人",
+            "强化学习",
+            "稀疏几何",
+            "多教师蒸馏",
+            "30天补录"
+          ],
+          "type": "arXiv预印本 / IEEE Spectrum跟进线索",
+          "publishedAt": "2026-08-30T12:56:43Z",
+          "version": "v1",
+          "canonicalUrl": "https://arxiv.org/abs/2608.29769",
+          "authors": [
+            "Efe Ongan",
+            "Chong Zhang",
+            "Boyang Sun",
+            "Andrei Cramariuc",
+            "Cesar Cadena",
+            "Marco Hutter"
+          ],
+          "summary": "以头部激光雷达驱动跳起、摆荡、落地完整流程，展示稀疏悬空结构的感知控制；硬件使用被动钩，评估范围有限。",
+          "background": "细横杆和悬空结构难以用常见地形表示捕捉，摆荡时又必须精确接触，感知误差与执行器极限共同影响迁移。",
+          "innovation": "先训练跳起、摆荡和落地教师，再分阶段蒸馏给带注意力编码器与GRU记忆的激光雷达学生；建模雷达噪声、电池压降与电机热限制，并以被动钩替换手。",
+          "experiments": "改装PM-01在3种横杆配置、15次真机试验中完成14次完整流程，最高摆荡速度0.5米/秒。另行训练的钻越策略通过10次2×2厘米木杆测试；不是同一通用策略覆盖两类任务。",
+          "conclusion": "作者结果表明原始激光雷达能支撑稀疏结构上的动态接触，针对传感器和驱动器的建模有助于向真机迁移。",
+          "evaluation": "【编辑分析】可复用价值在感知与硬件约束联合设计。15次试验仍少，被动钩改变了接触条件，不能推断普通灵巧手或任意室外结构也能达到同等表现。当前仅有少量独立任务策略。",
+          "futureDirections": "【研究假设】可把教师蒸馏流程接入更长程技能调度，并以局部结构记忆处理遮挡；与模型预测控制结合时，让其约束电流和接触力，再验证跨杆材质、长时连续运行及失抓恢复。",
+          "links": [
+            {
+              "label": "arXiv",
+              "url": "https://arxiv.org/abs/2608.29769"
+            },
+            {
+              "label": "论文全文",
+              "url": "https://arxiv.org/html/2608.29769v1"
+            },
+            {
+              "label": "作者项目页",
+              "url": "https://nemantor.github.io/sparse-3d-traversal-website/"
+            },
+            {
+              "label": "IEEE Spectrum跟进",
+              "url": "https://spectrum.ieee.org/video-friday-disaster-response-robots"
+            }
+          ],
+          "evidence": "论文方法、真机表与限制及作者项目页已核对 · 未独立复现",
+          "evidenceDetails": [
+            {
+              "url": "https://arxiv.org/abs/2608.29769",
+              "location": "Submission history",
+              "supports": "v1提交时间2026-08-30 12:56:43 UTC"
+            },
+            {
+              "url": "https://arxiv.org/html/2608.29769v1",
+              "location": "§III-A; §IV-E–H; §V; Table V; §VI-C; §VII",
+              "supports": "被动钩替换手；多教师蒸馏；电池、热、雷达建模；3种配置共14/15完整流程；单独钻越策略10次测试及几何泛化限制"
+            },
+            {
+              "url": "https://nemantor.github.io/sparse-3d-traversal-website/",
+              "location": "Abstract; Approach; Monkey-bar traversal; Ducking under thin obstacles",
+              "supports": "作者项目概览、0.5米/秒、独立钻越策略与视频演示"
+            },
+            {
+              "url": "https://spectrum.ieee.org/video-friday-disaster-response-robots",
+              "location": "Video Friday: Humanoid Robot Takes On Monkey Bars; ETH Zurich Robotic Systems Lab link",
+              "supports": "本周新闻线索直接链接作者项目；不替代原始研究日期"
+            }
+          ],
+          "featured": false,
+          "changeType": "backfill",
+          "announcementDate": null,
+          "dateNote": "30天回看补录，由本周IEEE Spectrum Video Friday追溯发现；原稿8月30日提交，不作为今天新发表研究。",
+          "originalWorkDate": "2026-08-30",
+          "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
+          "updatedAt": "2026-09-13T09:19:18.102185+00:00",
+          "lastSeenAt": "2026-09-13T09:19:18.102185+00:00"
+        },
+        {
+          "id": "arxiv:2609.11661",
+          "title": "Contact-Aware Incremental Model Predictive Control for an Underactuated Aerial Manipulator",
+          "zhTitle": "接触感知 MPC + INDI：让欠驱动飞行机械臂稳定贴墙书写",
+          "category": "theory",
+          "tags": [
+            "空中操作",
+            "MPC",
+            "INDI",
+            "接触控制",
+            "embodied"
+          ],
+          "type": "arXiv预印本",
+          "publishedAt": "2026-09-10T15:03:02Z",
+          "version": "v1",
+          "canonicalUrl": "https://arxiv.org/abs/2609.11661",
+          "authors": [
+            "Darwin Liu",
+            "Tamas Keviczky",
+            "Sihao Sun"
+          ],
+          "changeType": "backfill",
+          "dateNote": "9月10日提交，9月13日17:00轮次回看补录，并非本日新发表。",
+          "featured": false,
+          "summary": "把接触力规划和快速扰动补偿分层处理，改善飞行机械臂在摩擦、侧风下的贴面操作。",
+          "background": "欠驱动飞行机械臂贴墙滑动时，接触摩擦会通过机械臂干扰机身。单独依靠模型预测控制，难以及时抵消模型外的力和力矩。",
+          "innovation": "外层接触感知 NMPC 规划末端位姿与法向力，内层级联 INDI 利用加速度反馈补偿扰动。力估计来自机载惯性与推力信息，控制无需机载力传感器。",
+          "experiments": "仿真比较接触 MPC 与阻抗控制；真机在动捕定位下进行竖直、倾斜白板和粉笔书写。约5 m/s侧风时，完整控制器的末端峰值误差为11 cm，仅姿态 INDI 为20 cm。该数字来自单次工况轨迹，不是多次成功率。",
+          "conclusion": "实验支持快速内环对摩擦与风扰动的补偿价值，且外层位置 INDI 在较强扰动下有额外收益。不能据此宣称已实现未知环境下的自主空中作业。",
+          "evaluation": "编辑分析：这是规划与经典反馈控制的实用组合。限制包括已知接触平面、外部动捕和准静态机械臂力估计；接触瞬间还会破坏 INDI 的时间尺度假设。工程复现要关注力估计偏差与执行带宽。",
+          "futureDirections": "研究设想：可让视觉或 WAM 上层提供接触面、书写路径及目标力，由该控制器执行；先在可控表面估计误差和突变摩擦下测量力峰值、脱离接触次数与轨迹误差，再验证加入置信度约束能否稳定收益。",
+          "evidence": "全文已核对 · 仿真 + 真机 · 已知平面/外部动捕",
+          "links": [
+            {
+              "label": "arXiv",
+              "url": "https://arxiv.org/abs/2609.11661"
+            },
+            {
+              "label": "论文全文",
+              "url": "https://arxiv.org/html/2609.11661v1"
+            }
+          ],
+          "evidenceDetails": [
+            {
+              "url": "https://arxiv.org/abs/2609.11661",
+              "location": "Submission history",
+              "supports": "v1提交日期与作者。"
+            },
+            {
+              "url": "https://arxiv.org/html/2609.11661v1",
+              "location": "§III-B–D；§IV-A/C/D；Fig.6",
+              "supports": "接触/INDI设计、已知表面与Vicon条件；约5 m/s侧风中峰值11 cm对20 cm，单次轨迹。"
+            }
+          ],
+          "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
+          "updatedAt": "2026-09-13T09:19:18.102185+00:00",
+          "lastSeenAt": "2026-09-13T09:19:18.102185+00:00"
+        },
+        {
+          "id": "arxiv:2608.19443",
+          "title": "Hybrid Feedback Sampling for Sample-Efficient Model Predictive Control",
+          "zhTitle": "FS-MPC：用反馈策略改善采样，再保留全局探索",
+          "category": "theory",
+          "tags": [
+            "MPC",
+            "采样规划",
+            "rl",
+            "人形机器人"
+          ],
+          "type": "arXiv预印本",
+          "publishedAt": "2026-08-19T20:56:18Z",
+          "version": "v1",
+          "canonicalUrl": "https://arxiv.org/abs/2608.19443",
+          "authors": [
+            "Chaoyi Pan",
+            "Zeji Yi",
+            "John Zhang",
+            "Zachary Manchester",
+            "Guannan Qu",
+            "Guanya Shi"
+          ],
+          "changeType": "backfill",
+          "dateNote": "8月19日原稿；本周30天回看补录，不是9月13日的新论文。",
+          "featured": false,
+          "summary": "把 iLQR 或 RL 反馈作为 MPC 的局部采样器，并混入全局采样，兼顾稳定轨迹与跳出局部最优。",
+          "background": "MPPI 在长时域、开环不稳定系统中容易把采样预算耗在发散轨迹上；只沿局部反馈采样，又可能难以跨过接触任务中的局部最优。",
+          "innovation": "论文在特定线性二次条件下联系最优高斯采样与反馈控制，再为非线性问题混合局部反馈和全局采样。可微系统用 iLQR，非可微系统允许用预训练 RL 策略形成采样分布。",
+          "experiments": "覆盖经典控制、四足、人形搬运和灵巧手仿真，并在 H1 真机验证行走与放置。真机行走误差：FS-MPC 0.70±0.66 m，iLQR 0.93±1.00 m，MPPI未完成；各任务成本不是通用成功率，真机依赖外部动捕。",
+          "conclusion": "混合采样在所测任务中同时利用反馈稳定性和搜索能力。真实行走相对 iLQR 的改善有限，表中方差较大，不能解释为已经证明广泛显著优势。",
+          "evaluation": "编辑分析：其价值在于给“RL先验加在线规划”提供具体接口。理论结论有线性二次、理想提议分布等条件，不能直接外推为任意接触系统的全局保证；接触状态估计与在线计算仍是部署约束。",
+          "futureDirections": "研究设想：可将 DLSRL 等生成策略的动作先验作为局部提议，再用显式动力学与约束筛选。比较相同总计算预算下的失稳率、约束违例、任务成本及延迟，才能判断策略与 MPC 组合是否优于单独微调策略。",
+          "evidence": "全文已核对 · 条件性理论 + 仿真 + H1真机",
+          "links": [
+            {
+              "label": "arXiv",
+              "url": "https://arxiv.org/abs/2608.19443"
+            },
+            {
+              "label": "论文全文",
+              "url": "https://arxiv.org/html/2608.19443v1"
+            }
+          ],
+          "evidenceDetails": [
+            {
+              "url": "https://arxiv.org/abs/2608.19443",
+              "location": "Submission history",
+              "supports": "8月19日v1，周回看补录。"
+            },
+            {
+              "url": "https://arxiv.org/html/2608.19443v1",
+              "location": "§IV-B–D；§V-C/D，Table III；§VI",
+              "supports": "理论适用条件、iLQR/RL提议接口、H1真机误差和动捕限制；误差为米，非成功率。"
+            }
+          ],
+          "discoveredAt": "2026-09-13T09:19:18.102185+00:00",
+          "updatedAt": "2026-09-13T09:19:18.102185+00:00",
+          "lastSeenAt": "2026-09-13T09:19:18.102185+00:00"
+        }
+      ]
     }
   ],
-  "lastScanAt": "2026-09-13T08:39:46+00:00"
+  "lastScanAt": "2026-09-13T09:19:18.102185+00:00"
 }
