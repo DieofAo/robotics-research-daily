@@ -1,5 +1,5 @@
 'use strict';
-const APP_VERSION = '2026-09-14-reader-v2.1';
+const APP_VERSION = '2026-09-14-reader-v2.2';
 const FAVORITES_KEY = 'robotics-daily-favorites-v1';
 const FAVORITES_SEEN_KEY = 'robotics-daily-favorites-seen-v1';
 let db = window.ROBOTICS_DAILY || { records: [], editions: [], briefs: [] };
@@ -184,7 +184,7 @@ function renderHighlights() {
   if (!top.length) { node.hidden = true; node.innerHTML = ''; return; }
   const note = daily?.rankingNote || '有可核实关注度证据的研究优先；证据不足时，结合研究价值与新近程度选读。此处不代表全网绝对热度排名。';
   node.hidden = false;
-  node.innerHTML = `<div class="section-heading"><h2>本日 <em>Top ${top.length}</em></h2><p>${esc(daily?.summary && daily.summary.length <= 70 ? daily.summary : '从今天的研究中，先读这几篇。')}</p></div><div class="highlights-grid">${top.map((record, index) => `<article class="highlight-card"><span class="highlight-number">${String(index + 1).padStart(2, '0')}</span><span class="highlight-category">${esc(shortCategory(record.category))}${!record.background ? ' · 待全文核验' : ''}</span><h3><a href="#${encodeURIComponent('paper-' + record.id)}" data-jump="${esc(record.id)}">${esc(recordTitle(record))}<span class="highlight-arrow" aria-hidden="true">↗</span></a></h3><p>${esc(record.highlightSummary || record.innovation || record.summary || '')}</p></article>`).join('')}</div><details class="ranking-note"><summary>ⓘ 排序依据</summary><p>${esc(note)}</p></details>`;
+  node.innerHTML = `<div class="section-heading"><h2>本日 <em>Top ${top.length}</em></h2><p>${esc(daily?.summary || '从今天的研究中，先读这几篇。')}</p></div><div class="highlights-grid">${top.map((record, index) => `<article class="highlight-card"><span class="highlight-number">${String(index + 1).padStart(2, '0')}</span><span class="highlight-category">${esc(shortCategory(record.category))}${!record.background ? ' · 待全文核验' : ''}</span><h3><a href="#${encodeURIComponent('paper-' + record.id)}" data-jump="${esc(record.id)}">${esc(recordTitle(record))}<span class="highlight-arrow" aria-hidden="true">↗</span></a></h3><p>${esc(record.highlightSummary || record.innovation || record.summary || '')}</p></article>`).join('')}</div><details class="ranking-note"><summary>ⓘ 排序依据</summary><p>${esc(note)}</p></details>`;
 }
 function render() {
   normalizeFavoriteAliases();
