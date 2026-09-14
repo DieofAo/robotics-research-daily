@@ -1,5 +1,5 @@
 'use strict';
-const APP_VERSION = '2026-09-13-reader-v2';
+const APP_VERSION = '2026-09-14-reader-v2.1';
 const FAVORITES_KEY = 'robotics-daily-favorites-v1';
 const FAVORITES_SEEN_KEY = 'robotics-daily-favorites-seen-v1';
 let db = window.ROBOTICS_DAILY || { records: [], editions: [], briefs: [] };
@@ -200,9 +200,12 @@ function render() {
   $('page-subtitle').textContent = favorites ? `${favoriteIds.size} 项收藏 · 持续积累自己的研究线索${missing ? ' · ' + missing + ' 项暂不在当前归档' : ''}` : `${dateLabel} · ${records.length} 项研究${state.day !== 'all' && group?.editions.length > 1 ? ' · 已合并本日 ' + group.editions.length + ' 次更新' : ''}`;
   $('day-stamp').textContent = favorites ? '★' : state.day === 'all' ? '∞' : state.day.slice(8, 10);
   const complete = [], briefs = [], candidates = [];
+  const analysisNeeded = new Set(db.editions.flatMap(edition => array(edition.analysisNeededIds)));
   for (const record of filtered) {
     const full = favorites || state.day === 'all' ? !!record.background : group?.fullIds.has(record.id) && !!record.background;
-    if (full) complete.push(record); else if (!record.background) candidates.push(record); else briefs.push(record);
+    if (full) complete.push(record);
+    else if (record.innovation && record.evidence && !analysisNeeded.has(record.id) && !/pending|unverified/.test(record.status || '')) briefs.push(record);
+    else candidates.push(record);
   }
   $('result-title').textContent = state.query ? '搜索结果' : state.category !== 'all' ? shortCategory(state.category) : favorites ? '收藏的研究' : state.day === 'all' ? '全部研究' : '本日研究';
   $('result-count').textContent = `${filtered.length} 项${complete.length ? ' · ' + complete.length + ' 篇完整分析' : ''}${briefs.length + candidates.length ? ' · ' + (briefs.length + candidates.length) + ' 条简讯' : ''}`;
