@@ -25,3 +25,8 @@
 .highlight-card h3{font-size:20px}
 .highlight-card p{font-size:16px}
 @media(max-width:700px){.highlight-card h3{font-size:20px}.highlight-card:first-child h3{font-size:22px}}
+/* Keep every filter reachable when the sidebar exceeds the viewport height. */
+@media(min-width:701px){.sidebar{max-height:calc(100dvh - 50px);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;padding-right:4px}}
+.highlights .section-heading{align-items:flex-start}
+.highlights .section-heading p{font-size:16px;line-height:1.8;max-width:70%}
+@media(max-width:700px){.highlights .section-heading{display:block}.highlights .section-heading p{max-width:none;text-align:left;margin-top:8px}}
