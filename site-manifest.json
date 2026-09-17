@@ -1,9 +1,9 @@
 {
   "appVersion": "2026-09-14-reader-v2.2",
-  "assetsVersion": "c7bd1c9b1bd8026da7d8",
-  "latestEditionId": "2026-09-16-1700",
-  "records": 205,
-  "briefs": 550,
-  "lastScanAt": "2026-09-16T09:30:22.111Z",
-  "contentHash": "8644b5c686769d3a38e3bc5db1c71a89547890b5488091cef3faee800b740596"
+  "assetsVersion": "c4d8f26e336ea75ade5a",
+  "latestEditionId": "2026-09-17-1000",
+  "records": 236,
+  "briefs": 683,
+  "lastScanAt": "2026-09-17T02:39:11.180Z",
+  "contentHash": "fa172030b41259902f05748dfe731f36b340df77d810218e6121d8b34862db28"
 }
