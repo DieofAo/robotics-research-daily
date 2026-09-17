@@ -6,9 +6,9 @@
   <meta name="description" content="按日期与研究方向探索机器人研究，阅读重点分析，收藏与跟踪值得关注的工作。">
   <meta name="theme-color" content="#17674d">
   <title>机器人研究日报 · Robotics Daily</title>
-  <link rel="icon" href="./favicon.svg?v=df703702fa20e2fb735d" type="image/svg+xml">
-  <link rel="stylesheet" href="./style.css?v=df703702fa20e2fb735d">
-<meta name="robotics-build" content="df703702fa20e2fb735d"></head>
+  <link rel="icon" href="./favicon.svg?v=dacdc20df3603f837ed5" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css?v=dacdc20df3603f837ed5">
+<meta name="robotics-build" content="dacdc20df3603f837ed5"></head>
 <body>
 <a class="skip" href="#main">跳到日报内容</a>
 <header class="masthead">
@@ -26,11 +26,16 @@
   </aside>
   <main id="main" tabindex="-1">
     <div class="page-heading"><div><p class="eyebrow" id="page-eyebrow">RESEARCH NOTEBOOK</p><h1 id="page-title">值得读的机器人研究</h1><p id="page-subtitle" class="page-subtitle"></p></div><span id="day-stamp" class="day-stamp" aria-hidden="true"></span></div>
+    <form id="research-search" class="search-panel" role="search" aria-label="搜索研究">
+      <label class="search-title" for="search">搜索研究</label>
+      <div class="search-row"><div class="search"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m16 16 5 5"></path></svg><input id="search" type="search" autocomplete="off" maxlength="160" enterkeyhint="search" placeholder="标题、研究内容或关键词，如：世界模型、diffusion…" aria-describedby="search-help" aria-controls="reports briefs"><button type="button" id="clear-search" class="clear-search" aria-label="清空搜索" hidden>×</button></div><button type="submit" class="search-submit">搜索</button></div>
+      <div class="search-options"><label id="search-scope-label">搜索范围 <select id="search-scope"><option value="all">全部历史</option><option value="day">所选日期</option></select></label><label class="fuzzy-option"><input id="fuzzy-search" type="checkbox" checked>模糊匹配</label><span id="search-context"></span></div>
+      <p id="search-help" class="search-help">支持中英文标题、全文与作者；多个关键词用空格分隔，模糊匹配可容忍少量错字或拼写错误。</p>
+    </form>
     <section id="favorites-tools" class="favorites-tools" hidden aria-label="收藏管理"><p>收藏保存在当前浏览器。可导出备份，在另一台设备导入；清除浏览器数据会删除本机收藏。</p><div class="tool-row"><button type="button" id="export-favorites" class="outlined-button">↓ 导出收藏</button><label class="outlined-button import-label">↑ 导入收藏<input type="file" id="import-favorites" accept="application/json,.json"></label></div><p class="small-note" id="favorites-feedback" role="status"></p></section>
     <section id="highlights" class="highlights" aria-label="当日最值得关注的五项研究"></section>
     <section class="reading" aria-label="筛选与阅读研究">
-      <div class="search-row"><label class="search"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m16 16 5 5"></path></svg><input id="search" type="search" autocomplete="off" maxlength="160" placeholder="搜索标题、研究内容、关键思路…" aria-label="搜索标题或研究内容，支持模糊匹配"></label><button type="button" id="clear-filters" class="quiet-button">重置筛选</button></div>
-      <div class="type-filter-row"><span class="filter-caption">内容类型</span><div id="content-types" class="type-filters" role="group" aria-label="按论文、新闻、报告或博客筛选"></div></div>
+      <div class="type-filter-row"><span class="filter-caption">内容类型</span><div id="content-types" class="type-filters" role="group" aria-label="按论文、新闻、报告或博客筛选"></div><button type="button" id="clear-filters" class="quiet-button">重置筛选</button></div>
       <div class="result-heading"><h2 id="result-title">本日研究</h2><span id="result-count" role="status" aria-live="polite"></span></div>
       <div id="filter-note" class="filter-note" hidden></div>
       <div id="reports"></div>
@@ -40,6 +45,6 @@
   </main>
 </div>
 <noscript><p class="noscript">请启用 JavaScript 阅读日报。也可以查看 <a href="./data.json">完整归档数据</a>。</p></noscript>
-<script src="./data.js?v=df703702fa20e2fb735d"></script><script src="./app.js?v=df703702fa20e2fb735d"></script>
+<script src="./data.js?v=dacdc20df3603f837ed5"></script><script src="./app.js?v=dacdc20df3603f837ed5"></script>
 </body>
 </html>

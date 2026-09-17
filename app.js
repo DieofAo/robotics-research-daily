@@ -1,5 +1,5 @@
 'use strict';
-const APP_VERSION = '2026-09-14-reader-v2.2';
+const APP_VERSION = '2026-09-17-reader-v2.3-search';
 const FAVORITES_KEY = 'robotics-daily-favorites-v1';
 const FAVORITES_SEEN_KEY = 'robotics-daily-favorites-seen-v1';
 let db = window.ROBOTICS_DAILY || { records: [], editions: [], briefs: [] };
@@ -24,7 +24,7 @@ const storedFavorites = readStored(FAVORITES_KEY, { ids: [] });
 let favoriteIds = new Set(array(storedFavorites.ids).filter(id => typeof id === 'string' && id.length < 300));
 let favoriteSeen = readStored(FAVORITES_SEEN_KEY, {});
 if (!favoriteSeen || typeof favoriteSeen !== 'object' || Array.isArray(favoriteSeen)) favoriteSeen = {};
-let state = { mode: location.hash === '#favorites' ? 'favorites' : 'daily', day: '', category: 'all', type: 'all', query: '', month: '' };
+let state = { mode: location.hash === '#favorites' ? 'favorites' : 'daily', day: '', category: 'all', type: 'all', query: '', month: '', searchScope: 'all', fuzzy: true };
 let dateMap = new Map(), lookup = new Map(), searchIndex = new WeakMap(), refreshSequence = 0, refreshTimer;
 function getTypes(record) {
   const explicit = array(record.contentTypes).filter(type => contentTypes.some(item => item[0] === type && type !== 'all'));
@@ -47,6 +47,14 @@ function normalize(value) { return String(value || '').normalize('NFKC').toLocal
 function searchText(record) { return [record.title, record.zhTitle, record.summary, record.background, record.innovation, record.experiments, record.conclusion, record.evaluation, record.futureDirections, ...array(record.tags), ...array(record.authors)].filter(Boolean).join(' '); }
 function withinEditDistance(a, b, limit = 1) {
   if (Math.abs(a.length - b.length) > limit) return false;
+  if (limit === 1) {
+    let offset = 0;
+    while (offset < Math.min(a.length, b.length) && a[offset] === b[offset]) offset++;
+    if (offset === Math.min(a.length, b.length)) return true;
+    if (a.length > b.length) return a.slice(offset + 1) === b.slice(offset);
+    if (a.length < b.length) return a.slice(offset) === b.slice(offset + 1);
+    return a.slice(offset + 1) === b.slice(offset + 1) || (a[offset] === b[offset + 1] && a[offset + 1] === b[offset] && a.slice(offset + 2) === b.slice(offset + 2));
+  }
   let previous = Array.from({ length: b.length + 1 }, (_, index) => index), beforePrevious;
   for (let i = 1; i <= a.length; i++) {
     const row = [i]; let lowest = i;
@@ -60,27 +68,41 @@ function withinEditDistance(a, b, limit = 1) {
   }
   return previous[b.length] <= limit;
 }
-function matchesSearch(record, rawQuery) {
-  const query = normalize(rawQuery).slice(0, 160);
-  if (!query) return true;
+function indexedSearch(record) {
   let index = searchIndex.get(record);
   if (!index) {
     const text = searchText(record).slice(0, 40000);
-    index = { normalized: normalize(text), words: unique(text.toLowerCase().match(/[a-z0-9]{2,40}/g) || []), fuzzy: normalize([record.title, record.zhTitle, record.summary, record.innovation, ...array(record.tags)].filter(Boolean).join(' ')).slice(0, 9000) };
+    index = { normalized: normalize(text), title: normalize([record.title, record.zhTitle].filter(Boolean).join(' ')), words: unique(text.normalize('NFKC').toLowerCase().match(/[a-z0-9]{2,40}/g) || []) };
     searchIndex.set(record, index);
   }
-  if (index.normalized.includes(query)) return true;
-  const terms = rawQuery.toLowerCase().trim().split(/[\s,，;；]+/u).map(normalize).filter(Boolean).slice(0, 12);
-  if (terms.length > 1 && terms.every(term => index.normalized.includes(term) || (/^[a-z0-9]{4,30}$/.test(term) && index.words.some(word => withinEditDistance(term, word))))) return true;
-  if (/^[a-z0-9]{4,30}$/.test(query)) return index.words.some(word => withinEditDistance(query, word, query.length > 8 ? 2 : 1));
-  if (/[^\x00-\x7F]/.test(query) && query.length >= 4 && query.length <= 14) {
-    for (let offset = 0; offset <= index.fuzzy.length - query.length; offset++) {
-      if (index.fuzzy[offset] !== query[0] && index.fuzzy[offset + 1] !== query[1]) continue;
-      if (withinEditDistance(query, index.fuzzy.slice(offset, offset + query.length))) return true;
+  return index;
+}
+function fuzzyTerm(index, term) {
+  if (/^[a-z0-9]{4,30}$/.test(term)) return index.words.some(word => withinEditDistance(term, word, term.length > 8 ? 2 : 1));
+  if (/[^\x00-\x7F]/.test(term) && term.length >= 3 && term.length <= 14) {
+    for (let offset = 0; offset <= index.normalized.length - term.length + 1; offset++) {
+      if (![term[0], term[1]].includes(index.normalized[offset]) && ![term[0], term[1]].includes(index.normalized[offset + 1])) continue;
+      for (const length of [term.length, term.length - 1, term.length + 1]) {
+        if (offset + length <= index.normalized.length && withinEditDistance(term, index.normalized.slice(offset, offset + length))) return true;
+      }
     }
   }
   return false;
 }
+function searchScore(record, rawQuery, fuzzy = true) {
+  const query = normalize(rawQuery).slice(0, 160);
+  if (!query) return 0;
+  const index = indexedSearch(record), key = JSON.stringify([rawQuery, fuzzy]);
+  if (index.lastQuery === key) return index.lastScore;
+  const terms = String(rawQuery).normalize('NFKC').toLowerCase().trim().split(/[\s,，;；]+/u).map(normalize).filter(Boolean).slice(0, 12);
+  let score = index.title.includes(query) ? 100 : index.normalized.includes(query) ? 70 : -1;
+  if (score < 0 && terms.length && terms.every(term => index.normalized.includes(term))) score = 50 + terms.filter(term => index.title.includes(term)).length;
+  if (score < 0 && fuzzy && terms.length && terms.every(term => index.normalized.includes(term) || fuzzyTerm(index, term))) score = 10 + terms.filter(term => index.normalized.includes(term)).length;
+  index.lastQuery = key; index.lastScore = score;
+  return score;
+}
+function matchesSearch(record, rawQuery, fuzzy = true) { return searchScore(record, rawQuery, fuzzy) >= 0; }
+function searchingAllDates() { return state.mode !== 'favorites' && !!state.query && state.searchScope === 'all'; }
 function rebuild() {
   db.records = array(db.records); db.editions = array(db.editions); db.briefs = array(db.briefs);
   lookup = new Map([...db.briefs, ...db.records].map(record => [record.id, record]));
@@ -112,11 +134,11 @@ function rebuild() {
 }
 function scopedRecords() {
   if (state.mode === 'favorites') return [...favoriteIds].map(id => lookup.get(id)).filter(Boolean);
-  if (state.day === 'all') return [...lookup.values()];
+  if (state.day === 'all' || searchingAllDates()) return [...lookup.values()];
   return [...(dateMap.get(state.day)?.records.values() || [])];
 }
 function matches(record, options = {}) {
-  return (options.ignoreCategory || state.category === 'all' || record.category === state.category || array(record.tags).includes(state.category)) && (options.ignoreType || state.type === 'all' || getTypes(record).includes(state.type)) && (options.ignoreQuery || matchesSearch(record, state.query));
+  return (options.ignoreCategory || state.category === 'all' || record.category === state.category || array(record.tags).includes(state.category)) && (options.ignoreType || state.type === 'all' || getTypes(record).includes(state.type)) && (options.ignoreQuery || matchesSearch(record, state.query, state.fuzzy));
 }
 function dayRecords(day) { return [...(dateMap.get(day)?.records.values() || [])]; }
 function signature(record) { return String(record.changeId || '') + '|' + String(record.updatedAt || '') + '|' + String(record.version || '') + '|' + String(record.changeNote || ''); }
@@ -188,21 +210,25 @@ function renderHighlights() {
 }
 function render() {
   normalizeFavoriteAliases();
-  const records = scopedRecords(), filtered = records.filter(record => matches(record)).sort(compareRecords), group = dateMap.get(state.day), favorites = state.mode === 'favorites';
+  const records = scopedRecords(), filtered = records.filter(record => matches(record)).sort((a, b) => (state.query ? searchScore(b, state.query, state.fuzzy) - searchScore(a, state.query, state.fuzzy) : 0) || compareRecords(a, b)), group = dateMap.get(state.day), favorites = state.mode === 'favorites';
   renderCalendar(); renderFilters(records); renderHighlights();
   $('favorite-count').textContent = favoriteIds.size;
   if (favorites) $('favorites-link').setAttribute('aria-current', 'page'); else $('favorites-link').removeAttribute('aria-current');
   $('favorites-tools').hidden = !favorites;
   $('page-eyebrow').textContent = favorites ? 'YOUR RESEARCH LIBRARY' : 'RESEARCH NOTEBOOK';
   $('page-title').textContent = favorites ? '我的研究收藏' : state.day === 'all' ? '所有值得读的研究' : '值得读的机器人研究';
-  const dateLabel = state.day === 'all' ? '全部历史' : `${state.day.slice(0, 4)} 年 ${Number(state.day.slice(5, 7))} 月 ${Number(state.day.slice(8, 10))} 日`;
+  const dateLabel = state.day === 'all' || searchingAllDates() ? '全部历史' : `${state.day.slice(0, 4)} 年 ${Number(state.day.slice(5, 7))} 月 ${Number(state.day.slice(8, 10))} 日`;
   const missing = [...favoriteIds].filter(id => !lookup.has(id)).length;
-  $('page-subtitle').textContent = favorites ? `${favoriteIds.size} 项收藏 · 持续积累自己的研究线索${missing ? ' · ' + missing + ' 项暂不在当前归档' : ''}` : `${dateLabel} · ${records.length} 项研究${state.day !== 'all' && group?.editions.length > 1 ? ' · 已合并本日 ' + group.editions.length + ' 次更新' : ''}`;
-  $('day-stamp').textContent = favorites ? '★' : state.day === 'all' ? '∞' : state.day.slice(8, 10);
+  $('page-subtitle').textContent = favorites ? `${favoriteIds.size} 项收藏 · 持续积累自己的研究线索${missing ? ' · ' + missing + ' 项暂不在当前归档' : ''}` : `${dateLabel} · ${records.length} 项研究${!searchingAllDates() && state.day !== 'all' && group?.editions.length > 1 ? ' · 已合并本日 ' + group.editions.length + ' 次更新' : ''}`;
+  $('day-stamp').textContent = favorites ? '★' : state.day === 'all' || searchingAllDates() ? '∞' : state.day.slice(8, 10);
+  $('clear-search').hidden = !$('search').value;
+  $('search-scope').value = state.searchScope;
+  $('search-scope-label').hidden = favorites;
+  $('search-context').textContent = favorites ? '在我的收藏中搜索' : state.searchScope === 'all' || state.day === 'all' ? '跨日期检索全部归档' : `仅检索 ${state.day}`;
   const complete = [], briefs = [], candidates = [];
   const analysisNeeded = new Set(db.editions.flatMap(edition => array(edition.analysisNeededIds)));
   for (const record of filtered) {
-    const full = favorites || state.day === 'all' ? !!record.background : group?.fullIds.has(record.id) && !!record.background;
+    const full = favorites || state.day === 'all' || searchingAllDates() ? !!record.background : group?.fullIds.has(record.id) && !!record.background;
     if (full) complete.push(record);
     else if (record.innovation && record.evidence && !analysisNeeded.has(record.id) && !/pending|unverified/.test(record.status || '')) briefs.push(record);
     else candidates.push(record);
@@ -211,8 +237,13 @@ function render() {
   $('result-count').textContent = `${filtered.length} 项${complete.length ? ' · ' + complete.length + ' 篇完整分析' : ''}${briefs.length + candidates.length ? ' · ' + (briefs.length + candidates.length) + ' 条简讯' : ''}`;
   const filtering = !!state.query || state.category !== 'all' || state.type !== 'all';
   $('filter-note').hidden = !filtering;
-  $('filter-note').textContent = [state.query ? `搜索「${state.query}」· 支持近似拼写与关键词组合` : '', state.category !== 'all' ? titleOf(state.category) : '', state.type !== 'all' ? contentTypes.find(type => type[0] === state.type)?.[1] : ''].filter(Boolean).join(' ／ ');
-  if (filtered.length) {
+  $('filter-note').textContent = [state.query ? `搜索「${state.query}」· ${state.fuzzy ? '模糊匹配' : '精确关键词匹配'} · 按相关度排序` : '', state.category !== 'all' ? titleOf(state.category) : '', state.type !== 'all' ? contentTypes.find(type => type[0] === state.type)?.[1] : ''].filter(Boolean).join(' ／ ');
+  $('reports').classList.toggle('search-results', !!state.query);
+  if (filtered.length && state.query) {
+    const fullIds = new Set(complete.map(record => record.id)), pendingIds = new Set(candidates.map(record => record.id));
+    $('reports').innerHTML = filtered.map(record => fullIds.has(record.id) ? card(record) : briefCard(record, pendingIds.has(record.id))).join('');
+    $('briefs').innerHTML = '';
+  } else if (filtered.length) {
     $('reports').innerHTML = complete.map(card).join('');
     $('briefs').innerHTML = `${briefs.length ? `<details class="brief-section" ${filtering || favorites ? 'open' : ''}><summary><span>更多研究 · ${briefs.length}</span><small>展开阅读创新点 ↓</small></summary><p class="brief-intro">本轮精选之外的研究，也保留值得关注的创新点。</p>${briefs.map(record => briefCard(record)).join('')}</details>` : ''}${candidates.length ? `<details class="brief-section" ${filtering || favorites ? 'open' : ''}><summary><span>研究线索 · ${candidates.length}</span><small>待全文核验 ↓</small></summary><p class="brief-intro">以下为已发现的研究线索。创新点来自当前可核实材料，完整实验与评价待补充。</p>${candidates.map(record => briefCard(record, true)).join('')}</details>` : ''}`;
   } else {
@@ -226,7 +257,7 @@ function render() {
   $('archive-count').textContent = `${db.records.length} 篇完整研究 · ${dateMap.size} 天归档`;
   if (!storageAvailable) $('favorites-feedback').textContent = '浏览器暂不允许保存。当前收藏仅在本页保留，请导出备份。';
 }
-function setDay(day) { state.mode = 'daily'; state.day = day; if (day !== 'all') state.month = day.slice(0, 7); if (location.hash === '#favorites') history.replaceState(null, '', location.pathname + location.search + '#daily'); render(); }
+function setDay(day) { state.mode = 'daily'; state.day = day; state.searchScope = day === 'all' ? 'all' : 'day'; if (day !== 'all') state.month = day.slice(0, 7); if (location.hash === '#favorites') history.replaceState(null, '', location.pathname + location.search + '#daily'); render(); }
 function resetFilters() { state.category = 'all'; state.type = 'all'; state.query = ''; $('search').value = ''; render(); }
 function moveMonth(delta) { const [year, month] = state.month.split('-').map(Number), date = new Date(Date.UTC(year, month - 1 + delta, 1)); state.month = date.toISOString().slice(0, 7); renderCalendar(); }
 function showBanner(message, version) {
@@ -295,7 +326,15 @@ $('date-input').addEventListener('change', event => { if (/^\d{4}-\d{2}-\d{2}$/.
 $('latest-day').addEventListener('click', () => setDay([...dateMap.keys()].sort().at(-1) || dayOf(new Date())));
 $('all-history').addEventListener('click', () => setDay('all'));
 $('clear-filters').addEventListener('click', resetFilters);
-$('search').addEventListener('input', event => { state.query = event.target.value.trim(); clearTimeout(refreshTimer); refreshTimer = setTimeout(render, 120); });
+let composingSearch = false;
+function updateSearch() { state.query = $('search').value.trim(); clearTimeout(refreshTimer); refreshTimer = setTimeout(render, 120); }
+$('search').addEventListener('input', event => { if (!composingSearch && !event.isComposing) updateSearch(); });
+$('search').addEventListener('compositionstart', () => { composingSearch = true; clearTimeout(refreshTimer); });
+$('search').addEventListener('compositionend', () => { composingSearch = false; updateSearch(); });
+$('research-search').addEventListener('submit', event => { event.preventDefault(); if (composingSearch) return; clearTimeout(refreshTimer); state.query = $('search').value.trim(); render(); });
+$('clear-search').addEventListener('click', () => { clearTimeout(refreshTimer); $('search').value = ''; state.query = ''; render(); $('search').focus(); });
+$('search-scope').addEventListener('change', event => { state.searchScope = event.target.value === 'day' ? 'day' : 'all'; render(); });
+$('fuzzy-search').addEventListener('change', event => { state.fuzzy = event.target.checked; render(); });
 $('refresh').addEventListener('click', () => refreshData(true));
 $('toggle-filters').addEventListener('click', () => {
   const expanded = $('toggle-filters').getAttribute('aria-expanded') !== 'true';
