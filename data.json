@@ -30613,7 +30613,7 @@
     {
       "id": "arxiv:2609.18514",
       "title": "ActiveScale: Scaling Active Perception for Robots across Model, Data, and Hardware",
-      "zhTitle": "ActiveScale：主动观察策略的部署权重更新",
+      "zhTitle": "ActiveScale：确认训练、推理与遥操作代码可读",
       "authors": [
         "Shuai Zhou",
         "Kaisheng Pang",
@@ -30630,25 +30630,38 @@
       "source": "官方完整项目页及模型固定提交",
       "type": "论文与产物更新",
       "publishedAt": "2026-09-16T11:46:40Z",
-      "sourceUpdatedAt": "2026-09-17T03:12:06Z",
-      "checkedAt": "2026-09-17T09:25:11.265861+00:00",
+      "sourceUpdatedAt": "2026-09-19T05:43:17.168331+00:00",
+      "checkedAt": "2026-09-19T05:43:17.168331+00:00",
       "canonicalUrl": "https://arxiv.org/abs/2609.18514",
       "version": "v1",
       "status": "full",
       "reviewStatus": "full_official_project_read",
       "innovation": "模型在 π0.5 中加入当前与历史图像及逐帧相机位姿 token，以训练期位姿辅助头建立几何关联；动作同时控制操作臂与观察相机。使用1000小时人类/机器人数据中训练，并构建单人可遥操作的移动双臂加相机臂平台。本次仅更新部署权重和配套统计。",
-      "summary": "模型在 π0.5 中加入当前与历史图像及逐帧相机位姿 token，以训练期位姿辅助头建立几何关联；动作同时控制操作臂与观察相机。使用1000小时人类/机器人数据中训练，并构建单人可遥操作的移动双臂加相机臂平台。本次仅更新部署权重和配套统计。",
-      "editorialPriority": 93,
+      "summary": "主动观察VLA的公开仓库已包含训练、推理及遥操作实现；本次更新可用产物状态，性能数字沿用原研究。",
+      "editorialPriority": 88,
       "editorialPriorityBasis": "编辑按机器人相关性、可复用技术价值与验证层级判断，非公开关注热度。",
       "popularity": {
-        "status": "unmeasured",
-        "score": null,
+        "status": "verified",
+        "score": 20.79,
         "metrics": {
-          "githubStars": null,
+          "githubStars": 7,
           "hfUpvotes": null
         },
-        "evidence": [],
-        "basis": "仅为已核实公开关注信号；未知不当零，累计数不代表当日新增或研究质量。"
+        "evidence": [
+          {
+            "url": "https://github.com/ShuaiZhou302/ActiveScale",
+            "metric": "github_stars",
+            "value": 7,
+            "checkedAt": "2026-09-19T05:21:42.099238+00:00",
+            "location": "About → Stars",
+            "scope": "专属仓库累计stars；不是当天增长"
+          }
+        ],
+        "checkedAt": "2026-09-19T05:43:17.168331+00:00",
+        "missingMetrics": [
+          "hfUpvotes"
+        ],
+        "basis": "GitHub累计stars 7；仅代表可核公开信号，未知不记零，累计数不是当天热度或研究质量。"
       },
       "links": [
         {
@@ -30670,6 +30683,10 @@
         {
           "label": "部署权重更新",
           "url": "https://huggingface.co/davidzhou302/ActiveScale/commit/b8ed5ab617d874c81669d5d9b9bbddcb17257e62"
+        },
+        {
+          "label": "固定代码版本",
+          "url": "https://github.com/ShuaiZhou302/ActiveScale/tree/40a862623bd80c2ef9f0c9b0cafddd2f9097ac83"
         }
       ],
       "identityLinks": [
@@ -30678,7 +30695,7 @@
         "https://github.com/ShuaiZhou302/ActiveScale",
         "https://huggingface.co/davidzhou302/ActiveScale"
       ],
-      "evidence": "本轮实际读取完整官方项目方法/实验/消融页，以及权重提交文件差异；未声称读取论文全文或重跑评测。",
+      "evidence": "沿用此前已核官方项目方法和实验；本轮实际读取官方仓库README、文件树和固定commit身份，未运行代码。",
       "evidenceDetails": [
         {
           "url": "https://arxiv.org/abs/2609.18514",
@@ -30705,33 +30722,259 @@
           "supports": "五权重替换、box/drawer统计实际变化；不含新性能表",
           "checkedAt": "2026-09-17T09:25:11.265861+00:00",
           "sourceRetrievedAt": "2026-09-17T09:09:40.977026+00:00"
+        },
+        {
+          "url": "https://github.com/ShuaiZhou302/ActiveScale",
+          "location": "README；root tree；embedded currentOid；Training/Inference/Quest 2",
+          "supports": "main固定commit 40a8626，训练、推理和遥操作目录可读；不等同运行验证。",
+          "checkedAt": "2026-09-19T05:43:17.168331+00:00"
         }
       ],
       "scopeNote": "机器人或具身任务直接相关；尚无未验证的全网热度声明。",
       "githubRepo": "https://github.com/ShuaiZhou302/ActiveScale",
       "repoUrl": "https://github.com/ShuaiZhou302/ActiveScale",
       "discoveredAt": "2026-09-17T02:39:11.180Z",
-      "updatedAt": "2026-09-17T09:26:32.104Z",
-      "lastSeenAt": "2026-09-17T09:26:32.104Z",
-      "revisionEvents": [],
-      "eventAt": "2026-09-17T03:12:06Z",
-      "lastReviewedAt": "2026-09-17T09:25:11.265861+00:00",
+      "updatedAt": "2026-09-19T05:43:17.390108+00:00",
+      "lastSeenAt": "2026-09-19T05:43:17.390108+00:00",
+      "revisionEvents": [
+        {
+          "changeId": "arxiv:2609.18514:code-40a862623bd80c2ef9f0c9b0cafddd2f9097ac83",
+          "at": "2026-09-19T05:43:17.390108+00:00",
+          "note": "官方仓库当前提供训练、推理与Quest 2遥操作目录及说明，纠正此前“代码待开放”的可用性状态。仅核验公开代码可读；不声称已复现或出现新性能提升。",
+          "previous": {
+            "id": "arxiv:2609.18514",
+            "title": "ActiveScale: Scaling Active Perception for Robots across Model, Data, and Hardware",
+            "zhTitle": "ActiveScale：主动观察策略的部署权重更新",
+            "authors": [
+              "Shuai Zhou",
+              "Kaisheng Pang",
+              "Wenxuan Song",
+              "Wenjie Zhang",
+              "Xinhu Zheng",
+              "Haoang Li"
+            ],
+            "category": "vla",
+            "contentTypes": [
+              "paper",
+              "report"
+            ],
+            "source": "官方完整项目页及模型固定提交",
+            "type": "论文与产物更新",
+            "publishedAt": "2026-09-16T11:46:40Z",
+            "sourceUpdatedAt": "2026-09-17T03:12:06Z",
+            "checkedAt": "2026-09-17T09:25:11.265861+00:00",
+            "canonicalUrl": "https://arxiv.org/abs/2609.18514",
+            "version": "v1",
+            "status": "full",
+            "reviewStatus": "full_official_project_read",
+            "innovation": "模型在 π0.5 中加入当前与历史图像及逐帧相机位姿 token，以训练期位姿辅助头建立几何关联；动作同时控制操作臂与观察相机。使用1000小时人类/机器人数据中训练，并构建单人可遥操作的移动双臂加相机臂平台。本次仅更新部署权重和配套统计。",
+            "summary": "模型在 π0.5 中加入当前与历史图像及逐帧相机位姿 token，以训练期位姿辅助头建立几何关联；动作同时控制操作臂与观察相机。使用1000小时人类/机器人数据中训练，并构建单人可遥操作的移动双臂加相机臂平台。本次仅更新部署权重和配套统计。",
+            "editorialPriority": 93,
+            "editorialPriorityBasis": "编辑按机器人相关性、可复用技术价值与验证层级判断，非公开关注热度。",
+            "popularity": {
+              "status": "unmeasured",
+              "score": null,
+              "metrics": {
+                "githubStars": null,
+                "hfUpvotes": null
+              },
+              "evidence": [],
+              "basis": "仅为已核实公开关注信号；未知不当零，累计数不代表当日新增或研究质量。"
+            },
+            "links": [
+              {
+                "label": "论文",
+                "url": "https://arxiv.org/abs/2609.18514"
+              },
+              {
+                "label": "当前版本",
+                "url": "https://arxiv.org/html/2609.18514v1"
+              },
+              {
+                "label": "官方项目",
+                "url": "https://active-scale.github.io/"
+              },
+              {
+                "label": "专属代码",
+                "url": "https://github.com/ShuaiZhou302/ActiveScale"
+              },
+              {
+                "label": "部署权重更新",
+                "url": "https://huggingface.co/davidzhou302/ActiveScale/commit/b8ed5ab617d874c81669d5d9b9bbddcb17257e62"
+              }
+            ],
+            "identityLinks": [
+              "https://arxiv.org/abs/2609.18514",
+              "https://active-scale.github.io/",
+              "https://github.com/ShuaiZhou302/ActiveScale",
+              "https://huggingface.co/davidzhou302/ActiveScale"
+            ],
+            "evidence": "本轮实际读取完整官方项目方法/实验/消融页，以及权重提交文件差异；未声称读取论文全文或重跑评测。",
+            "evidenceDetails": [
+              {
+                "url": "https://arxiv.org/abs/2609.18514",
+                "location": "中央API元数据与摘要",
+                "supports": "原始/修订时间、作者、方法范围；仅用于候选简讯",
+                "checkedAt": "2026-09-17T02:16:02.263315+00:00"
+              },
+              {
+                "url": "https://arxiv.org/html/2609.18514v1",
+                "location": "原文缓存首部、方法/实验目录与项目链接；尚非全文逐表核读",
+                "supports": "机器人相关性、原始链接；待入选再核全部实验",
+                "checkedAt": "2026-09-17T02:16:02.263315+00:00"
+              },
+              {
+                "url": "https://active-scale.github.io/",
+                "location": "Method；Data；Real-world results；Ablation",
+                "supports": "完整原始方法，1000小时、五任务150演示20rollout，30/62/70条件",
+                "checkedAt": "2026-09-17T09:25:11.265861+00:00",
+                "sourceRetrievedAt": "2026-09-17T09:03:12.900121+00:00"
+              },
+              {
+                "url": "https://huggingface.co/davidzhou302/ActiveScale/commit/b8ed5ab617d874c81669d5d9b9bbddcb17257e62",
+                "location": "Replace task checkpoints with deployed Mid400 policies；12 files diff",
+                "supports": "五权重替换、box/drawer统计实际变化；不含新性能表",
+                "checkedAt": "2026-09-17T09:25:11.265861+00:00",
+                "sourceRetrievedAt": "2026-09-17T09:09:40.977026+00:00"
+              }
+            ],
+            "scopeNote": "机器人或具身任务直接相关；尚无未验证的全网热度声明。",
+            "githubRepo": "https://github.com/ShuaiZhou302/ActiveScale",
+            "repoUrl": "https://github.com/ShuaiZhou302/ActiveScale",
+            "discoveredAt": "2026-09-17T02:39:11.180Z",
+            "updatedAt": "2026-09-17T09:26:32.104Z",
+            "lastSeenAt": "2026-09-17T09:26:32.104Z",
+            "eventAt": "2026-09-17T03:12:06Z",
+            "lastReviewedAt": "2026-09-17T09:25:11.265861+00:00",
+            "substantiveUpdate": true,
+            "changeType": "updated",
+            "changeId": "arxiv:2609.18514:hf-b8ed5ab617d874c81669d5d9b9bbddcb17257e62",
+            "stableChangeId": "arxiv:2609.18514:hf-b8ed5ab617d874c81669d5d9b9bbddcb17257e62",
+            "changeNote": "论文版本未变；官方模型提交将五任务权重替换为作者标记的 deployed Mid400，并更换 box/drawer 的配套归一化统计。这是部署产物变更，不代表新方法或重新测得更高成功率。",
+            "artifactVersion": "b8ed5ab617d874c81669d5d9b9bbddcb17257e62",
+            "background": "只用固定视角的机器人策略在遮挡下难以主动找到有效观测。ActiveScale 从模型、训练数据和可移动观察硬件协同设计主动感知。",
+            "experiments": "官方项目评估五类真机操作，每任务150段演示、每方法20次 rollout；完整方案平均成功率70%，直接后训练 π0.5 为30%。主动结构在无中训练时62%，再中训练为70%。因此30→70同时包含结构和额外训练数据，不能全归于相机 token。模型提交替换五个权重文件的指针，每个文件约8.354GB，并更换两任务统计路径。",
+            "conclusion": "原实验支持在所列主动观察任务上的收益；本次权重替换未附新实验，不把旧70%写成更新后的新增提升。代码链接仍标为待开放，当前主要可用产物是任务权重与统计。",
+            "evaluation": "编辑评价：主动视角与操作联动具有价值，但五任务小规模测试和额外1000小时训练预算限制广泛比较。部署权重应与新统计配套，仅有权重 hash 变化不能解释具体训练差异。",
+            "futureDirections": "编辑提出的后续假设：可与世界动作模型的主动信息获取结合，研究相机移动成本与物体操作成功的权衡；后续需跨硬件、视角和任务的同预算对照。",
+            "aliasIds": [
+              "hf:davidzhou302/ActiveScale",
+              "pending:hf:davidzhou302/ActiveScale"
+            ],
+            "dateNote": "保留原始 publishedAt 与首次 discoveredAt；本次 eventAt/sourceUpdatedAt 为具体公开产物或实验变化。论文版本未变；官方模型提交将五任务权重替换为作者标记的 deployed Mid400，并更换 box/drawer 的配套归一化统计。这是部署产物变更，不代表新方法或重新测得更高成功率。",
+            "paperUpdatedAt": "2026-09-16T11:46:40Z",
+            "artifactReleaseAt": "2026-09-17T03:12:06Z",
+            "briefHistory": [
+              {
+                "promotedAt": "2026-09-17T09:26:32.104Z",
+                "previous": {
+                  "id": "arxiv:2609.18514",
+                  "title": "ActiveScale: Scaling Active Perception for Robots across Model, Data, and Hardware",
+                  "zhTitle": "ActiveScale：联合模型、数据与硬件的主动观察",
+                  "authors": [
+                    "Shuai Zhou",
+                    "Kaisheng Pang",
+                    "Wenxuan Song",
+                    "Wenjie Zhang",
+                    "Xinhu Zheng",
+                    "Haoang Li"
+                  ],
+                  "category": "vla",
+                  "contentTypes": [
+                    "paper"
+                  ],
+                  "source": "arXiv 中央索引",
+                  "type": "论文简讯",
+                  "publishedAt": "2026-09-16T11:46:40Z",
+                  "sourceUpdatedAt": "2026-09-16T11:46:40Z",
+                  "checkedAt": "2026-09-17T02:16:02.263315+00:00",
+                  "canonicalUrl": "https://arxiv.org/abs/2609.18514",
+                  "version": "v1",
+                  "status": "verified_candidate",
+                  "reviewStatus": "abstract_and_scope_verified",
+                  "innovation": "为VLA加入历史视频、逐帧相机位姿token与位姿监督，以1000小时人类/机器人数据中训练，并提供可单人遥操作的主动感知移动操作平台；让换视角成为策略的一部分。",
+                  "summary": "为VLA加入历史视频、逐帧相机位姿token与位姿监督，以1000小时人类/机器人数据中训练，并提供可单人遥操作的主动感知移动操作平台；让换视角成为策略的一部分。",
+                  "editorialPriority": 92,
+                  "editorialPriorityBasis": "编辑按机器人相关性、可复用技术价值与验证层级判断，非公开关注热度。",
+                  "popularity": {
+                    "status": "unmeasured",
+                    "score": null,
+                    "metrics": {
+                      "githubStars": null,
+                      "hfUpvotes": null
+                    },
+                    "evidence": [],
+                    "basis": "仅为已核实公开关注信号；未知不当零，累计数不代表当日新增或研究质量。"
+                  },
+                  "links": [
+                    {
+                      "label": "论文",
+                      "url": "https://arxiv.org/abs/2609.18514"
+                    },
+                    {
+                      "label": "当前版本",
+                      "url": "https://arxiv.org/html/2609.18514v1"
+                    },
+                    {
+                      "label": "官方项目",
+                      "url": "https://active-scale.github.io/"
+                    },
+                    {
+                      "label": "专属代码",
+                      "url": "https://github.com/ShuaiZhou302/ActiveScale"
+                    }
+                  ],
+                  "identityLinks": [
+                    "https://arxiv.org/abs/2609.18514",
+                    "https://active-scale.github.io/",
+                    "https://github.com/ShuaiZhou302/ActiveScale"
+                  ],
+                  "evidence": "候选简讯按原始摘要与范围核验；定量实验尚待全文复核。",
+                  "evidenceDetails": [
+                    {
+                      "url": "https://arxiv.org/abs/2609.18514",
+                      "location": "中央API元数据与摘要",
+                      "supports": "原始/修订时间、作者、方法范围；仅用于候选简讯",
+                      "checkedAt": "2026-09-17T02:16:02.263315+00:00"
+                    },
+                    {
+                      "url": "https://arxiv.org/html/2609.18514v1",
+                      "location": "原文缓存首部、方法/实验目录与项目链接；尚非全文逐表核读",
+                      "supports": "机器人相关性、原始链接；待入选再核全部实验",
+                      "checkedAt": "2026-09-17T02:16:02.263315+00:00"
+                    }
+                  ],
+                  "scopeNote": "机器人或具身任务直接相关；尚无未验证的全网热度声明。",
+                  "githubRepo": "https://github.com/ShuaiZhou302/ActiveScale",
+                  "repoUrl": "https://github.com/ShuaiZhou302/ActiveScale",
+                  "discoveredAt": "2026-09-17T02:39:11.180Z",
+                  "updatedAt": "2026-09-17T02:39:11.180Z",
+                  "lastSeenAt": "2026-09-17T02:39:11.180Z",
+                  "revisionEvents": []
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "eventAt": "2026-09-19T05:43:17.168331+00:00",
+      "lastReviewedAt": "2026-09-19T05:43:17.168331+00:00",
       "substantiveUpdate": true,
       "changeType": "updated",
-      "changeId": "arxiv:2609.18514:hf-b8ed5ab617d874c81669d5d9b9bbddcb17257e62",
-      "stableChangeId": "arxiv:2609.18514:hf-b8ed5ab617d874c81669d5d9b9bbddcb17257e62",
-      "changeNote": "论文版本未变；官方模型提交将五任务权重替换为作者标记的 deployed Mid400，并更换 box/drawer 的配套归一化统计。这是部署产物变更，不代表新方法或重新测得更高成功率。",
-      "artifactVersion": "b8ed5ab617d874c81669d5d9b9bbddcb17257e62",
+      "changeId": "arxiv:2609.18514:code-40a862623bd80c2ef9f0c9b0cafddd2f9097ac83",
+      "stableChangeId": "arxiv:2609.18514:code-40a862623bd80c2ef9f0c9b0cafddd2f9097ac83",
+      "changeNote": "官方仓库当前提供训练、推理与Quest 2遥操作目录及说明，纠正此前“代码待开放”的可用性状态。仅核验公开代码可读；不声称已复现或出现新性能提升。",
+      "artifactVersion": "40a862623bd80c2ef9f0c9b0cafddd2f9097ac83",
       "background": "只用固定视角的机器人策略在遮挡下难以主动找到有效观测。ActiveScale 从模型、训练数据和可移动观察硬件协同设计主动感知。",
       "experiments": "官方项目评估五类真机操作，每任务150段演示、每方法20次 rollout；完整方案平均成功率70%，直接后训练 π0.5 为30%。主动结构在无中训练时62%，再中训练为70%。因此30→70同时包含结构和额外训练数据，不能全归于相机 token。模型提交替换五个权重文件的指针，每个文件约8.354GB，并更换两任务统计路径。",
-      "conclusion": "原实验支持在所列主动观察任务上的收益；本次权重替换未附新实验，不把旧70%写成更新后的新增提升。代码链接仍标为待开放，当前主要可用产物是任务权重与统计。",
-      "evaluation": "编辑评价：主动视角与操作联动具有价值，但五任务小规模测试和额外1000小时训练预算限制广泛比较。部署权重应与新统计配套，仅有权重 hash 变化不能解释具体训练差异。",
-      "futureDirections": "编辑提出的后续假设：可与世界动作模型的主动信息获取结合，研究相机移动成本与物体操作成功的权衡；后续需跨硬件、视角和任务的同预算对照。",
+      "conclusion": "原研究在所列主动观察任务上取得收益；当前官方仓库已可读，含训练/推理、客户端和Quest 2遥操作目录。此次没有新增性能表，不将代码开放解释为新测得的成功率提升。",
+      "evaluation": "【编辑分析】源码及配置可读增强了复现条件，仍需实际运行检查依赖、数据与硬件接口。原实验中的额外中训练数据和主动结构同时变化，仍应分开评估贡献。",
+      "futureDirections": "【研究假设】可在同一主动感知平台上加入世界模型的信息增益预测，让相机移动与操作动作共同优化；用固定训练预算对照被动相机、仅几何监督与预测信息增益，并测遮挡恢复和移动成本。",
       "aliasIds": [
         "hf:davidzhou302/ActiveScale",
         "pending:hf:davidzhou302/ActiveScale"
       ],
-      "dateNote": "保留原始 publishedAt 与首次 discoveredAt；本次 eventAt/sourceUpdatedAt 为具体公开产物或实验变化。论文版本未变；官方模型提交将五任务权重替换为作者标记的 deployed Mid400，并更换 box/drawer 的配套归一化统计。这是部署产物变更，不代表新方法或重新测得更高成功率。",
+      "dateNote": "保留原始论文与权重日期；本次eventAt/sourceUpdatedAt仅为官方代码首次可读核验时间，确切公开时刻未核定，不称9月19日首次发布。",
       "paperUpdatedAt": "2026-09-16T11:46:40Z",
       "artifactReleaseAt": "2026-09-17T03:12:06Z",
       "briefHistory": [
@@ -30823,7 +31066,8 @@
             "revisionEvents": []
           }
         }
-      ]
+      ],
+      "eventDateBasis": "首次可读核验时间，非首次发布的精确时间"
     },
     {
       "id": "hf:kimtaegyu/TETHER",
@@ -31890,33 +32134,34 @@
     },
     {
       "id": "hf:changh95/pi05-base-p300x2",
-      "title": "π0.5 base deployment on two Tenstorrent P300 boards",
-      "zhTitle": "π0.5 四芯片部署：76.1 毫秒动作块推理，闭环尚未验证",
+      "title": "pi0.5-base deployment on dual Tenstorrent p300 boards",
+      "zhTitle": "π0.5 部署报告：双 p300 的动作块时延与数值校验",
       "authors": [
-        "changh95"
+        "changh95（报告发布账号）"
       ],
       "category": "systems",
       "tags": [
         "部署",
+        "推理加速",
         "VLA",
-        "推理加速"
+        "数值精度"
       ],
       "contentTypes": [
         "report"
       ],
-      "type": "产物与实验报告",
+      "type": "技术报告",
       "source": "作者公开 Hugging Face 完整技术卡与固定提交",
       "canonicalUrl": "https://huggingface.co/changh95/pi05-base-p300x2",
       "identityLinks": [
         "https://huggingface.co/changh95/pi05-base-p300x2"
       ],
       "aliasIds": [],
-      "version": "6a9ad2bb63ea97975e03b9f3f8926c1a142ad771",
-      "sourceUpdatedAt": "2026-09-17T04:16:06.000Z",
-      "checkedAt": "2026-09-17T09:25:11.265861+00:00",
-      "status": "full",
-      "reviewStatus": "full_source_read",
-      "editorialPriority": 84,
+      "version": "0eaeac818c9de9ae8f83b52d6ad70e0282ab2fa7",
+      "sourceUpdatedAt": "2026-09-18T21:26:10.000Z",
+      "checkedAt": "2026-09-19T05:43:17.168331+00:00",
+      "status": "full_verified",
+      "reviewStatus": "primary_methods_results_and_limitations_read",
+      "editorialPriority": 75,
       "editorialPriorityReason": "编辑按可复用产物、直接机器人相关性和证据完整性判断，非公开热度。",
       "popularity": {
         "status": "unmeasured",
@@ -31926,7 +32171,12 @@
           "hfUpvotes": null
         },
         "evidence": [],
-        "basis": "仅为已核实公开关注信号；未知不当零，累计数不代表当日新增或研究质量。"
+        "checkedAt": "2026-09-19T05:43:17.168331+00:00",
+        "missingMetrics": [
+          "githubStars",
+          "hfUpvotes"
+        ],
+        "basis": "没有取得可归属的论文投票或专属仓库数值，保持未知；新闻跟进和模型卡点赞不换算成论文投票。"
       },
       "links": [
         {
@@ -31936,41 +32186,146 @@
         {
           "label": "发布提交",
           "url": "https://huggingface.co/changh95/pi05-base-p300x2/commits/main"
+        },
+        {
+          "label": "固定版本",
+          "url": "https://huggingface.co/changh95/pi05-base-p300x2/tree/0eaeac818c9de9ae8f83b52d6ad70e0282ab2fa7"
         }
       ],
-      "evidence": "本轮实际读完整公开技术卡及提交记录；所列测量由作者报告，未独立运行模型、下载全量数据或复算。",
+      "evidence": "已读原始方法、验证结果与局限；未重跑实验。评价及组合方向为编辑分析或研究假设。",
       "evidenceDetails": [
         {
           "url": "https://huggingface.co/changh95/pi05-base-p300x2",
-          "location": "How the four chips are used；Accuracy and speed；Limitations",
-          "supports": "并行方案、固定形状、100次测量、18个随机观测及未做闭环的边界",
-          "checkedAt": "2026-09-17T09:25:11.265861+00:00",
-          "sourceRetrievedAt": "2026-09-17T09:09:57.010986+00:00"
+          "location": "公开标签索引 createdAt/lastModified/sha；完整 README",
+          "supports": "产物日期、固定提交与卡片方法/验证条件。",
+          "checkedAt": "2026-09-19T05:43:17.168331+00:00"
         },
         {
-          "url": "https://huggingface.co/changh95/pi05-base-p300x2/commits/main",
-          "location": "各提交的绝对 date 与上传批次记录",
-          "supports": "9/17 04:04:15Z 首次技术卡提交，04:16:06Z 完成本轮发布说明；不是 π0.5 原论文发表时间。",
-          "checkedAt": "2026-09-17T09:25:11.265861+00:00",
-          "sourceRetrievedAt": "2026-09-17T09:17:37.003127+00:00"
+          "url": "https://huggingface.co/changh95/pi05-base-p300x2",
+          "location": "Single-agent profile；Multi-agent profile；Accuracy；Build information",
+          "supports": "四芯片/两板配置、固定输入与去噪步骤、50.5/53ms、84ms和47.3块每秒、数值对照范围；软件构建信息。",
+          "checkedAt": "2026-09-19T05:43:17.168331+00:00"
+        },
+        {
+          "url": "https://huggingface.co/changh95/pi05-base-p300x2/blob/6a9ad2bb63ea97975e03b9f3f8926c1a142ad771/README.md",
+          "location": "9月17日已核验并存档的Accuracy and speed，与当前完整卡比较",
+          "supports": "旧报告76.1毫秒进程内/78.9毫秒HTTP；当前增加双服务组与新的时延表，不将两个软件版本混作控制变量一致的实验。",
+          "checkedAt": "2026-09-19T05:43:17.168331+00:00"
         }
       ],
-      "background": "将已有 VLA 落到不同加速硬件时，动作模型的小矩阵计算、跨芯片通信及预处理都可能限制时延。该报告移植原有 π0.5 base，未提出或训练新的基础策略。",
-      "innovation": "把两块 P300 的四颗 Blackhole 芯片组成环，视觉塔与 VLM 前缀按张量并行，动作专家在各芯片复制；将视觉、前缀和十步去噪捕获为一次 Metal trace，并提供 HTTP 服务。",
-      "summary": "把两块 P300 的四颗 Blackhole 芯片组成环，视觉塔与 VLM 前缀按张量并行，动作专家在各芯片复制；将视觉、前缀和十步去噪捕获为一次 Metal trace，并提供 HTTP 服务。",
-      "experiments": "作者在 batch 1、双 224×224 图像、224 tokens、十步去噪下，100 次热启动进程内推理的动作块中位延迟为 76.1 ms；每块含 50×32 个归一化动作值。HTTP 端到端中位数 78.9 ms、p90 80.4 ms。同一代码单 P300 芯片为 122.7 ms。两随机观测 PCC 为 .9988/.9986；另外 16 个观测最低 .9201、均值 .9846。",
-      "conclusion": "可核实的是固定形状下的部署测量和数值对照。此 base 包未进行 LIBERO 闭环测试；单芯片另一包的 4/5 结果使用微调权重，不能转用于这里。",
-      "evaluation": "编辑评价：报告分开给进程内与 HTTP 时延有参考价值，但 657 actions/s 只是每块 50 个预测动作折算，不是机器人反馈控制频率。无同条件 GPU 对照，PCC 也不能替代任务成功率。",
-      "futureDirections": "编辑提出的后续假设：将同一微调策略接入闭环，对齐总功耗、视觉频率与异步执行条件，再比较 GPU 和多芯片方案；还应统计不同观测下的尾部数值误差。",
+      "background": "机器人策略的模型质量和部署速度是不同问题。动作块生成的时延、服务排队和数值误差都可能影响真实控制，不能只看离线吞吐。",
+      "innovation": "报告实现四芯片张量并行视觉语言前缀和动作专家部署，并给出单客户端与拆成两个双芯片服务组的两种配置，附固定软件版本与数值对照。",
+      "summary": "在两块 p300、共四芯片上部署 π0.5，分别测单请求时延和多客户端吞吐；尚未验证闭环任务成功。",
+      "experiments": "单请求配置使用两张224×224图像、224个文本token、10步去噪：进程内约50.5毫秒，HTTP约53毫秒/动作块。四客户端配置中位时延84毫秒、总吞吐47.3块/秒，这是合计吞吐而非每个机器人控制频率。两组观测对 FP32 Torch 的相关系数为0.9986/0.9988，随机输入最低约0.93。",
+      "conclusion": "已验证指定配置的运行时性能和部分数值一致性，未报告真机或闭环基准提升；输出仍是需配套反归一化的动作块。",
+      "evaluation": "【编辑分析】披露软件提交、请求形状和服务配置使速度数据更可解释。相关系数并不保证关键动作误差小，平均吞吐也不说明尾部时延是否适合控制。",
+      "futureDirections": "【研究假设】与标准 GPU 运行同一策略和归一化统计，在相同观测序列下测逐关节误差、尾部时延及闭环成功率；再检查低精度误差是否会改变约束层触发频率。",
       "publishedAt": "2026-09-17T04:04:15Z",
       "releaseAt": "2026-09-17T04:16:06Z",
-      "dateNote": "9/17 04:04:15Z 首次技术卡提交，04:16:06Z 完成本轮发布说明；不是 π0.5 原论文发表时间。",
-      "changeType": "new",
+      "dateNote": "沿用9月17日首次技术卡发表日期；本次是9月18日固定SHA对应的部署方案和测量报告更新。",
+      "changeType": "updated",
       "backfill": false,
       "discoveredAt": "2026-09-17T09:26:32.104Z",
-      "updatedAt": "2026-09-17T09:26:32.104Z",
-      "lastSeenAt": "2026-09-17T09:26:32.104Z",
-      "revisionEvents": []
+      "updatedAt": "2026-09-19T05:43:17.390108+00:00",
+      "lastSeenAt": "2026-09-19T05:43:17.390108+00:00",
+      "revisionEvents": [
+        {
+          "changeId": "hf:changh95/pi05-base-p300x2:0eaeac818c9de9ae8f83b52d6ad70e0282ab2fa7",
+          "at": "2026-09-19T05:43:17.390108+00:00",
+          "note": "完整模型卡新增双服务组/多客户端方案，并将原76.1毫秒进程内、78.9毫秒HTTP报告更新为50.5/53毫秒。软件及配置有变化，这不是同条件独立复测，也不代表真机任务成功率提升。",
+          "previous": {
+            "id": "hf:changh95/pi05-base-p300x2",
+            "title": "π0.5 base deployment on two Tenstorrent P300 boards",
+            "zhTitle": "π0.5 四芯片部署：76.1 毫秒动作块推理，闭环尚未验证",
+            "authors": [
+              "changh95"
+            ],
+            "category": "systems",
+            "tags": [
+              "部署",
+              "VLA",
+              "推理加速"
+            ],
+            "contentTypes": [
+              "report"
+            ],
+            "type": "产物与实验报告",
+            "source": "作者公开 Hugging Face 完整技术卡与固定提交",
+            "canonicalUrl": "https://huggingface.co/changh95/pi05-base-p300x2",
+            "identityLinks": [
+              "https://huggingface.co/changh95/pi05-base-p300x2"
+            ],
+            "aliasIds": [],
+            "version": "6a9ad2bb63ea97975e03b9f3f8926c1a142ad771",
+            "sourceUpdatedAt": "2026-09-17T04:16:06.000Z",
+            "checkedAt": "2026-09-17T09:25:11.265861+00:00",
+            "status": "full",
+            "reviewStatus": "full_source_read",
+            "editorialPriority": 84,
+            "editorialPriorityReason": "编辑按可复用产物、直接机器人相关性和证据完整性判断，非公开热度。",
+            "popularity": {
+              "status": "unmeasured",
+              "score": null,
+              "metrics": {
+                "githubStars": null,
+                "hfUpvotes": null
+              },
+              "evidence": [],
+              "basis": "仅为已核实公开关注信号；未知不当零，累计数不代表当日新增或研究质量。"
+            },
+            "links": [
+              {
+                "label": "原始技术卡",
+                "url": "https://huggingface.co/changh95/pi05-base-p300x2"
+              },
+              {
+                "label": "发布提交",
+                "url": "https://huggingface.co/changh95/pi05-base-p300x2/commits/main"
+              }
+            ],
+            "evidence": "本轮实际读完整公开技术卡及提交记录；所列测量由作者报告，未独立运行模型、下载全量数据或复算。",
+            "evidenceDetails": [
+              {
+                "url": "https://huggingface.co/changh95/pi05-base-p300x2",
+                "location": "How the four chips are used；Accuracy and speed；Limitations",
+                "supports": "并行方案、固定形状、100次测量、18个随机观测及未做闭环的边界",
+                "checkedAt": "2026-09-17T09:25:11.265861+00:00",
+                "sourceRetrievedAt": "2026-09-17T09:09:57.010986+00:00"
+              },
+              {
+                "url": "https://huggingface.co/changh95/pi05-base-p300x2/commits/main",
+                "location": "各提交的绝对 date 与上传批次记录",
+                "supports": "9/17 04:04:15Z 首次技术卡提交，04:16:06Z 完成本轮发布说明；不是 π0.5 原论文发表时间。",
+                "checkedAt": "2026-09-17T09:25:11.265861+00:00",
+                "sourceRetrievedAt": "2026-09-17T09:17:37.003127+00:00"
+              }
+            ],
+            "background": "将已有 VLA 落到不同加速硬件时，动作模型的小矩阵计算、跨芯片通信及预处理都可能限制时延。该报告移植原有 π0.5 base，未提出或训练新的基础策略。",
+            "innovation": "把两块 P300 的四颗 Blackhole 芯片组成环，视觉塔与 VLM 前缀按张量并行，动作专家在各芯片复制；将视觉、前缀和十步去噪捕获为一次 Metal trace，并提供 HTTP 服务。",
+            "summary": "把两块 P300 的四颗 Blackhole 芯片组成环，视觉塔与 VLM 前缀按张量并行，动作专家在各芯片复制；将视觉、前缀和十步去噪捕获为一次 Metal trace，并提供 HTTP 服务。",
+            "experiments": "作者在 batch 1、双 224×224 图像、224 tokens、十步去噪下，100 次热启动进程内推理的动作块中位延迟为 76.1 ms；每块含 50×32 个归一化动作值。HTTP 端到端中位数 78.9 ms、p90 80.4 ms。同一代码单 P300 芯片为 122.7 ms。两随机观测 PCC 为 .9988/.9986；另外 16 个观测最低 .9201、均值 .9846。",
+            "conclusion": "可核实的是固定形状下的部署测量和数值对照。此 base 包未进行 LIBERO 闭环测试；单芯片另一包的 4/5 结果使用微调权重，不能转用于这里。",
+            "evaluation": "编辑评价：报告分开给进程内与 HTTP 时延有参考价值，但 657 actions/s 只是每块 50 个预测动作折算，不是机器人反馈控制频率。无同条件 GPU 对照，PCC 也不能替代任务成功率。",
+            "futureDirections": "编辑提出的后续假设：将同一微调策略接入闭环，对齐总功耗、视觉频率与异步执行条件，再比较 GPU 和多芯片方案；还应统计不同观测下的尾部数值误差。",
+            "publishedAt": "2026-09-17T04:04:15Z",
+            "releaseAt": "2026-09-17T04:16:06Z",
+            "dateNote": "9/17 04:04:15Z 首次技术卡提交，04:16:06Z 完成本轮发布说明；不是 π0.5 原论文发表时间。",
+            "changeType": "new",
+            "backfill": false,
+            "discoveredAt": "2026-09-17T09:26:32.104Z",
+            "updatedAt": "2026-09-17T09:26:32.104Z",
+            "lastSeenAt": "2026-09-17T09:26:32.104Z"
+          }
+        }
+      ],
+      "editorialPriorityBasis": "无可比公开热度时，按机器人相关性、证据完整性与可复用研究价值补充；不是互动量。",
+      "artifactVersion": "0eaeac818c9de9ae8f83b52d6ad70e0282ab2fa7",
+      "artifactCreatedAt": "2026-09-17T04:03:31.000Z",
+      "substantiveUpdate": true,
+      "changeId": "hf:changh95/pi05-base-p300x2:0eaeac818c9de9ae8f83b52d6ad70e0282ab2fa7",
+      "stableChangeId": "hf:changh95/pi05-base-p300x2:0eaeac818c9de9ae8f83b52d6ad70e0282ab2fa7",
+      "eventAt": "2026-09-18T21:26:10.000Z",
+      "changeNote": "完整模型卡新增双服务组/多客户端方案，并将原76.1毫秒进程内、78.9毫秒HTTP报告更新为50.5/53毫秒。软件及配置有变化，这不是同条件独立复测，也不代表真机任务成功率提升。"
     },
     {
       "id": "hf:datasets/ytung/g1-pipette-augmented",
@@ -35296,6 +35651,743 @@
       "updatedAt": "2026-09-18T09:39:21.834Z",
       "lastSeenAt": "2026-09-18T09:39:21.834Z",
       "revisionEvents": []
+    },
+    {
+      "id": "report:seeq-generalist-value-functions",
+      "title": "SeeQ: Training Generalist Value Functions for Long-Horizon Robotic Manipulation",
+      "zhTitle": "SeeQ：用子任务价值为长程操作选动作",
+      "category": "rl",
+      "publishedAt": "2026-09-18T15:32:46.000Z",
+      "canonicalUrl": "https://saksham002.github.io/seeq/",
+      "version": "公开报告",
+      "authors": [
+        "Saksham Singh",
+        "Zheyuan Hu",
+        "Max Sobol Mark",
+        "Jeffrey Yu",
+        "Zackory Erickson",
+        "Aviral Kumar"
+      ],
+      "tags": [
+        "价值学习",
+        "长程操作",
+        "VLA",
+        "离线强化学习"
+      ],
+      "contentTypes": [
+        "report"
+      ],
+      "type": "技术报告",
+      "checkedAt": "2026-09-19T05:43:17.168331+00:00",
+      "reviewStatus": "primary_methods_results_and_limitations_read",
+      "status": "full_verified",
+      "editorialPriority": 98,
+      "editorialPriorityBasis": "无可比公开热度时，按机器人相关性、证据完整性与可复用研究价值补充；不是互动量。",
+      "evidence": "已读原始方法、验证结果与局限；未重跑实验。评价及组合方向为编辑分析或研究假设。",
+      "links": [
+        {
+          "label": "原始报告",
+          "url": "https://saksham002.github.io/seeq/"
+        },
+        {
+          "label": "固定版本",
+          "url": "https://huggingface.co/CMU-AIRe/SeeQ-3B/tree/c25ba6b92264c4a277383111dfb8d7f67431a53a"
+        },
+        {
+          "label": "模型卡与权重",
+          "url": "https://huggingface.co/CMU-AIRe/SeeQ-3B"
+        }
+      ],
+      "evidenceDetails": [
+        {
+          "url": "https://huggingface.co/CMU-AIRe/SeeQ-3B",
+          "location": "公开标签索引 createdAt/lastModified/sha；完整 README",
+          "supports": "产物日期、固定提交与卡片方法/验证条件。",
+          "checkedAt": "2026-09-19T05:43:17.168331+00:00"
+        },
+        {
+          "url": "https://saksham002.github.io/seeq/",
+          "location": "Method；Real-world results；Ablations",
+          "supports": "子任务条件价值、两平台四任务各24次、逐任务成功次数、目标任务微调。",
+          "checkedAt": "2026-09-19T05:43:17.168331+00:00"
+        },
+        {
+          "url": "https://huggingface.co/CMU-AIRe/SeeQ-3B",
+          "location": "Model description；Training；Limitations",
+          "supports": "PaliGemma 3B、RoboCOIN预训练、子任务回报定义和模型使用限制。",
+          "checkedAt": "2026-09-19T05:43:17.168331+00:00"
+        }
+      ],
+      "summary": "先识别当前子任务，再用价值模型筛选动作块；公开真机结果显示收益，但目标任务仍需微调。",
+      "background": "长程操作只在整项任务结束时给奖励，价值学习容易受漫长时序和误差传播影响；直接对完整流程估分，也难以判断眼前动作是否推进了当前步骤。",
+      "innovation": "SeeQ 将自然语言子任务预测与动作价值联合训练，使时序差分学习停留在当前子任务内；部署时由模型推断子任务，再对 π0.5 生成的候选动作块做 best-of-N 选择。它沿用策略提供动作，新增的是可跨任务预训练的选择器。",
+      "experiments": "项目在两个真实机器人平台、四类操作上各做24次试验：折衬衫由10/24提升至22/24，开盖10/24→15/24，装包9/24→17/24，积木5/24→10/24。模型先在 RoboCOIN 的131任务约4万回合上预训练，再对目标任务微调；这些结果不代表零样本迁移。",
+      "conclusion": "在所列目标任务与候选动作生成方式下，子任务价值能改善长程执行。模型卡已公开，项目的论文按钮尚无有效链接，因此这里依据完整项目报告和模型说明，而非未发布论文。",
+      "evaluation": "【编辑分析】价值与策略解耦便于复用；关键风险是子任务识别错误和候选动作本身不足。四任务每项24次的证据有限，且分数表示子任务回报，不能当作整个任务成功概率。多候选推理的时延也需纳入比较。",
+      "futureDirections": "【研究假设】可先用动作约束层筛除不可行动作，再交给 SeeQ 排序；固定候选数、推理时延和训练数据，比较纯策略、仅约束、仅价值与二者组合，并单独统计子任务切换误判。",
+      "sourceUpdatedAt": "2026-09-18T16:57:30.000Z",
+      "artifactVersion": "c25ba6b92264c4a277383111dfb8d7f67431a53a",
+      "artifactCreatedAt": "2026-09-18T15:32:46.000Z",
+      "dateNote": "publishedAt 为公开产物仓库创建时间；sourceUpdatedAt 为当前提交时间，不等同论文发表或性能刷新。",
+      "identityLinks": [
+        "https://saksham002.github.io/seeq/",
+        "https://huggingface.co/CMU-AIRe/SeeQ-3B"
+      ],
+      "popularity": {
+        "status": "unmeasured",
+        "score": null,
+        "metrics": {
+          "githubStars": null,
+          "hfUpvotes": null
+        },
+        "evidence": [],
+        "checkedAt": "2026-09-19T05:43:17.168331+00:00",
+        "missingMetrics": [
+          "githubStars",
+          "hfUpvotes"
+        ],
+        "basis": "没有取得可归属的论文投票或专属仓库数值，保持未知；新闻跟进和模型卡点赞不换算成论文投票。",
+        "otherSignals": [
+          {
+            "metric": "hf_model_likes",
+            "value": 1,
+            "url": "https://huggingface.co/CMU-AIRe/SeeQ-3B",
+            "checkedAt": "2026-09-19T05:17:40.885632+00:00",
+            "scope": "模型点赞，与论文投票不同；未计入既有排序分"
+          }
+        ]
+      },
+      "discoveredAt": "2026-09-19T05:43:17.390108+00:00",
+      "updatedAt": "2026-09-19T05:43:17.390108+00:00",
+      "lastSeenAt": "2026-09-19T05:43:17.390108+00:00",
+      "revisionEvents": []
+    },
+    {
+      "id": "doi:10.1002/adrr.70163",
+      "title": "WorMa: An Undulatory Robot With Center of Mass Regulation via Internal Fluid Redistribution for Amphibious Locomotion",
+      "zhTitle": "WorMa：通过内部液体移动质心的两栖机器人",
+      "category": "theory",
+      "publishedAt": "2026-09-14",
+      "canonicalUrl": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adrr.70163",
+      "version": "期刊在线版",
+      "authors": [
+        "Daniil Filimonov",
+        "Nana Obayashi"
+      ],
+      "tags": [
+        "变质心",
+        "动力学",
+        "两栖运动",
+        "形态控制"
+      ],
+      "contentTypes": [
+        "paper",
+        "news"
+      ],
+      "type": "研究论文",
+      "checkedAt": "2026-09-19T05:43:17.168331+00:00",
+      "reviewStatus": "primary_methods_results_and_limitations_read",
+      "status": "full_verified",
+      "editorialPriority": 96,
+      "editorialPriorityBasis": "无可比公开热度时，按机器人相关性、证据完整性与可复用研究价值补充；不是互动量。",
+      "evidence": "已读原始方法、验证结果与局限；未重跑实验。评价及组合方向为编辑分析或研究假设。",
+      "links": [
+        {
+          "label": "原始报告",
+          "url": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adrr.70163"
+        },
+        {
+          "label": "机构解读",
+          "url": "https://engineering.nyu.edu/news/robot-shifts-its-own-weight-cross-land-steps-and-water"
+        }
+      ],
+      "evidenceDetails": [
+        {
+          "url": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adrr.70163",
+          "location": "First published；§§2.2、3.4、4、5、6；Figure 11",
+          "supports": "原始日期、变质心结构、19.5°坡面和15厘米台阶条件；完整转移110秒；运动阶段计时、人工控制和实验局限。",
+          "checkedAt": "2026-09-19T05:43:17.168331+00:00"
+        }
+      ],
+      "summary": "让内部液体在头尾之间转移，用质量分布辅助波动步态跨越地形；转移耗时仍是重要约束。",
+      "background": "适合平地的波动运动，在上坡、台阶与水面上需要不同的质量分布。只增加外部关节和专用机构，会带来结构与控制负担。",
+      "innovation": "WorMa 通过泵送内部液体调整头尾质心，与既有波动运动配合；把可调质量分布作为另一种运动控制变量。",
+      "experiments": "原型进行了平面、刚性坡面、台阶与水中实验：前重配置达到19.5°坡面，配合质心切换和身体动作完成15厘米台阶。完整液体转移约需110秒；文中部分速度与运输代价按运动阶段计算，不能据此推断包含等待的整段任务效率。",
+      "conclusion": "实验支持质量重分配对跨环境运动有帮助；台阶过程包含人工时序控制与身体动作调整，并非仅靠泵水自动完成。",
+      "evaluation": "【编辑分析】内部质量调节的机械思路有价值，但有限重复、坡面侧向导轨、慢速泵送及人工操作限制外推。应区分运动阶段指标、泵能耗与任务总时间。",
+      "futureDirections": "【研究假设】把液体转移作为慢速规划变量，与快速接触 MPC 配合；比较固定质心、人工切换和感知触发规划，以包含泵送等待的总时间、总能耗及成功率评估。",
+      "doi": "10.1002/adrr.70163",
+      "dateNote": "原始在线发表日期为2026-09-14；9月17日机构报道及9月18日新闻跟进为发现线索，不另计研究。",
+      "popularity": {
+        "status": "unmeasured",
+        "score": null,
+        "metrics": {
+          "githubStars": null,
+          "hfUpvotes": null
+        },
+        "evidence": [],
+        "checkedAt": "2026-09-19T05:43:17.168331+00:00",
+        "missingMetrics": [
+          "githubStars",
+          "hfUpvotes"
+        ],
+        "basis": "没有取得可归属的论文投票或专属仓库数值，保持未知；新闻跟进和模型卡点赞不换算成论文投票。",
+        "otherSignals": [
+          {
+            "metric": "verified_news_followup",
+            "url": "https://spectrum.ieee.org/video-friday-quadrotor-from-birotor",
+            "checkedAt": "2026-09-19T05:43:17.168331+00:00",
+            "scope": "已读取独立新闻跟进；无互动量，不虚构数值热度"
+          }
+        ]
+      },
+      "discoveredAt": "2026-09-19T05:43:17.390108+00:00",
+      "updatedAt": "2026-09-19T05:43:17.390108+00:00",
+      "lastSeenAt": "2026-09-19T05:43:17.390108+00:00",
+      "revisionEvents": []
+    },
+    {
+      "id": "hf:Aasdfip/longnav-mshab-pick-flow-native-speedmix-20hz",
+      "title": "Longnav MSHAB native-action flow policy with speed-mixed demonstrations",
+      "zhTitle": "Longnav：速度混合示教训练移动操作流策略",
+      "category": "vla",
+      "publishedAt": "2026-09-19T01:11:42.000Z",
+      "canonicalUrl": "https://huggingface.co/Aasdfip/longnav-mshab-pick-flow-native-speedmix-20hz",
+      "version": "公开报告",
+      "authors": [
+        "Aasdfip（模型发布账号）"
+      ],
+      "tags": [
+        "移动操作",
+        "仿真",
+        "行为克隆",
+        "流匹配"
+      ],
+      "contentTypes": [
+        "report"
+      ],
+      "type": "技术报告",
+      "checkedAt": "2026-09-19T05:43:17.168331+00:00",
+      "reviewStatus": "primary_methods_results_and_limitations_read",
+      "status": "full_verified",
+      "editorialPriority": 78,
+      "editorialPriorityBasis": "无可比公开热度时，按机器人相关性、证据完整性与可复用研究价值补充；不是互动量。",
+      "evidence": "已读原始方法、验证结果与局限；未重跑实验。评价及组合方向为编辑分析或研究假设。",
+      "links": [
+        {
+          "label": "原始报告",
+          "url": "https://huggingface.co/Aasdfip/longnav-mshab-pick-flow-native-speedmix-20hz"
+        },
+        {
+          "label": "固定版本",
+          "url": "https://huggingface.co/Aasdfip/longnav-mshab-pick-flow-native-speedmix-20hz/tree/be299c81b88264caa0476cd3eb763c7614f4940a"
+        },
+        {
+          "label": "实现分支",
+          "url": "https://github.com/averyxi42/spatial_training/tree/mshab"
+        }
+      ],
+      "evidenceDetails": [
+        {
+          "url": "https://huggingface.co/Aasdfip/longnav-mshab-pick-flow-native-speedmix-20hz",
+          "location": "公开标签索引 createdAt/lastModified/sha；完整 README",
+          "supports": "产物日期、固定提交与卡片方法/验证条件。",
+          "checkedAt": "2026-09-19T05:43:17.168331+00:00"
+        },
+        {
+          "url": "https://huggingface.co/Aasdfip/longnav-mshab-pick-flow-native-speedmix-20hz",
+          "location": "Architecture；Training；Evaluation；Frequency/limitations",
+          "supports": "252次场景留出评测、0.575/0.313与BC对照、不同种子/频率、20Hz动作与2.5Hz重规划。",
+          "checkedAt": "2026-09-19T05:43:17.168331+00:00"
+        }
+      ],
+      "summary": "用速度混合示教训练原生 Fetch 动作流策略；仿真中曾经完成与结束时仍成功之间差距明显。",
+      "background": "移动操作既要协调底盘和机械臂，也要处理演示速度差异。单看一次触发成功，可能掩盖抓起后又掉落或未能稳定保持的问题。",
+      "innovation": "报告采用 Qwen3-VL 视觉语言主干和分别处理机械臂/底盘的流动作头，在不同减速方式混合的专家示教上做行为克隆，直接输出 Fetch 原生命令，避免另设动作转换器。",
+      "experiments": "在63个未见场景配置、各4个种子组成的252次 MSHAB 仿真测试中，曾经成功率为0.575，结束时成功率为0.313；所列 π0.5 BC 为0.563/0.222。两者决策频率和种子不完全匹配，不能据小差异断言优胜。标称20Hz是动作采样频率，每次执行8步，对应2.5Hz重规划。",
+      "conclusion": "这是移动操作行为克隆的可复核工程报告与权重发布，尚无真机证据；成功保持能力仍明显弱于短暂触发成功。",
+      "evaluation": "【编辑分析】同时披露两种成功口径值得借鉴。训练演示在首次成功后很快截断，可能缺少保持状态的数据；更大的视觉主干也没有自动解决终态稳定性。报告中的 PPO 行属于对照，不是此模型经过强化学习后的结果。",
+      "futureDirections": "【研究假设】在相同场景种子、决策频率与算力下，加入成功后的保持演示，再比较行为克隆与残差 RL；同时报告终态成功、首次成功、碰撞和耗时，检验收益是否来自更多保持数据。",
+      "sourceUpdatedAt": "2026-09-19T01:12:33.000Z",
+      "artifactVersion": "be299c81b88264caa0476cd3eb763c7614f4940a",
+      "artifactCreatedAt": "2026-09-19T01:11:42.000Z",
+      "dateNote": "publishedAt 为公开产物仓库创建时间；sourceUpdatedAt 为当前提交时间，不等同论文发表或性能刷新。",
+      "popularity": {
+        "status": "unmeasured",
+        "score": null,
+        "metrics": {
+          "githubStars": null,
+          "hfUpvotes": null
+        },
+        "evidence": [],
+        "checkedAt": "2026-09-19T05:43:17.168331+00:00",
+        "missingMetrics": [
+          "githubStars",
+          "hfUpvotes"
+        ],
+        "basis": "没有取得可归属的论文投票或专属仓库数值，保持未知；新闻跟进和模型卡点赞不换算成论文投票。"
+      },
+      "discoveredAt": "2026-09-19T05:43:17.390108+00:00",
+      "updatedAt": "2026-09-19T05:43:17.390108+00:00",
+      "lastSeenAt": "2026-09-19T05:43:17.390108+00:00",
+      "revisionEvents": []
+    },
+    {
+      "id": "hf:datasets/stray-light/zerograv-manipulation-regular-gravity-trajectories-state-v1",
+      "title": "Regular-gravity control trajectories for zero-gravity manipulation studies",
+      "zhTitle": "重力对照轨迹：为失重操作研究提供匹配实验数据",
+      "category": "systems",
+      "publishedAt": "2026-09-18T22:39:14.000Z",
+      "canonicalUrl": "https://huggingface.co/datasets/stray-light/zerograv-manipulation-regular-gravity-trajectories-state-v1",
+      "version": "公开报告",
+      "authors": [
+        "stray-light（数据发布账号）"
+      ],
+      "tags": [
+        "数据集",
+        "实验设计",
+        "动力学",
+        "强化学习"
+      ],
+      "contentTypes": [
+        "report"
+      ],
+      "type": "技术报告",
+      "checkedAt": "2026-09-19T05:43:17.168331+00:00",
+      "reviewStatus": "primary_methods_results_and_limitations_read",
+      "status": "full_verified",
+      "editorialPriority": 71,
+      "editorialPriorityBasis": "无可比公开热度时，按机器人相关性、证据完整性与可复用研究价值补充；不是互动量。",
+      "evidence": "已读原始方法、验证结果与局限；未重跑实验。评价及组合方向为编辑分析或研究假设。",
+      "links": [
+        {
+          "label": "原始报告",
+          "url": "https://huggingface.co/datasets/stray-light/zerograv-manipulation-regular-gravity-trajectories-state-v1"
+        },
+        {
+          "label": "固定版本",
+          "url": "https://huggingface.co/datasets/stray-light/zerograv-manipulation-regular-gravity-trajectories-state-v1/tree/4378adaeefa192704337e10af3c9b917f01cbb8e"
+        }
+      ],
+      "evidenceDetails": [
+        {
+          "url": "https://huggingface.co/datasets/stray-light/zerograv-manipulation-regular-gravity-trajectories-state-v1",
+          "location": "公开标签索引 createdAt/lastModified/sha；完整 README",
+          "supports": "产物日期、固定提交与卡片方法/验证条件。",
+          "checkedAt": "2026-09-19T05:43:17.168331+00:00"
+        },
+        {
+          "url": "https://huggingface.co/datasets/stray-light/zerograv-manipulation-regular-gravity-trajectories-state-v1",
+          "location": "Dataset composition；Matched control；Generation/QA；Limitations",
+          "supports": "四任务各1000段；末15帧成功、15Hz；每任务单一专家种子、状态数据及未随包发布专家权重。",
+          "checkedAt": "2026-09-19T05:43:17.168331+00:00"
+        }
+      ],
+      "summary": "公开四类操作的常重力成功轨迹作为失重研究对照；保持训练与筛选流程接近，但仍需跨种子验证。",
+      "background": "比较失重和常重力策略时，初始状态、训练预算或成功筛选不同都可能造成混淆，需要能明确说明控制变量的轨迹数据。",
+      "innovation": "数据报告在 DROID/ManiSkill 设置中保留与失重实验匹配的三维生成范围、初始扰动、PPO流程和质量筛选，只改变重力条件，保存状态轨迹及环境代码快照。",
+      "experiments": "四个任务各收录1000段经筛选的成功轨迹，末尾15帧持续成功作为质量条件，控制采样为15Hz。每个任务/条件只有一个专家训练种子；发布不含图像或专家检查点，也没有证明用这些轨迹训练后会提高泛化性能。",
+      "conclusion": "这套产物有助于搭建重力条件对照，当前证据支持数据组成与生成流程，不能当作已完成的跨重力迁移结论。",
+      "evaluation": "【编辑分析】匹配变量的设计比简单拼接两套数据更有解释力，但只保留成功样本会改变状态分布，单一专家种子也可能把训练偶然性混入重力效应。",
+      "futureDirections": "【研究假设】用相同数量轨迹分别训练策略，在独立专家种子和共同初始状态上比较；保留失败轨迹与成功保持指标，区分重力条件、筛选偏差和控制器训练差异。",
+      "sourceUpdatedAt": "2026-09-18T22:41:20.000Z",
+      "artifactVersion": "4378adaeefa192704337e10af3c9b917f01cbb8e",
+      "artifactCreatedAt": "2026-09-18T22:39:14.000Z",
+      "dateNote": "publishedAt 为公开产物仓库创建时间；sourceUpdatedAt 为当前提交时间，不等同论文发表或性能刷新。",
+      "popularity": {
+        "status": "unmeasured",
+        "score": null,
+        "metrics": {
+          "githubStars": null,
+          "hfUpvotes": null
+        },
+        "evidence": [],
+        "checkedAt": "2026-09-19T05:43:17.168331+00:00",
+        "missingMetrics": [
+          "githubStars",
+          "hfUpvotes"
+        ],
+        "basis": "没有取得可归属的论文投票或专属仓库数值，保持未知；新闻跟进和模型卡点赞不换算成论文投票。"
+      },
+      "discoveredAt": "2026-09-19T05:43:17.390108+00:00",
+      "updatedAt": "2026-09-19T05:43:17.390108+00:00",
+      "lastSeenAt": "2026-09-19T05:43:17.390108+00:00",
+      "revisionEvents": []
+    },
+    {
+      "id": "arxiv:2606.04811",
+      "title": "Dream.exe: Can Video Generation Models Dream Executable Robot Manipulation?",
+      "zhTitle": "Dream.exe：视频生成的动作能否在物理仿真中执行",
+      "category": "wam",
+      "publishedAt": "2026-06-03T12:35:35Z",
+      "canonicalUrl": "https://arxiv.org/abs/2606.04811",
+      "version": "v2",
+      "authors": [
+        "Rui Zhao",
+        "Kaiming Yang",
+        "Jifeng Zhu",
+        "Siyang Chen",
+        "Ziqi Wang",
+        "Weijia Wu",
+        "Kevin Qinghong Lin",
+        "Heng Wang",
+        "Mike Zheng Shou"
+      ],
+      "tags": [
+        "世界模型",
+        "视频到动作",
+        "评测",
+        "可执行性"
+      ],
+      "contentTypes": [
+        "paper",
+        "report"
+      ],
+      "type": "研究论文",
+      "checkedAt": "2026-09-19T05:43:17.168331+00:00",
+      "reviewStatus": "primary_methods_results_and_limitations_read",
+      "status": "full_verified",
+      "editorialPriority": 95,
+      "editorialPriorityBasis": "无可比公开热度时，按机器人相关性、证据完整性与可复用研究价值补充；不是互动量。",
+      "evidence": "已读原始方法、验证结果与局限；未重跑实验。评价及组合方向为编辑分析或研究假设。",
+      "links": [
+        {
+          "label": "原始报告",
+          "url": "https://arxiv.org/abs/2606.04811"
+        },
+        {
+          "label": "论文全文",
+          "url": "https://arxiv.org/html/2606.04811v2"
+        },
+        {
+          "label": "模型固定版本",
+          "url": "https://huggingface.co/kaimingyang/DVD_for_Dream.exe/tree/36ea6c50ea9c777ea42238915c192d7a9d6a8a87"
+        },
+        {
+          "label": "评测数据",
+          "url": "https://huggingface.co/datasets/kaimingyang/Dream.exe"
+        }
+      ],
+      "evidenceDetails": [
+        {
+          "url": "https://arxiv.org/abs/2606.04811",
+          "location": "Submission history",
+          "supports": "原始时间及v2时间。",
+          "checkedAt": "2026-09-19T05:43:17.168331+00:00"
+        },
+        {
+          "url": "https://arxiv.org/html/2606.04811v2",
+          "location": "§§3–4；Table 4；Appendix C.2",
+          "supports": "8模型、101任务；指令合并口径；16.5%、60.4%与98.1%对应生成模型和两个参考路线。",
+          "checkedAt": "2026-09-19T05:43:17.168331+00:00"
+        },
+        {
+          "url": "https://huggingface.co/datasets/kaimingyang/Dream.exe",
+          "location": "Data layout；Unavailable generation inputs；Included results",
+          "supports": "101案例、缺失输入规则、当前CosmosPolicy视频重建路线。",
+          "checkedAt": "2026-09-19T05:43:17.168331+00:00"
+        },
+        {
+          "url": "https://huggingface.co/kaimingyang/DVD_for_Dream.exe",
+          "location": "Reproducibility；checkpoint layout",
+          "supports": "共享及逐案例运行模型不是可任意互换的通用LoRA。",
+          "checkedAt": "2026-09-19T05:43:17.168331+00:00"
+        }
+      ],
+      "summary": "随本周深度模型与评测产物发布补录旧论文：把生成视频转换为机器人轨迹，分开测视觉质量和任务成功。",
+      "background": "看起来合理的视频不一定包含可执行的接触与运动。若只用视觉评分判断世界模型，容易忽略深度误差、抓取时序及长程失败。",
+      "innovation": "Dream.exe 将视频生成、深度与轨迹提取、仿真执行串成评测流程。当前开放101个固定场景案例及相关输入/结果，DVD发布包含共享与逐案例检查点，复现时必须区分两种模型。",
+      "experiments": "论文比较8类生成/策略模型，在101个操作任务上评估；原版与增强指令结果合并报告。生成模型最高整体二元成功率为16.5%；真实演示视频经估计深度重放为60.4%，换用仿真真值深度为98.1%，说明执行结果也受提取链条影响。以上是原论文结果，不是本周开源后新跑的提升。",
+      "conclusion": "视频观感不能替代可执行性检验；基准也不能将所有失败单独归因于视频模型。部分生成输入不可用，当前数据卡要求将这些路线标为 partial，而非完整复现。",
+      "evaluation": "【编辑分析】同一视频到执行接口方便诊断，但深度、相机选择、逐案例适配和缺失输入会影响公平性。论文与产物说明对 CosmosPolicy 路线的描述应结合当前清单核对，不把动作原生输出和视频重建后的结果混作一种测试。",
+      "futureDirections": "【研究假设】把 WAM 的动作头与视频提取头放到相同初始状态、相同任务及反馈预算下评测；同时报告真实演示参考上界、输入覆盖率和任务成功，分离生成、几何估计与控制三个瓶颈。",
+      "sourceUpdatedAt": "2026-09-18T18:21:23.000Z",
+      "paperUpdatedAt": "2026-06-04T10:52:20Z",
+      "artifactVersion": "36ea6c50ea9c777ea42238915c192d7a9d6a8a87",
+      "artifactCreatedAt": "2026-09-14T18:12:49.000Z",
+      "dateNote": "论文首次提交2026-06-03；本轮由9月14日创建、9月18日修改的官方模型仓库发现并补录。不是9月新论文，也未将模型提交时间写成论文修订日期。",
+      "identityLinks": [
+        "https://arxiv.org/abs/2606.04811",
+        "https://huggingface.co/kaimingyang/DVD_for_Dream.exe",
+        "https://huggingface.co/datasets/kaimingyang/Dream.exe"
+      ],
+      "popularity": {
+        "status": "verified",
+        "score": 57.81,
+        "metrics": {
+          "githubStars": null,
+          "hfUpvotes": 17
+        },
+        "evidence": [
+          {
+            "url": "https://huggingface.co/papers/2606.04811",
+            "apiUrl": "https://huggingface.co/api/papers/2606.04811",
+            "metric": "hf_paper_upvotes",
+            "value": 17,
+            "checkedAt": "2026-09-19T05:32:12.635929+00:00",
+            "scope": "公开论文累计投票，非当日新增"
+          }
+        ],
+        "checkedAt": "2026-09-19T05:43:17.168331+00:00",
+        "missingMetrics": [
+          "githubStars"
+        ],
+        "basis": "；HF论文累计投票 17；仅代表可核公开信号，未知不记零，累计数不是当天热度或研究质量。"
+      },
+      "discoveredAt": "2026-09-19T05:43:17.390108+00:00",
+      "updatedAt": "2026-09-19T05:43:17.390108+00:00",
+      "lastSeenAt": "2026-09-19T05:43:17.390108+00:00",
+      "revisionEvents": []
+    },
+    {
+      "id": "doi:10.1177/02783649261486468",
+      "title": "A transformable tethered aerial platform for robot-environment interactions",
+      "zhTitle": "可变形系绳飞行平台：分体飞行、合体穿隙与接触操作",
+      "category": "theory",
+      "publishedAt": "2026-09-16",
+      "canonicalUrl": "https://doi.org/10.1177/02783649261486468",
+      "version": "期刊论文／作者稿",
+      "authors": [
+        "Ruobing Wang",
+        "Songnan Bai",
+        "Kaixu Dong",
+        "Hongqiang Wang",
+        "Pakpong Chirarattananon"
+      ],
+      "tags": [
+        "飞行机器人",
+        "混合系统",
+        "接触控制",
+        "动力学"
+      ],
+      "contentTypes": [
+        "paper",
+        "news"
+      ],
+      "type": "研究论文",
+      "checkedAt": "2026-09-19T05:43:17.168331+00:00",
+      "reviewStatus": "primary_methods_results_and_limitations_read",
+      "status": "full_verified",
+      "editorialPriority": 92,
+      "editorialPriorityBasis": "无可比公开热度时，按机器人相关性、证据完整性与可复用研究价值补充；不是互动量。",
+      "evidence": "已读原始方法、验证结果与局限；未重跑实验。评价及组合方向为编辑分析或研究假设。",
+      "links": [
+        {
+          "label": "原始报告",
+          "url": "https://doi.org/10.1177/02783649261486468"
+        },
+        {
+          "label": "作者论文全文",
+          "url": "https://climb.mie.utoronto.ca/pdfs/wang2026a.pdf"
+        }
+      ],
+      "evidenceDetails": [
+        {
+          "url": "https://api.crossref.org/works/10.1177/02783649261486468",
+          "location": "published-online；title；author",
+          "supports": "在线发表2026-09-16及DOI身份。",
+          "checkedAt": "2026-09-19T05:43:17.168331+00:00"
+        },
+        {
+          "url": "https://climb.mie.utoronto.ca/pdfs/wang2026a.pdf",
+          "location": "§§2–4；§§5.1–5.7；§6（正文第10–17页）",
+          "supports": "三模式设计，46秒演示误差，165克/机，40克和更换电机后的100克载荷，有限反馈及人工辅助限制。",
+          "checkedAt": "2026-09-19T05:43:17.168331+00:00"
+        }
+      ],
+      "summary": "两架双旋翼飞行器通过卷绳与磁连接切换构型，并把绳索用作操作和栖停工具。",
+      "background": "飞行平台进入狭小区域与实施接触操作需要不同形态；固定构型或额外机械手会增加结构负担。",
+      "innovation": "系统将松绳独立飞行、张紧协同飞行及合体四旋翼三种模式，与分模式位置控制和共用姿态控制结合；显式考虑系绳偏心连接带来的力矩。",
+      "experiments": "论文用室内动捕和室外RTK验证切换、搬运、穿隙与栖停。室内46秒切换演示的三轴质心RMS误差为2.2/1.6/3.6厘米；双机合计约330克，原电机搬运40克载荷，100克演示使用更高KV电机，不能直接混比。",
+      "conclusion": "实物实验支持同一平台在接入空间与物理交互阶段切换形态。仅一机有位置反馈时也能展示张紧和合体飞行，但绳角开环会产生更大振荡。",
+      "evaluation": "【编辑分析】把连结机构同时作为末端工具是有用的机械设计。控制主要面向非激烈机动，接触任务仍依赖人工辅助；论文未解决接触力调节、环境自主感知与规划。",
+      "futureDirections": "【研究假设】将绳索形状/张力估计接入接触规划器，以统一任务测试人工预设和自主切换；重点统计多次试验成功率、触碰峰值、穿隙失败及不同风扰下的恢复能力。",
+      "doi": "10.1177/02783649261486468",
+      "dateNote": "在线发表日由出版登记的 published-online 核验；作者稿页眉仍带模板年份，不据页眉猜日期。",
+      "popularity": {
+        "status": "unmeasured",
+        "score": null,
+        "metrics": {
+          "githubStars": null,
+          "hfUpvotes": null
+        },
+        "evidence": [],
+        "checkedAt": "2026-09-19T05:43:17.168331+00:00",
+        "missingMetrics": [
+          "githubStars",
+          "hfUpvotes"
+        ],
+        "basis": "没有取得可归属的论文投票或专属仓库数值，保持未知；新闻跟进和模型卡点赞不换算成论文投票。",
+        "otherSignals": [
+          {
+            "metric": "verified_news_followup",
+            "url": "https://spectrum.ieee.org/video-friday-quadrotor-from-birotor",
+            "checkedAt": "2026-09-19T05:43:17.168331+00:00",
+            "scope": "已读取独立新闻跟进；无互动量，不虚构数值热度"
+          }
+        ]
+      },
+      "discoveredAt": "2026-09-19T05:43:17.390108+00:00",
+      "updatedAt": "2026-09-19T05:43:17.390108+00:00",
+      "lastSeenAt": "2026-09-19T05:43:17.390108+00:00",
+      "revisionEvents": []
+    },
+    {
+      "id": "arxiv:2609.11697",
+      "title": "ActSafeGuard: Differentiable and Training-Aligned Constraint Enforcement for Flow-Matching Policies",
+      "zhTitle": "ActSafeGuard v2：补充约束复现细节，部分表格仍需澄清",
+      "category": "theory",
+      "type": "研究论文",
+      "contentTypes": [
+        "paper"
+      ],
+      "publishedAt": "2026-09-10T15:21:47+00:00",
+      "sourceUpdatedAt": "2026-09-14T05:08:09Z",
+      "sourceAnnouncedAt": "2026-09-11",
+      "version": "v2",
+      "authors": [
+        "Ma, Jianming",
+        "Jin, Rongjun",
+        "Si, Xiaxi",
+        "Zhang, Yang",
+        "Li, Yiheng",
+        "Gao, Yue"
+      ],
+      "canonicalUrl": "https://arxiv.org/abs/2609.11697",
+      "summary": "可微射线缩放让动作生成遵守给定约束；新附录补足逐任务指标，但 Fast-WAM 的主表与附表部分数值不一致。",
+      "innovation": "在每个离散流步中解析计算沿预测方向到凸可行域边界的缩放量，训练和推理共用该层；边界梯度允许沿可行面调整方向，不引入额外学习网络。v2新增具体关节边界、评测设置和逐任务附表。",
+      "links": [
+        {
+          "label": "论文原文",
+          "url": "https://arxiv.org/abs/2609.11697"
+        },
+        {
+          "label": "v2完整论文",
+          "url": "https://arxiv.org/html/2609.11697v2"
+        }
+      ],
+      "evidence": "已读原始方法、验证结果与局限；未重跑实验。评价及组合方向为编辑分析或研究假设。",
+      "evidenceDetails": [
+        {
+          "url": "https://arxiv.org/html/2609.11697v2",
+          "location": "Method；Table 1；Appendices A–G；Tables 8–9",
+          "supports": "凸可行域及初值条件；四任务300示教/100评测；12关节约束；逐任务结果、Fast-WAM主附表冲突和LDLJ标注问题。",
+          "checkedAt": "2026-09-19T05:43:17.168331+00:00"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.11697v1",
+          "location": "与v2主表及附录结构对比",
+          "supports": "主表结果已存在；v2增加详细约束、复现条件与逐任务附表，不据版本号宣称新真机试验。",
+          "checkedAt": "2026-09-19T05:43:17.168331+00:00"
+        }
+      ],
+      "popularity": {
+        "status": "unmeasured",
+        "score": null,
+        "metrics": {
+          "githubStars": null,
+          "hfUpvotes": null
+        },
+        "evidence": [],
+        "checkedAt": "2026-09-19T05:43:17.168331+00:00",
+        "missingMetrics": [
+          "githubStars",
+          "hfUpvotes"
+        ],
+        "basis": "没有取得可归属的论文投票或专属仓库数值，保持未知；新闻跟进和模型卡点赞不换算成论文投票。"
+      },
+      "windowClassification": "lookback_new_discovery",
+      "changeType": "updated",
+      "status": "full_verified",
+      "reviewStatus": "primary_methods_results_and_limitations_read",
+      "discoveredAt": "2026-09-14T02:33:48.382866+00:00",
+      "updatedAt": "2026-09-19T05:43:17.390108+00:00",
+      "lastSeenAt": "2026-09-19T05:43:17.390108+00:00",
+      "revisionEvents": [],
+      "tags": [
+        "动作约束",
+        "流匹配",
+        "VLA",
+        "WAM",
+        "论文修订"
+      ],
+      "checkedAt": "2026-09-19T05:43:17.168331+00:00",
+      "editorialPriority": 94,
+      "editorialPriorityBasis": "无可比公开热度时，按机器人相关性、证据完整性与可复用研究价值补充；不是互动量。",
+      "background": "流匹配动作在训练时无约束、部署时再截断，会造成训练执行不一致。问题不只是修正动作，还包括让学习过程看到约束边界。",
+      "experiments": "四个 RoboTwin 操作任务，各300段示教、100次独立评测，测试 π0.5 与 Fast-WAM。π0.5 的位置加单步位移约束下，放鞋由90%到98%、挂杯由21%到31%。所有约束方法都达到所定义的100%逐步约束满足率，不能把这个数当作本方法独有优势。真机两任务各5次是原有演示，并非本轮新实验。",
+      "conclusion": "方法在明确的凸动作集合、可行初值及所列测试条件下保持动作可行。v2 的主表1与附表9在 Fast-WAM 的部分静态/动态结果上不同，本日报不据这些冲突数字给出精确模型排名，需作者澄清。",
+      "evaluation": "【编辑分析】约束只覆盖机械臂关节，未覆盖夹爪、任意碰撞或全部接触风险；所谓速度边界实际是每步位移。附表 LDLJ 的展开文字与指标定义也不一致。新增复现细节有价值，但不支持“所有任务性能均保持”的无条件结论。",
+      "futureDirections": "【研究假设】在接触 MPC 给出的局部凸动作集合上接入该层，比较仅部署投影与训练推理共用层；先统一表格结果，再测试非凸障碍、模型误差、夹爪约束和实时开销。",
+      "substantiveUpdate": true,
+      "changeId": "arxiv:2609.11697:v2",
+      "stableChangeId": "arxiv:2609.11697:v2",
+      "eventAt": "2026-09-14T05:08:09Z",
+      "changeNote": "核验此前待查v2：增补约束边界、训练评测条件及逐任务附表，升级为完整分析；发现Fast-WAM主表与附表部分数值不一致，保留待澄清说明。未把旧真机演示当新增实验。",
+      "dateNote": "原始日期和首次收录保留；v2修订发生于9月14日，本轮完成遗留核验。",
+      "briefHistory": [
+        {
+          "promotedAt": "2026-09-19T05:43:17.390108+00:00",
+          "previous": {
+            "id": "arxiv:2609.11697",
+            "title": "ActSafeGuard: Differentiable and Training-Aligned Constraint Enforcement for Flow-Matching Policies",
+            "zhTitle": "ActSafeGuard：让流匹配策略在训练中学习动作可行边界",
+            "category": "embodied",
+            "type": "arXiv预印本",
+            "contentTypes": [
+              "paper"
+            ],
+            "publishedAt": "2026-09-10T15:21:47+00:00",
+            "sourceUpdatedAt": "2026-09-10T15:21:47+00:00",
+            "sourceAnnouncedAt": "2026-09-11",
+            "version": "v1",
+            "authors": [
+              "Ma, Jianming",
+              "Jin, Rongjun",
+              "Si, Xiaxi",
+              "Zhang, Yang",
+              "Li, Yiheng",
+              "Gao, Yue"
+            ],
+            "canonicalUrl": "https://arxiv.org/abs/2609.11697",
+            "summary": "把解析射线缩放构成的可微约束层接入训练，使动作可行性及边界梯度参与学习；安全范围取决于所设约束。",
+            "innovation": "把解析射线缩放构成的可微约束层接入训练，使动作可行性及边界梯度参与学习；安全范围取决于所设约束。",
+            "links": [
+              {
+                "label": "论文原文",
+                "url": "https://arxiv.org/abs/2609.11697"
+              }
+            ],
+            "evidence": "已阅读原始摘要与提交历史；以下仅为创新简讯，尚未完成全文实验核验。",
+            "evidenceDetails": [
+              {
+                "url": "https://arxiv.org/abs/2609.11697",
+                "location": "Abstract; Submission history",
+                "supports": "标题、作者、摘要与原始提交/版本时间"
+              }
+            ],
+            "popularity": {
+              "score": null,
+              "status": "unmeasured",
+              "metrics": {
+                "githubStars": null,
+                "hfUpvotes": null
+              },
+              "evidence": [],
+              "basis": "可归属的公开关注指标暂缺；不记作零。"
+            },
+            "windowClassification": "lookback_new_discovery",
+            "changeType": "new_work",
+            "status": "verified",
+            "reviewStatus": "innovation_verified",
+            "discoveredAt": "2026-09-14T02:33:48.382866+00:00",
+            "updatedAt": "2026-09-14T02:33:48.382866+00:00",
+            "lastSeenAt": "2026-09-14T02:33:48.382866+00:00",
+            "revisionEvents": []
+          }
+        }
+      ],
+      "aliasIds": []
     }
   ],
   "editions": [
@@ -51969,6 +53061,7 @@
         "arxiv:2609.13083",
         "arxiv:2609.12103",
         "arxiv:2609.09148",
+        "arxiv:2609.11697",
         "arxiv:2609.01384",
         "arxiv:2609.13053",
         "arxiv:2609.13015",
@@ -52010,7 +53103,6 @@
         "arxiv:2609.11920",
         "arxiv:2609.12036",
         "arxiv:2609.11775",
-        "arxiv:2609.11697",
         "arxiv:2609.11579",
         "arxiv:2609.11382",
         "arxiv:2609.11361",
@@ -52145,6 +53237,7 @@
         "arxiv:2609.13083",
         "arxiv:2609.12103",
         "arxiv:2609.09148",
+        "arxiv:2609.11697",
         "arxiv:2609.01384",
         "arxiv:2609.13053",
         "arxiv:2609.13015",
@@ -52186,7 +53279,6 @@
         "arxiv:2609.11920",
         "arxiv:2609.12036",
         "arxiv:2609.11775",
-        "arxiv:2609.11697",
         "arxiv:2609.11579",
         "arxiv:2609.11382",
         "arxiv:2609.11361",
@@ -127842,6 +128934,7 @@
         "arxiv:2503.10265",
         "arxiv:2509.16894",
         "arxiv:2608.13014",
+        "arxiv:2609.18514",
         "arxiv:2609.18259",
         "arxiv:2603.05757",
         "arxiv:2609.18073",
@@ -127878,7 +128971,6 @@
         "arxiv:2609.17728",
         "hf:datasets/yxma/React",
         "arxiv:2609.19080",
-        "arxiv:2609.18514",
         "arxiv:2609.18497",
         "arxiv:2609.18119",
         "arxiv:2609.17832",
@@ -128014,6 +129106,7 @@
         "arxiv:2503.10265",
         "arxiv:2509.16894",
         "arxiv:2608.13014",
+        "arxiv:2609.18514",
         "arxiv:2609.18259",
         "arxiv:2603.05757",
         "arxiv:2609.18073",
@@ -128031,11 +129124,11 @@
         "arxiv:2609.17625",
         "arxiv:2609.18359",
         "arxiv:2609.18191",
-        "arxiv:2609.18435",
-        "arxiv:2609.18293"
+        "arxiv:2609.18435"
       ],
       "analysisNeededIds": [],
       "briefIds": [
+        "arxiv:2609.18293",
         "arxiv:2609.18669",
         "arxiv:2606.21755",
         "arxiv:2609.17757",
@@ -128053,7 +129146,6 @@
         "arxiv:2609.17728",
         "hf:datasets/yxma/React",
         "arxiv:2609.19080",
-        "arxiv:2609.18514",
         "arxiv:2609.18497",
         "arxiv:2609.18119",
         "arxiv:2609.17832",
@@ -128178,7 +129270,7 @@
         "arxiv:2609.07534"
       ],
       "candidateCount": 170,
-      "rankingNote": "33 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 站内关注度代理分 = 10×ln(1+已核验GitHub累计stars) + 20×ln(1+已核验Hugging Face论文upvotes)。仅合计可测项，缺失为null；全部缺失则不评分。证据来自官方API、公开论文及仓库页，具体来源和观测时刻见条目。只计可归属的仓库，排除共用基础框架和跨代系列；累计关注不等于本日增量、论文质量或全网排名，未测候选的关注度仍未知。",
+      "rankingNote": "34 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 站内关注度代理分 = 10×ln(1+已核验GitHub累计stars) + 20×ln(1+已核验Hugging Face论文upvotes)。仅合计可测项，缺失为null；全部缺失则不评分。证据来自官方API、公开论文及仓库页，具体来源和观测时刻见条目。只计可归属的仓库，排除共用基础框架和跨代系列；累计关注不等于本日增量、论文质量或全网排名，未测候选的关注度仍未知。",
       "rankingVersion": 1
     },
     {
@@ -133787,6 +134879,7 @@
       ],
       "briefsSnapshot": [],
       "rankedIds": [
+        "arxiv:2609.18514",
         "arxiv:2607.19971",
         "doi:10.1109/lra.2026.3700428",
         "arxiv:2608.11521",
@@ -133794,18 +134887,18 @@
         "arxiv:2609.18964",
         "hf:datasets/BodenAI/RW-RL-HIL-Dataset",
         "hf:datasets/yxma/React",
-        "arxiv:2609.18514",
         "hf:kimtaegyu/TETHER",
         "hf:datasets/Myungkyu/layout_reconstruction-preset-gemini",
         "news:dm05-robocoliseum-20260915",
         "hf:datasets/shuaishuaicdp/robodojo-hybrid-episodes",
-        "hf:changh95/pi05-base-p300x2",
         "hf:datasets/ytung/g1-pipette-augmented",
         "hf:realhandinc/realhand-teleop",
+        "hf:changh95/pi05-base-p300x2",
         "blog:maxinsights-beyond-1m-hours-20260909",
         "blog:idc-physical-ai-scaled-deployment-20260917"
       ],
       "featuredIds": [
+        "arxiv:2609.18514",
         "arxiv:2607.19971",
         "doi:10.1109/lra.2026.3700428",
         "arxiv:2608.11521",
@@ -133813,21 +134906,20 @@
         "arxiv:2609.18964",
         "hf:datasets/BodenAI/RW-RL-HIL-Dataset",
         "hf:datasets/yxma/React",
-        "arxiv:2609.18514",
         "hf:kimtaegyu/TETHER",
         "hf:datasets/Myungkyu/layout_reconstruction-preset-gemini",
         "news:dm05-robocoliseum-20260915",
         "hf:datasets/shuaishuaicdp/robodojo-hybrid-episodes",
-        "hf:changh95/pi05-base-p300x2",
         "hf:datasets/ytung/g1-pipette-augmented",
         "hf:realhandinc/realhand-teleop",
+        "hf:changh95/pi05-base-p300x2",
         "blog:maxinsights-beyond-1m-hours-20260909",
         "blog:idc-physical-ai-scaled-deployment-20260917"
       ],
       "analysisNeededIds": [],
       "briefIds": [],
       "candidateCount": 17,
-      "rankingNote": "5 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 站内关注度代理分 = 10×ln(1+已核验GitHub累计stars) + 20×ln(1+已核验Hugging Face论文upvotes)。仅合计可测项，缺失为null；全部缺失则不评分。证据来自官方API、公开论文及仓库页，具体来源和观测时刻见条目。只计可归属的仓库，排除共用基础框架和跨代系列；累计关注不等于本日增量、论文质量或全网排名，未测候选的关注度仍未知。",
+      "rankingNote": "6 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 站内关注度代理分 = 10×ln(1+已核验GitHub累计stars) + 20×ln(1+已核验Hugging Face论文upvotes)。仅合计可测项，缺失为null；全部缺失则不评分。证据来自官方API、公开论文及仓库页，具体来源和观测时刻见条目。只计可归属的仓库，排除共用基础框架和跨代系列；累计关注不等于本日增量、论文质量或全网排名，未测候选的关注度仍未知。",
       "rankingVersion": 1
     },
     {
@@ -151798,9 +152890,2005 @@
       "candidateCount": 191,
       "rankingNote": "15 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 站内关注度代理分 = 10×ln(1+已核验GitHub累计stars) + 20×ln(1+已核验Hugging Face论文upvotes)。仅合计可测项，缺失为null；全部缺失则不评分。证据来自官方API、公开论文及仓库页，具体来源和观测时刻见条目。只计可归属的仓库，排除共用基础框架和跨代系列；累计关注不等于本日增量、论文质量或全网排名，未测候选的关注度仍未知。",
       "rankingVersion": 1
+    },
+    {
+      "id": "2026-09-19-1000",
+      "label": "9月19日 · 早间研究",
+      "startedAt": "2026-09-19T05:16:06.964621+00:00",
+      "completedAt": "2026-09-19T05:43:17.390108+00:00",
+      "windowStart": "2026-09-18T09:39:21.834Z",
+      "windowEnd": "2026-09-19T05:43:17.390108+00:00",
+      "status": "partial",
+      "summary": "本轮6项首次发现/补录、3项实质更新，共9项完整分析；未达到30项，不用旧闻或未核验线索凑数。",
+      "dailySummary": "今日重点是把预测、动作选择与可执行性接起来：SeeQ用子任务价值改善长程操作，Dream.exe开放评测产物并揭示深度提取的瓶颈；WorMa与可变形系绳飞行平台展示机械结构和控制的配合。ActiveScale代码可读状态已更新，ActSafeGuard新增附表的数值冲突也已注明。",
+      "sourceChecks": [
+        {
+          "name": "arXiv公告/API与遗留修订",
+          "status": "ok",
+          "lastSuccessAt": "2026-09-19T05:16:54.258771+00:00",
+          "windowStart": "2026-09-12T02:00:00Z",
+          "note": "公告仍为9月18日批次。按updated和submitted串行分页到7日边界，1500条原始结果合并1000个ID，599个在窗口内；相较昨晚无新元数据变化，44个库内版本差异沿用既有修订审查结果。补核ActSafeGuard新增附表及数值冲突；另外5项修订做正文/表格核验仍有协议语义待查。API索引完成不代表所有正文都完成。"
+        },
+        {
+          "name": "Hugging Face论文、模型与数据",
+          "status": "partial",
+          "lastSuccessAt": "2026-09-19T05:17:40.885632+00:00",
+          "windowStart": "2026-09-12T02:00:00Z",
+          "note": "查9月13–19日七张日榜及robotics模型/LeRobot数据集索引，1300模型、400数据集到7日边界；较昨晚123模型和37数据集元数据变化，逐项筛查并读取26张重点卡及补充原文。漏标标签仓库可能未覆盖；普通训练迭代不自动当新研究。"
+        },
+        {
+          "name": "机构博客/报告",
+          "status": "partial",
+          "windowStart": "2026-09-05T02:00:00Z",
+          "note": "查PI、DeepMind、NVIDIA研究/开发/新闻、BAIR、Stanford、TRI、Skild、Generalist、Microsoft、MIT、RSS等入口及公开日期搜索。TRI和MIT入口本次恢复；MS旧路径404，另读搜索到的公开研究入口，未发现可核新报告。NYU直连失败但通过公开网页原文核验，WorMa及CLIMB论文回溯主来源。"
+        },
+        {
+          "name": "新闻与中文公开报道",
+          "status": "partial",
+          "windowStart": "2026-09-12T02:00:00Z",
+          "note": "IEEE、机器之心、量子位及日期检索；新Video Friday回溯WorMa和系绳飞行论文，其余已有研究去重。Reuters401、TechnologyReview访问受限，不能声称完整覆盖。"
+        },
+        {
+          "name": "X/Twitter公开索引",
+          "status": "partial",
+          "windowStart": "2026-09-16T02:00:00Z",
+          "priorityWindowStart": "2026-09-12T02:00:00Z",
+          "note": "执行来源/日期限定查询，未取得可核的新作者原帖和互动量；搜索未命中不表示平台没有新增。"
+        },
+        {
+          "name": "微信/小红书公开索引",
+          "status": "partial",
+          "windowStart": "2026-09-05T02:00:00Z",
+          "note": "公开索引检索只得到部分报道入口、旧闻或无关页面；未访问私域内容。未核实的新线索不纳入榜单。"
+        },
+        {
+          "name": "可测公开关注",
+          "status": "partial",
+          "note": "Dream.exe论文API可核17票；ActiveScale官方仓库可核累计7stars；模型点赞和已读新闻跟进单独留证，不伪装成论文投票。GitHub研究API首次403限流后停止整个队列，无切换凭据重试。其余数值保持null。"
+        },
+        {
+          "name": "收藏与周度回看",
+          "status": "ok",
+          "note": "同一浏览器本站可见收藏页显示0项，已私有同步，无收藏需额外追踪。本周9月14日已做30日补查；昨晚积压版已恢复发布，本轮7日重叠窗继续覆盖恢复间隔。"
+        }
+      ],
+      "queryLog": [
+        {
+          "sourceBatch": "arxiv-index",
+          "url": "https://arxiv.org/list/cs.RO/new",
+          "requestedAt": "2026-09-19T05:16:07.424064+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:16:07.727885+00:00"
+        },
+        {
+          "sourceBatch": "arxiv-index",
+          "url": "https://export.arxiv.org/api/query?search_query=cat%3Acs.RO+OR+%28%28cat%3Acs.LG+OR+cat%3Acs.CV+OR+cat%3Acs.AI+OR+cat%3Aeess.SY+OR+cat%3Amath.OC%29+AND+%28all%3Arobot+OR+all%3Arobotic%29%29&sortBy=lastUpdatedDate&sortOrder=descending&start=0&max_results=500",
+          "requestedAt": "2026-09-19T05:16:11.036817+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:16:13.658334+00:00"
+        },
+        {
+          "sourceBatch": "arxiv-index",
+          "url": "https://export.arxiv.org/api/query?search_query=cat%3Acs.RO+OR+%28%28cat%3Acs.LG+OR+cat%3Acs.CV+OR+cat%3Acs.AI+OR+cat%3Aeess.SY+OR+cat%3Amath.OC%29+AND+%28all%3Arobot+OR+all%3Arobotic%29%29&sortBy=lastUpdatedDate&sortOrder=descending&start=500&max_results=500",
+          "requestedAt": "2026-09-19T05:16:16.968600+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:16:32.327235+00:00"
+        },
+        {
+          "sourceBatch": "arxiv-index",
+          "url": "https://export.arxiv.org/api/query?search_query=cat%3Acs.RO+OR+%28%28cat%3Acs.LG+OR+cat%3Acs.CV+OR+cat%3Acs.AI+OR+cat%3Aeess.SY+OR+cat%3Amath.OC%29+AND+%28all%3Arobot+OR+all%3Arobotic%29%29&sortBy=submittedDate&sortOrder=descending&start=0&max_results=500",
+          "requestedAt": "2026-09-19T05:16:35.632000+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:16:54.202113+00:00"
+        },
+        {
+          "sourceBatch": "arxiv-list",
+          "url": "https://arxiv.org/list/cs.RO/new",
+          "requestedAt": "2026-09-19T05:16:07.424064+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:16:07.727885+00:00"
+        },
+        {
+          "sourceBatch": "final-hf",
+          "url": "https://huggingface.co/api/papers/2609.11697",
+          "requestedAt": "2026-09-19T05:31:08.042818+00:00",
+          "status": 404,
+          "error": "HTTP Error 404: Not Found",
+          "retryAfter": null,
+          "completedAt": "2026-09-19T05:31:38.856698+00:00"
+        },
+        {
+          "sourceBatch": "final-hf",
+          "url": "https://huggingface.co/api/papers/2606.04811",
+          "requestedAt": "2026-09-19T05:31:42.170206+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:32:12.635929+00:00"
+        },
+        {
+          "sourceBatch": "final-hf",
+          "url": "https://huggingface.co/datasets/kaimingyang/Dream.exe/raw/main/README.md",
+          "requestedAt": "2026-09-19T05:32:15.947244+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:32:46.527550+00:00"
+        },
+        {
+          "sourceBatch": "final-papers",
+          "url": "https://arxiv.org/abs/2606.04811",
+          "requestedAt": "2026-09-19T05:31:08.043438+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:31:08.537159+00:00"
+        },
+        {
+          "sourceBatch": "final-papers",
+          "url": "https://arxiv.org/html/2606.04811v1",
+          "requestedAt": "2026-09-19T05:31:10.141510+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:31:25.141667+00:00"
+        },
+        {
+          "sourceBatch": "final-papers",
+          "url": "https://api.crossref.org/works/10.1177/02783649261486468",
+          "requestedAt": "2026-09-19T05:31:26.752520+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:31:28.783283+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/iFaz/eqm-aloha_transfer_cube-seed3-18sep2026_4pm/raw/main/README.md",
+          "requestedAt": "2026-09-19T05:19:54.276937+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:19:54.827782+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/Aasdfip/longnav-mshab-pick-flow-native-speedmix-20hz/raw/main/README.md",
+          "requestedAt": "2026-09-19T05:19:58.135094+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:19:58.632568+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/suyashdiamond11/tartanimu-publicrefit4096-tomjerry/raw/main/README.md",
+          "requestedAt": "2026-09-19T05:20:01.939276+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:20:02.473913+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/shamdan/ETA/raw/main/README.md",
+          "requestedAt": "2026-09-19T05:20:05.784490+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:20:06.274922+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/hanapasta/airvla_v3arm_25000/raw/main/README.md",
+          "requestedAt": "2026-09-19T05:20:09.585589+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:20:10.046116+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/changh95/pi05-base-p300x2/raw/main/README.md",
+          "requestedAt": "2026-09-19T05:20:13.353418+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:20:13.821386+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/kabilanKB/cosmos_edge_policy_so101/raw/main/README.md",
+          "requestedAt": "2026-09-19T05:20:17.126734+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:20:17.637401+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/kaimingyang/DVD_for_Dream.exe/raw/main/README.md",
+          "requestedAt": "2026-09-19T05:20:20.948868+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:20:21.379417+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/Man1103/TurboVLA-Libero-0.22B/raw/main/README.md",
+          "requestedAt": "2026-09-19T05:20:24.688970+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:20:25.130556+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/CMU-AIRe/SeeQ-3B/raw/main/README.md",
+          "requestedAt": "2026-09-19T05:20:28.441617+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:20:28.932181+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/liuxuetao/ME-Dex-1.0-RoboTwin-Clean2Random-Leaderboard/raw/main/README.md",
+          "requestedAt": "2026-09-19T05:20:32.250988+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:20:32.762139+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/davidzhou302/ActiveScale/raw/main/README.md",
+          "requestedAt": "2026-09-19T05:20:36.073995+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:20:36.646775+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/hmkang/wam_ctxpool_bmethod/raw/main/README.md",
+          "requestedAt": "2026-09-19T05:20:39.957033+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:20:40.456595+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/aabyaneh/fasterwam/raw/main/README.md",
+          "requestedAt": "2026-09-19T05:20:43.766552+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:20:44.167780+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/morealcholplz/ttt-vla-robomme-ttt-nmt-t4/raw/main/README.md",
+          "requestedAt": "2026-09-19T05:20:47.478664+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:20:48.003473+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/SeonghoonYu/RACE2_vlabench/raw/main/README.md",
+          "requestedAt": "2026-09-19T05:20:51.312295+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:20:51.724718+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/introvoyz043/HandEdit-LoRA/raw/main/README.md",
+          "requestedAt": "2026-09-19T05:20:55.027179+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:20:55.435053+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/XuWuLingYu/GPA-0-Final/raw/main/README.md",
+          "requestedAt": "2026-09-19T05:20:58.741636+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:20:59.267715+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/3CTeam/fpvla-stage2-827-50k/raw/main/README.md",
+          "requestedAt": "2026-09-19T05:21:02.576140+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:21:03.021274+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/datasets/stray-light/zerograv-manipulation-regular-gravity-trajectories-state-v1/raw/main/README.md",
+          "requestedAt": "2026-09-19T05:21:06.327611+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:21:06.822385+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/datasets/yxma/React/raw/main/README.md",
+          "requestedAt": "2026-09-19T05:21:10.133029+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:21:10.824714+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/datasets/dual-sim/data/raw/main/README.md",
+          "requestedAt": "2026-09-19T05:21:14.132242+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:21:14.655199+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/datasets/andlyu/Public-YAM-runs/raw/main/README.md",
+          "requestedAt": "2026-09-19T05:21:17.965958+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:21:18.413474+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/datasets/ajaysri/episodic_box_search_robot_sam3_v1/raw/main/README.md",
+          "requestedAt": "2026-09-19T05:21:21.726260+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:21:22.274984+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/datasets/SingleBicycle/tacwam-wetlab-tasks/raw/main/README.md",
+          "requestedAt": "2026-09-19T05:21:25.585929+00:00",
+          "status": 401,
+          "error": "HTTP Error 401: Unauthorized",
+          "retryAfter": null,
+          "completedAt": "2026-09-19T05:21:26.072046+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/datasets/ExylosAi/egocentric-vr-capture-20h-multimodal-sample/raw/main/README.md",
+          "requestedAt": "2026-09-19T05:21:29.383047+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:21:30.056344+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/models?pipeline_tag=robotics&sort=lastModified&direction=-1&limit=100&full=true",
+          "requestedAt": "2026-09-19T05:16:34.033312+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:16:35.101976+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/models?pipeline_tag=robotics&sort=lastModified&direction=-1&limit=100&full=true&cursor=eyIkb3IiOlt7Imxhc3RNb2RpZmllZCI6IjIwMjYtMDktMThUMTM6MjQ6MjguMDAwWiIsIl9pZCI6eyIkZ3QiOiI2YWFjYzVkNTY3OTE2ZmEzMTViMzRkOTUifX0seyJsYXN0TW9kaWZpZWQiOnsiJGx0IjoiMjAyNi0wOS0xOFQxMzoyNDoyOC4wMDBaIn19LHsibGFzdE1vZGlmaWVkIjpudWxsfV0sInNlYXJjaFNlcXVlbmNlVG9rZW4iOiJDSmYycndJYUNTbmdtckMwb0FFQUFCb09XZ3hxck1YVlo1RnZveFd6VFpVaURsb01hcXpGMVdlUmI2TVZzMDJWIn0%3D",
+          "requestedAt": "2026-09-19T05:16:38.412851+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:16:38.970114+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/models?pipeline_tag=robotics&sort=lastModified&direction=-1&limit=100&full=true&cursor=eyIkb3IiOlt7Imxhc3RNb2RpZmllZCI6IjIwMjYtMDktMThUMDE6Mjg6MjEuMDAwWiIsIl9pZCI6eyIkZ3QiOiI2YWFiZWRkNWM3MDc5MWU2N2NiZTNjOTgifX0seyJsYXN0TW9kaWZpZWQiOnsiJGx0IjoiMjAyNi0wOS0xOFQwMToyODoyMS4wMDBaIn19LHsibGFzdE1vZGlmaWVkIjpudWxsfV0sInNlYXJjaFNlcXVlbmNlVG9rZW4iOiJDTkxSdHdJYUNTa0kreUN5b0FFQUFCb09XZ3hxcSszVnh3ZVI1bnkrUEpnaURsb01hcXZ0MWNjSGtlWjh2anlZIn0%3D",
+          "requestedAt": "2026-09-19T05:16:42.280927+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:16:43.165553+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/models?pipeline_tag=robotics&sort=lastModified&direction=-1&limit=100&full=true&cursor=eyIkb3IiOlt7Imxhc3RNb2RpZmllZCI6IjIwMjYtMDktMTdUMDk6NTc6NDIuMDAwWiIsIl9pZCI6eyIkZ3QiOiI2YWFiYjRjMWFhOThkYTM3NGE0YWViYjEifX0seyJsYXN0TW9kaWZpZWQiOnsiJGx0IjoiMjAyNi0wOS0xN1QwOTo1Nzo0Mi4wMDBaIn19LHsibGFzdE1vZGlmaWVkIjpudWxsfV0sInNlYXJjaFNlcXVlbmNlVG9rZW4iOiJDTnlxcndJYUNTbnc4Y3l1b0FFQUFCb09XZ3hxcTdUQnFwamFOMHBLNjdFaURsb01hcXUwd2FxWTJqZEtTdXV4In0%3D",
+          "requestedAt": "2026-09-19T05:16:46.468545+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:16:47.327200+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/models?pipeline_tag=robotics&sort=lastModified&direction=-1&limit=100&full=true&cursor=eyIkb3IiOlt7Imxhc3RNb2RpZmllZCI6IjIwMjYtMDktMTZUMTY6NTM6MTUuMDAwWiIsIl9pZCI6eyIkZ3QiOiI2YWFhYzkwMjYzYzMzMDU4ZmRmNmYzNWUifX0seyJsYXN0TW9kaWZpZWQiOnsiJGx0IjoiMjAyNi0wOS0xNlQxNjo1MzoxNS4wMDBaIn19LHsibGFzdE1vZGlmaWVkIjpudWxsfV0sInNlYXJjaFNlcXVlbmNlVG9rZW4iOiJDSUNYOGdFYUNTbDRDQ09yb0FFQUFCb09XZ3hxcXNrQ1k4TXdXUDMyODE0aURsb01hcXJKQW1QRE1Gajk5dk5lIn0%3D",
+          "requestedAt": "2026-09-19T05:16:50.633909+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:16:51.182680+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/models?pipeline_tag=robotics&sort=lastModified&direction=-1&limit=100&full=true&cursor=eyIkb3IiOlt7Imxhc3RNb2RpZmllZCI6IjIwMjYtMDktMTZUMDQ6NTQ6MzkuMDAwWiIsIl9pZCI6eyIkZ3QiOiI2YWFhMjBkOWE3MzllZmE3YjczNzI3OTEifX0seyJsYXN0TW9kaWZpZWQiOnsiJGx0IjoiMjAyNi0wOS0xNlQwNDo1NDozOS4wMDBaIn19LHsibGFzdE1vZGlmaWVkIjpudWxsfV0sInNlYXJjaFNlcXVlbmNlVG9rZW4iOiJDTjM5bkFJYUNTbVlJcEdvb0FFQUFCb09XZ3hxcWlEWnB6bnZwN2MzSjVFaURsb01hcW9nMmFjNTc2ZTNOeWVSIn0%3D",
+          "requestedAt": "2026-09-19T05:16:54.491851+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:16:55.468027+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/models?pipeline_tag=robotics&sort=lastModified&direction=-1&limit=100&full=true&cursor=eyIkb3IiOlt7Imxhc3RNb2RpZmllZCI6IjIwMjYtMDktMTVUMTk6MDQ6NTguMDAwWiIsIl9pZCI6eyIkZ3QiOiI2YWE5OTVlODNhMWVjZTBmMDEyZmI3NjcifX0seyJsYXN0TW9kaWZpZWQiOnsiJGx0IjoiMjAyNi0wOS0xNVQxOTowNDo1OC4wMDBaIn19LHsibGFzdE1vZGlmaWVkIjpudWxsfV0sInNlYXJjaFNlcXVlbmNlVG9rZW4iOiJDSXVQblFJYUNTbVFRM1dtb0FFQUFCb09XZ3hxcVpYb09oN09Ed0V2dDJjaURsb01hcW1WNkRvZXpnOEJMN2RuIn0%3D",
+          "requestedAt": "2026-09-19T05:16:58.778292+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:16:59.392458+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/models?pipeline_tag=robotics&sort=lastModified&direction=-1&limit=100&full=true&cursor=eyIkb3IiOlt7Imxhc3RNb2RpZmllZCI6IjIwMjYtMDktMTVUMDc6NTk6NTIuMDAwWiIsIl9pZCI6eyIkZ3QiOiI2YWE4ZmEwNjU0OTU1ODBmNzBlNzc1ZDEifX0seyJsYXN0TW9kaWZpZWQiOnsiJGx0IjoiMjAyNi0wOS0xNVQwNzo1OTo1Mi4wMDBaIn19LHsibGFzdE1vZGlmaWVkIjpudWxsfV0sInNlYXJjaFNlcXVlbmNlVG9rZW4iOiJDTlR1bkFJYUNTbkFXQlNrb0FFQUFCb09XZ3hxcVBvR1ZKVllEM0RuZGRFaURsb01hcWo2QmxTVldBOXc1M1hSIn0%3D",
+          "requestedAt": "2026-09-19T05:17:02.702526+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:17:03.258532+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/models?pipeline_tag=robotics&sort=lastModified&direction=-1&limit=100&full=true&cursor=eyIkb3IiOlt7Imxhc3RNb2RpZmllZCI6IjIwMjYtMDktMTRUMTk6MTQ6MjIuMDAwWiIsIl9pZCI6eyIkZ3QiOiI2YWE4NDc3N2NiMmM5NGRmOGMzMjczYzEifX0seyJsYXN0TW9kaWZpZWQiOnsiJGx0IjoiMjAyNi0wOS0xNFQxOToxNDoyMi4wMDBaIn19LHsibGFzdE1vZGlmaWVkIjpudWxsfV0sInNlYXJjaFNlcXVlbmNlVG9rZW4iOiJDSWVRc0FJYUNTbXdnbGVob0FFQUFCb09XZ3hxcUVkM3l5eVUzNHd5YzhFaURsb01hcWhIZDhzc2xOK01NblBCIn0%3D",
+          "requestedAt": "2026-09-19T05:17:06.560115+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:17:08.186682+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/models?pipeline_tag=robotics&sort=lastModified&direction=-1&limit=100&full=true&cursor=eyIkb3IiOlt7Imxhc3RNb2RpZmllZCI6IjIwMjYtMDktMTRUMDg6NTQ6MDIuMDAwWiIsIl9pZCI6eyIkZ3QiOiI2YWE3YjYyYWI4YjcxZGQyMTYwMWYwNWYifX0seyJsYXN0TW9kaWZpZWQiOnsiJGx0IjoiMjAyNi0wOS0xNFQwODo1NDowMi4wMDBaIn19LHsibGFzdE1vZGlmaWVkIjpudWxsfV0sInNlYXJjaFNlcXVlbmNlVG9rZW4iOiJDTHJpeGdFYUNTa1FsQitmb0FFQUFCb09XZ3hxcDdZcXVMY2QwaFlCOEY4aURsb01hcWUyS3JpM0hkSVdBZkJmIn0%3D",
+          "requestedAt": "2026-09-19T05:17:11.497051+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:17:12.747579+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/models?pipeline_tag=robotics&sort=lastModified&direction=-1&limit=100&full=true&cursor=eyIkb3IiOlt7Imxhc3RNb2RpZmllZCI6IjIwMjYtMDktMTNUMTc6MDk6MjIuMDAwWiIsIl9pZCI6eyIkZ3QiOiI2YWE2ZDc2ZjU0MmM5NWMxZDQyOWRjN2UifX0seyJsYXN0TW9kaWZpZWQiOnsiJGx0IjoiMjAyNi0wOS0xM1QxNzowOToyMi4wMDBaIn19LHsibGFzdE1vZGlmaWVkIjpudWxsfV0sInNlYXJjaFNlcXVlbmNlVG9rZW4iOiJDSXV1dUFJYUNTblF0YjZib0FFQUFCb09XZ3hxcHRkdlZDeVZ3ZFFwM0g0aURsb01hcWJYYjFRc2xjSFVLZHgrIn0%3D",
+          "requestedAt": "2026-09-19T05:17:16.057734+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:17:16.805160+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/models?pipeline_tag=robotics&sort=lastModified&direction=-1&limit=100&full=true&cursor=eyIkb3IiOlt7Imxhc3RNb2RpZmllZCI6IjIwMjYtMDktMTNUMDY6MzA6NDYuMDAwWiIsIl9pZCI6eyIkZ3QiOiI2YWE2NDE5MDhkZTY0MzIwZmM0YmZhMmUifX0seyJsYXN0TW9kaWZpZWQiOnsiJGx0IjoiMjAyNi0wOS0xM1QwNjozMDo0Ni4wMDBaIn19LHsibGFzdE1vZGlmaWVkIjpudWxsfV0sInNlYXJjaFNlcXVlbmNlVG9rZW4iOiJDTExyb3dFYUNTbndEWGFab0FFQUFCb09XZ3hxcGtHUWplWkRJUHhMK2k0aURsb01hcVpCa0kzbVF5RDhTL291In0%3D",
+          "requestedAt": "2026-09-19T05:17:20.105565+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:17:20.772696+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/models?pipeline_tag=robotics&sort=lastModified&direction=-1&limit=100&full=true&cursor=eyIkb3IiOlt7Imxhc3RNb2RpZmllZCI6IjIwMjYtMDktMTJUMDU6MDI6NTAuMDAwWiIsIl9pZCI6eyIkZ3QiOiI2YWE0ZGNkOWVkMDI2YTZiMTE4ZGEwMmEifX0seyJsYXN0TW9kaWZpZWQiOnsiJGx0IjoiMjAyNi0wOS0xMlQwNTowMjo1MC4wMDBaIn19LHsibGFzdE1vZGlmaWVkIjpudWxsfV0sInNlYXJjaFNlcXVlbmNlVG9rZW4iOiJDUFcvdGdJYUNTbVFNUCtUb0FFQUFCb09XZ3hxcE56WjdRSnFheEdOb0NvaURsb01hcVRjMmUwQ2Ftc1JqYUFxIn0%3D",
+          "requestedAt": "2026-09-19T05:17:24.083015+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:17:24.907273+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/datasets?filter=lerobot&sort=lastModified&direction=-1&limit=100&full=true",
+          "requestedAt": "2026-09-19T05:17:28.217338+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:17:29.082010+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/datasets?filter=lerobot&sort=lastModified&direction=-1&limit=100&full=true&cursor=eyIkb3IiOlt7Imxhc3RNb2RpZmllZCI6IjIwMjYtMDktMTZUMjE6NTk6NDUuMDAwWiIsIl9pZCI6eyIkZ3QiOiI2YWFiMTAwMmEyMTE3Yjg5MTRjOGE5N2QifX0seyJsYXN0TW9kaWZpZWQiOnsiJGx0IjoiMjAyNi0wOS0xNlQyMTo1OTo0NS4wMDBaIn19LHsibGFzdE1vZGlmaWVkIjpudWxsfV19",
+          "requestedAt": "2026-09-19T05:17:32.386893+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:17:32.965787+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/datasets?filter=lerobot&sort=lastModified&direction=-1&limit=100&full=true&cursor=eyIkb3IiOlt7Imxhc3RNb2RpZmllZCI6IjIwMjYtMDktMTRUMTY6MjU6NDAuMDAwWiIsIl9pZCI6eyIkZ3QiOiI2YWE4MWZlNGMxMDllMmFlOGRhNDg3OTkifX0seyJsYXN0TW9kaWZpZWQiOnsiJGx0IjoiMjAyNi0wOS0xNFQxNjoyNTo0MC4wMDBaIn19LHsibGFzdE1vZGlmaWVkIjpudWxsfV19",
+          "requestedAt": "2026-09-19T05:17:36.275882+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:17:36.909919+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/datasets?filter=lerobot&sort=lastModified&direction=-1&limit=100&full=true&cursor=eyIkb3IiOlt7Imxhc3RNb2RpZmllZCI6IjIwMjYtMDktMTNUMTA6NTA6MTguMDAwWiIsIl9pZCI6eyIkZ3QiOiI2YWE2N2U0MGIzOGM4ZjllY2ZmOWY3YzQifX0seyJsYXN0TW9kaWZpZWQiOnsiJGx0IjoiMjAyNi0wOS0xM1QxMDo1MDoxOC4wMDBaIn19LHsibGFzdE1vZGlmaWVkIjpudWxsfV19",
+          "requestedAt": "2026-09-19T05:17:40.219985+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:17:40.824719+00:00"
+        },
+        {
+          "sourceBatch": "hf-index",
+          "url": "https://huggingface.co/api/daily_papers?date=2026-09-19",
+          "requestedAt": "2026-09-19T05:16:06.964972+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:16:07.527651+00:00"
+        },
+        {
+          "sourceBatch": "hf-index",
+          "url": "https://huggingface.co/api/daily_papers?date=2026-09-18",
+          "requestedAt": "2026-09-19T05:16:10.837785+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:16:11.383203+00:00"
+        },
+        {
+          "sourceBatch": "hf-index",
+          "url": "https://huggingface.co/api/daily_papers?date=2026-09-17",
+          "requestedAt": "2026-09-19T05:16:14.693297+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:16:15.169749+00:00"
+        },
+        {
+          "sourceBatch": "hf-index",
+          "url": "https://huggingface.co/api/daily_papers?date=2026-09-16",
+          "requestedAt": "2026-09-19T05:16:18.479844+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:16:19.060189+00:00"
+        },
+        {
+          "sourceBatch": "hf-index",
+          "url": "https://huggingface.co/api/daily_papers?date=2026-09-15",
+          "requestedAt": "2026-09-19T05:16:22.370376+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:16:22.987023+00:00"
+        },
+        {
+          "sourceBatch": "hf-index",
+          "url": "https://huggingface.co/api/daily_papers?date=2026-09-14",
+          "requestedAt": "2026-09-19T05:16:26.297085+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:16:26.928147+00:00"
+        },
+        {
+          "sourceBatch": "hf-index",
+          "url": "https://huggingface.co/api/daily_papers?date=2026-09-13",
+          "requestedAt": "2026-09-19T05:16:30.238358+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:16:30.723073+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://www.physicalintelligence.company/blog",
+          "requestedAt": "2026-09-19T05:17:45.806932+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:17:48.219701+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://deepmind.google/discover/blog/",
+          "requestedAt": "2026-09-19T05:17:49.826062+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:17:52.742928+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://research.nvidia.com/research-area/robotics",
+          "requestedAt": "2026-09-19T05:17:54.353429+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:18:00.122817+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://developer.nvidia.com/blog/tag/robotics/",
+          "requestedAt": "2026-09-19T05:18:01.725468+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:18:04.573212+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://blogs.nvidia.com/blog/category/robotics/",
+          "requestedAt": "2026-09-19T05:18:06.183899+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:18:08.395027+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://bair.berkeley.edu/blog/",
+          "requestedAt": "2026-09-19T05:18:10.006636+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:18:14.522218+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://ai.stanford.edu/blog/",
+          "requestedAt": "2026-09-19T05:18:16.133126+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:18:17.538094+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://www.tri.global/news",
+          "requestedAt": "2026-09-19T05:18:19.149128+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:18:20.748626+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://www.skild.ai/blogs",
+          "requestedAt": "2026-09-19T05:18:22.359142+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:18:24.994607+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://generalistai.com/blog",
+          "requestedAt": "2026-09-19T05:18:26.600066+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:18:29.156879+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://www.microsoft.com/en-us/research/research-area/robotics/",
+          "requestedAt": "2026-09-19T05:18:30.759081+00:00",
+          "status": 404,
+          "error": "HTTP Error 404: Not Found",
+          "retryAfter": null,
+          "completedAt": "2026-09-19T05:18:35.281745+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://news.mit.edu/topic/robotics",
+          "requestedAt": "2026-09-19T05:18:36.892284+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:18:38.301827+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://www.roboticsproceedings.org/",
+          "requestedAt": "2026-09-19T05:18:39.913115+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:18:42.206108+00:00"
+        },
+        {
+          "sourceBatch": "last-papers",
+          "url": "https://arxiv.org/html/2606.04811v2",
+          "requestedAt": "2026-09-19T05:32:18.195812+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:32:18.769628+00:00"
+        },
+        {
+          "sourceBatch": "last-papers",
+          "url": "https://climb.mie.utoronto.ca/pdfs/wang2026a.pdf",
+          "requestedAt": "2026-09-19T05:32:20.380210+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:34:56.683970+00:00"
+        },
+        {
+          "sourceBatch": "news-detail",
+          "url": "https://www.qbitai.com/2026/09/492238.html",
+          "requestedAt": "2026-09-19T05:19:55.123081+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:19:55.439455+00:00"
+        },
+        {
+          "sourceBatch": "news-detail",
+          "url": "https://www.qbitai.com/2026/09/487752.html",
+          "requestedAt": "2026-09-19T05:19:57.041636+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:19:57.864510+00:00"
+        },
+        {
+          "sourceBatch": "news-detail",
+          "url": "https://spectrum.ieee.org/video-friday-quadrotor-from-birotor",
+          "requestedAt": "2026-09-19T05:19:59.468244+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:19:59.899619+00:00"
+        },
+        {
+          "sourceBatch": "news-detail",
+          "url": "https://spectrum.ieee.org/humanoid-robot-safety",
+          "requestedAt": "2026-09-19T05:20:01.502078+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:20:02.114410+00:00"
+        },
+        {
+          "sourceBatch": "news-detail",
+          "url": "https://news.mit.edu/2026/robotic-lab-runs-optics-experiments-on-demand-0917",
+          "requestedAt": "2026-09-19T05:20:03.725454+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:20:06.886079+00:00"
+        },
+        {
+          "sourceBatch": "news-detail",
+          "url": "https://www.tri.global/news/elevating-human-growth-human-ai-kaizen-initiative",
+          "requestedAt": "2026-09-19T05:20:08.496991+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:20:09.604931+00:00"
+        },
+        {
+          "sourceBatch": "news-pages",
+          "url": "https://griffinlabs.ai/blog/griffin-alpha-s",
+          "requestedAt": "2026-09-19T05:17:45.611353+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:17:47.851339+00:00"
+        },
+        {
+          "sourceBatch": "news-pages",
+          "url": "https://spectrum.ieee.org/topic/robotics/",
+          "requestedAt": "2026-09-19T05:17:49.459747+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:17:49.876090+00:00"
+        },
+        {
+          "sourceBatch": "news-pages",
+          "url": "https://rai-inst.com/resources/blog/bimanual-robot-for-dynamic-manipulation/",
+          "requestedAt": "2026-09-19T05:17:51.495367+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:17:53.390759+00:00"
+        },
+        {
+          "sourceBatch": "news-pages",
+          "url": "https://www.reuters.com/technology/",
+          "requestedAt": "2026-09-19T05:17:55.001233+00:00",
+          "status": 401,
+          "error": "HTTP Error 401: HTTP Forbidden",
+          "retryAfter": null,
+          "completedAt": "2026-09-19T05:18:25.415235+00:00"
+        },
+        {
+          "sourceBatch": "news-pages",
+          "url": "https://www.jiqizhixin.com/",
+          "requestedAt": "2026-09-19T05:18:27.026882+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:18:27.320336+00:00"
+        },
+        {
+          "sourceBatch": "news-pages",
+          "url": "https://www.qbitai.com/",
+          "requestedAt": "2026-09-19T05:18:28.927471+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:18:29.263451+00:00"
+        },
+        {
+          "sourceBatch": "papers",
+          "url": "https://arxiv.org/abs/2506.07725",
+          "requestedAt": "2026-09-19T05:23:37.460401+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:23:39.475587+00:00"
+        },
+        {
+          "sourceBatch": "papers",
+          "url": "https://arxiv.org/html/2506.07725v2",
+          "requestedAt": "2026-09-19T05:23:42.785982+00:00",
+          "status": 404,
+          "error": "HTTP Error 404: Not Found",
+          "retryAfter": null,
+          "completedAt": "2026-09-19T05:23:43.395670+00:00"
+        },
+        {
+          "sourceBatch": "projects-more",
+          "url": "https://github.com/saksham002/generalist_value_functions",
+          "requestedAt": "2026-09-19T05:23:37.769206+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:23:39.004590+00:00"
+        },
+        {
+          "sourceBatch": "projects-more",
+          "url": "https://raw.githubusercontent.com/OpenDriveLab/ETA/main/docs/TRAIN_EVAL.md",
+          "requestedAt": "2026-09-19T05:23:40.615151+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:23:41.626251+00:00"
+        },
+        {
+          "sourceBatch": "projects-more",
+          "url": "https://github.com/robotics-hana/drone-version2",
+          "requestedAt": "2026-09-19T05:23:43.237439+00:00",
+          "status": 404,
+          "error": "HTTP Error 404: Not Found",
+          "retryAfter": null,
+          "completedAt": "2026-09-19T05:23:43.865361+00:00"
+        },
+        {
+          "sourceBatch": "projects-more",
+          "url": "https://github.com/averyxi42/spatial_training/tree/mshab",
+          "requestedAt": "2026-09-19T05:23:45.477135+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:23:46.852967+00:00"
+        },
+        {
+          "sourceBatch": "projects-more",
+          "url": "https://api.github.com/repos/saksham002/generalist_value_functions",
+          "requestedAt": "2026-09-19T05:23:48.463578+00:00",
+          "status": 403,
+          "error": "HTTP Error 403: rate limit exceeded",
+          "retryAfter": null,
+          "completedAt": "2026-09-19T05:23:49.053122+00:00"
+        },
+        {
+          "sourceBatch": "projects",
+          "url": "https://saksham002.github.io/seeq/",
+          "requestedAt": "2026-09-19T05:21:34.042237+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:21:34.820680+00:00"
+        },
+        {
+          "sourceBatch": "projects",
+          "url": "https://github.com/OpenDriveLab/ETA",
+          "requestedAt": "2026-09-19T05:21:36.427526+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:21:37.516234+00:00"
+        },
+        {
+          "sourceBatch": "projects",
+          "url": "https://machembodied.com/ME-Dex/ME-Dex1.0.html",
+          "requestedAt": "2026-09-19T05:21:39.127304+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:21:39.459030+00:00"
+        },
+        {
+          "sourceBatch": "projects",
+          "url": "https://github.com/ShuaiZhou302/ActiveScale",
+          "requestedAt": "2026-09-19T05:21:41.069814+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:21:42.099238+00:00"
+        },
+        {
+          "sourceBatch": "projects",
+          "url": "https://engineering.nyu.edu/news/robot-shifts-its-own-weight-cross-land-steps-and-water",
+          "requestedAt": "2026-09-19T05:21:43.709621+00:00",
+          "status": "error",
+          "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1028)>",
+          "completedAt": "2026-09-19T05:21:48.969851+00:00"
+        },
+        {
+          "sourceBatch": "projects",
+          "url": "https://climb.mie.utoronto.ca/",
+          "requestedAt": "2026-09-19T05:21:50.574600+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:21:52.544563+00:00"
+        },
+        {
+          "sourceBatch": "projects",
+          "url": "https://tolomeis.github.io/contact-guided-exp/",
+          "requestedAt": "2026-09-19T05:21:54.148760+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T05:21:55.282431+00:00"
+        },
+        {
+          "sourceBatch": "web-search",
+          "query": "site:mp.weixin.qq.com 机器人 VLA WAM 2026 9月18 9月19",
+          "status": "executed",
+          "note": "公开索引发现；关键研究均回溯原始材料"
+        },
+        {
+          "sourceBatch": "web-search",
+          "query": "site:xiaohongshu.com 机器人 论文 2026 9月",
+          "status": "executed",
+          "note": "公开索引发现；关键研究均回溯原始材料"
+        },
+        {
+          "sourceBatch": "web-search",
+          "query": "site:jiqizhixin.com 2026/09/18 机器人",
+          "status": "executed",
+          "note": "公开索引发现；关键研究均回溯原始材料"
+        },
+        {
+          "sourceBatch": "web-search",
+          "query": "site:qbitai.com 2026/09 机器人 18",
+          "status": "executed",
+          "note": "公开索引发现；关键研究均回溯原始材料"
+        },
+        {
+          "sourceBatch": "web-search",
+          "query": "site:x.com \"robot\" after:2026-09-16 before:2026-09-20",
+          "status": "executed",
+          "note": "公开索引发现；关键研究均回溯原始材料"
+        },
+        {
+          "sourceBatch": "web-search",
+          "query": "site:technologyreview.com \"robot\" September 2026",
+          "status": "executed",
+          "note": "公开索引发现；关键研究均回溯原始材料"
+        },
+        {
+          "sourceBatch": "web-search",
+          "query": "site:tri.global \"Human-AI Kaizen\"",
+          "status": "executed",
+          "note": "公开索引发现；关键研究均回溯原始材料"
+        },
+        {
+          "sourceBatch": "web-search",
+          "query": "site:news.mit.edu \"Robotic lab\" \"2026\"",
+          "status": "executed",
+          "note": "公开索引发现；关键研究均回溯原始材料"
+        },
+        {
+          "sourceBatch": "web-search",
+          "query": "\"SeeQ\" \"Training Generalist\" robotics",
+          "status": "executed",
+          "note": "公开索引发现；关键研究均回溯原始材料"
+        },
+        {
+          "sourceBatch": "web-search",
+          "query": "\"WorMa\" robot weight water 2026",
+          "status": "executed",
+          "note": "公开索引发现；关键研究均回溯原始材料"
+        },
+        {
+          "sourceBatch": "web-search",
+          "query": "\"A Transformable Tethered Aerial Platform\" 2026",
+          "status": "executed",
+          "note": "公开索引发现；关键研究均回溯原始材料"
+        },
+        {
+          "sourceBatch": "web-search",
+          "query": "\"ActSafeGuard\"",
+          "status": "executed",
+          "note": "公开索引发现；关键研究均回溯原始材料"
+        }
+      ],
+      "addedIds": [
+        "report:seeq-generalist-value-functions",
+        "doi:10.1002/adrr.70163",
+        "hf:Aasdfip/longnav-mshab-pick-flow-native-speedmix-20hz",
+        "hf:datasets/stray-light/zerograv-manipulation-regular-gravity-trajectories-state-v1",
+        "arxiv:2606.04811",
+        "doi:10.1177/02783649261486468"
+      ],
+      "updatedIds": [
+        "hf:changh95/pi05-base-p300x2",
+        "arxiv:2609.18514"
+      ],
+      "promotedIds": [
+        "arxiv:2609.11697"
+      ],
+      "briefAddedIds": [],
+      "briefUpdatedIds": [],
+      "candidateIds": [
+        "report:seeq-generalist-value-functions",
+        "doi:10.1002/adrr.70163",
+        "hf:Aasdfip/longnav-mshab-pick-flow-native-speedmix-20hz",
+        "hf:datasets/stray-light/zerograv-manipulation-regular-gravity-trajectories-state-v1",
+        "arxiv:2606.04811",
+        "doi:10.1177/02783649261486468",
+        "hf:changh95/pi05-base-p300x2",
+        "arxiv:2609.18514",
+        "arxiv:2609.11697"
+      ],
+      "recordsSnapshot": [
+        {
+          "id": "arxiv:2609.18514",
+          "title": "ActiveScale: Scaling Active Perception for Robots across Model, Data, and Hardware",
+          "zhTitle": "ActiveScale：确认训练、推理与遥操作代码可读",
+          "authors": [
+            "Shuai Zhou",
+            "Kaisheng Pang",
+            "Wenxuan Song",
+            "Wenjie Zhang",
+            "Xinhu Zheng",
+            "Haoang Li"
+          ],
+          "category": "vla",
+          "contentTypes": [
+            "paper",
+            "report"
+          ],
+          "source": "官方完整项目页及模型固定提交",
+          "type": "论文与产物更新",
+          "publishedAt": "2026-09-16T11:46:40Z",
+          "sourceUpdatedAt": "2026-09-19T05:43:17.168331+00:00",
+          "checkedAt": "2026-09-19T05:43:17.168331+00:00",
+          "canonicalUrl": "https://arxiv.org/abs/2609.18514",
+          "version": "v1",
+          "status": "full",
+          "reviewStatus": "full_official_project_read",
+          "innovation": "模型在 π0.5 中加入当前与历史图像及逐帧相机位姿 token，以训练期位姿辅助头建立几何关联；动作同时控制操作臂与观察相机。使用1000小时人类/机器人数据中训练，并构建单人可遥操作的移动双臂加相机臂平台。本次仅更新部署权重和配套统计。",
+          "summary": "主动观察VLA的公开仓库已包含训练、推理及遥操作实现；本次更新可用产物状态，性能数字沿用原研究。",
+          "editorialPriority": 88,
+          "editorialPriorityBasis": "编辑按机器人相关性、可复用技术价值与验证层级判断，非公开关注热度。",
+          "popularity": {
+            "status": "verified",
+            "score": 20.79,
+            "metrics": {
+              "githubStars": 7,
+              "hfUpvotes": null
+            },
+            "evidence": [
+              {
+                "url": "https://github.com/ShuaiZhou302/ActiveScale",
+                "metric": "github_stars",
+                "value": 7,
+                "checkedAt": "2026-09-19T05:21:42.099238+00:00",
+                "location": "About → Stars",
+                "scope": "专属仓库累计stars；不是当天增长"
+              }
+            ],
+            "checkedAt": "2026-09-19T05:43:17.168331+00:00",
+            "missingMetrics": [
+              "hfUpvotes"
+            ],
+            "basis": "GitHub累计stars 7；仅代表可核公开信号，未知不记零，累计数不是当天热度或研究质量。"
+          },
+          "links": [
+            {
+              "label": "论文",
+              "url": "https://arxiv.org/abs/2609.18514"
+            },
+            {
+              "label": "当前版本",
+              "url": "https://arxiv.org/html/2609.18514v1"
+            },
+            {
+              "label": "官方项目",
+              "url": "https://active-scale.github.io/"
+            },
+            {
+              "label": "专属代码",
+              "url": "https://github.com/ShuaiZhou302/ActiveScale"
+            },
+            {
+              "label": "部署权重更新",
+              "url": "https://huggingface.co/davidzhou302/ActiveScale/commit/b8ed5ab617d874c81669d5d9b9bbddcb17257e62"
+            },
+            {
+              "label": "固定代码版本",
+              "url": "https://github.com/ShuaiZhou302/ActiveScale/tree/40a862623bd80c2ef9f0c9b0cafddd2f9097ac83"
+            }
+          ],
+          "identityLinks": [
+            "https://arxiv.org/abs/2609.18514",
+            "https://active-scale.github.io/",
+            "https://github.com/ShuaiZhou302/ActiveScale",
+            "https://huggingface.co/davidzhou302/ActiveScale"
+          ],
+          "evidence": "沿用此前已核官方项目方法和实验；本轮实际读取官方仓库README、文件树和固定commit身份，未运行代码。",
+          "evidenceDetails": [
+            {
+              "url": "https://arxiv.org/abs/2609.18514",
+              "location": "中央API元数据与摘要",
+              "supports": "原始/修订时间、作者、方法范围；仅用于候选简讯",
+              "checkedAt": "2026-09-17T02:16:02.263315+00:00"
+            },
+            {
+              "url": "https://arxiv.org/html/2609.18514v1",
+              "location": "原文缓存首部、方法/实验目录与项目链接；尚非全文逐表核读",
+              "supports": "机器人相关性、原始链接；待入选再核全部实验",
+              "checkedAt": "2026-09-17T02:16:02.263315+00:00"
+            },
+            {
+              "url": "https://active-scale.github.io/",
+              "location": "Method；Data；Real-world results；Ablation",
+              "supports": "完整原始方法，1000小时、五任务150演示20rollout，30/62/70条件",
+              "checkedAt": "2026-09-17T09:25:11.265861+00:00",
+              "sourceRetrievedAt": "2026-09-17T09:03:12.900121+00:00"
+            },
+            {
+              "url": "https://huggingface.co/davidzhou302/ActiveScale/commit/b8ed5ab617d874c81669d5d9b9bbddcb17257e62",
+              "location": "Replace task checkpoints with deployed Mid400 policies；12 files diff",
+              "supports": "五权重替换、box/drawer统计实际变化；不含新性能表",
+              "checkedAt": "2026-09-17T09:25:11.265861+00:00",
+              "sourceRetrievedAt": "2026-09-17T09:09:40.977026+00:00"
+            },
+            {
+              "url": "https://github.com/ShuaiZhou302/ActiveScale",
+              "location": "README；root tree；embedded currentOid；Training/Inference/Quest 2",
+              "supports": "main固定commit 40a8626，训练、推理和遥操作目录可读；不等同运行验证。",
+              "checkedAt": "2026-09-19T05:43:17.168331+00:00"
+            }
+          ],
+          "scopeNote": "机器人或具身任务直接相关；尚无未验证的全网热度声明。",
+          "githubRepo": "https://github.com/ShuaiZhou302/ActiveScale",
+          "repoUrl": "https://github.com/ShuaiZhou302/ActiveScale",
+          "discoveredAt": "2026-09-17T02:39:11.180Z",
+          "updatedAt": "2026-09-19T05:43:17.390108+00:00",
+          "lastSeenAt": "2026-09-19T05:43:17.390108+00:00",
+          "eventAt": "2026-09-19T05:43:17.168331+00:00",
+          "lastReviewedAt": "2026-09-19T05:43:17.168331+00:00",
+          "substantiveUpdate": true,
+          "changeType": "updated",
+          "changeId": "arxiv:2609.18514:code-40a862623bd80c2ef9f0c9b0cafddd2f9097ac83",
+          "stableChangeId": "arxiv:2609.18514:code-40a862623bd80c2ef9f0c9b0cafddd2f9097ac83",
+          "changeNote": "官方仓库当前提供训练、推理与Quest 2遥操作目录及说明，纠正此前“代码待开放”的可用性状态。仅核验公开代码可读；不声称已复现或出现新性能提升。",
+          "artifactVersion": "40a862623bd80c2ef9f0c9b0cafddd2f9097ac83",
+          "background": "只用固定视角的机器人策略在遮挡下难以主动找到有效观测。ActiveScale 从模型、训练数据和可移动观察硬件协同设计主动感知。",
+          "experiments": "官方项目评估五类真机操作，每任务150段演示、每方法20次 rollout；完整方案平均成功率70%，直接后训练 π0.5 为30%。主动结构在无中训练时62%，再中训练为70%。因此30→70同时包含结构和额外训练数据，不能全归于相机 token。模型提交替换五个权重文件的指针，每个文件约8.354GB，并更换两任务统计路径。",
+          "conclusion": "原研究在所列主动观察任务上取得收益；当前官方仓库已可读，含训练/推理、客户端和Quest 2遥操作目录。此次没有新增性能表，不将代码开放解释为新测得的成功率提升。",
+          "evaluation": "【编辑分析】源码及配置可读增强了复现条件，仍需实际运行检查依赖、数据与硬件接口。原实验中的额外中训练数据和主动结构同时变化，仍应分开评估贡献。",
+          "futureDirections": "【研究假设】可在同一主动感知平台上加入世界模型的信息增益预测，让相机移动与操作动作共同优化；用固定训练预算对照被动相机、仅几何监督与预测信息增益，并测遮挡恢复和移动成本。",
+          "aliasIds": [
+            "hf:davidzhou302/ActiveScale",
+            "pending:hf:davidzhou302/ActiveScale"
+          ],
+          "dateNote": "保留原始论文与权重日期；本次eventAt/sourceUpdatedAt仅为官方代码首次可读核验时间，确切公开时刻未核定，不称9月19日首次发布。",
+          "paperUpdatedAt": "2026-09-16T11:46:40Z",
+          "artifactReleaseAt": "2026-09-17T03:12:06Z",
+          "briefHistory": [
+            {
+              "promotedAt": "2026-09-17T09:26:32.104Z",
+              "previous": {
+                "id": "arxiv:2609.18514",
+                "title": "ActiveScale: Scaling Active Perception for Robots across Model, Data, and Hardware",
+                "zhTitle": "ActiveScale：联合模型、数据与硬件的主动观察",
+                "authors": [
+                  "Shuai Zhou",
+                  "Kaisheng Pang",
+                  "Wenxuan Song",
+                  "Wenjie Zhang",
+                  "Xinhu Zheng",
+                  "Haoang Li"
+                ],
+                "category": "vla",
+                "contentTypes": [
+                  "paper"
+                ],
+                "source": "arXiv 中央索引",
+                "type": "论文简讯",
+                "publishedAt": "2026-09-16T11:46:40Z",
+                "sourceUpdatedAt": "2026-09-16T11:46:40Z",
+                "checkedAt": "2026-09-17T02:16:02.263315+00:00",
+                "canonicalUrl": "https://arxiv.org/abs/2609.18514",
+                "version": "v1",
+                "status": "verified_candidate",
+                "reviewStatus": "abstract_and_scope_verified",
+                "innovation": "为VLA加入历史视频、逐帧相机位姿token与位姿监督，以1000小时人类/机器人数据中训练，并提供可单人遥操作的主动感知移动操作平台；让换视角成为策略的一部分。",
+                "summary": "为VLA加入历史视频、逐帧相机位姿token与位姿监督，以1000小时人类/机器人数据中训练，并提供可单人遥操作的主动感知移动操作平台；让换视角成为策略的一部分。",
+                "editorialPriority": 92,
+                "editorialPriorityBasis": "编辑按机器人相关性、可复用技术价值与验证层级判断，非公开关注热度。",
+                "popularity": {
+                  "status": "unmeasured",
+                  "score": null,
+                  "metrics": {
+                    "githubStars": null,
+                    "hfUpvotes": null
+                  },
+                  "evidence": [],
+                  "basis": "仅为已核实公开关注信号；未知不当零，累计数不代表当日新增或研究质量。"
+                },
+                "links": [
+                  {
+                    "label": "论文",
+                    "url": "https://arxiv.org/abs/2609.18514"
+                  },
+                  {
+                    "label": "当前版本",
+                    "url": "https://arxiv.org/html/2609.18514v1"
+                  },
+                  {
+                    "label": "官方项目",
+                    "url": "https://active-scale.github.io/"
+                  },
+                  {
+                    "label": "专属代码",
+                    "url": "https://github.com/ShuaiZhou302/ActiveScale"
+                  }
+                ],
+                "identityLinks": [
+                  "https://arxiv.org/abs/2609.18514",
+                  "https://active-scale.github.io/",
+                  "https://github.com/ShuaiZhou302/ActiveScale"
+                ],
+                "evidence": "候选简讯按原始摘要与范围核验；定量实验尚待全文复核。",
+                "evidenceDetails": [
+                  {
+                    "url": "https://arxiv.org/abs/2609.18514",
+                    "location": "中央API元数据与摘要",
+                    "supports": "原始/修订时间、作者、方法范围；仅用于候选简讯",
+                    "checkedAt": "2026-09-17T02:16:02.263315+00:00"
+                  },
+                  {
+                    "url": "https://arxiv.org/html/2609.18514v1",
+                    "location": "原文缓存首部、方法/实验目录与项目链接；尚非全文逐表核读",
+                    "supports": "机器人相关性、原始链接；待入选再核全部实验",
+                    "checkedAt": "2026-09-17T02:16:02.263315+00:00"
+                  }
+                ],
+                "scopeNote": "机器人或具身任务直接相关；尚无未验证的全网热度声明。",
+                "githubRepo": "https://github.com/ShuaiZhou302/ActiveScale",
+                "repoUrl": "https://github.com/ShuaiZhou302/ActiveScale",
+                "discoveredAt": "2026-09-17T02:39:11.180Z",
+                "updatedAt": "2026-09-17T02:39:11.180Z",
+                "lastSeenAt": "2026-09-17T02:39:11.180Z",
+                "revisionEvents": []
+              }
+            }
+          ],
+          "eventDateBasis": "首次可读核验时间，非首次发布的精确时间"
+        },
+        {
+          "id": "hf:changh95/pi05-base-p300x2",
+          "title": "pi0.5-base deployment on dual Tenstorrent p300 boards",
+          "zhTitle": "π0.5 部署报告：双 p300 的动作块时延与数值校验",
+          "authors": [
+            "changh95（报告发布账号）"
+          ],
+          "category": "systems",
+          "tags": [
+            "部署",
+            "推理加速",
+            "VLA",
+            "数值精度"
+          ],
+          "contentTypes": [
+            "report"
+          ],
+          "type": "技术报告",
+          "source": "作者公开 Hugging Face 完整技术卡与固定提交",
+          "canonicalUrl": "https://huggingface.co/changh95/pi05-base-p300x2",
+          "identityLinks": [
+            "https://huggingface.co/changh95/pi05-base-p300x2"
+          ],
+          "aliasIds": [],
+          "version": "0eaeac818c9de9ae8f83b52d6ad70e0282ab2fa7",
+          "sourceUpdatedAt": "2026-09-18T21:26:10.000Z",
+          "checkedAt": "2026-09-19T05:43:17.168331+00:00",
+          "status": "full_verified",
+          "reviewStatus": "primary_methods_results_and_limitations_read",
+          "editorialPriority": 75,
+          "editorialPriorityReason": "编辑按可复用产物、直接机器人相关性和证据完整性判断，非公开热度。",
+          "popularity": {
+            "status": "unmeasured",
+            "score": null,
+            "metrics": {
+              "githubStars": null,
+              "hfUpvotes": null
+            },
+            "evidence": [],
+            "checkedAt": "2026-09-19T05:43:17.168331+00:00",
+            "missingMetrics": [
+              "githubStars",
+              "hfUpvotes"
+            ],
+            "basis": "没有取得可归属的论文投票或专属仓库数值，保持未知；新闻跟进和模型卡点赞不换算成论文投票。"
+          },
+          "links": [
+            {
+              "label": "原始技术卡",
+              "url": "https://huggingface.co/changh95/pi05-base-p300x2"
+            },
+            {
+              "label": "发布提交",
+              "url": "https://huggingface.co/changh95/pi05-base-p300x2/commits/main"
+            },
+            {
+              "label": "固定版本",
+              "url": "https://huggingface.co/changh95/pi05-base-p300x2/tree/0eaeac818c9de9ae8f83b52d6ad70e0282ab2fa7"
+            }
+          ],
+          "evidence": "已读原始方法、验证结果与局限；未重跑实验。评价及组合方向为编辑分析或研究假设。",
+          "evidenceDetails": [
+            {
+              "url": "https://huggingface.co/changh95/pi05-base-p300x2",
+              "location": "公开标签索引 createdAt/lastModified/sha；完整 README",
+              "supports": "产物日期、固定提交与卡片方法/验证条件。",
+              "checkedAt": "2026-09-19T05:43:17.168331+00:00"
+            },
+            {
+              "url": "https://huggingface.co/changh95/pi05-base-p300x2",
+              "location": "Single-agent profile；Multi-agent profile；Accuracy；Build information",
+              "supports": "四芯片/两板配置、固定输入与去噪步骤、50.5/53ms、84ms和47.3块每秒、数值对照范围；软件构建信息。",
+              "checkedAt": "2026-09-19T05:43:17.168331+00:00"
+            },
+            {
+              "url": "https://huggingface.co/changh95/pi05-base-p300x2/blob/6a9ad2bb63ea97975e03b9f3f8926c1a142ad771/README.md",
+              "location": "9月17日已核验并存档的Accuracy and speed，与当前完整卡比较",
+              "supports": "旧报告76.1毫秒进程内/78.9毫秒HTTP；当前增加双服务组与新的时延表，不将两个软件版本混作控制变量一致的实验。",
+              "checkedAt": "2026-09-19T05:43:17.168331+00:00"
+            }
+          ],
+          "background": "机器人策略的模型质量和部署速度是不同问题。动作块生成的时延、服务排队和数值误差都可能影响真实控制，不能只看离线吞吐。",
+          "innovation": "报告实现四芯片张量并行视觉语言前缀和动作专家部署，并给出单客户端与拆成两个双芯片服务组的两种配置，附固定软件版本与数值对照。",
+          "summary": "在两块 p300、共四芯片上部署 π0.5，分别测单请求时延和多客户端吞吐；尚未验证闭环任务成功。",
+          "experiments": "单请求配置使用两张224×224图像、224个文本token、10步去噪：进程内约50.5毫秒，HTTP约53毫秒/动作块。四客户端配置中位时延84毫秒、总吞吐47.3块/秒，这是合计吞吐而非每个机器人控制频率。两组观测对 FP32 Torch 的相关系数为0.9986/0.9988，随机输入最低约0.93。",
+          "conclusion": "已验证指定配置的运行时性能和部分数值一致性，未报告真机或闭环基准提升；输出仍是需配套反归一化的动作块。",
+          "evaluation": "【编辑分析】披露软件提交、请求形状和服务配置使速度数据更可解释。相关系数并不保证关键动作误差小，平均吞吐也不说明尾部时延是否适合控制。",
+          "futureDirections": "【研究假设】与标准 GPU 运行同一策略和归一化统计，在相同观测序列下测逐关节误差、尾部时延及闭环成功率；再检查低精度误差是否会改变约束层触发频率。",
+          "publishedAt": "2026-09-17T04:04:15Z",
+          "releaseAt": "2026-09-17T04:16:06Z",
+          "dateNote": "沿用9月17日首次技术卡发表日期；本次是9月18日固定SHA对应的部署方案和测量报告更新。",
+          "changeType": "updated",
+          "backfill": false,
+          "discoveredAt": "2026-09-17T09:26:32.104Z",
+          "updatedAt": "2026-09-19T05:43:17.390108+00:00",
+          "lastSeenAt": "2026-09-19T05:43:17.390108+00:00",
+          "editorialPriorityBasis": "无可比公开热度时，按机器人相关性、证据完整性与可复用研究价值补充；不是互动量。",
+          "artifactVersion": "0eaeac818c9de9ae8f83b52d6ad70e0282ab2fa7",
+          "artifactCreatedAt": "2026-09-17T04:03:31.000Z",
+          "substantiveUpdate": true,
+          "changeId": "hf:changh95/pi05-base-p300x2:0eaeac818c9de9ae8f83b52d6ad70e0282ab2fa7",
+          "stableChangeId": "hf:changh95/pi05-base-p300x2:0eaeac818c9de9ae8f83b52d6ad70e0282ab2fa7",
+          "eventAt": "2026-09-18T21:26:10.000Z",
+          "changeNote": "完整模型卡新增双服务组/多客户端方案，并将原76.1毫秒进程内、78.9毫秒HTTP报告更新为50.5/53毫秒。软件及配置有变化，这不是同条件独立复测，也不代表真机任务成功率提升。"
+        },
+        {
+          "id": "report:seeq-generalist-value-functions",
+          "title": "SeeQ: Training Generalist Value Functions for Long-Horizon Robotic Manipulation",
+          "zhTitle": "SeeQ：用子任务价值为长程操作选动作",
+          "category": "rl",
+          "publishedAt": "2026-09-18T15:32:46.000Z",
+          "canonicalUrl": "https://saksham002.github.io/seeq/",
+          "version": "公开报告",
+          "authors": [
+            "Saksham Singh",
+            "Zheyuan Hu",
+            "Max Sobol Mark",
+            "Jeffrey Yu",
+            "Zackory Erickson",
+            "Aviral Kumar"
+          ],
+          "tags": [
+            "价值学习",
+            "长程操作",
+            "VLA",
+            "离线强化学习"
+          ],
+          "contentTypes": [
+            "report"
+          ],
+          "type": "技术报告",
+          "checkedAt": "2026-09-19T05:43:17.168331+00:00",
+          "reviewStatus": "primary_methods_results_and_limitations_read",
+          "status": "full_verified",
+          "editorialPriority": 98,
+          "editorialPriorityBasis": "无可比公开热度时，按机器人相关性、证据完整性与可复用研究价值补充；不是互动量。",
+          "evidence": "已读原始方法、验证结果与局限；未重跑实验。评价及组合方向为编辑分析或研究假设。",
+          "links": [
+            {
+              "label": "原始报告",
+              "url": "https://saksham002.github.io/seeq/"
+            },
+            {
+              "label": "固定版本",
+              "url": "https://huggingface.co/CMU-AIRe/SeeQ-3B/tree/c25ba6b92264c4a277383111dfb8d7f67431a53a"
+            },
+            {
+              "label": "模型卡与权重",
+              "url": "https://huggingface.co/CMU-AIRe/SeeQ-3B"
+            }
+          ],
+          "evidenceDetails": [
+            {
+              "url": "https://huggingface.co/CMU-AIRe/SeeQ-3B",
+              "location": "公开标签索引 createdAt/lastModified/sha；完整 README",
+              "supports": "产物日期、固定提交与卡片方法/验证条件。",
+              "checkedAt": "2026-09-19T05:43:17.168331+00:00"
+            },
+            {
+              "url": "https://saksham002.github.io/seeq/",
+              "location": "Method；Real-world results；Ablations",
+              "supports": "子任务条件价值、两平台四任务各24次、逐任务成功次数、目标任务微调。",
+              "checkedAt": "2026-09-19T05:43:17.168331+00:00"
+            },
+            {
+              "url": "https://huggingface.co/CMU-AIRe/SeeQ-3B",
+              "location": "Model description；Training；Limitations",
+              "supports": "PaliGemma 3B、RoboCOIN预训练、子任务回报定义和模型使用限制。",
+              "checkedAt": "2026-09-19T05:43:17.168331+00:00"
+            }
+          ],
+          "summary": "先识别当前子任务，再用价值模型筛选动作块；公开真机结果显示收益，但目标任务仍需微调。",
+          "background": "长程操作只在整项任务结束时给奖励，价值学习容易受漫长时序和误差传播影响；直接对完整流程估分，也难以判断眼前动作是否推进了当前步骤。",
+          "innovation": "SeeQ 将自然语言子任务预测与动作价值联合训练，使时序差分学习停留在当前子任务内；部署时由模型推断子任务，再对 π0.5 生成的候选动作块做 best-of-N 选择。它沿用策略提供动作，新增的是可跨任务预训练的选择器。",
+          "experiments": "项目在两个真实机器人平台、四类操作上各做24次试验：折衬衫由10/24提升至22/24，开盖10/24→15/24，装包9/24→17/24，积木5/24→10/24。模型先在 RoboCOIN 的131任务约4万回合上预训练，再对目标任务微调；这些结果不代表零样本迁移。",
+          "conclusion": "在所列目标任务与候选动作生成方式下，子任务价值能改善长程执行。模型卡已公开，项目的论文按钮尚无有效链接，因此这里依据完整项目报告和模型说明，而非未发布论文。",
+          "evaluation": "【编辑分析】价值与策略解耦便于复用；关键风险是子任务识别错误和候选动作本身不足。四任务每项24次的证据有限，且分数表示子任务回报，不能当作整个任务成功概率。多候选推理的时延也需纳入比较。",
+          "futureDirections": "【研究假设】可先用动作约束层筛除不可行动作，再交给 SeeQ 排序；固定候选数、推理时延和训练数据，比较纯策略、仅约束、仅价值与二者组合，并单独统计子任务切换误判。",
+          "sourceUpdatedAt": "2026-09-18T16:57:30.000Z",
+          "artifactVersion": "c25ba6b92264c4a277383111dfb8d7f67431a53a",
+          "artifactCreatedAt": "2026-09-18T15:32:46.000Z",
+          "dateNote": "publishedAt 为公开产物仓库创建时间；sourceUpdatedAt 为当前提交时间，不等同论文发表或性能刷新。",
+          "identityLinks": [
+            "https://saksham002.github.io/seeq/",
+            "https://huggingface.co/CMU-AIRe/SeeQ-3B"
+          ],
+          "popularity": {
+            "status": "unmeasured",
+            "score": null,
+            "metrics": {
+              "githubStars": null,
+              "hfUpvotes": null
+            },
+            "evidence": [],
+            "checkedAt": "2026-09-19T05:43:17.168331+00:00",
+            "missingMetrics": [
+              "githubStars",
+              "hfUpvotes"
+            ],
+            "basis": "没有取得可归属的论文投票或专属仓库数值，保持未知；新闻跟进和模型卡点赞不换算成论文投票。",
+            "otherSignals": [
+              {
+                "metric": "hf_model_likes",
+                "value": 1,
+                "url": "https://huggingface.co/CMU-AIRe/SeeQ-3B",
+                "checkedAt": "2026-09-19T05:17:40.885632+00:00",
+                "scope": "模型点赞，与论文投票不同；未计入既有排序分"
+              }
+            ]
+          },
+          "discoveredAt": "2026-09-19T05:43:17.390108+00:00",
+          "updatedAt": "2026-09-19T05:43:17.390108+00:00",
+          "lastSeenAt": "2026-09-19T05:43:17.390108+00:00"
+        },
+        {
+          "id": "doi:10.1002/adrr.70163",
+          "title": "WorMa: An Undulatory Robot With Center of Mass Regulation via Internal Fluid Redistribution for Amphibious Locomotion",
+          "zhTitle": "WorMa：通过内部液体移动质心的两栖机器人",
+          "category": "theory",
+          "publishedAt": "2026-09-14",
+          "canonicalUrl": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adrr.70163",
+          "version": "期刊在线版",
+          "authors": [
+            "Daniil Filimonov",
+            "Nana Obayashi"
+          ],
+          "tags": [
+            "变质心",
+            "动力学",
+            "两栖运动",
+            "形态控制"
+          ],
+          "contentTypes": [
+            "paper",
+            "news"
+          ],
+          "type": "研究论文",
+          "checkedAt": "2026-09-19T05:43:17.168331+00:00",
+          "reviewStatus": "primary_methods_results_and_limitations_read",
+          "status": "full_verified",
+          "editorialPriority": 96,
+          "editorialPriorityBasis": "无可比公开热度时，按机器人相关性、证据完整性与可复用研究价值补充；不是互动量。",
+          "evidence": "已读原始方法、验证结果与局限；未重跑实验。评价及组合方向为编辑分析或研究假设。",
+          "links": [
+            {
+              "label": "原始报告",
+              "url": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adrr.70163"
+            },
+            {
+              "label": "机构解读",
+              "url": "https://engineering.nyu.edu/news/robot-shifts-its-own-weight-cross-land-steps-and-water"
+            }
+          ],
+          "evidenceDetails": [
+            {
+              "url": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adrr.70163",
+              "location": "First published；§§2.2、3.4、4、5、6；Figure 11",
+              "supports": "原始日期、变质心结构、19.5°坡面和15厘米台阶条件；完整转移110秒；运动阶段计时、人工控制和实验局限。",
+              "checkedAt": "2026-09-19T05:43:17.168331+00:00"
+            }
+          ],
+          "summary": "让内部液体在头尾之间转移，用质量分布辅助波动步态跨越地形；转移耗时仍是重要约束。",
+          "background": "适合平地的波动运动，在上坡、台阶与水面上需要不同的质量分布。只增加外部关节和专用机构，会带来结构与控制负担。",
+          "innovation": "WorMa 通过泵送内部液体调整头尾质心，与既有波动运动配合；把可调质量分布作为另一种运动控制变量。",
+          "experiments": "原型进行了平面、刚性坡面、台阶与水中实验：前重配置达到19.5°坡面，配合质心切换和身体动作完成15厘米台阶。完整液体转移约需110秒；文中部分速度与运输代价按运动阶段计算，不能据此推断包含等待的整段任务效率。",
+          "conclusion": "实验支持质量重分配对跨环境运动有帮助；台阶过程包含人工时序控制与身体动作调整，并非仅靠泵水自动完成。",
+          "evaluation": "【编辑分析】内部质量调节的机械思路有价值，但有限重复、坡面侧向导轨、慢速泵送及人工操作限制外推。应区分运动阶段指标、泵能耗与任务总时间。",
+          "futureDirections": "【研究假设】把液体转移作为慢速规划变量，与快速接触 MPC 配合；比较固定质心、人工切换和感知触发规划，以包含泵送等待的总时间、总能耗及成功率评估。",
+          "doi": "10.1002/adrr.70163",
+          "dateNote": "原始在线发表日期为2026-09-14；9月17日机构报道及9月18日新闻跟进为发现线索，不另计研究。",
+          "popularity": {
+            "status": "unmeasured",
+            "score": null,
+            "metrics": {
+              "githubStars": null,
+              "hfUpvotes": null
+            },
+            "evidence": [],
+            "checkedAt": "2026-09-19T05:43:17.168331+00:00",
+            "missingMetrics": [
+              "githubStars",
+              "hfUpvotes"
+            ],
+            "basis": "没有取得可归属的论文投票或专属仓库数值，保持未知；新闻跟进和模型卡点赞不换算成论文投票。",
+            "otherSignals": [
+              {
+                "metric": "verified_news_followup",
+                "url": "https://spectrum.ieee.org/video-friday-quadrotor-from-birotor",
+                "checkedAt": "2026-09-19T05:43:17.168331+00:00",
+                "scope": "已读取独立新闻跟进；无互动量，不虚构数值热度"
+              }
+            ]
+          },
+          "discoveredAt": "2026-09-19T05:43:17.390108+00:00",
+          "updatedAt": "2026-09-19T05:43:17.390108+00:00",
+          "lastSeenAt": "2026-09-19T05:43:17.390108+00:00"
+        },
+        {
+          "id": "hf:Aasdfip/longnav-mshab-pick-flow-native-speedmix-20hz",
+          "title": "Longnav MSHAB native-action flow policy with speed-mixed demonstrations",
+          "zhTitle": "Longnav：速度混合示教训练移动操作流策略",
+          "category": "vla",
+          "publishedAt": "2026-09-19T01:11:42.000Z",
+          "canonicalUrl": "https://huggingface.co/Aasdfip/longnav-mshab-pick-flow-native-speedmix-20hz",
+          "version": "公开报告",
+          "authors": [
+            "Aasdfip（模型发布账号）"
+          ],
+          "tags": [
+            "移动操作",
+            "仿真",
+            "行为克隆",
+            "流匹配"
+          ],
+          "contentTypes": [
+            "report"
+          ],
+          "type": "技术报告",
+          "checkedAt": "2026-09-19T05:43:17.168331+00:00",
+          "reviewStatus": "primary_methods_results_and_limitations_read",
+          "status": "full_verified",
+          "editorialPriority": 78,
+          "editorialPriorityBasis": "无可比公开热度时，按机器人相关性、证据完整性与可复用研究价值补充；不是互动量。",
+          "evidence": "已读原始方法、验证结果与局限；未重跑实验。评价及组合方向为编辑分析或研究假设。",
+          "links": [
+            {
+              "label": "原始报告",
+              "url": "https://huggingface.co/Aasdfip/longnav-mshab-pick-flow-native-speedmix-20hz"
+            },
+            {
+              "label": "固定版本",
+              "url": "https://huggingface.co/Aasdfip/longnav-mshab-pick-flow-native-speedmix-20hz/tree/be299c81b88264caa0476cd3eb763c7614f4940a"
+            },
+            {
+              "label": "实现分支",
+              "url": "https://github.com/averyxi42/spatial_training/tree/mshab"
+            }
+          ],
+          "evidenceDetails": [
+            {
+              "url": "https://huggingface.co/Aasdfip/longnav-mshab-pick-flow-native-speedmix-20hz",
+              "location": "公开标签索引 createdAt/lastModified/sha；完整 README",
+              "supports": "产物日期、固定提交与卡片方法/验证条件。",
+              "checkedAt": "2026-09-19T05:43:17.168331+00:00"
+            },
+            {
+              "url": "https://huggingface.co/Aasdfip/longnav-mshab-pick-flow-native-speedmix-20hz",
+              "location": "Architecture；Training；Evaluation；Frequency/limitations",
+              "supports": "252次场景留出评测、0.575/0.313与BC对照、不同种子/频率、20Hz动作与2.5Hz重规划。",
+              "checkedAt": "2026-09-19T05:43:17.168331+00:00"
+            }
+          ],
+          "summary": "用速度混合示教训练原生 Fetch 动作流策略；仿真中曾经完成与结束时仍成功之间差距明显。",
+          "background": "移动操作既要协调底盘和机械臂，也要处理演示速度差异。单看一次触发成功，可能掩盖抓起后又掉落或未能稳定保持的问题。",
+          "innovation": "报告采用 Qwen3-VL 视觉语言主干和分别处理机械臂/底盘的流动作头，在不同减速方式混合的专家示教上做行为克隆，直接输出 Fetch 原生命令，避免另设动作转换器。",
+          "experiments": "在63个未见场景配置、各4个种子组成的252次 MSHAB 仿真测试中，曾经成功率为0.575，结束时成功率为0.313；所列 π0.5 BC 为0.563/0.222。两者决策频率和种子不完全匹配，不能据小差异断言优胜。标称20Hz是动作采样频率，每次执行8步，对应2.5Hz重规划。",
+          "conclusion": "这是移动操作行为克隆的可复核工程报告与权重发布，尚无真机证据；成功保持能力仍明显弱于短暂触发成功。",
+          "evaluation": "【编辑分析】同时披露两种成功口径值得借鉴。训练演示在首次成功后很快截断，可能缺少保持状态的数据；更大的视觉主干也没有自动解决终态稳定性。报告中的 PPO 行属于对照，不是此模型经过强化学习后的结果。",
+          "futureDirections": "【研究假设】在相同场景种子、决策频率与算力下，加入成功后的保持演示，再比较行为克隆与残差 RL；同时报告终态成功、首次成功、碰撞和耗时，检验收益是否来自更多保持数据。",
+          "sourceUpdatedAt": "2026-09-19T01:12:33.000Z",
+          "artifactVersion": "be299c81b88264caa0476cd3eb763c7614f4940a",
+          "artifactCreatedAt": "2026-09-19T01:11:42.000Z",
+          "dateNote": "publishedAt 为公开产物仓库创建时间；sourceUpdatedAt 为当前提交时间，不等同论文发表或性能刷新。",
+          "popularity": {
+            "status": "unmeasured",
+            "score": null,
+            "metrics": {
+              "githubStars": null,
+              "hfUpvotes": null
+            },
+            "evidence": [],
+            "checkedAt": "2026-09-19T05:43:17.168331+00:00",
+            "missingMetrics": [
+              "githubStars",
+              "hfUpvotes"
+            ],
+            "basis": "没有取得可归属的论文投票或专属仓库数值，保持未知；新闻跟进和模型卡点赞不换算成论文投票。"
+          },
+          "discoveredAt": "2026-09-19T05:43:17.390108+00:00",
+          "updatedAt": "2026-09-19T05:43:17.390108+00:00",
+          "lastSeenAt": "2026-09-19T05:43:17.390108+00:00"
+        },
+        {
+          "id": "hf:datasets/stray-light/zerograv-manipulation-regular-gravity-trajectories-state-v1",
+          "title": "Regular-gravity control trajectories for zero-gravity manipulation studies",
+          "zhTitle": "重力对照轨迹：为失重操作研究提供匹配实验数据",
+          "category": "systems",
+          "publishedAt": "2026-09-18T22:39:14.000Z",
+          "canonicalUrl": "https://huggingface.co/datasets/stray-light/zerograv-manipulation-regular-gravity-trajectories-state-v1",
+          "version": "公开报告",
+          "authors": [
+            "stray-light（数据发布账号）"
+          ],
+          "tags": [
+            "数据集",
+            "实验设计",
+            "动力学",
+            "强化学习"
+          ],
+          "contentTypes": [
+            "report"
+          ],
+          "type": "技术报告",
+          "checkedAt": "2026-09-19T05:43:17.168331+00:00",
+          "reviewStatus": "primary_methods_results_and_limitations_read",
+          "status": "full_verified",
+          "editorialPriority": 71,
+          "editorialPriorityBasis": "无可比公开热度时，按机器人相关性、证据完整性与可复用研究价值补充；不是互动量。",
+          "evidence": "已读原始方法、验证结果与局限；未重跑实验。评价及组合方向为编辑分析或研究假设。",
+          "links": [
+            {
+              "label": "原始报告",
+              "url": "https://huggingface.co/datasets/stray-light/zerograv-manipulation-regular-gravity-trajectories-state-v1"
+            },
+            {
+              "label": "固定版本",
+              "url": "https://huggingface.co/datasets/stray-light/zerograv-manipulation-regular-gravity-trajectories-state-v1/tree/4378adaeefa192704337e10af3c9b917f01cbb8e"
+            }
+          ],
+          "evidenceDetails": [
+            {
+              "url": "https://huggingface.co/datasets/stray-light/zerograv-manipulation-regular-gravity-trajectories-state-v1",
+              "location": "公开标签索引 createdAt/lastModified/sha；完整 README",
+              "supports": "产物日期、固定提交与卡片方法/验证条件。",
+              "checkedAt": "2026-09-19T05:43:17.168331+00:00"
+            },
+            {
+              "url": "https://huggingface.co/datasets/stray-light/zerograv-manipulation-regular-gravity-trajectories-state-v1",
+              "location": "Dataset composition；Matched control；Generation/QA；Limitations",
+              "supports": "四任务各1000段；末15帧成功、15Hz；每任务单一专家种子、状态数据及未随包发布专家权重。",
+              "checkedAt": "2026-09-19T05:43:17.168331+00:00"
+            }
+          ],
+          "summary": "公开四类操作的常重力成功轨迹作为失重研究对照；保持训练与筛选流程接近，但仍需跨种子验证。",
+          "background": "比较失重和常重力策略时，初始状态、训练预算或成功筛选不同都可能造成混淆，需要能明确说明控制变量的轨迹数据。",
+          "innovation": "数据报告在 DROID/ManiSkill 设置中保留与失重实验匹配的三维生成范围、初始扰动、PPO流程和质量筛选，只改变重力条件，保存状态轨迹及环境代码快照。",
+          "experiments": "四个任务各收录1000段经筛选的成功轨迹，末尾15帧持续成功作为质量条件，控制采样为15Hz。每个任务/条件只有一个专家训练种子；发布不含图像或专家检查点，也没有证明用这些轨迹训练后会提高泛化性能。",
+          "conclusion": "这套产物有助于搭建重力条件对照，当前证据支持数据组成与生成流程，不能当作已完成的跨重力迁移结论。",
+          "evaluation": "【编辑分析】匹配变量的设计比简单拼接两套数据更有解释力，但只保留成功样本会改变状态分布，单一专家种子也可能把训练偶然性混入重力效应。",
+          "futureDirections": "【研究假设】用相同数量轨迹分别训练策略，在独立专家种子和共同初始状态上比较；保留失败轨迹与成功保持指标，区分重力条件、筛选偏差和控制器训练差异。",
+          "sourceUpdatedAt": "2026-09-18T22:41:20.000Z",
+          "artifactVersion": "4378adaeefa192704337e10af3c9b917f01cbb8e",
+          "artifactCreatedAt": "2026-09-18T22:39:14.000Z",
+          "dateNote": "publishedAt 为公开产物仓库创建时间；sourceUpdatedAt 为当前提交时间，不等同论文发表或性能刷新。",
+          "popularity": {
+            "status": "unmeasured",
+            "score": null,
+            "metrics": {
+              "githubStars": null,
+              "hfUpvotes": null
+            },
+            "evidence": [],
+            "checkedAt": "2026-09-19T05:43:17.168331+00:00",
+            "missingMetrics": [
+              "githubStars",
+              "hfUpvotes"
+            ],
+            "basis": "没有取得可归属的论文投票或专属仓库数值，保持未知；新闻跟进和模型卡点赞不换算成论文投票。"
+          },
+          "discoveredAt": "2026-09-19T05:43:17.390108+00:00",
+          "updatedAt": "2026-09-19T05:43:17.390108+00:00",
+          "lastSeenAt": "2026-09-19T05:43:17.390108+00:00"
+        },
+        {
+          "id": "arxiv:2606.04811",
+          "title": "Dream.exe: Can Video Generation Models Dream Executable Robot Manipulation?",
+          "zhTitle": "Dream.exe：视频生成的动作能否在物理仿真中执行",
+          "category": "wam",
+          "publishedAt": "2026-06-03T12:35:35Z",
+          "canonicalUrl": "https://arxiv.org/abs/2606.04811",
+          "version": "v2",
+          "authors": [
+            "Rui Zhao",
+            "Kaiming Yang",
+            "Jifeng Zhu",
+            "Siyang Chen",
+            "Ziqi Wang",
+            "Weijia Wu",
+            "Kevin Qinghong Lin",
+            "Heng Wang",
+            "Mike Zheng Shou"
+          ],
+          "tags": [
+            "世界模型",
+            "视频到动作",
+            "评测",
+            "可执行性"
+          ],
+          "contentTypes": [
+            "paper",
+            "report"
+          ],
+          "type": "研究论文",
+          "checkedAt": "2026-09-19T05:43:17.168331+00:00",
+          "reviewStatus": "primary_methods_results_and_limitations_read",
+          "status": "full_verified",
+          "editorialPriority": 95,
+          "editorialPriorityBasis": "无可比公开热度时，按机器人相关性、证据完整性与可复用研究价值补充；不是互动量。",
+          "evidence": "已读原始方法、验证结果与局限；未重跑实验。评价及组合方向为编辑分析或研究假设。",
+          "links": [
+            {
+              "label": "原始报告",
+              "url": "https://arxiv.org/abs/2606.04811"
+            },
+            {
+              "label": "论文全文",
+              "url": "https://arxiv.org/html/2606.04811v2"
+            },
+            {
+              "label": "模型固定版本",
+              "url": "https://huggingface.co/kaimingyang/DVD_for_Dream.exe/tree/36ea6c50ea9c777ea42238915c192d7a9d6a8a87"
+            },
+            {
+              "label": "评测数据",
+              "url": "https://huggingface.co/datasets/kaimingyang/Dream.exe"
+            }
+          ],
+          "evidenceDetails": [
+            {
+              "url": "https://arxiv.org/abs/2606.04811",
+              "location": "Submission history",
+              "supports": "原始时间及v2时间。",
+              "checkedAt": "2026-09-19T05:43:17.168331+00:00"
+            },
+            {
+              "url": "https://arxiv.org/html/2606.04811v2",
+              "location": "§§3–4；Table 4；Appendix C.2",
+              "supports": "8模型、101任务；指令合并口径；16.5%、60.4%与98.1%对应生成模型和两个参考路线。",
+              "checkedAt": "2026-09-19T05:43:17.168331+00:00"
+            },
+            {
+              "url": "https://huggingface.co/datasets/kaimingyang/Dream.exe",
+              "location": "Data layout；Unavailable generation inputs；Included results",
+              "supports": "101案例、缺失输入规则、当前CosmosPolicy视频重建路线。",
+              "checkedAt": "2026-09-19T05:43:17.168331+00:00"
+            },
+            {
+              "url": "https://huggingface.co/kaimingyang/DVD_for_Dream.exe",
+              "location": "Reproducibility；checkpoint layout",
+              "supports": "共享及逐案例运行模型不是可任意互换的通用LoRA。",
+              "checkedAt": "2026-09-19T05:43:17.168331+00:00"
+            }
+          ],
+          "summary": "随本周深度模型与评测产物发布补录旧论文：把生成视频转换为机器人轨迹，分开测视觉质量和任务成功。",
+          "background": "看起来合理的视频不一定包含可执行的接触与运动。若只用视觉评分判断世界模型，容易忽略深度误差、抓取时序及长程失败。",
+          "innovation": "Dream.exe 将视频生成、深度与轨迹提取、仿真执行串成评测流程。当前开放101个固定场景案例及相关输入/结果，DVD发布包含共享与逐案例检查点，复现时必须区分两种模型。",
+          "experiments": "论文比较8类生成/策略模型，在101个操作任务上评估；原版与增强指令结果合并报告。生成模型最高整体二元成功率为16.5%；真实演示视频经估计深度重放为60.4%，换用仿真真值深度为98.1%，说明执行结果也受提取链条影响。以上是原论文结果，不是本周开源后新跑的提升。",
+          "conclusion": "视频观感不能替代可执行性检验；基准也不能将所有失败单独归因于视频模型。部分生成输入不可用，当前数据卡要求将这些路线标为 partial，而非完整复现。",
+          "evaluation": "【编辑分析】同一视频到执行接口方便诊断，但深度、相机选择、逐案例适配和缺失输入会影响公平性。论文与产物说明对 CosmosPolicy 路线的描述应结合当前清单核对，不把动作原生输出和视频重建后的结果混作一种测试。",
+          "futureDirections": "【研究假设】把 WAM 的动作头与视频提取头放到相同初始状态、相同任务及反馈预算下评测；同时报告真实演示参考上界、输入覆盖率和任务成功，分离生成、几何估计与控制三个瓶颈。",
+          "sourceUpdatedAt": "2026-09-18T18:21:23.000Z",
+          "paperUpdatedAt": "2026-06-04T10:52:20Z",
+          "artifactVersion": "36ea6c50ea9c777ea42238915c192d7a9d6a8a87",
+          "artifactCreatedAt": "2026-09-14T18:12:49.000Z",
+          "dateNote": "论文首次提交2026-06-03；本轮由9月14日创建、9月18日修改的官方模型仓库发现并补录。不是9月新论文，也未将模型提交时间写成论文修订日期。",
+          "identityLinks": [
+            "https://arxiv.org/abs/2606.04811",
+            "https://huggingface.co/kaimingyang/DVD_for_Dream.exe",
+            "https://huggingface.co/datasets/kaimingyang/Dream.exe"
+          ],
+          "popularity": {
+            "status": "verified",
+            "score": 57.81,
+            "metrics": {
+              "githubStars": null,
+              "hfUpvotes": 17
+            },
+            "evidence": [
+              {
+                "url": "https://huggingface.co/papers/2606.04811",
+                "apiUrl": "https://huggingface.co/api/papers/2606.04811",
+                "metric": "hf_paper_upvotes",
+                "value": 17,
+                "checkedAt": "2026-09-19T05:32:12.635929+00:00",
+                "scope": "公开论文累计投票，非当日新增"
+              }
+            ],
+            "checkedAt": "2026-09-19T05:43:17.168331+00:00",
+            "missingMetrics": [
+              "githubStars"
+            ],
+            "basis": "；HF论文累计投票 17；仅代表可核公开信号，未知不记零，累计数不是当天热度或研究质量。"
+          },
+          "discoveredAt": "2026-09-19T05:43:17.390108+00:00",
+          "updatedAt": "2026-09-19T05:43:17.390108+00:00",
+          "lastSeenAt": "2026-09-19T05:43:17.390108+00:00"
+        },
+        {
+          "id": "doi:10.1177/02783649261486468",
+          "title": "A transformable tethered aerial platform for robot-environment interactions",
+          "zhTitle": "可变形系绳飞行平台：分体飞行、合体穿隙与接触操作",
+          "category": "theory",
+          "publishedAt": "2026-09-16",
+          "canonicalUrl": "https://doi.org/10.1177/02783649261486468",
+          "version": "期刊论文／作者稿",
+          "authors": [
+            "Ruobing Wang",
+            "Songnan Bai",
+            "Kaixu Dong",
+            "Hongqiang Wang",
+            "Pakpong Chirarattananon"
+          ],
+          "tags": [
+            "飞行机器人",
+            "混合系统",
+            "接触控制",
+            "动力学"
+          ],
+          "contentTypes": [
+            "paper",
+            "news"
+          ],
+          "type": "研究论文",
+          "checkedAt": "2026-09-19T05:43:17.168331+00:00",
+          "reviewStatus": "primary_methods_results_and_limitations_read",
+          "status": "full_verified",
+          "editorialPriority": 92,
+          "editorialPriorityBasis": "无可比公开热度时，按机器人相关性、证据完整性与可复用研究价值补充；不是互动量。",
+          "evidence": "已读原始方法、验证结果与局限；未重跑实验。评价及组合方向为编辑分析或研究假设。",
+          "links": [
+            {
+              "label": "原始报告",
+              "url": "https://doi.org/10.1177/02783649261486468"
+            },
+            {
+              "label": "作者论文全文",
+              "url": "https://climb.mie.utoronto.ca/pdfs/wang2026a.pdf"
+            }
+          ],
+          "evidenceDetails": [
+            {
+              "url": "https://api.crossref.org/works/10.1177/02783649261486468",
+              "location": "published-online；title；author",
+              "supports": "在线发表2026-09-16及DOI身份。",
+              "checkedAt": "2026-09-19T05:43:17.168331+00:00"
+            },
+            {
+              "url": "https://climb.mie.utoronto.ca/pdfs/wang2026a.pdf",
+              "location": "§§2–4；§§5.1–5.7；§6（正文第10–17页）",
+              "supports": "三模式设计，46秒演示误差，165克/机，40克和更换电机后的100克载荷，有限反馈及人工辅助限制。",
+              "checkedAt": "2026-09-19T05:43:17.168331+00:00"
+            }
+          ],
+          "summary": "两架双旋翼飞行器通过卷绳与磁连接切换构型，并把绳索用作操作和栖停工具。",
+          "background": "飞行平台进入狭小区域与实施接触操作需要不同形态；固定构型或额外机械手会增加结构负担。",
+          "innovation": "系统将松绳独立飞行、张紧协同飞行及合体四旋翼三种模式，与分模式位置控制和共用姿态控制结合；显式考虑系绳偏心连接带来的力矩。",
+          "experiments": "论文用室内动捕和室外RTK验证切换、搬运、穿隙与栖停。室内46秒切换演示的三轴质心RMS误差为2.2/1.6/3.6厘米；双机合计约330克，原电机搬运40克载荷，100克演示使用更高KV电机，不能直接混比。",
+          "conclusion": "实物实验支持同一平台在接入空间与物理交互阶段切换形态。仅一机有位置反馈时也能展示张紧和合体飞行，但绳角开环会产生更大振荡。",
+          "evaluation": "【编辑分析】把连结机构同时作为末端工具是有用的机械设计。控制主要面向非激烈机动，接触任务仍依赖人工辅助；论文未解决接触力调节、环境自主感知与规划。",
+          "futureDirections": "【研究假设】将绳索形状/张力估计接入接触规划器，以统一任务测试人工预设和自主切换；重点统计多次试验成功率、触碰峰值、穿隙失败及不同风扰下的恢复能力。",
+          "doi": "10.1177/02783649261486468",
+          "dateNote": "在线发表日由出版登记的 published-online 核验；作者稿页眉仍带模板年份，不据页眉猜日期。",
+          "popularity": {
+            "status": "unmeasured",
+            "score": null,
+            "metrics": {
+              "githubStars": null,
+              "hfUpvotes": null
+            },
+            "evidence": [],
+            "checkedAt": "2026-09-19T05:43:17.168331+00:00",
+            "missingMetrics": [
+              "githubStars",
+              "hfUpvotes"
+            ],
+            "basis": "没有取得可归属的论文投票或专属仓库数值，保持未知；新闻跟进和模型卡点赞不换算成论文投票。",
+            "otherSignals": [
+              {
+                "metric": "verified_news_followup",
+                "url": "https://spectrum.ieee.org/video-friday-quadrotor-from-birotor",
+                "checkedAt": "2026-09-19T05:43:17.168331+00:00",
+                "scope": "已读取独立新闻跟进；无互动量，不虚构数值热度"
+              }
+            ]
+          },
+          "discoveredAt": "2026-09-19T05:43:17.390108+00:00",
+          "updatedAt": "2026-09-19T05:43:17.390108+00:00",
+          "lastSeenAt": "2026-09-19T05:43:17.390108+00:00"
+        },
+        {
+          "id": "arxiv:2609.11697",
+          "title": "ActSafeGuard: Differentiable and Training-Aligned Constraint Enforcement for Flow-Matching Policies",
+          "zhTitle": "ActSafeGuard v2：补充约束复现细节，部分表格仍需澄清",
+          "category": "theory",
+          "type": "研究论文",
+          "contentTypes": [
+            "paper"
+          ],
+          "publishedAt": "2026-09-10T15:21:47+00:00",
+          "sourceUpdatedAt": "2026-09-14T05:08:09Z",
+          "sourceAnnouncedAt": "2026-09-11",
+          "version": "v2",
+          "authors": [
+            "Ma, Jianming",
+            "Jin, Rongjun",
+            "Si, Xiaxi",
+            "Zhang, Yang",
+            "Li, Yiheng",
+            "Gao, Yue"
+          ],
+          "canonicalUrl": "https://arxiv.org/abs/2609.11697",
+          "summary": "可微射线缩放让动作生成遵守给定约束；新附录补足逐任务指标，但 Fast-WAM 的主表与附表部分数值不一致。",
+          "innovation": "在每个离散流步中解析计算沿预测方向到凸可行域边界的缩放量，训练和推理共用该层；边界梯度允许沿可行面调整方向，不引入额外学习网络。v2新增具体关节边界、评测设置和逐任务附表。",
+          "links": [
+            {
+              "label": "论文原文",
+              "url": "https://arxiv.org/abs/2609.11697"
+            },
+            {
+              "label": "v2完整论文",
+              "url": "https://arxiv.org/html/2609.11697v2"
+            }
+          ],
+          "evidence": "已读原始方法、验证结果与局限；未重跑实验。评价及组合方向为编辑分析或研究假设。",
+          "evidenceDetails": [
+            {
+              "url": "https://arxiv.org/html/2609.11697v2",
+              "location": "Method；Table 1；Appendices A–G；Tables 8–9",
+              "supports": "凸可行域及初值条件；四任务300示教/100评测；12关节约束；逐任务结果、Fast-WAM主附表冲突和LDLJ标注问题。",
+              "checkedAt": "2026-09-19T05:43:17.168331+00:00"
+            },
+            {
+              "url": "https://arxiv.org/html/2609.11697v1",
+              "location": "与v2主表及附录结构对比",
+              "supports": "主表结果已存在；v2增加详细约束、复现条件与逐任务附表，不据版本号宣称新真机试验。",
+              "checkedAt": "2026-09-19T05:43:17.168331+00:00"
+            }
+          ],
+          "popularity": {
+            "status": "unmeasured",
+            "score": null,
+            "metrics": {
+              "githubStars": null,
+              "hfUpvotes": null
+            },
+            "evidence": [],
+            "checkedAt": "2026-09-19T05:43:17.168331+00:00",
+            "missingMetrics": [
+              "githubStars",
+              "hfUpvotes"
+            ],
+            "basis": "没有取得可归属的论文投票或专属仓库数值，保持未知；新闻跟进和模型卡点赞不换算成论文投票。"
+          },
+          "windowClassification": "lookback_new_discovery",
+          "changeType": "updated",
+          "status": "full_verified",
+          "reviewStatus": "primary_methods_results_and_limitations_read",
+          "discoveredAt": "2026-09-14T02:33:48.382866+00:00",
+          "updatedAt": "2026-09-19T05:43:17.390108+00:00",
+          "lastSeenAt": "2026-09-19T05:43:17.390108+00:00",
+          "tags": [
+            "动作约束",
+            "流匹配",
+            "VLA",
+            "WAM",
+            "论文修订"
+          ],
+          "checkedAt": "2026-09-19T05:43:17.168331+00:00",
+          "editorialPriority": 94,
+          "editorialPriorityBasis": "无可比公开热度时，按机器人相关性、证据完整性与可复用研究价值补充；不是互动量。",
+          "background": "流匹配动作在训练时无约束、部署时再截断，会造成训练执行不一致。问题不只是修正动作，还包括让学习过程看到约束边界。",
+          "experiments": "四个 RoboTwin 操作任务，各300段示教、100次独立评测，测试 π0.5 与 Fast-WAM。π0.5 的位置加单步位移约束下，放鞋由90%到98%、挂杯由21%到31%。所有约束方法都达到所定义的100%逐步约束满足率，不能把这个数当作本方法独有优势。真机两任务各5次是原有演示，并非本轮新实验。",
+          "conclusion": "方法在明确的凸动作集合、可行初值及所列测试条件下保持动作可行。v2 的主表1与附表9在 Fast-WAM 的部分静态/动态结果上不同，本日报不据这些冲突数字给出精确模型排名，需作者澄清。",
+          "evaluation": "【编辑分析】约束只覆盖机械臂关节，未覆盖夹爪、任意碰撞或全部接触风险；所谓速度边界实际是每步位移。附表 LDLJ 的展开文字与指标定义也不一致。新增复现细节有价值，但不支持“所有任务性能均保持”的无条件结论。",
+          "futureDirections": "【研究假设】在接触 MPC 给出的局部凸动作集合上接入该层，比较仅部署投影与训练推理共用层；先统一表格结果，再测试非凸障碍、模型误差、夹爪约束和实时开销。",
+          "substantiveUpdate": true,
+          "changeId": "arxiv:2609.11697:v2",
+          "stableChangeId": "arxiv:2609.11697:v2",
+          "eventAt": "2026-09-14T05:08:09Z",
+          "changeNote": "核验此前待查v2：增补约束边界、训练评测条件及逐任务附表，升级为完整分析；发现Fast-WAM主表与附表部分数值不一致，保留待澄清说明。未把旧真机演示当新增实验。",
+          "dateNote": "原始日期和首次收录保留；v2修订发生于9月14日，本轮完成遗留核验。",
+          "briefHistory": [
+            {
+              "promotedAt": "2026-09-19T05:43:17.390108+00:00",
+              "previous": {
+                "id": "arxiv:2609.11697",
+                "title": "ActSafeGuard: Differentiable and Training-Aligned Constraint Enforcement for Flow-Matching Policies",
+                "zhTitle": "ActSafeGuard：让流匹配策略在训练中学习动作可行边界",
+                "category": "embodied",
+                "type": "arXiv预印本",
+                "contentTypes": [
+                  "paper"
+                ],
+                "publishedAt": "2026-09-10T15:21:47+00:00",
+                "sourceUpdatedAt": "2026-09-10T15:21:47+00:00",
+                "sourceAnnouncedAt": "2026-09-11",
+                "version": "v1",
+                "authors": [
+                  "Ma, Jianming",
+                  "Jin, Rongjun",
+                  "Si, Xiaxi",
+                  "Zhang, Yang",
+                  "Li, Yiheng",
+                  "Gao, Yue"
+                ],
+                "canonicalUrl": "https://arxiv.org/abs/2609.11697",
+                "summary": "把解析射线缩放构成的可微约束层接入训练，使动作可行性及边界梯度参与学习；安全范围取决于所设约束。",
+                "innovation": "把解析射线缩放构成的可微约束层接入训练，使动作可行性及边界梯度参与学习；安全范围取决于所设约束。",
+                "links": [
+                  {
+                    "label": "论文原文",
+                    "url": "https://arxiv.org/abs/2609.11697"
+                  }
+                ],
+                "evidence": "已阅读原始摘要与提交历史；以下仅为创新简讯，尚未完成全文实验核验。",
+                "evidenceDetails": [
+                  {
+                    "url": "https://arxiv.org/abs/2609.11697",
+                    "location": "Abstract; Submission history",
+                    "supports": "标题、作者、摘要与原始提交/版本时间"
+                  }
+                ],
+                "popularity": {
+                  "score": null,
+                  "status": "unmeasured",
+                  "metrics": {
+                    "githubStars": null,
+                    "hfUpvotes": null
+                  },
+                  "evidence": [],
+                  "basis": "可归属的公开关注指标暂缺；不记作零。"
+                },
+                "windowClassification": "lookback_new_discovery",
+                "changeType": "new_work",
+                "status": "verified",
+                "reviewStatus": "innovation_verified",
+                "discoveredAt": "2026-09-14T02:33:48.382866+00:00",
+                "updatedAt": "2026-09-14T02:33:48.382866+00:00",
+                "lastSeenAt": "2026-09-14T02:33:48.382866+00:00",
+                "revisionEvents": []
+              }
+            }
+          ],
+          "aliasIds": []
+        }
+      ],
+      "briefsSnapshot": [],
+      "rankedIds": [
+        "arxiv:2606.04811",
+        "arxiv:2609.18514",
+        "report:seeq-generalist-value-functions",
+        "doi:10.1002/adrr.70163",
+        "arxiv:2609.11697",
+        "doi:10.1177/02783649261486468",
+        "hf:Aasdfip/longnav-mshab-pick-flow-native-speedmix-20hz",
+        "hf:changh95/pi05-base-p300x2",
+        "hf:datasets/stray-light/zerograv-manipulation-regular-gravity-trajectories-state-v1"
+      ],
+      "featuredIds": [
+        "arxiv:2606.04811",
+        "arxiv:2609.18514",
+        "report:seeq-generalist-value-functions",
+        "doi:10.1002/adrr.70163",
+        "arxiv:2609.11697",
+        "doi:10.1177/02783649261486468",
+        "hf:Aasdfip/longnav-mshab-pick-flow-native-speedmix-20hz",
+        "hf:changh95/pi05-base-p300x2",
+        "hf:datasets/stray-light/zerograv-manipulation-regular-gravity-trajectories-state-v1"
+      ],
+      "analysisNeededIds": [],
+      "briefIds": [],
+      "candidateCount": 9,
+      "rankingNote": "2 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 站内关注度代理分 = 10×ln(1+已核验GitHub累计stars) + 20×ln(1+已核验Hugging Face论文upvotes)。仅合计可测项，缺失为null；全部缺失则不评分。证据来自官方API、公开论文及仓库页，具体来源和观测时刻见条目。只计可归属的仓库，排除共用基础框架和跨代系列；累计关注不等于本日增量、论文质量或全网排名，未测候选的关注度仍未知。",
+      "rankingVersion": 1
     }
   ],
-  "lastScanAt": "2026-09-18T09:39:21.834Z",
+  "lastScanAt": "2026-09-19T05:43:17.390108+00:00",
   "briefs": [
     {
       "id": "arxiv:2608.30396",
@@ -154713,63 +157801,6 @@
         "basis": "可归属的公开关注指标暂缺；不记作零。"
       },
       "changeType": "backfill",
-      "status": "verified",
-      "reviewStatus": "innovation_verified",
-      "discoveredAt": "2026-09-14T02:33:48.382866+00:00",
-      "updatedAt": "2026-09-14T02:33:48.382866+00:00",
-      "lastSeenAt": "2026-09-14T02:33:48.382866+00:00",
-      "revisionEvents": []
-    },
-    {
-      "id": "arxiv:2609.11697",
-      "title": "ActSafeGuard: Differentiable and Training-Aligned Constraint Enforcement for Flow-Matching Policies",
-      "zhTitle": "ActSafeGuard：让流匹配策略在训练中学习动作可行边界",
-      "category": "embodied",
-      "type": "arXiv预印本",
-      "contentTypes": [
-        "paper"
-      ],
-      "publishedAt": "2026-09-10T15:21:47+00:00",
-      "sourceUpdatedAt": "2026-09-10T15:21:47+00:00",
-      "sourceAnnouncedAt": "2026-09-11",
-      "version": "v1",
-      "authors": [
-        "Ma, Jianming",
-        "Jin, Rongjun",
-        "Si, Xiaxi",
-        "Zhang, Yang",
-        "Li, Yiheng",
-        "Gao, Yue"
-      ],
-      "canonicalUrl": "https://arxiv.org/abs/2609.11697",
-      "summary": "把解析射线缩放构成的可微约束层接入训练，使动作可行性及边界梯度参与学习；安全范围取决于所设约束。",
-      "innovation": "把解析射线缩放构成的可微约束层接入训练，使动作可行性及边界梯度参与学习；安全范围取决于所设约束。",
-      "links": [
-        {
-          "label": "论文原文",
-          "url": "https://arxiv.org/abs/2609.11697"
-        }
-      ],
-      "evidence": "已阅读原始摘要与提交历史；以下仅为创新简讯，尚未完成全文实验核验。",
-      "evidenceDetails": [
-        {
-          "url": "https://arxiv.org/abs/2609.11697",
-          "location": "Abstract; Submission history",
-          "supports": "标题、作者、摘要与原始提交/版本时间"
-        }
-      ],
-      "popularity": {
-        "score": null,
-        "status": "unmeasured",
-        "metrics": {
-          "githubStars": null,
-          "hfUpvotes": null
-        },
-        "evidence": [],
-        "basis": "可归属的公开关注指标暂缺；不记作零。"
-      },
-      "windowClassification": "lookback_new_discovery",
-      "changeType": "new_work",
       "status": "verified",
       "reviewStatus": "innovation_verified",
       "discoveredAt": "2026-09-14T02:33:48.382866+00:00",
@@ -214125,7 +217156,7 @@
         "arxiv:2508.11584"
       ],
       "summary": "今日关注重点随已核实累计关注更新：ActionPiece的动作分词、太初空间理解模型、患者专属手术导航配准、部署中强化学习与机器人视觉推理。晚间补充联邦RL、光学实验室闭环、部署与数据更新；旧论文补录保留原始日期。",
-      "rankingNote": "38 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 站内关注度代理分 = 10×ln(1+已核验GitHub累计stars) + 20×ln(1+已核验Hugging Face论文upvotes)。仅合计可测项，缺失为null；全部缺失则不评分。证据来自官方API、公开论文及仓库页，具体来源和观测时刻见条目。只计可归属的仓库，排除共用基础框架和跨代系列；累计关注不等于本日增量、论文质量或全网排名，未测候选的关注度仍未知。",
+      "rankingNote": "39 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 站内关注度代理分 = 10×ln(1+已核验GitHub累计stars) + 20×ln(1+已核验Hugging Face论文upvotes)。仅合计可测项，缺失为null；全部缺失则不评分。证据来自官方API、公开论文及仓库页，具体来源和观测时刻见条目。只计可归属的仓库，排除共用基础框架和跨代系列；累计关注不等于本日增量、论文质量或全网排名，未测候选的关注度仍未知。",
       "editionIds": [
         "2026-09-17-1000",
         "2026-09-17-1700"
@@ -214147,8 +217178,23 @@
         "2026-09-18-1700"
       ],
       "candidateCount": 196
+    },
+    "2026-09-19": {
+      "top5Ids": [
+        "arxiv:2606.04811",
+        "arxiv:2609.18514",
+        "report:seeq-generalist-value-functions",
+        "doi:10.1002/adrr.70163",
+        "arxiv:2609.11697"
+      ],
+      "summary": "今日重点是把预测、动作选择与可执行性接起来：SeeQ用子任务价值改善长程操作，Dream.exe开放评测产物并揭示深度提取的瓶颈；WorMa与可变形系绳飞行平台展示机械结构和控制的配合。ActiveScale代码可读状态已更新，ActSafeGuard新增附表的数值冲突也已注明。",
+      "rankingNote": "2 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 站内关注度代理分 = 10×ln(1+已核验GitHub累计stars) + 20×ln(1+已核验Hugging Face论文upvotes)。仅合计可测项，缺失为null；全部缺失则不评分。证据来自官方API、公开论文及仓库页，具体来源和观测时刻见条目。只计可归属的仓库，排除共用基础框架和跨代系列；累计关注不等于本日增量、论文质量或全网排名，未测候选的关注度仍未知。",
+      "editionIds": [
+        "2026-09-19-1000"
+      ],
+      "candidateCount": 9
     }
   },
   "rankingMethodNote": "站内关注度代理分 = 10×ln(1+已核验GitHub累计stars) + 20×ln(1+已核验Hugging Face论文upvotes)。仅合计可测项，缺失为null；全部缺失则不评分。证据来自官方API、公开论文及仓库页，具体来源和观测时刻见条目。只计可归属的仓库，排除共用基础框架和跨代系列；累计关注不等于本日增量、论文质量或全网排名，未测候选的关注度仍未知。",
-  "popularityCheckedAt": "2026-09-18T09:39:21.834Z"
+  "popularityCheckedAt": "2026-09-19T05:43:17.168331+00:00"
 }
