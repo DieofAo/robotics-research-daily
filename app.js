@@ -1,5 +1,5 @@
 'use strict';
-const APP_VERSION = '2026-09-17-reader-v2.3-search';
+const APP_VERSION = '2026-09-19-reader-v2.4-search';
 const FAVORITES_KEY = 'robotics-daily-favorites-v1';
 const FAVORITES_SEEN_KEY = 'robotics-daily-favorites-seen-v1';
 let db = window.ROBOTICS_DAILY || { records: [], editions: [], briefs: [] };
@@ -72,7 +72,11 @@ function indexedSearch(record) {
   let index = searchIndex.get(record);
   if (!index) {
     const text = searchText(record).slice(0, 40000);
-    index = { normalized: normalize(text), title: normalize([record.title, record.zhTitle].filter(Boolean).join(' ')), words: unique(text.normalize('NFKC').toLowerCase().match(/[a-z0-9]{2,40}/g) || []) };
+    const latinText = text.normalize('NFKC').toLowerCase();
+    // Keep both component words and names such as Dream.exe / Fast-WAM.
+    // Queries normalize punctuation away, so compound names need the same form.
+    const compounds = (latinText.match(/[a-z0-9]+(?:[._-][a-z0-9]+)+/g) || []).map(normalize).filter(word => word.length <= 40);
+    index = { normalized: normalize(text), title: normalize([record.title, record.zhTitle].filter(Boolean).join(' ')), words: unique([...(latinText.match(/[a-z0-9]{2,40}/g) || []), ...compounds]) };
     searchIndex.set(record, index);
   }
   return index;

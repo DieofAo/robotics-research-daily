@@ -30631,12 +30631,12 @@
       "type": "论文与产物更新",
       "publishedAt": "2026-09-16T11:46:40Z",
       "sourceUpdatedAt": "2026-09-19T05:43:17.168331+00:00",
-      "checkedAt": "2026-09-19T05:43:17.168331+00:00",
+      "checkedAt": "2026-09-19T05:50:41.430731+00:00",
       "canonicalUrl": "https://arxiv.org/abs/2609.18514",
       "version": "v1",
       "status": "full",
       "reviewStatus": "full_official_project_read",
-      "innovation": "模型在 π0.5 中加入当前与历史图像及逐帧相机位姿 token，以训练期位姿辅助头建立几何关联；动作同时控制操作臂与观察相机。使用1000小时人类/机器人数据中训练，并构建单人可遥操作的移动双臂加相机臂平台。本次仅更新部署权重和配套统计。",
+      "innovation": "模型在 π0.5 中加入当前与历史图像及逐帧相机位姿 token，以训练期位姿辅助头建立几何关联；动作同时控制操作臂与观察相机。使用1000小时人类/机器人数据中训练，并构建单人可遥操作的移动双臂加相机臂平台。本次确认训练、推理与遥操作代码已可读。",
       "summary": "主动观察VLA的公开仓库已包含训练、推理及遥操作实现；本次更新可用产物状态，性能数字沿用原研究。",
       "editorialPriority": 88,
       "editorialPriorityBasis": "编辑按机器人相关性、可复用技术价值与验证层级判断，非公开关注热度。",
@@ -30734,8 +30734,8 @@
       "githubRepo": "https://github.com/ShuaiZhou302/ActiveScale",
       "repoUrl": "https://github.com/ShuaiZhou302/ActiveScale",
       "discoveredAt": "2026-09-17T02:39:11.180Z",
-      "updatedAt": "2026-09-19T05:43:17.390108+00:00",
-      "lastSeenAt": "2026-09-19T05:43:17.390108+00:00",
+      "updatedAt": "2026-09-19T05:50:41.430731+00:00",
+      "lastSeenAt": "2026-09-19T05:50:41.430731+00:00",
       "revisionEvents": [
         {
           "changeId": "arxiv:2609.18514:code-40a862623bd80c2ef9f0c9b0cafddd2f9097ac83",
@@ -30955,18 +30955,261 @@
               }
             ]
           }
+        },
+        {
+          "changeId": "editorial:2026-09-19:activescale-code-summary",
+          "at": "2026-09-19T05:50:41.430731+00:00",
+          "note": "编辑更正：Top 5创新摘要残留“本次仅更新部署权重”旧措辞，改为本轮已核实的代码可读状态，并明确权重替换属于9月17日历史事件。没有新增论文实验。",
+          "previous": {
+            "id": "arxiv:2609.18514",
+            "title": "ActiveScale: Scaling Active Perception for Robots across Model, Data, and Hardware",
+            "zhTitle": "ActiveScale：确认训练、推理与遥操作代码可读",
+            "authors": [
+              "Shuai Zhou",
+              "Kaisheng Pang",
+              "Wenxuan Song",
+              "Wenjie Zhang",
+              "Xinhu Zheng",
+              "Haoang Li"
+            ],
+            "category": "vla",
+            "contentTypes": [
+              "paper",
+              "report"
+            ],
+            "source": "官方完整项目页及模型固定提交",
+            "type": "论文与产物更新",
+            "publishedAt": "2026-09-16T11:46:40Z",
+            "sourceUpdatedAt": "2026-09-19T05:43:17.168331+00:00",
+            "checkedAt": "2026-09-19T05:43:17.168331+00:00",
+            "canonicalUrl": "https://arxiv.org/abs/2609.18514",
+            "version": "v1",
+            "status": "full",
+            "reviewStatus": "full_official_project_read",
+            "innovation": "模型在 π0.5 中加入当前与历史图像及逐帧相机位姿 token，以训练期位姿辅助头建立几何关联；动作同时控制操作臂与观察相机。使用1000小时人类/机器人数据中训练，并构建单人可遥操作的移动双臂加相机臂平台。本次仅更新部署权重和配套统计。",
+            "summary": "主动观察VLA的公开仓库已包含训练、推理及遥操作实现；本次更新可用产物状态，性能数字沿用原研究。",
+            "editorialPriority": 88,
+            "editorialPriorityBasis": "编辑按机器人相关性、可复用技术价值与验证层级判断，非公开关注热度。",
+            "popularity": {
+              "status": "verified",
+              "score": 20.79,
+              "metrics": {
+                "githubStars": 7,
+                "hfUpvotes": null
+              },
+              "evidence": [
+                {
+                  "url": "https://github.com/ShuaiZhou302/ActiveScale",
+                  "metric": "github_stars",
+                  "value": 7,
+                  "checkedAt": "2026-09-19T05:21:42.099238+00:00",
+                  "location": "About → Stars",
+                  "scope": "专属仓库累计stars；不是当天增长"
+                }
+              ],
+              "checkedAt": "2026-09-19T05:43:17.168331+00:00",
+              "missingMetrics": [
+                "hfUpvotes"
+              ],
+              "basis": "GitHub累计stars 7；仅代表可核公开信号，未知不记零，累计数不是当天热度或研究质量。"
+            },
+            "links": [
+              {
+                "label": "论文",
+                "url": "https://arxiv.org/abs/2609.18514"
+              },
+              {
+                "label": "当前版本",
+                "url": "https://arxiv.org/html/2609.18514v1"
+              },
+              {
+                "label": "官方项目",
+                "url": "https://active-scale.github.io/"
+              },
+              {
+                "label": "专属代码",
+                "url": "https://github.com/ShuaiZhou302/ActiveScale"
+              },
+              {
+                "label": "部署权重更新",
+                "url": "https://huggingface.co/davidzhou302/ActiveScale/commit/b8ed5ab617d874c81669d5d9b9bbddcb17257e62"
+              },
+              {
+                "label": "固定代码版本",
+                "url": "https://github.com/ShuaiZhou302/ActiveScale/tree/40a862623bd80c2ef9f0c9b0cafddd2f9097ac83"
+              }
+            ],
+            "identityLinks": [
+              "https://arxiv.org/abs/2609.18514",
+              "https://active-scale.github.io/",
+              "https://github.com/ShuaiZhou302/ActiveScale",
+              "https://huggingface.co/davidzhou302/ActiveScale"
+            ],
+            "evidence": "沿用此前已核官方项目方法和实验；本轮实际读取官方仓库README、文件树和固定commit身份，未运行代码。",
+            "evidenceDetails": [
+              {
+                "url": "https://arxiv.org/abs/2609.18514",
+                "location": "中央API元数据与摘要",
+                "supports": "原始/修订时间、作者、方法范围；仅用于候选简讯",
+                "checkedAt": "2026-09-17T02:16:02.263315+00:00"
+              },
+              {
+                "url": "https://arxiv.org/html/2609.18514v1",
+                "location": "原文缓存首部、方法/实验目录与项目链接；尚非全文逐表核读",
+                "supports": "机器人相关性、原始链接；待入选再核全部实验",
+                "checkedAt": "2026-09-17T02:16:02.263315+00:00"
+              },
+              {
+                "url": "https://active-scale.github.io/",
+                "location": "Method；Data；Real-world results；Ablation",
+                "supports": "完整原始方法，1000小时、五任务150演示20rollout，30/62/70条件",
+                "checkedAt": "2026-09-17T09:25:11.265861+00:00",
+                "sourceRetrievedAt": "2026-09-17T09:03:12.900121+00:00"
+              },
+              {
+                "url": "https://huggingface.co/davidzhou302/ActiveScale/commit/b8ed5ab617d874c81669d5d9b9bbddcb17257e62",
+                "location": "Replace task checkpoints with deployed Mid400 policies；12 files diff",
+                "supports": "五权重替换、box/drawer统计实际变化；不含新性能表",
+                "checkedAt": "2026-09-17T09:25:11.265861+00:00",
+                "sourceRetrievedAt": "2026-09-17T09:09:40.977026+00:00"
+              },
+              {
+                "url": "https://github.com/ShuaiZhou302/ActiveScale",
+                "location": "README；root tree；embedded currentOid；Training/Inference/Quest 2",
+                "supports": "main固定commit 40a8626，训练、推理和遥操作目录可读；不等同运行验证。",
+                "checkedAt": "2026-09-19T05:43:17.168331+00:00"
+              }
+            ],
+            "scopeNote": "机器人或具身任务直接相关；尚无未验证的全网热度声明。",
+            "githubRepo": "https://github.com/ShuaiZhou302/ActiveScale",
+            "repoUrl": "https://github.com/ShuaiZhou302/ActiveScale",
+            "discoveredAt": "2026-09-17T02:39:11.180Z",
+            "updatedAt": "2026-09-19T05:43:17.390108+00:00",
+            "lastSeenAt": "2026-09-19T05:43:17.390108+00:00",
+            "eventAt": "2026-09-19T05:43:17.168331+00:00",
+            "lastReviewedAt": "2026-09-19T05:43:17.168331+00:00",
+            "substantiveUpdate": true,
+            "changeType": "updated",
+            "changeId": "arxiv:2609.18514:code-40a862623bd80c2ef9f0c9b0cafddd2f9097ac83",
+            "stableChangeId": "arxiv:2609.18514:code-40a862623bd80c2ef9f0c9b0cafddd2f9097ac83",
+            "changeNote": "官方仓库当前提供训练、推理与Quest 2遥操作目录及说明，纠正此前“代码待开放”的可用性状态。仅核验公开代码可读；不声称已复现或出现新性能提升。",
+            "artifactVersion": "40a862623bd80c2ef9f0c9b0cafddd2f9097ac83",
+            "background": "只用固定视角的机器人策略在遮挡下难以主动找到有效观测。ActiveScale 从模型、训练数据和可移动观察硬件协同设计主动感知。",
+            "experiments": "官方项目评估五类真机操作，每任务150段演示、每方法20次 rollout；完整方案平均成功率70%，直接后训练 π0.5 为30%。主动结构在无中训练时62%，再中训练为70%。因此30→70同时包含结构和额外训练数据，不能全归于相机 token。模型提交替换五个权重文件的指针，每个文件约8.354GB，并更换两任务统计路径。",
+            "conclusion": "原研究在所列主动观察任务上取得收益；当前官方仓库已可读，含训练/推理、客户端和Quest 2遥操作目录。此次没有新增性能表，不将代码开放解释为新测得的成功率提升。",
+            "evaluation": "【编辑分析】源码及配置可读增强了复现条件，仍需实际运行检查依赖、数据与硬件接口。原实验中的额外中训练数据和主动结构同时变化，仍应分开评估贡献。",
+            "futureDirections": "【研究假设】可在同一主动感知平台上加入世界模型的信息增益预测，让相机移动与操作动作共同优化；用固定训练预算对照被动相机、仅几何监督与预测信息增益，并测遮挡恢复和移动成本。",
+            "aliasIds": [
+              "hf:davidzhou302/ActiveScale",
+              "pending:hf:davidzhou302/ActiveScale"
+            ],
+            "dateNote": "保留原始论文与权重日期；本次eventAt/sourceUpdatedAt仅为官方代码首次可读核验时间，确切公开时刻未核定，不称9月19日首次发布。",
+            "paperUpdatedAt": "2026-09-16T11:46:40Z",
+            "artifactReleaseAt": "2026-09-17T03:12:06Z",
+            "briefHistory": [
+              {
+                "promotedAt": "2026-09-17T09:26:32.104Z",
+                "previous": {
+                  "id": "arxiv:2609.18514",
+                  "title": "ActiveScale: Scaling Active Perception for Robots across Model, Data, and Hardware",
+                  "zhTitle": "ActiveScale：联合模型、数据与硬件的主动观察",
+                  "authors": [
+                    "Shuai Zhou",
+                    "Kaisheng Pang",
+                    "Wenxuan Song",
+                    "Wenjie Zhang",
+                    "Xinhu Zheng",
+                    "Haoang Li"
+                  ],
+                  "category": "vla",
+                  "contentTypes": [
+                    "paper"
+                  ],
+                  "source": "arXiv 中央索引",
+                  "type": "论文简讯",
+                  "publishedAt": "2026-09-16T11:46:40Z",
+                  "sourceUpdatedAt": "2026-09-16T11:46:40Z",
+                  "checkedAt": "2026-09-17T02:16:02.263315+00:00",
+                  "canonicalUrl": "https://arxiv.org/abs/2609.18514",
+                  "version": "v1",
+                  "status": "verified_candidate",
+                  "reviewStatus": "abstract_and_scope_verified",
+                  "innovation": "为VLA加入历史视频、逐帧相机位姿token与位姿监督，以1000小时人类/机器人数据中训练，并提供可单人遥操作的主动感知移动操作平台；让换视角成为策略的一部分。",
+                  "summary": "为VLA加入历史视频、逐帧相机位姿token与位姿监督，以1000小时人类/机器人数据中训练，并提供可单人遥操作的主动感知移动操作平台；让换视角成为策略的一部分。",
+                  "editorialPriority": 92,
+                  "editorialPriorityBasis": "编辑按机器人相关性、可复用技术价值与验证层级判断，非公开关注热度。",
+                  "popularity": {
+                    "status": "unmeasured",
+                    "score": null,
+                    "metrics": {
+                      "githubStars": null,
+                      "hfUpvotes": null
+                    },
+                    "evidence": [],
+                    "basis": "仅为已核实公开关注信号；未知不当零，累计数不代表当日新增或研究质量。"
+                  },
+                  "links": [
+                    {
+                      "label": "论文",
+                      "url": "https://arxiv.org/abs/2609.18514"
+                    },
+                    {
+                      "label": "当前版本",
+                      "url": "https://arxiv.org/html/2609.18514v1"
+                    },
+                    {
+                      "label": "官方项目",
+                      "url": "https://active-scale.github.io/"
+                    },
+                    {
+                      "label": "专属代码",
+                      "url": "https://github.com/ShuaiZhou302/ActiveScale"
+                    }
+                  ],
+                  "identityLinks": [
+                    "https://arxiv.org/abs/2609.18514",
+                    "https://active-scale.github.io/",
+                    "https://github.com/ShuaiZhou302/ActiveScale"
+                  ],
+                  "evidence": "候选简讯按原始摘要与范围核验；定量实验尚待全文复核。",
+                  "evidenceDetails": [
+                    {
+                      "url": "https://arxiv.org/abs/2609.18514",
+                      "location": "中央API元数据与摘要",
+                      "supports": "原始/修订时间、作者、方法范围；仅用于候选简讯",
+                      "checkedAt": "2026-09-17T02:16:02.263315+00:00"
+                    },
+                    {
+                      "url": "https://arxiv.org/html/2609.18514v1",
+                      "location": "原文缓存首部、方法/实验目录与项目链接；尚非全文逐表核读",
+                      "supports": "机器人相关性、原始链接；待入选再核全部实验",
+                      "checkedAt": "2026-09-17T02:16:02.263315+00:00"
+                    }
+                  ],
+                  "scopeNote": "机器人或具身任务直接相关；尚无未验证的全网热度声明。",
+                  "githubRepo": "https://github.com/ShuaiZhou302/ActiveScale",
+                  "repoUrl": "https://github.com/ShuaiZhou302/ActiveScale",
+                  "discoveredAt": "2026-09-17T02:39:11.180Z",
+                  "updatedAt": "2026-09-17T02:39:11.180Z",
+                  "lastSeenAt": "2026-09-17T02:39:11.180Z",
+                  "revisionEvents": []
+                }
+              }
+            ],
+            "eventDateBasis": "首次可读核验时间，非首次发布的精确时间"
+          }
         }
       ],
       "eventAt": "2026-09-19T05:43:17.168331+00:00",
       "lastReviewedAt": "2026-09-19T05:43:17.168331+00:00",
       "substantiveUpdate": true,
       "changeType": "updated",
-      "changeId": "arxiv:2609.18514:code-40a862623bd80c2ef9f0c9b0cafddd2f9097ac83",
-      "stableChangeId": "arxiv:2609.18514:code-40a862623bd80c2ef9f0c9b0cafddd2f9097ac83",
-      "changeNote": "官方仓库当前提供训练、推理与Quest 2遥操作目录及说明，纠正此前“代码待开放”的可用性状态。仅核验公开代码可读；不声称已复现或出现新性能提升。",
+      "changeId": "editorial:2026-09-19:activescale-code-summary",
+      "stableChangeId": "editorial:2026-09-19:activescale-code-summary",
+      "changeNote": "编辑更正：Top 5创新摘要残留“本次仅更新部署权重”旧措辞，改为本轮已核实的代码可读状态，并明确权重替换属于9月17日历史事件。没有新增论文实验。",
       "artifactVersion": "40a862623bd80c2ef9f0c9b0cafddd2f9097ac83",
       "background": "只用固定视角的机器人策略在遮挡下难以主动找到有效观测。ActiveScale 从模型、训练数据和可移动观察硬件协同设计主动感知。",
-      "experiments": "官方项目评估五类真机操作，每任务150段演示、每方法20次 rollout；完整方案平均成功率70%，直接后训练 π0.5 为30%。主动结构在无中训练时62%，再中训练为70%。因此30→70同时包含结构和额外训练数据，不能全归于相机 token。模型提交替换五个权重文件的指针，每个文件约8.354GB，并更换两任务统计路径。",
+      "experiments": "官方项目评估五类真机操作，每任务150段演示、每方法20次 rollout；完整方案平均成功率70%，直接后训练 π0.5 为30%。主动结构在无中训练时62%，再中训练为70%。因此30→70同时包含结构和额外训练数据，不能全归于相机 token。此前9月17日的模型提交替换五个权重文件的指针，每个文件约8.354GB，并更换两任务统计路径。",
       "conclusion": "原研究在所列主动观察任务上取得收益；当前官方仓库已可读，含训练/推理、客户端和Quest 2遥操作目录。此次没有新增性能表，不将代码开放解释为新测得的成功率提升。",
       "evaluation": "【编辑分析】源码及配置可读增强了复现条件，仍需实际运行检查依赖、数据与硬件接口。原实验中的额外中训练数据和主动结构同时变化，仍应分开评估贡献。",
       "futureDirections": "【研究假设】可在同一主动感知平台上加入世界模型的信息增益预测，让相机移动与操作动作共同优化；用固定训练预算对照被动相机、仅几何监督与预测信息增益，并测遮挡恢复和移动成本。",
@@ -31067,7 +31310,8 @@
           }
         }
       ],
-      "eventDateBasis": "首次可读核验时间，非首次发布的精确时间"
+      "eventDateBasis": "首次可读核验时间，非首次发布的精确时间",
+      "editorialCorrection": true
     },
     {
       "id": "hf:kimtaegyu/TETHER",
@@ -154886,9 +155130,290 @@
       "candidateCount": 9,
       "rankingNote": "2 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 站内关注度代理分 = 10×ln(1+已核验GitHub累计stars) + 20×ln(1+已核验Hugging Face论文upvotes)。仅合计可测项，缺失为null；全部缺失则不评分。证据来自官方API、公开论文及仓库页，具体来源和观测时刻见条目。只计可归属的仓库，排除共用基础框架和跨代系列；累计关注不等于本日增量、论文质量或全网排名，未测候选的关注度仍未知。",
       "rankingVersion": 1
+    },
+    {
+      "id": "2026-09-19-1000-correction",
+      "label": "9月19日 · 摘要勘误",
+      "startedAt": "2026-09-19T05:50:41.430731+00:00",
+      "completedAt": "2026-09-19T05:50:41.430731+00:00",
+      "windowStart": "2026-09-19T05:43:17.390108+00:00",
+      "windowEnd": "2026-09-19T05:50:41.430731+00:00",
+      "status": "ok",
+      "summary": "更正ActiveScale摘要的旧版更新措辞，不新增研究；同时修复带句点、连字符和下划线名称的模糊搜索。",
+      "dailySummary": "今日重点是把预测、动作选择与可执行性接起来：SeeQ用子任务价值改善长程操作，Dream.exe开放评测产物并揭示深度提取的瓶颈；WorMa与可变形系绳飞行平台展示机械结构和控制的配合。ActiveScale代码可读状态已更新，ActSafeGuard新增附表的数值冲突也已注明。",
+      "sourceChecks": [
+        {
+          "name": "编辑核验",
+          "status": "ok",
+          "note": "沿用本期已核官方代码证据，仅纠正摘要与正文的时间指代；保留原快照。"
+        }
+      ],
+      "addedIds": [],
+      "updatedIds": [
+        "arxiv:2609.18514"
+      ],
+      "promotedIds": [],
+      "briefAddedIds": [],
+      "briefUpdatedIds": [],
+      "candidateIds": [
+        "arxiv:2609.18514"
+      ],
+      "recordsSnapshot": [
+        {
+          "id": "arxiv:2609.18514",
+          "title": "ActiveScale: Scaling Active Perception for Robots across Model, Data, and Hardware",
+          "zhTitle": "ActiveScale：确认训练、推理与遥操作代码可读",
+          "authors": [
+            "Shuai Zhou",
+            "Kaisheng Pang",
+            "Wenxuan Song",
+            "Wenjie Zhang",
+            "Xinhu Zheng",
+            "Haoang Li"
+          ],
+          "category": "vla",
+          "contentTypes": [
+            "paper",
+            "report"
+          ],
+          "source": "官方完整项目页及模型固定提交",
+          "type": "论文与产物更新",
+          "publishedAt": "2026-09-16T11:46:40Z",
+          "sourceUpdatedAt": "2026-09-19T05:43:17.168331+00:00",
+          "checkedAt": "2026-09-19T05:50:41.430731+00:00",
+          "canonicalUrl": "https://arxiv.org/abs/2609.18514",
+          "version": "v1",
+          "status": "full",
+          "reviewStatus": "full_official_project_read",
+          "innovation": "模型在 π0.5 中加入当前与历史图像及逐帧相机位姿 token，以训练期位姿辅助头建立几何关联；动作同时控制操作臂与观察相机。使用1000小时人类/机器人数据中训练，并构建单人可遥操作的移动双臂加相机臂平台。本次确认训练、推理与遥操作代码已可读。",
+          "summary": "主动观察VLA的公开仓库已包含训练、推理及遥操作实现；本次更新可用产物状态，性能数字沿用原研究。",
+          "editorialPriority": 88,
+          "editorialPriorityBasis": "编辑按机器人相关性、可复用技术价值与验证层级判断，非公开关注热度。",
+          "popularity": {
+            "status": "verified",
+            "score": 20.79,
+            "metrics": {
+              "githubStars": 7,
+              "hfUpvotes": null
+            },
+            "evidence": [
+              {
+                "url": "https://github.com/ShuaiZhou302/ActiveScale",
+                "metric": "github_stars",
+                "value": 7,
+                "checkedAt": "2026-09-19T05:21:42.099238+00:00",
+                "location": "About → Stars",
+                "scope": "专属仓库累计stars；不是当天增长"
+              }
+            ],
+            "checkedAt": "2026-09-19T05:43:17.168331+00:00",
+            "missingMetrics": [
+              "hfUpvotes"
+            ],
+            "basis": "GitHub累计stars 7；仅代表可核公开信号，未知不记零，累计数不是当天热度或研究质量。"
+          },
+          "links": [
+            {
+              "label": "论文",
+              "url": "https://arxiv.org/abs/2609.18514"
+            },
+            {
+              "label": "当前版本",
+              "url": "https://arxiv.org/html/2609.18514v1"
+            },
+            {
+              "label": "官方项目",
+              "url": "https://active-scale.github.io/"
+            },
+            {
+              "label": "专属代码",
+              "url": "https://github.com/ShuaiZhou302/ActiveScale"
+            },
+            {
+              "label": "部署权重更新",
+              "url": "https://huggingface.co/davidzhou302/ActiveScale/commit/b8ed5ab617d874c81669d5d9b9bbddcb17257e62"
+            },
+            {
+              "label": "固定代码版本",
+              "url": "https://github.com/ShuaiZhou302/ActiveScale/tree/40a862623bd80c2ef9f0c9b0cafddd2f9097ac83"
+            }
+          ],
+          "identityLinks": [
+            "https://arxiv.org/abs/2609.18514",
+            "https://active-scale.github.io/",
+            "https://github.com/ShuaiZhou302/ActiveScale",
+            "https://huggingface.co/davidzhou302/ActiveScale"
+          ],
+          "evidence": "沿用此前已核官方项目方法和实验；本轮实际读取官方仓库README、文件树和固定commit身份，未运行代码。",
+          "evidenceDetails": [
+            {
+              "url": "https://arxiv.org/abs/2609.18514",
+              "location": "中央API元数据与摘要",
+              "supports": "原始/修订时间、作者、方法范围；仅用于候选简讯",
+              "checkedAt": "2026-09-17T02:16:02.263315+00:00"
+            },
+            {
+              "url": "https://arxiv.org/html/2609.18514v1",
+              "location": "原文缓存首部、方法/实验目录与项目链接；尚非全文逐表核读",
+              "supports": "机器人相关性、原始链接；待入选再核全部实验",
+              "checkedAt": "2026-09-17T02:16:02.263315+00:00"
+            },
+            {
+              "url": "https://active-scale.github.io/",
+              "location": "Method；Data；Real-world results；Ablation",
+              "supports": "完整原始方法，1000小时、五任务150演示20rollout，30/62/70条件",
+              "checkedAt": "2026-09-17T09:25:11.265861+00:00",
+              "sourceRetrievedAt": "2026-09-17T09:03:12.900121+00:00"
+            },
+            {
+              "url": "https://huggingface.co/davidzhou302/ActiveScale/commit/b8ed5ab617d874c81669d5d9b9bbddcb17257e62",
+              "location": "Replace task checkpoints with deployed Mid400 policies；12 files diff",
+              "supports": "五权重替换、box/drawer统计实际变化；不含新性能表",
+              "checkedAt": "2026-09-17T09:25:11.265861+00:00",
+              "sourceRetrievedAt": "2026-09-17T09:09:40.977026+00:00"
+            },
+            {
+              "url": "https://github.com/ShuaiZhou302/ActiveScale",
+              "location": "README；root tree；embedded currentOid；Training/Inference/Quest 2",
+              "supports": "main固定commit 40a8626，训练、推理和遥操作目录可读；不等同运行验证。",
+              "checkedAt": "2026-09-19T05:43:17.168331+00:00"
+            }
+          ],
+          "scopeNote": "机器人或具身任务直接相关；尚无未验证的全网热度声明。",
+          "githubRepo": "https://github.com/ShuaiZhou302/ActiveScale",
+          "repoUrl": "https://github.com/ShuaiZhou302/ActiveScale",
+          "discoveredAt": "2026-09-17T02:39:11.180Z",
+          "updatedAt": "2026-09-19T05:50:41.430731+00:00",
+          "lastSeenAt": "2026-09-19T05:50:41.430731+00:00",
+          "eventAt": "2026-09-19T05:43:17.168331+00:00",
+          "lastReviewedAt": "2026-09-19T05:43:17.168331+00:00",
+          "substantiveUpdate": true,
+          "changeType": "updated",
+          "changeId": "editorial:2026-09-19:activescale-code-summary",
+          "stableChangeId": "editorial:2026-09-19:activescale-code-summary",
+          "changeNote": "编辑更正：Top 5创新摘要残留“本次仅更新部署权重”旧措辞，改为本轮已核实的代码可读状态，并明确权重替换属于9月17日历史事件。没有新增论文实验。",
+          "artifactVersion": "40a862623bd80c2ef9f0c9b0cafddd2f9097ac83",
+          "background": "只用固定视角的机器人策略在遮挡下难以主动找到有效观测。ActiveScale 从模型、训练数据和可移动观察硬件协同设计主动感知。",
+          "experiments": "官方项目评估五类真机操作，每任务150段演示、每方法20次 rollout；完整方案平均成功率70%，直接后训练 π0.5 为30%。主动结构在无中训练时62%，再中训练为70%。因此30→70同时包含结构和额外训练数据，不能全归于相机 token。此前9月17日的模型提交替换五个权重文件的指针，每个文件约8.354GB，并更换两任务统计路径。",
+          "conclusion": "原研究在所列主动观察任务上取得收益；当前官方仓库已可读，含训练/推理、客户端和Quest 2遥操作目录。此次没有新增性能表，不将代码开放解释为新测得的成功率提升。",
+          "evaluation": "【编辑分析】源码及配置可读增强了复现条件，仍需实际运行检查依赖、数据与硬件接口。原实验中的额外中训练数据和主动结构同时变化，仍应分开评估贡献。",
+          "futureDirections": "【研究假设】可在同一主动感知平台上加入世界模型的信息增益预测，让相机移动与操作动作共同优化；用固定训练预算对照被动相机、仅几何监督与预测信息增益，并测遮挡恢复和移动成本。",
+          "aliasIds": [
+            "hf:davidzhou302/ActiveScale",
+            "pending:hf:davidzhou302/ActiveScale"
+          ],
+          "dateNote": "保留原始论文与权重日期；本次eventAt/sourceUpdatedAt仅为官方代码首次可读核验时间，确切公开时刻未核定，不称9月19日首次发布。",
+          "paperUpdatedAt": "2026-09-16T11:46:40Z",
+          "artifactReleaseAt": "2026-09-17T03:12:06Z",
+          "briefHistory": [
+            {
+              "promotedAt": "2026-09-17T09:26:32.104Z",
+              "previous": {
+                "id": "arxiv:2609.18514",
+                "title": "ActiveScale: Scaling Active Perception for Robots across Model, Data, and Hardware",
+                "zhTitle": "ActiveScale：联合模型、数据与硬件的主动观察",
+                "authors": [
+                  "Shuai Zhou",
+                  "Kaisheng Pang",
+                  "Wenxuan Song",
+                  "Wenjie Zhang",
+                  "Xinhu Zheng",
+                  "Haoang Li"
+                ],
+                "category": "vla",
+                "contentTypes": [
+                  "paper"
+                ],
+                "source": "arXiv 中央索引",
+                "type": "论文简讯",
+                "publishedAt": "2026-09-16T11:46:40Z",
+                "sourceUpdatedAt": "2026-09-16T11:46:40Z",
+                "checkedAt": "2026-09-17T02:16:02.263315+00:00",
+                "canonicalUrl": "https://arxiv.org/abs/2609.18514",
+                "version": "v1",
+                "status": "verified_candidate",
+                "reviewStatus": "abstract_and_scope_verified",
+                "innovation": "为VLA加入历史视频、逐帧相机位姿token与位姿监督，以1000小时人类/机器人数据中训练，并提供可单人遥操作的主动感知移动操作平台；让换视角成为策略的一部分。",
+                "summary": "为VLA加入历史视频、逐帧相机位姿token与位姿监督，以1000小时人类/机器人数据中训练，并提供可单人遥操作的主动感知移动操作平台；让换视角成为策略的一部分。",
+                "editorialPriority": 92,
+                "editorialPriorityBasis": "编辑按机器人相关性、可复用技术价值与验证层级判断，非公开关注热度。",
+                "popularity": {
+                  "status": "unmeasured",
+                  "score": null,
+                  "metrics": {
+                    "githubStars": null,
+                    "hfUpvotes": null
+                  },
+                  "evidence": [],
+                  "basis": "仅为已核实公开关注信号；未知不当零，累计数不代表当日新增或研究质量。"
+                },
+                "links": [
+                  {
+                    "label": "论文",
+                    "url": "https://arxiv.org/abs/2609.18514"
+                  },
+                  {
+                    "label": "当前版本",
+                    "url": "https://arxiv.org/html/2609.18514v1"
+                  },
+                  {
+                    "label": "官方项目",
+                    "url": "https://active-scale.github.io/"
+                  },
+                  {
+                    "label": "专属代码",
+                    "url": "https://github.com/ShuaiZhou302/ActiveScale"
+                  }
+                ],
+                "identityLinks": [
+                  "https://arxiv.org/abs/2609.18514",
+                  "https://active-scale.github.io/",
+                  "https://github.com/ShuaiZhou302/ActiveScale"
+                ],
+                "evidence": "候选简讯按原始摘要与范围核验；定量实验尚待全文复核。",
+                "evidenceDetails": [
+                  {
+                    "url": "https://arxiv.org/abs/2609.18514",
+                    "location": "中央API元数据与摘要",
+                    "supports": "原始/修订时间、作者、方法范围；仅用于候选简讯",
+                    "checkedAt": "2026-09-17T02:16:02.263315+00:00"
+                  },
+                  {
+                    "url": "https://arxiv.org/html/2609.18514v1",
+                    "location": "原文缓存首部、方法/实验目录与项目链接；尚非全文逐表核读",
+                    "supports": "机器人相关性、原始链接；待入选再核全部实验",
+                    "checkedAt": "2026-09-17T02:16:02.263315+00:00"
+                  }
+                ],
+                "scopeNote": "机器人或具身任务直接相关；尚无未验证的全网热度声明。",
+                "githubRepo": "https://github.com/ShuaiZhou302/ActiveScale",
+                "repoUrl": "https://github.com/ShuaiZhou302/ActiveScale",
+                "discoveredAt": "2026-09-17T02:39:11.180Z",
+                "updatedAt": "2026-09-17T02:39:11.180Z",
+                "lastSeenAt": "2026-09-17T02:39:11.180Z",
+                "revisionEvents": []
+              }
+            }
+          ],
+          "eventDateBasis": "首次可读核验时间，非首次发布的精确时间",
+          "editorialCorrection": true
+        }
+      ],
+      "briefsSnapshot": [],
+      "rankedIds": [
+        "arxiv:2609.18514"
+      ],
+      "featuredIds": [
+        "arxiv:2609.18514"
+      ],
+      "analysisNeededIds": [],
+      "briefIds": [],
+      "candidateCount": 1,
+      "rankingNote": "按已核实公开热度信号排序；不同平台的信号不能代表全网热度。 站内关注度代理分 = 10×ln(1+已核验GitHub累计stars) + 20×ln(1+已核验Hugging Face论文upvotes)。仅合计可测项，缺失为null；全部缺失则不评分。证据来自官方API、公开论文及仓库页，具体来源和观测时刻见条目。只计可归属的仓库，排除共用基础框架和跨代系列；累计关注不等于本日增量、论文质量或全网排名，未测候选的关注度仍未知。",
+      "rankingVersion": 1
     }
   ],
-  "lastScanAt": "2026-09-19T05:43:17.390108+00:00",
+  "lastScanAt": "2026-09-19T05:50:41.430731+00:00",
   "briefs": [
     {
       "id": "arxiv:2608.30396",
@@ -217190,7 +217715,8 @@
       "summary": "今日重点是把预测、动作选择与可执行性接起来：SeeQ用子任务价值改善长程操作，Dream.exe开放评测产物并揭示深度提取的瓶颈；WorMa与可变形系绳飞行平台展示机械结构和控制的配合。ActiveScale代码可读状态已更新，ActSafeGuard新增附表的数值冲突也已注明。",
       "rankingNote": "2 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 站内关注度代理分 = 10×ln(1+已核验GitHub累计stars) + 20×ln(1+已核验Hugging Face论文upvotes)。仅合计可测项，缺失为null；全部缺失则不评分。证据来自官方API、公开论文及仓库页，具体来源和观测时刻见条目。只计可归属的仓库，排除共用基础框架和跨代系列；累计关注不等于本日增量、论文质量或全网排名，未测候选的关注度仍未知。",
       "editionIds": [
-        "2026-09-19-1000"
+        "2026-09-19-1000",
+        "2026-09-19-1000-correction"
       ],
       "candidateCount": 9
     }
