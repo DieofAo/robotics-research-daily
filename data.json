@@ -28654,8 +28654,8 @@
     },
     {
       "id": "hf:datasets/yxma/React",
-      "title": "React: OptiTrack excursion repair with explicit interpolation masks",
-      "zhTitle": "React：修复动作捕捉突跳，显式标记插值帧",
+      "title": "React: seven new toy segments with force and masked action provenance",
+      "zhTitle": "React：新增七个触觉操作片段，补齐力与动作掩码证据",
       "authors": [
         "yxma"
       ],
@@ -28678,12 +28678,12 @@
       ],
       "publishedAt": "2026-09-15T00:27:01Z",
       "releaseAt": "2026-09-15T00:27:01Z",
-      "sourceUpdatedAt": "2026-09-17T09:03:59Z",
-      "version": "f186f5f6701f52eb6216b9465bdb309d17fe141d",
-      "checkedAt": "2026-09-17T09:25:11.265861+00:00",
+      "sourceUpdatedAt": "2026-09-19T06:39:37.000Z",
+      "version": "8f51b56a5f0d2ef1c6585071d8f0ca4cbbb5ebe8",
+      "checkedAt": "2026-09-19T09:16:28.136163+00:00",
       "changeType": "updated",
-      "status": "full",
-      "reviewStatus": "full_source_read",
+      "status": "full_verified",
+      "reviewStatus": "fixed_revision_provenance_and_split_verified",
       "popularity": {
         "score": null,
         "status": "unmeasured",
@@ -28691,127 +28691,58 @@
           "githubStars": null,
           "hfUpvotes": null
         },
-        "basis": "仅为已核实公开关注信号；未知不当零，累计数不代表当日新增或研究质量。",
+        "basis": "未获得可归属于该研究的论文投票或专属仓库stars；未知保留null，机构报道和公开数据卡不伪装成互动数。",
         "evidence": [],
-        "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+        "checkedAt": "2026-09-19T09:19:37.409434+00:00"
       },
-      "editorialPriority": 94,
+      "editorialPriority": 95,
       "editorialPriorityReason": "可核实际数据扩展及影响标定选择的行为变化；非热度。",
-      "dateNote": "原始publishedAt/discoveredAt保持；当前data位姿修复8482f09发表于9/17 08:49:11Z，旧未裁切数据同步f186f5f发表于09:03:59Z。两者与上午统计扩充不同；本轮实际检索截止晚于运行开始。",
-      "summary": "对 motherboard 的短异常区间使用两侧干净帧进行平移线性插值和旋转 SLERP，并给每个被填充帧加 pose_interpolated；超过15帧的长异常保留，另列 pose_gaps.json。最新提交把同一修复同步到 old_data 未裁切片段。 当前 data 版本还重新计算依赖位姿的 force_*_target_pose，力数值本身保持不变。",
-      "innovation": "对 motherboard 的短异常区间使用两侧干净帧进行平移线性插值和旋转 SLERP，并给每个被填充帧加 pose_interpolated；超过15帧的长异常保留，另列 pose_gaps.json。最新提交把同一修复同步到 old_data 未裁切片段。 当前 data 版本还重新计算依赖位姿的 force_*_target_pose，力数值本身保持不变。",
-      "evidence": "本轮实际读完整公开卡与17f9fc1具体统计diff，并对照库内efecc6e；卡片残留旧数值，最新计数以固定提交为准。作者数据统计未独立下载重算。",
+      "dateNote": "保留原始发布与首次收录时间；本次数据采集9月17日，公开提交9月19日06:39:37Z。不是新增机器人策略成功率。",
+      "summary": "toy 任务新增七个片段，并以固定文件清单核对力通道、坐标系及动作掩码；首页统计尚未同步。",
+      "innovation": "本次实质增量是9月17日toy采集经重新裁切后的七个片段，公开逐片段原始帧范围、Z-up坐标声明、V8力源及动作有效掩码。既有十个片段的Parquet不改，索引坐标标签校正；不是新的网络架构，也不把之前已报道的位姿插值修复再次计作新方法。",
+      "evidence": "完整读取当前数据卡、固定提交diff、summary/schema/force/provenance、episodes与splits；仅核验公开文件结构及作者验证资料，未独立重跑数据处理。",
       "evidenceDetails": [
         {
-          "url": "https://huggingface.co/datasets/yxma/React/blob/867ad12c370eeb00568b6bf147f07e4783f2917d/README.md",
-          "location": "Main window；Calibration；Known issue",
-          "supports": "人类手持设备、数据格式、历史限制和日期边界",
-          "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+          "url": "https://huggingface.co/datasets/yxma/React/commit/8f51b56a5f0d2ef1c6585071d8f0ca4cbbb5ebe8",
+          "location": "提交时间及新增文件列表",
+          "supports": "新增七段与旧Parquet/切分保留声明，真实公开日期",
+          "checkedAt": "2026-09-19T09:16:28.136163+00:00"
         },
         {
-          "url": "https://huggingface.co/datasets/yxma/React/blob/867ad12c370eeb00568b6bf147f07e4783f2917d/assets/dataset_stats.json",
-          "location": "new_era/task statistics",
-          "supports": "三任务片段、源录制、帧数及分钟数",
-          "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+          "url": "https://huggingface.co/datasets/yxma/React/blob/8f51b56a5f0d2ef1c6585071d8f0ca4cbbb5ebe8/data/toy/processing_20260919/summary.json",
+          "location": "new_segments / total_segments / new_frames / total_frames",
+          "supports": "7 / 17 / 7659 / 20257；旧文件保留和10项旧坐标标签修正",
+          "checkedAt": "2026-09-19T09:16:28.136163+00:00"
         },
         {
-          "url": "https://huggingface.co/datasets/yxma/React/blob/867ad12c370eeb00568b6bf147f07e4783f2917d/data/rope/splits.json",
-          "location": "format；max_train_window；guard_frames；episodes",
-          "supports": "时间区间测试、64帧窗口与63帧保护区",
-          "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+          "url": "https://huggingface.co/datasets/yxma/React/blob/8f51b56a5f0d2ef1c6585071d8f0ca4cbbb5ebe8/data/toy/processing_20260919/new_segment_provenance.json",
+          "location": "segments与source_episode",
+          "supports": "七个新片段来自3段源录制；裁切区间和至少30秒准则",
+          "checkedAt": "2026-09-19T09:16:28.136163+00:00"
         },
         {
-          "url": "https://huggingface.co/datasets/yxma/React/blob/867ad12c370eeb00568b6bf147f07e4783f2917d/data/rope/episodes.jsonl",
-          "location": "23 episode identifiers",
-          "supports": "与split一一对应",
-          "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+          "url": "https://huggingface.co/datasets/yxma/React/blob/8f51b56a5f0d2ef1c6585071d8f0ca4cbbb5ebe8/data/toy/processing_20260919/schema_verification.json",
+          "location": "columns与files",
+          "supports": "七个新Parquet、55列schema",
+          "checkedAt": "2026-09-19T09:16:28.136163+00:00"
         },
         {
-          "url": "https://huggingface.co/datasets/yxma/React/blob/867ad12c370eeb00568b6bf147f07e4783f2917d/data/rope/calibration/epoch_2026-09-09/T_mocap_to_cam_middle.json",
-          "location": "up_axis",
-          "supports": "实际Z-up外参",
-          "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+          "url": "https://huggingface.co/datasets/yxma/React/blob/8f51b56a5f0d2ef1c6585071d8f0ca4cbbb5ebe8/data/toy/processing_20260919/force_verification.json",
+          "location": "source_format与samples",
+          "supports": "作者抽样检查raw_h5转换数值一致性；非独立物理力校准",
+          "checkedAt": "2026-09-19T09:16:28.136163+00:00"
         },
         {
-          "url": "https://huggingface.co/datasets/yxma/React/blob/867ad12c370eeb00568b6bf147f07e4783f2917d/tasks.json",
-          "location": "task inventory；tactile_latency",
-          "supports": "仍滞后的旧统计和时延补偿适用风险",
-          "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+          "url": "https://huggingface.co/datasets/yxma/React/blob/8f51b56a5f0d2ef1c6585071d8f0ca4cbbb5ebe8/data/toy/episodes.jsonl",
+          "location": "17个episode条目",
+          "supports": "逐条核对帧数、force_pipeline_version、Z-up和动作有效帧",
+          "checkedAt": "2026-09-19T09:16:28.136163+00:00"
         },
         {
-          "url": "https://huggingface.co/datasets/yxma/React/commit/867ad12c370eeb00568b6bf147f07e4783f2917d",
-          "location": "README: the one-week main window, the statistics figures, the splits and what guard costs, and the Z-up calibration rule",
-          "supports": "公开更正日期 2026-09-15T07:30:42.000Z",
-          "checkedAt": "2026-09-15T09:22:28.057189+00:00"
-        },
-        {
-          "url": "https://huggingface.co/datasets/yxma/React/commit/7b386aa77a762d326d80b1e4c597e1e319542a5f",
-          "location": "stats: figures recomputed after the four rope recordings were refiled as pushT",
-          "supports": "公开更正日期 2026-09-15T07:27:20.000Z",
-          "checkedAt": "2026-09-15T09:22:28.057189+00:00"
-        },
-        {
-          "url": "https://huggingface.co/datasets/yxma/React/commit/c87c79c4812fce127c6d4a4b72c31469bd91e251",
-          "location": "rope: splits + curation indices. Without splits.json every rope segment read as TRAIN",
-          "supports": "公开更正日期 2026-09-15T06:59:30.000Z",
-          "checkedAt": "2026-09-15T09:22:28.057189+00:00"
-        },
-        {
-          "url": "https://huggingface.co/datasets/yxma/React/commit/a18a51f96f38d3a2e9658f6722dcf124c36d2f69",
-          "location": "rope: epoch_2026-09-09 calibration in the Z-up frame the parquet use, declared",
-          "supports": "公开更正日期 2026-09-15T03:23:14.000Z",
-          "checkedAt": "2026-09-15T09:22:28.057189+00:00"
-        },
-        {
-          "url": "https://huggingface.co/datasets/yxma/React/commit/9ea6fb41933e4dddca649f4de39fd5a56d8b697e",
-          "location": "pushT: epoch_2026-09-09 calibration in the Z-up frame the parquet use, declared",
-          "supports": "公开更正日期 2026-09-15T03:23:13.000Z",
-          "checkedAt": "2026-09-15T09:22:28.057189+00:00"
-        },
-        {
-          "url": "https://huggingface.co/datasets/yxma/React/commit/780e2994152f33c1c04a2eb1c0c42fb156b892e1",
-          "location": "motherboard: epoch_2026-09-09 calibration in the Z-up frame the parquet use, declared",
-          "supports": "公开更正日期 2026-09-15T03:23:12.000Z",
-          "checkedAt": "2026-09-15T09:22:28.057189+00:00"
-        },
-        {
-          "url": "https://huggingface.co/datasets/yxma/React",
-          "location": "Tasks / Calibration / Splits / headline",
-          "supports": "25/68/53片段、12/23/16录制、时长、旧头信息不一致，手持数据而非robot执行",
-          "checkedAt": "2026-09-16T09:29:49.007977+00:00"
-        },
-        {
-          "url": "https://huggingface.co/datasets/yxma/React/commit/82fb6ca60a1e8b8605a7bbbdd5899ec302c3d622",
-          "location": "toolbox/calib_epoch.py，新增CURRENT_EPOCH与session_epoch分支",
-          "supports": "真实diff仅该文件+31/-10，显式rope会话和date>=CURRENT_EPOCH默认规则；不能从标题外推其余修复",
-          "checkedAt": "2026-09-16T09:29:49.007977+00:00"
-        },
-        {
-          "url": "https://huggingface.co/datasets/yxma/React/commits/main",
-          "location": "f7d720d /87967ef/8d0d972数据发布；82fb6ca工具；efecc6e统计",
-          "supports": "2026-09-16T05:43:16至06:06:37Z新增数据/工具的实际日期",
-          "checkedAt": "2026-09-16T09:29:49.007977+00:00"
-        },
-        {
-          "url": "https://huggingface.co/datasets/yxma/React/commit/17f9fc174aab5f13961c62371b7d11a40cfdd4ce",
-          "location": "assets/dataset_stats.json new_era rope/toy变化及no_force字段；统计图LFS变更",
-          "supports": "53→70 rope、10 toy、173总片段、55源录制及两类力统计null；提交绝对日期",
-          "checkedAt": "2026-09-17T02:35:44.380652+00:00",
-          "sourceRetrievedAt": "2026-09-17T02:25:03.461904+00:00"
-        },
-        {
-          "url": "https://huggingface.co/datasets/yxma/React/commit/f186f5f6701f52eb6216b9465bdb309d17fe141d",
-          "location": "commit message；old_data/motherboard 32 Parquet pointers；pose_gaps.json",
-          "supports": "SLERP/lerp、插值mask、>15帧保留、来源限制与公开日期",
-          "checkedAt": "2026-09-17T09:25:11.265861+00:00",
-          "sourceRetrievedAt": "2026-09-17T09:09:27.500572+00:00"
-        },
-        {
-          "url": "https://huggingface.co/datasets/yxma/React/commit/8482f096279751741787b7f2c2af16d1a3a5fa95",
-          "location": "提交说明；25个当前motherboard片段及pose_gaps.json",
-          "supports": "当前训练数据亦修复；重算目标位姿但保留触觉图像来源的力数值",
-          "checkedAt": "2026-09-17T09:25:11.265861+00:00",
-          "sourceRetrievedAt": "2026-09-17T09:17:24.195259+00:00"
+          "url": "https://huggingface.co/datasets/yxma/React/blob/8f51b56a5f0d2ef1c6585071d8f0ca4cbbb5ebe8/data/toy/splits.json",
+          "location": "episodes / max_train_window / guard_frames",
+          "supports": "17片段全覆盖；64帧窗口和63帧保护区，区间而非整段留出",
+          "checkedAt": "2026-09-19T09:16:28.136163+00:00"
         }
       ],
       "links": [
@@ -28846,13 +28777,25 @@
         {
           "label": "位姿修复提交",
           "url": "https://huggingface.co/datasets/yxma/React/commit/f186f5f6701f52eb6216b9465bdb309d17fe141d"
+        },
+        {
+          "label": "本次数据提交",
+          "url": "https://huggingface.co/datasets/yxma/React/commit/8f51b56a5f0d2ef1c6585071d8f0ca4cbbb5ebe8"
+        },
+        {
+          "label": "验证摘要",
+          "url": "https://huggingface.co/datasets/yxma/React/blob/8f51b56a5f0d2ef1c6585071d8f0ca4cbbb5ebe8/data/toy/processing_20260919/summary.json"
+        },
+        {
+          "label": "toy 切分",
+          "url": "https://huggingface.co/datasets/yxma/React/blob/8f51b56a5f0d2ef1c6585071d8f0ca4cbbb5ebe8/data/toy/splits.json"
         }
       ],
       "backfill": false,
       "leadDiscoveredAt": "2026-09-15T02:23:40.341369+00:00",
       "discoveredAt": "2026-09-15T09:35:25.032Z",
-      "updatedAt": "2026-09-17T09:26:32.104Z",
-      "lastSeenAt": "2026-09-17T09:26:32.104Z",
+      "updatedAt": "2026-09-19T09:19:37.409434+00:00",
+      "lastSeenAt": "2026-09-19T09:19:37.409434+00:00",
       "revisionEvents": [
         {
           "changeId": "hf:datasets/yxma/React:efecc6ebaf5991af8ee37ebb5b903ff3c0946cb8",
@@ -29544,20 +29487,577 @@
               }
             ]
           }
+        },
+        {
+          "changeId": "hf:datasets/yxma/React:8f51b56a5f0d2ef1c6585071d8f0ca4cbbb5ebe8",
+          "at": "2026-09-19T09:19:37.409434+00:00",
+          "note": "固定提交8f51b56新增9月17日toy采集的7个片段、7659帧，使toy清单由10增至17；附带Z-up、V8力通道来源、动作有效掩码与切分验证。旧Parquet和既有切分保留，旧索引的坐标标签修正。",
+          "previous": {
+            "id": "hf:datasets/yxma/React",
+            "title": "React: OptiTrack excursion repair with explicit interpolation masks",
+            "zhTitle": "React：修复动作捕捉突跳，显式标记插值帧",
+            "authors": [
+              "yxma"
+            ],
+            "category": "embodied",
+            "tags": [
+              "触觉",
+              "视觉世界模型",
+              "数据集",
+              "标定"
+            ],
+            "contentTypes": [
+              "report"
+            ],
+            "canonicalUrl": "https://huggingface.co/datasets/yxma/React",
+            "identityLinks": [
+              "https://huggingface.co/datasets/yxma/React"
+            ],
+            "aliasIds": [
+              "pending:hf:datasets/yxma/React-video-release"
+            ],
+            "publishedAt": "2026-09-15T00:27:01Z",
+            "releaseAt": "2026-09-15T00:27:01Z",
+            "sourceUpdatedAt": "2026-09-17T09:03:59Z",
+            "version": "f186f5f6701f52eb6216b9465bdb309d17fe141d",
+            "checkedAt": "2026-09-17T09:25:11.265861+00:00",
+            "changeType": "updated",
+            "status": "full",
+            "reviewStatus": "full_source_read",
+            "popularity": {
+              "score": null,
+              "status": "unmeasured",
+              "metrics": {
+                "githubStars": null,
+                "hfUpvotes": null
+              },
+              "basis": "仅为已核实公开关注信号；未知不当零，累计数不代表当日新增或研究质量。",
+              "evidence": [],
+              "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+            },
+            "editorialPriority": 94,
+            "editorialPriorityReason": "可核实际数据扩展及影响标定选择的行为变化；非热度。",
+            "dateNote": "原始publishedAt/discoveredAt保持；当前data位姿修复8482f09发表于9/17 08:49:11Z，旧未裁切数据同步f186f5f发表于09:03:59Z。两者与上午统计扩充不同；本轮实际检索截止晚于运行开始。",
+            "summary": "对 motherboard 的短异常区间使用两侧干净帧进行平移线性插值和旋转 SLERP，并给每个被填充帧加 pose_interpolated；超过15帧的长异常保留，另列 pose_gaps.json。最新提交把同一修复同步到 old_data 未裁切片段。 当前 data 版本还重新计算依赖位姿的 force_*_target_pose，力数值本身保持不变。",
+            "innovation": "对 motherboard 的短异常区间使用两侧干净帧进行平移线性插值和旋转 SLERP，并给每个被填充帧加 pose_interpolated；超过15帧的长异常保留，另列 pose_gaps.json。最新提交把同一修复同步到 old_data 未裁切片段。 当前 data 版本还重新计算依赖位姿的 force_*_target_pose，力数值本身保持不变。",
+            "evidence": "本轮实际读完整公开卡与17f9fc1具体统计diff，并对照库内efecc6e；卡片残留旧数值，最新计数以固定提交为准。作者数据统计未独立下载重算。",
+            "evidenceDetails": [
+              {
+                "url": "https://huggingface.co/datasets/yxma/React/blob/867ad12c370eeb00568b6bf147f07e4783f2917d/README.md",
+                "location": "Main window；Calibration；Known issue",
+                "supports": "人类手持设备、数据格式、历史限制和日期边界",
+                "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+              },
+              {
+                "url": "https://huggingface.co/datasets/yxma/React/blob/867ad12c370eeb00568b6bf147f07e4783f2917d/assets/dataset_stats.json",
+                "location": "new_era/task statistics",
+                "supports": "三任务片段、源录制、帧数及分钟数",
+                "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+              },
+              {
+                "url": "https://huggingface.co/datasets/yxma/React/blob/867ad12c370eeb00568b6bf147f07e4783f2917d/data/rope/splits.json",
+                "location": "format；max_train_window；guard_frames；episodes",
+                "supports": "时间区间测试、64帧窗口与63帧保护区",
+                "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+              },
+              {
+                "url": "https://huggingface.co/datasets/yxma/React/blob/867ad12c370eeb00568b6bf147f07e4783f2917d/data/rope/episodes.jsonl",
+                "location": "23 episode identifiers",
+                "supports": "与split一一对应",
+                "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+              },
+              {
+                "url": "https://huggingface.co/datasets/yxma/React/blob/867ad12c370eeb00568b6bf147f07e4783f2917d/data/rope/calibration/epoch_2026-09-09/T_mocap_to_cam_middle.json",
+                "location": "up_axis",
+                "supports": "实际Z-up外参",
+                "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+              },
+              {
+                "url": "https://huggingface.co/datasets/yxma/React/blob/867ad12c370eeb00568b6bf147f07e4783f2917d/tasks.json",
+                "location": "task inventory；tactile_latency",
+                "supports": "仍滞后的旧统计和时延补偿适用风险",
+                "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+              },
+              {
+                "url": "https://huggingface.co/datasets/yxma/React/commit/867ad12c370eeb00568b6bf147f07e4783f2917d",
+                "location": "README: the one-week main window, the statistics figures, the splits and what guard costs, and the Z-up calibration rule",
+                "supports": "公开更正日期 2026-09-15T07:30:42.000Z",
+                "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+              },
+              {
+                "url": "https://huggingface.co/datasets/yxma/React/commit/7b386aa77a762d326d80b1e4c597e1e319542a5f",
+                "location": "stats: figures recomputed after the four rope recordings were refiled as pushT",
+                "supports": "公开更正日期 2026-09-15T07:27:20.000Z",
+                "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+              },
+              {
+                "url": "https://huggingface.co/datasets/yxma/React/commit/c87c79c4812fce127c6d4a4b72c31469bd91e251",
+                "location": "rope: splits + curation indices. Without splits.json every rope segment read as TRAIN",
+                "supports": "公开更正日期 2026-09-15T06:59:30.000Z",
+                "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+              },
+              {
+                "url": "https://huggingface.co/datasets/yxma/React/commit/a18a51f96f38d3a2e9658f6722dcf124c36d2f69",
+                "location": "rope: epoch_2026-09-09 calibration in the Z-up frame the parquet use, declared",
+                "supports": "公开更正日期 2026-09-15T03:23:14.000Z",
+                "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+              },
+              {
+                "url": "https://huggingface.co/datasets/yxma/React/commit/9ea6fb41933e4dddca649f4de39fd5a56d8b697e",
+                "location": "pushT: epoch_2026-09-09 calibration in the Z-up frame the parquet use, declared",
+                "supports": "公开更正日期 2026-09-15T03:23:13.000Z",
+                "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+              },
+              {
+                "url": "https://huggingface.co/datasets/yxma/React/commit/780e2994152f33c1c04a2eb1c0c42fb156b892e1",
+                "location": "motherboard: epoch_2026-09-09 calibration in the Z-up frame the parquet use, declared",
+                "supports": "公开更正日期 2026-09-15T03:23:12.000Z",
+                "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+              },
+              {
+                "url": "https://huggingface.co/datasets/yxma/React",
+                "location": "Tasks / Calibration / Splits / headline",
+                "supports": "25/68/53片段、12/23/16录制、时长、旧头信息不一致，手持数据而非robot执行",
+                "checkedAt": "2026-09-16T09:29:49.007977+00:00"
+              },
+              {
+                "url": "https://huggingface.co/datasets/yxma/React/commit/82fb6ca60a1e8b8605a7bbbdd5899ec302c3d622",
+                "location": "toolbox/calib_epoch.py，新增CURRENT_EPOCH与session_epoch分支",
+                "supports": "真实diff仅该文件+31/-10，显式rope会话和date>=CURRENT_EPOCH默认规则；不能从标题外推其余修复",
+                "checkedAt": "2026-09-16T09:29:49.007977+00:00"
+              },
+              {
+                "url": "https://huggingface.co/datasets/yxma/React/commits/main",
+                "location": "f7d720d /87967ef/8d0d972数据发布；82fb6ca工具；efecc6e统计",
+                "supports": "2026-09-16T05:43:16至06:06:37Z新增数据/工具的实际日期",
+                "checkedAt": "2026-09-16T09:29:49.007977+00:00"
+              },
+              {
+                "url": "https://huggingface.co/datasets/yxma/React/commit/17f9fc174aab5f13961c62371b7d11a40cfdd4ce",
+                "location": "assets/dataset_stats.json new_era rope/toy变化及no_force字段；统计图LFS变更",
+                "supports": "53→70 rope、10 toy、173总片段、55源录制及两类力统计null；提交绝对日期",
+                "checkedAt": "2026-09-17T02:35:44.380652+00:00",
+                "sourceRetrievedAt": "2026-09-17T02:25:03.461904+00:00"
+              },
+              {
+                "url": "https://huggingface.co/datasets/yxma/React/commit/f186f5f6701f52eb6216b9465bdb309d17fe141d",
+                "location": "commit message；old_data/motherboard 32 Parquet pointers；pose_gaps.json",
+                "supports": "SLERP/lerp、插值mask、>15帧保留、来源限制与公开日期",
+                "checkedAt": "2026-09-17T09:25:11.265861+00:00",
+                "sourceRetrievedAt": "2026-09-17T09:09:27.500572+00:00"
+              },
+              {
+                "url": "https://huggingface.co/datasets/yxma/React/commit/8482f096279751741787b7f2c2af16d1a3a5fa95",
+                "location": "提交说明；25个当前motherboard片段及pose_gaps.json",
+                "supports": "当前训练数据亦修复；重算目标位姿但保留触觉图像来源的力数值",
+                "checkedAt": "2026-09-17T09:25:11.265861+00:00",
+                "sourceRetrievedAt": "2026-09-17T09:17:24.195259+00:00"
+              }
+            ],
+            "links": [
+              {
+                "label": "原始数据",
+                "url": "https://huggingface.co/datasets/yxma/React"
+              },
+              {
+                "label": "九月统计",
+                "url": "https://huggingface.co/datasets/yxma/React/blob/867ad12c370eeb00568b6bf147f07e4783f2917d/assets/dataset_stats.json"
+              },
+              {
+                "label": "切分文件",
+                "url": "https://huggingface.co/datasets/yxma/React/blob/867ad12c370eeb00568b6bf147f07e4783f2917d/data/rope/splits.json"
+              },
+              {
+                "label": "发布与更正记录",
+                "url": "https://huggingface.co/datasets/yxma/React/commits/main"
+              },
+              {
+                "label": "标定规则实际更改",
+                "url": "https://huggingface.co/datasets/yxma/React/commit/82fb6ca60a1e8b8605a7bbbdd5899ec302c3d622"
+              },
+              {
+                "label": "九月16日版本",
+                "url": "https://huggingface.co/datasets/yxma/React/tree/efecc6ebaf5991af8ee37ebb5b903ff3c0946cb8"
+              },
+              {
+                "label": "统计与缺失通道修正",
+                "url": "https://huggingface.co/datasets/yxma/React/commit/17f9fc174aab5f13961c62371b7d11a40cfdd4ce"
+              },
+              {
+                "label": "位姿修复提交",
+                "url": "https://huggingface.co/datasets/yxma/React/commit/f186f5f6701f52eb6216b9465bdb309d17fe141d"
+              }
+            ],
+            "backfill": false,
+            "leadDiscoveredAt": "2026-09-15T02:23:40.341369+00:00",
+            "discoveredAt": "2026-09-15T09:35:25.032Z",
+            "updatedAt": "2026-09-17T09:26:32.104Z",
+            "lastSeenAt": "2026-09-17T09:26:32.104Z",
+            "type": "作者数据集与工具更新",
+            "source": "Hugging Face作者数据卡与具体提交",
+            "substantiveUpdate": true,
+            "changeId": "hf:datasets/yxma/React:f186f5f6701f52eb6216b9465bdb309d17fe141d",
+            "changeNote": "相对上午仅四任务统计更新，本次 motherboard 数据修复短时 OptiTrack 异常并新增 pose_interpolated 标记及未修复长异常清单；同步到旧未裁切数据，不将插值当新测量。",
+            "eventAt": "2026-09-17T09:03:59Z",
+            "stableChangeId": "hf:datasets/yxma/React:f186f5f6701f52eb6216b9465bdb309d17fe141d",
+            "background": "手持触觉—视觉序列的动作捕捉位姿可能短时旋转跳变。直接将异常当监督会污染接触运动学习，而静默平滑又会把估计值伪装成原始测量。",
+            "experiments": "固定提交改变32个旧 motherboard Parquet 指针并新增长异常清单；提交说明原始 H5 已删除，修复以此前公开版本恢复的位姿作为参考。上午已核173片段/55源录制的四任务统计继续适用；本次未声称增加数据或重新采集，也无训练性能对照。",
+            "conclusion": "可确认是影响监督质量的数据修复与可用性标记。长异常尚未修复，插值位姿不是独立观测；未下载全部 Parquet 检验每个数值，不能声称已重算或验证全部轨迹。",
+            "evaluation": "编辑评价：显式掩码比不透明清洗更利于复现，但丢失原始 H5 限制回溯，长间断和真实高速旋转仍需区分。主卡残留旧数据数量，应按固定提交使用统计与标记。",
+            "futureDirections": "编辑提出的后续假设：可分别训练保留、屏蔽和加权使用插值帧的模型，按异常区间长度报告敏感性；未来应保存原始测量与修复来源，避免把平滑轨迹当真实高频动力学。",
+            "lastReviewedAt": "2026-09-17T09:25:11.265861+00:00",
+            "briefHistory": [
+              {
+                "promotedAt": "2026-09-17T02:39:11.180Z",
+                "previous": {
+                  "id": "hf:datasets/yxma/React",
+                  "title": "React tactile-visual dataset: September 16 expansion and calibration-session rule update",
+                  "zhTitle": "React新增九月触觉数据：146片段，并调整会话标定选择规则",
+                  "authors": [
+                    "yxma"
+                  ],
+                  "category": "embodied",
+                  "tags": [
+                    "触觉",
+                    "视觉世界模型",
+                    "数据集",
+                    "标定"
+                  ],
+                  "contentTypes": [
+                    "report"
+                  ],
+                  "canonicalUrl": "https://huggingface.co/datasets/yxma/React",
+                  "identityLinks": [
+                    "https://huggingface.co/datasets/yxma/React"
+                  ],
+                  "aliasIds": [
+                    "pending:hf:datasets/yxma/React-video-release"
+                  ],
+                  "publishedAt": "2026-09-15T00:27:01Z",
+                  "releaseAt": "2026-09-15T00:27:01Z",
+                  "sourceUpdatedAt": "2026-09-16T06:06:37Z",
+                  "version": "efecc6ebaf5991af8ee37ebb5b903ff3c0946cb8",
+                  "checkedAt": "2026-09-16T09:29:49.007977+00:00",
+                  "changeType": "updated",
+                  "status": "brief_verified",
+                  "reviewStatus": "full_source_reviewed",
+                  "popularity": {
+                    "score": null,
+                    "status": "unmeasured",
+                    "metrics": {
+                      "githubStars": null,
+                      "hfUpvotes": null
+                    },
+                    "basis": "未取得此单独产物可归属的论文票数或专属项目 stars；模型/数据 likes 与下载量不代入论文热度。",
+                    "evidence": [],
+                    "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                  },
+                  "editorialPriority": 89,
+                  "editorialPriorityReason": "可核实际数据扩展及影响标定选择的行为变化；非热度。",
+                  "dateNote": "保留原产物首次公开9月15日00:27:01Z与首次收录；本次数据/工具提交发生于9月16日05:43–06:06Z。采集日与公开提交日分别处理。",
+                  "summary": "新增人类手持触觉采集数据并扩展标定会话处理；主表146片段不等于146次独立录制，规则变化需固定代码版本。",
+                  "innovation": "新版本增加9月14/15日任务数据和对应视频/索引。已读代码在显式会话声明优先的基础上，允许不早于当前标定时期的未声明会话采用CURRENT_EPOCH；旧日期仍须显式声明，区别于旧版一律拒绝未知会话。",
+                  "evidence": "已读完整新数据卡、9月16日提交历史和82fb6ca实际代码diff，并对照此前收录的固定版本；数据量为作者报告，未重新下载统计。",
+                  "evidenceDetails": [
+                    {
+                      "url": "https://huggingface.co/datasets/yxma/React/blob/867ad12c370eeb00568b6bf147f07e4783f2917d/README.md",
+                      "location": "Main window；Calibration；Known issue",
+                      "supports": "人类手持设备、数据格式、历史限制和日期边界",
+                      "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                    },
+                    {
+                      "url": "https://huggingface.co/datasets/yxma/React/blob/867ad12c370eeb00568b6bf147f07e4783f2917d/assets/dataset_stats.json",
+                      "location": "new_era/task statistics",
+                      "supports": "三任务片段、源录制、帧数及分钟数",
+                      "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                    },
+                    {
+                      "url": "https://huggingface.co/datasets/yxma/React/blob/867ad12c370eeb00568b6bf147f07e4783f2917d/data/rope/splits.json",
+                      "location": "format；max_train_window；guard_frames；episodes",
+                      "supports": "时间区间测试、64帧窗口与63帧保护区",
+                      "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                    },
+                    {
+                      "url": "https://huggingface.co/datasets/yxma/React/blob/867ad12c370eeb00568b6bf147f07e4783f2917d/data/rope/episodes.jsonl",
+                      "location": "23 episode identifiers",
+                      "supports": "与split一一对应",
+                      "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                    },
+                    {
+                      "url": "https://huggingface.co/datasets/yxma/React/blob/867ad12c370eeb00568b6bf147f07e4783f2917d/data/rope/calibration/epoch_2026-09-09/T_mocap_to_cam_middle.json",
+                      "location": "up_axis",
+                      "supports": "实际Z-up外参",
+                      "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                    },
+                    {
+                      "url": "https://huggingface.co/datasets/yxma/React/blob/867ad12c370eeb00568b6bf147f07e4783f2917d/tasks.json",
+                      "location": "task inventory；tactile_latency",
+                      "supports": "仍滞后的旧统计和时延补偿适用风险",
+                      "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                    },
+                    {
+                      "url": "https://huggingface.co/datasets/yxma/React/commit/867ad12c370eeb00568b6bf147f07e4783f2917d",
+                      "location": "README: the one-week main window, the statistics figures, the splits and what guard costs, and the Z-up calibration rule",
+                      "supports": "公开更正日期 2026-09-15T07:30:42.000Z",
+                      "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                    },
+                    {
+                      "url": "https://huggingface.co/datasets/yxma/React/commit/7b386aa77a762d326d80b1e4c597e1e319542a5f",
+                      "location": "stats: figures recomputed after the four rope recordings were refiled as pushT",
+                      "supports": "公开更正日期 2026-09-15T07:27:20.000Z",
+                      "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                    },
+                    {
+                      "url": "https://huggingface.co/datasets/yxma/React/commit/c87c79c4812fce127c6d4a4b72c31469bd91e251",
+                      "location": "rope: splits + curation indices. Without splits.json every rope segment read as TRAIN",
+                      "supports": "公开更正日期 2026-09-15T06:59:30.000Z",
+                      "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                    },
+                    {
+                      "url": "https://huggingface.co/datasets/yxma/React/commit/a18a51f96f38d3a2e9658f6722dcf124c36d2f69",
+                      "location": "rope: epoch_2026-09-09 calibration in the Z-up frame the parquet use, declared",
+                      "supports": "公开更正日期 2026-09-15T03:23:14.000Z",
+                      "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                    },
+                    {
+                      "url": "https://huggingface.co/datasets/yxma/React/commit/9ea6fb41933e4dddca649f4de39fd5a56d8b697e",
+                      "location": "pushT: epoch_2026-09-09 calibration in the Z-up frame the parquet use, declared",
+                      "supports": "公开更正日期 2026-09-15T03:23:13.000Z",
+                      "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                    },
+                    {
+                      "url": "https://huggingface.co/datasets/yxma/React/commit/780e2994152f33c1c04a2eb1c0c42fb156b892e1",
+                      "location": "motherboard: epoch_2026-09-09 calibration in the Z-up frame the parquet use, declared",
+                      "supports": "公开更正日期 2026-09-15T03:23:12.000Z",
+                      "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                    },
+                    {
+                      "url": "https://huggingface.co/datasets/yxma/React",
+                      "location": "Tasks / Calibration / Splits / headline",
+                      "supports": "25/68/53片段、12/23/16录制、时长、旧头信息不一致，手持数据而非robot执行",
+                      "checkedAt": "2026-09-16T09:29:49.007977+00:00"
+                    },
+                    {
+                      "url": "https://huggingface.co/datasets/yxma/React/commit/82fb6ca60a1e8b8605a7bbbdd5899ec302c3d622",
+                      "location": "toolbox/calib_epoch.py，新增CURRENT_EPOCH与session_epoch分支",
+                      "supports": "真实diff仅该文件+31/-10，显式rope会话和date>=CURRENT_EPOCH默认规则；不能从标题外推其余修复",
+                      "checkedAt": "2026-09-16T09:29:49.007977+00:00"
+                    },
+                    {
+                      "url": "https://huggingface.co/datasets/yxma/React/commits/main",
+                      "location": "f7d720d /87967ef/8d0d972数据发布；82fb6ca工具；efecc6e统计",
+                      "supports": "2026-09-16T05:43:16至06:06:37Z新增数据/工具的实际日期",
+                      "checkedAt": "2026-09-16T09:29:49.007977+00:00"
+                    }
+                  ],
+                  "links": [
+                    {
+                      "label": "原始数据",
+                      "url": "https://huggingface.co/datasets/yxma/React"
+                    },
+                    {
+                      "label": "九月统计",
+                      "url": "https://huggingface.co/datasets/yxma/React/blob/867ad12c370eeb00568b6bf147f07e4783f2917d/assets/dataset_stats.json"
+                    },
+                    {
+                      "label": "切分文件",
+                      "url": "https://huggingface.co/datasets/yxma/React/blob/867ad12c370eeb00568b6bf147f07e4783f2917d/data/rope/splits.json"
+                    },
+                    {
+                      "label": "发布与更正记录",
+                      "url": "https://huggingface.co/datasets/yxma/React/commits/main"
+                    },
+                    {
+                      "label": "标定规则实际更改",
+                      "url": "https://huggingface.co/datasets/yxma/React/commit/82fb6ca60a1e8b8605a7bbbdd5899ec302c3d622"
+                    },
+                    {
+                      "label": "九月16日版本",
+                      "url": "https://huggingface.co/datasets/yxma/React/tree/efecc6ebaf5991af8ee37ebb5b903ff3c0946cb8"
+                    }
+                  ],
+                  "backfill": false,
+                  "leadDiscoveredAt": "2026-09-15T02:23:40.341369+00:00",
+                  "discoveredAt": "2026-09-15T09:35:25.032Z",
+                  "updatedAt": "2026-09-16T09:30:22.111Z",
+                  "lastSeenAt": "2026-09-16T09:30:22.111Z",
+                  "revisionEvents": [
+                    {
+                      "changeId": "hf:datasets/yxma/React:efecc6ebaf5991af8ee37ebb5b903ff3c0946cb8",
+                      "at": "2026-09-16T09:30:22.111Z",
+                      "note": "相对已收录867ad12：9月16日新增9月14/15日采集数据，当前卡列三任务146片段；82fb6ca真实代码新增rope会话声明，并把未知但不早于CURRENT_EPOCH的会话默认指向当前标定。仅更正有实际diff支持的规则，不按提交标题宣称已核全部projection/gel修复。",
+                      "previous": {
+                        "id": "hf:datasets/yxma/React",
+                        "title": "React tactile-visual dataset: September release and calibration/split correction",
+                        "zhTitle": "React：触觉—视觉数据公开，并更正标定与切分",
+                        "authors": [
+                          "yxma"
+                        ],
+                        "category": "embodied",
+                        "tags": [
+                          "触觉",
+                          "视觉世界模型",
+                          "数据集",
+                          "标定"
+                        ],
+                        "contentTypes": [
+                          "report"
+                        ],
+                        "canonicalUrl": "https://huggingface.co/datasets/yxma/React",
+                        "identityLinks": [
+                          "https://huggingface.co/datasets/yxma/React"
+                        ],
+                        "aliasIds": [
+                          "pending:hf:datasets/yxma/React-video-release"
+                        ],
+                        "publishedAt": "2026-09-15T00:27:01Z",
+                        "releaseAt": "2026-09-15T00:27:01Z",
+                        "sourceUpdatedAt": "2026-09-15T07:30:42.000Z",
+                        "version": "867ad12c370eeb00568b6bf147f07e4783f2917d",
+                        "checkedAt": "2026-09-15T09:22:28.057189+00:00",
+                        "changeType": "backfill",
+                        "status": "brief_verified",
+                        "reviewStatus": "full_source_read",
+                        "popularity": {
+                          "score": null,
+                          "status": "unmeasured",
+                          "metrics": {
+                            "githubStars": null,
+                            "hfUpvotes": null
+                          },
+                          "basis": "未取得此单独产物可归属的论文票数或专属项目 stars；模型/数据 likes 与下载量不代入论文热度。",
+                          "evidence": [],
+                          "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                        },
+                        "editorialPriority": 86,
+                        "editorialPriorityReason": "编辑价值：已核实际文件的数据发布与防泄漏/标定更正；非热度。",
+                        "dateNote": "仓库及旧数据早于本轮；9/15 00:27:01Z 新视频发布，03:23Z 三任务 Z-up 外参更正，06:59Z 补 rope 切分，07:30Z 更新说明。首次正式建档，不把核验行为当成旧文章更新。",
+                        "summary": "手持 GelSight 的人类接触数据补齐九月视频、Z-up 标定与带窗口保护的切分；实际统计可核，但旧清单仍有滞后，需按采集时期选择加载参数。",
+                        "innovation": "这次发布提供三路 RGB、两路触觉视频与逐帧位姿的 MP4/Parquet 数据，主窗口按九月采集 epoch 组织；三任务外参显式使用 Z-up，并补 rope 的时间区间划分和最大 64 帧窗口所需 63 帧保护区。其增量是可检查的数据和质量修复，没有提出新世界模型网络。",
+                        "evidence": "阅读完整原始卡，并实际读取固定修订的统计、任务清单、rope 切分、episode 清单和 Z-up 外参；普通提交页核对实质发布日期。",
+                        "evidenceDetails": [
+                          {
+                            "url": "https://huggingface.co/datasets/yxma/React/blob/867ad12c370eeb00568b6bf147f07e4783f2917d/README.md",
+                            "location": "Main window；Calibration；Known issue",
+                            "supports": "人类手持设备、数据格式、历史限制和日期边界",
+                            "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                          },
+                          {
+                            "url": "https://huggingface.co/datasets/yxma/React/blob/867ad12c370eeb00568b6bf147f07e4783f2917d/assets/dataset_stats.json",
+                            "location": "new_era/task statistics",
+                            "supports": "三任务片段、源录制、帧数及分钟数",
+                            "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                          },
+                          {
+                            "url": "https://huggingface.co/datasets/yxma/React/blob/867ad12c370eeb00568b6bf147f07e4783f2917d/data/rope/splits.json",
+                            "location": "format；max_train_window；guard_frames；episodes",
+                            "supports": "时间区间测试、64帧窗口与63帧保护区",
+                            "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                          },
+                          {
+                            "url": "https://huggingface.co/datasets/yxma/React/blob/867ad12c370eeb00568b6bf147f07e4783f2917d/data/rope/episodes.jsonl",
+                            "location": "23 episode identifiers",
+                            "supports": "与split一一对应",
+                            "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                          },
+                          {
+                            "url": "https://huggingface.co/datasets/yxma/React/blob/867ad12c370eeb00568b6bf147f07e4783f2917d/data/rope/calibration/epoch_2026-09-09/T_mocap_to_cam_middle.json",
+                            "location": "up_axis",
+                            "supports": "实际Z-up外参",
+                            "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                          },
+                          {
+                            "url": "https://huggingface.co/datasets/yxma/React/blob/867ad12c370eeb00568b6bf147f07e4783f2917d/tasks.json",
+                            "location": "task inventory；tactile_latency",
+                            "supports": "仍滞后的旧统计和时延补偿适用风险",
+                            "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                          },
+                          {
+                            "url": "https://huggingface.co/datasets/yxma/React/commit/867ad12c370eeb00568b6bf147f07e4783f2917d",
+                            "location": "README: the one-week main window, the statistics figures, the splits and what guard costs, and the Z-up calibration rule",
+                            "supports": "公开更正日期 2026-09-15T07:30:42.000Z",
+                            "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                          },
+                          {
+                            "url": "https://huggingface.co/datasets/yxma/React/commit/7b386aa77a762d326d80b1e4c597e1e319542a5f",
+                            "location": "stats: figures recomputed after the four rope recordings were refiled as pushT",
+                            "supports": "公开更正日期 2026-09-15T07:27:20.000Z",
+                            "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                          },
+                          {
+                            "url": "https://huggingface.co/datasets/yxma/React/commit/c87c79c4812fce127c6d4a4b72c31469bd91e251",
+                            "location": "rope: splits + curation indices. Without splits.json every rope segment read as TRAIN",
+                            "supports": "公开更正日期 2026-09-15T06:59:30.000Z",
+                            "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                          },
+                          {
+                            "url": "https://huggingface.co/datasets/yxma/React/commit/a18a51f96f38d3a2e9658f6722dcf124c36d2f69",
+                            "location": "rope: epoch_2026-09-09 calibration in the Z-up frame the parquet use, declared",
+                            "supports": "公开更正日期 2026-09-15T03:23:14.000Z",
+                            "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                          },
+                          {
+                            "url": "https://huggingface.co/datasets/yxma/React/commit/9ea6fb41933e4dddca649f4de39fd5a56d8b697e",
+                            "location": "pushT: epoch_2026-09-09 calibration in the Z-up frame the parquet use, declared",
+                            "supports": "公开更正日期 2026-09-15T03:23:13.000Z",
+                            "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                          },
+                          {
+                            "url": "https://huggingface.co/datasets/yxma/React/commit/780e2994152f33c1c04a2eb1c0c42fb156b892e1",
+                            "location": "motherboard: epoch_2026-09-09 calibration in the Z-up frame the parquet use, declared",
+                            "supports": "公开更正日期 2026-09-15T03:23:12.000Z",
+                            "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                          }
+                        ],
+                        "links": [
+                          {
+                            "label": "原始数据",
+                            "url": "https://huggingface.co/datasets/yxma/React"
+                          },
+                          {
+                            "label": "九月统计",
+                            "url": "https://huggingface.co/datasets/yxma/React/blob/867ad12c370eeb00568b6bf147f07e4783f2917d/assets/dataset_stats.json"
+                          },
+                          {
+                            "label": "切分文件",
+                            "url": "https://huggingface.co/datasets/yxma/React/blob/867ad12c370eeb00568b6bf147f07e4783f2917d/data/rope/splits.json"
+                          },
+                          {
+                            "label": "发布与更正记录",
+                            "url": "https://huggingface.co/datasets/yxma/React/commits/main"
+                          }
+                        ],
+                        "backfill": true,
+                        "leadDiscoveredAt": "2026-09-15T02:23:40.341369+00:00",
+                        "discoveredAt": "2026-09-15T09:35:25.032Z",
+                        "updatedAt": "2026-09-15T09:35:25.032Z",
+                        "lastSeenAt": "2026-09-15T09:35:25.032Z"
+                      }
+                    }
+                  ],
+                  "type": "作者数据集与工具更新",
+                  "source": "Hugging Face作者数据卡与具体提交",
+                  "substantiveUpdate": true,
+                  "changeId": "hf:datasets/yxma/React:efecc6ebaf5991af8ee37ebb5b903ff3c0946cb8",
+                  "changeNote": "相对已收录867ad12：9月16日新增9月14/15日采集数据，当前卡列三任务146片段；82fb6ca真实代码新增rope会话声明，并把未知但不早于CURRENT_EPOCH的会话默认指向当前标定。仅更正有实际diff支持的规则，不按提交标题宣称已核全部projection/gel修复。"
+                }
+              }
+            ]
+          }
         }
       ],
       "type": "作者数据集与工具更新",
       "source": "Hugging Face作者数据卡与具体提交",
       "substantiveUpdate": true,
-      "changeId": "hf:datasets/yxma/React:f186f5f6701f52eb6216b9465bdb309d17fe141d",
-      "changeNote": "相对上午仅四任务统计更新，本次 motherboard 数据修复短时 OptiTrack 异常并新增 pose_interpolated 标记及未修复长异常清单；同步到旧未裁切数据，不将插值当新测量。",
+      "changeId": "hf:datasets/yxma/React:8f51b56a5f0d2ef1c6585071d8f0ca4cbbb5ebe8",
+      "changeNote": "固定提交8f51b56新增9月17日toy采集的7个片段、7659帧，使toy清单由10增至17；附带Z-up、V8力通道来源、动作有效掩码与切分验证。旧Parquet和既有切分保留，旧索引的坐标标签修正。",
       "eventAt": "2026-09-17T09:03:59Z",
       "stableChangeId": "hf:datasets/yxma/React:f186f5f6701f52eb6216b9465bdb309d17fe141d",
-      "background": "手持触觉—视觉序列的动作捕捉位姿可能短时旋转跳变。直接将异常当监督会污染接触运动学习，而静默平滑又会把估计值伪装成原始测量。",
-      "experiments": "固定提交改变32个旧 motherboard Parquet 指针并新增长异常清单；提交说明原始 H5 已删除，修复以此前公开版本恢复的位姿作为参考。上午已核173片段/55源录制的四任务统计继续适用；本次未声称增加数据或重新采集，也无训练性能对照。",
-      "conclusion": "可确认是影响监督质量的数据修复与可用性标记。长异常尚未修复，插值位姿不是独立观测；未下载全部 Parquet 检验每个数值，不能声称已重算或验证全部轨迹。",
-      "evaluation": "编辑评价：显式掩码比不透明清洗更利于复现，但丢失原始 H5 限制回溯，长间断和真实高速旋转仍需区分。主卡残留旧数据数量，应按固定提交使用统计与标记。",
-      "futureDirections": "编辑提出的后续假设：可分别训练保留、屏蔽和加权使用插值帧的模型，按异常区间长度报告敏感性；未来应保存原始测量与修复来源，避免把平滑轨迹当真实高频动力学。",
+      "background": "触觉世界模型容易受到动作捕捉突跳、坐标轴混用和训练测试窗口重叠影响。人类手持传感器数据能提供接触样本，但只有正确对齐并标记无效帧，才能判断模型学到了物理关系还是数据处理伪影。",
+      "experiments": "固定提交的summary与episodes清单一致：toy共17片段、20257帧，其中新增7659帧来自3段源录制，不能称为7次独立采集。schema检查列出七份55列Parquet；作者的力验证抽样比较转换结果与raw_h5来源。toy切分覆盖全部17片段，最大训练窗口64帧、保护区63帧；仍是同段内的时间区间测试。",
+      "conclusion": "新增数据和可审计的处理清单已公开，适合研究短时触觉—视觉预测与掩码加载；未报告新模型的预测提升、闭环控制成功率或独立力传感器精度验证。",
+      "evaluation": "编辑分析：逐片段来源比首页的旧“10片段”统计更可靠。这里核对的是公开清单与作者验证结果，没有重新下载视频、重算全部力或训练模型。间隔测试仍共享场景和录制条件；数值重建一致性不等于牛顿量纲的真实测量精度，不能当作跨场景泛化或校准完成的证明。",
+      "futureDirections": "研究假设：把新增片段的动作掩码、力有效性与坐标epoch作为世界模型的数据入口约束，比较严格掩码和忽略掩码的预测误差；另按源录制或采集日完整留出测试，再与独立力传感器对照，才检验它是否能改善接触时刻预测与后续机器人动作选择。",
       "lastReviewedAt": "2026-09-17T09:25:11.265861+00:00",
       "briefHistory": [
         {
@@ -30650,18 +31150,18 @@
         "evidence": [
           {
             "url": "https://github.com/ShuaiZhou302/ActiveScale",
+            "apiUrl": "https://api.github.com/repos/ShuaiZhou302/ActiveScale",
             "metric": "github_stars",
             "value": 7,
-            "checkedAt": "2026-09-19T05:21:42.099238+00:00",
-            "location": "About → Stars",
-            "scope": "专属仓库累计stars；不是当天增长"
+            "checkedAt": "2026-09-19T09:14:14.977999+00:00",
+            "scope": "公开累计关注，非当日新增"
           }
         ],
-        "checkedAt": "2026-09-19T05:43:17.168331+00:00",
+        "checkedAt": "2026-09-19T09:14:14.977999+00:00",
         "missingMetrics": [
           "hfUpvotes"
         ],
-        "basis": "GitHub累计stars 7；仅代表可核公开信号，未知不记零，累计数不是当天热度或研究质量。"
+        "basis": "GitHub累计stars 7；仅代表可测信号，缺失非零，累计数不是当天热度。"
       },
       "links": [
         {
@@ -36368,15 +36868,15 @@
             "apiUrl": "https://huggingface.co/api/papers/2606.04811",
             "metric": "hf_paper_upvotes",
             "value": 17,
-            "checkedAt": "2026-09-19T05:32:12.635929+00:00",
-            "scope": "公开论文累计投票，非当日新增"
+            "checkedAt": "2026-09-19T09:14:44.702898+00:00",
+            "scope": "公开累计关注，非当日新增"
           }
         ],
-        "checkedAt": "2026-09-19T05:43:17.168331+00:00",
+        "checkedAt": "2026-09-19T09:14:44.702898+00:00",
         "missingMetrics": [
           "githubStars"
         ],
-        "basis": "；HF论文累计投票 17；仅代表可核公开信号，未知不记零，累计数不是当天热度或研究质量。"
+        "basis": "HF论文累计票数 17；仅代表可测信号，缺失非零，累计数不是当天热度。"
       },
       "discoveredAt": "2026-09-19T05:43:17.390108+00:00",
       "updatedAt": "2026-09-19T05:43:17.390108+00:00",
@@ -36632,6 +37132,207 @@
         }
       ],
       "aliasIds": []
+    },
+    {
+      "id": "arxiv:2603.14554",
+      "title": "MorFiC: Fixing Value Miscalibration for Zero-Shot Quadruped Transfer",
+      "zhTitle": "MorFiC：通过价值函数校准改善四足机器人跨机型迁移",
+      "category": "rl",
+      "publishedAt": "2026-03-15T19:03:34Z",
+      "canonicalUrl": "https://arxiv.org/abs/2603.14554",
+      "version": "v2",
+      "authors": [
+        "Prakhar Mishra",
+        "Amir Hossain Raj",
+        "Xuesu Xiao",
+        "Dinesh Manocha"
+      ],
+      "tags": [
+        "四足机器人",
+        "跨本体迁移",
+        "PPO",
+        "价值函数",
+        "FiLM"
+      ],
+      "contentTypes": [
+        "paper",
+        "news"
+      ],
+      "type": "论文",
+      "checkedAt": "2026-09-19T09:16:28.136163+00:00",
+      "reviewStatus": "primary_methods_results_and_limitations_read",
+      "status": "full_verified",
+      "editorialPriority": 97,
+      "editorialPriorityBasis": "无可比热度时按方法可复用性和证据完整性补充；不代表公开互动量。",
+      "evidence": "已阅读原始方法、实验或数据验证与局限；未独立重跑。评价和组合方向属于编辑分析与研究假设。",
+      "links": [
+        {
+          "label": "原始论文",
+          "url": "https://arxiv.org/abs/2603.14554"
+        },
+        {
+          "label": "v2 全文",
+          "url": "https://arxiv.org/html/2603.14554v2"
+        },
+        {
+          "label": "机构报道",
+          "url": "https://www.umiacs.umd.edu/news-events/news/one-robot-many-bodies-new-system-helps-four-legged-robots-adapt"
+        }
+      ],
+      "evidenceDetails": [
+        {
+          "url": "https://arxiv.org/abs/2603.14554",
+          "location": "Submission history",
+          "supports": "v1与v2的准确提交时间",
+          "checkedAt": "2026-09-19T09:16:28.136163+00:00"
+        },
+        {
+          "url": "https://arxiv.org/html/2603.14554v2",
+          "location": "Sections 3–5；Appendix B",
+          "supports": "11维描述、乘性critic调制与单Go2模板",
+          "checkedAt": "2026-09-19T09:16:28.136163+00:00"
+        },
+        {
+          "url": "https://arxiv.org/html/2603.14554v2",
+          "location": "Tables 1–4；Section 8；Appendix E.1/E.2",
+          "supports": "评估环境、指令、速度、真机次数；Go1主表0.547与Table 4中0.647存在差异",
+          "checkedAt": "2026-09-19T09:16:28.136163+00:00"
+        },
+        {
+          "url": "https://arxiv.org/html/2603.14554v2",
+          "location": "Sections 9；Appendix A；Appendix I Table 16",
+          "supports": "远分布失败、存活率限制、2.2–3.0 GPU小时和外部算力外推口径",
+          "checkedAt": "2026-09-19T09:16:28.136163+00:00"
+        },
+        {
+          "url": "https://www.umiacs.umd.edu/news-events/news/one-robot-many-bodies-new-system-helps-four-legged-robots-adapt",
+          "location": "日期及首段",
+          "supports": "9月18日机构报道与CoRL接收表述",
+          "checkedAt": "2026-09-19T09:16:28.136163+00:00"
+        }
+      ],
+      "backfill": true,
+      "changeType": "backfill",
+      "sourceUpdatedAt": "2026-08-24T06:29:55Z",
+      "dateNote": "由9月18日马里兰大学报道发现并补录；论文初稿3月15日，当前v2为8月24日，不是9月新稿。机构称已获CoRL 2026接收。",
+      "summary": "让 critic 按机器人形态调节特征，改善 PPO 的优势估计；邻近机型迁移有效，重型远分布机型仍是短板。",
+      "background": "同一状态在不同质量和关节范围的机器人上可能对应不同回报。共享 critic 若把这些目标混在一起，优势估计会给策略错误的更新方向；只给 actor 输入形态信息未必能解决问题。",
+      "innovation": "MorFiC 把11维质量与关节限位描述编码为形态向量，同时供给 actor 和 critic；核心是用 FiLM 等乘性调制改变 critic 的中间特征，而非仅拼接输入。训练仍采用单一 Go2 模板及形态随机化，固定 rollout 的优势符号和梯度方向诊断用于检查机制。",
+      "experiments": "论文在 IsaacGym 中训练，并在包含源机型的七种四足机型上评估。Table 2 使用2.0 m/s指令、64个环境和500步：AlienGo 的 MorFiC 为1.98±0.51 m/s，拼接形态的 actor+critic 为0.40±0.18 m/s。Go1 真机10次试验报告约1.4–1.7 m/s，Go2约1.1–1.3 m/s；这些不是所有七机型的真机测试。固定轨迹消融支持 critic 对更新方向的影响。",
+      "conclusion": "价值估计的条件化是跨本体控制的一条可用改进路径，但没有解决任意形态迁移。B1 和 ANYmal-C 的有效步态仍受限；高存活率可能来自不运动，不能单独当成功。",
+      "evaluation": "编辑分析：内部 PPO 对照比外部异构训练基线更能隔离机制。速度与稳定性存在取舍，Go1 的存活率在主表与消融表还不一致，需复现核对；正文“约两小时”与附录2.2–3.0 GPU小时也应区分。外部算力包含短程测量外推与专家池规模，不宜直接宣称统一条件下的加速倍数。",
+      "futureDirections": "研究假设：把 FiLM critic 接入有限多源机型训练或在线系统辨识，让估计的质量、负载和限位替代固定描述。应按形态距离划分未见机型，在相同数据与训练预算下联合报告速度、跌倒率、能耗和优势符号误差，检查是否改善重型机型而不牺牲近分布稳定性。",
+      "popularity": {
+        "status": "unmeasured",
+        "score": null,
+        "metrics": {
+          "githubStars": null,
+          "hfUpvotes": null
+        },
+        "evidence": [],
+        "checkedAt": "2026-09-19T09:19:37.409434+00:00",
+        "basis": "未获得可归属于该研究的论文投票或专属仓库stars；未知保留null，机构报道和公开数据卡不伪装成互动数。",
+        "coverageNote": "HF论文API返回404；未发现论文明确关联的代码仓库。"
+      },
+      "discoveredAt": "2026-09-19T09:19:37.409434+00:00",
+      "updatedAt": "2026-09-19T09:19:37.409434+00:00",
+      "lastSeenAt": "2026-09-19T09:19:37.409434+00:00",
+      "revisionEvents": []
+    },
+    {
+      "id": "report:one-operator-many-robots-sar-20260919",
+      "title": "One Operator, Many Robots: Natural-Language Command of UAV–UGV Teams for Search, Victim Detection, and Rescue",
+      "zhTitle": "单人语音指挥空地机器人：把人员发现接到地面响应",
+      "category": "embodied",
+      "publishedAt": "2026-09-19",
+      "canonicalUrl": "https://alejp.me/blog/blog-post-ssrr-2026-ugv-uav.html",
+      "version": "2026-09-19 作者技术博客",
+      "authors": [
+        "A. Jarabo-Peñas",
+        "J. Bravo-Arrabal",
+        "E.G.A. Rolland",
+        "A.L. Christensen"
+      ],
+      "tags": [
+        "多机器人",
+        "搜救",
+        "自然语言控制",
+        "人机协作",
+        "定位"
+      ],
+      "contentTypes": [
+        "blog",
+        "report"
+      ],
+      "type": "技术报告",
+      "checkedAt": "2026-09-19T09:16:28.136163+00:00",
+      "reviewStatus": "primary_methods_results_and_limitations_read",
+      "status": "full_verified",
+      "editorialPriority": 91,
+      "editorialPriorityBasis": "无可比热度时按方法可复用性和证据完整性补充；不代表公开互动量。",
+      "evidence": "已阅读原始方法、实验或数据验证与局限；未独立重跑。评价和组合方向属于编辑分析与研究假设。",
+      "links": [
+        {
+          "label": "作者原文",
+          "url": "https://alejp.me/blog/blog-post-ssrr-2026-ugv-uav.html"
+        },
+        {
+          "label": "NAMUR 项目报道",
+          "url": "https://namurproject.com/blog/blog-post-ssrr-2026-ugv-uav.html"
+        }
+      ],
+      "evidenceDetails": [
+        {
+          "url": "https://alejp.me/blog/blog-post-ssrr-2026-ugv-uav.html",
+          "location": "页面日期、作者署名与审稿状态",
+          "supports": "9月19日博客、作者列表、under review",
+          "checkedAt": "2026-09-19T09:16:28.136163+00:00"
+        },
+        {
+          "url": "https://alejp.me/blog/blog-post-ssrr-2026-ugv-uav.html",
+          "location": "Figures 1–3；From aerial search to ground response",
+          "supports": "检测、几何定位、跨机融合与人工确认流程",
+          "checkedAt": "2026-09-19T09:16:28.136163+00:00"
+        },
+        {
+          "url": "https://alejp.me/blog/blog-post-ssrr-2026-ugv-uav.html",
+          "location": "Tables 1–3；Twelve outdoor experiments",
+          "supports": "验证集指标、地面站硬件、面积、12次实验和逐场景误差；C漏检",
+          "checkedAt": "2026-09-19T09:16:28.136163+00:00"
+        },
+        {
+          "url": "https://alejp.me/blog/blog-post-ssrr-2026-ugv-uav.html",
+          "location": "Figure 5；Feedback from a professional firefighter",
+          "supports": "地面响应演示及定性消防反馈，未披露完整撤离效果对照",
+          "checkedAt": "2026-09-19T09:16:28.136163+00:00"
+        }
+      ],
+      "dateNote": "作者博客标注9月19日，未披露具体时刻；论文称提交IEEE SSRR 2026、仍在审，不写成已录用。",
+      "identityLinks": [
+        "https://namurproject.com/blog/blog-post-ssrr-2026-ugv-uav.html"
+      ],
+      "summary": "将空中检测、跨无人机目标融合与地面机器人调度接入语音指挥流程，保留人对候选目标的确认。",
+      "background": "搜救中的难点不只在空中找到人，还在于把检测变成可引用、可核实的地图目标，再让地面平台到达合适位置。操作者同时管理多台异构机器人时，单独的遥控接口会增加协调负担。",
+      "innovation": "系统扩展 Swarm-Steward：YOLO26l 检测经无人机姿态、云台、相机几何和地形投影到地面，轨迹由 Object Manager 融合；操作者确认目标后，可用后续自然语言指令让无人机监视并调度 Rover J8。语言代理外还有确定性管理与通信桥接层，创新主要在端到端任务衔接。",
+      "experiments": "作者报告约4.74公顷场地的12次户外实验，包含四个目标位置和1、2、4架无人机配置。三处位置最佳场景的定位误差分别为1.21、2.29、1.92米，困难位置C未找到；这些是逐场景最佳结果，不是整体平均。混合航拍验证集上YOLO26l的mAP50为0.832、mAP50–95为0.501；推理在RTX 5090地面站进行。",
+      "conclusion": "技术博客证明了从空中搜索到人工确认、再到地面响应的集成流程，并展示了视角、遮挡、地形和定位质量的影响。未给出与传统操作界面的对照，也未量化真实撤离救援的成功率。",
+      "evaluation": "编辑分析：目标具有明确身份、可确认或拒绝、可继续引用，这比一次性文本指令更适合长流程。场景与机器人数量、云台角度和速度并非完全受控，不能据表3推导无人机数量带来多少提升；消防人员反馈是定性意见，不是用户研究。",
+      "futureDirections": "研究假设：给共享目标增加位置协方差与检测来源，把不确定性接入地面规划的接近距离和禁入区约束；结合主动感知选择无人机补拍视角。用相同人员位置和光照配对比较人工界面、纯语言调度及带确认的系统，测漏检、误派、任务时间、干预次数与操作者负荷。",
+      "popularity": {
+        "status": "unmeasured",
+        "score": null,
+        "metrics": {
+          "githubStars": null,
+          "hfUpvotes": null
+        },
+        "evidence": [],
+        "checkedAt": "2026-09-19T09:19:37.409434+00:00",
+        "basis": "未获得可归属于该研究的论文投票或专属仓库stars；未知保留null，机构报道和公开数据卡不伪装成互动数。"
+      },
+      "discoveredAt": "2026-09-19T09:19:37.409434+00:00",
+      "updatedAt": "2026-09-19T09:19:37.409434+00:00",
+      "lastSeenAt": "2026-09-19T09:19:37.409434+00:00",
+      "revisionEvents": []
     }
   ],
   "editions": [
@@ -92541,8 +93242,8 @@
         "arxiv:2609.15870",
         "arxiv:2609.15570",
         "arxiv:2609.13812",
-        "arxiv:2609.13851",
         "hf:datasets/yxma/React",
+        "arxiv:2609.13851",
         "arxiv:2609.15921",
         "arxiv:2609.14087",
         "arxiv:2609.13231",
@@ -92721,8 +93422,8 @@
         "arxiv:2609.15870",
         "arxiv:2609.15570",
         "arxiv:2609.13812",
-        "arxiv:2609.13851",
         "hf:datasets/yxma/React",
+        "arxiv:2609.13851",
         "arxiv:2609.15921",
         "arxiv:2609.14087",
         "arxiv:2609.13231",
@@ -111115,8 +111816,8 @@
         "github:tsingletaryTT/tt-vjepa2",
         "github:tsingletaryTT/tt-openvla",
         "arxiv:2605.11265",
-        "arxiv:2608.25757",
         "hf:datasets/yxma/React",
+        "arxiv:2608.25757",
         "arxiv:2609.12749",
         "arxiv:2609.12898",
         "hf:AaronHuangWei/long-wam-robocasa-gr1-p192-m13k2-16s-robot-s",
@@ -111174,8 +111875,8 @@
         "github:tsingletaryTT/tt-vjepa2",
         "github:tsingletaryTT/tt-openvla",
         "arxiv:2605.11265",
-        "arxiv:2608.25757",
         "hf:datasets/yxma/React",
+        "arxiv:2608.25757",
         "arxiv:2609.12749",
         "arxiv:2609.12898",
         "hf:AaronHuangWei/long-wam-robocasa-gr1-p192-m13k2-16s-robot-s",
@@ -129207,13 +129908,13 @@
         "arxiv:2609.18207",
         "arxiv:2609.18084",
         "arxiv:2609.17745",
+        "hf:datasets/yxma/React",
         "arxiv:2609.18462",
         "arxiv:2609.18197",
         "arxiv:2609.18004",
         "arxiv:2609.17904",
         "arxiv:2609.17824",
         "arxiv:2609.17728",
-        "hf:datasets/yxma/React",
         "arxiv:2609.19080",
         "arxiv:2609.18497",
         "arxiv:2609.18119",
@@ -129382,13 +130083,13 @@
         "arxiv:2609.18207",
         "arxiv:2609.18084",
         "arxiv:2609.17745",
+        "hf:datasets/yxma/React",
         "arxiv:2609.18462",
         "arxiv:2609.18197",
         "arxiv:2609.18004",
         "arxiv:2609.17904",
         "arxiv:2609.17824",
         "arxiv:2609.17728",
-        "hf:datasets/yxma/React",
         "arxiv:2609.19080",
         "arxiv:2609.18497",
         "arxiv:2609.18119",
@@ -135129,8 +135830,8 @@
         "arxiv:2608.11521",
         "arxiv:2603.21496",
         "arxiv:2609.18964",
-        "hf:datasets/BodenAI/RW-RL-HIL-Dataset",
         "hf:datasets/yxma/React",
+        "hf:datasets/BodenAI/RW-RL-HIL-Dataset",
         "hf:kimtaegyu/TETHER",
         "hf:datasets/Myungkyu/layout_reconstruction-preset-gemini",
         "news:dm05-robocoliseum-20260915",
@@ -135148,8 +135849,8 @@
         "arxiv:2608.11521",
         "arxiv:2603.21496",
         "arxiv:2609.18964",
-        "hf:datasets/BodenAI/RW-RL-HIL-Dataset",
         "hf:datasets/yxma/React",
+        "hf:datasets/BodenAI/RW-RL-HIL-Dataset",
         "hf:kimtaegyu/TETHER",
         "hf:datasets/Myungkyu/layout_reconstruction-preset-gemini",
         "news:dm05-robocoliseum-20260915",
@@ -155411,9 +156112,1608 @@
       "candidateCount": 1,
       "rankingNote": "按已核实公开热度信号排序；不同平台的信号不能代表全网热度。 站内关注度代理分 = 10×ln(1+已核验GitHub累计stars) + 20×ln(1+已核验Hugging Face论文upvotes)。仅合计可测项，缺失为null；全部缺失则不评分。证据来自官方API、公开论文及仓库页，具体来源和观测时刻见条目。只计可归属的仓库，排除共用基础框架和跨代系列；累计关注不等于本日增量、论文质量或全网排名，未测候选的关注度仍未知。",
       "rankingVersion": 1
+    },
+    {
+      "id": "2026-09-19-1700",
+      "label": "9月19日 · 晚间研究",
+      "startedAt": "2026-09-19T09:00:27Z",
+      "completedAt": "2026-09-19T09:19:37.409434+00:00",
+      "windowStart": "2026-09-19T05:50:41.430731+00:00",
+      "windowEnd": "2026-09-19T09:19:37.409434+00:00",
+      "status": "partial",
+      "summary": "晚间新增2项完整分析（含1项旧稿补录），更新1项数据研究；其余证据不足线索继续待核，不凑满30项。",
+      "dailySummary": "今日围绕价值估计、可执行动作与真实数据展开：SeeQ用子任务价值筛选动作，Dream.exe揭示视频转动作的深度瓶颈；晚间补录MorFiC的跨机型critic校准，新增空地机器人语音协作搜救分析，并核验React七个新触觉片段。ActiveScale代码与ActSafeGuard的附表限制保留在对应记录。",
+      "sourceChecks": [
+        {
+          "name": "arXiv公告与API",
+          "status": "ok",
+          "lastSuccessAt": "2026-09-19T09:06:09.449154+00:00",
+          "windowStart": "2026-09-12T09:00:00Z",
+          "note": "公告与updated/submitted串行分页到7日边界；1500原始条目、1000个唯一ID、587项在窗口内。与上午API内容一致，无新未知ID；42个库内版本差异沿用前次修订审查。额外逐行核RIR伪代码，仍待实现一致性说明。"
+        },
+        {
+          "name": "Hugging Face",
+          "status": "partial",
+          "lastSuccessAt": "2026-09-19T09:07:19.738607+00:00",
+          "windowStart": "2026-09-12T09:00:00Z",
+          "note": "9月13–19日七张日榜131个唯一论文ID无新ID；robotics模型1200条与lerobot数据集400条均到7日边界。较上午20模型、8数据集SHA变化，27张卡可读，TacWAM卡401；漏标标签仓库未必覆盖。已查博客入口，未发现符合范围的新机构文章。"
+        },
+        {
+          "name": "机构博客/报告",
+          "status": "partial",
+          "windowStart": "2026-09-05T09:00:00Z",
+          "note": "重新读取PI、DeepMind、NVIDIA三个入口、BAIR、Stanford、TRI、Skild、Generalist、Microsoft、MIT、RSS及作者项目。多数入口与上午正文相同；NVIDIA目录只见导航与旧论文重排。新增发现UMD的MorFiC报道和作者空地协作博客，并核原始全文。"
+        },
+        {
+          "name": "新闻与中文公开报道",
+          "status": "partial",
+          "windowStart": "2026-09-12T09:00:00Z",
+          "note": "IEEE、机器之心、量子位及公开日期搜索；无额外可核研究增量。Reuters401，受限入口不声称覆盖完成；旧论文转载与已收录研究跟进去重。"
+        },
+        {
+          "name": "X/Twitter公开索引",
+          "status": "partial",
+          "windowStart": "2026-09-16T09:00:00Z",
+          "priorityWindowStart": "2026-09-12T09:00:00Z",
+          "note": "日期和站点限定查询未得到可核的新作者原帖或互动量；只有公开索引覆盖，不能代表全站没有新增。"
+        },
+        {
+          "name": "微信/小红书公开索引",
+          "status": "partial",
+          "windowStart": "2026-09-05T09:00:00Z",
+          "note": "站点及中文关键词检索未得到足够的一手新增研究证据；不读取私域，不用无命中推断全站。"
+        },
+        {
+          "name": "公开热度",
+          "status": "partial",
+          "note": "Dream.exe HF论文累计17票、ActiveScale官方仓库累计7stars，本轮重新观测均未变。MorFiC HF论文API404且无明确专属代码链接；新博客及数据更新未获可比数值，保留null。GitHub普通公开API在退避后恢复。"
+        },
+        {
+          "name": "周度与恢复回看",
+          "status": "ok",
+          "note": "本周9月14日已执行30天补查；本轮与上午间隔短于默认窗口，七日/十四日重叠检索继续覆盖。"
+        }
+      ],
+      "queryLog": [
+        {
+          "sourceBatch": "arxiv-index",
+          "url": "https://arxiv.org/list/cs.RO/new",
+          "requestedAt": "2026-09-19T09:05:48.600489+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:05:51.148562+00:00"
+        },
+        {
+          "sourceBatch": "arxiv-index",
+          "url": "https://export.arxiv.org/api/query?search_query=cat%3Acs.RO+OR+%28%28cat%3Acs.LG+OR+cat%3Acs.CV+OR+cat%3Acs.AI+OR+cat%3Aeess.SY+OR+cat%3Amath.OC%29+AND+%28all%3Arobot+OR+all%3Arobotic%29%29&sortBy=lastUpdatedDate&sortOrder=descending&start=0&max_results=500",
+          "requestedAt": "2026-09-19T09:05:54.453669+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:05:57.211770+00:00"
+        },
+        {
+          "sourceBatch": "arxiv-index",
+          "url": "https://export.arxiv.org/api/query?search_query=cat%3Acs.RO+OR+%28%28cat%3Acs.LG+OR+cat%3Acs.CV+OR+cat%3Acs.AI+OR+cat%3Aeess.SY+OR+cat%3Amath.OC%29+AND+%28all%3Arobot+OR+all%3Arobotic%29%29&sortBy=lastUpdatedDate&sortOrder=descending&start=500&max_results=500",
+          "requestedAt": "2026-09-19T09:06:00.520200+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:06:03.661354+00:00"
+        },
+        {
+          "sourceBatch": "arxiv-index",
+          "url": "https://export.arxiv.org/api/query?search_query=cat%3Acs.RO+OR+%28%28cat%3Acs.LG+OR+cat%3Acs.CV+OR+cat%3Acs.AI+OR+cat%3Aeess.SY+OR+cat%3Amath.OC%29+AND+%28all%3Arobot+OR+all%3Arobotic%29%29&sortBy=submittedDate&sortOrder=descending&start=0&max_results=500",
+          "requestedAt": "2026-09-19T09:06:06.962484+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:06:09.386391+00:00"
+        },
+        {
+          "sourceBatch": "arxiv-list",
+          "url": "https://arxiv.org/list/cs.RO/new",
+          "requestedAt": "2026-09-19T09:05:48.600489+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:05:51.148562+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/blog",
+          "requestedAt": "2026-09-19T09:08:18.107843+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:08:18.704731+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/Jason2Jason/ur5-lawam-best-deployment-20260919-083515/raw/970003f7b7fda6a9aec5f34b72909b200de2ec6a/README.md",
+          "requestedAt": "2026-09-19T09:08:22.010656+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:08:22.525464+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/Ishaan-codes11/smolvla_pick_place_cup/raw/c49e860a20ba8b2c98fd8a41ead2b5d153f99819/README.md",
+          "requestedAt": "2026-09-19T09:08:25.827232+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:08:26.286011+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/dreamdifferent/panda-robosuite-level5-wrist-ablation-v2-action-decoder-iter900/raw/f50ae088bc2fbb0f162039a9b88faf8e67637c4c/README.md",
+          "requestedAt": "2026-09-19T09:08:29.597254+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:08:30.077934+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/fecasado/gfm-kitchen-toasts-22dN/raw/14d5aeb2a58e61de492b217824a45d4d49e6a7ea/README.md",
+          "requestedAt": "2026-09-19T09:08:33.389984+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:08:33.871154+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/mim-chess-vlas/train_800_complex__mask__separate_channel__sim__all_cameras__live__pi05__seed_0/raw/1cfd61dab8368fc0c60133436461efc3401a3943/README.md",
+          "requestedAt": "2026-09-19T09:08:37.176586+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:08:37.669171+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/3CTeam/pi05_libero_frozen_vlm_libero10_quantiles_15k/raw/80a075246d95389f18bcbc509e211744ec7ee9a7/README.md",
+          "requestedAt": "2026-09-19T09:08:40.980467+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:08:41.471826+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/dreamdifferent/panda-robosuite-level5-wrist-ablation-v2-action-decoder-iter1800/raw/559b6ad193ce3f4c54b111362c6e263d17cd7bd8/README.md",
+          "requestedAt": "2026-09-19T09:08:44.781935+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:08:45.310162+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/jungwook2358/allex-eef-N-h16/raw/8369a08ed43d0d54c9b3e2d94ffbf82545582195/README.md",
+          "requestedAt": "2026-09-19T09:08:48.621562+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:08:49.067212+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/jungwook2358/allex-eef-AB-h16/raw/5db359ddd78a6e25e5b22d975099268d829a6e2a/README.md",
+          "requestedAt": "2026-09-19T09:08:52.378574+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:08:52.933546+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/RainyBot/florence-xtrainer2-pick-bottle-uniform/raw/9c2cb757c0f11c67ce44d6eecf6367434bc0025e/README.md",
+          "requestedAt": "2026-09-19T09:08:56.245398+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:08:56.740739+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/mim-chess-vlas/train_800_dense__bbox__overlay_a100__sim__all_cameras__live__pi05__seed_0/raw/38a92142f66c05e7ac2f775f07b69b102817c3d9/README.md",
+          "requestedAt": "2026-09-19T09:09:00.052311+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:09:00.484416+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/seungkukim/gr00t_n1_7_openarm_wam_v1_50k/raw/46d75542745e139608509d0866286109695d9edd/README.md",
+          "requestedAt": "2026-09-19T09:09:03.796351+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:09:04.227641+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/mim-chess-vlas/train_800_complex__mask__overlay_a25__sim__all_cameras__live__pi05__seed_0/raw/eb237eff1edce919d48ace619d4523a15c6f4f84/README.md",
+          "requestedAt": "2026-09-19T09:09:07.538786+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:09:08.063730+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/daisy-zzz/policyweave-piper/raw/00f0ad7fcd3ca17dfe79600b6bfe9f316bbd1b12/README.md",
+          "requestedAt": "2026-09-19T09:09:11.370957+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:09:11.858328+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/mim-chess-vlas/train_800_dense__mask__overlay_a75__sim__wrist_cameras__live__pi05__seed_0/raw/e177042895cb55186cefc0bdab30dc778889571e/README.md",
+          "requestedAt": "2026-09-19T09:09:15.177384+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:09:15.616917+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/hoanghieu16720/pi05-x3plus-moving/raw/13e8ae90f1298ce51a094fd0551aea2dcbbcba7e/README.md",
+          "requestedAt": "2026-09-19T09:09:18.928509+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:09:19.389619+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/MIT-Media-Lab/vla-hand-baselines/raw/09db16bb337fd4e15539eb84db9506cd4153015c/README.md",
+          "requestedAt": "2026-09-19T09:09:22.699537+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:09:23.101061+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/mlnha/gr00t-n15-robocasa-base60k/raw/9a6ea7d0ee209373ea9d652fc1917dcc2907a7d9/README.md",
+          "requestedAt": "2026-09-19T09:09:26.412051+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:09:27.087800+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/polarisai-robots/bento_ur7e_pi05_v2/raw/842605a944b6005a7c2e5bb13e956223c457b723/README.md",
+          "requestedAt": "2026-09-19T09:09:30.399141+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:09:30.829788+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/anhdao69/fastwam-memory-expert-robomme-grounded/raw/bcf4e4574baa1d28cc1e5ff13cde13aa39f59c6d/README.md",
+          "requestedAt": "2026-09-19T09:09:34.132327+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:09:34.559280+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/datasets/Shiki42/ctr-pick-dual-bottles-original-20260919/raw/dc0f8deb47548c5329e534f562c0366a4d008f5e/README.md",
+          "requestedAt": "2026-09-19T09:09:37.870921+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:09:38.361523+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/datasets/Shiki42/piperx-put-cube-in-drawer-20260908-87ep-ctr-preview-check/raw/c46d5fd49b3f70cda36b8169e4aad17b561e6a71/README.md",
+          "requestedAt": "2026-09-19T09:09:41.666545+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:09:42.100239+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/datasets/123456steven/roboskin-synthetic-numeric-tactile-fixture/raw/833712547027184783f555dae2be0c4c34617e31/README.md",
+          "requestedAt": "2026-09-19T09:09:45.409549+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:09:45.956338+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/datasets/yxma/React/raw/8f51b56a5f0d2ef1c6585071d8f0ca4cbbb5ebe8/README.md",
+          "requestedAt": "2026-09-19T09:09:49.259994+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:09:49.697752+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/datasets/SingleBicycle/tacwam-wetlab-tasks/raw/a03476ed1f1863b8f203060fc94f2521b6848915/README.md",
+          "requestedAt": "2026-09-19T09:09:53.007485+00:00",
+          "status": 401,
+          "error": "HTTP Error 401: Unauthorized",
+          "retryAfter": null,
+          "completedAt": "2026-09-19T09:09:53.491582+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/datasets/zhengfeirao/2026-9-18/raw/df24ec1d861647c1184adb3b19db7ef967820483/README.md",
+          "requestedAt": "2026-09-19T09:09:56.802954+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:09:57.286499+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/datasets/Long27/so101_mix4_clean_balanced_v1/raw/dbf79929d99e8e3b115e0b616c45ebc5638de237/README.md",
+          "requestedAt": "2026-09-19T09:10:00.593896+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:10:01.092289+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/datasets/hoanghieu16720/x3plus-grasp-moving-cube/raw/59b6765c3b159362aa26564dabd8d8b09adc96f4/README.md",
+          "requestedAt": "2026-09-19T09:10:04.402782+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:10:04.904957+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/models?pipeline_tag=robotics&sort=lastModified&direction=-1&limit=100&full=true",
+          "requestedAt": "2026-09-19T09:06:17.066729+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:06:17.753169+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/models?pipeline_tag=robotics&sort=lastModified&direction=-1&limit=100&full=true&cursor=eyIkb3IiOlt7Imxhc3RNb2RpZmllZCI6IjIwMjYtMDktMThUMTQ6NDc6MTUuMDAwWiIsIl9pZCI6eyIkZ3QiOiI2YWFkNGU4NjZkMzI2MzVhOTY2MjNkZTgifX0seyJsYXN0TW9kaWZpZWQiOnsiJGx0IjoiMjAyNi0wOS0xOFQxNDo0NzoxNS4wMDBaIn19LHsibGFzdE1vZGlmaWVkIjpudWxsfV0sInNlYXJjaFNlcXVlbmNlVG9rZW4iOiJDUERibUFJYUNTazRaZnkwb0FFQUFCb09XZ3hxclU2R2JUSmpXcFppUGVnaURsb01hcTFPaG0weVkxcVdZajNvIn0%3D",
+          "requestedAt": "2026-09-19T09:06:21.058699+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:06:22.364945+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/models?pipeline_tag=robotics&sort=lastModified&direction=-1&limit=100&full=true&cursor=eyIkb3IiOlt7Imxhc3RNb2RpZmllZCI6IjIwMjYtMDktMThUMDM6MzQ6MjUuMDAwWiIsIl9pZCI6eyIkZ3QiOiI2YWFjYjEzYWIwNjIwOGI2OWRhYTQ3NmMifX0seyJsYXN0TW9kaWZpZWQiOnsiJGx0IjoiMjAyNi0wOS0xOFQwMzozNDoyNS4wMDBaIn19LHsibGFzdE1vZGlmaWVkIjpudWxsfV0sInNlYXJjaFNlcXVlbmNlVG9rZW4iOiJDTUREbFFJYUNTbm9aWlN5b0FFQUFCb09XZ3hxckxFNnNHSUl0cDJxUjJ3aURsb01hcXl4T3JCaUNMYWRxa2RzIn0%3D",
+          "requestedAt": "2026-09-19T09:06:25.668708+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:06:26.884404+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/models?pipeline_tag=robotics&sort=lastModified&direction=-1&limit=100&full=true&cursor=eyIkb3IiOlt7Imxhc3RNb2RpZmllZCI6IjIwMjYtMDktMTdUMTI6MzM6NTIuMDAwWiIsIl9pZCI6eyIkZ3QiOiI2YWE0Zjg2MmIyNWJkMjM5Yjk5MWU4MDkifX0seyJsYXN0TW9kaWZpZWQiOnsiJGx0IjoiMjAyNi0wOS0xN1QxMjozMzo1Mi4wMDBaIn19LHsibGFzdE1vZGlmaWVkIjpudWxsfV0sInNlYXJjaFNlcXVlbmNlVG9rZW4iOiJDTlNFZ1FJYUNTbUE2MXV2b0FFQUFCb09XZ3hxcFBoaXNsdlNPYm1SNkFraURsb01hcVQ0WXJKYjBqbTVrZWdKIn0%3D",
+          "requestedAt": "2026-09-19T09:06:30.189158+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:06:31.389484+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/models?pipeline_tag=robotics&sort=lastModified&direction=-1&limit=100&full=true&cursor=eyIkb3IiOlt7Imxhc3RNb2RpZmllZCI6IjIwMjYtMDktMTZUMTg6NTA6NDkuMDAwWiIsIl9pZCI6eyIkZ3QiOiI2YWExODk4MTJhMGY5MWJhNDJlYzM0NjMifX0seyJsYXN0TW9kaWZpZWQiOnsiJGx0IjoiMjAyNi0wOS0xNlQxODo1MDo0OS4wMDBaIn19LHsibGFzdE1vZGlmaWVkIjpudWxsfV0sInNlYXJjaFNlcXVlbmNlVG9rZW4iOiJDUGVDa2dJYUNTa29xNDZyb0FFQUFCb09XZ3hxb1ltQktnK1J1a0xzTkdNaURsb01hcUdKZ1NvUGticEM3RFJqIn0%3D",
+          "requestedAt": "2026-09-19T09:06:34.694685+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:06:35.516195+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/models?pipeline_tag=robotics&sort=lastModified&direction=-1&limit=100&full=true&cursor=eyIkb3IiOlt7Imxhc3RNb2RpZmllZCI6IjIwMjYtMDktMTZUMDY6NTI6NTQuMDAwWiIsIl9pZCI6eyIkZ3QiOiI2YWFhM2IxNDcxNDc3MDI2MDAyYjgxOWMifX0seyJsYXN0TW9kaWZpZWQiOnsiJGx0IjoiMjAyNi0wOS0xNlQwNjo1Mjo1NC4wMDBaIn19LHsibGFzdE1vZGlmaWVkIjpudWxsfV0sInNlYXJjaFNlcXVlbmNlVG9rZW4iOiJDSWF1MEFFYUNTbHdaZjJvb0FFQUFCb09XZ3hxcWpzVWNVZHdKZ0FyZ1p3aURsb01hcW83RkhGSGNDWUFLNEdjIn0%3D",
+          "requestedAt": "2026-09-19T09:06:38.821460+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:06:39.471508+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/models?pipeline_tag=robotics&sort=lastModified&direction=-1&limit=100&full=true&cursor=eyIkb3IiOlt7Imxhc3RNb2RpZmllZCI6IjIwMjYtMDktMTVUMjA6NTQ6MzEuMDAwWiIsIl9pZCI6eyIkZ3QiOiI2YWE5YjA2NWQ3ZGJhNWJlMDhkZDg5ZjkifX0seyJsYXN0TW9kaWZpZWQiOnsiJGx0IjoiMjAyNi0wOS0xNVQyMDo1NDozMS4wMDBaIn19LHsibGFzdE1vZGlmaWVkIjpudWxsfV0sInNlYXJjaFNlcXVlbmNlVG9rZW4iOiJDTm5UbXdJYUNTbFlqOW1tb0FFQUFCb09XZ3hxcWJCbDE5dWx2Z2pkaWZraURsb01hcW13WmRmYnBiNEkzWW41In0%3D",
+          "requestedAt": "2026-09-19T09:06:42.777089+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:06:43.648137+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/models?pipeline_tag=robotics&sort=lastModified&direction=-1&limit=100&full=true&cursor=eyIkb3IiOlt7Imxhc3RNb2RpZmllZCI6IjIwMjYtMDktMTVUMDk6MTc6NDQuMDAwWiIsIl9pZCI6eyIkZ3QiOiI2YWE5MGQxMTJhYTBmYTJlZjVhYzZhN2EifX0seyJsYXN0TW9kaWZpZWQiOnsiJGx0IjoiMjAyNi0wOS0xNVQwOToxNzo0NC4wMDBaIn19LHsibGFzdE1vZGlmaWVkIjpudWxsfV0sInNlYXJjaFNlcXVlbmNlVG9rZW4iOiJDTXJ3bXdJYUNTbkFvbHVrb0FFQUFCb09XZ3hxcVEwUktxRDZMdldzYW5vaURsb01hcWtORVNxZytpNzFyR3A2In0%3D",
+          "requestedAt": "2026-09-19T09:06:46.953343+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:06:47.587392+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/models?pipeline_tag=robotics&sort=lastModified&direction=-1&limit=100&full=true&cursor=eyIkb3IiOlt7Imxhc3RNb2RpZmllZCI6IjIwMjYtMDktMTRUMjE6MDM6MTIuMDAwWiIsIl9pZCI6eyIkZ3QiOiI2YTQxZDRhNDI0OTBhZmQwM2I3Y2U5ODAifX0seyJsYXN0TW9kaWZpZWQiOnsiJGx0IjoiMjAyNi0wOS0xNFQyMTowMzoxMi4wMDBaIn19LHsibGFzdE1vZGlmaWVkIjpudWxsfV0sInNlYXJjaFNlcXVlbmNlVG9rZW4iOiJDTHZsdXdFYUNTbUFKcnVob0FFQUFCb09XZ3hxUWRTa0pKQ3YwRHQ4NllBaURsb01ha0hVcENTUXI5QTdmT21BIn0%3D",
+          "requestedAt": "2026-09-19T09:06:50.892487+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:06:51.758581+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/models?pipeline_tag=robotics&sort=lastModified&direction=-1&limit=100&full=true&cursor=eyIkb3IiOlt7Imxhc3RNb2RpZmllZCI6IjIwMjYtMDktMTRUMTE6MDA6MjYuMDAwWiIsIl9pZCI6eyIkZ3QiOiI2YWE3ZDI5YzlkZTEyYjFkYzYzMDZjMDAifX0seyJsYXN0TW9kaWZpZWQiOnsiJGx0IjoiMjAyNi0wOS0xNFQxMTowMDoyNi4wMDBaIn19LHsibGFzdE1vZGlmaWVkIjpudWxsfV0sInNlYXJjaFNlcXVlbmNlVG9rZW4iOiJDS3E5b3dJYUNTa1FUWk9mb0FFQUFCb09XZ3hxcDlLY25lRXJIY1l3YkFBaURsb01hcWZTbkozaEt4M0dNR3dBIn0%3D",
+          "requestedAt": "2026-09-19T09:06:55.064445+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:06:55.581306+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/models?pipeline_tag=robotics&sort=lastModified&direction=-1&limit=100&full=true&cursor=eyIkb3IiOlt7Imxhc3RNb2RpZmllZCI6IjIwMjYtMDktMTNUMjA6MzY6MzcuMDAwWiIsIl9pZCI6eyIkZ3QiOiI2YTgzNmUzODNhNWY0MDhjMGQ5MGIwYzMifX0seyJsYXN0TW9kaWZpZWQiOnsiJGx0IjoiMjAyNi0wOS0xM1QyMDozNjozNy4wMDBaIn19LHsibGFzdE1vZGlmaWVkIjpudWxsfV0sInNlYXJjaFNlcXVlbmNlVG9rZW4iOiJDUHlxb2dFYUNTa0lkSHljb0FFQUFCb09XZ3hxZzI0NE9sOUFqQTJRc01NaURsb01hb051T0RwZlFJd05rTEREIn0%3D",
+          "requestedAt": "2026-09-19T09:06:58.886463+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:06:59.561349+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/models?pipeline_tag=robotics&sort=lastModified&direction=-1&limit=100&full=true&cursor=eyIkb3IiOlt7Imxhc3RNb2RpZmllZCI6IjIwMjYtMDktMTNUMDg6MzQ6NDMuMDAwWiIsIl9pZCI6eyIkZ3QiOiI2YWE1NjZiNDZhNjM5Y2EzNjRkYjc4MGQifX0seyJsYXN0TW9kaWZpZWQiOnsiJGx0IjoiMjAyNi0wOS0xM1QwODozNDo0My4wMDBaIn19LHsibGFzdE1vZGlmaWVkIjpudWxsfV0sInNlYXJjaFNlcXVlbmNlVG9rZW4iOiJDTktqb1FFYUNTbTRpT2Vab0FFQUFCb09XZ3hxcFdhMGFtT2NvMlRiZUEwaURsb01hcVZtdEdwam5LTmsyM2dOIn0%3D",
+          "requestedAt": "2026-09-19T09:07:02.866494+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:07:03.757697+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/datasets?filter=lerobot&sort=lastModified&direction=-1&limit=100&full=true",
+          "requestedAt": "2026-09-19T09:07:07.062794+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:07:07.846934+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/datasets?filter=lerobot&sort=lastModified&direction=-1&limit=100&full=true&cursor=eyIkb3IiOlt7Imxhc3RNb2RpZmllZCI6IjIwMjYtMDktMTdUMDc6NDk6NTguMDAwWiIsIl9pZCI6eyIkZ3QiOiI2YWFiOGM5ZjY1MjlkMDMyYmY2MmNlZjMifX0seyJsYXN0TW9kaWZpZWQiOnsiJGx0IjoiMjAyNi0wOS0xN1QwNzo0OTo1OC4wMDBaIn19LHsibGFzdE1vZGlmaWVkIjpudWxsfV19",
+          "requestedAt": "2026-09-19T09:07:11.152479+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:07:11.694092+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/datasets?filter=lerobot&sort=lastModified&direction=-1&limit=100&full=true&cursor=eyIkb3IiOlt7Imxhc3RNb2RpZmllZCI6IjIwMjYtMDktMTRUMTY6MzY6NDguMDAwWiIsIl9pZCI6eyIkZ3QiOiI2YWE4MjIzZDM2MzNhZDhmNmM2NzIyZGQifX0seyJsYXN0TW9kaWZpZWQiOnsiJGx0IjoiMjAyNi0wOS0xNFQxNjozNjo0OC4wMDBaIn19LHsibGFzdE1vZGlmaWVkIjpudWxsfV19",
+          "requestedAt": "2026-09-19T09:07:14.999236+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:07:15.610400+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/datasets?filter=lerobot&sort=lastModified&direction=-1&limit=100&full=true&cursor=eyIkb3IiOlt7Imxhc3RNb2RpZmllZCI6IjIwMjYtMDktMTNUMTM6MDM6NTYuMDAwWiIsIl9pZCI6eyIkZ3QiOiI2YWEwYzUyYTY1YzI2Mzc1NjhhY2Y1MGUifX0seyJsYXN0TW9kaWZpZWQiOnsiJGx0IjoiMjAyNi0wOS0xM1QxMzowMzo1Ni4wMDBaIn19LHsibGFzdE1vZGlmaWVkIjpudWxsfV19",
+          "requestedAt": "2026-09-19T09:07:18.915705+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:07:19.681423+00:00"
+        },
+        {
+          "sourceBatch": "hf-index",
+          "url": "https://huggingface.co/api/daily_papers?date=2026-09-19",
+          "requestedAt": "2026-09-19T09:05:49.879771+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:05:50.396624+00:00"
+        },
+        {
+          "sourceBatch": "hf-index",
+          "url": "https://huggingface.co/api/daily_papers?date=2026-09-18",
+          "requestedAt": "2026-09-19T09:05:53.701988+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:05:54.447851+00:00"
+        },
+        {
+          "sourceBatch": "hf-index",
+          "url": "https://huggingface.co/api/daily_papers?date=2026-09-17",
+          "requestedAt": "2026-09-19T09:05:57.753093+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:05:58.307532+00:00"
+        },
+        {
+          "sourceBatch": "hf-index",
+          "url": "https://huggingface.co/api/daily_papers?date=2026-09-16",
+          "requestedAt": "2026-09-19T09:06:01.608983+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:06:02.167742+00:00"
+        },
+        {
+          "sourceBatch": "hf-index",
+          "url": "https://huggingface.co/api/daily_papers?date=2026-09-15",
+          "requestedAt": "2026-09-19T09:06:05.472256+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:06:06.202945+00:00"
+        },
+        {
+          "sourceBatch": "hf-index",
+          "url": "https://huggingface.co/api/daily_papers?date=2026-09-14",
+          "requestedAt": "2026-09-19T09:06:09.508141+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:06:10.042428+00:00"
+        },
+        {
+          "sourceBatch": "hf-index",
+          "url": "https://huggingface.co/api/daily_papers?date=2026-09-13",
+          "requestedAt": "2026-09-19T09:06:13.347571+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:06:13.761413+00:00"
+        },
+        {
+          "sourceBatch": "hf-more",
+          "url": "https://huggingface.co/datasets/yxma/React/commit/8f51b56a5f0d2ef1c6585071d8f0ca4cbbb5ebe8",
+          "requestedAt": "2026-09-19T09:11:29.389893+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:11:31.050479+00:00"
+        },
+        {
+          "sourceBatch": "hf-more",
+          "url": "https://huggingface.co/datasets/yxma/React/raw/f186f5f6701f52eb6216b9465bdb309d17fe141d/README.md",
+          "requestedAt": "2026-09-19T09:11:34.361056+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:11:35.023140+00:00"
+        },
+        {
+          "sourceBatch": "hf-more",
+          "url": "https://huggingface.co/datasets/yxma/React/commits/main",
+          "requestedAt": "2026-09-19T09:11:38.333849+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:11:38.936812+00:00"
+        },
+        {
+          "sourceBatch": "hf-more",
+          "url": "https://huggingface.co/daisy-zzz/policyweave-piper/raw/00f0ad7fcd3ca17dfe79600b6bfe9f316bbd1b12/manifest.json",
+          "requestedAt": "2026-09-19T09:11:42.248261+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:11:42.650773+00:00"
+        },
+        {
+          "sourceBatch": "hf-more",
+          "url": "https://huggingface.co/api/papers/2603.14554",
+          "requestedAt": "2026-09-19T09:11:45.959918+00:00",
+          "status": 404,
+          "error": "HTTP Error 404: Not Found",
+          "retryAfter": null,
+          "completedAt": "2026-09-19T09:11:46.413699+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://www.physicalintelligence.company/blog",
+          "requestedAt": "2026-09-19T09:06:55.294880+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:06:56.518377+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://deepmind.google/discover/blog/",
+          "requestedAt": "2026-09-19T09:06:58.123341+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:07:00.523493+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://research.nvidia.com/research-area/robotics",
+          "requestedAt": "2026-09-19T09:07:02.129723+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:07:07.357326+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://developer.nvidia.com/blog/tag/robotics/",
+          "requestedAt": "2026-09-19T09:07:08.963388+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:07:09.749143+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://blogs.nvidia.com/blog/category/robotics/",
+          "requestedAt": "2026-09-19T09:07:11.354842+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:07:12.990445+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://bair.berkeley.edu/blog/",
+          "requestedAt": "2026-09-19T09:07:14.593688+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:07:16.062145+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://ai.stanford.edu/blog/",
+          "requestedAt": "2026-09-19T09:07:17.668510+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:07:19.262126+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://www.tri.global/news",
+          "requestedAt": "2026-09-19T09:07:20.867812+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:07:22.367137+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://www.skild.ai/blogs",
+          "requestedAt": "2026-09-19T09:07:23.972603+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:07:25.036776+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://generalistai.com/blog",
+          "requestedAt": "2026-09-19T09:07:26.643118+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:07:27.438021+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://news.mit.edu/topic/robotics",
+          "requestedAt": "2026-09-19T09:07:29.044177+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:07:31.725955+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://www.roboticsproceedings.org/",
+          "requestedAt": "2026-09-19T09:07:33.332110+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:07:37.792816+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://griffinlabs.ai/blog/griffin-alpha-s",
+          "requestedAt": "2026-09-19T09:07:39.398459+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:07:39.975186+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://spectrum.ieee.org/topic/robotics/",
+          "requestedAt": "2026-09-19T09:07:41.581396+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:07:42.014433+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://rai-inst.com/resources/blog/bimanual-robot-for-dynamic-manipulation/",
+          "requestedAt": "2026-09-19T09:07:43.619937+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:07:45.515749+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://www.reuters.com/technology/",
+          "requestedAt": "2026-09-19T09:07:47.120757+00:00",
+          "status": 401,
+          "error": "HTTP Error 401: HTTP Forbidden",
+          "retryAfter": null,
+          "completedAt": "2026-09-19T09:08:17.643707+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://www.jiqizhixin.com/",
+          "requestedAt": "2026-09-19T09:08:19.247287+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:08:19.533209+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://www.qbitai.com/",
+          "requestedAt": "2026-09-19T09:08:21.138216+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:08:21.416806+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://www.microsoft.com/en-us/research/",
+          "requestedAt": "2026-09-19T09:08:23.022727+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:08:26.992184+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://alejp.me/blog/blog-post-ssrr-2026-ugv-uav.html",
+          "requestedAt": "2026-09-19T09:08:28.602932+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:08:42.435403+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://www.umiacs.umd.edu/news-events/news/one-robot-many-bodies-new-system-helps-four-legged-robots-adapt",
+          "requestedAt": "2026-09-19T09:08:44.046191+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:08:50.182060+00:00"
+        },
+        {
+          "sourceBatch": "papers",
+          "url": "https://arxiv.org/abs/2603.14554",
+          "requestedAt": "2026-09-19T09:08:18.742675+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:08:19.133090+00:00"
+        },
+        {
+          "sourceBatch": "papers",
+          "url": "https://arxiv.org/html/2603.14554",
+          "requestedAt": "2026-09-19T09:08:20.739065+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:08:21.453494+00:00"
+        },
+        {
+          "sourceBatch": "papers",
+          "url": "https://arxiv.org/abs/2512.01809",
+          "requestedAt": "2026-09-19T09:08:23.059245+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:08:23.495103+00:00"
+        },
+        {
+          "sourceBatch": "papers",
+          "url": "https://simchowitzlabpublic.github.io/much-ado-about-noising-project/",
+          "requestedAt": "2026-09-19T09:08:25.100989+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:08:26.726774+00:00"
+        },
+        {
+          "sourceBatch": "policy",
+          "url": "https://github.com/Daisy-zzz/PolicyWeave/tree/piper",
+          "requestedAt": "2026-09-19T09:13:06.724753+00:00",
+          "status": 404,
+          "error": "HTTP Error 404: Not Found",
+          "retryAfter": null,
+          "completedAt": "2026-09-19T09:13:07.498577+00:00"
+        },
+        {
+          "sourceBatch": "policy",
+          "url": "https://github.com/Daisy-zzz/PolicyWeave/blob/piper/docs/PIPER.md",
+          "requestedAt": "2026-09-19T09:13:09.111015+00:00",
+          "status": 404,
+          "error": "HTTP Error 404: Not Found",
+          "retryAfter": null,
+          "completedAt": "2026-09-19T09:13:09.740291+00:00"
+        },
+        {
+          "sourceBatch": "popularity-github",
+          "url": "https://api.github.com/repos/ShuaiZhou302/ActiveScale",
+          "requestedAt": "2026-09-19T09:14:14.341180+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:14:14.977999+00:00"
+        },
+        {
+          "sourceBatch": "popularity-hf",
+          "url": "https://huggingface.co/api/papers/2606.04811",
+          "requestedAt": "2026-09-19T09:14:14.107715+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:14:44.702898+00:00"
+        },
+        {
+          "sourceBatch": "projects",
+          "url": "https://github.com/kaichen-z/VLA-HAND/tree/Kai_final/yuzhench_distill_editor/baselines",
+          "requestedAt": "2026-09-19T09:10:53.306150+00:00",
+          "status": 404,
+          "error": "HTTP Error 404: Not Found",
+          "retryAfter": null,
+          "completedAt": "2026-09-19T09:10:53.968051+00:00"
+        },
+        {
+          "sourceBatch": "projects",
+          "url": "https://github.com/kaichen-z/VLA-HAND",
+          "requestedAt": "2026-09-19T09:10:55.581460+00:00",
+          "status": 404,
+          "error": "HTTP Error 404: Not Found",
+          "retryAfter": null,
+          "completedAt": "2026-09-19T09:10:56.283535+00:00"
+        },
+        {
+          "sourceBatch": "projects",
+          "url": "https://namurproject.com/blog/blog-post-ssrr-2026-ugv-uav.html",
+          "requestedAt": "2026-09-19T09:10:57.893043+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:11:05.361501+00:00"
+        },
+        {
+          "sourceBatch": "projects",
+          "url": "https://alejp.me/index.html",
+          "requestedAt": "2026-09-19T09:11:06.965193+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:11:21.985726+00:00"
+        },
+        {
+          "sourceBatch": "react",
+          "url": "https://huggingface.co/datasets/yxma/React/raw/8f51b56a5f0d2ef1c6585071d8f0ca4cbbb5ebe8/data/toy/processing_20260919/summary.json",
+          "requestedAt": "2026-09-19T09:12:48.270053+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:12:48.803532+00:00"
+        },
+        {
+          "sourceBatch": "react",
+          "url": "https://huggingface.co/datasets/yxma/React/raw/8f51b56a5f0d2ef1c6585071d8f0ca4cbbb5ebe8/data/toy/processing_20260919/schema_verification.json",
+          "requestedAt": "2026-09-19T09:12:52.115388+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:12:52.714070+00:00"
+        },
+        {
+          "sourceBatch": "react",
+          "url": "https://huggingface.co/datasets/yxma/React/raw/8f51b56a5f0d2ef1c6585071d8f0ca4cbbb5ebe8/data/toy/processing_20260919/repair_policy.json",
+          "requestedAt": "2026-09-19T09:12:56.026129+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:12:56.619527+00:00"
+        },
+        {
+          "sourceBatch": "react",
+          "url": "https://huggingface.co/datasets/yxma/React/raw/8f51b56a5f0d2ef1c6585071d8f0ca4cbbb5ebe8/data/toy/processing_20260919/force_verification.json",
+          "requestedAt": "2026-09-19T09:12:59.928961+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:13:00.442103+00:00"
+        },
+        {
+          "sourceBatch": "react",
+          "url": "https://huggingface.co/datasets/yxma/React/raw/8f51b56a5f0d2ef1c6585071d8f0ca4cbbb5ebe8/data/toy/processing_20260919/new_segment_provenance.json",
+          "requestedAt": "2026-09-19T09:13:03.753972+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:13:04.252341+00:00"
+        },
+        {
+          "sourceBatch": "react",
+          "url": "https://huggingface.co/datasets/yxma/React/raw/8f51b56a5f0d2ef1c6585071d8f0ca4cbbb5ebe8/data/toy/episodes.jsonl",
+          "requestedAt": "2026-09-19T09:13:07.564325+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:13:08.027619+00:00"
+        },
+        {
+          "sourceBatch": "react",
+          "url": "https://huggingface.co/datasets/yxma/React/raw/8f51b56a5f0d2ef1c6585071d8f0ca4cbbb5ebe8/data/toy/splits.json",
+          "requestedAt": "2026-09-19T09:13:11.339263+00:00",
+          "status": 200,
+          "completedAt": "2026-09-19T09:13:11.818835+00:00"
+        },
+        {
+          "sourceBatch": "web-search",
+          "query": "robotics \"September 19, 2026\" research",
+          "status": "executed"
+        },
+        {
+          "sourceBatch": "web-search",
+          "query": "robotics \"September 18, 2026\" world model VLA reinforcement learning",
+          "status": "executed"
+        },
+        {
+          "sourceBatch": "web-search",
+          "query": "site:x.com robot (paper OR release OR model) after:2026-09-16 before:2026-09-20",
+          "status": "executed"
+        },
+        {
+          "sourceBatch": "web-search",
+          "query": "(site:mp.weixin.qq.com OR site:xiaohongshu.com) (机器人 OR 具身智能) (论文 OR 世界模型) after:2026-09-05 before:2026-09-20",
+          "status": "executed"
+        },
+        {
+          "sourceBatch": "web-search",
+          "query": "\"MorFiC\" robot",
+          "status": "executed"
+        },
+        {
+          "sourceBatch": "web-search",
+          "query": "\"Much Ado About Noising\" control",
+          "status": "executed"
+        },
+        {
+          "sourceBatch": "web-search",
+          "query": "site:x.com \"robot\" \"September\" \"2026\" (VLA OR WAM)",
+          "status": "executed"
+        },
+        {
+          "sourceBatch": "web-search",
+          "query": "site:mp.weixin.qq.com 机器人 2026年9月19日",
+          "status": "executed"
+        },
+        {
+          "sourceBatch": "web-search",
+          "query": "robot vision language action world model control research after:2026-09-12 before:2026-09-20",
+          "status": "executed"
+        },
+        {
+          "sourceBatch": "web-search",
+          "query": "机器人 具身智能 论文 after:2026-09-05 before:2026-09-20",
+          "status": "executed"
+        },
+        {
+          "sourceBatch": "web-search",
+          "query": "机器人 VLA 世界模型 2026 9月19 9月18",
+          "status": "executed"
+        },
+        {
+          "sourceBatch": "web-search",
+          "query": "robotics report blog September 2026",
+          "status": "executed"
+        },
+        {
+          "sourceBatch": "web-search",
+          "query": "\"PolicyWeave\" robotics",
+          "status": "executed"
+        },
+        {
+          "sourceBatch": "web-search",
+          "query": "\"MorFiC\" github",
+          "status": "executed"
+        },
+        {
+          "sourceBatch": "web-search",
+          "query": "\"One Operator, Many Robots\" Jarabo paper",
+          "status": "executed"
+        },
+        {
+          "sourceBatch": "web-search",
+          "query": "\"VLA-HAND\" robot MIT",
+          "status": "executed"
+        }
+      ],
+      "addedIds": [
+        "arxiv:2603.14554",
+        "report:one-operator-many-robots-sar-20260919"
+      ],
+      "updatedIds": [
+        "hf:datasets/yxma/React"
+      ],
+      "promotedIds": [],
+      "briefAddedIds": [],
+      "briefUpdatedIds": [],
+      "candidateIds": [
+        "arxiv:2603.14554",
+        "report:one-operator-many-robots-sar-20260919",
+        "hf:datasets/yxma/React"
+      ],
+      "recordsSnapshot": [
+        {
+          "id": "hf:datasets/yxma/React",
+          "title": "React: seven new toy segments with force and masked action provenance",
+          "zhTitle": "React：新增七个触觉操作片段，补齐力与动作掩码证据",
+          "authors": [
+            "yxma"
+          ],
+          "category": "embodied",
+          "tags": [
+            "触觉",
+            "视觉世界模型",
+            "数据集",
+            "标定"
+          ],
+          "contentTypes": [
+            "report"
+          ],
+          "canonicalUrl": "https://huggingface.co/datasets/yxma/React",
+          "identityLinks": [
+            "https://huggingface.co/datasets/yxma/React"
+          ],
+          "aliasIds": [
+            "pending:hf:datasets/yxma/React-video-release"
+          ],
+          "publishedAt": "2026-09-15T00:27:01Z",
+          "releaseAt": "2026-09-15T00:27:01Z",
+          "sourceUpdatedAt": "2026-09-19T06:39:37.000Z",
+          "version": "8f51b56a5f0d2ef1c6585071d8f0ca4cbbb5ebe8",
+          "checkedAt": "2026-09-19T09:16:28.136163+00:00",
+          "changeType": "updated",
+          "status": "full_verified",
+          "reviewStatus": "fixed_revision_provenance_and_split_verified",
+          "popularity": {
+            "score": null,
+            "status": "unmeasured",
+            "metrics": {
+              "githubStars": null,
+              "hfUpvotes": null
+            },
+            "basis": "未获得可归属于该研究的论文投票或专属仓库stars；未知保留null，机构报道和公开数据卡不伪装成互动数。",
+            "evidence": [],
+            "checkedAt": "2026-09-19T09:19:37.409434+00:00"
+          },
+          "editorialPriority": 95,
+          "editorialPriorityReason": "可核实际数据扩展及影响标定选择的行为变化；非热度。",
+          "dateNote": "保留原始发布与首次收录时间；本次数据采集9月17日，公开提交9月19日06:39:37Z。不是新增机器人策略成功率。",
+          "summary": "toy 任务新增七个片段，并以固定文件清单核对力通道、坐标系及动作掩码；首页统计尚未同步。",
+          "innovation": "本次实质增量是9月17日toy采集经重新裁切后的七个片段，公开逐片段原始帧范围、Z-up坐标声明、V8力源及动作有效掩码。既有十个片段的Parquet不改，索引坐标标签校正；不是新的网络架构，也不把之前已报道的位姿插值修复再次计作新方法。",
+          "evidence": "完整读取当前数据卡、固定提交diff、summary/schema/force/provenance、episodes与splits；仅核验公开文件结构及作者验证资料，未独立重跑数据处理。",
+          "evidenceDetails": [
+            {
+              "url": "https://huggingface.co/datasets/yxma/React/commit/8f51b56a5f0d2ef1c6585071d8f0ca4cbbb5ebe8",
+              "location": "提交时间及新增文件列表",
+              "supports": "新增七段与旧Parquet/切分保留声明，真实公开日期",
+              "checkedAt": "2026-09-19T09:16:28.136163+00:00"
+            },
+            {
+              "url": "https://huggingface.co/datasets/yxma/React/blob/8f51b56a5f0d2ef1c6585071d8f0ca4cbbb5ebe8/data/toy/processing_20260919/summary.json",
+              "location": "new_segments / total_segments / new_frames / total_frames",
+              "supports": "7 / 17 / 7659 / 20257；旧文件保留和10项旧坐标标签修正",
+              "checkedAt": "2026-09-19T09:16:28.136163+00:00"
+            },
+            {
+              "url": "https://huggingface.co/datasets/yxma/React/blob/8f51b56a5f0d2ef1c6585071d8f0ca4cbbb5ebe8/data/toy/processing_20260919/new_segment_provenance.json",
+              "location": "segments与source_episode",
+              "supports": "七个新片段来自3段源录制；裁切区间和至少30秒准则",
+              "checkedAt": "2026-09-19T09:16:28.136163+00:00"
+            },
+            {
+              "url": "https://huggingface.co/datasets/yxma/React/blob/8f51b56a5f0d2ef1c6585071d8f0ca4cbbb5ebe8/data/toy/processing_20260919/schema_verification.json",
+              "location": "columns与files",
+              "supports": "七个新Parquet、55列schema",
+              "checkedAt": "2026-09-19T09:16:28.136163+00:00"
+            },
+            {
+              "url": "https://huggingface.co/datasets/yxma/React/blob/8f51b56a5f0d2ef1c6585071d8f0ca4cbbb5ebe8/data/toy/processing_20260919/force_verification.json",
+              "location": "source_format与samples",
+              "supports": "作者抽样检查raw_h5转换数值一致性；非独立物理力校准",
+              "checkedAt": "2026-09-19T09:16:28.136163+00:00"
+            },
+            {
+              "url": "https://huggingface.co/datasets/yxma/React/blob/8f51b56a5f0d2ef1c6585071d8f0ca4cbbb5ebe8/data/toy/episodes.jsonl",
+              "location": "17个episode条目",
+              "supports": "逐条核对帧数、force_pipeline_version、Z-up和动作有效帧",
+              "checkedAt": "2026-09-19T09:16:28.136163+00:00"
+            },
+            {
+              "url": "https://huggingface.co/datasets/yxma/React/blob/8f51b56a5f0d2ef1c6585071d8f0ca4cbbb5ebe8/data/toy/splits.json",
+              "location": "episodes / max_train_window / guard_frames",
+              "supports": "17片段全覆盖；64帧窗口和63帧保护区，区间而非整段留出",
+              "checkedAt": "2026-09-19T09:16:28.136163+00:00"
+            }
+          ],
+          "links": [
+            {
+              "label": "原始数据",
+              "url": "https://huggingface.co/datasets/yxma/React"
+            },
+            {
+              "label": "九月统计",
+              "url": "https://huggingface.co/datasets/yxma/React/blob/867ad12c370eeb00568b6bf147f07e4783f2917d/assets/dataset_stats.json"
+            },
+            {
+              "label": "切分文件",
+              "url": "https://huggingface.co/datasets/yxma/React/blob/867ad12c370eeb00568b6bf147f07e4783f2917d/data/rope/splits.json"
+            },
+            {
+              "label": "发布与更正记录",
+              "url": "https://huggingface.co/datasets/yxma/React/commits/main"
+            },
+            {
+              "label": "标定规则实际更改",
+              "url": "https://huggingface.co/datasets/yxma/React/commit/82fb6ca60a1e8b8605a7bbbdd5899ec302c3d622"
+            },
+            {
+              "label": "九月16日版本",
+              "url": "https://huggingface.co/datasets/yxma/React/tree/efecc6ebaf5991af8ee37ebb5b903ff3c0946cb8"
+            },
+            {
+              "label": "统计与缺失通道修正",
+              "url": "https://huggingface.co/datasets/yxma/React/commit/17f9fc174aab5f13961c62371b7d11a40cfdd4ce"
+            },
+            {
+              "label": "位姿修复提交",
+              "url": "https://huggingface.co/datasets/yxma/React/commit/f186f5f6701f52eb6216b9465bdb309d17fe141d"
+            },
+            {
+              "label": "本次数据提交",
+              "url": "https://huggingface.co/datasets/yxma/React/commit/8f51b56a5f0d2ef1c6585071d8f0ca4cbbb5ebe8"
+            },
+            {
+              "label": "验证摘要",
+              "url": "https://huggingface.co/datasets/yxma/React/blob/8f51b56a5f0d2ef1c6585071d8f0ca4cbbb5ebe8/data/toy/processing_20260919/summary.json"
+            },
+            {
+              "label": "toy 切分",
+              "url": "https://huggingface.co/datasets/yxma/React/blob/8f51b56a5f0d2ef1c6585071d8f0ca4cbbb5ebe8/data/toy/splits.json"
+            }
+          ],
+          "backfill": false,
+          "leadDiscoveredAt": "2026-09-15T02:23:40.341369+00:00",
+          "discoveredAt": "2026-09-15T09:35:25.032Z",
+          "updatedAt": "2026-09-19T09:19:37.409434+00:00",
+          "lastSeenAt": "2026-09-19T09:19:37.409434+00:00",
+          "type": "作者数据集与工具更新",
+          "source": "Hugging Face作者数据卡与具体提交",
+          "substantiveUpdate": true,
+          "changeId": "hf:datasets/yxma/React:8f51b56a5f0d2ef1c6585071d8f0ca4cbbb5ebe8",
+          "changeNote": "固定提交8f51b56新增9月17日toy采集的7个片段、7659帧，使toy清单由10增至17；附带Z-up、V8力通道来源、动作有效掩码与切分验证。旧Parquet和既有切分保留，旧索引的坐标标签修正。",
+          "eventAt": "2026-09-17T09:03:59Z",
+          "stableChangeId": "hf:datasets/yxma/React:f186f5f6701f52eb6216b9465bdb309d17fe141d",
+          "background": "触觉世界模型容易受到动作捕捉突跳、坐标轴混用和训练测试窗口重叠影响。人类手持传感器数据能提供接触样本，但只有正确对齐并标记无效帧，才能判断模型学到了物理关系还是数据处理伪影。",
+          "experiments": "固定提交的summary与episodes清单一致：toy共17片段、20257帧，其中新增7659帧来自3段源录制，不能称为7次独立采集。schema检查列出七份55列Parquet；作者的力验证抽样比较转换结果与raw_h5来源。toy切分覆盖全部17片段，最大训练窗口64帧、保护区63帧；仍是同段内的时间区间测试。",
+          "conclusion": "新增数据和可审计的处理清单已公开，适合研究短时触觉—视觉预测与掩码加载；未报告新模型的预测提升、闭环控制成功率或独立力传感器精度验证。",
+          "evaluation": "编辑分析：逐片段来源比首页的旧“10片段”统计更可靠。这里核对的是公开清单与作者验证结果，没有重新下载视频、重算全部力或训练模型。间隔测试仍共享场景和录制条件；数值重建一致性不等于牛顿量纲的真实测量精度，不能当作跨场景泛化或校准完成的证明。",
+          "futureDirections": "研究假设：把新增片段的动作掩码、力有效性与坐标epoch作为世界模型的数据入口约束，比较严格掩码和忽略掩码的预测误差；另按源录制或采集日完整留出测试，再与独立力传感器对照，才检验它是否能改善接触时刻预测与后续机器人动作选择。",
+          "lastReviewedAt": "2026-09-17T09:25:11.265861+00:00",
+          "briefHistory": [
+            {
+              "promotedAt": "2026-09-17T02:39:11.180Z",
+              "previous": {
+                "id": "hf:datasets/yxma/React",
+                "title": "React tactile-visual dataset: September 16 expansion and calibration-session rule update",
+                "zhTitle": "React新增九月触觉数据：146片段，并调整会话标定选择规则",
+                "authors": [
+                  "yxma"
+                ],
+                "category": "embodied",
+                "tags": [
+                  "触觉",
+                  "视觉世界模型",
+                  "数据集",
+                  "标定"
+                ],
+                "contentTypes": [
+                  "report"
+                ],
+                "canonicalUrl": "https://huggingface.co/datasets/yxma/React",
+                "identityLinks": [
+                  "https://huggingface.co/datasets/yxma/React"
+                ],
+                "aliasIds": [
+                  "pending:hf:datasets/yxma/React-video-release"
+                ],
+                "publishedAt": "2026-09-15T00:27:01Z",
+                "releaseAt": "2026-09-15T00:27:01Z",
+                "sourceUpdatedAt": "2026-09-16T06:06:37Z",
+                "version": "efecc6ebaf5991af8ee37ebb5b903ff3c0946cb8",
+                "checkedAt": "2026-09-16T09:29:49.007977+00:00",
+                "changeType": "updated",
+                "status": "brief_verified",
+                "reviewStatus": "full_source_reviewed",
+                "popularity": {
+                  "score": null,
+                  "status": "unmeasured",
+                  "metrics": {
+                    "githubStars": null,
+                    "hfUpvotes": null
+                  },
+                  "basis": "未取得此单独产物可归属的论文票数或专属项目 stars；模型/数据 likes 与下载量不代入论文热度。",
+                  "evidence": [],
+                  "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                },
+                "editorialPriority": 89,
+                "editorialPriorityReason": "可核实际数据扩展及影响标定选择的行为变化；非热度。",
+                "dateNote": "保留原产物首次公开9月15日00:27:01Z与首次收录；本次数据/工具提交发生于9月16日05:43–06:06Z。采集日与公开提交日分别处理。",
+                "summary": "新增人类手持触觉采集数据并扩展标定会话处理；主表146片段不等于146次独立录制，规则变化需固定代码版本。",
+                "innovation": "新版本增加9月14/15日任务数据和对应视频/索引。已读代码在显式会话声明优先的基础上，允许不早于当前标定时期的未声明会话采用CURRENT_EPOCH；旧日期仍须显式声明，区别于旧版一律拒绝未知会话。",
+                "evidence": "已读完整新数据卡、9月16日提交历史和82fb6ca实际代码diff，并对照此前收录的固定版本；数据量为作者报告，未重新下载统计。",
+                "evidenceDetails": [
+                  {
+                    "url": "https://huggingface.co/datasets/yxma/React/blob/867ad12c370eeb00568b6bf147f07e4783f2917d/README.md",
+                    "location": "Main window；Calibration；Known issue",
+                    "supports": "人类手持设备、数据格式、历史限制和日期边界",
+                    "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                  },
+                  {
+                    "url": "https://huggingface.co/datasets/yxma/React/blob/867ad12c370eeb00568b6bf147f07e4783f2917d/assets/dataset_stats.json",
+                    "location": "new_era/task statistics",
+                    "supports": "三任务片段、源录制、帧数及分钟数",
+                    "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                  },
+                  {
+                    "url": "https://huggingface.co/datasets/yxma/React/blob/867ad12c370eeb00568b6bf147f07e4783f2917d/data/rope/splits.json",
+                    "location": "format；max_train_window；guard_frames；episodes",
+                    "supports": "时间区间测试、64帧窗口与63帧保护区",
+                    "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                  },
+                  {
+                    "url": "https://huggingface.co/datasets/yxma/React/blob/867ad12c370eeb00568b6bf147f07e4783f2917d/data/rope/episodes.jsonl",
+                    "location": "23 episode identifiers",
+                    "supports": "与split一一对应",
+                    "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                  },
+                  {
+                    "url": "https://huggingface.co/datasets/yxma/React/blob/867ad12c370eeb00568b6bf147f07e4783f2917d/data/rope/calibration/epoch_2026-09-09/T_mocap_to_cam_middle.json",
+                    "location": "up_axis",
+                    "supports": "实际Z-up外参",
+                    "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                  },
+                  {
+                    "url": "https://huggingface.co/datasets/yxma/React/blob/867ad12c370eeb00568b6bf147f07e4783f2917d/tasks.json",
+                    "location": "task inventory；tactile_latency",
+                    "supports": "仍滞后的旧统计和时延补偿适用风险",
+                    "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                  },
+                  {
+                    "url": "https://huggingface.co/datasets/yxma/React/commit/867ad12c370eeb00568b6bf147f07e4783f2917d",
+                    "location": "README: the one-week main window, the statistics figures, the splits and what guard costs, and the Z-up calibration rule",
+                    "supports": "公开更正日期 2026-09-15T07:30:42.000Z",
+                    "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                  },
+                  {
+                    "url": "https://huggingface.co/datasets/yxma/React/commit/7b386aa77a762d326d80b1e4c597e1e319542a5f",
+                    "location": "stats: figures recomputed after the four rope recordings were refiled as pushT",
+                    "supports": "公开更正日期 2026-09-15T07:27:20.000Z",
+                    "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                  },
+                  {
+                    "url": "https://huggingface.co/datasets/yxma/React/commit/c87c79c4812fce127c6d4a4b72c31469bd91e251",
+                    "location": "rope: splits + curation indices. Without splits.json every rope segment read as TRAIN",
+                    "supports": "公开更正日期 2026-09-15T06:59:30.000Z",
+                    "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                  },
+                  {
+                    "url": "https://huggingface.co/datasets/yxma/React/commit/a18a51f96f38d3a2e9658f6722dcf124c36d2f69",
+                    "location": "rope: epoch_2026-09-09 calibration in the Z-up frame the parquet use, declared",
+                    "supports": "公开更正日期 2026-09-15T03:23:14.000Z",
+                    "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                  },
+                  {
+                    "url": "https://huggingface.co/datasets/yxma/React/commit/9ea6fb41933e4dddca649f4de39fd5a56d8b697e",
+                    "location": "pushT: epoch_2026-09-09 calibration in the Z-up frame the parquet use, declared",
+                    "supports": "公开更正日期 2026-09-15T03:23:13.000Z",
+                    "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                  },
+                  {
+                    "url": "https://huggingface.co/datasets/yxma/React/commit/780e2994152f33c1c04a2eb1c0c42fb156b892e1",
+                    "location": "motherboard: epoch_2026-09-09 calibration in the Z-up frame the parquet use, declared",
+                    "supports": "公开更正日期 2026-09-15T03:23:12.000Z",
+                    "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                  },
+                  {
+                    "url": "https://huggingface.co/datasets/yxma/React",
+                    "location": "Tasks / Calibration / Splits / headline",
+                    "supports": "25/68/53片段、12/23/16录制、时长、旧头信息不一致，手持数据而非robot执行",
+                    "checkedAt": "2026-09-16T09:29:49.007977+00:00"
+                  },
+                  {
+                    "url": "https://huggingface.co/datasets/yxma/React/commit/82fb6ca60a1e8b8605a7bbbdd5899ec302c3d622",
+                    "location": "toolbox/calib_epoch.py，新增CURRENT_EPOCH与session_epoch分支",
+                    "supports": "真实diff仅该文件+31/-10，显式rope会话和date>=CURRENT_EPOCH默认规则；不能从标题外推其余修复",
+                    "checkedAt": "2026-09-16T09:29:49.007977+00:00"
+                  },
+                  {
+                    "url": "https://huggingface.co/datasets/yxma/React/commits/main",
+                    "location": "f7d720d /87967ef/8d0d972数据发布；82fb6ca工具；efecc6e统计",
+                    "supports": "2026-09-16T05:43:16至06:06:37Z新增数据/工具的实际日期",
+                    "checkedAt": "2026-09-16T09:29:49.007977+00:00"
+                  }
+                ],
+                "links": [
+                  {
+                    "label": "原始数据",
+                    "url": "https://huggingface.co/datasets/yxma/React"
+                  },
+                  {
+                    "label": "九月统计",
+                    "url": "https://huggingface.co/datasets/yxma/React/blob/867ad12c370eeb00568b6bf147f07e4783f2917d/assets/dataset_stats.json"
+                  },
+                  {
+                    "label": "切分文件",
+                    "url": "https://huggingface.co/datasets/yxma/React/blob/867ad12c370eeb00568b6bf147f07e4783f2917d/data/rope/splits.json"
+                  },
+                  {
+                    "label": "发布与更正记录",
+                    "url": "https://huggingface.co/datasets/yxma/React/commits/main"
+                  },
+                  {
+                    "label": "标定规则实际更改",
+                    "url": "https://huggingface.co/datasets/yxma/React/commit/82fb6ca60a1e8b8605a7bbbdd5899ec302c3d622"
+                  },
+                  {
+                    "label": "九月16日版本",
+                    "url": "https://huggingface.co/datasets/yxma/React/tree/efecc6ebaf5991af8ee37ebb5b903ff3c0946cb8"
+                  }
+                ],
+                "backfill": false,
+                "leadDiscoveredAt": "2026-09-15T02:23:40.341369+00:00",
+                "discoveredAt": "2026-09-15T09:35:25.032Z",
+                "updatedAt": "2026-09-16T09:30:22.111Z",
+                "lastSeenAt": "2026-09-16T09:30:22.111Z",
+                "revisionEvents": [
+                  {
+                    "changeId": "hf:datasets/yxma/React:efecc6ebaf5991af8ee37ebb5b903ff3c0946cb8",
+                    "at": "2026-09-16T09:30:22.111Z",
+                    "note": "相对已收录867ad12：9月16日新增9月14/15日采集数据，当前卡列三任务146片段；82fb6ca真实代码新增rope会话声明，并把未知但不早于CURRENT_EPOCH的会话默认指向当前标定。仅更正有实际diff支持的规则，不按提交标题宣称已核全部projection/gel修复。",
+                    "previous": {
+                      "id": "hf:datasets/yxma/React",
+                      "title": "React tactile-visual dataset: September release and calibration/split correction",
+                      "zhTitle": "React：触觉—视觉数据公开，并更正标定与切分",
+                      "authors": [
+                        "yxma"
+                      ],
+                      "category": "embodied",
+                      "tags": [
+                        "触觉",
+                        "视觉世界模型",
+                        "数据集",
+                        "标定"
+                      ],
+                      "contentTypes": [
+                        "report"
+                      ],
+                      "canonicalUrl": "https://huggingface.co/datasets/yxma/React",
+                      "identityLinks": [
+                        "https://huggingface.co/datasets/yxma/React"
+                      ],
+                      "aliasIds": [
+                        "pending:hf:datasets/yxma/React-video-release"
+                      ],
+                      "publishedAt": "2026-09-15T00:27:01Z",
+                      "releaseAt": "2026-09-15T00:27:01Z",
+                      "sourceUpdatedAt": "2026-09-15T07:30:42.000Z",
+                      "version": "867ad12c370eeb00568b6bf147f07e4783f2917d",
+                      "checkedAt": "2026-09-15T09:22:28.057189+00:00",
+                      "changeType": "backfill",
+                      "status": "brief_verified",
+                      "reviewStatus": "full_source_read",
+                      "popularity": {
+                        "score": null,
+                        "status": "unmeasured",
+                        "metrics": {
+                          "githubStars": null,
+                          "hfUpvotes": null
+                        },
+                        "basis": "未取得此单独产物可归属的论文票数或专属项目 stars；模型/数据 likes 与下载量不代入论文热度。",
+                        "evidence": [],
+                        "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                      },
+                      "editorialPriority": 86,
+                      "editorialPriorityReason": "编辑价值：已核实际文件的数据发布与防泄漏/标定更正；非热度。",
+                      "dateNote": "仓库及旧数据早于本轮；9/15 00:27:01Z 新视频发布，03:23Z 三任务 Z-up 外参更正，06:59Z 补 rope 切分，07:30Z 更新说明。首次正式建档，不把核验行为当成旧文章更新。",
+                      "summary": "手持 GelSight 的人类接触数据补齐九月视频、Z-up 标定与带窗口保护的切分；实际统计可核，但旧清单仍有滞后，需按采集时期选择加载参数。",
+                      "innovation": "这次发布提供三路 RGB、两路触觉视频与逐帧位姿的 MP4/Parquet 数据，主窗口按九月采集 epoch 组织；三任务外参显式使用 Z-up，并补 rope 的时间区间划分和最大 64 帧窗口所需 63 帧保护区。其增量是可检查的数据和质量修复，没有提出新世界模型网络。",
+                      "evidence": "阅读完整原始卡，并实际读取固定修订的统计、任务清单、rope 切分、episode 清单和 Z-up 外参；普通提交页核对实质发布日期。",
+                      "evidenceDetails": [
+                        {
+                          "url": "https://huggingface.co/datasets/yxma/React/blob/867ad12c370eeb00568b6bf147f07e4783f2917d/README.md",
+                          "location": "Main window；Calibration；Known issue",
+                          "supports": "人类手持设备、数据格式、历史限制和日期边界",
+                          "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                        },
+                        {
+                          "url": "https://huggingface.co/datasets/yxma/React/blob/867ad12c370eeb00568b6bf147f07e4783f2917d/assets/dataset_stats.json",
+                          "location": "new_era/task statistics",
+                          "supports": "三任务片段、源录制、帧数及分钟数",
+                          "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                        },
+                        {
+                          "url": "https://huggingface.co/datasets/yxma/React/blob/867ad12c370eeb00568b6bf147f07e4783f2917d/data/rope/splits.json",
+                          "location": "format；max_train_window；guard_frames；episodes",
+                          "supports": "时间区间测试、64帧窗口与63帧保护区",
+                          "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                        },
+                        {
+                          "url": "https://huggingface.co/datasets/yxma/React/blob/867ad12c370eeb00568b6bf147f07e4783f2917d/data/rope/episodes.jsonl",
+                          "location": "23 episode identifiers",
+                          "supports": "与split一一对应",
+                          "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                        },
+                        {
+                          "url": "https://huggingface.co/datasets/yxma/React/blob/867ad12c370eeb00568b6bf147f07e4783f2917d/data/rope/calibration/epoch_2026-09-09/T_mocap_to_cam_middle.json",
+                          "location": "up_axis",
+                          "supports": "实际Z-up外参",
+                          "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                        },
+                        {
+                          "url": "https://huggingface.co/datasets/yxma/React/blob/867ad12c370eeb00568b6bf147f07e4783f2917d/tasks.json",
+                          "location": "task inventory；tactile_latency",
+                          "supports": "仍滞后的旧统计和时延补偿适用风险",
+                          "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                        },
+                        {
+                          "url": "https://huggingface.co/datasets/yxma/React/commit/867ad12c370eeb00568b6bf147f07e4783f2917d",
+                          "location": "README: the one-week main window, the statistics figures, the splits and what guard costs, and the Z-up calibration rule",
+                          "supports": "公开更正日期 2026-09-15T07:30:42.000Z",
+                          "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                        },
+                        {
+                          "url": "https://huggingface.co/datasets/yxma/React/commit/7b386aa77a762d326d80b1e4c597e1e319542a5f",
+                          "location": "stats: figures recomputed after the four rope recordings were refiled as pushT",
+                          "supports": "公开更正日期 2026-09-15T07:27:20.000Z",
+                          "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                        },
+                        {
+                          "url": "https://huggingface.co/datasets/yxma/React/commit/c87c79c4812fce127c6d4a4b72c31469bd91e251",
+                          "location": "rope: splits + curation indices. Without splits.json every rope segment read as TRAIN",
+                          "supports": "公开更正日期 2026-09-15T06:59:30.000Z",
+                          "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                        },
+                        {
+                          "url": "https://huggingface.co/datasets/yxma/React/commit/a18a51f96f38d3a2e9658f6722dcf124c36d2f69",
+                          "location": "rope: epoch_2026-09-09 calibration in the Z-up frame the parquet use, declared",
+                          "supports": "公开更正日期 2026-09-15T03:23:14.000Z",
+                          "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                        },
+                        {
+                          "url": "https://huggingface.co/datasets/yxma/React/commit/9ea6fb41933e4dddca649f4de39fd5a56d8b697e",
+                          "location": "pushT: epoch_2026-09-09 calibration in the Z-up frame the parquet use, declared",
+                          "supports": "公开更正日期 2026-09-15T03:23:13.000Z",
+                          "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                        },
+                        {
+                          "url": "https://huggingface.co/datasets/yxma/React/commit/780e2994152f33c1c04a2eb1c0c42fb156b892e1",
+                          "location": "motherboard: epoch_2026-09-09 calibration in the Z-up frame the parquet use, declared",
+                          "supports": "公开更正日期 2026-09-15T03:23:12.000Z",
+                          "checkedAt": "2026-09-15T09:22:28.057189+00:00"
+                        }
+                      ],
+                      "links": [
+                        {
+                          "label": "原始数据",
+                          "url": "https://huggingface.co/datasets/yxma/React"
+                        },
+                        {
+                          "label": "九月统计",
+                          "url": "https://huggingface.co/datasets/yxma/React/blob/867ad12c370eeb00568b6bf147f07e4783f2917d/assets/dataset_stats.json"
+                        },
+                        {
+                          "label": "切分文件",
+                          "url": "https://huggingface.co/datasets/yxma/React/blob/867ad12c370eeb00568b6bf147f07e4783f2917d/data/rope/splits.json"
+                        },
+                        {
+                          "label": "发布与更正记录",
+                          "url": "https://huggingface.co/datasets/yxma/React/commits/main"
+                        }
+                      ],
+                      "backfill": true,
+                      "leadDiscoveredAt": "2026-09-15T02:23:40.341369+00:00",
+                      "discoveredAt": "2026-09-15T09:35:25.032Z",
+                      "updatedAt": "2026-09-15T09:35:25.032Z",
+                      "lastSeenAt": "2026-09-15T09:35:25.032Z"
+                    }
+                  }
+                ],
+                "type": "作者数据集与工具更新",
+                "source": "Hugging Face作者数据卡与具体提交",
+                "substantiveUpdate": true,
+                "changeId": "hf:datasets/yxma/React:efecc6ebaf5991af8ee37ebb5b903ff3c0946cb8",
+                "changeNote": "相对已收录867ad12：9月16日新增9月14/15日采集数据，当前卡列三任务146片段；82fb6ca真实代码新增rope会话声明，并把未知但不早于CURRENT_EPOCH的会话默认指向当前标定。仅更正有实际diff支持的规则，不按提交标题宣称已核全部projection/gel修复。"
+              }
+            }
+          ]
+        },
+        {
+          "id": "arxiv:2603.14554",
+          "title": "MorFiC: Fixing Value Miscalibration for Zero-Shot Quadruped Transfer",
+          "zhTitle": "MorFiC：通过价值函数校准改善四足机器人跨机型迁移",
+          "category": "rl",
+          "publishedAt": "2026-03-15T19:03:34Z",
+          "canonicalUrl": "https://arxiv.org/abs/2603.14554",
+          "version": "v2",
+          "authors": [
+            "Prakhar Mishra",
+            "Amir Hossain Raj",
+            "Xuesu Xiao",
+            "Dinesh Manocha"
+          ],
+          "tags": [
+            "四足机器人",
+            "跨本体迁移",
+            "PPO",
+            "价值函数",
+            "FiLM"
+          ],
+          "contentTypes": [
+            "paper",
+            "news"
+          ],
+          "type": "论文",
+          "checkedAt": "2026-09-19T09:16:28.136163+00:00",
+          "reviewStatus": "primary_methods_results_and_limitations_read",
+          "status": "full_verified",
+          "editorialPriority": 97,
+          "editorialPriorityBasis": "无可比热度时按方法可复用性和证据完整性补充；不代表公开互动量。",
+          "evidence": "已阅读原始方法、实验或数据验证与局限；未独立重跑。评价和组合方向属于编辑分析与研究假设。",
+          "links": [
+            {
+              "label": "原始论文",
+              "url": "https://arxiv.org/abs/2603.14554"
+            },
+            {
+              "label": "v2 全文",
+              "url": "https://arxiv.org/html/2603.14554v2"
+            },
+            {
+              "label": "机构报道",
+              "url": "https://www.umiacs.umd.edu/news-events/news/one-robot-many-bodies-new-system-helps-four-legged-robots-adapt"
+            }
+          ],
+          "evidenceDetails": [
+            {
+              "url": "https://arxiv.org/abs/2603.14554",
+              "location": "Submission history",
+              "supports": "v1与v2的准确提交时间",
+              "checkedAt": "2026-09-19T09:16:28.136163+00:00"
+            },
+            {
+              "url": "https://arxiv.org/html/2603.14554v2",
+              "location": "Sections 3–5；Appendix B",
+              "supports": "11维描述、乘性critic调制与单Go2模板",
+              "checkedAt": "2026-09-19T09:16:28.136163+00:00"
+            },
+            {
+              "url": "https://arxiv.org/html/2603.14554v2",
+              "location": "Tables 1–4；Section 8；Appendix E.1/E.2",
+              "supports": "评估环境、指令、速度、真机次数；Go1主表0.547与Table 4中0.647存在差异",
+              "checkedAt": "2026-09-19T09:16:28.136163+00:00"
+            },
+            {
+              "url": "https://arxiv.org/html/2603.14554v2",
+              "location": "Sections 9；Appendix A；Appendix I Table 16",
+              "supports": "远分布失败、存活率限制、2.2–3.0 GPU小时和外部算力外推口径",
+              "checkedAt": "2026-09-19T09:16:28.136163+00:00"
+            },
+            {
+              "url": "https://www.umiacs.umd.edu/news-events/news/one-robot-many-bodies-new-system-helps-four-legged-robots-adapt",
+              "location": "日期及首段",
+              "supports": "9月18日机构报道与CoRL接收表述",
+              "checkedAt": "2026-09-19T09:16:28.136163+00:00"
+            }
+          ],
+          "backfill": true,
+          "changeType": "backfill",
+          "sourceUpdatedAt": "2026-08-24T06:29:55Z",
+          "dateNote": "由9月18日马里兰大学报道发现并补录；论文初稿3月15日，当前v2为8月24日，不是9月新稿。机构称已获CoRL 2026接收。",
+          "summary": "让 critic 按机器人形态调节特征，改善 PPO 的优势估计；邻近机型迁移有效，重型远分布机型仍是短板。",
+          "background": "同一状态在不同质量和关节范围的机器人上可能对应不同回报。共享 critic 若把这些目标混在一起，优势估计会给策略错误的更新方向；只给 actor 输入形态信息未必能解决问题。",
+          "innovation": "MorFiC 把11维质量与关节限位描述编码为形态向量，同时供给 actor 和 critic；核心是用 FiLM 等乘性调制改变 critic 的中间特征，而非仅拼接输入。训练仍采用单一 Go2 模板及形态随机化，固定 rollout 的优势符号和梯度方向诊断用于检查机制。",
+          "experiments": "论文在 IsaacGym 中训练，并在包含源机型的七种四足机型上评估。Table 2 使用2.0 m/s指令、64个环境和500步：AlienGo 的 MorFiC 为1.98±0.51 m/s，拼接形态的 actor+critic 为0.40±0.18 m/s。Go1 真机10次试验报告约1.4–1.7 m/s，Go2约1.1–1.3 m/s；这些不是所有七机型的真机测试。固定轨迹消融支持 critic 对更新方向的影响。",
+          "conclusion": "价值估计的条件化是跨本体控制的一条可用改进路径，但没有解决任意形态迁移。B1 和 ANYmal-C 的有效步态仍受限；高存活率可能来自不运动，不能单独当成功。",
+          "evaluation": "编辑分析：内部 PPO 对照比外部异构训练基线更能隔离机制。速度与稳定性存在取舍，Go1 的存活率在主表与消融表还不一致，需复现核对；正文“约两小时”与附录2.2–3.0 GPU小时也应区分。外部算力包含短程测量外推与专家池规模，不宜直接宣称统一条件下的加速倍数。",
+          "futureDirections": "研究假设：把 FiLM critic 接入有限多源机型训练或在线系统辨识，让估计的质量、负载和限位替代固定描述。应按形态距离划分未见机型，在相同数据与训练预算下联合报告速度、跌倒率、能耗和优势符号误差，检查是否改善重型机型而不牺牲近分布稳定性。",
+          "popularity": {
+            "status": "unmeasured",
+            "score": null,
+            "metrics": {
+              "githubStars": null,
+              "hfUpvotes": null
+            },
+            "evidence": [],
+            "checkedAt": "2026-09-19T09:19:37.409434+00:00",
+            "basis": "未获得可归属于该研究的论文投票或专属仓库stars；未知保留null，机构报道和公开数据卡不伪装成互动数。",
+            "coverageNote": "HF论文API返回404；未发现论文明确关联的代码仓库。"
+          },
+          "discoveredAt": "2026-09-19T09:19:37.409434+00:00",
+          "updatedAt": "2026-09-19T09:19:37.409434+00:00",
+          "lastSeenAt": "2026-09-19T09:19:37.409434+00:00"
+        },
+        {
+          "id": "report:one-operator-many-robots-sar-20260919",
+          "title": "One Operator, Many Robots: Natural-Language Command of UAV–UGV Teams for Search, Victim Detection, and Rescue",
+          "zhTitle": "单人语音指挥空地机器人：把人员发现接到地面响应",
+          "category": "embodied",
+          "publishedAt": "2026-09-19",
+          "canonicalUrl": "https://alejp.me/blog/blog-post-ssrr-2026-ugv-uav.html",
+          "version": "2026-09-19 作者技术博客",
+          "authors": [
+            "A. Jarabo-Peñas",
+            "J. Bravo-Arrabal",
+            "E.G.A. Rolland",
+            "A.L. Christensen"
+          ],
+          "tags": [
+            "多机器人",
+            "搜救",
+            "自然语言控制",
+            "人机协作",
+            "定位"
+          ],
+          "contentTypes": [
+            "blog",
+            "report"
+          ],
+          "type": "技术报告",
+          "checkedAt": "2026-09-19T09:16:28.136163+00:00",
+          "reviewStatus": "primary_methods_results_and_limitations_read",
+          "status": "full_verified",
+          "editorialPriority": 91,
+          "editorialPriorityBasis": "无可比热度时按方法可复用性和证据完整性补充；不代表公开互动量。",
+          "evidence": "已阅读原始方法、实验或数据验证与局限；未独立重跑。评价和组合方向属于编辑分析与研究假设。",
+          "links": [
+            {
+              "label": "作者原文",
+              "url": "https://alejp.me/blog/blog-post-ssrr-2026-ugv-uav.html"
+            },
+            {
+              "label": "NAMUR 项目报道",
+              "url": "https://namurproject.com/blog/blog-post-ssrr-2026-ugv-uav.html"
+            }
+          ],
+          "evidenceDetails": [
+            {
+              "url": "https://alejp.me/blog/blog-post-ssrr-2026-ugv-uav.html",
+              "location": "页面日期、作者署名与审稿状态",
+              "supports": "9月19日博客、作者列表、under review",
+              "checkedAt": "2026-09-19T09:16:28.136163+00:00"
+            },
+            {
+              "url": "https://alejp.me/blog/blog-post-ssrr-2026-ugv-uav.html",
+              "location": "Figures 1–3；From aerial search to ground response",
+              "supports": "检测、几何定位、跨机融合与人工确认流程",
+              "checkedAt": "2026-09-19T09:16:28.136163+00:00"
+            },
+            {
+              "url": "https://alejp.me/blog/blog-post-ssrr-2026-ugv-uav.html",
+              "location": "Tables 1–3；Twelve outdoor experiments",
+              "supports": "验证集指标、地面站硬件、面积、12次实验和逐场景误差；C漏检",
+              "checkedAt": "2026-09-19T09:16:28.136163+00:00"
+            },
+            {
+              "url": "https://alejp.me/blog/blog-post-ssrr-2026-ugv-uav.html",
+              "location": "Figure 5；Feedback from a professional firefighter",
+              "supports": "地面响应演示及定性消防反馈，未披露完整撤离效果对照",
+              "checkedAt": "2026-09-19T09:16:28.136163+00:00"
+            }
+          ],
+          "dateNote": "作者博客标注9月19日，未披露具体时刻；论文称提交IEEE SSRR 2026、仍在审，不写成已录用。",
+          "identityLinks": [
+            "https://namurproject.com/blog/blog-post-ssrr-2026-ugv-uav.html"
+          ],
+          "summary": "将空中检测、跨无人机目标融合与地面机器人调度接入语音指挥流程，保留人对候选目标的确认。",
+          "background": "搜救中的难点不只在空中找到人，还在于把检测变成可引用、可核实的地图目标，再让地面平台到达合适位置。操作者同时管理多台异构机器人时，单独的遥控接口会增加协调负担。",
+          "innovation": "系统扩展 Swarm-Steward：YOLO26l 检测经无人机姿态、云台、相机几何和地形投影到地面，轨迹由 Object Manager 融合；操作者确认目标后，可用后续自然语言指令让无人机监视并调度 Rover J8。语言代理外还有确定性管理与通信桥接层，创新主要在端到端任务衔接。",
+          "experiments": "作者报告约4.74公顷场地的12次户外实验，包含四个目标位置和1、2、4架无人机配置。三处位置最佳场景的定位误差分别为1.21、2.29、1.92米，困难位置C未找到；这些是逐场景最佳结果，不是整体平均。混合航拍验证集上YOLO26l的mAP50为0.832、mAP50–95为0.501；推理在RTX 5090地面站进行。",
+          "conclusion": "技术博客证明了从空中搜索到人工确认、再到地面响应的集成流程，并展示了视角、遮挡、地形和定位质量的影响。未给出与传统操作界面的对照，也未量化真实撤离救援的成功率。",
+          "evaluation": "编辑分析：目标具有明确身份、可确认或拒绝、可继续引用，这比一次性文本指令更适合长流程。场景与机器人数量、云台角度和速度并非完全受控，不能据表3推导无人机数量带来多少提升；消防人员反馈是定性意见，不是用户研究。",
+          "futureDirections": "研究假设：给共享目标增加位置协方差与检测来源，把不确定性接入地面规划的接近距离和禁入区约束；结合主动感知选择无人机补拍视角。用相同人员位置和光照配对比较人工界面、纯语言调度及带确认的系统，测漏检、误派、任务时间、干预次数与操作者负荷。",
+          "popularity": {
+            "status": "unmeasured",
+            "score": null,
+            "metrics": {
+              "githubStars": null,
+              "hfUpvotes": null
+            },
+            "evidence": [],
+            "checkedAt": "2026-09-19T09:19:37.409434+00:00",
+            "basis": "未获得可归属于该研究的论文投票或专属仓库stars；未知保留null，机构报道和公开数据卡不伪装成互动数。"
+          },
+          "discoveredAt": "2026-09-19T09:19:37.409434+00:00",
+          "updatedAt": "2026-09-19T09:19:37.409434+00:00",
+          "lastSeenAt": "2026-09-19T09:19:37.409434+00:00"
+        }
+      ],
+      "briefsSnapshot": [],
+      "rankedIds": [
+        "arxiv:2603.14554",
+        "hf:datasets/yxma/React",
+        "report:one-operator-many-robots-sar-20260919"
+      ],
+      "featuredIds": [
+        "arxiv:2603.14554",
+        "hf:datasets/yxma/React",
+        "report:one-operator-many-robots-sar-20260919"
+      ],
+      "analysisNeededIds": [],
+      "briefIds": [],
+      "candidateCount": 3,
+      "rankingNote": "公开热度数据暂缺，按编辑关注度、原始发表日期排序；这不是全网热度榜。 站内关注度代理分 = 10×ln(1+已核验GitHub累计stars) + 20×ln(1+已核验Hugging Face论文upvotes)。仅合计可测项，缺失为null；全部缺失则不评分。证据来自官方API、公开论文及仓库页，具体来源和观测时刻见条目。只计可归属的仓库，排除共用基础框架和跨代系列；累计关注不等于本日增量、论文质量或全网排名，未测候选的关注度仍未知。",
+      "rankingVersion": 1
     }
   ],
-  "lastScanAt": "2026-09-19T05:50:41.430731+00:00",
+  "lastScanAt": "2026-09-19T09:19:37.409434+00:00",
   "briefs": [
     {
       "id": "arxiv:2608.30396",
@@ -217709,18 +220009,19 @@
         "arxiv:2606.04811",
         "arxiv:2609.18514",
         "report:seeq-generalist-value-functions",
-        "doi:10.1002/adrr.70163",
-        "arxiv:2609.11697"
+        "arxiv:2603.14554",
+        "doi:10.1002/adrr.70163"
       ],
-      "summary": "今日重点是把预测、动作选择与可执行性接起来：SeeQ用子任务价值改善长程操作，Dream.exe开放评测产物并揭示深度提取的瓶颈；WorMa与可变形系绳飞行平台展示机械结构和控制的配合。ActiveScale代码可读状态已更新，ActSafeGuard新增附表的数值冲突也已注明。",
+      "summary": "今日围绕价值估计、可执行动作与真实数据展开：SeeQ用子任务价值筛选动作，Dream.exe揭示视频转动作的深度瓶颈；晚间补录MorFiC的跨机型critic校准，新增空地机器人语音协作搜救分析，并核验React七个新触觉片段。ActiveScale代码与ActSafeGuard的附表限制保留在对应记录。",
       "rankingNote": "2 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 站内关注度代理分 = 10×ln(1+已核验GitHub累计stars) + 20×ln(1+已核验Hugging Face论文upvotes)。仅合计可测项，缺失为null；全部缺失则不评分。证据来自官方API、公开论文及仓库页，具体来源和观测时刻见条目。只计可归属的仓库，排除共用基础框架和跨代系列；累计关注不等于本日增量、论文质量或全网排名，未测候选的关注度仍未知。",
       "editionIds": [
         "2026-09-19-1000",
-        "2026-09-19-1000-correction"
+        "2026-09-19-1000-correction",
+        "2026-09-19-1700"
       ],
-      "candidateCount": 9
+      "candidateCount": 12
     }
   },
   "rankingMethodNote": "站内关注度代理分 = 10×ln(1+已核验GitHub累计stars) + 20×ln(1+已核验Hugging Face论文upvotes)。仅合计可测项，缺失为null；全部缺失则不评分。证据来自官方API、公开论文及仓库页，具体来源和观测时刻见条目。只计可归属的仓库，排除共用基础框架和跨代系列；累计关注不等于本日增量、论文质量或全网排名，未测候选的关注度仍未知。",
-  "popularityCheckedAt": "2026-09-19T05:43:17.168331+00:00"
+  "popularityCheckedAt": "2026-09-19T09:19:37.409434+00:00"
 }
