@@ -61,3 +61,7 @@
   .search-help{font-size:13px;margin-top:5px}
   .type-filter-row>#clear-filters{display:block;margin:8px 0 0 auto}
 }
+
+/* Learning methods and classical robotics: keep the comparison readable. */
+.learning-case { background:#f1f6f4; border-top:1px solid var(--line); }
+.learning-case .analysis-section h4 { line-height:1.6; }

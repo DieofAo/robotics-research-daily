@@ -37458,7 +37458,8 @@
         "GR00T",
         "动作映射",
         "负结果",
-        "仿真"
+        "仿真",
+        "learning_control"
       ],
       "contentTypes": [
         "report"
@@ -37544,8 +37545,18 @@
       },
       "discoveredAt": "2026-09-20T02:53:16.916657+00:00",
       "updatedAt": "2026-09-20T02:53:16.916657+00:00",
-      "lastSeenAt": "2026-09-20T02:53:16.916657+00:00",
-      "revisionEvents": []
+      "lastSeenAt": "2026-09-20T06:21:37.526511+00:00",
+      "revisionEvents": [],
+      "learningClassical": {
+        "mode": "replacement",
+        "baseline": "把Dex3关节归一化闭合比例映射到Brainco新手型，同时保留手臂/手腕目标。它只对齐关节范围，没有对齐指尖接触过程。",
+        "cornerCase": "新手型拇指路径穿过物体，原策略无法形成有效支撑；相同闭合比例不保证相同接触几何与时序。",
+        "learningRole": "为新手型重新设计脚本示教，再微调GR00T动作策略，以学习策略替代简单映射。属于模仿学习；示教抓姿修改与微调是联合干预。",
+        "evidence": "映射B为0/50；专用示教微调C为10/50，但C允许1050步而B仅750步，C同为750步时只有2/50。故存在有限恢复证据，不能把全部差异归因于学习。",
+        "limitations": "仅仿真；C留出配置2/20，整体成功率仍低。没有与接触空间IK/抓取规划的强基线对照，数据与时间预算不一致；并非所有解析重定向都失效。",
+        "nextTest": "比较归一化映射、接触空间重定向、分阶段拇指规划及学习策略；统一750/1050步和数据预算，测多物体、多随机种子及真机的接触成功率。"
+      },
+      "aliasIds": []
     },
     {
       "id": "hf:burnboom/mujoco-triple-swingup",
@@ -37807,6 +37818,368 @@
       "updatedAt": "2026-09-20T02:53:16.916657+00:00",
       "lastSeenAt": "2026-09-20T02:53:16.916657+00:00",
       "revisionEvents": []
+    },
+    {
+      "id": "arxiv:2609.19962",
+      "title": "Hybrid Residual Reinforcement Learning for Contact-Rich Robotic Book Insertion",
+      "zhTitle": "残差RL补偿书本插入卡滞：保留几何控制，学习局部修正与释放",
+      "category": "rl",
+      "authors": [
+        "Tianyuan Liu",
+        "Rutherford Agbeshi Patamia",
+        "Benjamin Champion",
+        "Akansel Cosgun",
+        "Richard Dazeley"
+      ],
+      "contentTypes": [
+        "paper"
+      ],
+      "type": "研究论文",
+      "publishedAt": "2026-09-17T09:34:29Z",
+      "sourceUpdatedAt": "2026-09-17T09:34:29Z",
+      "version": "v1",
+      "canonicalUrl": "https://arxiv.org/abs/2609.19962",
+      "links": [
+        {
+          "label": "论文原文",
+          "url": "https://arxiv.org/abs/2609.19962"
+        },
+        {
+          "label": "阅读全文",
+          "url": "https://arxiv.org/html/2609.19962v1"
+        }
+      ],
+      "tags": [
+        "cs.RO",
+        "learning_control"
+      ],
+      "summary": "将有界PPO残差叠加在几何控制上，真机配对实验救回13个名义控制失败场景，但极窄间隙仍然困难。",
+      "innovation": "保留几何控制器提供对齐和插入方向；PPO输出有界局部运动残差及释放决策，覆盖持书插入和松爪后的推入。只有“张开—后撤—重新闭合”的短过渡使用脚本。策略使用12维几何状态而非图像或力觉，把探索集中到名义命令难以写准的接触敏感阶段；也与完全去掉名义项的PPO-only进行比较。",
+      "evidence": "已读作者arXiv v1全文的方法、实验、消融和局限；未独立复现实验。评价及下一步验证属于编辑分析。",
+      "evidenceDetails": [
+        {
+          "url": "https://arxiv.org/html/2609.19962v1",
+          "location": "Sections III-A–D；Table II",
+          "supports": "名义控制、12维观测、有界残差及学习释放；仅短过渡脚本化",
+          "checkedAt": "2026-09-20T06:21:37.526511+00:00"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.19962v1",
+          "location": "Sections IV-A、V-A",
+          "supports": "2000条件/3 mm仿真27.10%、0%、93.28±2.25%；512条件/3.84 mm部署匹配37.89%、98.50±0.23%；三次训练统计",
+          "checkedAt": "2026-09-20T06:21:37.526511+00:00"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.19962v1",
+          "location": "Sections IV-B、V-D；Tables III–IV",
+          "supports": "30组配对/60次真机试验、随机顺序、8/30与19/30、13次救回及2次反向失败、紧约束3/10；真机松中紧是分类而非毫米测量",
+          "checkedAt": "2026-09-20T06:21:37.526511+00:00"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.19962v1",
+          "location": "Sections VI-A–C",
+          "supports": "范围限于插入末段；仿真邻书固定、真实邻书可移动；位姿标定与有限几何泛化限制",
+          "checkedAt": "2026-09-20T06:21:37.526511+00:00"
+        }
+      ],
+      "dateEvidence": {
+        "url": "https://arxiv.org/abs/2609.19962",
+        "location": "arXiv首次提交时间；与本轮发现/修订日期分开"
+      },
+      "checkedAt": "2026-09-20T06:21:37.526511+00:00",
+      "reviewStatus": "primary_methods_results_and_limitations_read",
+      "status": "full_verified",
+      "editorialPriority": 99,
+      "editorialPriorityBasis": "按用户9月20日新增关注方向与对照证据完整性作专题编辑补充；不代表公开热度。",
+      "popularity": {
+        "status": "unmeasured",
+        "score": null,
+        "metrics": {
+          "githubStars": null,
+          "hfUpvotes": null
+        },
+        "evidence": [],
+        "checkedAt": "2026-09-20T06:17:59.222002+00:00",
+        "basis": "本次定向核验HF论文API返回404，票数未知；未核实可归属的专用代码仓库stars。专题采用编辑补充排序，不代表热度排名。"
+      },
+      "discoveredAt": "2026-09-18T09:39:21.834Z",
+      "updatedAt": "2026-09-20T06:21:37.526511+00:00",
+      "lastSeenAt": "2026-09-20T06:21:37.526511+00:00",
+      "revisionEvents": [],
+      "highlightSummary": "传统几何控制负责推进，残差RL修正接触与释放；真机成功率从8/30到19/30，紧约束场景仍仅3/10。",
+      "background": "已抓住的书即使目标位姿在运动学上可达，也可能因毫米级偏差、摩擦与相邻书本接触而卡在入口，或松爪后未完全就位。本文研究可行预插入姿态之后的最后阶段，感知、抓取获取与全局规划均不在任务范围内。基线是作者的任务空间名义几何控制器，不能将其不足等同于所有解析接触控制的能力边界。",
+      "experiments": "仿真使用Franka Panda与Isaac Lab。3 mm总侧向间隙、2000个固定初始条件下，名义控制成功27.10%，纯PPO在三次训练中均为0%，残差方案为93.28%±2.25%（三次训练的均值±样本标准差）。另一个部署匹配协议采用3.84 mm间隙和512个固定条件，残差为98.50%±0.23%，名义为37.89%；两套协议不能混为同一评测。真机xArm7测试30组配对条件，每组两控制器各执行一次、随机先后，共60次：名义8/30，残差19/30。残差救回22个名义失败中的13个，同时在2个名义成功条件下失败；紧约束组仍只成功3/10。",
+      "conclusion": "在本文预抓取书本插入设置中，显式几何结构与学习残差互补，比单独名义控制或本配置下纯PPO有效。证据支持局部接触控制的改进，不支持完整书架整理已解决，也不代表残差策略能创造缺失的物理空间或在所有初始条件下优于基线。",
+      "evaluation": "编辑分析：配对真机试验、失败救回与反向失败计数比单报平均成功率更有说服力。局限是仅一个书本几何、有限书架位置，且没有与充分调优的力反馈阻抗控制或接触MPC比较。真机书本位姿由TCP和标定变换推算，未显式观测滑移；仿真相邻书固定，真机相邻书会移动，因而高仿真成功率不能代替实物结果。有界残差也不自动带来接触安全或稳定性证明。",
+      "futureDirections": "研究假设：以力/触觉和几何误差为残差输入，在阻抗控制外层学习释放与局部修正，再以控制屏障或被动性约束限制接触动作。首先在同一组初始条件、相同控制频率和数据预算下比较名义控制、调优阻抗、接触MPC及其残差版本；评估新书材质、滑移和标定偏移，记录峰值接触力、救回/新增失败与完成时间。若槽口已因邻书移动而不可行，应让上层规划重排或重试，而非继续加大局部动作。",
+      "learningClassical": {
+        "mode": "residual",
+        "baseline": "任务空间名义几何控制器负责对齐、插入与就位；其固定局部规则难覆盖接触模式变化。本文未证明所有经典接触控制器均失败。",
+        "cornerCase": "目标运动学可达，但毫米级偏差与邻书接触造成入口卡滞、无法释放或未完全就位；极紧间隙可能限制物理可行性。",
+        "learningRole": "PPO在名义命令上叠加有界运动残差，并学习何时释放；保留全局/几何结构，只学习局部接触敏感环节。",
+        "evidence": "xArm7的30组配对条件：名义8/30→残差19/30；救回13个名义失败，同时新增2个失败。紧约束组仍仅3/10。另有独立训练重复与PPO-only仿真消融，详见完整分析。",
+        "limitations": "比较对象是特定名义控制器；真机样本小、无力反馈强基线，TCP推算位姿不覆盖滑移，残差限幅不等于安全证明。",
+        "nextTest": "与调优阻抗/接触MPC保持同数据和控制预算，测未见材质、滑移、峰值接触力及救回/新增失败；验证何时需要退出局部控制并重规划。"
+      },
+      "briefHistory": [
+        {
+          "promotedAt": "2026-09-20T06:21:37.526511+00:00",
+          "previous": {
+            "id": "arxiv:2609.19962",
+            "title": "Hybrid Residual Reinforcement Learning for Contact-Rich Robotic Book Insertion",
+            "zhTitle": "接触丰富书本插入的混合残差RL",
+            "category": "rl",
+            "authors": [
+              "Tianyuan Liu",
+              "Rutherford Agbeshi Patamia",
+              "Benjamin Champion",
+              "Akansel Cosgun",
+              "Richard Dazeley"
+            ],
+            "contentTypes": [
+              "paper"
+            ],
+            "type": "研究论文",
+            "publishedAt": "2026-09-17T09:34:29Z",
+            "sourceUpdatedAt": "2026-09-17T09:34:29Z",
+            "version": "v1",
+            "canonicalUrl": "https://arxiv.org/abs/2609.19962",
+            "links": [
+              {
+                "label": "论文原文",
+                "url": "https://arxiv.org/abs/2609.19962"
+              },
+              {
+                "label": "阅读全文",
+                "url": "https://arxiv.org/html/2609.19962v1"
+              }
+            ],
+            "tags": [
+              "cs.RO"
+            ],
+            "summary": "保留名义几何控制，以有界PPO残差修正接触并决定释放，把学习集中于容易卡住的局部阶段。",
+            "innovation": "保留名义几何控制，以有界PPO残差修正接触并决定释放，把学习集中于容易卡住的局部阶段。",
+            "evidence": "已核验arXiv原始API的标题、摘要、首次提交与最新修订时间；简讯依据作者摘要，不视作独立复现。",
+            "evidenceDetails": [
+              {
+                "url": "https://arxiv.org/abs/2609.19962",
+                "location": "Abstract；Submission history；arXiv API published/updated字段",
+                "supports": "保留名义几何控制，以有界PPO残差修正接触并决定释放，把学习集中于容易卡住的局部阶段。",
+                "checkedAt": "2026-09-18T09:32:32.367453+00:00"
+              }
+            ],
+            "dateEvidence": {
+              "url": "https://arxiv.org/abs/2609.19962",
+              "location": "arXiv首次提交时间；与本轮发现/修订日期分开"
+            },
+            "checkedAt": "2026-09-18T09:32:32.367453+00:00",
+            "reviewStatus": "abstract_verified",
+            "status": "brief_verified",
+            "editorialPriority": 0,
+            "editorialPriorityBasis": "缺少可比热度时按直接机器人关联、证据完整性与方法可复用性补充排序；非公开互动量。",
+            "popularity": {
+              "status": "unmeasured",
+              "score": null,
+              "metrics": {
+                "githubStars": null,
+                "hfUpvotes": null
+              },
+              "evidence": [],
+              "checkedAt": "2026-09-18T09:32:32.367453+00:00",
+              "basis": "仅为已核实公开关注信号；未知不当零，累计数不代表当日新增或研究质量。"
+            },
+            "discoveredAt": "2026-09-18T09:39:21.834Z",
+            "updatedAt": "2026-09-18T09:39:21.834Z",
+            "lastSeenAt": "2026-09-18T09:39:21.834Z",
+            "revisionEvents": []
+          }
+        }
+      ],
+      "aliasIds": []
+    },
+    {
+      "id": "arxiv:2609.19378",
+      "title": "Task-Oriented Active Learning of Residual Dynamics for Model Predictive Path Integral Control",
+      "zhTitle": "ToIA：学习残差动力学，救回MPPI在模型失配下的失败",
+      "category": "theory",
+      "authors": [
+        "Nobuaki Aoki",
+        "Hojin Lee",
+        "Stefan Sosnowski",
+        "Sandra Hirche"
+      ],
+      "contentTypes": [
+        "paper"
+      ],
+      "type": "研究论文",
+      "publishedAt": "2026-09-16T19:56:31Z",
+      "sourceUpdatedAt": "2026-09-16T19:56:31Z",
+      "version": "v1",
+      "canonicalUrl": "https://arxiv.org/abs/2609.19378",
+      "links": [
+        {
+          "label": "论文原文",
+          "url": "https://arxiv.org/abs/2609.19378"
+        },
+        {
+          "label": "阅读全文",
+          "url": "https://arxiv.org/html/2609.19378v1"
+        }
+      ],
+      "tags": [
+        "cs.RO",
+        "eess.SY",
+        "learning_control"
+      ],
+      "summary": "保留MPPI与物理模型，用任务相关的主动采样学习GP动力学残差；在固定的24个名义控制失败案例中救回21个。",
+      "innovation": "在名义动力学上使用高斯过程学习侧向加速度与偏航角加速度残差，保留MPPI求解器。ToIA复用同一批候选轨迹，估计较早位置的假设观测能减少多少后续状态的GP方差，再按任务成本相关性加权。它用解析条件协方差避免对每个假设观测重新规划，是近似的任务导向信息获取；不是完整贝叶斯最优双重控制，也不是RL或模仿学习。",
+      "evidence": "已读作者arXiv v1全文的方法、实验、消融和局限；未独立复现实验。评价及下一步验证属于编辑分析。",
+      "evidenceDetails": [
+        {
+          "url": "https://arxiv.org/html/2609.19378v1",
+          "location": "Section III",
+          "supports": "残差GP、同一rollout中的假设观测与任务相关方差下降；复用MPPI采样",
+          "checkedAt": "2026-09-20T06:21:37.526511+00:00"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.19378v1",
+          "location": "Sections IV-A–D；Table II",
+          "supports": "三张留出地图、15起终点×3种子、135次；(1,5)/(10,10)；名义/被动GP/ToIA成功计数；无噪声残差标签",
+          "checkedAt": "2026-09-20T06:21:37.526511+00:00"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.19378v1",
+          "location": "Section V-A；Figure 3",
+          "supports": "固定名义失败子集21/24；相对被动GP救回/损伤为33/7和38/1；完成步数中位差为0",
+          "checkedAt": "2026-09-20T06:21:37.526511+00:00"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.19378v1",
+          "location": "Table IV；Section V-C",
+          "supports": "关闭任务权重104/135和91/135，对比124/135和129/135",
+          "checkedAt": "2026-09-20T06:21:37.526511+00:00"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.19378v1",
+          "location": "Table II；Sections IV、V及Discussion",
+          "supports": "RTX 2080 Ti、20 Hz；跨运行p95的95分位44.39/39.68 ms；已知地形类别和仿真限制",
+          "checkedAt": "2026-09-20T06:21:37.526511+00:00"
+        }
+      ],
+      "dateEvidence": {
+        "url": "https://arxiv.org/abs/2609.19378",
+        "location": "arXiv首次提交时间；与本轮发现/修订日期分开"
+      },
+      "checkedAt": "2026-09-20T06:21:37.526511+00:00",
+      "reviewStatus": "primary_methods_results_and_limitations_read",
+      "status": "full_verified",
+      "editorialPriority": 98,
+      "editorialPriorityBasis": "按用户9月20日新增关注方向与对照证据完整性作专题编辑补充；不代表公开热度。",
+      "popularity": {
+        "status": "unmeasured",
+        "score": null,
+        "metrics": {
+          "githubStars": null,
+          "hfUpvotes": null
+        },
+        "evidence": [],
+        "checkedAt": "2026-09-20T06:18:02.838650+00:00",
+        "basis": "本次定向核验HF论文API返回404，票数未知；未核实可归属的专用代码仓库stars。专题采用编辑补充排序，不代表热度排名。"
+      },
+      "discoveredAt": "2026-09-18T09:39:21.834Z",
+      "updatedAt": "2026-09-20T06:21:37.526511+00:00",
+      "lastSeenAt": "2026-09-20T06:21:37.526511+00:00",
+      "revisionEvents": [],
+      "highlightSummary": "学习数据要服务后续动作：ToIA在24个名义MPPI失败案例中成功21个；普通被动GP反而比不学习更差。",
+      "background": "MPPI依赖模型预测来评价候选控制序列；地形引起的侧向运动和转向响应偏差会使名义模型选错动作。在线学习可以补模型，但采集“最不确定”的数据不一定有助于本次任务，在更新时间有限时甚至会拖累控制。本文将重点放在何时、在哪里获得对后续控制有价值的模型信息。",
+      "experiments": "仿真为三类已知地形上的移动机器人导航，三张留出地图×15组起终点×3个控制种子，每种方法/更新设置135次。密集与稀疏设置的观测/拟合间隔分别为(1,5)/(10,10)控制步。名义MPPI均为111/135（82.2%）；被动GP分别98/135（72.6%）、92/135（68.1%）；ToIA分别124/135（91.9%）、129/135（95.6%）。预先固定的24个名义失败案例中，ToIA两设置均成功21个。关闭任务相关权重后仅104/135、91/135。RTX 2080 Ti上跨运行p95控制耗时的95分位为44.39/39.68 ms，处于50 ms控制预算内，但这不是最坏时延保证。",
+      "conclusion": "在该仿真与算力设置中，任务相关的数据采集比被动学习或泛化的不确定性探索更能补偿名义模型失配。它改善了名义控制的困难案例，但并非处处占优；被动GP低于名义控制也提示“加入学习”本身不是改进证据。本文未提供真机、测量噪声或未知地形类别下的验证。",
+      "evaluation": "编辑分析：共享MPPI与GP配置、配对试验及去掉任务权重的消融，让接口收益较清楚。相比被动GP，密集设置为33次救回/7次新增失败，稀疏为38/1，不能只引用最终成功率。地形类别已知、每类独立GP、模拟残差标签无噪声，降低了实际辨识难度；信息收益只看同一候选轨迹，没有完整考虑后验更新后策略会如何改道。结果说明一种有效工程折中，尚无全局稳定或安全保证。",
+      "futureDirections": "研究假设：让GP后验和校准后的误差界接入鲁棒MPC或安全过滤器，在模型不可信时回退到名义控制；主动学习仍只采集当前任务附近有价值的数据。先在固定20 Hz和同采样/学习预算下测试真实轮式平台，加入轮胎打滑、测量噪声、地形误分类与非平稳负载；对照名义MPPI、被动GP、ToIA及带回退版本，分别统计经典基线失败的救回、原本成功的损伤、安全约束违规与尾部耗时。",
+      "learningClassical": {
+        "mode": "model",
+        "baseline": "MPPI与名义物理动力学模型；未建模的侧向与偏航响应使候选动作评价出现系统性误差。",
+        "cornerCase": "跨地形导航时出现模型失配，且在线观测/模型拟合次数有限；只追求整体不确定性下降可能学到对当前任务无用的数据。",
+        "learningRole": "GP学习动力学残差；ToIA把轨迹上的信息获取按任务相关性加权，保留经典MPPI控制框架。属于在线监督/主动学习，不是RL。",
+        "evidence": "每设置135次仿真：名义111/135，ToIA密集124/135、稀疏129/135；24个固定名义失败案例均救回21个。去掉任务权重降为104/135、91/135；被动GP反而只有98/135、92/135。",
+        "limitations": "地形类别已知、残差标签无噪声、仅仿真；仍存在新增失败。实际硬件、感知噪声、最坏时延与闭环安全未获证明。",
+        "nextTest": "在真实轮滑/误分类与固定计算预算下比较，并把GP可信度接入鲁棒MPC或安全回退；同时报告救回、损伤和约束违规，检验学习何时值得启用。"
+      },
+      "briefHistory": [
+        {
+          "promotedAt": "2026-09-20T06:21:37.526511+00:00",
+          "previous": {
+            "id": "arxiv:2609.19378",
+            "title": "Task-Oriented Active Learning of Residual Dynamics for Model Predictive Path Integral Control",
+            "zhTitle": "ToIA：面向任务的残差动力学主动学习",
+            "category": "theory",
+            "authors": [
+              "Nobuaki Aoki",
+              "Hojin Lee",
+              "Stefan Sosnowski",
+              "Sandra Hirche"
+            ],
+            "contentTypes": [
+              "paper"
+            ],
+            "type": "研究论文",
+            "publishedAt": "2026-09-16T19:56:31Z",
+            "sourceUpdatedAt": "2026-09-16T19:56:31Z",
+            "version": "v1",
+            "canonicalUrl": "https://arxiv.org/abs/2609.19378",
+            "links": [
+              {
+                "label": "论文原文",
+                "url": "https://arxiv.org/abs/2609.19378"
+              },
+              {
+                "label": "阅读全文",
+                "url": "https://arxiv.org/html/2609.19378v1"
+              }
+            ],
+            "tags": [
+              "cs.RO",
+              "eess.SY"
+            ],
+            "summary": "在MPPI控制中按任务相关性选择动力学探索，减少有限在线更新浪费在无关状态上。",
+            "innovation": "在MPPI控制中按任务相关性选择动力学探索，减少有限在线更新浪费在无关状态上。",
+            "evidence": "已核验arXiv原始API的标题、摘要、首次提交与最新修订时间；简讯依据作者摘要，不视作独立复现。",
+            "evidenceDetails": [
+              {
+                "url": "https://arxiv.org/abs/2609.19378",
+                "location": "Abstract；Submission history；arXiv API published/updated字段",
+                "supports": "在MPPI控制中按任务相关性选择动力学探索，减少有限在线更新浪费在无关状态上。",
+                "checkedAt": "2026-09-18T09:32:32.367453+00:00"
+              }
+            ],
+            "dateEvidence": {
+              "url": "https://arxiv.org/abs/2609.19378",
+              "location": "arXiv首次提交时间；与本轮发现/修订日期分开"
+            },
+            "checkedAt": "2026-09-18T09:32:32.367453+00:00",
+            "reviewStatus": "abstract_verified",
+            "status": "brief_verified",
+            "editorialPriority": 0,
+            "editorialPriorityBasis": "缺少可比热度时按直接机器人关联、证据完整性与方法可复用性补充排序；非公开互动量。",
+            "popularity": {
+              "status": "unmeasured",
+              "score": null,
+              "metrics": {
+                "githubStars": null,
+                "hfUpvotes": null
+              },
+              "evidence": [],
+              "checkedAt": "2026-09-18T09:32:32.367453+00:00",
+              "basis": "仅为已核实公开关注信号；未知不当零，累计数不代表当日新增或研究质量。"
+            },
+            "discoveredAt": "2026-09-18T09:39:21.834Z",
+            "updatedAt": "2026-09-18T09:39:21.834Z",
+            "lastSeenAt": "2026-09-18T09:39:21.834Z",
+            "revisionEvents": []
+          }
+        }
+      ],
+      "aliasIds": []
     }
   ],
   "editions": [
@@ -153951,6 +154324,8 @@
         "arxiv:2609.19976",
         "arxiv:2609.20107",
         "arxiv:2609.19850",
+        "arxiv:2609.19962",
+        "arxiv:2609.19378",
         "arxiv:2609.16331",
         "arxiv:2609.08292",
         "arxiv:2609.20756",
@@ -153996,7 +154371,6 @@
         "arxiv:2609.20048",
         "arxiv:2609.20034",
         "arxiv:2609.19974",
-        "arxiv:2609.19962",
         "arxiv:2609.19954",
         "arxiv:2609.19946",
         "arxiv:2609.19923",
@@ -154043,7 +154417,6 @@
         "arxiv:2609.19447",
         "arxiv:2609.19413",
         "arxiv:2609.19391",
-        "arxiv:2609.19378",
         "arxiv:2609.19375",
         "arxiv:2609.19367",
         "arxiv:2609.19362",
@@ -154147,6 +154520,8 @@
         "arxiv:2609.19976",
         "arxiv:2609.20107",
         "arxiv:2609.19850",
+        "arxiv:2609.19962",
+        "arxiv:2609.19378",
         "arxiv:2609.16331",
         "arxiv:2609.08292",
         "arxiv:2609.20756",
@@ -154192,7 +154567,6 @@
         "arxiv:2609.20048",
         "arxiv:2609.20034",
         "arxiv:2609.19974",
-        "arxiv:2609.19962",
         "arxiv:2609.19954",
         "arxiv:2609.19946",
         "arxiv:2609.19923",
@@ -154239,7 +154613,6 @@
         "arxiv:2609.19447",
         "arxiv:2609.19413",
         "arxiv:2609.19391",
-        "arxiv:2609.19378",
         "arxiv:2609.19375",
         "arxiv:2609.19367",
         "arxiv:2609.19362",
@@ -160331,9 +160704,453 @@
       "candidateCount": 5,
       "rankingNote": "1 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 站内关注度代理分 = 10×ln(1+已核验GitHub累计stars) + 20×ln(1+已核验Hugging Face论文upvotes)。仅合计可测项，缺失为null；全部缺失则不评分。证据来自官方API、公开论文及仓库页，具体来源和观测时刻见条目。只计可归属的仓库，排除共用基础框架和跨代系列；累计关注不等于本日增量、论文质量或全网排名，未测候选的关注度仍未知。",
       "rankingVersion": 1
+    },
+    {
+      "id": "2026-09-20-learning-control",
+      "label": "9月20日 · 学习补足经典理论专题",
+      "startedAt": "2026-09-20T06:07:57Z",
+      "completedAt": "2026-09-20T06:21:37.526511+00:00",
+      "windowStart": "2026-09-20T02:53:16.916657+00:00",
+      "windowEnd": "2026-09-20T06:21:37.526511+00:00",
+      "status": "targeted_supplement",
+      "summary": "按新增关注方向定向补读2篇已归档论文并升级完整分析，为今日G1换手报告补充经典方法对照；无新增研究身份，非额外全源扫描。",
+      "dailySummary": "今天新增“学习补足经典理论”专题：残差RL处理书本插入卡滞，ToIA用任务相关采样修正MPPI动力学，G1换手报告展示模仿学习替代简单映射的有限恢复。核心看经典基线在哪些条件下失败、学习救回多少、又引入什么失败。晨间同时收录OM-1、棋盘操作、SO-101负结果和三连杆摆起；公开热度不足的条目采用编辑补充排序。",
+      "sourceChecks": [
+        {
+          "name": "学习补足经典理论专题",
+          "status": "verified",
+          "note": "用户新增方向后的定向全文复核：两篇9月18日已发现简讯升级全文；9月20日G1已有全文增加对照注释。保留原稿日期和首次发现，不重复计数，不冒充本轮新论文。无额外全源扫描，不推进来源成功游标。",
+          "queries": [
+            "Hybrid Residual Reinforcement Learning for Contact-Rich Robotic Book Insertion",
+            "Task-Oriented Active Learning of Residual Dynamics for Model Predictive Path Integral Control"
+          ]
+        },
+        {
+          "name": "arXiv论文全文",
+          "status": "verified",
+          "note": "逐项读取两篇v1的HTML方法、实验和局限；未调用API/RSS、未完成修订扫描，保留早间API覆盖缺口。"
+        },
+        {
+          "name": "公开热度",
+          "status": "partial",
+          "note": "两篇HF论文API均404，票数为null；无法确认可归属仓库的累计stars，保持未知。专题编辑优先级不作热度证据。"
+        }
+      ],
+      "queryLog": [
+        {
+          "url": "https://arxiv.org/html/2609.19962v1",
+          "status": 200,
+          "checkedAt": "2026-09-20T06:08:48.290225+00:00"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.19378v1",
+          "status": 200,
+          "checkedAt": "2026-09-20T06:08:51.815701+00:00"
+        },
+        {
+          "id": "arxiv:2609.19962",
+          "url": "https://huggingface.co/api/papers/2609.19962",
+          "checkedAt": "2026-09-20T06:17:59.222002+00:00",
+          "status": 404
+        },
+        {
+          "id": "arxiv:2609.19378",
+          "url": "https://huggingface.co/api/papers/2609.19378",
+          "checkedAt": "2026-09-20T06:18:02.838650+00:00",
+          "status": 404
+        }
+      ],
+      "addedIds": [],
+      "updatedIds": [],
+      "promotedIds": [
+        "arxiv:2609.19962",
+        "arxiv:2609.19378"
+      ],
+      "briefAddedIds": [],
+      "briefUpdatedIds": [],
+      "candidateIds": [
+        "arxiv:2609.19962",
+        "arxiv:2609.19378"
+      ],
+      "recordsSnapshot": [
+        {
+          "id": "arxiv:2609.19962",
+          "title": "Hybrid Residual Reinforcement Learning for Contact-Rich Robotic Book Insertion",
+          "zhTitle": "残差RL补偿书本插入卡滞：保留几何控制，学习局部修正与释放",
+          "category": "rl",
+          "authors": [
+            "Tianyuan Liu",
+            "Rutherford Agbeshi Patamia",
+            "Benjamin Champion",
+            "Akansel Cosgun",
+            "Richard Dazeley"
+          ],
+          "contentTypes": [
+            "paper"
+          ],
+          "type": "研究论文",
+          "publishedAt": "2026-09-17T09:34:29Z",
+          "sourceUpdatedAt": "2026-09-17T09:34:29Z",
+          "version": "v1",
+          "canonicalUrl": "https://arxiv.org/abs/2609.19962",
+          "links": [
+            {
+              "label": "论文原文",
+              "url": "https://arxiv.org/abs/2609.19962"
+            },
+            {
+              "label": "阅读全文",
+              "url": "https://arxiv.org/html/2609.19962v1"
+            }
+          ],
+          "tags": [
+            "cs.RO",
+            "learning_control"
+          ],
+          "summary": "将有界PPO残差叠加在几何控制上，真机配对实验救回13个名义控制失败场景，但极窄间隙仍然困难。",
+          "innovation": "保留几何控制器提供对齐和插入方向；PPO输出有界局部运动残差及释放决策，覆盖持书插入和松爪后的推入。只有“张开—后撤—重新闭合”的短过渡使用脚本。策略使用12维几何状态而非图像或力觉，把探索集中到名义命令难以写准的接触敏感阶段；也与完全去掉名义项的PPO-only进行比较。",
+          "evidence": "已读作者arXiv v1全文的方法、实验、消融和局限；未独立复现实验。评价及下一步验证属于编辑分析。",
+          "evidenceDetails": [
+            {
+              "url": "https://arxiv.org/html/2609.19962v1",
+              "location": "Sections III-A–D；Table II",
+              "supports": "名义控制、12维观测、有界残差及学习释放；仅短过渡脚本化",
+              "checkedAt": "2026-09-20T06:21:37.526511+00:00"
+            },
+            {
+              "url": "https://arxiv.org/html/2609.19962v1",
+              "location": "Sections IV-A、V-A",
+              "supports": "2000条件/3 mm仿真27.10%、0%、93.28±2.25%；512条件/3.84 mm部署匹配37.89%、98.50±0.23%；三次训练统计",
+              "checkedAt": "2026-09-20T06:21:37.526511+00:00"
+            },
+            {
+              "url": "https://arxiv.org/html/2609.19962v1",
+              "location": "Sections IV-B、V-D；Tables III–IV",
+              "supports": "30组配对/60次真机试验、随机顺序、8/30与19/30、13次救回及2次反向失败、紧约束3/10；真机松中紧是分类而非毫米测量",
+              "checkedAt": "2026-09-20T06:21:37.526511+00:00"
+            },
+            {
+              "url": "https://arxiv.org/html/2609.19962v1",
+              "location": "Sections VI-A–C",
+              "supports": "范围限于插入末段；仿真邻书固定、真实邻书可移动；位姿标定与有限几何泛化限制",
+              "checkedAt": "2026-09-20T06:21:37.526511+00:00"
+            }
+          ],
+          "dateEvidence": {
+            "url": "https://arxiv.org/abs/2609.19962",
+            "location": "arXiv首次提交时间；与本轮发现/修订日期分开"
+          },
+          "checkedAt": "2026-09-20T06:21:37.526511+00:00",
+          "reviewStatus": "primary_methods_results_and_limitations_read",
+          "status": "full_verified",
+          "editorialPriority": 99,
+          "editorialPriorityBasis": "按用户9月20日新增关注方向与对照证据完整性作专题编辑补充；不代表公开热度。",
+          "popularity": {
+            "status": "unmeasured",
+            "score": null,
+            "metrics": {
+              "githubStars": null,
+              "hfUpvotes": null
+            },
+            "evidence": [],
+            "checkedAt": "2026-09-20T06:17:59.222002+00:00",
+            "basis": "本次定向核验HF论文API返回404，票数未知；未核实可归属的专用代码仓库stars。专题采用编辑补充排序，不代表热度排名。"
+          },
+          "discoveredAt": "2026-09-18T09:39:21.834Z",
+          "updatedAt": "2026-09-20T06:21:37.526511+00:00",
+          "lastSeenAt": "2026-09-20T06:21:37.526511+00:00",
+          "highlightSummary": "传统几何控制负责推进，残差RL修正接触与释放；真机成功率从8/30到19/30，紧约束场景仍仅3/10。",
+          "background": "已抓住的书即使目标位姿在运动学上可达，也可能因毫米级偏差、摩擦与相邻书本接触而卡在入口，或松爪后未完全就位。本文研究可行预插入姿态之后的最后阶段，感知、抓取获取与全局规划均不在任务范围内。基线是作者的任务空间名义几何控制器，不能将其不足等同于所有解析接触控制的能力边界。",
+          "experiments": "仿真使用Franka Panda与Isaac Lab。3 mm总侧向间隙、2000个固定初始条件下，名义控制成功27.10%，纯PPO在三次训练中均为0%，残差方案为93.28%±2.25%（三次训练的均值±样本标准差）。另一个部署匹配协议采用3.84 mm间隙和512个固定条件，残差为98.50%±0.23%，名义为37.89%；两套协议不能混为同一评测。真机xArm7测试30组配对条件，每组两控制器各执行一次、随机先后，共60次：名义8/30，残差19/30。残差救回22个名义失败中的13个，同时在2个名义成功条件下失败；紧约束组仍只成功3/10。",
+          "conclusion": "在本文预抓取书本插入设置中，显式几何结构与学习残差互补，比单独名义控制或本配置下纯PPO有效。证据支持局部接触控制的改进，不支持完整书架整理已解决，也不代表残差策略能创造缺失的物理空间或在所有初始条件下优于基线。",
+          "evaluation": "编辑分析：配对真机试验、失败救回与反向失败计数比单报平均成功率更有说服力。局限是仅一个书本几何、有限书架位置，且没有与充分调优的力反馈阻抗控制或接触MPC比较。真机书本位姿由TCP和标定变换推算，未显式观测滑移；仿真相邻书固定，真机相邻书会移动，因而高仿真成功率不能代替实物结果。有界残差也不自动带来接触安全或稳定性证明。",
+          "futureDirections": "研究假设：以力/触觉和几何误差为残差输入，在阻抗控制外层学习释放与局部修正，再以控制屏障或被动性约束限制接触动作。首先在同一组初始条件、相同控制频率和数据预算下比较名义控制、调优阻抗、接触MPC及其残差版本；评估新书材质、滑移和标定偏移，记录峰值接触力、救回/新增失败与完成时间。若槽口已因邻书移动而不可行，应让上层规划重排或重试，而非继续加大局部动作。",
+          "learningClassical": {
+            "mode": "residual",
+            "baseline": "任务空间名义几何控制器负责对齐、插入与就位；其固定局部规则难覆盖接触模式变化。本文未证明所有经典接触控制器均失败。",
+            "cornerCase": "目标运动学可达，但毫米级偏差与邻书接触造成入口卡滞、无法释放或未完全就位；极紧间隙可能限制物理可行性。",
+            "learningRole": "PPO在名义命令上叠加有界运动残差，并学习何时释放；保留全局/几何结构，只学习局部接触敏感环节。",
+            "evidence": "xArm7的30组配对条件：名义8/30→残差19/30；救回13个名义失败，同时新增2个失败。紧约束组仍仅3/10。另有独立训练重复与PPO-only仿真消融，详见完整分析。",
+            "limitations": "比较对象是特定名义控制器；真机样本小、无力反馈强基线，TCP推算位姿不覆盖滑移，残差限幅不等于安全证明。",
+            "nextTest": "与调优阻抗/接触MPC保持同数据和控制预算，测未见材质、滑移、峰值接触力及救回/新增失败；验证何时需要退出局部控制并重规划。"
+          },
+          "briefHistory": [
+            {
+              "promotedAt": "2026-09-20T06:21:37.526511+00:00",
+              "previous": {
+                "id": "arxiv:2609.19962",
+                "title": "Hybrid Residual Reinforcement Learning for Contact-Rich Robotic Book Insertion",
+                "zhTitle": "接触丰富书本插入的混合残差RL",
+                "category": "rl",
+                "authors": [
+                  "Tianyuan Liu",
+                  "Rutherford Agbeshi Patamia",
+                  "Benjamin Champion",
+                  "Akansel Cosgun",
+                  "Richard Dazeley"
+                ],
+                "contentTypes": [
+                  "paper"
+                ],
+                "type": "研究论文",
+                "publishedAt": "2026-09-17T09:34:29Z",
+                "sourceUpdatedAt": "2026-09-17T09:34:29Z",
+                "version": "v1",
+                "canonicalUrl": "https://arxiv.org/abs/2609.19962",
+                "links": [
+                  {
+                    "label": "论文原文",
+                    "url": "https://arxiv.org/abs/2609.19962"
+                  },
+                  {
+                    "label": "阅读全文",
+                    "url": "https://arxiv.org/html/2609.19962v1"
+                  }
+                ],
+                "tags": [
+                  "cs.RO"
+                ],
+                "summary": "保留名义几何控制，以有界PPO残差修正接触并决定释放，把学习集中于容易卡住的局部阶段。",
+                "innovation": "保留名义几何控制，以有界PPO残差修正接触并决定释放，把学习集中于容易卡住的局部阶段。",
+                "evidence": "已核验arXiv原始API的标题、摘要、首次提交与最新修订时间；简讯依据作者摘要，不视作独立复现。",
+                "evidenceDetails": [
+                  {
+                    "url": "https://arxiv.org/abs/2609.19962",
+                    "location": "Abstract；Submission history；arXiv API published/updated字段",
+                    "supports": "保留名义几何控制，以有界PPO残差修正接触并决定释放，把学习集中于容易卡住的局部阶段。",
+                    "checkedAt": "2026-09-18T09:32:32.367453+00:00"
+                  }
+                ],
+                "dateEvidence": {
+                  "url": "https://arxiv.org/abs/2609.19962",
+                  "location": "arXiv首次提交时间；与本轮发现/修订日期分开"
+                },
+                "checkedAt": "2026-09-18T09:32:32.367453+00:00",
+                "reviewStatus": "abstract_verified",
+                "status": "brief_verified",
+                "editorialPriority": 0,
+                "editorialPriorityBasis": "缺少可比热度时按直接机器人关联、证据完整性与方法可复用性补充排序；非公开互动量。",
+                "popularity": {
+                  "status": "unmeasured",
+                  "score": null,
+                  "metrics": {
+                    "githubStars": null,
+                    "hfUpvotes": null
+                  },
+                  "evidence": [],
+                  "checkedAt": "2026-09-18T09:32:32.367453+00:00",
+                  "basis": "仅为已核实公开关注信号；未知不当零，累计数不代表当日新增或研究质量。"
+                },
+                "discoveredAt": "2026-09-18T09:39:21.834Z",
+                "updatedAt": "2026-09-18T09:39:21.834Z",
+                "lastSeenAt": "2026-09-18T09:39:21.834Z",
+                "revisionEvents": []
+              }
+            }
+          ],
+          "aliasIds": []
+        },
+        {
+          "id": "arxiv:2609.19378",
+          "title": "Task-Oriented Active Learning of Residual Dynamics for Model Predictive Path Integral Control",
+          "zhTitle": "ToIA：学习残差动力学，救回MPPI在模型失配下的失败",
+          "category": "theory",
+          "authors": [
+            "Nobuaki Aoki",
+            "Hojin Lee",
+            "Stefan Sosnowski",
+            "Sandra Hirche"
+          ],
+          "contentTypes": [
+            "paper"
+          ],
+          "type": "研究论文",
+          "publishedAt": "2026-09-16T19:56:31Z",
+          "sourceUpdatedAt": "2026-09-16T19:56:31Z",
+          "version": "v1",
+          "canonicalUrl": "https://arxiv.org/abs/2609.19378",
+          "links": [
+            {
+              "label": "论文原文",
+              "url": "https://arxiv.org/abs/2609.19378"
+            },
+            {
+              "label": "阅读全文",
+              "url": "https://arxiv.org/html/2609.19378v1"
+            }
+          ],
+          "tags": [
+            "cs.RO",
+            "eess.SY",
+            "learning_control"
+          ],
+          "summary": "保留MPPI与物理模型，用任务相关的主动采样学习GP动力学残差；在固定的24个名义控制失败案例中救回21个。",
+          "innovation": "在名义动力学上使用高斯过程学习侧向加速度与偏航角加速度残差，保留MPPI求解器。ToIA复用同一批候选轨迹，估计较早位置的假设观测能减少多少后续状态的GP方差，再按任务成本相关性加权。它用解析条件协方差避免对每个假设观测重新规划，是近似的任务导向信息获取；不是完整贝叶斯最优双重控制，也不是RL或模仿学习。",
+          "evidence": "已读作者arXiv v1全文的方法、实验、消融和局限；未独立复现实验。评价及下一步验证属于编辑分析。",
+          "evidenceDetails": [
+            {
+              "url": "https://arxiv.org/html/2609.19378v1",
+              "location": "Section III",
+              "supports": "残差GP、同一rollout中的假设观测与任务相关方差下降；复用MPPI采样",
+              "checkedAt": "2026-09-20T06:21:37.526511+00:00"
+            },
+            {
+              "url": "https://arxiv.org/html/2609.19378v1",
+              "location": "Sections IV-A–D；Table II",
+              "supports": "三张留出地图、15起终点×3种子、135次；(1,5)/(10,10)；名义/被动GP/ToIA成功计数；无噪声残差标签",
+              "checkedAt": "2026-09-20T06:21:37.526511+00:00"
+            },
+            {
+              "url": "https://arxiv.org/html/2609.19378v1",
+              "location": "Section V-A；Figure 3",
+              "supports": "固定名义失败子集21/24；相对被动GP救回/损伤为33/7和38/1；完成步数中位差为0",
+              "checkedAt": "2026-09-20T06:21:37.526511+00:00"
+            },
+            {
+              "url": "https://arxiv.org/html/2609.19378v1",
+              "location": "Table IV；Section V-C",
+              "supports": "关闭任务权重104/135和91/135，对比124/135和129/135",
+              "checkedAt": "2026-09-20T06:21:37.526511+00:00"
+            },
+            {
+              "url": "https://arxiv.org/html/2609.19378v1",
+              "location": "Table II；Sections IV、V及Discussion",
+              "supports": "RTX 2080 Ti、20 Hz；跨运行p95的95分位44.39/39.68 ms；已知地形类别和仿真限制",
+              "checkedAt": "2026-09-20T06:21:37.526511+00:00"
+            }
+          ],
+          "dateEvidence": {
+            "url": "https://arxiv.org/abs/2609.19378",
+            "location": "arXiv首次提交时间；与本轮发现/修订日期分开"
+          },
+          "checkedAt": "2026-09-20T06:21:37.526511+00:00",
+          "reviewStatus": "primary_methods_results_and_limitations_read",
+          "status": "full_verified",
+          "editorialPriority": 98,
+          "editorialPriorityBasis": "按用户9月20日新增关注方向与对照证据完整性作专题编辑补充；不代表公开热度。",
+          "popularity": {
+            "status": "unmeasured",
+            "score": null,
+            "metrics": {
+              "githubStars": null,
+              "hfUpvotes": null
+            },
+            "evidence": [],
+            "checkedAt": "2026-09-20T06:18:02.838650+00:00",
+            "basis": "本次定向核验HF论文API返回404，票数未知；未核实可归属的专用代码仓库stars。专题采用编辑补充排序，不代表热度排名。"
+          },
+          "discoveredAt": "2026-09-18T09:39:21.834Z",
+          "updatedAt": "2026-09-20T06:21:37.526511+00:00",
+          "lastSeenAt": "2026-09-20T06:21:37.526511+00:00",
+          "highlightSummary": "学习数据要服务后续动作：ToIA在24个名义MPPI失败案例中成功21个；普通被动GP反而比不学习更差。",
+          "background": "MPPI依赖模型预测来评价候选控制序列；地形引起的侧向运动和转向响应偏差会使名义模型选错动作。在线学习可以补模型，但采集“最不确定”的数据不一定有助于本次任务，在更新时间有限时甚至会拖累控制。本文将重点放在何时、在哪里获得对后续控制有价值的模型信息。",
+          "experiments": "仿真为三类已知地形上的移动机器人导航，三张留出地图×15组起终点×3个控制种子，每种方法/更新设置135次。密集与稀疏设置的观测/拟合间隔分别为(1,5)/(10,10)控制步。名义MPPI均为111/135（82.2%）；被动GP分别98/135（72.6%）、92/135（68.1%）；ToIA分别124/135（91.9%）、129/135（95.6%）。预先固定的24个名义失败案例中，ToIA两设置均成功21个。关闭任务相关权重后仅104/135、91/135。RTX 2080 Ti上跨运行p95控制耗时的95分位为44.39/39.68 ms，处于50 ms控制预算内，但这不是最坏时延保证。",
+          "conclusion": "在该仿真与算力设置中，任务相关的数据采集比被动学习或泛化的不确定性探索更能补偿名义模型失配。它改善了名义控制的困难案例，但并非处处占优；被动GP低于名义控制也提示“加入学习”本身不是改进证据。本文未提供真机、测量噪声或未知地形类别下的验证。",
+          "evaluation": "编辑分析：共享MPPI与GP配置、配对试验及去掉任务权重的消融，让接口收益较清楚。相比被动GP，密集设置为33次救回/7次新增失败，稀疏为38/1，不能只引用最终成功率。地形类别已知、每类独立GP、模拟残差标签无噪声，降低了实际辨识难度；信息收益只看同一候选轨迹，没有完整考虑后验更新后策略会如何改道。结果说明一种有效工程折中，尚无全局稳定或安全保证。",
+          "futureDirections": "研究假设：让GP后验和校准后的误差界接入鲁棒MPC或安全过滤器，在模型不可信时回退到名义控制；主动学习仍只采集当前任务附近有价值的数据。先在固定20 Hz和同采样/学习预算下测试真实轮式平台，加入轮胎打滑、测量噪声、地形误分类与非平稳负载；对照名义MPPI、被动GP、ToIA及带回退版本，分别统计经典基线失败的救回、原本成功的损伤、安全约束违规与尾部耗时。",
+          "learningClassical": {
+            "mode": "model",
+            "baseline": "MPPI与名义物理动力学模型；未建模的侧向与偏航响应使候选动作评价出现系统性误差。",
+            "cornerCase": "跨地形导航时出现模型失配，且在线观测/模型拟合次数有限；只追求整体不确定性下降可能学到对当前任务无用的数据。",
+            "learningRole": "GP学习动力学残差；ToIA把轨迹上的信息获取按任务相关性加权，保留经典MPPI控制框架。属于在线监督/主动学习，不是RL。",
+            "evidence": "每设置135次仿真：名义111/135，ToIA密集124/135、稀疏129/135；24个固定名义失败案例均救回21个。去掉任务权重降为104/135、91/135；被动GP反而只有98/135、92/135。",
+            "limitations": "地形类别已知、残差标签无噪声、仅仿真；仍存在新增失败。实际硬件、感知噪声、最坏时延与闭环安全未获证明。",
+            "nextTest": "在真实轮滑/误分类与固定计算预算下比较，并把GP可信度接入鲁棒MPC或安全回退；同时报告救回、损伤和约束违规，检验学习何时值得启用。"
+          },
+          "briefHistory": [
+            {
+              "promotedAt": "2026-09-20T06:21:37.526511+00:00",
+              "previous": {
+                "id": "arxiv:2609.19378",
+                "title": "Task-Oriented Active Learning of Residual Dynamics for Model Predictive Path Integral Control",
+                "zhTitle": "ToIA：面向任务的残差动力学主动学习",
+                "category": "theory",
+                "authors": [
+                  "Nobuaki Aoki",
+                  "Hojin Lee",
+                  "Stefan Sosnowski",
+                  "Sandra Hirche"
+                ],
+                "contentTypes": [
+                  "paper"
+                ],
+                "type": "研究论文",
+                "publishedAt": "2026-09-16T19:56:31Z",
+                "sourceUpdatedAt": "2026-09-16T19:56:31Z",
+                "version": "v1",
+                "canonicalUrl": "https://arxiv.org/abs/2609.19378",
+                "links": [
+                  {
+                    "label": "论文原文",
+                    "url": "https://arxiv.org/abs/2609.19378"
+                  },
+                  {
+                    "label": "阅读全文",
+                    "url": "https://arxiv.org/html/2609.19378v1"
+                  }
+                ],
+                "tags": [
+                  "cs.RO",
+                  "eess.SY"
+                ],
+                "summary": "在MPPI控制中按任务相关性选择动力学探索，减少有限在线更新浪费在无关状态上。",
+                "innovation": "在MPPI控制中按任务相关性选择动力学探索，减少有限在线更新浪费在无关状态上。",
+                "evidence": "已核验arXiv原始API的标题、摘要、首次提交与最新修订时间；简讯依据作者摘要，不视作独立复现。",
+                "evidenceDetails": [
+                  {
+                    "url": "https://arxiv.org/abs/2609.19378",
+                    "location": "Abstract；Submission history；arXiv API published/updated字段",
+                    "supports": "在MPPI控制中按任务相关性选择动力学探索，减少有限在线更新浪费在无关状态上。",
+                    "checkedAt": "2026-09-18T09:32:32.367453+00:00"
+                  }
+                ],
+                "dateEvidence": {
+                  "url": "https://arxiv.org/abs/2609.19378",
+                  "location": "arXiv首次提交时间；与本轮发现/修订日期分开"
+                },
+                "checkedAt": "2026-09-18T09:32:32.367453+00:00",
+                "reviewStatus": "abstract_verified",
+                "status": "brief_verified",
+                "editorialPriority": 0,
+                "editorialPriorityBasis": "缺少可比热度时按直接机器人关联、证据完整性与方法可复用性补充排序；非公开互动量。",
+                "popularity": {
+                  "status": "unmeasured",
+                  "score": null,
+                  "metrics": {
+                    "githubStars": null,
+                    "hfUpvotes": null
+                  },
+                  "evidence": [],
+                  "checkedAt": "2026-09-18T09:32:32.367453+00:00",
+                  "basis": "仅为已核实公开关注信号；未知不当零，累计数不代表当日新增或研究质量。"
+                },
+                "discoveredAt": "2026-09-18T09:39:21.834Z",
+                "updatedAt": "2026-09-18T09:39:21.834Z",
+                "lastSeenAt": "2026-09-18T09:39:21.834Z",
+                "revisionEvents": []
+              }
+            }
+          ],
+          "aliasIds": []
+        }
+      ],
+      "briefsSnapshot": [],
+      "rankedIds": [
+        "arxiv:2609.19962",
+        "arxiv:2609.19378"
+      ],
+      "featuredIds": [
+        "arxiv:2609.19962",
+        "arxiv:2609.19378"
+      ],
+      "analysisNeededIds": [],
+      "briefIds": [],
+      "candidateCount": 2,
+      "rankingNote": "公开热度数据暂缺，按编辑关注度、原始发表日期排序；这不是全网热度榜。 站内关注度代理分 = 10×ln(1+已核验GitHub累计stars) + 20×ln(1+已核验Hugging Face论文upvotes)。仅合计可测项，缺失为null；全部缺失则不评分。证据来自官方API、公开论文及仓库页，具体来源和观测时刻见条目。只计可归属的仓库，排除共用基础框架和跨代系列；累计关注不等于本日增量、论文质量或全网排名，未测候选的关注度仍未知。",
+      "rankingVersion": 1
     }
   ],
-  "lastScanAt": "2026-09-20T02:53:16.916657+00:00",
+  "lastScanAt": "2026-09-20T06:21:37.526511+00:00",
   "briefs": [
     {
       "id": "arxiv:2608.30396",
@@ -214716,75 +215533,6 @@
       "revisionEvents": []
     },
     {
-      "id": "arxiv:2609.19962",
-      "title": "Hybrid Residual Reinforcement Learning for Contact-Rich Robotic Book Insertion",
-      "zhTitle": "接触丰富书本插入的混合残差RL",
-      "category": "rl",
-      "authors": [
-        "Tianyuan Liu",
-        "Rutherford Agbeshi Patamia",
-        "Benjamin Champion",
-        "Akansel Cosgun",
-        "Richard Dazeley"
-      ],
-      "contentTypes": [
-        "paper"
-      ],
-      "type": "研究论文",
-      "publishedAt": "2026-09-17T09:34:29Z",
-      "sourceUpdatedAt": "2026-09-17T09:34:29Z",
-      "version": "v1",
-      "canonicalUrl": "https://arxiv.org/abs/2609.19962",
-      "links": [
-        {
-          "label": "论文原文",
-          "url": "https://arxiv.org/abs/2609.19962"
-        },
-        {
-          "label": "阅读全文",
-          "url": "https://arxiv.org/html/2609.19962v1"
-        }
-      ],
-      "tags": [
-        "cs.RO"
-      ],
-      "summary": "保留名义几何控制，以有界PPO残差修正接触并决定释放，把学习集中于容易卡住的局部阶段。",
-      "innovation": "保留名义几何控制，以有界PPO残差修正接触并决定释放，把学习集中于容易卡住的局部阶段。",
-      "evidence": "已核验arXiv原始API的标题、摘要、首次提交与最新修订时间；简讯依据作者摘要，不视作独立复现。",
-      "evidenceDetails": [
-        {
-          "url": "https://arxiv.org/abs/2609.19962",
-          "location": "Abstract；Submission history；arXiv API published/updated字段",
-          "supports": "保留名义几何控制，以有界PPO残差修正接触并决定释放，把学习集中于容易卡住的局部阶段。",
-          "checkedAt": "2026-09-18T09:32:32.367453+00:00"
-        }
-      ],
-      "dateEvidence": {
-        "url": "https://arxiv.org/abs/2609.19962",
-        "location": "arXiv首次提交时间；与本轮发现/修订日期分开"
-      },
-      "checkedAt": "2026-09-18T09:32:32.367453+00:00",
-      "reviewStatus": "abstract_verified",
-      "status": "brief_verified",
-      "editorialPriority": 0,
-      "editorialPriorityBasis": "缺少可比热度时按直接机器人关联、证据完整性与方法可复用性补充排序；非公开互动量。",
-      "popularity": {
-        "status": "unmeasured",
-        "score": null,
-        "metrics": {
-          "githubStars": null,
-          "hfUpvotes": null
-        },
-        "evidence": [],
-        "checkedAt": "2026-09-18T09:32:32.367453+00:00",
-        "basis": "仅为已核实公开关注信号；未知不当零，累计数不代表当日新增或研究质量。"
-      },
-      "discoveredAt": "2026-09-18T09:39:21.834Z",
-      "updatedAt": "2026-09-18T09:39:21.834Z",
-      "lastSeenAt": "2026-09-18T09:39:21.834Z",
-      "revisionEvents": []
-    },
-    {
       "id": "arxiv:2609.19954",
       "title": "LapaTrack-3D: 6 DoF pre-operative shape tracking for laparoscopic surgery",
       "zhTitle": "LapaTrack-3D：腹腔镜术前形状跟踪",
@@ -217974,75 +218722,6 @@
       ],
       "dateEvidence": {
         "url": "https://arxiv.org/abs/2609.19391",
-        "location": "arXiv首次提交时间；与本轮发现/修订日期分开"
-      },
-      "checkedAt": "2026-09-18T09:32:32.367453+00:00",
-      "reviewStatus": "abstract_verified",
-      "status": "brief_verified",
-      "editorialPriority": 0,
-      "editorialPriorityBasis": "缺少可比热度时按直接机器人关联、证据完整性与方法可复用性补充排序；非公开互动量。",
-      "popularity": {
-        "status": "unmeasured",
-        "score": null,
-        "metrics": {
-          "githubStars": null,
-          "hfUpvotes": null
-        },
-        "evidence": [],
-        "checkedAt": "2026-09-18T09:32:32.367453+00:00",
-        "basis": "仅为已核实公开关注信号；未知不当零，累计数不代表当日新增或研究质量。"
-      },
-      "discoveredAt": "2026-09-18T09:39:21.834Z",
-      "updatedAt": "2026-09-18T09:39:21.834Z",
-      "lastSeenAt": "2026-09-18T09:39:21.834Z",
-      "revisionEvents": []
-    },
-    {
-      "id": "arxiv:2609.19378",
-      "title": "Task-Oriented Active Learning of Residual Dynamics for Model Predictive Path Integral Control",
-      "zhTitle": "ToIA：面向任务的残差动力学主动学习",
-      "category": "theory",
-      "authors": [
-        "Nobuaki Aoki",
-        "Hojin Lee",
-        "Stefan Sosnowski",
-        "Sandra Hirche"
-      ],
-      "contentTypes": [
-        "paper"
-      ],
-      "type": "研究论文",
-      "publishedAt": "2026-09-16T19:56:31Z",
-      "sourceUpdatedAt": "2026-09-16T19:56:31Z",
-      "version": "v1",
-      "canonicalUrl": "https://arxiv.org/abs/2609.19378",
-      "links": [
-        {
-          "label": "论文原文",
-          "url": "https://arxiv.org/abs/2609.19378"
-        },
-        {
-          "label": "阅读全文",
-          "url": "https://arxiv.org/html/2609.19378v1"
-        }
-      ],
-      "tags": [
-        "cs.RO",
-        "eess.SY"
-      ],
-      "summary": "在MPPI控制中按任务相关性选择动力学探索，减少有限在线更新浪费在无关状态上。",
-      "innovation": "在MPPI控制中按任务相关性选择动力学探索，减少有限在线更新浪费在无关状态上。",
-      "evidence": "已核验arXiv原始API的标题、摘要、首次提交与最新修订时间；简讯依据作者摘要，不视作独立复现。",
-      "evidenceDetails": [
-        {
-          "url": "https://arxiv.org/abs/2609.19378",
-          "location": "Abstract；Submission history；arXiv API published/updated字段",
-          "supports": "在MPPI控制中按任务相关性选择动力学探索，减少有限在线更新浪费在无关状态上。",
-          "checkedAt": "2026-09-18T09:32:32.367453+00:00"
-        }
-      ],
-      "dateEvidence": {
-        "url": "https://arxiv.org/abs/2609.19378",
         "location": "arXiv首次提交时间；与本轮发现/修订日期分开"
       },
       "checkedAt": "2026-09-18T09:32:32.367453+00:00",
@@ -222644,19 +223323,20 @@
     "2026-09-20": {
       "top5Ids": [
         "report:g1-dex3-brainco-handover-20260919",
+        "arxiv:2609.19962",
         "report:rewardai-om1-20260914",
-        "report:so101-simstudio-transfer-negative-20260919",
-        "hf:XvKuoMing/so101_chess",
-        "hf:burnboom/mujoco-triple-swingup"
+        "arxiv:2609.19378",
+        "report:so101-simstudio-transfer-negative-20260919"
       ],
-      "summary": "今天关注“模型输出如何变成可靠动作”：OM-1探索人类示教与跨机型接口，G1换手报告定位接触映射失效；棋盘操作展示动作插值的作用，SO-101负结果强调抓取阶段诊断。三连杆摆起提供经典规划与反馈基线。现有可测热度有限，Top 5包含编辑补充，所有结论注明仿真或公司演示范围。",
+      "summary": "今天新增“学习补足经典理论”专题：残差RL处理书本插入卡滞，ToIA用任务相关采样修正MPPI动力学，G1换手报告展示模仿学习替代简单映射的有限恢复。核心看经典基线在哪些条件下失败、学习救回多少、又引入什么失败。晨间同时收录OM-1、棋盘操作、SO-101负结果和三连杆摆起；公开热度不足的条目采用编辑补充排序。",
       "rankingNote": "1 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 站内关注度代理分 = 10×ln(1+已核验GitHub累计stars) + 20×ln(1+已核验Hugging Face论文upvotes)。仅合计可测项，缺失为null；全部缺失则不评分。证据来自官方API、公开论文及仓库页，具体来源和观测时刻见条目。只计可归属的仓库，排除共用基础框架和跨代系列；累计关注不等于本日增量、论文质量或全网排名，未测候选的关注度仍未知。",
       "editionIds": [
-        "2026-09-20-1000"
+        "2026-09-20-1000",
+        "2026-09-20-learning-control"
       ],
-      "candidateCount": 5
+      "candidateCount": 7
     }
   },
   "rankingMethodNote": "站内关注度代理分 = 10×ln(1+已核验GitHub累计stars) + 20×ln(1+已核验Hugging Face论文upvotes)。仅合计可测项，缺失为null；全部缺失则不评分。证据来自官方API、公开论文及仓库页，具体来源和观测时刻见条目。只计可归属的仓库，排除共用基础框架和跨代系列；累计关注不等于本日增量、论文质量或全网排名，未测候选的关注度仍未知。",
-  "popularityCheckedAt": "2026-09-20T02:53:16.916657+00:00"
+  "popularityCheckedAt": "2026-09-20T06:21:37.526511+00:00"
 }

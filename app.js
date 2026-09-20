@@ -1,9 +1,9 @@
 'use strict';
-const APP_VERSION = '2026-09-19-reader-v2.4-search';
+const APP_VERSION = '2026-09-20-reader-v2.5-learning-control';
 const FAVORITES_KEY = 'robotics-daily-favorites-v1';
 const FAVORITES_SEEN_KEY = 'robotics-daily-favorites-seen-v1';
 let db = window.ROBOTICS_DAILY || { records: [], editions: [], briefs: [] };
-const categories = [['all', '全部研究', '◈'], ['vla', 'VLA · 视觉语言动作', '⌘'], ['wam', 'WAM · 世界动作模型', '◎'], ['rl', 'RL · 强化学习', '↗'], ['theory', '经典机器人理论', '∑'], ['embodied', '操作、导航与具身', '⊞'], ['systems', '数据、评测与系统', '▤']];
+const categories = [['all', '全部研究', '◈'], ['vla', 'VLA · 视觉语言动作', '⌘'], ['wam', 'WAM · 世界动作模型', '◎'], ['rl', 'RL · 强化学习', '↗'], ['theory', '经典机器人理论', '∑'], ['learning_control', '学习补足经典理论', '⇄'], ['embodied', '操作、导航与具身', '⊞'], ['systems', '数据、评测与系统', '▤']];
 const contentTypes = [['all', '全部', ''], ['paper', '论文', '▤'], ['news', 'News', '◉'], ['report', 'Report', '▥'], ['blog', 'Blog', '✎']];
 const $ = id => document.getElementById(id);
 const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
@@ -44,7 +44,7 @@ function scoreOf(record) {
 function compareRecords(a, b) { return scoreOf(b) - scoreOf(a) || Number(!!b.featured) - Number(!!a.featured) || String(b.publishedAt || b.discoveredAt || '').localeCompare(String(a.publishedAt || a.discoveredAt || '')) || String(a.id).localeCompare(String(b.id)); }
 function editionDay(edition) { return dayOf(edition.completedAt || edition.scheduledAt || edition.startedAt) || /^\d{4}-\d{2}-\d{2}/.exec(edition.id || '')?.[0] || ''; }
 function normalize(value) { return String(value || '').normalize('NFKC').toLocaleLowerCase().replace(/[^\p{L}\p{N}]+/gu, ''); }
-function searchText(record) { return [record.title, record.zhTitle, record.summary, record.background, record.innovation, record.experiments, record.conclusion, record.evaluation, record.futureDirections, ...array(record.tags), ...array(record.authors)].filter(Boolean).join(' '); }
+function searchText(record) { return [record.title, record.zhTitle, record.summary, record.background, record.innovation, record.experiments, record.conclusion, record.evaluation, record.futureDirections, ...Object.values(record.learningClassical || {}).filter(value => typeof value === 'string'), ...array(record.tags), ...array(record.authors)].filter(Boolean).join(' '); }
 function withinEditDistance(a, b, limit = 1) {
   if (Math.abs(a.length - b.length) > limit) return false;
   if (limit === 1) {
@@ -120,7 +120,9 @@ function rebuild() {
     const ranked = array(edition.rankedIds).length ? edition.rankedIds : ids.filter(id => lookup.has(id)).sort((a, b) => compareRecords(lookup.get(a), lookup.get(b)));
     const full = Array.isArray(edition.featuredIds) ? edition.featuredIds : ranked.filter(id => lookup.get(id)?.background || snapshots.get(id)?.background).slice(0, 30);
     for (const id of ids) {
-      const latest = lookup.get(id), snapshot = snapshots.get(id), record = snapshot ? { ...latest, ...snapshot, contentTypes: latest?.contentTypes || snapshot.contentTypes, popularity: latest?.popularity || snapshot.popularity } : latest;
+      const latest = lookup.get(id), snapshot = snapshots.get(id);
+      const comparison = snapshot?.learningClassical || (snapshot?.version === latest?.version ? latest?.learningClassical : undefined);
+      const record = snapshot ? { ...latest, ...snapshot, contentTypes: latest?.contentTypes || snapshot.contentTypes, popularity: latest?.popularity || snapshot.popularity, learningClassical: comparison, tags: unique([...array(snapshot.tags), ...(comparison ? ['learning_control'] : [])]) } : latest;
       if (!record) continue;
       group.records.set(id, record); group.ids.add(id);
       if (full.includes(id) && record.background) group.fullIds.add(id); else group.briefIds.add(id);
@@ -164,7 +166,14 @@ function normalizeFavoriteAliases() {
   if (changed) storeFavorites();
 }
 function favoriteButton(record) { const active = favoriteIds.has(record.id); return `<button type="button" class="favorite-toggle" data-favorite="${esc(record.id)}" aria-pressed="${active}" aria-label="${active ? '取消收藏' : '收藏'}：${esc(recordTitle(record))}" title="${active ? '取消收藏' : '收藏研究'}">${active ? '★' : '☆'}</button>`; }
-function badges(record) { return `<span class="tag">${tagIcon}${esc(shortCategory(record.category))}</span>${getTypes(record).map(type => `<span class="tag neutral">${esc(contentTypes.find(item => item[0] === type)?.[1] || type)}</span>`).join('')}${hasFavoriteUpdate(record) ? '<span class="tag amber">收藏后有更新</span>' : ''}${record.changeType === 'updated' ? '<span class="tag amber">实质更新</span>' : ''}`; }
+function badges(record) { return `<span class="tag">${tagIcon}${esc(shortCategory(record.category))}</span>${array(record.tags).includes('learning_control') && record.category !== 'learning_control' ? `<span class="tag">⇄ 学习补足经典理论</span>` : ''}${getTypes(record).map(type => `<span class="tag neutral">${esc(contentTypes.find(item => item[0] === type)?.[1] || type)}</span>`).join('')}${hasFavoriteUpdate(record) ? '<span class="tag amber">收藏后有更新</span>' : ''}${record.changeType === 'updated' ? '<span class="tag amber">实质更新</span>' : ''}`; }
+function learningComparison(record) {
+  const comparison = record.learningClassical;
+  if (!comparison) return '';
+  const modes = {residual: '残差补偿', model: '学习建模', planner: '学习规划与优化', replacement: '策略替代', hybrid: '混合方案'};
+  const fields = [['传统方法与边界', 'baseline'], ['困难场景 · Corner case', 'cornerCase'], ['学习方法介入的位置', 'learningRole'], ['改善证据与比较条件', 'evidence'], ['尚未解决的问题', 'limitations'], ['下一步怎么验证 · 编辑分析', 'nextTest']];
+  return `<details class="analysis-details learning-case"${state.category === 'learning_control' ? ' open' : ''}><summary>学习 × 经典方法 <span class="analysis-hint">${esc(modes[comparison.mode] || '改进探索')}</span></summary><div class="analysis-grid">${fields.map(([label, key]) => `<section class="analysis-section"><h4>${label}</h4><p>${esc(comparison[key] || '尚待核验。').replace(/\n/g, '<br>')}</p></section>`).join('')}</div></details>`;
+}
 function recordLinks(record) {
   const links = [{ label: '原始来源', url: record.canonicalUrl }, ...array(record.links)];
   const seen = new Set();
@@ -179,7 +188,7 @@ function revisionNote(record) {
 function card(record) {
   const fields = [['研究背景', 'background'], ['核心创新', 'innovation'], ['实验与证据', 'experiments'], ['研究结论', 'conclusion'], ['评价与局限', 'evaluation'], ['可能的发展方向', 'futureDirections']];
   const anchor = 'paper-' + record.id;
-  return `<article class="paper" id="${esc(anchor)}" data-record-id="${esc(record.id)}"><div class="paper-top"><div class="paper-heading-row"><div class="paper-meta">${badges(record)}</div>${favoriteButton(record)}</div><h3><a href="${esc(safeUrl(record.canonicalUrl))}" target="_blank" rel="noopener noreferrer">${esc(recordTitle(record))}</a></h3>${record.zhTitle && record.title ? `<p class="en-title">${esc(record.title)}</p>` : ''}<p class="paper-summary">${esc(record.summary || record.innovation || '')}</p><div class="paper-footer"><div class="record-date">原文日期 ${esc(sourceDate(record.publishedAt) || '日期待核实')}${record.version ? ' · ' + esc(record.version) : ''}<br>收录 ${esc(shortTime(record.discoveredAt))}${record.updatedAt && record.updatedAt !== record.discoveredAt ? ' · 更新 ' + esc(shortTime(record.updatedAt)) : ''}</div><div class="links">${recordLinks(record)}</div></div>${state.mode === 'favorites' ? `<p class="favorite-source">跟踪原始来源：<a href="${esc(safeUrl(record.canonicalUrl))}" target="_blank" rel="noopener noreferrer">${esc(record.canonicalUrl || '待补充')}</a></p>` : ''}</div>${revisionNote(record)}<details class="analysis-details"><summary>阅读完整分析 <span class="analysis-hint">背景 · 创新 · 实验 · 结论 · 评价 · 展望</span></summary><div class="analysis-grid">${fields.map(([label, key], index) => `<section class="analysis-section ${index >= 4 ? 'editorial' : ''}"><h4><span>0${index + 1}</span>${label}${index >= 4 ? ' · 编辑分析' : ''}</h4><p>${esc(record[key] || '目前没有足够原文证据，待核实补充。').replace(/\n/g, '<br>')}</p></section>`).join('')}</div><div class="evidence-notes"><h4>原文依据 · ${esc(record.evidence || '以所列原始资料为准')}</h4>${array(record.evidenceDetails).map(evidence => `<p><a href="${esc(safeUrl(evidence.url))}" target="_blank" rel="noopener noreferrer">${esc(evidence.location || '原文')} ↗</a> · ${esc(evidence.supports)}</p>`).join('')}${record.popularity?.basis ? `<p>关注度依据：${esc(record.popularity.basis)}</p>` : ''}</div></details></article>`;
+  return `<article class="paper" id="${esc(anchor)}" data-record-id="${esc(record.id)}"><div class="paper-top"><div class="paper-heading-row"><div class="paper-meta">${badges(record)}</div>${favoriteButton(record)}</div><h3><a href="${esc(safeUrl(record.canonicalUrl))}" target="_blank" rel="noopener noreferrer">${esc(recordTitle(record))}</a></h3>${record.zhTitle && record.title ? `<p class="en-title">${esc(record.title)}</p>` : ''}<p class="paper-summary">${esc(record.summary || record.innovation || '')}</p><div class="paper-footer"><div class="record-date">原文日期 ${esc(sourceDate(record.publishedAt) || '日期待核实')}${record.version ? ' · ' + esc(record.version) : ''}<br>收录 ${esc(shortTime(record.discoveredAt))}${record.updatedAt && record.updatedAt !== record.discoveredAt ? ' · 更新 ' + esc(shortTime(record.updatedAt)) : ''}</div><div class="links">${recordLinks(record)}</div></div>${state.mode === 'favorites' ? `<p class="favorite-source">跟踪原始来源：<a href="${esc(safeUrl(record.canonicalUrl))}" target="_blank" rel="noopener noreferrer">${esc(record.canonicalUrl || '待补充')}</a></p>` : ''}</div>${revisionNote(record)}${learningComparison(record)}<details class="analysis-details"><summary>阅读完整分析 <span class="analysis-hint">背景 · 创新 · 实验 · 结论 · 评价 · 展望</span></summary><div class="analysis-grid">${fields.map(([label, key], index) => `<section class="analysis-section ${index >= 4 ? 'editorial' : ''}"><h4><span>0${index + 1}</span>${label}${index >= 4 ? ' · 编辑分析' : ''}</h4><p>${esc(record[key] || '目前没有足够原文证据，待核实补充。').replace(/\n/g, '<br>')}</p></section>`).join('')}</div><div class="evidence-notes"><h4>原文依据 · ${esc(record.evidence || '以所列原始资料为准')}</h4>${array(record.evidenceDetails).map(evidence => `<p><a href="${esc(safeUrl(evidence.url))}" target="_blank" rel="noopener noreferrer">${esc(evidence.location || '原文')} ↗</a> · ${esc(evidence.supports)}</p>`).join('')}${record.popularity?.basis ? `<p>关注度依据：${esc(record.popularity.basis)}</p>` : ''}</div></details></article>`;
 }
 function briefCard(record, unresolved = false) {
   const status = unresolved ? '待全文核验' : '创新点速览';

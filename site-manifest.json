@@ -1,9 +1,9 @@
 {
-  "appVersion": "2026-09-19-reader-v2.4-search",
-  "assetsVersion": "ec061ff21f65977cc5f7",
-  "latestEditionId": "2026-09-20-1000",
-  "records": 299,
-  "briefs": 837,
-  "lastScanAt": "2026-09-20T02:53:16.916657+00:00",
-  "contentHash": "62bc98522401ef656bf51fc816da9cc60859e9372ec48b9d8381bfa953c85280"
+  "appVersion": "2026-09-20-reader-v2.5-learning-control",
+  "assetsVersion": "aeff1a276cfb6e8a99ef",
+  "latestEditionId": "2026-09-20-learning-control",
+  "records": 301,
+  "briefs": 835,
+  "lastScanAt": "2026-09-20T06:21:37.526511+00:00",
+  "contentHash": "5fb62d35f607fd70d5f7f7c6dd76eaa7b382193a61572a438a29925cc4ec5558"
 }
