@@ -37333,6 +37333,480 @@
       "updatedAt": "2026-09-19T09:19:37.409434+00:00",
       "lastSeenAt": "2026-09-19T09:19:37.409434+00:00",
       "revisionEvents": []
+    },
+    {
+      "id": "report:rewardai-om1-20260914",
+      "title": "OM-1: Frontier Robot Intelligence, Learned Firsthand from Humans",
+      "zhTitle": "OM-1：用人类示教接口连接跨机型操作策略",
+      "category": "embodied",
+      "publishedAt": "2026-09-14",
+      "canonicalUrl": "https://www.rewardai.com/blog/OM-1/",
+      "version": "2026-09 官方报告",
+      "authors": [
+        "Reward AI"
+      ],
+      "tags": [
+        "人类示教",
+        "跨机型",
+        "触觉",
+        "低层控制",
+        "仿真RL"
+      ],
+      "contentTypes": [
+        "blog",
+        "report"
+      ],
+      "type": "技术报告",
+      "checkedAt": "2026-09-20T02:49:53.522632+00:00",
+      "reviewStatus": "primary_methods_results_and_limitations_read",
+      "status": "full_verified",
+      "editorialPriority": 99,
+      "editorialPriorityBasis": "可测热度不足时按可复用性及证据完整性补充，非互动数。",
+      "evidence": "阅读作者原始方法、实验记录和局限；未独立运行训练或机器人实验。评价与组合方向属于编辑分析和研究假设。",
+      "links": [
+        {
+          "label": "官方技术报告",
+          "url": "https://www.rewardai.com/blog/OM-1/"
+        },
+        {
+          "label": "官方发布视频",
+          "url": "https://www.youtube.com/watch?v=IJvyS2aPsnA"
+        },
+        {
+          "label": "机构说明",
+          "url": "https://www.rewardai.com/about/"
+        }
+      ],
+      "evidenceDetails": [
+        {
+          "url": "https://www.rewardai.com/blog/OM-1/",
+          "location": "Omnibody Hand；Human-native policy；Low-level controller",
+          "supports": "7自由度功能接口、多模态频率、动作接口和仿真RL低层控制",
+          "checkedAt": "2026-09-20T02:49:53.522632+00:00"
+        },
+        {
+          "url": "https://www.rewardai.com/blog/OM-1/",
+          "location": "EM/VIO对照图及实验说明",
+          "supports": "刚性共载、两个止点、8种速度×10次；最高速度组24.9与9.5毫米",
+          "checkedAt": "2026-09-20T02:49:53.522632+00:00"
+        },
+        {
+          "url": "https://www.rewardai.com/blog/OM-1/",
+          "location": "操作演示与数据时长说明",
+          "supports": "公司展示及少于30分钟人类示教的主张；未见受控成功率表",
+          "checkedAt": "2026-09-20T02:49:53.522632+00:00"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=IJvyS2aPsnA",
+          "location": "初始网页dateText / expandedMetadata.publishDate；RewardAI频道",
+          "supports": "公开日期2026年9月14日，区分月份博客自引",
+          "checkedAt": "2026-09-20T02:49:53.522632+00:00"
+        }
+      ],
+      "backfill": true,
+      "changeType": "backfill",
+      "dateNote": "补录：日期依据官方发布视频的2026年9月14日；博客自引仅标2026年9月，未推定具体发布时间。",
+      "summary": "以功能化手部接口、多模态示教与仿真低层控制连接人类动作和不同机器人；操作证据主要是公司演示。",
+      "background": "示教动作通常绑定某一机械手、关节定义和控制延迟，换机型便需要重新采集。高速度接触操作还要求手部姿态、力与视觉在时间上对齐，单靠视频或关节角并不充分。",
+      "innovation": "Omnibody Hand使用7自由度功能接口，并记录视觉、触觉、接近信息和手部运动；电磁跟踪辅助视觉惯性估计。策略保留不同传感流的时间频率，输出方向、速度、力与事件，由仿真RL训练的低层控制器适配具体机器人，并平滑异步控制输出。",
+      "experiments": "定位对照把两种跟踪器刚性固定，在已知机械止点间以8种速度各做10次测试；最高速度组平均误差为VIO 24.9毫米、电磁9.5毫米。操作部分展示开门、整理、投放与包装等；公司称新任务可用不足30分钟人类示教，但未提供统一任务成功率、试验次数、基线和置信区间。",
+      "conclusion": "报告提出了可讨论的人类数据采集与跨机型接口方案，定位对照有明确条件。演示尚不能证明任意机器人、任意任务上的泛化，少量示教时长也不等于训练时长。",
+      "evaluation": "编辑分析：可复用价值在于把手部功能和动作时序显式化。整体系统仍依赖专用传感硬件及仿真控制训练；数据总量、留出机型、架构和代码未充分披露。电磁环境适应与操作成功率需要进一步受控验证。",
+      "futureDirections": "研究假设：把方向、力、事件接口接入阻抗控制或MPC，再由VLA提供语义子目标。固定示教量与传感配置，完整留出一种机型，测任务成功率、力峰值、延迟与指尖误差；另消融电磁定位和异步平滑，区分采集质量与控制器的贡献。",
+      "popularity": {
+        "status": "unmeasured",
+        "score": null,
+        "metrics": {
+          "githubStars": null,
+          "hfUpvotes": null
+        },
+        "checkedAt": "2026-09-20T02:53:16.916657+00:00",
+        "evidence": [
+          {
+            "url": "https://www.youtube.com/watch?v=IJvyS2aPsnA",
+            "metric": "youtube_views_supplemental",
+            "value": 137916,
+            "checkedAt": "2026-09-20T02:33:24Z",
+            "scope": "公开累计播放，仅辅助证据；未纳入HF/GitHub代理分"
+          },
+          {
+            "url": "https://www.rewardai.com/blog/OM-1/",
+            "metric": "primary_release",
+            "checkedAt": "2026-09-20T02:53:16.916657+00:00"
+          }
+        ],
+        "basis": "官方发布视频累计137916次播放为辅助关注证据，未与HF票数/GitHub stars混算；统一代理分缺失，保留编辑补充排序。"
+      },
+      "discoveredAt": "2026-09-20T02:53:16.916657+00:00",
+      "updatedAt": "2026-09-20T02:53:16.916657+00:00",
+      "lastSeenAt": "2026-09-20T02:53:16.916657+00:00",
+      "revisionEvents": []
+    },
+    {
+      "id": "report:g1-dex3-brainco-handover-20260919",
+      "title": "G1 Dex3-to-Brainco Revo2 Handover Transfer",
+      "zhTitle": "G1换手实验：关节闭合比例相同，接触过程仍可能完全失败",
+      "category": "embodied",
+      "publishedAt": "2026-09-19T22:15:26Z",
+      "canonicalUrl": "https://github.com/sudarshan-sridhar/g1-dex3-to-brainco-handover",
+      "version": "0dd3fa079652577b15030d0c87d5ce0926d527bd",
+      "authors": [
+        "Sudarshan Sridhar"
+      ],
+      "tags": [
+        "跨手型",
+        "GR00T",
+        "动作映射",
+        "负结果",
+        "仿真"
+      ],
+      "contentTypes": [
+        "report"
+      ],
+      "type": "技术报告",
+      "checkedAt": "2026-09-20T02:49:53.522632+00:00",
+      "reviewStatus": "primary_methods_results_and_limitations_read",
+      "status": "full_verified",
+      "editorialPriority": 98,
+      "editorialPriorityBasis": "可测热度不足时按可复用性及证据完整性补充，非互动数。",
+      "evidence": "阅读作者原始方法、实验记录和局限；未独立运行训练或机器人实验。评价与组合方向属于编辑分析和研究假设。",
+      "links": [
+        {
+          "label": "完整技术报告",
+          "url": "https://github.com/sudarshan-sridhar/g1-dex3-to-brainco-handover/blob/0dd3fa079652577b15030d0c87d5ce0926d527bd/docs/technical_report.md"
+        },
+        {
+          "label": "逐次实验CSV",
+          "url": "https://github.com/sudarshan-sridhar/g1-dex3-to-brainco-handover/blob/0dd3fa079652577b15030d0c87d5ce0926d527bd/results/trials.csv"
+        },
+        {
+          "label": "开源代码",
+          "url": "https://github.com/sudarshan-sridhar/g1-dex3-to-brainco-handover"
+        },
+        {
+          "label": "Brainco权重",
+          "url": "https://huggingface.co/Sudarshan18/gr00t-n17-g1-brainco-handover"
+        }
+      ],
+      "evidenceDetails": [
+        {
+          "url": "https://github.com/sudarshan-sridhar/g1-dex3-to-brainco-handover/blob/0dd3fa079652577b15030d0c87d5ce0926d527bd/docs/technical_report.md",
+          "location": "Sections 1–6",
+          "supports": "固定基座、手部映射、拇指轨迹与专用示教；无硬件运行",
+          "checkedAt": "2026-09-20T02:49:53.522632+00:00"
+        },
+        {
+          "url": "https://github.com/sudarshan-sridhar/g1-dex3-to-brainco-handover/blob/0dd3fa079652577b15030d0c87d5ce0926d527bd/docs/technical_report.md",
+          "location": "Section 7；Section 9；Section 11",
+          "supports": "750/1050步条件、相同750步下C为2/50；数据量/训练步数及模拟限制",
+          "checkedAt": "2026-09-20T02:49:53.522632+00:00"
+        },
+        {
+          "url": "https://github.com/sudarshan-sridhar/g1-dex3-to-brainco-handover/blob/0dd3fa079652577b15030d0c87d5ce0926d527bd/results/trials.csv",
+          "location": "stage与success列；150条数据",
+          "supports": "独立按CSV统计A=8/50、B=0/50、C=10/50",
+          "checkedAt": "2026-09-20T02:49:53.522632+00:00"
+        },
+        {
+          "url": "https://huggingface.co/Sudarshan18/gr00t-n17-g1-brainco-handover",
+          "location": "HF公开API createdAt及模型卡",
+          "supports": "2026-09-19T22:15:26Z权重仓库创建，配套身份",
+          "checkedAt": "2026-09-20T02:49:53.522632+00:00"
+        }
+      ],
+      "dateNote": "日期为配套Brainco权重仓库创建时间；GitHub仓库同日公开。属于独立仿真工程报告，非新基础模型或真机论文。",
+      "summary": "150次仿真试验暴露简单关节比例映射的接触失配；针对新手型重新设计示教并微调后恢复部分能力。",
+      "background": "同一上身换上不同手掌后，关节角范围的对应并不保证指尖能在正确时间接触物体。需要区分手部几何、动作映射与已学策略三种误差，否则容易把执行失败全部归因于模型泛化。",
+      "innovation": "报告保留固定基座G1的上身，比较Dex3策略A、只做闭合比例映射的Brainco策略B，以及用Brainco专用示教微调的C。映射保持手腕和手臂目标不变，并用指尖路径说明：同时闭合时，Revo2拇指从上方穿过物体；改为先对掌再合指可形成有效支撑。",
+      "experiments": "Isaac Lab 2.3.2 / Isaac Sim 5.1，5种物体或初始位置配置各10次。逐条核对150行CSV：A为8/50、B为0/50、C为10/50；留出的圆杆与位置合计分别2/20、0/20、2/20。A用98条脚本示教训练16,000步；C在A上用44条新手型示教训练10,000步。A/B上限750控制步，C为1050步；C若也限750步只有2/50。",
+      "conclusion": "这一映射在该任务上没有产生有效抓取，新手型示教加微调能恢复有限能力。结果不证明C优于A，也不证明所有无需训练的重定向都会失败；当前绝大多数试验仍不成功。",
+      "evaluation": "编辑分析：提供逐次成功与失败记录、动作对齐修正和更严格的放置判据，复查价值较高。时间预算、数据量和抓姿同时改变，无法单独归因；示教是脚本生成，动力学和触觉也未完整代表真机。其贡献是可审计的失败机制，而非跨本体泛化已经解决。",
+      "futureDirections": "研究假设：在B中加入接触空间重定向和分阶段拇指对掌，再与残差微调比较。统一750/1050步两种预算、相同物体位置和评测种子，记录首次稳定抓取、交接、释放及接触力；最后用新手型真机验证几何改进是否仍有效。",
+      "popularity": {
+        "status": "verified",
+        "score": 0,
+        "metrics": {
+          "githubStars": 0,
+          "hfUpvotes": null
+        },
+        "checkedAt": "2026-09-20T02:35:24.476629+00:00",
+        "evidence": [
+          {
+            "url": "https://github.com/sudarshan-sridhar/g1-dex3-to-brainco-handover",
+            "apiUrl": "https://api.github.com/repos/sudarshan-sridhar/g1-dex3-to-brainco-handover",
+            "metric": "github_stars",
+            "value": 0,
+            "checkedAt": "2026-09-20T02:35:24.476629+00:00",
+            "scope": "累计公开关注，非当日增量"
+          }
+        ],
+        "basis": "专属GitHub仓库累计0 stars（已观测）；累计数不是当日热度，HF论文票数未知。"
+      },
+      "discoveredAt": "2026-09-20T02:53:16.916657+00:00",
+      "updatedAt": "2026-09-20T02:53:16.916657+00:00",
+      "lastSeenAt": "2026-09-20T02:53:16.916657+00:00",
+      "revisionEvents": []
+    },
+    {
+      "id": "hf:burnboom/mujoco-triple-swingup",
+      "title": "Triple Pendulum Swing-Up on a Cart in MuJoCo",
+      "zhTitle": "三连杆摆起：用轨迹优化、时变LQR与平衡控制组成可读基线",
+      "category": "theory",
+      "publishedAt": "2026-09-19T18:52:19Z",
+      "canonicalUrl": "https://huggingface.co/burnboom/mujoco-triple-swingup",
+      "version": "d2b8626b655296aedbe4b14f48975c90f1f0bb0a",
+      "authors": [
+        "burnboom"
+      ],
+      "tags": [
+        "欠驱动控制",
+        "直接配点",
+        "轨迹优化",
+        "LQR",
+        "MuJoCo"
+      ],
+      "contentTypes": [
+        "report"
+      ],
+      "type": "技术报告",
+      "checkedAt": "2026-09-20T02:49:53.522632+00:00",
+      "reviewStatus": "primary_methods_results_and_limitations_read",
+      "status": "full_verified",
+      "editorialPriority": 94,
+      "editorialPriorityBasis": "可测热度不足时按可复用性及证据完整性补充，非互动数。",
+      "evidence": "阅读作者原始方法、实验记录和局限；未独立运行训练或机器人实验。评价与组合方向属于编辑分析和研究假设。",
+      "links": [
+        {
+          "label": "控制器说明",
+          "url": "https://huggingface.co/burnboom/mujoco-triple-swingup"
+        },
+        {
+          "label": "完整控制代码",
+          "url": "https://huggingface.co/burnboom/mujoco-triple-swingup/blob/d2b8626b655296aedbe4b14f48975c90f1f0bb0a/triple_swingup_standalone.py"
+        }
+      ],
+      "evidenceDetails": [
+        {
+          "url": "https://huggingface.co/burnboom/mujoco-triple-swingup/blob/d2b8626b655296aedbe4b14f48975c90f1f0bb0a/README.md",
+          "location": "Results；How it works；Model；Notes",
+          "supports": "24次与64次扰动实验、模型参数、经典控制定位，均为作者报告",
+          "checkedAt": "2026-09-20T02:49:53.522632+00:00"
+        },
+        {
+          "url": "https://huggingface.co/burnboom/mujoco-triple-swingup/blob/d2b8626b655296aedbe4b14f48975c90f1f0bb0a/triple_swingup_standalone.py",
+          "location": "collocate / chain_constants / transition / run_episode / main",
+          "supports": "150段规划、冻结子步雅可比、混合单位noise、末端0.21弧度判据、默认4秒保持",
+          "checkedAt": "2026-09-20T02:49:53.522632+00:00"
+        },
+        {
+          "url": "https://huggingface.co/api/models/burnboom/mujoco-triple-swingup",
+          "location": "createdAt / sha",
+          "supports": "准确公开创建时间及固定代码版本",
+          "checkedAt": "2026-09-20T02:49:53.522632+00:00"
+        }
+      ],
+      "dateNote": "日期为公开模型仓库创建时间；这是经典最优控制结构的独立实现，不是首次解决三连杆摆起。",
+      "summary": "公开一份单文件的三连杆摆起实现，强调规划模型惯量一致性及闭环跟踪；数值成绩为作者仿真结果。",
+      "background": "单个滑车驱动三个摆杆时，开环轨迹对模型误差和扰动敏感，末端还需要进入平衡控制器的有效区域。这个小系统适合检查规划、线性化、坐标变换与执行层是否一致。",
+      "innovation": "采用稀疏直接配点求力与状态轨迹，显式约束动力学；读取MuJoCo编译模型的质量和惯量，避免用理想细杆参数代替胶囊几何。沿轨迹构建线性化与时变LQR，结束后切到直立附近的无限时域LQR。贡献是公开工程实现与故障分析，而非新控制理论。",
+      "experiments": "模型为1.5千克滑车、三根各0.4米/0.4千克摆杆，力限±60牛顿，规划滑车范围±2米；控制50Hz、物理200Hz。作者卡片报告24/24次摆起并保持、最差末端角0.04度，另以每组64次测试给出扰动0.02时100%、0.04时84%。这些结果未独立重跑，0.29秒求解时间也缺少硬件说明。",
+      "conclusion": "代码提供可复用的规划—跟踪—平衡基线，并显示局部闭环对该实现的重要性。尚无真机、参数失配或持续外扰验证，不能由有限初始扰动成功率推导全局稳定性。",
+      "evaluation": "编辑分析：源码的noise同时加到位置和速度，含滑车坐标，卡片统一写成“rad”不够准确；成功检查仅末端最大角小于0.21弧度。transition重复同一子步线性化，是冻结线性模型近似，不能泛称非线性系统在零阶保持下精确；“反馈律不能解决”的文字断言也不由实验支持。",
+      "futureDirections": "研究假设：保留此基线，加入沿子步逐次线性化、在线MPC或参数辨识。分开设置米、弧度及各自速度扰动，扫质量、惯量、延迟和执行饱和；报告整段轨迹约束违反率与保持时间，检验改进来自模型一致性还是更强反馈。",
+      "popularity": {
+        "status": "unmeasured",
+        "score": null,
+        "metrics": {
+          "githubStars": null,
+          "hfUpvotes": null
+        },
+        "checkedAt": "2026-09-20T02:53:16.916657+00:00",
+        "evidence": [],
+        "basis": "未获得可归属于本项研究的HF论文投票或专属仓库热度；缺失保留null。按编辑关注度补充，不代表全网热度。"
+      },
+      "discoveredAt": "2026-09-20T02:53:16.916657+00:00",
+      "updatedAt": "2026-09-20T02:53:16.916657+00:00",
+      "lastSeenAt": "2026-09-20T02:53:16.916657+00:00",
+      "revisionEvents": []
+    },
+    {
+      "id": "hf:XvKuoMing/so101_chess",
+      "title": "SO-101 Chess Manipulation with MolmoAct2",
+      "zhTitle": "SO-101棋盘操作：动作采样频率与插值影响闭环成功",
+      "category": "vla",
+      "publishedAt": "2026-09-19T10:48:17Z",
+      "canonicalUrl": "https://huggingface.co/XvKuoMing/so101_chess",
+      "version": "a8b6a73e2249cb67e8f2a99e615811640989e567",
+      "authors": [
+        "XvKuoMing"
+      ],
+      "tags": [
+        "MolmoAct2",
+        "模仿学习",
+        "动作插值",
+        "仿真",
+        "训练诊断"
+      ],
+      "contentTypes": [
+        "report"
+      ],
+      "type": "技术报告",
+      "checkedAt": "2026-09-20T02:49:53.522632+00:00",
+      "reviewStatus": "primary_methods_results_and_limitations_read",
+      "status": "full_verified",
+      "editorialPriority": 95,
+      "editorialPriorityBasis": "可测热度不足时按可复用性及证据完整性补充，非互动数。",
+      "evidence": "阅读作者原始方法、实验记录和局限；未独立运行训练或机器人实验。评价与组合方向属于编辑分析和研究假设。",
+      "links": [
+        {
+          "label": "模型与结果",
+          "url": "https://huggingface.co/XvKuoMing/so101_chess"
+        },
+        {
+          "label": "完整实验日志",
+          "url": "https://huggingface.co/XvKuoMing/so101_chess/blob/a8b6a73e2249cb67e8f2a99e615811640989e567/docs/EXPERIMENTS.md"
+        },
+        {
+          "label": "公开示教数据",
+          "url": "https://huggingface.co/datasets/XvKuoMing/so101_chess"
+        }
+      ],
+      "evidenceDetails": [
+        {
+          "url": "https://huggingface.co/XvKuoMing/so101_chess/blob/a8b6a73e2249cb67e8f2a99e615811640989e567/docs/EXPERIMENTS.md",
+          "location": "Sections 4.6、5.2、5.3；开篇日志保存说明",
+          "supports": "最终96回合、与早期评测重叠、8次结果翻转、插值对照及缺失原始日志",
+          "checkedAt": "2026-09-20T02:49:53.522632+00:00"
+        },
+        {
+          "url": "https://huggingface.co/XvKuoMing/so101_chess/blob/a8b6a73e2249cb67e8f2a99e615811640989e567/README.md",
+          "location": "Training；Results；Limitations",
+          "supports": "6095条/497565帧、LoRA训练条件、两类任务及仿真范围",
+          "checkedAt": "2026-09-20T02:49:53.522632+00:00"
+        },
+        {
+          "url": "https://huggingface.co/api/models/XvKuoMing/so101_chess",
+          "location": "createdAt / lastModified / sha",
+          "supports": "公开创建与固定版本",
+          "checkedAt": "2026-09-20T02:49:53.522632+00:00"
+        }
+      ],
+      "dateNote": "日期为本模型公开仓库创建时间；实验日志中的训练发生于9月14–16日，不把上传日写成实验日。",
+      "summary": "公开棋盘移动与移除策略及实验日志，说明低损失不等于可执行动作，部署插值与训练日程需一起检查。",
+      "background": "细小棋子要求语言指定位置、抓取与平滑放置连续成功。高频标签接近当前状态时，模仿策略可能学到近似不动的动作；降采样又可能让执行跳变把棋子碰倒。",
+      "innovation": "以MolmoAct2为底座，用脚本专家生成移动和移除两类示教，在10Hz学习、30Hz执行时插值关节目标，并匹配训练学习率衰减日程。公开失败阶段、几何修正和多轮训练记录；这是一套任务适配与诊断报告，不是新的VLA架构或下棋决策算法。",
+      "experiments": "6,095条示教、497,565帧，LoRA rank 64、batch 8、70,000步，RTX 5090。最终96次仿真为移动54/64、移除25/32，中位放置误差均5.3毫米；每回合450步，棋盘位置扰动至10毫米、关节起点至0.1弧度。早期同一检查点16个位置的对照，阶跃执行12/16，插值16/16。96次确认集包含训练期间评测过的位置，并非全新独立测试集。",
+      "conclusion": "该配置可以执行两类空间指令，剩余失败主要包括掉落、放置偏差和碰到邻棋。没有验证按棋子类别识别、捡起侧倒棋子或真机迁移；棋步仍由外部棋引擎决定。",
+      "evaluation": "编辑分析：完整日志揭示最终运行同时改了碰撞、数据构成、随机化、训练日程和时限，因此不能把总提升单独归给学习率。29个重放位置有8个结果翻转，提示小样本排序不稳；原始训练日志部分丢失，当前核验依赖作者整理记录。",
+      "futureDirections": "研究假设：把动作插值作为独立执行模块，与相同策略的重规划频率共同做消融。固定数据和总预算，预留未用于挑检查点的新棋盘布局与相机位姿，多随机种子测成功率、邻棋扰动及动作加速度；再补真机标定误差测试。",
+      "popularity": {
+        "status": "unmeasured",
+        "score": null,
+        "metrics": {
+          "githubStars": null,
+          "hfUpvotes": null
+        },
+        "checkedAt": "2026-09-20T02:53:16.916657+00:00",
+        "evidence": [],
+        "basis": "未获得可归属于本项研究的HF论文投票或专属仓库热度；缺失保留null。按编辑关注度补充，不代表全网热度。"
+      },
+      "discoveredAt": "2026-09-20T02:53:16.916657+00:00",
+      "updatedAt": "2026-09-20T02:53:16.916657+00:00",
+      "lastSeenAt": "2026-09-20T02:53:16.916657+00:00",
+      "revisionEvents": []
+    },
+    {
+      "id": "report:so101-simstudio-transfer-negative-20260919",
+      "title": "SO-101 SimStudio Lab01: Small-Data Transfer Failures",
+      "zhTitle": "SO-101小数据迁移负结果：接近物体以后，抓取为何仍失败",
+      "category": "vla",
+      "publishedAt": "2026-09-19T12:45:43Z",
+      "canonicalUrl": "https://huggingface.co/alexhegit/so101-simstudio-lab01-pnp-groot-n17",
+      "version": "62afcdf3573a1ec5a2d3de05b3b324eee4e2f038",
+      "authors": [
+        "alexhegit",
+        "rocPAI-Forge"
+      ],
+      "tags": [
+        "GR00T",
+        "VLA-JEPA",
+        "负结果",
+        "跨机型",
+        "评测协议"
+      ],
+      "contentTypes": [
+        "report"
+      ],
+      "type": "技术报告",
+      "checkedAt": "2026-09-20T02:49:53.522632+00:00",
+      "reviewStatus": "primary_methods_results_and_limitations_read",
+      "status": "full_verified",
+      "editorialPriority": 96,
+      "editorialPriorityBasis": "可测热度不足时按可复用性及证据完整性补充，非互动数。",
+      "evidence": "阅读作者原始方法、实验记录和局限；未独立运行训练或机器人实验。评价与组合方向属于编辑分析和研究假设。",
+      "links": [
+        {
+          "label": "GR00T负结果与权重",
+          "url": "https://huggingface.co/alexhegit/so101-simstudio-lab01-pnp-groot-n17"
+        },
+        {
+          "label": "JEPA负结果",
+          "url": "https://huggingface.co/alexhegit/so101-simstudio-lab01-pnp-vla-jepa"
+        },
+        {
+          "label": "平台实验与协议",
+          "url": "https://github.com/rocPAI-Forge/so101-simstudio/blob/main/labs/lab01_pnp/lab01_pnp.md"
+        }
+      ],
+      "evidenceDetails": [
+        {
+          "url": "https://huggingface.co/alexhegit/so101-simstudio-lab01-pnp-groot-n17/blob/62afcdf3573a1ec5a2d3de05b3b324eee4e2f038/README.md",
+          "location": "Training / Results / stage funnel",
+          "supports": "50条示教、10k训练、三组0/10及9→7→5→0阶段漏斗",
+          "checkedAt": "2026-09-20T02:49:53.522632+00:00"
+        },
+        {
+          "url": "https://huggingface.co/alexhegit/so101-simstudio-lab01-pnp-vla-jepa/blob/1802dc205b9c3b480a92a6d3a1bd0f4ddb9833a1/README.md",
+          "location": "Recipe / Evaluation",
+          "supports": "JEPA冻结Qwen、WM关闭、EGL 1/10及抓手oracle 0/10",
+          "checkedAt": "2026-09-20T02:49:53.522632+00:00"
+        },
+        {
+          "url": "https://github.com/rocPAI-Forge/so101-simstudio/blob/main/labs/lab01_pnp/lab01_pnp.md",
+          "location": "Sections 6.1–6.4.2",
+          "supports": "不同reset/推理后端/样本量条件、公开干预清单及机制解释的边界",
+          "checkedAt": "2026-09-20T02:49:53.522632+00:00"
+        },
+        {
+          "url": "https://huggingface.co/api/models/alexhegit/so101-simstudio-lab01-pnp-groot-n17",
+          "location": "createdAt / sha",
+          "supports": "GR00T适配权重9月19日公开",
+          "checkedAt": "2026-09-20T02:49:53.522632+00:00"
+        }
+      ],
+      "dateNote": "本期以9月19日首次公开的GR00T适配权重为增量，并补读同一实验平台的JEPA对照记录；平台文档和JEPA仓库更早存在，非基础模型官方评测。",
+      "summary": "同一50条示教的独立适配实验显示：离线损失下降后，机器人仍可能停在接近、闭爪或抬起之前。",
+      "background": "把大模型迁移到小型机械臂时，观察维度、动作含义、控制频率和预训练机型同时变化。只比较训练损失或运行是否成功，无法解释闭环为什么失败。",
+      "innovation": "报告公开固定适配检查点，并按接近8厘米、进入4厘米、闭爪、抬起和放置记录失败。结合起始姿态、渲染后端、抓手近距离触发和解冻视觉模型等干预，尝试区分执行栈错误与迁移学习不足；属于工程诊断，不是新训练算法。",
+      "experiments": "GR00T N1.7在50条SO-101仿真示教上训练10,000步、batch 4、冻结视觉与语言底座；EGL随机位置10次、固定位置10次和OSMesa随机位置10次均0成功。EGL随机组9/10进入8厘米、7/10进入4厘米、5/10闭爪而0抬起；使用RTC、执行horizon 8，真实动作块推理约2.53Hz。JEPA冻结Qwen、关闭世界模型的10k版本在固定位置EGL为1/10，近距离强制闭爪为0/10。均未独立复现。",
+      "conclusion": "这些适配配置尚未形成可靠抓取闭环，阶段指标比总成功率更能定位问题。不能外推为GR00T、JEPA或世界模型普遍无效；关闭世界模型训练的适配也不能代替原论文方法评测。",
+      "evaluation": "编辑分析：平台ACT 29/50与MolmoAct2 27/50采用不同reset方式和训练预算，不能直接做公平模型排名；JEPA多数只有10次试验。解冻后的退步与表征漂移相容，但缺乏受控消融，尚不是已证明机制。公开GR00T专门适配文档链接本轮404，结果以固定模型卡为准。",
+      "futureDirections": "研究假设：以同一动作单位、相机视角、起始姿态及推理调度建立小规模受控矩阵，再比较6维动作头重初始化、渐进解冻和更大示教量。每组用独立种子至少覆盖同一批位置，报告抓取各阶段、动作延迟和置信区间，检验失败来自数据还是接口。",
+      "popularity": {
+        "status": "unmeasured",
+        "score": null,
+        "metrics": {
+          "githubStars": null,
+          "hfUpvotes": null
+        },
+        "checkedAt": "2026-09-20T02:53:16.916657+00:00",
+        "evidence": [],
+        "basis": "平台仓库累计3 stars已见，但覆盖多个实验与工具，不直接归因于本项负结果；本研究可比热度未知。"
+      },
+      "discoveredAt": "2026-09-20T02:53:16.916657+00:00",
+      "updatedAt": "2026-09-20T02:53:16.916657+00:00",
+      "lastSeenAt": "2026-09-20T02:53:16.916657+00:00",
+      "revisionEvents": []
     }
   ],
   "editions": [
@@ -157711,9 +158185,2155 @@
       "candidateCount": 3,
       "rankingNote": "公开热度数据暂缺，按编辑关注度、原始发表日期排序；这不是全网热度榜。 站内关注度代理分 = 10×ln(1+已核验GitHub累计stars) + 20×ln(1+已核验Hugging Face论文upvotes)。仅合计可测项，缺失为null；全部缺失则不评分。证据来自官方API、公开论文及仓库页，具体来源和观测时刻见条目。只计可归属的仓库，排除共用基础框架和跨代系列；累计关注不等于本日增量、论文质量或全网排名，未测候选的关注度仍未知。",
       "rankingVersion": 1
+    },
+    {
+      "id": "2026-09-20-1000",
+      "label": "9月20日 · 早间研究",
+      "startedAt": "2026-09-20T02:13:42.948Z",
+      "completedAt": "2026-09-20T02:53:16.916657+00:00",
+      "windowStart": "2026-09-19T09:19:37.409434+00:00",
+      "windowEnd": "2026-09-20T02:53:16.916657+00:00",
+      "status": "partial",
+      "summary": "新增5项完整分析（含OM-1延迟补录）；证据不足的触觉模型与其他线索留待核验。arXiv API限流，未宣称完整覆盖。",
+      "dailySummary": "今天关注“模型输出如何变成可靠动作”：OM-1探索人类示教与跨机型接口，G1换手报告定位接触映射失效；棋盘操作展示动作插值的作用，SO-101负结果强调抓取阶段诊断。三连杆摆起提供经典规划与反馈基线。现有可测热度有限，Top 5包含编辑补充，所有结论注明仿真或公司演示范围。",
+      "sourceChecks": [
+        {
+          "name": "arXiv公告与API",
+          "status": "partial",
+          "lastSuccessAt": "2026-09-19T09:06:09.449154+00:00",
+          "windowStart": "2026-09-13T02:13:42Z",
+          "note": "早间公告HTTP200仍为9月18日批次、184条，与上轮一致。API首个updated请求429后停止，不请求镜像绕过；本轮未完成API新稿/修订分页，保留上次成功游标。复查部分既有版本缓存，未声称获取最新版本。"
+        },
+        {
+          "name": "Hugging Face",
+          "status": "partial",
+          "lastSuccessAt": "2026-09-20T02:30:30.985469+00:00",
+          "windowStart": "2026-09-13T02:13:42Z",
+          "note": "七张日榜131个唯一论文ID无新增；robotics模型1400条、lerobot数据集400条均到7日边界。较上轮317模型与41数据集SHA/身份变化；108次入口及卡片请求中106成功、2张401，另深读方法/代码/manifest。参数和任务变体按族抽读，未声称每卡全读或覆盖漏标签仓库。HapticWAM清单split与说明冲突，留待核。"
+        },
+        {
+          "name": "机构博客/报告",
+          "status": "partial",
+          "windowStart": "2026-09-06T02:13:42Z",
+          "note": "回看PI、DeepMind、NVIDIA、BAIR、Stanford、Skild、Generalist、Microsoft、RSS等21个入口，多数与上轮相同。补录RewardAI OM-1官方全文并核发布视频日期。TRI403，MIT返回挑战页，未算成功覆盖。"
+        },
+        {
+          "name": "新闻与中文公开报道",
+          "status": "partial",
+          "windowStart": "2026-09-13T02:13:42Z",
+          "note": "核IEEE、机器之心、量子位与日期限定搜索；多数新条目为旧研究转载或非机器人内容。Reuters401；新闻主要作为线索，收录回溯原始来源。"
+        },
+        {
+          "name": "X/Twitter公开索引",
+          "status": "partial",
+          "windowStart": "2026-09-17T02:13:42Z",
+          "priorityWindowStart": "2026-09-13T02:13:42Z",
+          "note": "站点和日期限定检索；RewardAI官方原帖403，未编互动数。只覆盖公开索引，不据无结果推断全站无新增。"
+        },
+        {
+          "name": "微信/小红书公开索引",
+          "status": "partial",
+          "windowStart": "2026-09-06T02:13:42Z",
+          "note": "14日窗口中文关键词和站点查询，无额外可核一手增量；登录及私域内容未覆盖。"
+        },
+        {
+          "name": "公开热度",
+          "status": "partial",
+          "note": "G1换手专属仓库累计0 stars已观测；OM-1官方视频累计137916播放仅辅助记录。SimStudio共享平台3 stars不归因单项研究。随后匿名GitHub API403限流，停止队列；未用基础模型star填补缺失。排名范围受限。"
+        },
+        {
+          "name": "周度与恢复回看",
+          "status": "ok",
+          "note": "本周9月14日已做30天补查；距上次成功检索不到一天，当前7/14日窗口覆盖。arXiv API缺口保留，下轮从最近成功游标补查。"
+        }
+      ],
+      "queryLog": [
+        {
+          "sourceBatch": "arxiv-index",
+          "url": "https://arxiv.org/list/cs.RO/new",
+          "requestedAt": "2026-09-20T02:28:48.321034+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:28:49.325123+00:00"
+        },
+        {
+          "sourceBatch": "arxiv-index",
+          "url": "https://export.arxiv.org/api/query?search_query=cat%3Acs.RO+OR+%28%28cat%3Acs.LG+OR+cat%3Acs.CV+OR+cat%3Acs.AI+OR+cat%3Aeess.SY+OR+cat%3Amath.OC%29+AND+%28all%3Arobot+OR+all%3Arobotic%29%29&sortBy=lastUpdatedDate&sortOrder=descending&start=0&max_results=500",
+          "requestedAt": "2026-09-20T02:28:52.627691+00:00",
+          "status": 429,
+          "error": "HTTP Error 429: Unknown Error",
+          "retryAfter": null,
+          "completedAt": "2026-09-20T02:28:53.189366+00:00"
+        },
+        {
+          "sourceBatch": "arxiv-list",
+          "url": "https://arxiv.org/list/cs.RO/new",
+          "requestedAt": "2026-09-20T02:28:48.321034+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:28:49.325123+00:00"
+        },
+        {
+          "sourceBatch": "code",
+          "url": "https://github.com/sudarshan-sridhar/g1-dex3-to-brainco-handover",
+          "requestedAt": "2026-09-20T02:35:16.592185+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:35:17.855726+00:00"
+        },
+        {
+          "sourceBatch": "code",
+          "url": "https://github.com/stevenryanrobot/wholebodycontact/tree/plug-and-play-eval-v1",
+          "requestedAt": "2026-09-20T02:35:19.460604+00:00",
+          "status": 404,
+          "error": "HTTP Error 404: Not Found",
+          "retryAfter": null,
+          "completedAt": "2026-09-20T02:35:20.067769+00:00"
+        },
+        {
+          "sourceBatch": "code",
+          "url": "https://github.com/kaichen-z/VLA-HAND/tree/Kai_final/yuzhench_distill_editor/baselines",
+          "requestedAt": "2026-09-20T02:35:21.680698+00:00",
+          "status": 404,
+          "error": "HTTP Error 404: Not Found",
+          "retryAfter": null,
+          "completedAt": "2026-09-20T02:35:22.329928+00:00"
+        },
+        {
+          "sourceBatch": "code",
+          "url": "https://api.github.com/repos/sudarshan-sridhar/g1-dex3-to-brainco-handover",
+          "requestedAt": "2026-09-20T02:35:23.938881+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:35:24.476629+00:00"
+        },
+        {
+          "sourceBatch": "discovery-followup",
+          "url": "https://www.youtube.com/watch?v=IJvyS2aPsnA",
+          "requestedAt": "2026-09-20T02:33:23.802437+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:33:24.920938+00:00"
+        },
+        {
+          "sourceBatch": "discovery-followup",
+          "url": "https://www.rewardai.com/blog/",
+          "requestedAt": "2026-09-20T02:33:26.536016+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:33:32.094206+00:00"
+        },
+        {
+          "sourceBatch": "discovery-followup",
+          "url": "https://www.rewardai.com/about/",
+          "requestedAt": "2026-09-20T02:33:33.703944+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:33:37.966403+00:00"
+        },
+        {
+          "sourceBatch": "discovery-followup",
+          "url": "https://agentic-intelligence-lab.org/2026/08/04/CWI-blog.html",
+          "requestedAt": "2026-09-20T02:33:39.571363+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:33:42.089591+00:00"
+        },
+        {
+          "sourceBatch": "discovery-followup",
+          "url": "https://agentic-intelligence-lab.org/2026/08/04/rombrl-post.html",
+          "requestedAt": "2026-09-20T02:33:43.700251+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:33:48.025617+00:00"
+        },
+        {
+          "sourceBatch": "discovery-followup",
+          "url": "https://agentic-intelligence-lab.org/2026/08/10/causalvae-world-models.html",
+          "requestedAt": "2026-09-20T02:33:49.626821+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:33:52.113824+00:00"
+        },
+        {
+          "sourceBatch": "discovery-pages",
+          "url": "https://www.rewardai.com/blog/OM-1/",
+          "requestedAt": "2026-09-20T02:31:01.517779+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:31:04.807370+00:00"
+        },
+        {
+          "sourceBatch": "discovery-pages",
+          "url": "https://agentic-intelligence-lab.org/blog/",
+          "requestedAt": "2026-09-20T02:31:06.407844+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:31:08.885014+00:00"
+        },
+        {
+          "sourceBatch": "discovery-pages",
+          "url": "https://chenwangjeremy.net/",
+          "requestedAt": "2026-09-20T02:31:10.491410+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:31:15.936442+00:00"
+        },
+        {
+          "sourceBatch": "gh-deep",
+          "url": "https://api.github.com/repos/rocPAI-Forge/so101-simstudio",
+          "requestedAt": "2026-09-20T02:42:55.648245+00:00",
+          "status": 403,
+          "error": "HTTP Error 403: rate limit exceeded",
+          "retryAfter": null,
+          "completedAt": "2026-09-20T02:42:56.097112+00:00"
+        },
+        {
+          "sourceBatch": "handreport",
+          "url": "https://raw.githubusercontent.com/sudarshan-sridhar/g1-dex3-to-brainco-handover/0dd3fa079652577b15030d0c87d5ce0926d527bd/docs/architecture.md",
+          "requestedAt": "2026-09-20T02:36:24.155562+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:36:24.677304+00:00"
+        },
+        {
+          "sourceBatch": "handreport",
+          "url": "https://raw.githubusercontent.com/sudarshan-sridhar/g1-dex3-to-brainco-handover/0dd3fa079652577b15030d0c87d5ce0926d527bd/docs/assignment2_pipeline.md",
+          "requestedAt": "2026-09-20T02:36:26.282123+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:36:27.270257+00:00"
+        },
+        {
+          "sourceBatch": "handreport",
+          "url": "https://raw.githubusercontent.com/sudarshan-sridhar/g1-dex3-to-brainco-handover/0dd3fa079652577b15030d0c87d5ce0926d527bd/docs/correspondence.md",
+          "requestedAt": "2026-09-20T02:36:28.875902+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:36:29.443885+00:00"
+        },
+        {
+          "sourceBatch": "handreport",
+          "url": "https://raw.githubusercontent.com/sudarshan-sridhar/g1-dex3-to-brainco-handover/0dd3fa079652577b15030d0c87d5ce0926d527bd/docs/hand_models.md",
+          "requestedAt": "2026-09-20T02:36:31.053312+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:36:33.887620+00:00"
+        },
+        {
+          "sourceBatch": "handreport",
+          "url": "https://raw.githubusercontent.com/sudarshan-sridhar/g1-dex3-to-brainco-handover/0dd3fa079652577b15030d0c87d5ce0926d527bd/docs/provenance.md",
+          "requestedAt": "2026-09-20T02:36:35.492852+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:36:36.119360+00:00"
+        },
+        {
+          "sourceBatch": "handreport",
+          "url": "https://raw.githubusercontent.com/sudarshan-sridhar/g1-dex3-to-brainco-handover/0dd3fa079652577b15030d0c87d5ce0926d527bd/docs/sim_to_real_plan.md",
+          "requestedAt": "2026-09-20T02:36:37.725281+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:36:38.354365+00:00"
+        },
+        {
+          "sourceBatch": "handreport",
+          "url": "https://raw.githubusercontent.com/sudarshan-sridhar/g1-dex3-to-brainco-handover/0dd3fa079652577b15030d0c87d5ce0926d527bd/docs/technical_report.md",
+          "requestedAt": "2026-09-20T02:36:39.959712+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:36:40.444135+00:00"
+        },
+        {
+          "sourceBatch": "handreport",
+          "url": "https://raw.githubusercontent.com/sudarshan-sridhar/g1-dex3-to-brainco-handover/0dd3fa079652577b15030d0c87d5ce0926d527bd/results/plots/success_by_configuration.png",
+          "requestedAt": "2026-09-20T02:36:42.050711+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:36:42.543338+00:00"
+        },
+        {
+          "sourceBatch": "handreport",
+          "url": "https://raw.githubusercontent.com/sudarshan-sridhar/g1-dex3-to-brainco-handover/0dd3fa079652577b15030d0c87d5ce0926d527bd/results/plots/task_progress_by_stage.png",
+          "requestedAt": "2026-09-20T02:36:44.149529+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:36:44.621527+00:00"
+        },
+        {
+          "sourceBatch": "handreport",
+          "url": "https://raw.githubusercontent.com/sudarshan-sridhar/g1-dex3-to-brainco-handover/0dd3fa079652577b15030d0c87d5ce0926d527bd/results/plots/training_loss.png",
+          "requestedAt": "2026-09-20T02:36:46.227046+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:36:46.676716+00:00"
+        },
+        {
+          "sourceBatch": "handreport",
+          "url": "https://raw.githubusercontent.com/sudarshan-sridhar/g1-dex3-to-brainco-handover/0dd3fa079652577b15030d0c87d5ce0926d527bd/results/results_table.md",
+          "requestedAt": "2026-09-20T02:36:48.281715+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:36:48.906789+00:00"
+        },
+        {
+          "sourceBatch": "handreport",
+          "url": "https://raw.githubusercontent.com/sudarshan-sridhar/g1-dex3-to-brainco-handover/0dd3fa079652577b15030d0c87d5ce0926d527bd/results/tracking_error.md",
+          "requestedAt": "2026-09-20T02:36:50.512771+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:36:50.961135+00:00"
+        },
+        {
+          "sourceBatch": "handreport",
+          "url": "https://raw.githubusercontent.com/sudarshan-sridhar/g1-dex3-to-brainco-handover/0dd3fa079652577b15030d0c87d5ce0926d527bd/results/trials.csv",
+          "requestedAt": "2026-09-20T02:36:52.563809+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:36:53.002694+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/blog",
+          "requestedAt": "2026-09-20T02:32:10.159765+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:32:10.818241+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/MIT-Media-Lab/vla-hand-table1/raw/ba7200776f4de6d2fb3deba0c2c6d524b96e9ac9/README.md",
+          "requestedAt": "2026-09-20T02:32:14.124551+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:32:14.791808+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/armteam/hapticwam-ablations/raw/bcfefb1e1fe870f6bf41b4763925b9a2c5231178/README.md",
+          "requestedAt": "2026-09-20T02:32:18.093885+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:32:18.664060+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/armteam/hapticwam-teacher/raw/e834b1dea669b4e4ed2a8697410d9b43f1cd7212/README.md",
+          "requestedAt": "2026-09-20T02:32:21.968759+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:32:22.705143+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/MIT-Media-Lab/vla-hand-baselines/raw/1c647e9f3e2c7987febd29f46f4ec381a659543d/README.md",
+          "requestedAt": "2026-09-20T02:32:26.009701+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:32:26.478541+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/armteam/hapticwam-baselines/raw/cefaf45dcdd8de2b5096ce3039ad0dbc9c6abff2/README.md",
+          "requestedAt": "2026-09-20T02:32:29.784271+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:32:30.304578+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/armteam/hapticwam-student/raw/923d968835df8cbcdbe659ad7d13fa6c99517d64/README.md",
+          "requestedAt": "2026-09-20T02:32:33.606981+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:32:33.983680+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/davidzhou302/ActiveScale/raw/e9e8f8918a3cfd63580ed07625bb6e0739674a33/README.md",
+          "requestedAt": "2026-09-20T02:32:37.285570+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:32:37.681973+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/hwihwalab/neuro-robo-connectome/raw/e3fa95005de8799a28c9c968803eea8cbaff4dfd/README.md",
+          "requestedAt": "2026-09-20T02:32:40.988195+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:32:41.395730+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/hwihwalab/malecns-connectome-robotics-2026/raw/d8b279cc43e094c66257a3aebf2d29c4b4d09cc7/README.md",
+          "requestedAt": "2026-09-20T02:32:44.703181+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:32:45.232173+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/Nuoya/wph-models/raw/876f512ab6095ab94eda048b5421a853ab3fa846/README.md",
+          "requestedAt": "2026-09-20T02:32:48.537526+00:00",
+          "status": 401,
+          "error": "HTTP Error 401: Unauthorized",
+          "retryAfter": null,
+          "completedAt": "2026-09-20T02:32:48.979641+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/aabyaneh/cawm/raw/6fa66bdc446d78f5dbcf967ddd61833418378cab/README.md",
+          "requestedAt": "2026-09-20T02:32:52.286216+00:00",
+          "status": 401,
+          "error": "HTTP Error 401: Unauthorized",
+          "retryAfter": null,
+          "completedAt": "2026-09-20T02:32:52.697335+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/Geraldwastaken/wholebodycontact-plugandplay/raw/08cf45efa899aee43d1350a5a7cf9b3ff52336e8/README.md",
+          "requestedAt": "2026-09-20T02:32:56.003866+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:32:56.391699+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/jungwook2358/allex-eef-AB-h16/raw/e53143a1a5951a747384a8a048472aaafb1761e9/README.md",
+          "requestedAt": "2026-09-20T02:32:59.697332+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:33:00.053297+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/jungwook2358/allex-eef-N-robotonly-h16/raw/64c607524916ee869cf725fb5e47a4abbf5e2486/README.md",
+          "requestedAt": "2026-09-20T02:33:03.360365+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:33:03.771834+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/openroboto-ai/champion/raw/a6774d34570de3236613bf6765be5f111e9bc002/README.md",
+          "requestedAt": "2026-09-20T02:33:07.075329+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:33:07.572674+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/jungwook2358/allex-eef-N-h16/raw/32897166dde1a8df60f8fb0baf9d194d771672dd/README.md",
+          "requestedAt": "2026-09-20T02:33:10.875916+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:33:11.270220+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/xunden/tartanimu-xunden-iros2026/raw/ba24a4231772ce58f89391d460eed162897134fd/README.md",
+          "requestedAt": "2026-09-20T02:33:14.576228+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:33:14.926717+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/aabyaneh/fasterwam/raw/dbdf2ca576397eb16b9c4a8f63d427b0280d6ee3/README.md",
+          "requestedAt": "2026-09-20T02:33:18.235019+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:33:18.557183+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/hmkang/wam_ctxpool_mimonly/raw/e77b83ba63f94a1dfc0090144d06c1cef3042db0/README.md",
+          "requestedAt": "2026-09-20T02:33:21.870125+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:33:22.231375+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/jiankimr/gr00t1.5n_libero10_x05/raw/d3294ace536e84bd1c400557a104754ff843d802/README.md",
+          "requestedAt": "2026-09-20T02:33:25.537601+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:33:26.294470+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/jiankimr/gr00t1.5n_libero10_x04/raw/e0bd0ae87f7ab090827bdc57b4255d4c91c89bce/README.md",
+          "requestedAt": "2026-09-20T02:33:29.604603+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:33:30.035880+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/mim-chess-vlas/train_800_complex__bbox__blackout_a50__sim__all_cameras__live__pi05__seed_0/raw/77530a2d27a5909569bc69384dc2eb48330bc90e/README.md",
+          "requestedAt": "2026-09-20T02:33:33.346640+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:33:33.838654+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/snjzz38/smolvla_so101_grab_ball/raw/268b1ac76217d210a1a0ff5e829a82a227fddc88/README.md",
+          "requestedAt": "2026-09-20T02:33:37.151002+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:33:37.521512+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/SomyaDnD/cube-act-policy/raw/c956590e554af746a7fc31f73552a0a1cf84c278/README.md",
+          "requestedAt": "2026-09-20T02:33:40.832838+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:33:41.172464+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/hoanghieu16720/pi05-x3plus-moving-v2/raw/a9a2e85a948839bd58a6a716720baec26e7ea9d4/README.md",
+          "requestedAt": "2026-09-20T02:33:44.473975+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:33:44.787785+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/MakotoIto/act_pick_bead1_chunk30/raw/fd978588ebb2d3f32e923f4835c70e95d71581b3/README.md",
+          "requestedAt": "2026-09-20T02:33:48.093626+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:33:48.491198+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/HaoyunOvO/primotion-v3_delta/raw/9cac19613f2e13a69370abc9825939f544c7e40a/README.md",
+          "requestedAt": "2026-09-20T02:33:51.795692+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:33:52.224512+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/vis22/stack_smolvla_2.5/raw/a4a573efbfe9d762a8c246b9047128443b411a00/README.md",
+          "requestedAt": "2026-09-20T02:33:55.530139+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:33:55.967604+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/Chaenn/smolvla_policy_so101_multitask_test_pnp0908_stack0908_raw/raw/7c5d4683dbc407fc7de184877861fcabcdcf6739/README.md",
+          "requestedAt": "2026-09-20T02:33:59.280149+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:33:59.734358+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/RyanL22/pi05-openarm-rh56f1-masquerade-baseline-20k/raw/ee90b9b4028ad456500ded476f96c0dee661be2c/README.md",
+          "requestedAt": "2026-09-20T02:34:03.042065+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:34:03.398506+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/yuvalgot/new_fold_diffusion_towel_fold2_20260919/raw/5438bc5633b3d3b3ad89f54a25f7c1089d128299/README.md",
+          "requestedAt": "2026-09-20T02:34:06.709424+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:34:07.109516+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/mim-chess-vlas/train_800_complex__bbox__overlay_a25__sim__all_cameras__live__pi05__seed_0/raw/0f70af63a03b6174a3bdb4046d04df7fd8dbcd82/README.md",
+          "requestedAt": "2026-09-20T02:34:10.420426+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:34:10.923896+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/sreetz-nv/so101_orange_dr500_h40_b32_50000steps_20260918/raw/49a109485898b5249e99654b61ec7917407ccced/README.md",
+          "requestedAt": "2026-09-20T02:34:14.229524+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:34:14.618686+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/mim-chess-vlas/train_800_complex__bbox__overlay_a75__sim__all_cameras__live__groot__seed_0/raw/ea5c2c0c4c5fc7dcb2b04908bb2f5d72087f18e7/README.md",
+          "requestedAt": "2026-09-20T02:34:17.923500+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:34:18.308512+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/Sudarshan18/gr00t-n17-g1-brainco-handover/raw/556b6d0f35fa77621f9afb9cf68db0d6b2193e1d/README.md",
+          "requestedAt": "2026-09-20T02:34:21.619075+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:34:22.235002+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/Sudarshan18/gr00t-n17-g1-dex3-handover/raw/ae10980a8b5a34bee37c23b749eb10c60170ab27/README.md",
+          "requestedAt": "2026-09-20T02:34:25.546326+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:34:26.162961+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/Ricky97/SO101_push_dice_to_sticker_pose/raw/62eb760d4c29bca1ec496f50a33663a413e084fd/README.md",
+          "requestedAt": "2026-09-20T02:34:29.469969+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:34:29.812231+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/prehj/GR00T-N1.5-libero-demospeedup-slow1-fast2-60k-20260919/raw/59a81237ceb3786cf4b82efa23210d0ea6f9ab80/README.md",
+          "requestedAt": "2026-09-20T02:34:33.122541+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:34:33.513605+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/3CTeam/pi05_base_native_frozen_vlm_libero10_quantiles_15k/raw/e4a026a8a70fcabc9ee18a3d8bcb5022762b7ab6/README.md",
+          "requestedAt": "2026-09-20T02:34:36.824306+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:34:37.399201+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/yuan1119/pointact-d435if-rgb-210ep-20260919-step12000/raw/7ef8b50fe3caeaeef9c969d0c84bead9519a7e76/README.md",
+          "requestedAt": "2026-09-20T02:34:40.713525+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:34:41.118540+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/NaaaaaiVe6/franka-30demos-normal_task14_cartesian_20260913T212156Z-step-10000/raw/d4af7d9a3b97d6173f4fb8ae1e213f353f67f579/README.md",
+          "requestedAt": "2026-09-20T02:34:44.430966+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:34:44.815856+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/NaaaaaiVe6/franka-30demos-normal_task2_cartesian_20260913T212156Z-step-10000/raw/1cfd06767d432d472542620a1a9cbec42d136e9f/README.md",
+          "requestedAt": "2026-09-20T02:34:48.124094+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:34:48.508116+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/mscaidl-0075/smoke_test_lerobot_act/raw/cfae46e802120c624409f26bdac850bf2ab532e6/README.md",
+          "requestedAt": "2026-09-20T02:34:51.820631+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:34:52.255729+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/bp343475/diffusion_pusht_h16/raw/f33f191cdb09030020b2abe6b5603f54d6c10630/README.md",
+          "requestedAt": "2026-09-20T02:34:55.567727+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:34:56.062755+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/s1eepypillow/task12_act_chunk80/raw/5afb3cf2368f8d2a8921d8836f8114e9d235c6a0/README.md",
+          "requestedAt": "2026-09-20T02:34:59.371759+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:34:59.724585+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/MrC4t/act_bi_so_bin7/raw/c6f2fe7718d497d7ab3e71ed6c56983f38557f3e/README.md",
+          "requestedAt": "2026-09-20T02:35:03.037050+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:35:03.369848+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/Myungkyu/rldx_1_robodojo_taco_luna_b64_60k/raw/88b9d8d182b904dceb76dc66a4948da529fd3dcc/README.md",
+          "requestedAt": "2026-09-20T02:35:06.677262+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:35:07.368392+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/burnboom/mujoco-triple-swingup/raw/d2b8626b655296aedbe4b14f48975c90f1f0bb0a/README.md",
+          "requestedAt": "2026-09-20T02:35:10.670018+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:35:11.326195+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/alimerido/pi05-wrist-top-generic-3k/raw/ff4150c47c64babec9e159cb7b861264ec91a9c7/README.md",
+          "requestedAt": "2026-09-20T02:35:14.636841+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:35:15.115113+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/fecasado/gfm-kitchen-lettuce-22dN/raw/c0f942c3868a0cf142e929fdb0e89441c63ee689/README.md",
+          "requestedAt": "2026-09-20T02:35:18.427558+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:35:18.985488+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/MoAIBo/pi05_pick_place_vel/raw/eb210e33cc5614edbd0b0c193860b3ab79ae57f0/README.md",
+          "requestedAt": "2026-09-20T02:35:22.298226+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:35:22.722119+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/sam-guided-vlas/train_1_2_pile_random_pose__mask__overlay_a25__sim__all_cameras__live__pi05__seed_0/raw/fb92328eb33fb327afb1b443ae726958fb46ae63/README.md",
+          "requestedAt": "2026-09-20T02:35:26.033508+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:35:26.420993+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/sam-guided-vlas/train_1_2_pile_random_pose__mask__overlay_a50__sim__all_cameras__live__pi05__seed_0/raw/c49ef98e7a3eff3e09d4b1bfa12d2cc4050e3597/README.md",
+          "requestedAt": "2026-09-20T02:35:29.732772+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:35:30.328052+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/sam-guided-vlas/train_1_2_pile_random_pose__mask__overlay_a75__sim__all_cameras__live__pi05__seed_0/raw/8f239cc209d27889705a57d7914db1762a11290d/README.md",
+          "requestedAt": "2026-09-20T02:35:33.639961+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:35:34.116633+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/RyanL22/pi05-openarm-rh56f1-egomimic-baseline-20k/raw/b8d81b7d8edc6d69f9dc0e94878d0f92a13f79cd/README.md",
+          "requestedAt": "2026-09-20T02:35:37.428983+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:35:37.821053+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/dogeum/demo_0915_masked_act/raw/96c30926171ae9c0f16c0224ed98f2b78a9b7746/README.md",
+          "requestedAt": "2026-09-20T02:35:41.131030+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:35:41.670078+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/weichen010/GR00T-N1.5-3B/raw/e9b0af4f1dad3121e4985882967eade9d56b3460/README.md",
+          "requestedAt": "2026-09-20T02:35:44.982249+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:35:45.362081+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/weichen010/pi0_base/raw/196f75585ebc6dfa8ea13fc188f8ea47f305935c/README.md",
+          "requestedAt": "2026-09-20T02:35:48.673063+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:35:49.140287+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/weichen010/pi05_base/raw/867849999aa98a3a69f53f7247e028483a8120be/README.md",
+          "requestedAt": "2026-09-20T02:35:52.452174+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:35:52.846935+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/prehj/GR00T-N1.5-dexjoco-atq-vlm-labelgated-2.0x-60k-20260919/raw/0faedb003e1a7d76afa65333bd10f96312c8fdb5/README.md",
+          "requestedAt": "2026-09-20T02:35:56.153848+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:35:56.689762+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/kartikbud/act_pick_v3/raw/bf36e2131967916fda35eaf8d20ce38407ffb50b/README.md",
+          "requestedAt": "2026-09-20T02:35:59.997472+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:36:00.390806+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/cxc4438/act_libero_10/raw/0b6f385dc655ca92967e8822121c697c637abdaa/README.md",
+          "requestedAt": "2026-09-20T02:36:03.698274+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:36:04.076504+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/Myungkyu/rldx_1_robodojo_preset_luna_b64_60k/raw/5b6841edcae27ababe89271a546fda8f8a8c19c6/README.md",
+          "requestedAt": "2026-09-20T02:36:07.383601+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:36:07.866957+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/rainbowrobotics/rb10_iros_0917_pi05/raw/cdb6afc8b281008137e40011d5bd15a019a33594/README.md",
+          "requestedAt": "2026-09-20T02:36:11.167629+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:36:11.632927+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/siruku6/pi05_l90clean_from_bowl5/raw/a57c2dc6261f3f583eeee999fdc5ab582776fd75/README.md",
+          "requestedAt": "2026-09-20T02:36:14.939046+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:36:15.498421+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/alexhegit/so101-simstudio-lab01-pnp-vla-jepa/raw/1802dc205b9c3b480a92a6d3a1bd0f4ddb9833a1/README.md",
+          "requestedAt": "2026-09-20T02:36:18.805129+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:36:19.266240+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/alexhegit/so101-simstudio-lab01-pnp-groot-n17/raw/62afcdf3573a1ec5a2d3de05b3b324eee4e2f038/README.md",
+          "requestedAt": "2026-09-20T02:36:22.569101+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:36:23.011282+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/MrC4t/xvla_bi_so_bin6/raw/013f4a4f231771262b3e4c00705650ef1f74f65d/README.md",
+          "requestedAt": "2026-09-20T02:36:26.318657+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:36:27.198223+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/Shiki42/ctr-pi05-pick-dual-bottles-ctr50-full-idlemask-e301-step10000/raw/b96f8af60304126bc1bedc82b4d89f132f64a09d/README.md",
+          "requestedAt": "2026-09-20T02:36:30.504259+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:36:33.853651+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/Shiki42/pi05-scan-object-uniform50-arm-active-mask-lora-10k-e251/raw/3801e5c7a8d16ac071a921fe469010a908b798a8/README.md",
+          "requestedAt": "2026-09-20T02:36:37.161343+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:36:37.646419+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/Shiki42/pi05-place-dual-shoes-uniform50-arm-active-mask-lora-10k-e245/raw/d4fcb432ce54059d3a00ef0ea7bef77e4d1358f7/README.md",
+          "requestedAt": "2026-09-20T02:36:40.952563+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:36:41.536105+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/anandsmilesath/pick_and_place/raw/656c3373701a31507f2ba2b08bd238824742a920/README.md",
+          "requestedAt": "2026-09-20T02:36:44.842225+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:36:45.242700+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/easyminnn/atq-labelgated-2.0x-openarm-vlmconf-v2-40k/raw/5d4a8a4fae7e6dd1a90cae4c62f5a0e8bd786e0e/README.md",
+          "requestedAt": "2026-09-20T02:36:48.549369+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:36:48.889102+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/sreetz-nv/so101_orange_base_camera_dr100_h32_b16_20k_20260919/raw/b04fdfe40a8150db28f503ae2f9d618710519d17/README.md",
+          "requestedAt": "2026-09-20T02:36:52.196388+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:36:52.809012+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/XvKuoMing/so101_chess/raw/a8b6a73e2249cb67e8f2a99e615811640989e567/README.md",
+          "requestedAt": "2026-09-20T02:36:56.112028+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:36:57.056081+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/ashiqali98/SDPC_diffusionmodel/raw/5b8bf46a2461365dd1534d71940f738bdb5354b0/README.md",
+          "requestedAt": "2026-09-20T02:37:00.362625+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:37:00.729298+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/oniichan521/g1-atl-stomp-policy/raw/f5fad36e2cda7980a3fe9d0a02365440a90ae9c1/README.md",
+          "requestedAt": "2026-09-20T02:37:04.036205+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:37:04.522721+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/SamerAyyad/VLA_Samer_3.Versuch_16.09.2026_100eps_policy_SmolVLA/raw/2a5dd37be4b49cd083291640a2f59d1f86ed1472/README.md",
+          "requestedAt": "2026-09-20T02:37:07.830293+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:37:08.239674+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/RyanL22/pi05-rby1-wujihand2-teleopv1-baseline-20k/raw/5397d7e158de7f75b5a3927eedf4e8b58e87a4b0/README.md",
+          "requestedAt": "2026-09-20T02:37:11.545256+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:37:11.897368+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/kob0105/pick_place_white_ball_on_the_black_board_NoIR_near_act/raw/a05c4dfc4602adbe576e293f82cea555e2882f3c/README.md",
+          "requestedAt": "2026-09-20T02:37:15.203181+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:37:15.592834+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/kob0105/pick_place_white_ball_on_the_black_board_IR_near_act/raw/c5441fc447a6c4aa9fd704f996e5d5119fc5980c/README.md",
+          "requestedAt": "2026-09-20T02:37:18.899023+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:37:19.431515+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/khoavucao2511/so101_vla_jepa_LoRA_Qwen_WMon_chunk32_14_09_26_v1/raw/46ae9a0fbfab56bab65a46fb9c12059680d1f72c/README.md",
+          "requestedAt": "2026-09-20T02:37:22.739146+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:37:23.127643+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/datasets/jiankimr/stack_orange_cup_on_blue_cup_lerobot/raw/959361e98f56960d2ad10b8b0dd403199a9cc755/README.md",
+          "requestedAt": "2026-09-20T02:37:26.434795+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:37:26.781694+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/datasets/willlyb/door_open_clean/raw/f26d4257b874ddbedb5d803cd2ebb7b9858d1e73/README.md",
+          "requestedAt": "2026-09-20T02:37:30.089079+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:37:30.524663+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/datasets/willlyb/door_open/raw/eed6f3626de01171464e6232c92227c6c54bd3d8/README.md",
+          "requestedAt": "2026-09-20T02:37:33.832695+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:37:34.201079+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/datasets/ChenyuanC/moving_dining_cart/raw/42c610573e4e484b1ea01b4281610bb5bba10a4d/README.md",
+          "requestedAt": "2026-09-20T02:37:37.506903+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:37:37.925962+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/datasets/prehj/robocasa-demospeedup-slow1-fast2-lerobot-v20-20260919/raw/b623040ae279f532ab82ae57634c4c352f488944/README.md",
+          "requestedAt": "2026-09-20T02:37:41.231426+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:37:41.645307+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/datasets/Seb100/brick-pickerv2_20260919_193052/raw/287b787e020764b1b5fc6a2c4770357a5d974762/README.md",
+          "requestedAt": "2026-09-20T02:37:44.946151+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:37:45.402162+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/datasets/dual-sim/data/raw/eba0a49c31fae2af8cf27c8f91d8b047889fecda/README.md",
+          "requestedAt": "2026-09-20T02:37:48.709989+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:37:49.246634+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/datasets/prehj/libero-demospeedup-slow1-fast2-lerobot-v20-20260919/raw/1b3fd45de7be1fe180eb0cff1665fd19104fd47a/README.md",
+          "requestedAt": "2026-09-20T02:37:52.550253+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:37:53.029296+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/datasets/Yash1096/OrangeBarPickPlace_5xOrientations/raw/a16f6fbdcae6f46a42d8971129bf40b7aea6c51a/README.md",
+          "requestedAt": "2026-09-20T02:37:56.334860+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:37:56.798081+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/datasets/Aravind08/demo-v-3-v0.1.0/raw/c911a2601b12818d34ff4afd191c104fd3cce5b8/README.md",
+          "requestedAt": "2026-09-20T02:38:00.100698+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:38:00.665475+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/datasets/CZ11001100/0919__24_20260919_222624/raw/83a1b31bbdf71cc4f3a806a15505f963e88d62ee/README.md",
+          "requestedAt": "2026-09-20T02:38:03.974495+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:38:04.512650+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/datasets/Shiki42/piperx-screw-0910-25ep-ctr-preview-check/raw/78f5070ab247d28d4d2c46103c60b7749961ec16/README.md",
+          "requestedAt": "2026-09-20T02:38:07.818302+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:38:08.292549+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/datasets/Traly/Robotwin2.0-lerobot/raw/7cd65fc4a41a6d04695abf5c8e31ff02285e1ac6/README.md",
+          "requestedAt": "2026-09-20T02:38:11.599669+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:38:12.231363+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/datasets/basematrix/ego-binocular-v1/raw/1bd7444840b0db33b2148644748d06af9d3ce7ca/README.md",
+          "requestedAt": "2026-09-20T02:38:15.537825+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:38:16.130122+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/datasets/Shiki42/piperx-put-cube-in-drawer-20260908-87ep-ctr-preview-check/raw/44059c4cf362cd1553d7157a678695b1dcc2db71/README.md",
+          "requestedAt": "2026-09-20T02:38:19.435899+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:38:19.961105+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/datasets/pengyue-polaron/nyush-galaxea-a1-relation-approach-cup-eef-v21/raw/5883c4638514ed2c52220a8851cd5279e735f849/README.md",
+          "requestedAt": "2026-09-20T02:38:23.266305+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:38:23.907690+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/datasets/pengyue-polaron/nyush-galaxea-a1-relation-approach-cup-eef-v3/raw/79861e86f327eaf6cfcfe060bd22674910a90634/README.md",
+          "requestedAt": "2026-09-20T02:38:27.214414+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:38:27.963160+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/datasets/Shiki42/PutCab-CTR-Train50-V4/raw/575634eaaaed193458001b41050d0f9f55ecf545/README.md",
+          "requestedAt": "2026-09-20T02:38:31.269198+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:38:31.969167+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/datasets/SUBHENDU/pick_place_sorting2_20260919_184126/raw/003d6246340acbf706064be92d26f40d0eb1b204/README.md",
+          "requestedAt": "2026-09-20T02:38:35.276453+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:38:35.987592+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/datasets/Bigenlight/cube_stack_lerobot_v3/raw/6b1b2353556f2dd571198ef3b5a89f64ae65e80d/README.md",
+          "requestedAt": "2026-09-20T02:38:39.290504+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:38:39.844325+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/datasets/Bigenlight/cube_stack_raw/raw/a79935cf37139735d3cf62fcad4351ea1ffeb526/README.md",
+          "requestedAt": "2026-09-20T02:38:43.148762+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:38:43.739499+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/datasets/taichi116/sarmal_test2_20260919_202834/raw/50c40391f33689a0df165fc487cc0b271f7718bc/README.md",
+          "requestedAt": "2026-09-20T02:38:47.046621+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:38:47.549263+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/datasets/shadowHokage/pick_cube_omx_f/raw/3c9376f2698bc0bf86d0d637a94556e9a53fd72b/README.md",
+          "requestedAt": "2026-09-20T02:38:50.856946+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:38:51.465053+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/datasets/XvKuoMing/so101_chess/raw/969ae3a886b2038dfa349a768cbf8a9d57dde583/README.md",
+          "requestedAt": "2026-09-20T02:38:54.772048+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:38:55.382601+00:00"
+        },
+        {
+          "sourceBatch": "hf-cards",
+          "url": "https://huggingface.co/datasets/lealealy/franka_1000_30hz_v3/raw/a0ba9fa0f531b87cb8e89766eaaf541ea2ade669/README.md",
+          "requestedAt": "2026-09-20T02:38:58.689154+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:38:59.149409+00:00"
+        },
+        {
+          "sourceBatch": "hf-deep",
+          "url": "https://huggingface.co/datasets/armteam/hapticwam-teleop-dataset/raw/main/README.md",
+          "requestedAt": "2026-09-20T02:42:55.883503+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:42:56.282938+00:00"
+        },
+        {
+          "sourceBatch": "hf-deep",
+          "url": "https://huggingface.co/datasets/armteam/hapticwam-rollouts/raw/main/README.md",
+          "requestedAt": "2026-09-20T02:42:59.588276+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:43:00.001592+00:00"
+        },
+        {
+          "sourceBatch": "hf-deep",
+          "url": "https://huggingface.co/api/models/burnboom/mujoco-triple-swingup",
+          "requestedAt": "2026-09-20T02:43:03.307653+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:43:03.737821+00:00"
+        },
+        {
+          "sourceBatch": "hf-deep",
+          "url": "https://huggingface.co/burnboom/mujoco-triple-swingup/raw/d2b8626b655296aedbe4b14f48975c90f1f0bb0a/triple_swingup_standalone.py",
+          "requestedAt": "2026-09-20T02:43:07.038872+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:43:07.778290+00:00"
+        },
+        {
+          "sourceBatch": "hf-deep",
+          "url": "https://huggingface.co/api/models/XvKuoMing/so101_chess",
+          "requestedAt": "2026-09-20T02:43:11.085592+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:43:11.475988+00:00"
+        },
+        {
+          "sourceBatch": "hf-deep",
+          "url": "https://huggingface.co/XvKuoMing/so101_chess/raw/a8b6a73e2249cb67e8f2a99e615811640989e567/docs/EXPERIMENTS.md",
+          "requestedAt": "2026-09-20T02:43:14.779043+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:43:15.302053+00:00"
+        },
+        {
+          "sourceBatch": "hf-deep",
+          "url": "https://huggingface.co/api/models/alexhegit/so101-simstudio-lab01-pnp-vla-jepa",
+          "requestedAt": "2026-09-20T02:43:18.608256+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:43:19.113272+00:00"
+        },
+        {
+          "sourceBatch": "hf-deep",
+          "url": "https://huggingface.co/api/models/alexhegit/so101-simstudio-lab01-pnp-groot-n17",
+          "requestedAt": "2026-09-20T02:43:22.414892+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:43:22.819698+00:00"
+        },
+        {
+          "sourceBatch": "hf-deep",
+          "url": "https://huggingface.co/api/models/Sudarshan18/gr00t-n17-g1-brainco-handover",
+          "requestedAt": "2026-09-20T02:43:26.126770+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:43:26.738802+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/models?pipeline_tag=robotics&sort=lastModified&direction=-1&limit=100&full=true",
+          "requestedAt": "2026-09-20T02:29:16.195682+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:29:16.893918+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/models?pipeline_tag=robotics&sort=lastModified&direction=-1&limit=100&full=true&cursor=eyIkb3IiOlt7Imxhc3RNb2RpZmllZCI6IjIwMjYtMDktMTlUMTc6MDA6MTYuMDAwWiIsIl9pZCI6eyIkZ3QiOiI2YWFkNGQ2ZGE3NDQ4ZTEzMDRmYWM5ZDEifX0seyJsYXN0TW9kaWZpZWQiOnsiJGx0IjoiMjAyNi0wOS0xOVQxNzowMDoxNi4wMDBaIn19LHsibGFzdE1vZGlmaWVkIjpudWxsfV0sInNlYXJjaFNlcXVlbmNlVG9rZW4iOiJDUG5IdHdJYUNTa0FpWnk2b0FFQUFCb09XZ3hxclUxdHAwU09Fd1Q2eWRFaURsb01hcTFOYmFkRWpoTUUrc25SIn0%3D",
+          "requestedAt": "2026-09-20T02:29:20.198874+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:29:21.042008+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/models?pipeline_tag=robotics&sort=lastModified&direction=-1&limit=100&full=true&cursor=eyIkb3IiOlt7Imxhc3RNb2RpZmllZCI6IjIwMjYtMDktMTlUMTc6MDA6MDQuMDAwWiIsIl9pZCI6eyIkZ3QiOiI2YTllMjNlNmU2YzY0OGRkMzBlMjk0NjkifX0seyJsYXN0TW9kaWZpZWQiOnsiJGx0IjoiMjAyNi0wOS0xOVQxNzowMDowNC4wMDBaIn19LHsibGFzdE1vZGlmaWVkIjpudWxsfV0sInNlYXJjaFNlcXVlbmNlVG9rZW4iOiJDS1hHdHdJYUNTa2dXcHk2b0FFQUFCb09XZ3hxbmlQbTVzWkkzVERpbEdraURsb01hcDRqNXViR1NOMHc0cFJwIn0%3D",
+          "requestedAt": "2026-09-20T02:29:24.345178+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:29:25.577651+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/models?pipeline_tag=robotics&sort=lastModified&direction=-1&limit=100&full=true&cursor=eyIkb3IiOlt7Imxhc3RNb2RpZmllZCI6IjIwMjYtMDktMTlUMDM6MDM6NDkuMDAwWiIsIl9pZCI6eyIkZ3QiOiI2YWFiZWI4NGM1YzQwNzIwZTM5N2NhOWQifX0seyJsYXN0TW9kaWZpZWQiOnsiJGx0IjoiMjAyNi0wOS0xOVQwMzowMzo0OS4wMDBaIn19LHsibGFzdE1vZGlmaWVkIjpudWxsfV0sInNlYXJjaFNlcXVlbmNlVG9rZW4iOiJDT1RYd3dJYUNTa0l2cDYzb0FFQUFCb09XZ3hxcSt1RXhjUUhJT09YeXAwaURsb01hcXZyaE1YRUJ5RGpsOHFkIn0%3D",
+          "requestedAt": "2026-09-20T02:29:28.883515+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:29:30.964350+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/models?pipeline_tag=robotics&sort=lastModified&direction=-1&limit=100&full=true&cursor=eyIkb3IiOlt7Imxhc3RNb2RpZmllZCI6IjIwMjYtMDktMThUMDc6NDQ6NDEuMDAwWiIsIl9pZCI6eyIkZ3QiOiI2YWFjZWJjNjRhOGUxMGJhNjZiMmI3Y2QifX0seyJsYXN0TW9kaWZpZWQiOnsiJGx0IjoiMjAyNi0wOS0xOFQwNzo0NDo0MS4wMDBaIn19LHsibGFzdE1vZGlmaWVkIjpudWxsfV0sInNlYXJjaFNlcXVlbmNlVG9rZW4iOiJDT3Jmc0FJYUNTa29obm16b0FFQUFCb09XZ3hxck92R1NvNFF1bWF5dDgwaURsb01hcXpyeGtxT0VMcG1zcmZOIn0%3D",
+          "requestedAt": "2026-09-20T02:29:34.268352+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:29:35.632741+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/models?pipeline_tag=robotics&sort=lastModified&direction=-1&limit=100&full=true&cursor=eyIkb3IiOlt7Imxhc3RNb2RpZmllZCI6IjIwMjYtMDktMTdUMTg6NDc6NDIuMDAwWiIsIl9pZCI6eyIkZ3QiOiI2YWFjMzJlZjkzYTM0NTA2NjM0MjgwM2MifX0seyJsYXN0TW9kaWZpZWQiOnsiJGx0IjoiMjAyNi0wOS0xN1QxODo0Nzo0Mi4wMDBaIn19LHsibGFzdE1vZGlmaWVkIjpudWxsfV0sInNlYXJjaFNlcXVlbmNlVG9rZW4iOiJDSmlpbkFJYUNTbXdMTEt3b0FFQUFCb09XZ3hxckRMdms2TkZCbU5DZ0R3aURsb01hcXd5NzVPalJRWmpRb0E4In0%3D",
+          "requestedAt": "2026-09-20T02:29:38.943049+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:29:40.420125+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/models?pipeline_tag=robotics&sort=lastModified&direction=-1&limit=100&full=true&cursor=eyIkb3IiOlt7Imxhc3RNb2RpZmllZCI6IjIwMjYtMDktMTdUMDI6MDY6MTcuMDAwWiIsIl9pZCI6eyIkZ3QiOiI2YWFiNGFiNjgzZjI4YjIwNGZhNmQxNzkifX0seyJsYXN0TW9kaWZpZWQiOnsiJGx0IjoiMjAyNi0wOS0xN1QwMjowNjoxNy4wMDBaIn19LHsibGFzdE1vZGlmaWVkIjpudWxsfV0sInNlYXJjaFNlcXVlbmNlVG9rZW4iOiJDTy9UNWdFYUNTbW9XUjJ0b0FFQUFCb09XZ3hxcTBxMmcvS0xJRSttMFhraURsb01hcXRLdG9QeWl5QlBwdEY1In0%3D",
+          "requestedAt": "2026-09-20T02:29:43.721457+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:29:44.704400+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/models?pipeline_tag=robotics&sort=lastModified&direction=-1&limit=100&full=true&cursor=eyIkb3IiOlt7Imxhc3RNb2RpZmllZCI6IjIwMjYtMDktMTZUMTA6NDE6MzkuMDAwWiIsIl9pZCI6eyIkZ3QiOiI2YWFhNzIzZDgzZjI4YjIwNGY3YzAyNWEifX0seyJsYXN0TW9kaWZpZWQiOnsiJGx0IjoiMjAyNi0wOS0xNlQxMDo0MTozOS4wMDBaIn19LHsibGFzdE1vZGlmaWVkIjpudWxsfV0sInNlYXJjaFNlcXVlbmNlVG9rZW4iOiJDS09Sa2dJYUNTbTQwczZwb0FFQUFCb09XZ3hxcW5JOWcvS0xJRTk4QWxvaURsb01hcXB5UFlQeWl5QlBmQUphIn0%3D",
+          "requestedAt": "2026-09-20T02:29:48.006577+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:29:48.917285+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/models?pipeline_tag=robotics&sort=lastModified&direction=-1&limit=100&full=true&cursor=eyIkb3IiOlt7Imxhc3RNb2RpZmllZCI6IjIwMjYtMDktMTZUMDA6Mzc6NTEuMDAwWiIsIl9pZCI6eyIkZ3QiOiI2YWE5ZGY4ZDNiYTRkM2VlOTc3ZTBkMmIifX0seyJsYXN0TW9kaWZpZWQiOnsiJGx0IjoiMjAyNi0wOS0xNlQwMDozNzo1MS4wMDBaIn19LHsibGFzdE1vZGlmaWVkIjpudWxsfV0sInNlYXJjaFNlcXVlbmNlVG9rZW4iOiJDS2lRbFFJYUNTa1lCNmFub0FFQUFCb09XZ3hxcWQrTk82VFQ3cGQrRFNzaURsb01hcW5malR1azArNlhmZzByIn0%3D",
+          "requestedAt": "2026-09-20T02:29:52.222342+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:29:53.076873+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/models?pipeline_tag=robotics&sort=lastModified&direction=-1&limit=100&full=true&cursor=eyIkb3IiOlt7Imxhc3RNb2RpZmllZCI6IjIwMjYtMDktMTVUMTI6NTk6NTIuMDAwWiIsIl9pZCI6eyIkZ3QiOiI2YWE5NDAyYjJlNGFiNzljNDkwMWVjMWYifX0seyJsYXN0TW9kaWZpZWQiOnsiJGx0IjoiMjAyNi0wOS0xNVQxMjo1OTo1Mi4wMDBaIn19LHsibGFzdE1vZGlmaWVkIjpudWxsfV0sInNlYXJjaFNlcXVlbmNlVG9rZW4iOiJDS3JUbXdJYUNTbEFBU2Vsb0FFQUFCb09XZ3hxcVVBckxrcTNuRWtCN0I4aURsb01hcWxBS3k1S3Q1eEpBZXdmIn0%3D",
+          "requestedAt": "2026-09-20T02:29:56.383376+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:29:57.319990+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/models?pipeline_tag=robotics&sort=lastModified&direction=-1&limit=100&full=true&cursor=eyIkb3IiOlt7Imxhc3RNb2RpZmllZCI6IjIwMjYtMDktMTVUMDE6MzA6NTIuMDAwWiIsIl9pZCI6eyIkZ3QiOiI2YWE2YTYwOTk0MTRlZTM5MzVkMmJkNzcifX0seyJsYXN0TW9kaWZpZWQiOnsiJGx0IjoiMjAyNi0wOS0xNVQwMTozMDo1Mi4wMDBaIn19LHsibGFzdE1vZGlmaWVkIjpudWxsfV0sInNlYXJjaFNlcXVlbmNlVG9rZW4iOiJDSWpUd3dFYUNTbmdOTENpb0FFQUFCb09XZ3hxcHFZSmxCVHVPVFhTdlhjaURsb01hcWFtQ1pRVTdqazEwcjEzIn0%3D",
+          "requestedAt": "2026-09-20T02:30:00.625161+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:30:01.348122+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/models?pipeline_tag=robotics&sort=lastModified&direction=-1&limit=100&full=true&cursor=eyIkb3IiOlt7Imxhc3RNb2RpZmllZCI6IjIwMjYtMDktMTRUMTM6MTI6NDAuMDAwWiIsIl9pZCI6eyIkZ3QiOiI2YWE3ZjFmMGUwYmM2ZWU4NWZkOWUzY2QifX0seyJsYXN0TW9kaWZpZWQiOnsiJGx0IjoiMjAyNi0wOS0xNFQxMzoxMjo0MC4wMDBaIn19LHsibGFzdE1vZGlmaWVkIjpudWxsfV0sInNlYXJjaFNlcXVlbmNlVG9rZW4iOiJDS0tZeUFFYUNTbEFYUXlnb0FFQUFCb09XZ3hxcC9IdzRMeHU2Ri9aNDgwaURsb01hcWZ4OE9DOGJ1aGYyZVBOIn0%3D",
+          "requestedAt": "2026-09-20T02:30:04.653324+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:30:05.175515+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/models?pipeline_tag=robotics&sort=lastModified&direction=-1&limit=100&full=true&cursor=eyIkb3IiOlt7Imxhc3RNb2RpZmllZCI6IjIwMjYtMDktMTRUMDM6MTU6NDIuMDAwWiIsIl9pZCI6eyIkZ3QiOiI2YWE3NjU5MTBiYTY1MDI4NTA1NzBjM2MifX0seyJsYXN0TW9kaWZpZWQiOnsiJGx0IjoiMjAyNi0wOS0xNFQwMzoxNTo0Mi4wMDBaIn19LHsibGFzdE1vZGlmaWVkIjpudWxsfV0sInNlYXJjaFNlcXVlbmNlVG9rZW4iOiJDSUtXdHdJYUNTa3cwK21kb0FFQUFCb09XZ3hxcDJXUkM2WlFLRkJYRER3aURsb01hcWRsa1F1bVVDaFFWd3c4In0%3D",
+          "requestedAt": "2026-09-20T02:30:08.479343+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:30:09.600832+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/models?pipeline_tag=robotics&sort=lastModified&direction=-1&limit=100&full=true&cursor=eyIkb3IiOlt7Imxhc3RNb2RpZmllZCI6IjIwMjYtMDktMTNUMTE6MjM6MzkuMDAwWiIsIl9pZCI6eyIkZ3QiOiI2YWE2ODZjMTk0MTRlZTM5MzVjZTAxYTAifX0seyJsYXN0TW9kaWZpZWQiOnsiJGx0IjoiMjAyNi0wOS0xM1QxMToyMzozOS4wMDBaIn19LHsibGFzdE1vZGlmaWVkIjpudWxsfV0sInNlYXJjaFNlcXVlbmNlVG9rZW4iOiJDS0tmbFFJYUNTbDRNb0thb0FFQUFCb09XZ3hxcG9iQmxCVHVPVFhPQWFBaURsb01hcWFHd1pRVTdqazF6Z0dnIn0%3D",
+          "requestedAt": "2026-09-20T02:30:12.904996+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:30:13.691327+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/datasets?filter=lerobot&sort=lastModified&direction=-1&limit=100&full=true",
+          "requestedAt": "2026-09-20T02:30:16.996314+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:30:18.328957+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/datasets?filter=lerobot&sort=lastModified&direction=-1&limit=100&full=true&cursor=eyIkb3IiOlt7Imxhc3RNb2RpZmllZCI6IjIwMjYtMDktMThUMDM6NTc6MTcuMDAwWiIsIl9pZCI6eyIkZ3QiOiI2YWFjYjE2YjAwODg2ZGU2NGJiZmZiM2UifX0seyJsYXN0TW9kaWZpZWQiOnsiJGx0IjoiMjAyNi0wOS0xOFQwMzo1NzoxNy4wMDBaIn19LHsibGFzdE1vZGlmaWVkIjpudWxsfV19",
+          "requestedAt": "2026-09-20T02:30:21.634162+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:30:22.597645+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/datasets?filter=lerobot&sort=lastModified&direction=-1&limit=100&full=true&cursor=eyIkb3IiOlt7Imxhc3RNb2RpZmllZCI6IjIwMjYtMDktMTVUMDk6MDY6MDUuMDAwWiIsIl9pZCI6eyIkZ3QiOiI2YWE3YjM0ZDhlYTE2ZDU4NDY2NjE2OTQifX0seyJsYXN0TW9kaWZpZWQiOnsiJGx0IjoiMjAyNi0wOS0xNVQwOTowNjowNS4wMDBaIn19LHsibGFzdE1vZGlmaWVkIjpudWxsfV19",
+          "requestedAt": "2026-09-20T02:30:25.899758+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:30:26.914190+00:00"
+        },
+        {
+          "sourceBatch": "hf-extra",
+          "url": "https://huggingface.co/api/datasets?filter=lerobot&sort=lastModified&direction=-1&limit=100&full=true&cursor=eyIkb3IiOlt7Imxhc3RNb2RpZmllZCI6IjIwMjYtMDktMTRUMDU6NTc6MjMuMDAwWiIsIl9pZCI6eyIkZ3QiOiI2YWE3N2YwZTNlYWE2MDJhMTZlZjk3YTcifX0seyJsYXN0TW9kaWZpZWQiOnsiJGx0IjoiMjAyNi0wOS0xNFQwNTo1NzoyMy4wMDBaIn19LHsibGFzdE1vZGlmaWVkIjpudWxsfV19",
+          "requestedAt": "2026-09-20T02:30:30.215622+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:30:30.904920+00:00"
+        },
+        {
+          "sourceBatch": "hf-index",
+          "url": "https://huggingface.co/api/daily_papers?date=2026-09-20",
+          "requestedAt": "2026-09-20T02:28:48.321082+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:28:48.830104+00:00"
+        },
+        {
+          "sourceBatch": "hf-index",
+          "url": "https://huggingface.co/api/daily_papers?date=2026-09-19",
+          "requestedAt": "2026-09-20T02:28:52.131669+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:28:52.660754+00:00"
+        },
+        {
+          "sourceBatch": "hf-index",
+          "url": "https://huggingface.co/api/daily_papers?date=2026-09-18",
+          "requestedAt": "2026-09-20T02:28:55.964100+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:28:57.216358+00:00"
+        },
+        {
+          "sourceBatch": "hf-index",
+          "url": "https://huggingface.co/api/daily_papers?date=2026-09-17",
+          "requestedAt": "2026-09-20T02:29:00.521740+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:29:01.050569+00:00"
+        },
+        {
+          "sourceBatch": "hf-index",
+          "url": "https://huggingface.co/api/daily_papers?date=2026-09-16",
+          "requestedAt": "2026-09-20T02:29:04.355439+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:29:04.951979+00:00"
+        },
+        {
+          "sourceBatch": "hf-index",
+          "url": "https://huggingface.co/api/daily_papers?date=2026-09-15",
+          "requestedAt": "2026-09-20T02:29:08.257948+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:29:08.857772+00:00"
+        },
+        {
+          "sourceBatch": "hf-index",
+          "url": "https://huggingface.co/api/daily_papers?date=2026-09-14",
+          "requestedAt": "2026-09-20T02:29:12.162834+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:29:12.890402+00:00"
+        },
+        {
+          "sourceBatch": "hf-manifest",
+          "url": "https://huggingface.co/api/datasets/armteam/hapticwam-teleop-dataset",
+          "requestedAt": "2026-09-20T02:44:00.348674+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:44:00.831601+00:00"
+        },
+        {
+          "sourceBatch": "hf-manifest",
+          "url": "https://huggingface.co/datasets/armteam/hapticwam-teleop-dataset/resolve/main/manifests_v6.tar",
+          "requestedAt": "2026-09-20T02:44:04.133399+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:44:07.219212+00:00"
+        },
+        {
+          "sourceBatch": "hf-manifest",
+          "url": "https://huggingface.co/datasets/armteam/hapticwam-teleop-dataset/raw/main/MANIFEST_OF_RECORD.md",
+          "requestedAt": "2026-09-20T02:44:10.524752+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:44:11.075218+00:00"
+        },
+        {
+          "sourceBatch": "hf-manifest",
+          "url": "https://huggingface.co/davidzhou302/ActiveScale/commit/e9e8f8918a3cfd63580ed07625bb6e0739674a33",
+          "requestedAt": "2026-09-20T02:44:14.380601+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:44:15.184107+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://www.physicalintelligence.company/blog",
+          "requestedAt": "2026-09-20T02:29:46.656870+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:29:52.808745+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://deepmind.google/discover/blog/",
+          "requestedAt": "2026-09-20T02:29:54.413852+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:29:57.090650+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://research.nvidia.com/research-area/robotics",
+          "requestedAt": "2026-09-20T02:29:58.696328+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:30:07.812343+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://developer.nvidia.com/blog/tag/robotics/",
+          "requestedAt": "2026-09-20T02:30:09.420998+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:30:10.633209+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://blogs.nvidia.com/blog/category/robotics/",
+          "requestedAt": "2026-09-20T02:30:12.237212+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:30:19.786933+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://bair.berkeley.edu/blog/",
+          "requestedAt": "2026-09-20T02:30:21.393867+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:30:25.758792+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://ai.stanford.edu/blog/",
+          "requestedAt": "2026-09-20T02:30:27.364668+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:30:44.090676+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://www.tri.global/news",
+          "requestedAt": "2026-09-20T02:30:45.695492+00:00",
+          "status": 403,
+          "error": "HTTP Error 403: Forbidden",
+          "retryAfter": null,
+          "completedAt": "2026-09-20T02:30:51.940573+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://www.skild.ai/blogs",
+          "requestedAt": "2026-09-20T02:30:53.546943+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:30:55.758887+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://generalistai.com/blog",
+          "requestedAt": "2026-09-20T02:30:57.361832+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:31:04.867577+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://news.mit.edu/topic/robotics",
+          "requestedAt": "2026-09-20T02:31:06.470130+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:31:09.819884+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://www.roboticsproceedings.org/",
+          "requestedAt": "2026-09-20T02:31:11.423518+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:31:14.814045+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://griffinlabs.ai/blog/griffin-alpha-s",
+          "requestedAt": "2026-09-20T02:31:16.414870+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:31:19.930004+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://spectrum.ieee.org/topic/robotics/",
+          "requestedAt": "2026-09-20T02:31:21.535867+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:31:29.067506+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://rai-inst.com/resources/blog/bimanual-robot-for-dynamic-manipulation/",
+          "requestedAt": "2026-09-20T02:31:30.674886+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:31:35.775732+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://www.reuters.com/technology/",
+          "requestedAt": "2026-09-20T02:31:37.378600+00:00",
+          "status": 401,
+          "error": "HTTP Error 401: HTTP Forbidden",
+          "retryAfter": null,
+          "completedAt": "2026-09-20T02:31:37.824778+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://www.jiqizhixin.com/",
+          "requestedAt": "2026-09-20T02:31:39.431397+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:31:39.854108+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://www.qbitai.com/",
+          "requestedAt": "2026-09-20T02:31:41.459004+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:31:41.905875+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://www.microsoft.com/en-us/research/",
+          "requestedAt": "2026-09-20T02:31:43.511556+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:31:58.915579+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://alejp.me/blog/blog-post-ssrr-2026-ugv-uav.html",
+          "requestedAt": "2026-09-20T02:32:00.520378+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:32:08.775171+00:00"
+        },
+        {
+          "sourceBatch": "institutions-pages",
+          "url": "https://www.umiacs.umd.edu/news-events/news/one-robot-many-bodies-new-system-helps-four-legged-robots-adapt",
+          "requestedAt": "2026-09-20T02:32:10.380273+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:32:14.817233+00:00"
+        },
+        {
+          "sourceBatch": "negative-reports",
+          "url": "https://github.com/rocPAI-Forge/so101-simstudio",
+          "requestedAt": "2026-09-20T02:37:06.840855+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:37:07.866880+00:00"
+        },
+        {
+          "sourceBatch": "negative-reports",
+          "url": "https://github.com/rocPAI-Forge/so101-simstudio/blob/main/labs/lab01_pnp/lab01_pnp.md",
+          "requestedAt": "2026-09-20T02:37:09.472242+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:37:10.966122+00:00"
+        },
+        {
+          "sourceBatch": "negative-reports",
+          "url": "https://github.com/rocPAI-Forge/so101-simstudio/blob/main/labs/lab01_pnp/groot_n1_7_adapt.md",
+          "requestedAt": "2026-09-20T02:37:12.569637+00:00",
+          "status": 404,
+          "error": "HTTP Error 404: Not Found",
+          "retryAfter": null,
+          "completedAt": "2026-09-20T02:37:13.290642+00:00"
+        },
+        {
+          "sourceBatch": "negative-reports",
+          "url": "https://github.com/siruku6/PARC2026_pre/blob/submission/v1-base-weights/docs/cards/README.md",
+          "requestedAt": "2026-09-20T02:37:14.894078+00:00",
+          "status": 404,
+          "error": "HTTP Error 404: Not Found",
+          "retryAfter": null,
+          "completedAt": "2026-09-20T02:37:15.544165+00:00"
+        },
+        {
+          "sourceBatch": "public-reports",
+          "url": "https://github.com/qjwdlwjdl/G1-ATL-Stomp",
+          "requestedAt": "2026-09-20T02:44:48.284191+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:44:49.391008+00:00"
+        },
+        {
+          "sourceBatch": "public-reports",
+          "url": "https://github.com/ashiqlathief/SDPC-imagepolicy",
+          "requestedAt": "2026-09-20T02:44:50.993114+00:00",
+          "status": 200,
+          "completedAt": "2026-09-20T02:44:52.335597+00:00"
+        },
+        {
+          "sourceBatch": "web-search",
+          "query": {
+            "q": "robot robotics \"September 19, 2026\" research world model reinforcement learning"
+          },
+          "status": "executed"
+        },
+        {
+          "sourceBatch": "web-search",
+          "query": {
+            "q": "robotics VLA world action model \"September 20\" \"2026\""
+          },
+          "status": "executed"
+        },
+        {
+          "sourceBatch": "web-search",
+          "query": {
+            "q": "site:x.com robot VLA WAM after:2026-09-17 before:2026-09-21"
+          },
+          "status": "executed"
+        },
+        {
+          "sourceBatch": "web-search",
+          "query": {
+            "q": "site:mp.weixin.qq.com 机器人 VLA 世界模型 2026 9月 after:2026-09-06"
+          },
+          "status": "executed"
+        },
+        {
+          "sourceBatch": "web-search",
+          "query": {
+            "q": "site:x.com (robot OR robotics OR \"world action\") (research OR paper OR release) after:2026-09-13 before:2026-09-21"
+          },
+          "status": "executed"
+        },
+        {
+          "sourceBatch": "web-search",
+          "query": {
+            "q": "site:xiaohongshu.com 机器人 论文 强化学习 after:2026-09-06"
+          },
+          "status": "executed"
+        },
+        {
+          "sourceBatch": "web-search",
+          "query": {
+            "q": "site:jiqizhixin.com 机器人 9月 2026 after:2026-09-13"
+          },
+          "status": "executed"
+        },
+        {
+          "sourceBatch": "web-search",
+          "query": {
+            "q": "site:qbitai.com 机器人 世界模型 2026 after:2026-09-13"
+          },
+          "status": "executed"
+        },
+        {
+          "sourceBatch": "web-search",
+          "query": {
+            "q": "robotics \"September 19, 2026\" site:physicalintelligence.company OR site:deepmind.google OR site:research.nvidia.com OR site:tri.global"
+          },
+          "status": "executed"
+        },
+        {
+          "sourceBatch": "web-search",
+          "query": {
+            "q": "\"robot\" \"September 2026\" site:agentic-intelligence-lab.org"
+          },
+          "status": "executed"
+        },
+        {
+          "sourceBatch": "web-search",
+          "query": {
+            "q": "robotics control planning research \"September 19\" \"2026\" -site:reddit.com"
+          },
+          "status": "executed"
+        },
+        {
+          "sourceBatch": "web-search",
+          "query": {
+            "q": "\"Reward AI\" \"OM-1\" official blog"
+          },
+          "status": "executed"
+        },
+        {
+          "sourceBatch": "web-search",
+          "query": {
+            "q": "\"OM-1\" \"Reward\" \"September\" 2026"
+          },
+          "status": "executed"
+        },
+        {
+          "sourceBatch": "web-search",
+          "query": {
+            "q": "site:x.com/RewardAI_ \"OM-1\""
+          },
+          "status": "executed"
+        },
+        {
+          "sourceBatch": "web-search",
+          "query": {
+            "q": "\"HapticWAM\" robotics"
+          },
+          "status": "executed"
+        },
+        {
+          "sourceBatch": "web-search",
+          "query": {
+            "q": "\"VLA-HAND\" MIT"
+          },
+          "status": "executed"
+        },
+        {
+          "sourceBatch": "web-open",
+          "target": "Reward AI official launch",
+          "status": "executed_see_raw_log"
+        },
+        {
+          "sourceBatch": "web-open",
+          "target": "Reward AI official video",
+          "status": "executed_see_raw_log"
+        },
+        {
+          "sourceBatch": "web-open",
+          "target": "CWI blog",
+          "status": "executed_see_raw_log"
+        },
+        {
+          "sourceBatch": "web-open",
+          "target": "ROMBRL blog",
+          "status": "executed_see_raw_log"
+        }
+      ],
+      "addedIds": [
+        "report:rewardai-om1-20260914",
+        "report:g1-dex3-brainco-handover-20260919",
+        "hf:burnboom/mujoco-triple-swingup",
+        "hf:XvKuoMing/so101_chess",
+        "report:so101-simstudio-transfer-negative-20260919"
+      ],
+      "updatedIds": [],
+      "promotedIds": [],
+      "briefAddedIds": [],
+      "briefUpdatedIds": [],
+      "candidateIds": [
+        "report:rewardai-om1-20260914",
+        "report:g1-dex3-brainco-handover-20260919",
+        "hf:burnboom/mujoco-triple-swingup",
+        "hf:XvKuoMing/so101_chess",
+        "report:so101-simstudio-transfer-negative-20260919"
+      ],
+      "recordsSnapshot": [
+        {
+          "id": "report:rewardai-om1-20260914",
+          "title": "OM-1: Frontier Robot Intelligence, Learned Firsthand from Humans",
+          "zhTitle": "OM-1：用人类示教接口连接跨机型操作策略",
+          "category": "embodied",
+          "publishedAt": "2026-09-14",
+          "canonicalUrl": "https://www.rewardai.com/blog/OM-1/",
+          "version": "2026-09 官方报告",
+          "authors": [
+            "Reward AI"
+          ],
+          "tags": [
+            "人类示教",
+            "跨机型",
+            "触觉",
+            "低层控制",
+            "仿真RL"
+          ],
+          "contentTypes": [
+            "blog",
+            "report"
+          ],
+          "type": "技术报告",
+          "checkedAt": "2026-09-20T02:49:53.522632+00:00",
+          "reviewStatus": "primary_methods_results_and_limitations_read",
+          "status": "full_verified",
+          "editorialPriority": 99,
+          "editorialPriorityBasis": "可测热度不足时按可复用性及证据完整性补充，非互动数。",
+          "evidence": "阅读作者原始方法、实验记录和局限；未独立运行训练或机器人实验。评价与组合方向属于编辑分析和研究假设。",
+          "links": [
+            {
+              "label": "官方技术报告",
+              "url": "https://www.rewardai.com/blog/OM-1/"
+            },
+            {
+              "label": "官方发布视频",
+              "url": "https://www.youtube.com/watch?v=IJvyS2aPsnA"
+            },
+            {
+              "label": "机构说明",
+              "url": "https://www.rewardai.com/about/"
+            }
+          ],
+          "evidenceDetails": [
+            {
+              "url": "https://www.rewardai.com/blog/OM-1/",
+              "location": "Omnibody Hand；Human-native policy；Low-level controller",
+              "supports": "7自由度功能接口、多模态频率、动作接口和仿真RL低层控制",
+              "checkedAt": "2026-09-20T02:49:53.522632+00:00"
+            },
+            {
+              "url": "https://www.rewardai.com/blog/OM-1/",
+              "location": "EM/VIO对照图及实验说明",
+              "supports": "刚性共载、两个止点、8种速度×10次；最高速度组24.9与9.5毫米",
+              "checkedAt": "2026-09-20T02:49:53.522632+00:00"
+            },
+            {
+              "url": "https://www.rewardai.com/blog/OM-1/",
+              "location": "操作演示与数据时长说明",
+              "supports": "公司展示及少于30分钟人类示教的主张；未见受控成功率表",
+              "checkedAt": "2026-09-20T02:49:53.522632+00:00"
+            },
+            {
+              "url": "https://www.youtube.com/watch?v=IJvyS2aPsnA",
+              "location": "初始网页dateText / expandedMetadata.publishDate；RewardAI频道",
+              "supports": "公开日期2026年9月14日，区分月份博客自引",
+              "checkedAt": "2026-09-20T02:49:53.522632+00:00"
+            }
+          ],
+          "backfill": true,
+          "changeType": "backfill",
+          "dateNote": "补录：日期依据官方发布视频的2026年9月14日；博客自引仅标2026年9月，未推定具体发布时间。",
+          "summary": "以功能化手部接口、多模态示教与仿真低层控制连接人类动作和不同机器人；操作证据主要是公司演示。",
+          "background": "示教动作通常绑定某一机械手、关节定义和控制延迟，换机型便需要重新采集。高速度接触操作还要求手部姿态、力与视觉在时间上对齐，单靠视频或关节角并不充分。",
+          "innovation": "Omnibody Hand使用7自由度功能接口，并记录视觉、触觉、接近信息和手部运动；电磁跟踪辅助视觉惯性估计。策略保留不同传感流的时间频率，输出方向、速度、力与事件，由仿真RL训练的低层控制器适配具体机器人，并平滑异步控制输出。",
+          "experiments": "定位对照把两种跟踪器刚性固定，在已知机械止点间以8种速度各做10次测试；最高速度组平均误差为VIO 24.9毫米、电磁9.5毫米。操作部分展示开门、整理、投放与包装等；公司称新任务可用不足30分钟人类示教，但未提供统一任务成功率、试验次数、基线和置信区间。",
+          "conclusion": "报告提出了可讨论的人类数据采集与跨机型接口方案，定位对照有明确条件。演示尚不能证明任意机器人、任意任务上的泛化，少量示教时长也不等于训练时长。",
+          "evaluation": "编辑分析：可复用价值在于把手部功能和动作时序显式化。整体系统仍依赖专用传感硬件及仿真控制训练；数据总量、留出机型、架构和代码未充分披露。电磁环境适应与操作成功率需要进一步受控验证。",
+          "futureDirections": "研究假设：把方向、力、事件接口接入阻抗控制或MPC，再由VLA提供语义子目标。固定示教量与传感配置，完整留出一种机型，测任务成功率、力峰值、延迟与指尖误差；另消融电磁定位和异步平滑，区分采集质量与控制器的贡献。",
+          "popularity": {
+            "status": "unmeasured",
+            "score": null,
+            "metrics": {
+              "githubStars": null,
+              "hfUpvotes": null
+            },
+            "checkedAt": "2026-09-20T02:53:16.916657+00:00",
+            "evidence": [
+              {
+                "url": "https://www.youtube.com/watch?v=IJvyS2aPsnA",
+                "metric": "youtube_views_supplemental",
+                "value": 137916,
+                "checkedAt": "2026-09-20T02:33:24Z",
+                "scope": "公开累计播放，仅辅助证据；未纳入HF/GitHub代理分"
+              },
+              {
+                "url": "https://www.rewardai.com/blog/OM-1/",
+                "metric": "primary_release",
+                "checkedAt": "2026-09-20T02:53:16.916657+00:00"
+              }
+            ],
+            "basis": "官方发布视频累计137916次播放为辅助关注证据，未与HF票数/GitHub stars混算；统一代理分缺失，保留编辑补充排序。"
+          },
+          "discoveredAt": "2026-09-20T02:53:16.916657+00:00",
+          "updatedAt": "2026-09-20T02:53:16.916657+00:00",
+          "lastSeenAt": "2026-09-20T02:53:16.916657+00:00"
+        },
+        {
+          "id": "report:g1-dex3-brainco-handover-20260919",
+          "title": "G1 Dex3-to-Brainco Revo2 Handover Transfer",
+          "zhTitle": "G1换手实验：关节闭合比例相同，接触过程仍可能完全失败",
+          "category": "embodied",
+          "publishedAt": "2026-09-19T22:15:26Z",
+          "canonicalUrl": "https://github.com/sudarshan-sridhar/g1-dex3-to-brainco-handover",
+          "version": "0dd3fa079652577b15030d0c87d5ce0926d527bd",
+          "authors": [
+            "Sudarshan Sridhar"
+          ],
+          "tags": [
+            "跨手型",
+            "GR00T",
+            "动作映射",
+            "负结果",
+            "仿真"
+          ],
+          "contentTypes": [
+            "report"
+          ],
+          "type": "技术报告",
+          "checkedAt": "2026-09-20T02:49:53.522632+00:00",
+          "reviewStatus": "primary_methods_results_and_limitations_read",
+          "status": "full_verified",
+          "editorialPriority": 98,
+          "editorialPriorityBasis": "可测热度不足时按可复用性及证据完整性补充，非互动数。",
+          "evidence": "阅读作者原始方法、实验记录和局限；未独立运行训练或机器人实验。评价与组合方向属于编辑分析和研究假设。",
+          "links": [
+            {
+              "label": "完整技术报告",
+              "url": "https://github.com/sudarshan-sridhar/g1-dex3-to-brainco-handover/blob/0dd3fa079652577b15030d0c87d5ce0926d527bd/docs/technical_report.md"
+            },
+            {
+              "label": "逐次实验CSV",
+              "url": "https://github.com/sudarshan-sridhar/g1-dex3-to-brainco-handover/blob/0dd3fa079652577b15030d0c87d5ce0926d527bd/results/trials.csv"
+            },
+            {
+              "label": "开源代码",
+              "url": "https://github.com/sudarshan-sridhar/g1-dex3-to-brainco-handover"
+            },
+            {
+              "label": "Brainco权重",
+              "url": "https://huggingface.co/Sudarshan18/gr00t-n17-g1-brainco-handover"
+            }
+          ],
+          "evidenceDetails": [
+            {
+              "url": "https://github.com/sudarshan-sridhar/g1-dex3-to-brainco-handover/blob/0dd3fa079652577b15030d0c87d5ce0926d527bd/docs/technical_report.md",
+              "location": "Sections 1–6",
+              "supports": "固定基座、手部映射、拇指轨迹与专用示教；无硬件运行",
+              "checkedAt": "2026-09-20T02:49:53.522632+00:00"
+            },
+            {
+              "url": "https://github.com/sudarshan-sridhar/g1-dex3-to-brainco-handover/blob/0dd3fa079652577b15030d0c87d5ce0926d527bd/docs/technical_report.md",
+              "location": "Section 7；Section 9；Section 11",
+              "supports": "750/1050步条件、相同750步下C为2/50；数据量/训练步数及模拟限制",
+              "checkedAt": "2026-09-20T02:49:53.522632+00:00"
+            },
+            {
+              "url": "https://github.com/sudarshan-sridhar/g1-dex3-to-brainco-handover/blob/0dd3fa079652577b15030d0c87d5ce0926d527bd/results/trials.csv",
+              "location": "stage与success列；150条数据",
+              "supports": "独立按CSV统计A=8/50、B=0/50、C=10/50",
+              "checkedAt": "2026-09-20T02:49:53.522632+00:00"
+            },
+            {
+              "url": "https://huggingface.co/Sudarshan18/gr00t-n17-g1-brainco-handover",
+              "location": "HF公开API createdAt及模型卡",
+              "supports": "2026-09-19T22:15:26Z权重仓库创建，配套身份",
+              "checkedAt": "2026-09-20T02:49:53.522632+00:00"
+            }
+          ],
+          "dateNote": "日期为配套Brainco权重仓库创建时间；GitHub仓库同日公开。属于独立仿真工程报告，非新基础模型或真机论文。",
+          "summary": "150次仿真试验暴露简单关节比例映射的接触失配；针对新手型重新设计示教并微调后恢复部分能力。",
+          "background": "同一上身换上不同手掌后，关节角范围的对应并不保证指尖能在正确时间接触物体。需要区分手部几何、动作映射与已学策略三种误差，否则容易把执行失败全部归因于模型泛化。",
+          "innovation": "报告保留固定基座G1的上身，比较Dex3策略A、只做闭合比例映射的Brainco策略B，以及用Brainco专用示教微调的C。映射保持手腕和手臂目标不变，并用指尖路径说明：同时闭合时，Revo2拇指从上方穿过物体；改为先对掌再合指可形成有效支撑。",
+          "experiments": "Isaac Lab 2.3.2 / Isaac Sim 5.1，5种物体或初始位置配置各10次。逐条核对150行CSV：A为8/50、B为0/50、C为10/50；留出的圆杆与位置合计分别2/20、0/20、2/20。A用98条脚本示教训练16,000步；C在A上用44条新手型示教训练10,000步。A/B上限750控制步，C为1050步；C若也限750步只有2/50。",
+          "conclusion": "这一映射在该任务上没有产生有效抓取，新手型示教加微调能恢复有限能力。结果不证明C优于A，也不证明所有无需训练的重定向都会失败；当前绝大多数试验仍不成功。",
+          "evaluation": "编辑分析：提供逐次成功与失败记录、动作对齐修正和更严格的放置判据，复查价值较高。时间预算、数据量和抓姿同时改变，无法单独归因；示教是脚本生成，动力学和触觉也未完整代表真机。其贡献是可审计的失败机制，而非跨本体泛化已经解决。",
+          "futureDirections": "研究假设：在B中加入接触空间重定向和分阶段拇指对掌，再与残差微调比较。统一750/1050步两种预算、相同物体位置和评测种子，记录首次稳定抓取、交接、释放及接触力；最后用新手型真机验证几何改进是否仍有效。",
+          "popularity": {
+            "status": "verified",
+            "score": 0,
+            "metrics": {
+              "githubStars": 0,
+              "hfUpvotes": null
+            },
+            "checkedAt": "2026-09-20T02:35:24.476629+00:00",
+            "evidence": [
+              {
+                "url": "https://github.com/sudarshan-sridhar/g1-dex3-to-brainco-handover",
+                "apiUrl": "https://api.github.com/repos/sudarshan-sridhar/g1-dex3-to-brainco-handover",
+                "metric": "github_stars",
+                "value": 0,
+                "checkedAt": "2026-09-20T02:35:24.476629+00:00",
+                "scope": "累计公开关注，非当日增量"
+              }
+            ],
+            "basis": "专属GitHub仓库累计0 stars（已观测）；累计数不是当日热度，HF论文票数未知。"
+          },
+          "discoveredAt": "2026-09-20T02:53:16.916657+00:00",
+          "updatedAt": "2026-09-20T02:53:16.916657+00:00",
+          "lastSeenAt": "2026-09-20T02:53:16.916657+00:00"
+        },
+        {
+          "id": "hf:burnboom/mujoco-triple-swingup",
+          "title": "Triple Pendulum Swing-Up on a Cart in MuJoCo",
+          "zhTitle": "三连杆摆起：用轨迹优化、时变LQR与平衡控制组成可读基线",
+          "category": "theory",
+          "publishedAt": "2026-09-19T18:52:19Z",
+          "canonicalUrl": "https://huggingface.co/burnboom/mujoco-triple-swingup",
+          "version": "d2b8626b655296aedbe4b14f48975c90f1f0bb0a",
+          "authors": [
+            "burnboom"
+          ],
+          "tags": [
+            "欠驱动控制",
+            "直接配点",
+            "轨迹优化",
+            "LQR",
+            "MuJoCo"
+          ],
+          "contentTypes": [
+            "report"
+          ],
+          "type": "技术报告",
+          "checkedAt": "2026-09-20T02:49:53.522632+00:00",
+          "reviewStatus": "primary_methods_results_and_limitations_read",
+          "status": "full_verified",
+          "editorialPriority": 94,
+          "editorialPriorityBasis": "可测热度不足时按可复用性及证据完整性补充，非互动数。",
+          "evidence": "阅读作者原始方法、实验记录和局限；未独立运行训练或机器人实验。评价与组合方向属于编辑分析和研究假设。",
+          "links": [
+            {
+              "label": "控制器说明",
+              "url": "https://huggingface.co/burnboom/mujoco-triple-swingup"
+            },
+            {
+              "label": "完整控制代码",
+              "url": "https://huggingface.co/burnboom/mujoco-triple-swingup/blob/d2b8626b655296aedbe4b14f48975c90f1f0bb0a/triple_swingup_standalone.py"
+            }
+          ],
+          "evidenceDetails": [
+            {
+              "url": "https://huggingface.co/burnboom/mujoco-triple-swingup/blob/d2b8626b655296aedbe4b14f48975c90f1f0bb0a/README.md",
+              "location": "Results；How it works；Model；Notes",
+              "supports": "24次与64次扰动实验、模型参数、经典控制定位，均为作者报告",
+              "checkedAt": "2026-09-20T02:49:53.522632+00:00"
+            },
+            {
+              "url": "https://huggingface.co/burnboom/mujoco-triple-swingup/blob/d2b8626b655296aedbe4b14f48975c90f1f0bb0a/triple_swingup_standalone.py",
+              "location": "collocate / chain_constants / transition / run_episode / main",
+              "supports": "150段规划、冻结子步雅可比、混合单位noise、末端0.21弧度判据、默认4秒保持",
+              "checkedAt": "2026-09-20T02:49:53.522632+00:00"
+            },
+            {
+              "url": "https://huggingface.co/api/models/burnboom/mujoco-triple-swingup",
+              "location": "createdAt / sha",
+              "supports": "准确公开创建时间及固定代码版本",
+              "checkedAt": "2026-09-20T02:49:53.522632+00:00"
+            }
+          ],
+          "dateNote": "日期为公开模型仓库创建时间；这是经典最优控制结构的独立实现，不是首次解决三连杆摆起。",
+          "summary": "公开一份单文件的三连杆摆起实现，强调规划模型惯量一致性及闭环跟踪；数值成绩为作者仿真结果。",
+          "background": "单个滑车驱动三个摆杆时，开环轨迹对模型误差和扰动敏感，末端还需要进入平衡控制器的有效区域。这个小系统适合检查规划、线性化、坐标变换与执行层是否一致。",
+          "innovation": "采用稀疏直接配点求力与状态轨迹，显式约束动力学；读取MuJoCo编译模型的质量和惯量，避免用理想细杆参数代替胶囊几何。沿轨迹构建线性化与时变LQR，结束后切到直立附近的无限时域LQR。贡献是公开工程实现与故障分析，而非新控制理论。",
+          "experiments": "模型为1.5千克滑车、三根各0.4米/0.4千克摆杆，力限±60牛顿，规划滑车范围±2米；控制50Hz、物理200Hz。作者卡片报告24/24次摆起并保持、最差末端角0.04度，另以每组64次测试给出扰动0.02时100%、0.04时84%。这些结果未独立重跑，0.29秒求解时间也缺少硬件说明。",
+          "conclusion": "代码提供可复用的规划—跟踪—平衡基线，并显示局部闭环对该实现的重要性。尚无真机、参数失配或持续外扰验证，不能由有限初始扰动成功率推导全局稳定性。",
+          "evaluation": "编辑分析：源码的noise同时加到位置和速度，含滑车坐标，卡片统一写成“rad”不够准确；成功检查仅末端最大角小于0.21弧度。transition重复同一子步线性化，是冻结线性模型近似，不能泛称非线性系统在零阶保持下精确；“反馈律不能解决”的文字断言也不由实验支持。",
+          "futureDirections": "研究假设：保留此基线，加入沿子步逐次线性化、在线MPC或参数辨识。分开设置米、弧度及各自速度扰动，扫质量、惯量、延迟和执行饱和；报告整段轨迹约束违反率与保持时间，检验改进来自模型一致性还是更强反馈。",
+          "popularity": {
+            "status": "unmeasured",
+            "score": null,
+            "metrics": {
+              "githubStars": null,
+              "hfUpvotes": null
+            },
+            "checkedAt": "2026-09-20T02:53:16.916657+00:00",
+            "evidence": [],
+            "basis": "未获得可归属于本项研究的HF论文投票或专属仓库热度；缺失保留null。按编辑关注度补充，不代表全网热度。"
+          },
+          "discoveredAt": "2026-09-20T02:53:16.916657+00:00",
+          "updatedAt": "2026-09-20T02:53:16.916657+00:00",
+          "lastSeenAt": "2026-09-20T02:53:16.916657+00:00"
+        },
+        {
+          "id": "hf:XvKuoMing/so101_chess",
+          "title": "SO-101 Chess Manipulation with MolmoAct2",
+          "zhTitle": "SO-101棋盘操作：动作采样频率与插值影响闭环成功",
+          "category": "vla",
+          "publishedAt": "2026-09-19T10:48:17Z",
+          "canonicalUrl": "https://huggingface.co/XvKuoMing/so101_chess",
+          "version": "a8b6a73e2249cb67e8f2a99e615811640989e567",
+          "authors": [
+            "XvKuoMing"
+          ],
+          "tags": [
+            "MolmoAct2",
+            "模仿学习",
+            "动作插值",
+            "仿真",
+            "训练诊断"
+          ],
+          "contentTypes": [
+            "report"
+          ],
+          "type": "技术报告",
+          "checkedAt": "2026-09-20T02:49:53.522632+00:00",
+          "reviewStatus": "primary_methods_results_and_limitations_read",
+          "status": "full_verified",
+          "editorialPriority": 95,
+          "editorialPriorityBasis": "可测热度不足时按可复用性及证据完整性补充，非互动数。",
+          "evidence": "阅读作者原始方法、实验记录和局限；未独立运行训练或机器人实验。评价与组合方向属于编辑分析和研究假设。",
+          "links": [
+            {
+              "label": "模型与结果",
+              "url": "https://huggingface.co/XvKuoMing/so101_chess"
+            },
+            {
+              "label": "完整实验日志",
+              "url": "https://huggingface.co/XvKuoMing/so101_chess/blob/a8b6a73e2249cb67e8f2a99e615811640989e567/docs/EXPERIMENTS.md"
+            },
+            {
+              "label": "公开示教数据",
+              "url": "https://huggingface.co/datasets/XvKuoMing/so101_chess"
+            }
+          ],
+          "evidenceDetails": [
+            {
+              "url": "https://huggingface.co/XvKuoMing/so101_chess/blob/a8b6a73e2249cb67e8f2a99e615811640989e567/docs/EXPERIMENTS.md",
+              "location": "Sections 4.6、5.2、5.3；开篇日志保存说明",
+              "supports": "最终96回合、与早期评测重叠、8次结果翻转、插值对照及缺失原始日志",
+              "checkedAt": "2026-09-20T02:49:53.522632+00:00"
+            },
+            {
+              "url": "https://huggingface.co/XvKuoMing/so101_chess/blob/a8b6a73e2249cb67e8f2a99e615811640989e567/README.md",
+              "location": "Training；Results；Limitations",
+              "supports": "6095条/497565帧、LoRA训练条件、两类任务及仿真范围",
+              "checkedAt": "2026-09-20T02:49:53.522632+00:00"
+            },
+            {
+              "url": "https://huggingface.co/api/models/XvKuoMing/so101_chess",
+              "location": "createdAt / lastModified / sha",
+              "supports": "公开创建与固定版本",
+              "checkedAt": "2026-09-20T02:49:53.522632+00:00"
+            }
+          ],
+          "dateNote": "日期为本模型公开仓库创建时间；实验日志中的训练发生于9月14–16日，不把上传日写成实验日。",
+          "summary": "公开棋盘移动与移除策略及实验日志，说明低损失不等于可执行动作，部署插值与训练日程需一起检查。",
+          "background": "细小棋子要求语言指定位置、抓取与平滑放置连续成功。高频标签接近当前状态时，模仿策略可能学到近似不动的动作；降采样又可能让执行跳变把棋子碰倒。",
+          "innovation": "以MolmoAct2为底座，用脚本专家生成移动和移除两类示教，在10Hz学习、30Hz执行时插值关节目标，并匹配训练学习率衰减日程。公开失败阶段、几何修正和多轮训练记录；这是一套任务适配与诊断报告，不是新的VLA架构或下棋决策算法。",
+          "experiments": "6,095条示教、497,565帧，LoRA rank 64、batch 8、70,000步，RTX 5090。最终96次仿真为移动54/64、移除25/32，中位放置误差均5.3毫米；每回合450步，棋盘位置扰动至10毫米、关节起点至0.1弧度。早期同一检查点16个位置的对照，阶跃执行12/16，插值16/16。96次确认集包含训练期间评测过的位置，并非全新独立测试集。",
+          "conclusion": "该配置可以执行两类空间指令，剩余失败主要包括掉落、放置偏差和碰到邻棋。没有验证按棋子类别识别、捡起侧倒棋子或真机迁移；棋步仍由外部棋引擎决定。",
+          "evaluation": "编辑分析：完整日志揭示最终运行同时改了碰撞、数据构成、随机化、训练日程和时限，因此不能把总提升单独归给学习率。29个重放位置有8个结果翻转，提示小样本排序不稳；原始训练日志部分丢失，当前核验依赖作者整理记录。",
+          "futureDirections": "研究假设：把动作插值作为独立执行模块，与相同策略的重规划频率共同做消融。固定数据和总预算，预留未用于挑检查点的新棋盘布局与相机位姿，多随机种子测成功率、邻棋扰动及动作加速度；再补真机标定误差测试。",
+          "popularity": {
+            "status": "unmeasured",
+            "score": null,
+            "metrics": {
+              "githubStars": null,
+              "hfUpvotes": null
+            },
+            "checkedAt": "2026-09-20T02:53:16.916657+00:00",
+            "evidence": [],
+            "basis": "未获得可归属于本项研究的HF论文投票或专属仓库热度；缺失保留null。按编辑关注度补充，不代表全网热度。"
+          },
+          "discoveredAt": "2026-09-20T02:53:16.916657+00:00",
+          "updatedAt": "2026-09-20T02:53:16.916657+00:00",
+          "lastSeenAt": "2026-09-20T02:53:16.916657+00:00"
+        },
+        {
+          "id": "report:so101-simstudio-transfer-negative-20260919",
+          "title": "SO-101 SimStudio Lab01: Small-Data Transfer Failures",
+          "zhTitle": "SO-101小数据迁移负结果：接近物体以后，抓取为何仍失败",
+          "category": "vla",
+          "publishedAt": "2026-09-19T12:45:43Z",
+          "canonicalUrl": "https://huggingface.co/alexhegit/so101-simstudio-lab01-pnp-groot-n17",
+          "version": "62afcdf3573a1ec5a2d3de05b3b324eee4e2f038",
+          "authors": [
+            "alexhegit",
+            "rocPAI-Forge"
+          ],
+          "tags": [
+            "GR00T",
+            "VLA-JEPA",
+            "负结果",
+            "跨机型",
+            "评测协议"
+          ],
+          "contentTypes": [
+            "report"
+          ],
+          "type": "技术报告",
+          "checkedAt": "2026-09-20T02:49:53.522632+00:00",
+          "reviewStatus": "primary_methods_results_and_limitations_read",
+          "status": "full_verified",
+          "editorialPriority": 96,
+          "editorialPriorityBasis": "可测热度不足时按可复用性及证据完整性补充，非互动数。",
+          "evidence": "阅读作者原始方法、实验记录和局限；未独立运行训练或机器人实验。评价与组合方向属于编辑分析和研究假设。",
+          "links": [
+            {
+              "label": "GR00T负结果与权重",
+              "url": "https://huggingface.co/alexhegit/so101-simstudio-lab01-pnp-groot-n17"
+            },
+            {
+              "label": "JEPA负结果",
+              "url": "https://huggingface.co/alexhegit/so101-simstudio-lab01-pnp-vla-jepa"
+            },
+            {
+              "label": "平台实验与协议",
+              "url": "https://github.com/rocPAI-Forge/so101-simstudio/blob/main/labs/lab01_pnp/lab01_pnp.md"
+            }
+          ],
+          "evidenceDetails": [
+            {
+              "url": "https://huggingface.co/alexhegit/so101-simstudio-lab01-pnp-groot-n17/blob/62afcdf3573a1ec5a2d3de05b3b324eee4e2f038/README.md",
+              "location": "Training / Results / stage funnel",
+              "supports": "50条示教、10k训练、三组0/10及9→7→5→0阶段漏斗",
+              "checkedAt": "2026-09-20T02:49:53.522632+00:00"
+            },
+            {
+              "url": "https://huggingface.co/alexhegit/so101-simstudio-lab01-pnp-vla-jepa/blob/1802dc205b9c3b480a92a6d3a1bd0f4ddb9833a1/README.md",
+              "location": "Recipe / Evaluation",
+              "supports": "JEPA冻结Qwen、WM关闭、EGL 1/10及抓手oracle 0/10",
+              "checkedAt": "2026-09-20T02:49:53.522632+00:00"
+            },
+            {
+              "url": "https://github.com/rocPAI-Forge/so101-simstudio/blob/main/labs/lab01_pnp/lab01_pnp.md",
+              "location": "Sections 6.1–6.4.2",
+              "supports": "不同reset/推理后端/样本量条件、公开干预清单及机制解释的边界",
+              "checkedAt": "2026-09-20T02:49:53.522632+00:00"
+            },
+            {
+              "url": "https://huggingface.co/api/models/alexhegit/so101-simstudio-lab01-pnp-groot-n17",
+              "location": "createdAt / sha",
+              "supports": "GR00T适配权重9月19日公开",
+              "checkedAt": "2026-09-20T02:49:53.522632+00:00"
+            }
+          ],
+          "dateNote": "本期以9月19日首次公开的GR00T适配权重为增量，并补读同一实验平台的JEPA对照记录；平台文档和JEPA仓库更早存在，非基础模型官方评测。",
+          "summary": "同一50条示教的独立适配实验显示：离线损失下降后，机器人仍可能停在接近、闭爪或抬起之前。",
+          "background": "把大模型迁移到小型机械臂时，观察维度、动作含义、控制频率和预训练机型同时变化。只比较训练损失或运行是否成功，无法解释闭环为什么失败。",
+          "innovation": "报告公开固定适配检查点，并按接近8厘米、进入4厘米、闭爪、抬起和放置记录失败。结合起始姿态、渲染后端、抓手近距离触发和解冻视觉模型等干预，尝试区分执行栈错误与迁移学习不足；属于工程诊断，不是新训练算法。",
+          "experiments": "GR00T N1.7在50条SO-101仿真示教上训练10,000步、batch 4、冻结视觉与语言底座；EGL随机位置10次、固定位置10次和OSMesa随机位置10次均0成功。EGL随机组9/10进入8厘米、7/10进入4厘米、5/10闭爪而0抬起；使用RTC、执行horizon 8，真实动作块推理约2.53Hz。JEPA冻结Qwen、关闭世界模型的10k版本在固定位置EGL为1/10，近距离强制闭爪为0/10。均未独立复现。",
+          "conclusion": "这些适配配置尚未形成可靠抓取闭环，阶段指标比总成功率更能定位问题。不能外推为GR00T、JEPA或世界模型普遍无效；关闭世界模型训练的适配也不能代替原论文方法评测。",
+          "evaluation": "编辑分析：平台ACT 29/50与MolmoAct2 27/50采用不同reset方式和训练预算，不能直接做公平模型排名；JEPA多数只有10次试验。解冻后的退步与表征漂移相容，但缺乏受控消融，尚不是已证明机制。公开GR00T专门适配文档链接本轮404，结果以固定模型卡为准。",
+          "futureDirections": "研究假设：以同一动作单位、相机视角、起始姿态及推理调度建立小规模受控矩阵，再比较6维动作头重初始化、渐进解冻和更大示教量。每组用独立种子至少覆盖同一批位置，报告抓取各阶段、动作延迟和置信区间，检验失败来自数据还是接口。",
+          "popularity": {
+            "status": "unmeasured",
+            "score": null,
+            "metrics": {
+              "githubStars": null,
+              "hfUpvotes": null
+            },
+            "checkedAt": "2026-09-20T02:53:16.916657+00:00",
+            "evidence": [],
+            "basis": "平台仓库累计3 stars已见，但覆盖多个实验与工具，不直接归因于本项负结果；本研究可比热度未知。"
+          },
+          "discoveredAt": "2026-09-20T02:53:16.916657+00:00",
+          "updatedAt": "2026-09-20T02:53:16.916657+00:00",
+          "lastSeenAt": "2026-09-20T02:53:16.916657+00:00"
+        }
+      ],
+      "briefsSnapshot": [],
+      "rankedIds": [
+        "report:g1-dex3-brainco-handover-20260919",
+        "report:rewardai-om1-20260914",
+        "report:so101-simstudio-transfer-negative-20260919",
+        "hf:XvKuoMing/so101_chess",
+        "hf:burnboom/mujoco-triple-swingup"
+      ],
+      "featuredIds": [
+        "report:g1-dex3-brainco-handover-20260919",
+        "report:rewardai-om1-20260914",
+        "report:so101-simstudio-transfer-negative-20260919",
+        "hf:XvKuoMing/so101_chess",
+        "hf:burnboom/mujoco-triple-swingup"
+      ],
+      "analysisNeededIds": [],
+      "briefIds": [],
+      "candidateCount": 5,
+      "rankingNote": "1 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 站内关注度代理分 = 10×ln(1+已核验GitHub累计stars) + 20×ln(1+已核验Hugging Face论文upvotes)。仅合计可测项，缺失为null；全部缺失则不评分。证据来自官方API、公开论文及仓库页，具体来源和观测时刻见条目。只计可归属的仓库，排除共用基础框架和跨代系列；累计关注不等于本日增量、论文质量或全网排名，未测候选的关注度仍未知。",
+      "rankingVersion": 1
     }
   ],
-  "lastScanAt": "2026-09-19T09:19:37.409434+00:00",
+  "lastScanAt": "2026-09-20T02:53:16.916657+00:00",
   "briefs": [
     {
       "id": "arxiv:2608.30396",
@@ -220020,8 +222640,23 @@
         "2026-09-19-1700"
       ],
       "candidateCount": 12
+    },
+    "2026-09-20": {
+      "top5Ids": [
+        "report:g1-dex3-brainco-handover-20260919",
+        "report:rewardai-om1-20260914",
+        "report:so101-simstudio-transfer-negative-20260919",
+        "hf:XvKuoMing/so101_chess",
+        "hf:burnboom/mujoco-triple-swingup"
+      ],
+      "summary": "今天关注“模型输出如何变成可靠动作”：OM-1探索人类示教与跨机型接口，G1换手报告定位接触映射失效；棋盘操作展示动作插值的作用，SO-101负结果强调抓取阶段诊断。三连杆摆起提供经典规划与反馈基线。现有可测热度有限，Top 5包含编辑补充，所有结论注明仿真或公司演示范围。",
+      "rankingNote": "1 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 站内关注度代理分 = 10×ln(1+已核验GitHub累计stars) + 20×ln(1+已核验Hugging Face论文upvotes)。仅合计可测项，缺失为null；全部缺失则不评分。证据来自官方API、公开论文及仓库页，具体来源和观测时刻见条目。只计可归属的仓库，排除共用基础框架和跨代系列；累计关注不等于本日增量、论文质量或全网排名，未测候选的关注度仍未知。",
+      "editionIds": [
+        "2026-09-20-1000"
+      ],
+      "candidateCount": 5
     }
   },
   "rankingMethodNote": "站内关注度代理分 = 10×ln(1+已核验GitHub累计stars) + 20×ln(1+已核验Hugging Face论文upvotes)。仅合计可测项，缺失为null；全部缺失则不评分。证据来自官方API、公开论文及仓库页，具体来源和观测时刻见条目。只计可归属的仓库，排除共用基础框架和跨代系列；累计关注不等于本日增量、论文质量或全网排名，未测候选的关注度仍未知。",
-  "popularityCheckedAt": "2026-09-19T09:19:37.409434+00:00"
+  "popularityCheckedAt": "2026-09-20T02:53:16.916657+00:00"
 }
