@@ -1,9 +1,9 @@
 {
   "appVersion": "2026-09-20-reader-v2.5-learning-control",
-  "assetsVersion": "a184cd9b1719c848ebc1",
-  "latestEditionId": "2026-09-20-1700",
-  "records": 308,
-  "briefs": 831,
-  "lastScanAt": "2026-09-20T09:33:51.535514+00:00",
-  "contentHash": "490d6f76b164f1b8594dd1b5146488de59fb4180ab2a60bd4f078006b1f70b47"
+  "assetsVersion": "29a4e478d70a4c1936aa",
+  "latestEditionId": "2026-09-21-1000",
+  "records": 344,
+  "briefs": 1726,
+  "lastScanAt": "2026-09-21T03:15:56.151807+00:00",
+  "contentHash": "e98e601c813cf3bdc2312e1455e67002004de6688922ac37425e461236965d33"
 }
