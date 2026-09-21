@@ -6,9 +6,9 @@
   <meta name="description" content="按日期与研究方向探索机器人研究，阅读重点分析，收藏与跟踪值得关注的工作。">
   <meta name="theme-color" content="#2563eb">
   <title>机器人研究日报 · Robotics Daily</title>
-  <link rel="icon" href="./favicon.svg?v=a2140bb35246750bc24e" type="image/svg+xml">
-  <link rel="stylesheet" href="./style.css?v=a2140bb35246750bc24e">
-<meta name="robotics-build" content="a2140bb35246750bc24e"></head>
+  <link rel="icon" href="./favicon.svg?v=ff82eb9938087ee0d0b8" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css?v=ff82eb9938087ee0d0b8">
+<meta name="robotics-build" content="ff82eb9938087ee0d0b8"></head>
 <body>
 <a class="skip" href="#main">跳到日报内容</a>
 <header class="masthead">
@@ -33,6 +33,7 @@
       <p id="search-help" class="search-help">支持中英文标题、全文与作者；多个关键词用空格分隔，模糊匹配可容忍少量错字或拼写错误。</p>
     </form>
     <section id="favorites-tools" class="favorites-tools" hidden aria-label="收藏管理"><p>收藏保存在当前浏览器。可导出备份，在另一台设备导入；清除浏览器数据会删除本机收藏。</p><div class="tool-row"><button type="button" id="export-favorites" class="outlined-button">↓ 导出收藏</button><label class="outlined-button import-label">↑ 导入收藏<input type="file" id="import-favorites" accept="application/json,.json"></label></div><p class="small-note" id="favorites-feedback" role="status"></p></section>
+    <div id="load-status" class="load-status" role="status" aria-live="polite">正在加载今日研究… <button type="button" onclick="location.reload()">重新加载</button></div>
     <section id="highlights" class="highlights" aria-label="当日最值得关注的五项研究"></section>
     <section class="reading" aria-label="筛选与阅读研究">
       <div class="type-filter-row"><span class="filter-caption">内容类型</span><div id="content-types" class="type-filters" role="group" aria-label="按论文、新闻、报告或博客筛选"></div><button type="button" id="clear-filters" class="quiet-button">重置筛选</button></div>
@@ -45,6 +46,6 @@
   </main>
 </div>
 <noscript><p class="noscript">请启用 JavaScript 阅读日报。也可以查看 <a href="./data.json">完整归档数据</a>。</p></noscript>
-<script src="./data.js?v=a2140bb35246750bc24e"></script><script src="./app.js?v=a2140bb35246750bc24e"></script>
+<script src="./app.js?v=ff82eb9938087ee0d0b8"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 'use strict';
-const APP_VERSION = '2026-09-20-reader-v2.5-learning-control';
+const APP_VERSION = '2026-09-21-reader-v2.6-fast-loading';
 const FAVORITES_KEY = 'robotics-daily-favorites-v1';
 const FAVORITES_SEEN_KEY = 'robotics-daily-favorites-seen-v1';
 let db = window.ROBOTICS_DAILY || { records: [], editions: [], briefs: [] };
@@ -222,6 +222,11 @@ function renderHighlights() {
   node.innerHTML = `<div class="section-heading"><h2>本日 <em>Top ${top.length}</em></h2><p>${esc(daily?.summary || '从今天的研究中，先读这几篇。')}</p></div><div class="highlights-grid">${top.map((record, index) => `<article class="highlight-card"><span class="highlight-number">${String(index + 1).padStart(2, '0')}</span><span class="highlight-category">${esc(shortCategory(record.category))}${!record.background ? ' · 待全文核验' : ''}</span><h3><a href="#${encodeURIComponent('paper-' + record.id)}" data-jump="${esc(record.id)}">${esc(recordTitle(record))}<span class="highlight-arrow" aria-hidden="true">↗</span></a></h3><p>${esc(record.highlightSummary || record.innovation || record.summary || '')}</p></article>`).join('')}</div><details class="ranking-note"><summary>ⓘ 排序依据</summary><p>${esc(note)}</p></details>`;
 }
 function render() {
+  if (db.archivePreview && state.mode === 'favorites') {
+    $('page-title').textContent = '我的研究收藏';
+    $('page-subtitle').textContent = '正在加载收藏对应的完整归档…';
+    $('highlights').hidden = true; $('reports').innerHTML = ''; $('briefs').innerHTML = ''; return;
+  }
   normalizeFavoriteAliases();
   const records = scopedRecords(), filtered = records.filter(record => matches(record)).sort((a, b) => (state.query ? searchScore(b, state.query, state.fuzzy) - searchScore(a, state.query, state.fuzzy) : 0) || compareRecords(a, b)), group = dateMap.get(state.day), favorites = state.mode === 'favorites';
   renderCalendar(); renderFilters(records); renderHighlights();
@@ -278,38 +283,77 @@ function showBanner(message, version) {
   $('version-banner').innerHTML = `${esc(message)}${version ? '<button type="button" id="load-new-version">打开新版 ↗</button>' : ''}`;
   if (version) $('load-new-version').onclick = () => { const url = new URL(location.href); url.searchParams.set('v', version); location.assign(url.href); };
 }
-async function checkVersion() {
-  if (location.protocol === 'file:') return;
-  try {
-    const response = await fetch('./site-manifest.json?t=' + Date.now(), { cache: 'no-store' });
-    if (!response.ok) return;
-    const manifest = await response.json();
-    const currentAssets = document.querySelector('meta[name="robotics-build"]')?.content;
-    if ((manifest.appVersion && manifest.appVersion !== APP_VERSION) || (manifest.assetsVersion && currentAssets && manifest.assetsVersion !== currentAssets)) showBanner('阅读页面已有新版本，点击即可切换。', manifest.assetsVersion || manifest.appVersion);
-  } catch { /* Keep the already loaded reading experience usable. */ }
+function setLoading(message = '', failed = false) {
+  const node = $('load-status');
+  node.hidden = !message;
+  node.innerHTML = message ? `${esc(message)}${failed ? ' <button type="button" data-retry="true">重试加载</button>' : ''}` : '';
+  const partial = !!db.archivePreview || !db.editions.length;
+  for (const id of ['search', 'search-scope', 'all-history', 'export-favorites']) $(id).disabled = partial;
 }
+async function fetchJSON(url, timeout = 25000) {
+  const controller = new AbortController(), timer = setTimeout(() => controller.abort(), timeout);
+  try {
+    const response = await fetch(url, { signal: controller.signal, cache: 'no-cache' });
+    if (!response.ok) throw new Error('HTTP ' + response.status);
+    return await response.json();
+  } finally { clearTimeout(timer); }
+}
+function checkVersion(manifest) {
+  const currentAssets = document.querySelector('meta[name="robotics-build"]')?.content;
+  if ((manifest.appVersion && manifest.appVersion !== APP_VERSION) || (manifest.assetsVersion && currentAssets && manifest.assetsVersion !== currentAssets)) showBanner('阅读页面已有新版本，点击即可切换。', manifest.assetsVersion || manifest.appVersion);
+}
+let archiveLoading = false, lastRefreshAt = 0;
 async function refreshData(manual = false) {
   if (location.protocol === 'file:') { if (manual) $('refresh-status').textContent = '当前为离线副本，联网版更新后可重新下载。'; return; }
-  const sequence = ++refreshSequence, previousLatest = [...dateMap.keys()].sort().at(-1), followLatest = state.day === previousLatest;
-  $('refresh').disabled = true; if (manual) $('refresh-status').textContent = '正在检查最新归档…';
+  if (archiveLoading) return;
+  if (!manual && !db.archivePreview && db.editions.length && Date.now() - lastRefreshAt < 60000) return;
+  archiveLoading = true;
+  const sequence = ++refreshSequence, previousLatest = [...dateMap.keys()].sort().at(-1), followLatest = !state.day || state.day === previousLatest;
+  $('refresh').disabled = true;
+  if (manual) $('refresh-status').textContent = '正在检查最新归档…';
+  if (db.archivePreview) setLoading('今日精选已就绪，正在加载其余简讯与历史搜索…');
   try {
-    const response = await fetch('./data.json?t=' + Date.now(), { cache: 'no-store' });
-    if (!response.ok) throw new Error('HTTP ' + response.status);
-    const data = await response.json();
-    if (!Array.isArray(data.records) || !Array.isArray(data.editions)) throw new Error('归档格式不可用');
+    let version = db.readerVersion;
+    if (!db.archivePreview && db.editions.length) {
+      const manifest = await fetchJSON('./site-manifest.json?t=' + Date.now(), 12000);
+      checkVersion(manifest);
+      if (manifest.readerVersion && manifest.readerVersion === db.readerVersion) {
+        lastRefreshAt = Date.now();
+        $('refresh-status').textContent = manual ? '已是最新归档' : '';
+        return;
+      }
+      version = manifest.readerVersion || String(Date.now());
+    }
+    const data = await fetchJSON('./data.json?v=' + encodeURIComponent(version || Date.now()));
+    if (!Array.isArray(data.records) || !Array.isArray(data.editions) || data.archivePreview) throw new Error('归档格式不可用');
     if (sequence !== refreshSequence) return;
-    const changed = JSON.stringify(data) !== JSON.stringify(db);
+    const changed = db.archivePreview || data.readerVersion !== db.readerVersion || !db.editions.length;
     db = data; window.ROBOTICS_DAILY = db; rebuild();
     if (followLatest && state.mode === 'daily') { state.day = [...dateMap.keys()].sort().at(-1) || state.day; state.month = state.day.slice(0, 7); }
     if (changed) render();
-    $('refresh-status').textContent = changed ? '已加载最新归档' : manual ? '已是最新归档' : '';
+    setLoading(); lastRefreshAt = Date.now();
+    $('refresh-status').textContent = manual ? '已加载最新归档' : '';
   } catch {
-    if (sequence === refreshSequence) $('refresh-status').textContent = db.records.length ? '暂未连上最新归档，当前内容仍可阅读' : '归档暂时无法读取，请稍后刷新';
-  } finally { if (sequence === refreshSequence) $('refresh').disabled = false; }
-  await checkVersion();
+    if (sequence === refreshSequence) {
+      setLoading(db.archivePreview ? '完整归档未能加载，已显示的精选仍可阅读。历史搜索将在加载完成后可用。' : db.records.length ? '暂未连上最新归档，当前文章与历史搜索仍可使用。' : '暂时无法连接归档，请重试加载。', true);
+      $('refresh-status').textContent = '连接超时或暂不可用';
+    }
+  } finally { archiveLoading = false; if (sequence === refreshSequence) $('refresh').disabled = false; }
+}
+async function bootReader() {
+  if (db.editions.length) { rebuild(); render(); setLoading(); refreshData(false); return; }
+  setLoading('正在加载今日研究…');
+  try {
+    const version = document.querySelector('meta[name="robotics-build"]')?.content || APP_VERSION;
+    const preview = await fetchJSON('./preview.json?v=' + encodeURIComponent(version), 12000);
+    if (!Array.isArray(preview.records) || !Array.isArray(preview.editions)) throw new Error('精选格式不可用');
+    db = preview; window.ROBOTICS_DAILY = db; rebuild(); render();
+  } catch { setLoading('精选暂未连上，正在尝试读取完整归档…'); }
+  await refreshData(false);
 }
 document.addEventListener('click', event => {
   const button = event.target.closest('button, a[data-jump]'); if (!button) return;
+  if (button.dataset.retry) { refreshData(true); return; }
   if (button.dataset.category) { state.category = button.dataset.category; render(); }
   if (button.dataset.type) { state.type = button.dataset.type; render(); }
   if (button.dataset.day) setDay(button.dataset.day);
@@ -375,7 +419,7 @@ $('import-favorites').addEventListener('change', async event => {
   } catch (error) { $('favorites-feedback').textContent = error instanceof SyntaxError ? '无法读取这个文件，请选择有效的收藏 JSON 备份。' : error.message; }
   event.target.value = '';
 });
-document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') { refreshData(false); checkVersion(); } });
+document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') { refreshData(false); } });
 setInterval(() => { if (document.visibilityState === 'visible') refreshData(false); }, 5 * 60 * 1000);
-rebuild(); render(); refreshData(false);
+bootReader();
 window.ROBOTICS_DAILY_UI = { version: APP_VERSION, dayOf, getTypes, compareRecords, matchesSearch, withinEditDistance, getState: () => ({ ...state }), getDailyCount: day => dateMap.get(day)?.ids.size || 0 };

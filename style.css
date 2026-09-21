@@ -368,3 +368,7 @@ footer { display: flex; gap: 15px; flex-wrap: wrap; justify-content: space-betwe
   html { scroll-behavior: auto; }
   * { transition: none !important; }
 }
+
+.load-status { margin: 0 0 22px; padding: 15px 18px; border: 1px solid #bfdbfe; border-radius: 12px; background: #eff6ff; color: #1e40af; font-size: 16px; line-height: 1.6; }
+.load-status[hidden] { display: none; }
+.load-status button { margin-left: 12px; padding: 7px 13px; border: 1px solid #93c5fd; border-radius: 8px; background: white; color: #1d4ed8; font: inherit; cursor: pointer; }
