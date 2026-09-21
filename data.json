@@ -9787,15 +9787,15 @@
         "evidence": [
           {
             "url": "https://huggingface.co/papers/2609.10895",
-            "apiUrl": "https://huggingface.co/api/daily_papers?date=2026-09-14",
             "metric": "hf_paper_upvotes",
             "value": 52,
-            "checkedAt": "2026-09-20T09:05:23.277201+00:00",
-            "scope": "公开论文累计投票；非本日新增"
+            "checkedAt": "2026-09-21T09:05:29.055832+00:00",
+            "scope": "论文累计公开投票；不是今日新增",
+            "apiUrl": "https://huggingface.co/api/daily_papers?date=2026-09-14"
           }
         ],
-        "checkedAt": "2026-09-20T09:05:23.277201+00:00",
-        "basis": "HF论文累计投票52；可归属GitHub stars未知。仅为已测来源代理排序，不是当日增量或全网排名。",
+        "checkedAt": "2026-09-21T09:05:29.055832+00:00",
+        "basis": "HF论文累计投票 52；每项观测时间见证据，非本日新增。",
         "missingMetrics": [
           "github_stars"
         ]
@@ -15110,10 +15110,10 @@
       "reviewStatus": "full_text_verified",
       "popularity": {
         "status": "verified",
-        "score": 56.84,
+        "score": 59.51,
         "metrics": {
           "githubStars": 5,
-          "hfUpvotes": 6
+          "hfUpvotes": 7
         },
         "evidence": [
           {
@@ -15125,16 +15125,16 @@
           },
           {
             "url": "https://huggingface.co/papers/2609.13318",
-            "apiUrl": "https://huggingface.co/api/daily_papers?date=2026-09-15",
             "metric": "hf_paper_upvotes",
-            "value": 6,
-            "checkedAt": "2026-09-20T09:05:19.486154+00:00",
-            "scope": "公开论文累计投票；非本日新增"
+            "value": 7,
+            "checkedAt": "2026-09-21T09:05:20.276108+00:00",
+            "scope": "论文累计公开投票；不是今日新增",
+            "apiUrl": "https://huggingface.co/api/daily_papers?date=2026-09-15"
           }
         ],
-        "basis": "HF论文累计投票6；仓库累计stars沿用此前已测5，具体时间见证据。仅为已测来源代理排序，不是当日增量或全网排名。",
+        "basis": "HF论文累计投票 7；保留此前GitHub累计stars 5；每项观测时间见证据，非本日新增。",
         "missingMetrics": [],
-        "checkedAt": "2026-09-20T09:05:19.486154+00:00"
+        "checkedAt": "2026-09-21T09:05:20.276108+00:00"
       },
       "zhTitle": "Attention-DP3：几何对齐的目标注意力",
       "innovation": "冻结Grounding DINO与SAM2得到目标掩码，通过标定投影形成目标性、目标内部距离和背景性三种几何对齐信号，再编码为DP3条件；扩散骨干保持原形式。",
@@ -15258,18 +15258,18 @@
         "evidence": [
           {
             "url": "https://huggingface.co/papers/2609.12541",
-            "apiUrl": "https://huggingface.co/api/daily_papers?date=2026-09-15",
             "metric": "hf_paper_upvotes",
             "value": 17,
-            "checkedAt": "2026-09-20T09:05:19.486154+00:00",
-            "scope": "公开论文累计投票；非本日新增"
+            "checkedAt": "2026-09-21T09:05:20.276108+00:00",
+            "scope": "论文累计公开投票；不是今日新增",
+            "apiUrl": "https://huggingface.co/api/daily_papers?date=2026-09-15"
           }
         ],
-        "basis": "HF论文累计投票17；可归属GitHub stars未知。仅为已测来源代理排序，不是当日增量或全网排名。",
+        "basis": "HF论文累计投票 17；每项观测时间见证据，非本日新增。",
         "missingMetrics": [
           "github_stars"
         ],
-        "checkedAt": "2026-09-20T09:05:19.486154+00:00"
+        "checkedAt": "2026-09-21T09:05:20.276108+00:00"
       },
       "background": "仅预先生成程序或选择已有技能，难以在意外接触后重新解释场景并生成新动作。AGP考察通用编程代理能否持续承担运行时决策。",
       "experiments": "已核验v2。真实YAM机械臂上，四对装配8/10；积木金字塔、双塔和六层塔分别10/10、10/10和9/10；翻骰10/10。抛掷只有2次，叠毛巾各5次。Table 1时间/成本仅统计成功试验，平均完成时间20.6–50.8分钟。附加两对装配经验迁移让Terra由1/5至4/5。",
@@ -21018,24 +21018,24 @@
       "reviewStatus": "full_text_verified",
       "changeType": "new_work",
       "popularity": {
-        "score": 47.96,
+        "score": 49.7,
         "status": "verified",
         "metrics": {
           "githubStars": null,
-          "hfUpvotes": 10
+          "hfUpvotes": 11
         },
         "evidence": [
           {
             "url": "https://huggingface.co/papers/2609.17524",
-            "apiUrl": "https://huggingface.co/api/daily_papers?date=2026-09-16",
             "metric": "hf_paper_upvotes",
-            "value": 10,
-            "checkedAt": "2026-09-20T09:05:15.532611+00:00",
-            "scope": "公开论文累计投票；非本日新增"
+            "value": 11,
+            "checkedAt": "2026-09-21T09:05:11.194355+00:00",
+            "scope": "论文累计公开投票；不是今日新增",
+            "apiUrl": "https://huggingface.co/api/daily_papers?date=2026-09-16"
           }
         ],
-        "basis": "HF论文累计投票10；可归属GitHub stars未知。仅为已测来源代理排序，不是当日增量或全网排名。",
-        "checkedAt": "2026-09-20T09:05:15.532611+00:00",
+        "basis": "HF论文累计投票 11；每项观测时间见证据，非本日新增。",
+        "checkedAt": "2026-09-21T09:05:11.194355+00:00",
         "missingMetrics": [
           "github_stars"
         ]
@@ -26188,12 +26188,12 @@
       "popularity": {
         "score": 110.71,
         "status": "verified",
-        "checkedAt": "2026-09-20T09:05:11.713076+00:00",
+        "checkedAt": "2026-09-21T09:05:07.229662+00:00",
         "metrics": {
           "githubStars": 177,
           "hfUpvotes": 18
         },
-        "basis": "HF论文累计投票18；仓库累计stars沿用此前已测177，具体时间见证据。仅为已测来源代理排序，不是当日增量或全网排名。",
+        "basis": "HF论文累计投票 18；保留此前GitHub累计stars 177；每项观测时间见证据，非本日新增。",
         "evidence": [
           {
             "url": "https://github.com/cheng-haha/GPT-Policy",
@@ -26211,11 +26211,11 @@
           },
           {
             "url": "https://huggingface.co/papers/2609.19138",
-            "apiUrl": "https://huggingface.co/api/daily_papers?date=2026-09-17",
             "metric": "hf_paper_upvotes",
             "value": 18,
-            "checkedAt": "2026-09-20T09:05:11.713076+00:00",
-            "scope": "公开论文累计投票；非本日新增"
+            "checkedAt": "2026-09-21T09:05:07.229662+00:00",
+            "scope": "论文累计公开投票；不是今日新增",
+            "apiUrl": "https://huggingface.co/api/daily_papers?date=2026-09-17"
           }
         ],
         "missingMetrics": []
@@ -26685,10 +26685,10 @@
       "editorialPriorityBasis": "编辑按机器人相关性、可复用技术价值与验证层级判断，非公开关注热度。",
       "popularity": {
         "status": "verified",
-        "score": 101.14,
+        "score": 101.61,
         "metrics": {
           "githubStars": 13,
-          "hfUpvotes": 41
+          "hfUpvotes": 42
         },
         "evidence": [
           {
@@ -26700,15 +26700,15 @@
           },
           {
             "url": "https://huggingface.co/papers/2609.18487",
-            "apiUrl": "https://huggingface.co/api/daily_papers?date=2026-09-17",
             "metric": "hf_paper_upvotes",
-            "value": 41,
-            "checkedAt": "2026-09-20T09:05:11.713076+00:00",
-            "scope": "公开论文累计投票；非本日新增"
+            "value": 42,
+            "checkedAt": "2026-09-21T09:05:07.229662+00:00",
+            "scope": "论文累计公开投票；不是今日新增",
+            "apiUrl": "https://huggingface.co/api/daily_papers?date=2026-09-17"
           }
         ],
-        "checkedAt": "2026-09-20T09:05:11.713076+00:00",
-        "basis": "HF论文累计投票41；仓库累计stars沿用此前已测13，具体时间见证据。仅为已测来源代理排序，不是当日增量或全网排名。",
+        "checkedAt": "2026-09-21T09:05:07.229662+00:00",
+        "basis": "HF论文累计投票 42；保留此前GitHub累计stars 13；每项观测时间见证据，非本日新增。",
         "missingMetrics": []
       },
       "links": [
@@ -33736,8 +33736,8 @@
           "githubStars": 6,
           "hfUpvotes": 33
         },
-        "checkedAt": "2026-09-20T09:05:07.877170+00:00",
-        "basis": "HF论文累计投票33；仓库累计stars沿用此前已测6，具体时间见证据。仅为已测来源代理排序，不是当日增量或全网排名。",
+        "checkedAt": "2026-09-21T09:05:03.269571+00:00",
+        "basis": "HF论文累计投票 33；保留此前GitHub累计stars 6；每项观测时间见证据，非本日新增。",
         "evidence": [
           {
             "url": "https://github.com/zhangzhongbo2213/VABench",
@@ -33748,11 +33748,11 @@
           },
           {
             "url": "https://huggingface.co/papers/2609.19554",
-            "apiUrl": "https://huggingface.co/api/daily_papers?date=2026-09-18",
             "metric": "hf_paper_upvotes",
             "value": 33,
-            "checkedAt": "2026-09-20T09:05:07.877170+00:00",
-            "scope": "公开论文累计投票；非本日新增"
+            "checkedAt": "2026-09-21T09:05:03.269571+00:00",
+            "scope": "论文累计公开投票；不是今日新增",
+            "apiUrl": "https://huggingface.co/api/daily_papers?date=2026-09-18"
           }
         ],
         "missingMetrics": []
@@ -34218,10 +34218,10 @@
       "editorialPriorityBasis": "缺少可比热度时按直接机器人关联、证据完整性与方法可复用性补充排序；非公开互动量。",
       "popularity": {
         "status": "verified",
-        "score": 84.68,
+        "score": 87.89,
         "metrics": {
           "githubStars": 8,
-          "hfUpvotes": 22
+          "hfUpvotes": 26
         },
         "evidence": [
           {
@@ -34233,15 +34233,15 @@
           },
           {
             "url": "https://huggingface.co/papers/2609.17189",
-            "apiUrl": "https://huggingface.co/api/daily_papers?date=2026-09-17",
             "metric": "hf_paper_upvotes",
-            "value": 22,
-            "checkedAt": "2026-09-20T09:05:11.713076+00:00",
-            "scope": "公开论文累计投票；非本日新增"
+            "value": 26,
+            "checkedAt": "2026-09-21T09:05:07.229662+00:00",
+            "scope": "论文累计公开投票；不是今日新增",
+            "apiUrl": "https://huggingface.co/api/daily_papers?date=2026-09-17"
           }
         ],
-        "checkedAt": "2026-09-20T09:05:11.713076+00:00",
-        "basis": "HF论文累计投票22；仓库累计stars沿用此前已测8，具体时间见证据。仅为已测来源代理排序，不是当日增量或全网排名。",
+        "checkedAt": "2026-09-21T09:05:07.229662+00:00",
+        "basis": "HF论文累计投票 26；保留此前GitHub累计stars 8；每项观测时间见证据，非本日新增。",
         "missingMetrics": []
       },
       "background": "事件相机适合高速和暗光动作采集，但双手交互中左右手身份混淆、单手出画会破坏三维重建。",
@@ -34320,23 +34320,23 @@
       "editorialPriority": 0,
       "popularity": {
         "status": "verified",
-        "score": 79.78,
+        "score": 81.55,
         "metrics": {
           "githubStars": null,
-          "hfUpvotes": 53
+          "hfUpvotes": 58
         },
         "evidence": [
           {
             "url": "https://huggingface.co/papers/2609.20800",
-            "apiUrl": "https://huggingface.co/api/daily_papers?date=2026-09-18",
             "metric": "hf_paper_upvotes",
-            "value": 53,
-            "checkedAt": "2026-09-20T09:05:07.877170+00:00",
-            "scope": "公开论文累计投票；非本日新增"
+            "value": 58,
+            "checkedAt": "2026-09-21T09:05:03.269571+00:00",
+            "scope": "论文累计公开投票；不是今日新增",
+            "apiUrl": "https://huggingface.co/api/daily_papers?date=2026-09-18"
           }
         ],
-        "checkedAt": "2026-09-20T09:05:07.877170+00:00",
-        "basis": "HF论文累计投票53；可归属GitHub stars未知。仅为已测来源代理排序，不是当日增量或全网排名。",
+        "checkedAt": "2026-09-21T09:05:03.269571+00:00",
+        "basis": "HF论文累计投票 58；每项观测时间见证据，非本日新增。",
         "missingMetrics": [
           "github_stars"
         ]
@@ -34513,23 +34513,23 @@
       "editorialPriorityBasis": "缺少可比热度时按直接机器人关联、证据完整性与方法可复用性补充排序；非公开互动量。",
       "popularity": {
         "status": "verified",
-        "score": 67.35,
+        "score": 68.02,
         "metrics": {
           "githubStars": null,
-          "hfUpvotes": 28
+          "hfUpvotes": 29
         },
         "evidence": [
           {
             "url": "https://huggingface.co/papers/2609.20817",
-            "apiUrl": "https://huggingface.co/api/daily_papers?date=2026-09-18",
             "metric": "hf_paper_upvotes",
-            "value": 28,
-            "checkedAt": "2026-09-20T09:05:07.877170+00:00",
-            "scope": "公开论文累计投票；非本日新增"
+            "value": 29,
+            "checkedAt": "2026-09-21T09:05:03.269571+00:00",
+            "scope": "论文累计公开投票；不是今日新增",
+            "apiUrl": "https://huggingface.co/api/daily_papers?date=2026-09-18"
           }
         ],
-        "checkedAt": "2026-09-20T09:05:07.877170+00:00",
-        "basis": "HF论文累计投票28；可归属GitHub stars未知。仅为已测来源代理排序，不是当日增量或全网排名。",
+        "checkedAt": "2026-09-21T09:05:03.269571+00:00",
+        "basis": "HF论文累计投票 29；每项观测时间见证据，非本日新增。",
         "missingMetrics": [
           "github_stars"
         ]
@@ -38802,18 +38802,18 @@
         "evidence": [
           {
             "url": "https://huggingface.co/papers/2609.12641",
-            "apiUrl": "https://huggingface.co/api/daily_papers?date=2026-09-14",
             "metric": "hf_paper_upvotes",
             "value": 69,
-            "checkedAt": "2026-09-20T09:05:23.277201+00:00",
-            "scope": "公开论文累计投票；非本日新增"
+            "checkedAt": "2026-09-21T09:05:29.055832+00:00",
+            "scope": "论文累计公开投票；不是今日新增",
+            "apiUrl": "https://huggingface.co/api/daily_papers?date=2026-09-14"
           }
         ],
-        "checkedAt": "2026-09-20T09:05:23.277201+00:00",
+        "checkedAt": "2026-09-21T09:05:29.055832+00:00",
         "missingMetrics": [
           "github_stars"
         ],
-        "basis": "HF论文累计投票69；可归属GitHub stars未知。仅为已测来源代理排序，不是当日增量或全网排名。"
+        "basis": "HF论文累计投票 69；每项观测时间见证据，非本日新增。"
       },
       "windowClassification": "lookback_new_discovery",
       "changeType": "analysis_expansion",
@@ -38974,24 +38974,24 @@
         }
       ],
       "popularity": {
-        "score": 61.82,
+        "score": 62.71,
         "status": "verified",
         "metrics": {
           "githubStars": null,
-          "hfUpvotes": 21
+          "hfUpvotes": 22
         },
         "evidence": [
           {
             "url": "https://huggingface.co/papers/2609.12036",
-            "apiUrl": "https://huggingface.co/api/daily_papers?date=2026-09-14",
             "metric": "hf_paper_upvotes",
-            "value": 21,
-            "checkedAt": "2026-09-20T09:05:23.277201+00:00",
-            "scope": "公开论文累计投票；非本日新增"
+            "value": 22,
+            "checkedAt": "2026-09-21T09:05:29.055832+00:00",
+            "scope": "论文累计公开投票；不是今日新增",
+            "apiUrl": "https://huggingface.co/api/daily_papers?date=2026-09-14"
           }
         ],
-        "basis": "HF论文累计投票21；可归属GitHub stars未知。仅为已测来源代理排序，不是当日增量或全网排名。",
-        "checkedAt": "2026-09-20T09:05:23.277201+00:00",
+        "basis": "HF论文累计投票 22；每项观测时间见证据，非本日新增。",
+        "checkedAt": "2026-09-21T09:05:29.055832+00:00",
         "missingMetrics": [
           "github_stars"
         ]
@@ -39130,23 +39130,23 @@
       "reviewStatus": "primary_methods_results_and_limitations_read",
       "popularity": {
         "status": "verified",
-        "score": 58.89,
+        "score": 59.91,
         "metrics": {
           "githubStars": null,
-          "hfUpvotes": 18
+          "hfUpvotes": 19
         },
         "evidence": [
           {
             "url": "https://huggingface.co/papers/2609.15195",
-            "apiUrl": "https://huggingface.co/api/daily_papers?date=2026-09-16",
             "metric": "hf_paper_upvotes",
-            "value": 18,
-            "checkedAt": "2026-09-20T09:05:15.532611+00:00",
-            "scope": "公开论文累计投票；非本日新增"
+            "value": 19,
+            "checkedAt": "2026-09-21T09:05:11.194355+00:00",
+            "scope": "论文累计公开投票；不是今日新增",
+            "apiUrl": "https://huggingface.co/api/daily_papers?date=2026-09-16"
           }
         ],
-        "basis": "HF论文累计投票18；可归属GitHub stars未知。仅为已测来源代理排序，不是当日增量或全网排名。",
-        "checkedAt": "2026-09-20T09:05:15.532611+00:00",
+        "basis": "HF论文累计投票 19；每项观测时间见证据，非本日新增。",
+        "checkedAt": "2026-09-21T09:05:11.194355+00:00",
         "missingMetrics": [
           "github_stars"
         ]
@@ -39401,18 +39401,18 @@
           "githubStars": null,
           "hfUpvotes": 1
         },
-        "basis": "HF论文累计投票1；可归属GitHub stars未知。仅为已测来源代理排序，不是当日增量或全网排名。",
+        "basis": "HF论文累计投票 1；每项观测时间见证据，非本日新增。",
         "evidence": [
           {
             "url": "https://huggingface.co/papers/2609.17172",
-            "apiUrl": "https://huggingface.co/api/daily_papers?date=2026-09-17",
             "metric": "hf_paper_upvotes",
             "value": 1,
-            "checkedAt": "2026-09-20T09:05:11.713076+00:00",
-            "scope": "公开论文累计投票；非本日新增"
+            "checkedAt": "2026-09-21T09:05:07.229662+00:00",
+            "scope": "论文累计公开投票；不是今日新增",
+            "apiUrl": "https://huggingface.co/api/daily_papers?date=2026-09-17"
           }
         ],
-        "checkedAt": "2026-09-20T09:05:11.713076+00:00",
+        "checkedAt": "2026-09-21T09:05:07.229662+00:00",
         "missingMetrics": [
           "github_stars"
         ]
@@ -42674,6 +42674,1339 @@
       "updatedAt": "2026-09-21T03:15:56.151807+00:00",
       "lastSeenAt": "2026-09-21T03:15:56.151807+00:00",
       "revisionEvents": []
+    },
+    {
+      "id": "arxiv:2609.18084",
+      "title": "Not All Layers Need Tuning: Diagnosing and Directing Adaptation in Vision-Language-Action Models",
+      "zhTitle": "VLA 适配诊断：v2 收窄全量微调对照结论",
+      "authors": [
+        "Shahram Najam Syed",
+        "Arthur Jakobsson",
+        "Prayuj Sachdev",
+        "Jeffrey Ichnowski"
+      ],
+      "category": "vla",
+      "tags": [
+        "vla"
+      ],
+      "type": "arXiv预印本",
+      "contentTypes": [
+        "paper"
+      ],
+      "publishedAt": "2026-09-16T03:44:51Z",
+      "sourceUpdatedAt": "2026-09-17T02:52:21Z",
+      "version": "v2",
+      "canonicalUrl": "https://arxiv.org/abs/2609.18084",
+      "source": "arXiv",
+      "summary": "先诊断目标域变化落在哪些网络区域，再分配微调容量；v2提醒：同训练轮数胜出，不等于胜过各自最佳早停模型。",
+      "innovation": "将基于源域缓存的表征/敏感度诊断，与目标侧梯度代理及随机失活不确定性结合，以Fréchet分布距离调节诊断来源，再按区域需求冻结参数或分配LoRA秩。无标签的是预诊断，不是整个适配流程：真机训练仍使用有标签示范。",
+      "editorialPriority": 95,
+      "editorialPriorityBasis": "按机器人直接相关性、方法可复用性、关键问题与验证价值的编辑排序；不是公开热度。",
+      "status": "verified",
+      "reviewStatus": "full_source_read",
+      "changeType": "new",
+      "backfill": false,
+      "checkedAt": "2026-09-21T09:22:59.063374+00:00",
+      "dateNote": "保留中央官方索引的原始提交和最新版本日期；本次首次收录，未将版本号视作已证实实质修订。",
+      "dateEvidence": {
+        "url": "https://arxiv.org/abs/2609.18084",
+        "location": "中央arXiv API published/updated和版本元数据",
+        "published": "2026-09-16T03:44:51Z",
+        "updated": "2026-09-16T03:44:51Z"
+      },
+      "links": [
+        {
+          "label": "论文原文",
+          "url": "https://arxiv.org/abs/2609.18084"
+        },
+        {
+          "label": "当前全文",
+          "url": "https://arxiv.org/html/2609.18084v1"
+        },
+        {
+          "label": "v2 更正全文",
+          "url": "https://arxiv.org/html/2609.18084v2"
+        }
+      ],
+      "evidence": "已读v1与v2全文、方法与真机统计说明，逐一比较16张HTML表格；未复现实验。",
+      "evidenceDetails": [
+        {
+          "url": "https://arxiv.org/html/2609.18084v2",
+          "location": "§3–4诊断与适配方法；真机实验设置",
+          "supports": "无标签诊断与20段有标签适配不同；五种VLA、参数预算及统一10轮检查点",
+          "checkedAt": "2026-09-21T09:22:59.063374+00:00"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.18084v2",
+          "location": "真机结果、Scene B及统计检验说明",
+          "supports": "语言21/30对22/30、约0.04%参数；逐项精确McNemar、未校正多重比较；四类显著对FT结论",
+          "checkedAt": "2026-09-21T09:22:59.063374+00:00"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.18084v1",
+          "location": "v1/v2逐表及叙述对比",
+          "supports": "16张表内容相同，改变的是早停比较和统计结论口径",
+          "checkedAt": "2026-09-21T09:22:59.063374+00:00"
+        }
+      ],
+      "popularity": {
+        "status": "unmeasured",
+        "score": null,
+        "metrics": {
+          "githubStars": null,
+          "hfUpvotes": null
+        },
+        "evidence": [],
+        "basis": "仅为已核实公开关注信号；未知不当零，累计数不代表当日新增或研究质量。"
+      },
+      "discoveredAt": "2026-09-17T02:39:11.180Z",
+      "updatedAt": "2026-09-21T09:27:30.037288+00:00",
+      "lastSeenAt": "2026-09-21T09:27:30.037288+00:00",
+      "revisionEvents": [
+        {
+          "changeId": "arxiv:2609.18084:v2",
+          "at": "2026-09-21T09:27:30.037288+00:00",
+          "note": "逐表核对v1/v2，16张HTML表格未变；v2将真机结论限定为统一第10轮训练检查点，撤除对独立早停全量微调的泛化优势表述，并明确逐项McNemar检验未做多重比较校正。",
+          "previous": {
+            "id": "arxiv:2609.18084",
+            "title": "Not All Layers Need Tuning: Diagnosing and Directing Adaptation in Vision-Language-Action Models",
+            "zhTitle": "VLA适配诊断：按区域需求分配微调容量",
+            "authors": [
+              "Shahram Najam Syed",
+              "Arthur Jakobsson",
+              "Prayuj Sachdev",
+              "Jeffrey Ichnowski"
+            ],
+            "category": "vla",
+            "tags": [
+              "vla"
+            ],
+            "type": "arXiv预印本",
+            "contentTypes": [
+              "paper"
+            ],
+            "publishedAt": "2026-09-16T03:44:51Z",
+            "sourceUpdatedAt": "2026-09-16T03:44:51Z",
+            "version": "v1",
+            "canonicalUrl": "https://arxiv.org/abs/2609.18084",
+            "source": "arXiv",
+            "summary": "先从少量无标签目标观察估计视觉、语言与动作区域的适配代价，再按诊断分配微调资源，避免均匀配置适配器。",
+            "innovation": "先从少量无标签目标观察估计视觉、语言与动作区域的适配代价，再按诊断分配微调资源，避免均匀配置适配器。",
+            "editorialPriority": 95,
+            "editorialPriorityBasis": "按机器人直接相关性、方法可复用性、关键问题与验证价值的编辑排序；不是公开热度。",
+            "status": "brief_verified",
+            "reviewStatus": "innovation_verified",
+            "changeType": "new",
+            "backfill": false,
+            "checkedAt": "2026-09-17T02:13:23.743876+00:00",
+            "dateNote": "保留中央官方索引的原始提交和最新版本日期；本次首次收录，未将版本号视作已证实实质修订。",
+            "dateEvidence": {
+              "url": "https://arxiv.org/abs/2609.18084",
+              "location": "中央arXiv API published/updated和版本元数据",
+              "published": "2026-09-16T03:44:51Z",
+              "updated": "2026-09-16T03:44:51Z"
+            },
+            "links": [
+              {
+                "label": "论文原文",
+                "url": "https://arxiv.org/abs/2609.18084"
+              },
+              {
+                "label": "当前全文",
+                "url": "https://arxiv.org/html/2609.18084v1"
+              }
+            ],
+            "evidence": "已读本轮中央缓存的官方摘要，完整实验尚待核验。",
+            "evidenceDetails": [
+              {
+                "url": "https://arxiv.org/abs/2609.18084",
+                "location": "Abstract; published/updated metadata",
+                "supports": "研究身份、时间、范围及创新简讯"
+              }
+            ],
+            "popularity": {
+              "status": "unmeasured",
+              "score": null,
+              "metrics": {
+                "githubStars": null,
+                "hfUpvotes": null
+              },
+              "evidence": [],
+              "basis": "仅为已核实公开关注信号；未知不当零，累计数不代表当日新增或研究质量。"
+            },
+            "discoveredAt": "2026-09-17T02:39:11.180Z",
+            "updatedAt": "2026-09-17T02:39:11.180Z",
+            "lastSeenAt": "2026-09-17T02:39:11.180Z"
+          }
+        }
+      ],
+      "reviewedAt": "2026-09-21T09:22:59.063374+00:00",
+      "substantiveUpdate": true,
+      "reviewedVersion": "v2",
+      "changeId": "arxiv:2609.18084:v2",
+      "changeNote": "逐表核对v1/v2，16张HTML表格未变；v2将真机结论限定为统一第10轮训练检查点，撤除对独立早停全量微调的泛化优势表述，并明确逐项McNemar检验未做多重比较校正。",
+      "background": "VLA适配中均匀配置LoRA可能把预算花在不需要变化的区域；少量目标数据又容易让全量微调过拟合。论文希望在正式训练前，用少量无标签观察判断视觉、语言和动作区域的适配需求。",
+      "experiments": "研究跨五种VLA及LIBERO/CALVIN设置，并在真机六类偏移下使用每类20段标注示范、统一训练10轮和30个配对初始条件。语言偏移上Adaptive为21/30、全量微调22/30，Adaptive可训练参数约0.04%；不能据此断言统计等价。Scene B五类测试中，v2仅在外观、新物体、affordance和混合偏移报告相对FT的显著优势；对其他PEFT的2–6次成功差距在该样本量下不显著。",
+      "conclusion": "诊断式资源分配在测试设置中支持更节省参数的适配。v2的重要变化是统计和比较口径：表格数字没有新实验增量，结论限定统一训练轮数，不证明胜过独立选择最佳早停点的全量微调。",
+      "evaluation": "编辑评价：这次修订提升了可解释性，尤其避免将训练协议差异归因于算法本身。真机遮挡偏移中诊断分散，Adaptive并无显著优势；逐项精确McNemar检验没有多重比较校正。源域诊断缓存及其构建成本也不能忽略，部署方未必已拿到这些缓存。",
+      "futureDirections": "研究假设：让该诊断模块选择残差适配器的作用区域，并与保守在线更新联用。验证应给FT、均匀LoRA和诊断LoRA相同示范/调参预算，各自用独立验证集早停，再做多随机种子、配对初始状态及多重比较校正；重点观察遮挡失效与旧技能遗忘。",
+      "leadDiscoveredAt": "2026-09-18T03:44:26.626948+00:00",
+      "briefHistory": [
+        {
+          "promotedAt": "2026-09-21T09:27:30.037288+00:00",
+          "previous": {
+            "id": "arxiv:2609.18084",
+            "title": "Not All Layers Need Tuning: Diagnosing and Directing Adaptation in Vision-Language-Action Models",
+            "zhTitle": "VLA适配诊断：按区域需求分配微调容量",
+            "authors": [
+              "Shahram Najam Syed",
+              "Arthur Jakobsson",
+              "Prayuj Sachdev",
+              "Jeffrey Ichnowski"
+            ],
+            "category": "vla",
+            "tags": [
+              "vla"
+            ],
+            "type": "arXiv预印本",
+            "contentTypes": [
+              "paper"
+            ],
+            "publishedAt": "2026-09-16T03:44:51Z",
+            "sourceUpdatedAt": "2026-09-16T03:44:51Z",
+            "version": "v1",
+            "canonicalUrl": "https://arxiv.org/abs/2609.18084",
+            "source": "arXiv",
+            "summary": "先从少量无标签目标观察估计视觉、语言与动作区域的适配代价，再按诊断分配微调资源，避免均匀配置适配器。",
+            "innovation": "先从少量无标签目标观察估计视觉、语言与动作区域的适配代价，再按诊断分配微调资源，避免均匀配置适配器。",
+            "editorialPriority": 95,
+            "editorialPriorityBasis": "按机器人直接相关性、方法可复用性、关键问题与验证价值的编辑排序；不是公开热度。",
+            "status": "brief_verified",
+            "reviewStatus": "innovation_verified",
+            "changeType": "new",
+            "backfill": false,
+            "checkedAt": "2026-09-17T02:13:23.743876+00:00",
+            "dateNote": "保留中央官方索引的原始提交和最新版本日期；本次首次收录，未将版本号视作已证实实质修订。",
+            "dateEvidence": {
+              "url": "https://arxiv.org/abs/2609.18084",
+              "location": "中央arXiv API published/updated和版本元数据",
+              "published": "2026-09-16T03:44:51Z",
+              "updated": "2026-09-16T03:44:51Z"
+            },
+            "links": [
+              {
+                "label": "论文原文",
+                "url": "https://arxiv.org/abs/2609.18084"
+              },
+              {
+                "label": "当前全文",
+                "url": "https://arxiv.org/html/2609.18084v1"
+              }
+            ],
+            "evidence": "已读本轮中央缓存的官方摘要，完整实验尚待核验。",
+            "evidenceDetails": [
+              {
+                "url": "https://arxiv.org/abs/2609.18084",
+                "location": "Abstract; published/updated metadata",
+                "supports": "研究身份、时间、范围及创新简讯"
+              }
+            ],
+            "popularity": {
+              "status": "unmeasured",
+              "score": null,
+              "metrics": {
+                "githubStars": null,
+                "hfUpvotes": null
+              },
+              "evidence": [],
+              "basis": "仅为已核实公开关注信号；未知不当零，累计数不代表当日新增或研究质量。"
+            },
+            "discoveredAt": "2026-09-17T02:39:11.180Z",
+            "updatedAt": "2026-09-17T02:39:11.180Z",
+            "lastSeenAt": "2026-09-17T02:39:11.180Z",
+            "revisionEvents": []
+          }
+        }
+      ],
+      "aliasIds": []
+    },
+    {
+      "id": "arxiv:2609.14868",
+      "title": "Primitive-Informed Sampling-Based MPC for Multi-Fingered Dexterous Manipulation",
+      "authors": [
+        "Küçüktabak, Emek Barış",
+        "Patel, Karankumar",
+        "Cui, Jinda",
+        "Yang, Zhaodong",
+        "Sasabuchi, Kazuhiro",
+        "Takamatsu, Jun"
+      ],
+      "publishedAt": "2026-09-14T00:36:17+00:00",
+      "sourceUpdatedAt": "2026-09-16T02:35:33Z",
+      "version": "v2",
+      "canonicalUrl": "https://arxiv.org/abs/2609.14868",
+      "sourceLinks": [],
+      "comments": null,
+      "priorPublicationContext": null,
+      "dateEvidence": {
+        "url": "https://arxiv.org/abs/2609.14868",
+        "location": "Submission history",
+        "history": "Submission history From: Emek Baris Kucuktabak [ view email ] [v1] Mon, 14 Sep 2026 00:36:17 UTC (8,446 KB)",
+        "versions": [
+          {
+            "version": "v1",
+            "date": "2026-09-14T00:36:17+00:00"
+          }
+        ]
+      },
+      "checkedAt": "2026-09-21T09:22:59.063374+00:00",
+      "category": "theory",
+      "zhTitle": "基元引导 MPC：学习协同动作，保留在线残差优化",
+      "innovation": "动作写成均值姿态、低维协同基元与关节残差之和；采样协方差结合低秩基元结构和独立关节扰动，数字孪生检查轨迹约束。基元可以从SAC轨迹或人类抓握数据中PCA提取。在线残差由CEM优化，不能称为在线RL残差；完整关节修正仍保留，也不是简单减少总优化维度。",
+      "editorialPriority": 87,
+      "tags": [
+        "learning_control",
+        "MPC",
+        "灵巧操作"
+      ],
+      "type": "arXiv预印本",
+      "contentTypes": [
+        "paper"
+      ],
+      "summary": "用学习或人类动作提取的协同基元引导CEM采样，再让MPC优化全关节残差，救回无支撑灵巧手接触切换中的低效搜索。",
+      "status": "verified",
+      "evidence": "已读v1/v2全文及项目页，核对采样、消融、统计单位与硬件；本次编辑升级不构造实质修订事件。",
+      "evidenceDetails": [
+        {
+          "url": "https://arxiv.org/html/2609.14868v2",
+          "location": "方法：Primitive parameterization、CEM与约束；实验设置",
+          "supports": "低秩与全关节残差、350候选约37.7毫秒及192线程硬件",
+          "checkedAt": "2026-09-21T09:22:59.063374+00:00"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.14868v2",
+          "location": "In-hand rotation与ablation表",
+          "supports": "10×3分钟、86/86完整转动；无基元0/30、无残差0/10；模型质量失配18掉落/30分钟",
+          "checkedAt": "2026-09-21T09:22:59.063374+00:00"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.14868v2",
+          "location": "Grasping / reorientation",
+          "supports": "人类基元9/10对0/10；小角度纯关节规划可以成功",
+          "checkedAt": "2026-09-21T09:22:59.063374+00:00"
+        }
+      ],
+      "links": [
+        {
+          "label": "论文原文",
+          "url": "https://arxiv.org/abs/2609.14868"
+        },
+        {
+          "label": "v2 全文",
+          "url": "https://arxiv.org/html/2609.14868v2"
+        },
+        {
+          "label": "实验项目",
+          "url": "https://primitive-informed-mpc.github.io/"
+        }
+      ],
+      "reviewedAt": "2026-09-21T09:22:59.063374+00:00",
+      "reviewedVersion": "v2",
+      "announcementDate": "2026-09-15",
+      "changeType": "backfill",
+      "discoveryNote": "本轮普通官方9/15公告首次发现；原始提交、最新版本与收录时间分别保留。",
+      "popularity": {
+        "score": null,
+        "status": "unmeasured",
+        "metrics": {
+          "githubStars": null,
+          "hfUpvotes": null
+        },
+        "basis": "热度由本轮唯一协调者统一观测并合并；尚缺指标为null。",
+        "evidence": [],
+        "checkedAt": "2026-09-15T09:16:58.016375+00:00"
+      },
+      "backfill": true,
+      "leadDiscoveredAt": "2026-09-18T09:39:21.834Z",
+      "discoveredAt": "2026-09-15T09:35:25.032Z",
+      "updatedAt": "2026-09-21T09:27:30.037288+00:00",
+      "lastSeenAt": "2026-09-21T09:27:30.037288+00:00",
+      "revisionEvents": [],
+      "reviewStatus": "full_source_read",
+      "substantiveUpdate": false,
+      "background": "无支撑手内转动需要连续切换接触与手指步态。直接在高维关节空间采样，预算常被不产生有效接触的轨迹消耗；这属于所测经典采样控制器的计算和搜索瓶颈，而非物理不可行。",
+      "experiments": "真机Allegro手搭配Franka。40毫米六角柱旋转中，350条候选的完整方法在10次、每次3分钟的试验里完成86/86次完整转动；86是转动次数，不是独立试验数。非结构化关节CEM在100/350/600候选下均未完成一整圈；移除基元0/30，移除残差0/10。350候选优化约37.7毫秒，使用192线程Threadripper工作站。人类基元抓握为9/10，对照0/10；较小角度重定向里纯关节采样本来就能奏效。",
+      "conclusion": "学习到的协同结构与经典在线纠偏互补：基元提高有效采样率，残差让计划越出基元子空间。更高候选数并不自动更好，延迟和反馈频率共同影响真机结果。",
+      "evaluation": "编辑评价：直接对照和消融清楚，适合关注“学习补足经典理论”。但系统依赖高频动作捕捉数字孪生和较强CPU，不能直接外推到普通嵌入式平台。质量低估50%的模型失配下仍出现18次掉落/30分钟；未给出广泛接触稳定性保证。v1/v2核对未发现足以作为新实验事件的变化，本次为旧简讯补读。",
+      "futureDirections": "研究假设：将该低秩采样接口与不确定性感知的学习动力学结合，同时保留显式接触/力约束。以相同墙钟预算比较纯CEM、基元CEM、基元加残差和学习动力学版本，在未知形状、摩擦及质量误差下报告完整试验成功率、掉落、延迟和重规划失败，避免只统计成功转动片段。",
+      "learningClassical": {
+        "mode": "hybrid",
+        "baseline": "不带动作基元的关节空间CEM采样MPC。",
+        "cornerCase": "无支撑连续转动与接触切换下，有效轨迹在高维采样中稀疏；是特定预算下的工程性能瓶颈。",
+        "learningRole": "离线SAC或人类轨迹提供PCA协同基元；在线低秩采样加全关节残差由MPC优化，约束检查仍由数字孪生负责。",
+        "evidence": "相同平台和任务下，完整350候选方法10个3分钟试验完成86/86次转动；无基元及无残差均不能完成整圈。小角度任务纯关节采样可成功，显示学习并非处处必要。",
+        "limitations": "所需计算为192线程工作站；依赖状态测量和模型。质量失配仍导致掉落，连续转动次数不能代替独立样本量；没有全局稳定性证明。",
+        "nextTest": "固定墙钟预算和状态估计质量，跨未知摩擦/质量/几何做配对试验，同时计入约束违背、掉落及最坏延迟；验证学习模型不确定性是否帮助决定何时回退。"
+      },
+      "briefHistory": [
+        {
+          "promotedAt": "2026-09-21T09:27:30.037288+00:00",
+          "previous": {
+            "id": "arxiv:2609.14868",
+            "title": "Primitive-Informed Sampling-Based MPC for Multi-Fingered Dexterous Manipulation",
+            "authors": [
+              "Küçüktabak, Emek Barış",
+              "Patel, Karankumar",
+              "Cui, Jinda",
+              "Yang, Zhaodong",
+              "Sasabuchi, Kazuhiro",
+              "Takamatsu, Jun"
+            ],
+            "publishedAt": "2026-09-14T00:36:17+00:00",
+            "sourceUpdatedAt": "2026-09-14T00:36:17+00:00",
+            "version": "v1",
+            "canonicalUrl": "https://arxiv.org/abs/2609.14868",
+            "sourceLinks": [],
+            "comments": null,
+            "priorPublicationContext": null,
+            "dateEvidence": {
+              "url": "https://arxiv.org/abs/2609.14868",
+              "location": "Submission history",
+              "history": "Submission history From: Emek Baris Kucuktabak [ view email ] [v1] Mon, 14 Sep 2026 00:36:17 UTC (8,446 KB)",
+              "versions": [
+                {
+                  "version": "v1",
+                  "date": "2026-09-14T00:36:17+00:00"
+                }
+              ]
+            },
+            "checkedAt": "2026-09-15T09:09:35.395039+00:00",
+            "category": "theory",
+            "zhTitle": "操作基元与关节残差共同引导灵巧手采样MPC",
+            "innovation": "用低维协同手指基元偏置采样，同时优化关节级残差，并在前向数字孪生中拒绝不满足任务约束的轨迹，以提高接触操作的有效采样率。",
+            "editorialPriority": 87,
+            "tags": [
+              "机器人理论与控制"
+            ],
+            "type": "arXiv预印本",
+            "contentTypes": [
+              "paper"
+            ],
+            "summary": "用低维协同手指基元偏置采样，同时优化关节级残差，并在前向数字孪生中拒绝不满足任务约束的轨迹，以提高接触操作的有效采样率。",
+            "status": "brief_verified",
+            "evidence": "普通官方摘要及提交历史已核对；简讯仅概述已披露创新，非全文评审",
+            "evidenceDetails": [
+              {
+                "url": "https://arxiv.org/abs/2609.14868",
+                "location": "Abstract",
+                "supports": "简讯创新点与机器人关联"
+              },
+              {
+                "url": "https://arxiv.org/abs/2609.14868",
+                "location": "Submission history",
+                "supports": "原始提交日期及最新版本日期"
+              }
+            ],
+            "links": [
+              {
+                "label": "论文原文",
+                "url": "https://arxiv.org/abs/2609.14868"
+              }
+            ],
+            "reviewedAt": "2026-09-15T09:16:58.016375+00:00",
+            "reviewedVersion": "v1",
+            "announcementDate": "2026-09-15",
+            "changeType": "backfill",
+            "discoveryNote": "本轮普通官方9/15公告首次发现；原始提交、最新版本与收录时间分别保留。",
+            "popularity": {
+              "score": null,
+              "status": "unmeasured",
+              "metrics": {
+                "githubStars": null,
+                "hfUpvotes": null
+              },
+              "basis": "热度由本轮唯一协调者统一观测并合并；尚缺指标为null。",
+              "evidence": [],
+              "checkedAt": "2026-09-15T09:16:58.016375+00:00"
+            },
+            "backfill": true,
+            "leadDiscoveredAt": "2026-09-15T09:16:58.016375+00:00",
+            "discoveredAt": "2026-09-15T09:35:25.032Z",
+            "updatedAt": "2026-09-15T09:35:25.032Z",
+            "lastSeenAt": "2026-09-15T09:35:25.032Z",
+            "revisionEvents": []
+          }
+        }
+      ],
+      "aliasIds": []
+    },
+    {
+      "id": "arxiv:2607.08448",
+      "title": "Harness VLA: Steering Frozen VLAs into Reliable Manipulation Primitives via Memory-Guided Agents",
+      "zhTitle": "Harness VLA / RPent：经典运动基元与冻结 VLA 分工",
+      "authors": [
+        "Yixian Zhang",
+        "Huanming Zhang",
+        "Feng Gao",
+        "Xiao Li",
+        "Zhihao Liu",
+        "Chunyang Zhu",
+        "Jiaxing Qiu",
+        "Yuchen Yan",
+        "Jiyuan Liu",
+        "Wenhao Tang",
+        "Zhengru Fang",
+        "Yi Nie",
+        "Changxu Wei",
+        "Yu Wang",
+        "Wenbo Ding",
+        "Chao Yu"
+      ],
+      "publishedAt": "2026-07-09T13:08:54Z",
+      "sourceUpdatedAt": "2026-09-02T13:36:23Z",
+      "version": "v4",
+      "reviewedVersion": "v4",
+      "canonicalUrl": "https://arxiv.org/abs/2607.08448",
+      "category": "vla",
+      "tags": [
+        "learning_control",
+        "VLA",
+        "分层规划"
+      ],
+      "type": "arXiv预印本",
+      "contentTypes": [
+        "paper",
+        "news",
+        "report"
+      ],
+      "summary": "以解析控制承担移动和重新定位，以冻结VLA处理接触，再通过记忆、反馈和重试组合长任务；本次补全文分析并合并今日报道。",
+      "innovation": "固定基元库中加入可重试的vla_act：高层规划器从RGB-D和状态决定接触前姿态、调用时机、早停及失败后重新定位。单参考场景探索保存可参数化的任务轨迹，另存通用成功规则和失败知识；测试冻结记忆并禁止reset。VLA在部署时冻结，但不同基准使用不同已训练底座。",
+      "status": "verified",
+      "evidence": "已读v4全文、官方RPent仓库、排行榜与Flash文档；新闻仅用于发现和关联，未确认当前排行榜数据的首次更新时间。",
+      "evidenceDetails": [
+        {
+          "url": "https://arxiv.org/html/2607.08448v4",
+          "location": "§2–3；Tables 2,3,6；§3.3；Limitations",
+          "supports": "固定基元、记忆协议；384/400、82.4对50.0、58.4对50.4及样本；部分格子均值局限",
+          "checkedAt": "2026-09-21T09:22:59.063374+00:00"
+        },
+        {
+          "url": "https://rpent.readthedocs.io/zh-cn/latest/rst_source/leaderboard/performance.html",
+          "location": "LIBERO-PRO表与脚注",
+          "supports": "741/800由Long157/200和其他584/600合并，两份冻结memory",
+          "checkedAt": "2026-09-21T09:22:59.063374+00:00"
+        },
+        {
+          "url": "https://rpent.readthedocs.io/zh-cn/latest/rst_source/usage/flash.html",
+          "location": "全系列LIBERO-PRO性能与执行时间",
+          "supports": "581/800；成功计划单episode耗时抽样，不能与全量planner耗时直接等价",
+          "checkedAt": "2026-09-21T09:22:59.063374+00:00"
+        }
+      ],
+      "links": [
+        {
+          "label": "论文原文",
+          "url": "https://arxiv.org/abs/2607.08448"
+        },
+        {
+          "label": "论文全文",
+          "url": "https://arxiv.org/html/2607.08448v4"
+        },
+        {
+          "label": "RPent 项目",
+          "url": "https://github.com/RLinf/RPent"
+        },
+        {
+          "label": "官方评测",
+          "url": "https://rpent.readthedocs.io/zh-cn/latest/rst_source/leaderboard/performance.html"
+        },
+        {
+          "label": "Flash 说明",
+          "url": "https://rpent.readthedocs.io/zh-cn/latest/rst_source/usage/flash.html"
+        },
+        {
+          "label": "今日报道",
+          "url": "https://www.qbitai.com/2026/09/493218.html"
+        }
+      ],
+      "editorialPriority": 50,
+      "discoveryNote": "周度30天补查首次收录；原稿可能早于本窗口，近期修订触发检索，不冒充今日新论文。",
+      "checkedAt": "2026-09-21T09:22:59.063374+00:00",
+      "popularity": {
+        "score": null,
+        "status": "unmeasured",
+        "metrics": {
+          "githubStars": null,
+          "hfUpvotes": null
+        },
+        "basis": "尚未取得可归属的数值热度信号；缺失为null。",
+        "evidence": [],
+        "checkedAt": "2026-09-21T02:50:27.325645+00:00"
+      },
+      "reviewStatus": "full_source_read",
+      "discoveredAt": "2026-09-21T03:15:56.151807+00:00",
+      "updatedAt": "2026-09-21T09:27:30.037288+00:00",
+      "lastSeenAt": "2026-09-21T09:27:30.037288+00:00",
+      "revisionEvents": [],
+      "reviewedAt": "2026-09-21T09:22:59.063374+00:00",
+      "substantiveUpdate": false,
+      "background": "解析IK、姿态和夹爪基元易于指定目标，但在不规则抓取、受限放置及关节物体交互上较脆弱。端到端VLA擅长局部接触，却常在指令重绑定、布局变化与长任务中沿用训练行为。",
+      "experiments": "v4论文中，标准LIBERO的CC版本384/400，直接冻结底座95.3%；LIBERO-Pro完整八格，CC为82.4%，同协议底座50.0%。RoboTwin使用50任务×5随机种子，CC58.4%，相同冻结LingBot底座50.4%。当前官方文档另报LIBERO-Pro 741/800=92.63%，但Long与其他六套件用了两份分别探索后冻结的memory，不是所有回合共享同一快照，不能混为v4论文实验。Flash为581/800；其耗时按最终计划的成功episode采样，与Codex所有planner记录并非同口径，不能直接照搬媒体“7倍”速度结论。",
+      "conclusion": "在所测仿真平台，把可解释的非接触运动与学习接触技能分开可以提升部署鲁棒性。原稿七月已发布，今日新闻不是首次开源证据；当前榜单属于可核验的官方自报结果，其确切新增日期仍未确认。",
+      "evaluation": "编辑评价：接口和失败恢复比单纯扩大策略参数更值得复用。但论文摘要以只覆盖部分格子的RATS整体均值作“提升38.6点”对比，范围不齐，不宜当严格同任务提升。终止谓词由最后哪类动作触发，也不是证明该类动作独立必要性的因果消融；缺少纯解析控制同预算基线及全面真机验证。",
+      "futureDirections": "研究假设：将vla_act替换或补充为基元引导MPC的接触技能，给高层返回成功置信度、接触约束与重试代价。固定探索预算、统一冻结memory与墙钟预算，比较纯解析、纯VLA及混合版本；在未知接触和长时任务中测成功、误判成功、重试次数和碰撞，检验分工本身的收益。",
+      "learningClassical": {
+        "mode": "hybrid",
+        "baseline": "解析运动/IK、姿态、夹爪与导航基元组成的控制接口；端到端冻结VLA另作性能对照。",
+        "cornerCase": "不规则抓取、受限放置、关节交互及接触失败后恢复；是解析技能库表达与工程鲁棒性不足，不证明经典控制理论不可能。",
+        "learningRole": "冻结VLA只承担接触阶段，高层记忆规划器绑定目标与重试；非接触运输和重新定位继续使用解析控制。",
+        "evidence": "论文给出相同冻结VLA底座的同协议对照及调用次数分析，支持混合系统优于直接VLA；缺少纯解析同预算消融，对“补足经典”仍属机制与案例证据。",
+        "limitations": "任务级探索有成本；不同基准使用不同底座。当前榜单memory分批，Flash耗时抽样与成功率样本不同；主要定量证据为仿真且没有稳定性保证。",
+        "nextTest": "同一记忆、相同探索与推理预算比较解析、VLA、混合三者，按接触与非接触失败分解；加入安全约束及检测失败后回退，量化代价。"
+      },
+      "relatedCoverage": [
+        {
+          "url": "https://www.qbitai.com/2026/09/493218.html",
+          "publishedAt": "2026-09-21T14:22:37+08:00",
+          "note": "当天跟进报道，非首次开源日期"
+        }
+      ],
+      "briefHistory": [
+        {
+          "promotedAt": "2026-09-21T09:27:30.037288+00:00",
+          "previous": {
+            "id": "arxiv:2607.08448",
+            "title": "Harness VLA: Steering Frozen VLAs into Reliable Manipulation Primitives via Memory-Guided Agents",
+            "zhTitle": "Harness VLA: Steering Frozen VLAs into Reliable Manipulation Primitives via Memory-Guided Agents",
+            "authors": [
+              "Yixian Zhang",
+              "Huanming Zhang",
+              "Feng Gao",
+              "Xiao Li",
+              "Zhihao Liu",
+              "Chunyang Zhu",
+              "Jiaxing Qiu",
+              "Yuchen Yan",
+              "Jiyuan Liu",
+              "Wenhao Tang",
+              "Zhengru Fang",
+              "Yi Nie",
+              "Changxu Wei",
+              "Yu Wang",
+              "Wenbo Ding",
+              "Chao Yu"
+            ],
+            "publishedAt": "2026-07-09T13:08:54Z",
+            "sourceUpdatedAt": "2026-09-02T13:36:23Z",
+            "version": "v4",
+            "reviewedVersion": "v4",
+            "canonicalUrl": "https://arxiv.org/abs/2607.08448",
+            "category": "vla",
+            "tags": [],
+            "type": "arXiv预印本",
+            "contentTypes": [
+              "paper"
+            ],
+            "summary": "作者方法摘句：“We present Harness VLA, a memory-augmented agentic framework that exposes a frozen VLA as a retryable contact-rich primitive and composes it with a small…”（周度补收，英文原句节选；实验未全文核读）",
+            "innovation": "作者方法摘句：“We present Harness VLA, a memory-augmented agentic framework that exposes a frozen VLA as a retryable contact-rich primitive and composes it with a small…”（周度补收，英文原句节选；实验未全文核读）",
+            "status": "brief_verified",
+            "evidence": "arXiv原始摘要与版本元数据已取得；此简讯保留英文方法摘句，完整实验尚未核读，不表示已验证作者性能结论。",
+            "evidenceDetails": [
+              {
+                "url": "https://arxiv.org/abs/2607.08448",
+                "location": "arXiv API entry: title / summary / published / updated",
+                "supports": "论文身份、原始日期、当前版本与方法摘句",
+                "checkedAt": "2026-09-21T02:50:27.325645+00:00"
+              }
+            ],
+            "links": [
+              {
+                "label": "论文原文",
+                "url": "https://arxiv.org/abs/2607.08448"
+              }
+            ],
+            "editorialPriority": 50,
+            "discoveryNote": "周度30天补查首次收录；原稿可能早于本窗口，近期修订触发检索，不冒充今日新论文。",
+            "checkedAt": "2026-09-21T02:50:27.325645+00:00",
+            "popularity": {
+              "score": null,
+              "status": "unmeasured",
+              "metrics": {
+                "githubStars": null,
+                "hfUpvotes": null
+              },
+              "basis": "尚未取得可归属的数值热度信号；缺失为null。",
+              "evidence": [],
+              "checkedAt": "2026-09-21T02:50:27.325645+00:00"
+            },
+            "reviewStatus": "official_abstract_only",
+            "discoveredAt": "2026-09-21T03:15:56.151807+00:00",
+            "updatedAt": "2026-09-21T03:15:56.151807+00:00",
+            "lastSeenAt": "2026-09-21T03:15:56.151807+00:00",
+            "revisionEvents": []
+          }
+        }
+      ],
+      "aliasIds": []
+    },
+    {
+      "id": "hf:leesuyun/DiVE",
+      "title": "Learning Decomposed Visibility for Efficient Active Exploration of Cluttered Scenes",
+      "zhTitle": "DiVE：学习何时换视角、何时推动物体",
+      "authors": [
+        "Suyun Lee",
+        "Minsoo Choi",
+        "Jihwan Gong",
+        "Unghui Nam",
+        "Minji Bae",
+        "Byonghyo Shim"
+      ],
+      "category": "embodied",
+      "tags": [
+        "learning_control",
+        "主动感知",
+        "遮挡"
+      ],
+      "contentTypes": [
+        "report"
+      ],
+      "type": "公开技术报告与模型",
+      "publishedAt": "2026-09-21T05:00:40.000Z",
+      "sourceUpdatedAt": "2026-09-21T05:23:30.000Z",
+      "version": "403ceffff85822b742fb4a03144149ae2a83c35e",
+      "canonicalUrl": "https://huggingface.co/leesuyun/DiVE",
+      "links": [
+        {
+          "label": "技术报告 / 模型",
+          "url": "https://huggingface.co/leesuyun/DiVE"
+        },
+        {
+          "label": "项目与实验",
+          "url": "https://lee-su-yun.github.io/DiVE/"
+        },
+        {
+          "label": "代码进展",
+          "url": "https://github.com/lee-su-yun/DiVE"
+        }
+      ],
+      "status": "verified",
+      "reviewStatus": "primary_report_read",
+      "checkedAt": "2026-09-21T09:22:59.063374+00:00",
+      "dateNote": "2026-09-21为HF权重仓库创建日期；项目自称CoRL 2026，论文发表日未确认。",
+      "dateEvidence": {
+        "url": "https://huggingface.co/leesuyun/DiVE",
+        "location": "HF公开API createdAt / lastModified",
+        "createdAt": "2026-09-21T05:00:40.000Z",
+        "lastModified": "2026-09-21T05:23:30.000Z"
+      },
+      "popularity": {
+        "status": "verified",
+        "score": 0,
+        "metrics": {
+          "githubStars": 0,
+          "hfUpvotes": null
+        },
+        "missingMetrics": [
+          "hf_paper_upvotes"
+        ],
+        "basis": "专属项目仓库页面显示累计stars为0；不是缺失推断，也不代表研究质量。",
+        "evidence": [
+          {
+            "url": "https://github.com/lee-su-yun/DiVE",
+            "metric": "github_stars",
+            "value": 0,
+            "checkedAt": "2026-09-21T09:11:10.706685+00:00",
+            "scope": "普通项目页可见累计stars；非本日增长"
+          }
+        ],
+        "checkedAt": "2026-09-21T09:11:10.706685+00:00"
+      },
+      "editorialPriority": 92,
+      "summary": "把遮挡分解为可通过观察和可通过推动揭示的两类，减少逐动作前瞻的规划开销；目前依据官方项目报告与开放权重，全文尚未发布。",
+      "background": "统一占据或不确定性地图指出哪里未知，却未说明换视角是否有用。物体完全挡住后方区域时，仅改变相机视角可能一直无收益；允许物理交互的方法又常依赖昂贵候选模拟或人工平衡阈值。",
+      "innovation": "共享骨干预测view-resolvable与push-resolvable两张递归可见性图，将“状态频率”和“推动后的变化”换算到同一预期可见性变化尺度，先选观察/推动，再一次前向排名具体动作。它学习的是动作对可见性的作用，不是让网络凭空恢复从未看到的真实物体。",
+      "experiments": "官方项目以Isaac Sim中UR5、货架与YCB物体对比CNABU、View-Only和随机选择，训练低/高遮挡并留出极端遮挡。作者报极端遮挡IoU提升11.3%，页面未明确该数是相对增幅还是百分点，本文不重解释；100个episode的计算比较报规划19.8倍、总步骤13.2倍加速。Piper真机10个货架场景、20步预算，初始遮挡物体发现率79.2±23.3%，View-Only为54.2±35.4%，是跨场景均值及离散度，不是成功率置信区间。",
+      "conclusion": "公开结果支持在测试货架上联合学习观察与交互选择；仅换视角的性能平台可通过适当推动改善。但页面中grasp-resolvable扩展仅验证表示可行性，不能当成已完成抓取系统。",
+      "evaluation": "编辑评价：可复用的价值在于统一两种动作的收益接口，并有固定重建器、只改选择策略的比较。论文、完整代码和训练数据仍标coming soon，无法核查全部超参、预算及计算硬件；当前属于作者项目报告，不是独立复现。真机只有10场景，推物碰撞、物品损伤及失败细分尚不完整。",
+      "futureDirections": "研究假设：将两张图作为经典下一最佳视角/推物规划器的候选优先级，再加碰撞和易损物体约束。固定状态估计器、动作库、相同墙钟预算比较启发式、CNABU与学习收益；报告新增发现、无效推物、误识别及损伤风险，并检验相机/物体变化下收益是否校准。",
+      "learningClassical": {
+        "mode": "planner",
+        "baseline": "只移动相机的View-Only主动感知，以及靠候选动作前瞻或阈值平衡观察/推动的规划。CNABU本身含学习组件，不能统称纯经典理论。",
+        "cornerCase": "某些区域对所有候选观察视角均遮挡，视角动作受物理可见性限制；推物改变场景可解除遮挡。跨动作收益计算另有工程开销。",
+        "learningRole": "预测观察/推动各自可揭示区域并统一收益单位，替代逐候选后验预测和人工跨模式阈值。",
+        "evidence": "作者真机10场景20动作下发现率79.2±23.3%对54.2±35.4%；仿真固定重建器比较选择方法。全文未开放，同硬件/安全预算仍待查。",
+        "limitations": "增加接触带来新的碰撞、推坏场景与感知误分类；数据、完整代码及硬件成本未齐，未证明泛化安全。物理不可见性靠行动改变条件，不是被学习违反。",
+        "nextTest": "同动作集和墙钟预算对比经典信息增益、候选模拟与学习收益，跨遮挡/材质/相机评测发现率、误判、无效推物和安全约束违背。"
+      },
+      "evidence": "官方项目全文、固定HF模型卡与公开文件索引已读；论文和完整代码/数据尚未公开，不声称已读论文或复现。",
+      "evidenceDetails": [
+        {
+          "url": "https://lee-su-yun.github.io/DiVE/",
+          "location": "Method / Mode and Action Selection",
+          "supports": "双可见性图及统一收益尺度；候选排名",
+          "checkedAt": "2026-09-21T09:22:59.063374+00:00"
+        },
+        {
+          "url": "https://lee-su-yun.github.io/DiVE/",
+          "location": "Results / Where the gain comes from",
+          "supports": "极端遮挡11.3%原始表述；100episode计算比较19.8×/13.2×及固定重建器对照",
+          "checkedAt": "2026-09-21T09:22:59.063374+00:00"
+        },
+        {
+          "url": "https://lee-su-yun.github.io/DiVE/",
+          "location": "Real-world experiments / table",
+          "supports": "10场景20动作；79.2±23.3与54.2±35.4的遮挡物体发现率",
+          "checkedAt": "2026-09-21T09:22:59.063374+00:00"
+        },
+        {
+          "url": "https://huggingface.co/leesuyun/DiVE/blob/403ceffff85822b742fb4a03144149ae2a83c35e/README.md",
+          "location": "Checkpoints / validation / availability",
+          "supports": "模型开放，选择器排名准确率并非闭环机器人成功率；全文与数据待开放",
+          "checkedAt": "2026-09-21T09:22:59.063374+00:00"
+        }
+      ],
+      "discoveredAt": "2026-09-21T09:27:30.037288+00:00",
+      "updatedAt": "2026-09-21T09:27:30.037288+00:00",
+      "lastSeenAt": "2026-09-21T09:27:30.037288+00:00",
+      "revisionEvents": []
+    },
+    {
+      "id": "hf:xunden/tartanimu-xunden-iros2026",
+      "title": "TartanIMU Challenge 2026 — Xunden unified model",
+      "zhTitle": "Xunden IMU 报告：统一惯性模型与可核对逐序列成绩",
+      "authors": [
+        "Xunden team"
+      ],
+      "category": "embodied",
+      "tags": [],
+      "contentTypes": [
+        "report"
+      ],
+      "type": "公开技术报告与模型",
+      "publishedAt": "2026-09-19T13:38:19.000Z",
+      "sourceUpdatedAt": "2026-09-21T03:19:47.000Z",
+      "version": "ffb9dfb40605d8a9215b1f444426f6a5f6e531c3",
+      "canonicalUrl": "https://huggingface.co/xunden/tartanimu-xunden-iros2026",
+      "links": [
+        {
+          "label": "技术报告 / 模型",
+          "url": "https://huggingface.co/xunden/tartanimu-xunden-iros2026"
+        },
+        {
+          "label": "逐平台及序列成绩",
+          "url": "https://huggingface.co/xunden/tartanimu-xunden-iros2026/blob/ffb9dfb40605d8a9215b1f444426f6a5f6e531c3/eval/scoring_service.json"
+        }
+      ],
+      "status": "verified",
+      "reviewStatus": "primary_report_read",
+      "checkedAt": "2026-09-21T09:22:59.063374+00:00",
+      "dateNote": "日期为公开仓库创建时间，不等同论文发表或当前完整报告首次上传日。",
+      "dateEvidence": {
+        "url": "https://huggingface.co/xunden/tartanimu-xunden-iros2026",
+        "location": "HF公开API createdAt / lastModified",
+        "createdAt": "2026-09-19T13:38:19.000Z",
+        "lastModified": "2026-09-21T03:19:47.000Z"
+      },
+      "popularity": {
+        "score": null,
+        "status": "unmeasured",
+        "metrics": {
+          "githubStars": null,
+          "hfUpvotes": null
+        },
+        "evidence": [],
+        "checkedAt": "2026-09-21T09:22:59.063374+00:00",
+        "basis": "没有可归属的论文投票或专属仓库stars；HF模型likes未替代论文投票。"
+      },
+      "editorialPriority": 75,
+      "summary": "遗留线索补齐89条测试轨迹结果：以统一网络估计跨平台速度，公开逐序列分数与确定性复现说明，同时保留明显的飞行平台短板。",
+      "background": "跨汽车、手持、四足和飞行器的惯性速度估计承受不同运动频谱与传感器误差，单一平台专用网络不易直接迁移。该挑战报告检验一套共享权重能覆盖多少已有平台分布。",
+      "innovation": "使用膨胀ResNet窗口编码、双向LSTM和注意力，输入结合原始IMU、差分、动态加速度、重力及频谱信息。单checkpoint内部有softmax加权专家，不能把“没有切换模型”误读为“没有专家或路由”。发布自含归一化与架构配置的权重，并开放逐序列评分文件。",
+      "experiments": "作者发布的官方评分服务导出覆盖89条测试轨迹：综合分0.25535、ATE20为0.70062米、AVE为0.20281米/秒，越低越好；Kaggle公开榜0.33229是不同评估范围。90.4M参数模型以train+val共475条轨迹训练200轮，选择196轮；同一权重的重叠上下文和三对齐位置平均为0.25535，单次推理0.25852，不能称无测试时平均。飞行器在综合分中占60.6%的误差贡献。",
+      "conclusion": "该发布提供了可对照的统一多平台基线与失败数据，尚不能说明接近最好方法或对未见平台成立。版本差异主要补齐逐序列文件和bit-exact复现说明，成绩并非本晚新跑出的实验。",
+      "evaluation": "编辑评价：明确披露共享网络内部专家和推理平均，优于只给排行榜数值。我们核对了发布JSON/CSV与卡片一致，未运行大模型，也未独立向评分服务提交。双向上下文并非严格因果，开发过程中使用评分服务反馈，测试选择影响尚需审计；没有同协议经典积分基线，不把它列为已证实替代经典估计的突破。",
+      "futureDirections": "研究假设：将网络速度作为带校准协方差的伪观测接入经典滤波器，而非直接替换状态估计。固定训练数据与在线延迟，比较因果模型、双向离线模型、单次及多视角平均；按飞行振动、传感器变化与初始速度分层报告漂移、尾部错误和失效检测。",
+      "evidence": "完整固定版本模型卡、发布评分JSON和逐序列CSV已读；原pending的结果披露缺口已解除，仍为作者报告而非独立复现。",
+      "evidenceDetails": [
+        {
+          "url": "https://huggingface.co/xunden/tartanimu-xunden-iros2026/blob/ffb9dfb40605d8a9215b1f444426f6a5f6e531c3/README.md",
+          "location": "Model / Reproducing / Compliance / Negative results",
+          "supports": "90.4M、475轨迹、200轮、196轮选择；内部专家与三偏移平均；无实时/跨域保证",
+          "checkedAt": "2026-09-21T09:22:59.063374+00:00"
+        },
+        {
+          "url": "https://huggingface.co/xunden/tartanimu-xunden-iros2026/blob/ffb9dfb40605d8a9215b1f444426f6a5f6e531c3/eval/scoring_service.json",
+          "location": "overall / platform / sequence",
+          "supports": "89序列、0.25535、0.70062m、0.20281m/s及飞行误差份额60.6%",
+          "checkedAt": "2026-09-21T09:22:59.063374+00:00"
+        }
+      ],
+      "leadDiscoveredAt": "2026-09-20T02:52:36.723960+00:00",
+      "discoveredAt": "2026-09-21T09:27:30.037288+00:00",
+      "updatedAt": "2026-09-21T09:27:30.037288+00:00",
+      "lastSeenAt": "2026-09-21T09:27:30.037288+00:00",
+      "revisionEvents": []
+    },
+    {
+      "id": "hf:xiaojx/2026-tartaimu-challenge",
+      "title": "Learning Cross-Platform Velocity Estimation through Structured Masked IMU Reconstruction",
+      "zhTitle": "结构化 IMU 掩码预训练：用运动先验估计跨平台速度",
+      "authors": [
+        "Jinxi Xiao"
+      ],
+      "category": "embodied",
+      "tags": [
+        "learning_control",
+        "惯性估计",
+        "自监督"
+      ],
+      "contentTypes": [
+        "report"
+      ],
+      "type": "公开技术报告与模型",
+      "publishedAt": "2026-09-17T04:48:16.000Z",
+      "sourceUpdatedAt": "2026-09-21T02:59:10.000Z",
+      "version": "93bc45018579be896cc2b46df2cd4ffa147af4a3",
+      "canonicalUrl": "https://huggingface.co/xiaojx/2026-tartaimu-challenge",
+      "links": [
+        {
+          "label": "技术报告 / 模型",
+          "url": "https://huggingface.co/xiaojx/2026-tartaimu-challenge"
+        },
+        {
+          "label": "完整技术报告",
+          "url": "https://huggingface.co/xiaojx/2026-tartaimu-challenge/blob/93bc45018579be896cc2b46df2cd4ffa147af4a3/report/IMU_Challenge_Report_Template/main.tex"
+        }
+      ],
+      "status": "verified",
+      "reviewStatus": "primary_report_read",
+      "checkedAt": "2026-09-21T09:22:59.063374+00:00",
+      "dateNote": "日期为公开仓库创建时间，不等同论文发表或当前完整报告首次上传日。",
+      "dateEvidence": {
+        "url": "https://huggingface.co/xiaojx/2026-tartaimu-challenge",
+        "location": "HF公开API createdAt / lastModified",
+        "createdAt": "2026-09-17T04:48:16.000Z",
+        "lastModified": "2026-09-21T02:59:10.000Z"
+      },
+      "popularity": {
+        "score": null,
+        "status": "unmeasured",
+        "metrics": {
+          "githubStars": null,
+          "hfUpvotes": null
+        },
+        "evidence": [],
+        "checkedAt": "2026-09-21T09:22:59.063374+00:00",
+        "basis": "没有可归属的论文投票或专属仓库stars；HF模型likes未替代论文投票。"
+      },
+      "editorialPriority": 84,
+      "summary": "将带连续缺口的IMU重建预训练用于跨平台速度估计；报告认真区分了学习运动先验与惯性观测本身不能确定初始速度的边界。",
+      "background": "即使姿态和重力已知，积分加速度只给速度变化，绝对速度仍需初值。学习方法可利用训练分布的运动规律补充先验，却不能让一般不可观测问题变得唯一可解；挑战进一步要求一套模型处理汽车、人持、四足和无人机。",
+      "innovation": "在10秒IMU上下文中以连续段与独立patch混合掩码做重建，再将局部/全局特征送入共享基底加残差专家的速度头。平台分类与几何辅助损失只参与训练；推理不使用平台标签、不做测试时适配。残差是网络回归头的残差，不能等同物理模型残差补偿。",
+      "experiments": "完整技术报告89序列综合分为0.26486，ATE20=0.68557米、AVE=0.21683米/秒，RTE@5秒=0.97086米；RTE不进入排名。相同下游训练协议中，无辅助的随机初始化为0.42376，掩码预训练0.26761，代价是额外预训练；加入微调辅助后0.26486。随机掩码替代混合连续掩码为0.28390，普通MLP替代残差MoE为0.28080。全部是单种子对照，未测联合消融或显著性。",
+      "conclusion": "结果支持在已经覆盖的多平台分布上使用结构化自监督初始化。10秒双向上下文是离线估计条件，不能写成实时机器人速度观测器；没有未见平台迁移、独立LIMU-BERT同协议比较或经典积分同条件优越性证据。",
+      "evaluation": "编辑评价：方法与负结果披露较完整，尤其说明公开榜参与跨run选型，因此全量测试成绩也不能当完全未触碰评估。飞行器AVE为0.63214米/秒，显著高于其他平台；尚无校准不确定性或故障检测。README的公开榜0.32898与完整89序列0.26486属于不同范围，不能混算提升。",
+      "futureDirections": "研究假设：先把双向编码器蒸馏为因果版本，再把速度和校准不确定性接入EKF/因子图。固定传感器输入和延迟，比较已知初速度的积分、传统滤波、纯学习以及融合版本；用未见传感器、恒速歧义和振动段验证先验何时救回、何时误导，并记录在线重建适配是否引起速度漂移。",
+      "learningClassical": {
+        "mode": "model",
+        "baseline": "经典惯性积分需要初始速度；噪声和偏置会累积，单靠有限IMU历史不能一般性唯一恢复绝对速度。",
+        "cornerCase": "初速度不可观测是信息条件限制，不是训练即可消除的理论问题。跨运动平台与振动造成额外分布偏移。",
+        "learningRole": "用自监督时序表示与监督速度头学习分布先验，补充输入不能唯一决定的量；未实际接入物理滤波闭环。",
+        "evidence": "同下游协议随机初始化0.42376对预训练0.26761；完整89序列最终0.26486。没有经典积分/滤波同条件对照，所以对经典方法的净提升待验证。",
+        "limitations": "10秒双向上下文非严格因果，额外预训练算力、单种子与测试榜选型；飞行误差大，无不确定性、失败检测或稳定性保证。",
+        "nextTest": "保留可观测性边界，比较同初值/同传感器条件下积分、因果网络及滤波融合；刻意构造相同加速度不同初速和未见平台，评估错误置信与漂移。"
+      },
+      "evidence": "完整原始技术报告LaTeX、研究说明及模型卡已读；未执行代码或独立评分，报告中全量测试与公开榜口径分开。",
+      "evidenceDetails": [
+        {
+          "url": "https://huggingface.co/xiaojx/2026-tartaimu-challenge/blob/93bc45018579be896cc2b46df2cd4ffa147af4a3/report/IMU_Challenge_Report_Template/main.tex",
+          "location": "Introduction / Method / Data processing",
+          "supports": "绝对速度不可观测说明、10秒双向上下文、共享残差MoE、辅助监督",
+          "checkedAt": "2026-09-21T09:22:59.063374+00:00"
+        },
+        {
+          "url": "https://huggingface.co/xiaojx/2026-tartaimu-challenge/blob/93bc45018579be896cc2b46df2cd4ffa147af4a3/report/IMU_Challenge_Report_Template/main.tex",
+          "location": "Official Challenge Performance / Ablation Studies / Appendix",
+          "supports": "89序列0.26486及三个误差；0.42376对0.26761、0.28390/0.28080消融；单种子",
+          "checkedAt": "2026-09-21T09:22:59.063374+00:00"
+        },
+        {
+          "url": "https://huggingface.co/xiaojx/2026-tartaimu-challenge/blob/93bc45018579be896cc2b46df2cd4ffa147af4a3/report/IMU_Challenge_Report_Template/main.tex",
+          "location": "Training Data / Generalization / Failure-mode analysis",
+          "supports": "公开榜选run、未测未见平台、飞行AVE0.63214、无校准不确定性",
+          "checkedAt": "2026-09-21T09:22:59.063374+00:00"
+        }
+      ],
+      "discoveredAt": "2026-09-21T09:27:30.037288+00:00",
+      "updatedAt": "2026-09-21T09:27:30.037288+00:00",
+      "lastSeenAt": "2026-09-21T09:27:30.037288+00:00",
+      "revisionEvents": []
+    },
+    {
+      "id": "arxiv:2609.18620",
+      "title": "DeformSmith: Physics Harness-Guided Hierarchical Generation of Deformable Assets for Robot Manipulation",
+      "zhTitle": "DeformSmith：以物理测试和机器人交互校验柔性资产",
+      "category": "systems",
+      "tags": [
+        "机器人系统"
+      ],
+      "type": "arXiv预印本",
+      "contentTypes": [
+        "paper"
+      ],
+      "authors": [
+        "Can Li",
+        "Jie Gu",
+        "Zishun Deng",
+        "Jingmin Chen",
+        "Lei Sun"
+      ],
+      "canonicalUrl": "https://arxiv.org/abs/2609.18620",
+      "publishedAt": "2026-09-16T13:10:34Z",
+      "sourceUpdatedAt": "2026-09-16T13:10:34Z",
+      "version": "v1",
+      "reviewedVersion": "v1官方摘要及已缓存正文范围核对",
+      "checkedAt": "2026-09-21T09:24:37.180021+00:00",
+      "editorialPriority": 86,
+      "summary": "将柔性资产生成拆成几何、物理初始化、材料与机器人交互四层，通过受约束的仿真反馈迭代；当前证明物理观感与仿真可用性，不等同真实材料辨识。",
+      "innovation": "L0建立对齐几何、粒子和Gaussian外观；L1固定质量、体积与接触条件；L2在均匀各向同性neo-Hookean假设下搜索材料参数；L3用抓取运输反馈调整动作或材料。LLM提出结构化修订，物理探针和规则负责验收；改材料必须重过独立测试，失败交互也留作诊断。",
+      "links": [
+        {
+          "label": "论文",
+          "url": "https://arxiv.org/abs/2609.18620"
+        },
+        {
+          "label": "最新版本原文",
+          "url": "https://arxiv.org/html/2609.18620v1"
+        },
+        {
+          "label": "作者项目/代码",
+          "url": "https://can-lee.github.io/deformsmith-web/"
+        }
+      ],
+      "evidence": "已读v1全文、方法、全部主结果与消融；本次为热度变化触发的旧简讯全文升级，不是论文实质更新。",
+      "evidenceDetails": [
+        {
+          "url": "https://arxiv.org/html/2609.18620v1",
+          "location": "§III-A–C / §IV",
+          "supports": "四层构建、MPM、neo-Hookean假设、接触与修改权限",
+          "checkedAt": "2026-09-21T09:24:37.180021+00:00"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.18620v1",
+          "location": "§V-A–B / Tables I–II",
+          "supports": "39案例、40名盲评参与者、5秒视频；68/73/75%偏好胜率排除平局",
+          "checkedAt": "2026-09-21T09:24:37.180021+00:00"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.18620v1",
+          "location": "§V-C / Table III",
+          "supports": "40→73、17→7、14次仿真；6×5交互试验、40→67及27→57，统计分母不同",
+          "checkedAt": "2026-09-21T09:24:37.180021+00:00"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.18620v1",
+          "location": "§V-D / VI",
+          "supports": "真实材料辨识仅为潜在应用；均匀材料和接触局限",
+          "checkedAt": "2026-09-21T09:24:37.180021+00:00"
+        }
+      ],
+      "status": "verified",
+      "reviewStatus": "full_source_read",
+      "popularity": {
+        "score": 21.97,
+        "status": "verified",
+        "metrics": {
+          "githubStars": null,
+          "hfUpvotes": 2
+        },
+        "basis": "HF论文累计投票 2；每项观测时间见证据，非本日新增。",
+        "evidence": [
+          {
+            "url": "https://huggingface.co/papers/2609.18620",
+            "metric": "hf_paper_upvotes",
+            "value": 2,
+            "checkedAt": "2026-09-21T09:04:51.891154+00:00",
+            "scope": "论文累计公开投票；不是今日新增",
+            "apiUrl": "https://huggingface.co/api/daily_papers?date=2026-09-21"
+          }
+        ],
+        "checkedAt": "2026-09-21T09:04:51.891154+00:00",
+        "missingMetrics": [
+          "github_stars"
+        ]
+      },
+      "dateEvidence": "保留官方API原始提交与最新版本更新时间；本轮首次发现，版本号本身不证明实质变化。",
+      "backfill": false,
+      "changeType": "new",
+      "discoveryDateNote": "本轮扫描开始时间，非逐论文访问时刻。",
+      "discoveredAt": "2026-09-17T02:39:11.180Z",
+      "updatedAt": "2026-09-21T09:27:30.037288+00:00",
+      "lastSeenAt": "2026-09-21T09:27:30.037288+00:00",
+      "revisionEvents": [],
+      "reviewedAt": "2026-09-21T09:24:37.180021+00:00",
+      "substantiveUpdate": false,
+      "background": "文本或单图能提示外观，但不能唯一决定质量、弹性、阻尼和接触参数。看起来合理的三维物体仍可能在抓取或落地时崩坏，因此机器人数据生成需要同时检查外观与互动响应。",
+      "experiments": "共39案例，包括30文本、9图像输入。40名参与者盲评相同5秒落地交互，物理合理性相对PhysGen3D/PhysGM/PhysX-Omni的胜率为68%/73%/75%，平局排除，指标是偏好。材料反馈使目标满足40%→73%、硬失败17%→7%，但增加平均14次构建仿真，不能归因为纯算法等算力收益。机器人反馈消融为6资产×5留出条件：任务40%→67%、联合任务与材料27%→57%；材料通过率按资产统计，另两项按试验统计。",
+      "conclusion": "分层构建与物理反馈在所测生成资产中提高了可感知质量和仿真互动可用性。真实机器人视频辅助材料参数估计仍是潜在应用，文中未证明完成准确的真实材料恢复或sim-to-real策略提升。",
+      "evaluation": "编辑评价：把修改权限、物理验收和失败日志纳入生成过程是可复用贡献。但观感评分不是材料参数真值，LLM评委也不是物理测量。模型只涵盖均匀体积柔性固体，接触近似，流体/颗粒材料不在范围；材料与动作同时可修订，需要防止为了任务成功将物体“改容易”。",
+      "futureDirections": "研究假设：以固定真实物体的RGB-D/力觉轨迹约束参数识别，禁止下游任务任意改材料，再用这些资产训练接触策略。用未参与参数拟合的加载/摩擦条件验证形变和力误差；固定仿真调用预算比较规则搜索与LLM反馈，最终以真机迁移而非视频偏好判断价值。",
+      "briefHistory": [
+        {
+          "promotedAt": "2026-09-21T09:27:30.037288+00:00",
+          "previous": {
+            "id": "arxiv:2609.18620",
+            "title": "DeformSmith: Physics Harness-Guided Hierarchical Generation of Deformable Assets for Robot Manipulation",
+            "zhTitle": "DeformSmith：机器人交互反馈驱动可变形资产生成",
+            "category": "systems",
+            "tags": [
+              "机器人系统"
+            ],
+            "type": "arXiv预印本",
+            "contentTypes": [
+              "paper"
+            ],
+            "authors": [
+              "Can Li",
+              "Jie Gu",
+              "Zishun Deng",
+              "Jingmin Chen",
+              "Lei Sun"
+            ],
+            "canonicalUrl": "https://arxiv.org/abs/2609.18620",
+            "publishedAt": "2026-09-16T13:10:34Z",
+            "sourceUpdatedAt": "2026-09-16T13:10:34Z",
+            "version": "v1",
+            "reviewedVersion": "v1官方摘要及已缓存正文范围核对",
+            "checkedAt": "2026-09-17T02:15:58.476212+00:00",
+            "editorialPriority": 86,
+            "summary": "层级智能体逐步构造几何、物理与材料模型，在共享物理测试框架中用机器人操作反馈修正资产，形成可重放交互数据。",
+            "innovation": "层级智能体逐步构造几何、物理与材料模型，在共享物理测试框架中用机器人操作反馈修正资产，形成可重放交互数据。",
+            "links": [
+              {
+                "label": "论文",
+                "url": "https://arxiv.org/abs/2609.18620"
+              },
+              {
+                "label": "最新版本原文",
+                "url": "https://arxiv.org/html/2609.18620v1"
+              },
+              {
+                "label": "作者项目/代码",
+                "url": "https://can-lee.github.io/deformsmith-web/"
+              }
+            ],
+            "evidence": "元数据与摘要来自根代理本轮统一arXiv API；本分支仅读缓存及已到达原文，不将摘要简讯标成完整分析。",
+            "evidenceDetails": [
+              {
+                "url": "https://arxiv.org/abs/2609.18620",
+                "location": "官方摘要；原始published及最新updated元数据",
+                "supports": "层级智能体逐步构造几何、物理与材料模型，在共享物理测试框架中用机器人操作反馈修正资产，形成可重放交互数据。"
+              }
+            ],
+            "status": "brief",
+            "reviewStatus": "abstract_verified",
+            "popularity": {
+              "score": null,
+              "status": "unmeasured",
+              "metrics": {
+                "githubStars": null,
+                "hfUpvotes": null
+              },
+              "basis": "仅为已核实公开关注信号；未知不当零，累计数不代表当日新增或研究质量。",
+              "evidence": []
+            },
+            "dateEvidence": "保留官方API原始提交与最新版本更新时间；本轮首次发现，版本号本身不证明实质变化。",
+            "backfill": false,
+            "changeType": "new",
+            "discoveryDateNote": "本轮扫描开始时间，非逐论文访问时刻。",
+            "discoveredAt": "2026-09-17T02:39:11.180Z",
+            "updatedAt": "2026-09-17T02:39:11.180Z",
+            "lastSeenAt": "2026-09-17T02:39:11.180Z",
+            "revisionEvents": []
+          }
+        }
+      ],
+      "aliasIds": []
+    },
+    {
+      "id": "arxiv:2609.20669",
+      "title": "Learning Foresight without Explicit Trajectories for 3D Diffusion Policies",
+      "zhTitle": "Movement Trend Guidance：以未来监督塑造隐变量，不输出硬轨迹",
+      "category": "embodied",
+      "authors": [
+        "Zhongbo Zhang",
+        "Zaibin Zhang",
+        "Yifan Wang",
+        "Changbo Yan",
+        "Lijun Wang",
+        "Huchuan Lu"
+      ],
+      "contentTypes": [
+        "paper"
+      ],
+      "type": "研究论文",
+      "publishedAt": "2026-09-17T16:44:13Z",
+      "sourceUpdatedAt": "2026-09-17T16:44:13Z",
+      "version": "v1",
+      "canonicalUrl": "https://arxiv.org/abs/2609.20669",
+      "links": [
+        {
+          "label": "论文原文",
+          "url": "https://arxiv.org/abs/2609.20669"
+        },
+        {
+          "label": "阅读全文",
+          "url": "https://arxiv.org/html/2609.20669v1"
+        }
+      ],
+      "tags": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "summary": "用训练时的稀疏未来夹爪状态学习运动趋势隐变量，再温和调制3D扩散策略；推理只看过去和当前观测，不读取未来真值。",
+      "innovation": "由三帧点云和机器人状态编码256维趋势，以训练时四个未来夹爪位置/状态提供辅助监督。趋势进入全局条件，额外门控FiLM只放在UNet瓶颈；解码未来点在推理时丢弃，策略仍滚动生成和执行稠密动作。这是辅助表征监督，不是先规划轨迹再跟踪。",
+      "evidence": "已读v1完整方法、实验、消融及失败分析；本轮HF投票变化触发全文升级，无新版本事件。",
+      "evidenceDetails": [
+        {
+          "url": "https://arxiv.org/html/2609.20669v1",
+          "location": "§III / Eqs.3,15–18",
+          "supports": "3帧、256维、未来夹爪训练监督；推理不用未来点，门控只在瓶颈",
+          "checkedAt": "2026-09-21T09:24:37.180021+00:00"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.20669v1",
+          "location": "§IV-A–D / Tables I,II,IV",
+          "supports": "50任务混合训练56.1→62.8；LIBERO6000评估及rollout种子标准差；真机49→72；4090延迟与3.52%参数",
+          "checkedAt": "2026-09-21T09:24:37.180021+00:00"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.20669v1",
+          "location": "§V-B / Table V / §IV-C2 / §IV-E",
+          "supports": "等参数无未来监督44.87，完整71.93；DexArt最好5检查点；遮挡失败",
+          "checkedAt": "2026-09-21T09:24:37.180021+00:00"
+        }
+      ],
+      "dateEvidence": {
+        "url": "https://arxiv.org/abs/2609.20669",
+        "location": "arXiv首次提交时间；与本轮发现/修订日期分开"
+      },
+      "checkedAt": "2026-09-21T09:24:37.180021+00:00",
+      "reviewStatus": "full_source_read",
+      "status": "verified",
+      "editorialPriority": 0,
+      "editorialPriorityBasis": "缺少可比热度时按直接机器人关联、证据完整性与方法可复用性补充排序；非公开互动量。",
+      "popularity": {
+        "status": "verified",
+        "score": 13.86,
+        "metrics": {
+          "githubStars": null,
+          "hfUpvotes": 1
+        },
+        "evidence": [
+          {
+            "url": "https://huggingface.co/papers/2609.20669",
+            "metric": "hf_paper_upvotes",
+            "value": 1,
+            "checkedAt": "2026-09-21T09:04:51.891154+00:00",
+            "scope": "论文累计公开投票；不是今日新增",
+            "apiUrl": "https://huggingface.co/api/daily_papers?date=2026-09-21"
+          }
+        ],
+        "checkedAt": "2026-09-21T09:04:51.891154+00:00",
+        "basis": "HF论文累计投票 1；每项观测时间见证据，非本日新增。",
+        "missingMetrics": [
+          "github_stars"
+        ]
+      },
+      "discoveredAt": "2026-09-18T09:39:21.834Z",
+      "updatedAt": "2026-09-21T09:27:30.037288+00:00",
+      "lastSeenAt": "2026-09-21T09:27:30.037288+00:00",
+      "revisionEvents": [],
+      "reviewedAt": "2026-09-21T09:24:37.180021+00:00",
+      "substantiveUpdate": false,
+      "background": "3D扩散策略善于从当前几何生成局部动作，但多阶段任务的后续交互意图往往只能隐式学习。显式未来轨迹又容易把策略束缚在不准的中间目标上。",
+      "experiments": "RoboTwin2.0混合训练50任务、每任务50示范和100次评估，DP3与新法同用64维任务嵌入，成功率56.1%→62.8%。LIBERO-40固定1000轮检查点、3组rollout种子、每任务每种子50次，共6000次：37.08±1.21%→71.93±0.49%，±为三个评估种子间样本标准差，不是独立训练种子。五项SO101真机任务各50示范、20次评估，均值49%→72%。4090、batch1、10DDIM步下平均推理50.28→50.90毫秒，参数增加3.52%。",
+      "conclusion": "趋势辅助在所测学习策略和任务中有效：LIBERO等参数但无未来监督为44.87%，完整71.93%，支持收益不只来自新增容量。DexArt使用最好五个检查点平均，与LIBERO固定轮数不可直接横比。",
+      "evaluation": "编辑评价：未来监督和调制位置有相对清楚的消融，但不能由三个rollout种子的窄离散度推断跨训练种子稳定。真机每任务仅20次；机械臂遮挡物体时点云与趋势同时失真。与DP3的对照并非经典规划基线，因此本条不因采用滚动执行就自动归入“学习补足经典理论”。",
+      "futureDirections": "研究假设：用趋势隐变量给经典接触规划器提供候选优先级或短时目标分布，再由可行性和碰撞检查决定是否采用。先做多训练种子、同数据与延迟预算复测，加入遮挡、相机标定漂移及新物体；检查趋势不确定时退回无引导策略是否减少新增失败。",
+      "briefHistory": [
+        {
+          "promotedAt": "2026-09-21T09:27:30.037288+00:00",
+          "previous": {
+            "id": "arxiv:2609.20669",
+            "title": "Learning Foresight without Explicit Trajectories for 3D Diffusion Policies",
+            "zhTitle": "Movement Trend Guidance：隐式前瞻的3D扩散策略",
+            "category": "rl",
+            "authors": [
+              "Zhongbo Zhang",
+              "Zaibin Zhang",
+              "Yifan Wang",
+              "Changbo Yan",
+              "Lijun Wang",
+              "Huchuan Lu"
+            ],
+            "contentTypes": [
+              "paper"
+            ],
+            "type": "研究论文",
+            "publishedAt": "2026-09-17T16:44:13Z",
+            "sourceUpdatedAt": "2026-09-17T16:44:13Z",
+            "version": "v1",
+            "canonicalUrl": "https://arxiv.org/abs/2609.20669",
+            "links": [
+              {
+                "label": "论文原文",
+                "url": "https://arxiv.org/abs/2609.20669"
+              },
+              {
+                "label": "阅读全文",
+                "url": "https://arxiv.org/html/2609.20669v1"
+              }
+            ],
+            "tags": [
+              "cs.RO",
+              "cs.CV"
+            ],
+            "summary": "训练时用稀疏未来夹爪状态监督紧凑趋势潜变量，部署仅以历史观测产生的潜变量调制动作生成。",
+            "innovation": "训练时用稀疏未来夹爪状态监督紧凑趋势潜变量，部署仅以历史观测产生的潜变量调制动作生成。",
+            "evidence": "已核验arXiv原始API的标题、摘要、首次提交与最新修订时间；简讯依据作者摘要，不视作独立复现。",
+            "evidenceDetails": [
+              {
+                "url": "https://arxiv.org/abs/2609.20669",
+                "location": "Abstract；Submission history；arXiv API published/updated字段",
+                "supports": "训练时用稀疏未来夹爪状态监督紧凑趋势潜变量，部署仅以历史观测产生的潜变量调制动作生成。",
+                "checkedAt": "2026-09-18T09:32:32.367453+00:00"
+              }
+            ],
+            "dateEvidence": {
+              "url": "https://arxiv.org/abs/2609.20669",
+              "location": "arXiv首次提交时间；与本轮发现/修订日期分开"
+            },
+            "checkedAt": "2026-09-18T09:32:32.367453+00:00",
+            "reviewStatus": "abstract_verified",
+            "status": "brief_verified",
+            "editorialPriority": 0,
+            "editorialPriorityBasis": "缺少可比热度时按直接机器人关联、证据完整性与方法可复用性补充排序；非公开互动量。",
+            "popularity": {
+              "status": "unmeasured",
+              "score": null,
+              "metrics": {
+                "githubStars": null,
+                "hfUpvotes": null
+              },
+              "evidence": [],
+              "checkedAt": "2026-09-18T09:32:32.367453+00:00",
+              "basis": "仅为已核实公开关注信号；未知不当零，累计数不代表当日新增或研究质量。"
+            },
+            "discoveredAt": "2026-09-18T09:39:21.834Z",
+            "updatedAt": "2026-09-18T09:39:21.834Z",
+            "lastSeenAt": "2026-09-18T09:39:21.834Z",
+            "revisionEvents": []
+          }
+        }
+      ],
+      "aliasIds": []
     }
   ],
   "editions": [
@@ -43237,7 +44570,7 @@
       "analysisNeededIds": [],
       "briefIds": [],
       "candidateCount": 7,
-      "rankingNote": "4 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 分数为20×ln(1+HF论文累计投票)+10×ln(1+可归属仓库累计stars)，未知分量不提供信号；累计量不是当日增量。共享基础框架不归到单篇；仅表示本轮可测来源范围，历史观测保留各自时间。",
+      "rankingNote": "4 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 热度采用 20×ln(1+HF论文投票)+10×ln(1+可归属仓库累计stars)。累计数非当日新增；未取得项为null。9/21晚间HF已刷新，GitHub API触发限流后停止，既有stars保留各自历史观测时间。",
       "rankingVersion": 1
     },
     {
@@ -44323,7 +45656,7 @@
       "analysisNeededIds": [],
       "briefIds": [],
       "candidateCount": 22,
-      "rankingNote": "13 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 分数为20×ln(1+HF论文累计投票)+10×ln(1+可归属仓库累计stars)，未知分量不提供信号；累计量不是当日增量。共享基础框架不归到单篇；仅表示本轮可测来源范围，历史观测保留各自时间。",
+      "rankingNote": "13 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 热度采用 20×ln(1+HF论文投票)+10×ln(1+可归属仓库累计stars)。累计数非当日新增；未取得项为null。9/21晚间HF已刷新，GitHub API触发限流后停止，既有stars保留各自历史观测时间。",
       "rankingVersion": 1
     },
     {
@@ -46281,7 +47614,7 @@
       "analysisNeededIds": [],
       "briefIds": [],
       "candidateCount": 12,
-      "rankingNote": "8 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 分数为20×ln(1+HF论文累计投票)+10×ln(1+可归属仓库累计stars)，未知分量不提供信号；累计量不是当日增量。共享基础框架不归到单篇；仅表示本轮可测来源范围，历史观测保留各自时间。",
+      "rankingNote": "8 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 热度采用 20×ln(1+HF论文投票)+10×ln(1+可归属仓库累计stars)。累计数非当日新增；未取得项为null。9/21晚间HF已刷新，GitHub API触发限流后停止，既有stars保留各自历史观测时间。",
       "rankingVersion": 1
     },
     {
@@ -59330,16 +60663,16 @@
         "arxiv:2608.19759",
         "arxiv:2609.07470",
         "arxiv:2608.15380",
-        "arxiv:2608.19776",
         "arxiv:2609.12036",
+        "arxiv:2608.19776",
         "arxiv:2609.08965",
         "arxiv:2608.19891",
         "arxiv:2608.18701",
         "arxiv:2608.30396",
         "arxiv:2608.18077",
-        "arxiv:2608.25798",
         "arxiv:2609.13053",
         "arxiv:2609.06251",
+        "arxiv:2608.25798",
         "arxiv:2608.21031",
         "arxiv:2609.01453",
         "arxiv:2608.24882",
@@ -59503,8 +60836,8 @@
         "arxiv:2608.19759",
         "arxiv:2609.07470",
         "arxiv:2608.15380",
-        "arxiv:2608.19776",
         "arxiv:2609.12036",
+        "arxiv:2608.19776",
         "arxiv:2609.08965"
       ],
       "analysisNeededIds": [],
@@ -59513,9 +60846,9 @@
         "arxiv:2608.18701",
         "arxiv:2608.30396",
         "arxiv:2608.18077",
-        "arxiv:2608.25798",
         "arxiv:2609.13053",
         "arxiv:2609.06251",
+        "arxiv:2608.25798",
         "arxiv:2608.21031",
         "arxiv:2609.01453",
         "arxiv:2608.24882",
@@ -59652,7 +60985,7 @@
         "arxiv:2609.05461"
       ],
       "candidateCount": 171,
-      "rankingNote": "44 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 分数为20×ln(1+HF论文累计投票)+10×ln(1+可归属仓库累计stars)，未知分量不提供信号；累计量不是当日增量。共享基础框架不归到单篇；仅表示本轮可测来源范围，历史观测保留各自时间。",
+      "rankingNote": "44 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 热度采用 20×ln(1+HF论文投票)+10×ln(1+可归属仓库累计stars)。累计数非当日新增；未取得项为null。9/21晚间HF已刷新，GitHub API触发限流后停止，既有stars保留各自历史观测时间。",
       "rankingVersion": 1
     },
     {
@@ -74188,7 +75521,7 @@
         "arxiv:2609.04759"
       ],
       "candidateCount": 160,
-      "rankingNote": "14 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 分数为20×ln(1+HF论文累计投票)+10×ln(1+可归属仓库累计stars)，未知分量不提供信号；累计量不是当日增量。共享基础框架不归到单篇；仅表示本轮可测来源范围，历史观测保留各自时间。",
+      "rankingNote": "14 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 热度采用 20×ln(1+HF论文投票)+10×ln(1+可归属仓库累计stars)。累计数非当日新增；未取得项为null。9/21晚间HF已刷新，GitHub API触发限流后停止，既有stars保留各自历史观测时间。",
       "rankingVersion": 1
     },
     {
@@ -81332,7 +82665,7 @@
         "news:lingbot-vla-challenge-20260914"
       ],
       "candidateCount": 63,
-      "rankingNote": "21 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 分数为20×ln(1+HF论文累计投票)+10×ln(1+可归属仓库累计stars)，未知分量不提供信号；累计量不是当日增量。共享基础框架不归到单篇；仅表示本轮可测来源范围，历史观测保留各自时间。",
+      "rankingNote": "21 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 热度采用 20×ln(1+HF论文投票)+10×ln(1+可归属仓库累计stars)。累计数非当日新增；未取得项为null。9/21晚间HF已刷新，GitHub API触发限流后停止，既有stars保留各自历史观测时间。",
       "rankingVersion": 1
     },
     {
@@ -98561,8 +99894,8 @@
       "rankedIds": [
         "arxiv:2604.12626",
         "arxiv:2609.15195",
-        "arxiv:2609.12541",
         "arxiv:2609.13318",
+        "arxiv:2609.12541",
         "arxiv:2603.09460",
         "arxiv:2606.20980",
         "arxiv:2609.15726",
@@ -98741,8 +100074,8 @@
       "featuredIds": [
         "arxiv:2604.12626",
         "arxiv:2609.15195",
-        "arxiv:2609.12541",
         "arxiv:2609.13318",
+        "arxiv:2609.12541",
         "arxiv:2603.09460",
         "arxiv:2606.20980",
         "arxiv:2609.15726",
@@ -98922,7 +100255,7 @@
         "arxiv:2609.14198"
       ],
       "candidateCount": 178,
-      "rankingNote": "20 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 分数为20×ln(1+HF论文累计投票)+10×ln(1+可归属仓库累计stars)，未知分量不提供信号；累计量不是当日增量。共享基础框架不归到单篇；仅表示本轮可测来源范围，历史观测保留各自时间。",
+      "rankingNote": "20 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 热度采用 20×ln(1+HF论文投票)+10×ln(1+可归属仓库累计stars)。累计数非当日新增；未取得项为null。9/21晚间HF已刷新，GitHub API触发限流后停止，既有stars保留各自历史观测时间。",
       "rankingVersion": 1
     },
     {
@@ -110843,7 +112176,7 @@
         "arxiv:2609.17300"
       ],
       "candidateCount": 113,
-      "rankingNote": "20 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 分数为20×ln(1+HF论文累计投票)+10×ln(1+可归属仓库累计stars)，未知分量不提供信号；累计量不是当日增量。共享基础框架不归到单篇；仅表示本轮可测来源范围，历史观测保留各自时间。",
+      "rankingNote": "20 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 热度采用 20×ln(1+HF论文投票)+10×ln(1+可归属仓库累计stars)。累计数非当日新增；未取得项为null。9/21晚间HF已刷新，GitHub API触发限流后停止，既有stars保留各自历史观测时间。",
       "rankingVersion": 1
     },
     {
@@ -117257,7 +118590,7 @@
         "arxiv:2609.00730"
       ],
       "candidateCount": 57,
-      "rankingNote": "21 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 分数为20×ln(1+HF论文累计投票)+10×ln(1+可归属仓库累计stars)，未知分量不提供信号；累计量不是当日增量。共享基础框架不归到单篇；仅表示本轮可测来源范围，历史观测保留各自时间。",
+      "rankingNote": "21 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 热度采用 20×ln(1+HF论文投票)+10×ln(1+可归属仓库累计stars)。累计数非当日新增；未取得项为null。9/21晚间HF已刷新，GitHub API触发限流后停止，既有stars保留各自历史观测时间。",
       "rankingVersion": 1
     },
     {
@@ -135220,6 +136553,7 @@
         "arxiv:2503.10265",
         "arxiv:2509.16894",
         "arxiv:2608.13014",
+        "arxiv:2609.18620",
         "arxiv:2609.18514",
         "arxiv:2609.18259",
         "arxiv:2603.05757",
@@ -135306,7 +136640,6 @@
         "arxiv:2609.19119",
         "arxiv:2609.18663",
         "arxiv:2609.18650",
-        "arxiv:2609.18620",
         "arxiv:2609.18358",
         "arxiv:2609.18243",
         "arxiv:2609.18165",
@@ -135392,6 +136725,7 @@
         "arxiv:2503.10265",
         "arxiv:2509.16894",
         "arxiv:2608.13014",
+        "arxiv:2609.18620",
         "arxiv:2609.18514",
         "arxiv:2609.18259",
         "arxiv:2603.05757",
@@ -135409,11 +136743,11 @@
         "arxiv:2609.18430",
         "arxiv:2609.17625",
         "arxiv:2609.18359",
-        "arxiv:2609.18191",
-        "arxiv:2609.18435"
+        "arxiv:2609.18191"
       ],
       "analysisNeededIds": [],
       "briefIds": [
+        "arxiv:2609.18435",
         "arxiv:2609.18293",
         "arxiv:2609.18669",
         "arxiv:2606.21755",
@@ -135481,7 +136815,6 @@
         "arxiv:2609.19119",
         "arxiv:2609.18663",
         "arxiv:2609.18650",
-        "arxiv:2609.18620",
         "arxiv:2609.18358",
         "arxiv:2609.18243",
         "arxiv:2609.18165",
@@ -135556,7 +136889,7 @@
         "arxiv:2609.07534"
       ],
       "candidateCount": 170,
-      "rankingNote": "34 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 分数为20×ln(1+HF论文累计投票)+10×ln(1+可归属仓库累计stars)，未知分量不提供信号；累计量不是当日增量。共享基础框架不归到单篇；仅表示本轮可测来源范围，历史观测保留各自时间。",
+      "rankingNote": "35 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 热度采用 20×ln(1+HF论文投票)+10×ln(1+可归属仓库累计stars)。累计数非当日新增；未取得项为null。9/21晚间HF已刷新，GitHub API触发限流后停止，既有stars保留各自历史观测时间。",
       "rankingVersion": 1
     },
     {
@@ -141205,7 +142538,7 @@
       "analysisNeededIds": [],
       "briefIds": [],
       "candidateCount": 17,
-      "rankingNote": "6 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 分数为20×ln(1+HF论文累计投票)+10×ln(1+可归属仓库累计stars)，未知分量不提供信号；累计量不是当日增量。共享基础框架不归到单篇；仅表示本轮可测来源范围，历史观测保留各自时间。",
+      "rankingNote": "6 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 热度采用 20×ln(1+HF论文投票)+10×ln(1+可归属仓库累计stars)。累计数非当日新增；未取得项为null。9/21晚间HF已刷新，GitHub API触发限流后停止，既有stars保留各自历史观测时间。",
       "rankingVersion": 1
     },
     {
@@ -142689,7 +144022,7 @@
       "analysisNeededIds": [],
       "briefIds": [],
       "candidateCount": 5,
-      "rankingNote": "1 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 分数为20×ln(1+HF论文累计投票)+10×ln(1+可归属仓库累计stars)，未知分量不提供信号；累计量不是当日增量。共享基础框架不归到单篇；仅表示本轮可测来源范围，历史观测保留各自时间。",
+      "rankingNote": "1 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 热度采用 20×ln(1+HF论文投票)+10×ln(1+可归属仓库累计stars)。累计数非当日新增；未取得项为null。9/21晚间HF已刷新，GitHub API触发限流后停止，既有stars保留各自历史观测时间。",
       "rankingVersion": 1
     },
     {
@@ -158793,6 +160126,7 @@
         "arxiv:2606.08284",
         "arxiv:2609.20586",
         "arxiv:2608.18234",
+        "arxiv:2609.20669",
         "arxiv:2609.19441",
         "arxiv:2510.21736",
         "arxiv:2609.20615",
@@ -158830,7 +160164,6 @@
         "arxiv:2609.20680",
         "arxiv:2609.20673",
         "arxiv:2609.20670",
-        "arxiv:2609.20669",
         "arxiv:2609.20629",
         "arxiv:2609.20624",
         "arxiv:2609.20620",
@@ -158986,6 +160319,7 @@
         "arxiv:2606.08284",
         "arxiv:2609.20586",
         "arxiv:2608.18234",
+        "arxiv:2609.20669",
         "arxiv:2609.19441",
         "arxiv:2510.21736",
         "arxiv:2609.20615",
@@ -159006,11 +160340,11 @@
         "arxiv:2609.20791",
         "arxiv:2609.20646",
         "arxiv:2609.20035",
-        "arxiv:2609.19582",
-        "arxiv:2609.19449"
+        "arxiv:2609.19582"
       ],
       "analysisNeededIds": [],
       "briefIds": [
+        "arxiv:2609.19449",
         "arxiv:2609.19976",
         "arxiv:2609.20107",
         "arxiv:2609.19850",
@@ -159026,7 +160360,6 @@
         "arxiv:2609.20680",
         "arxiv:2609.20673",
         "arxiv:2609.20670",
-        "arxiv:2609.20669",
         "arxiv:2609.20629",
         "arxiv:2609.20624",
         "arxiv:2609.20620",
@@ -159174,7 +160507,7 @@
         "arxiv:1304.3111"
       ],
       "candidateCount": 191,
-      "rankingNote": "15 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 分数为20×ln(1+HF论文累计投票)+10×ln(1+可归属仓库累计stars)，未知分量不提供信号；累计量不是当日增量。共享基础框架不归到单篇；仅表示本轮可测来源范围，历史观测保留各自时间。",
+      "rankingNote": "16 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 热度采用 20×ln(1+HF论文投票)+10×ln(1+可归属仓库累计stars)。累计数非当日新增；未取得项为null。9/21晚间HF已刷新，GitHub API触发限流后停止，既有stars保留各自历史观测时间。",
       "rankingVersion": 1
     },
     {
@@ -161170,7 +162503,7 @@
       "analysisNeededIds": [],
       "briefIds": [],
       "candidateCount": 9,
-      "rankingNote": "2 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 分数为20×ln(1+HF论文累计投票)+10×ln(1+可归属仓库累计stars)，未知分量不提供信号；累计量不是当日增量。共享基础框架不归到单篇；仅表示本轮可测来源范围，历史观测保留各自时间。",
+      "rankingNote": "2 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 热度采用 20×ln(1+HF论文投票)+10×ln(1+可归属仓库累计stars)。累计数非当日新增；未取得项为null。9/21晚间HF已刷新，GitHub API触发限流后停止，既有stars保留各自历史观测时间。",
       "rankingVersion": 1
     },
     {
@@ -161451,7 +162784,7 @@
       "analysisNeededIds": [],
       "briefIds": [],
       "candidateCount": 1,
-      "rankingNote": "按已核实公开热度信号排序；不同平台的信号不能代表全网热度。 分数为20×ln(1+HF论文累计投票)+10×ln(1+可归属仓库累计stars)，未知分量不提供信号；累计量不是当日增量。共享基础框架不归到单篇；仅表示本轮可测来源范围，历史观测保留各自时间。",
+      "rankingNote": "按已核实公开热度信号排序；不同平台的信号不能代表全网热度。 热度采用 20×ln(1+HF论文投票)+10×ln(1+可归属仓库累计stars)。累计数非当日新增；未取得项为null。9/21晚间HF已刷新，GitHub API触发限流后停止，既有stars保留各自历史观测时间。",
       "rankingVersion": 1
     },
     {
@@ -163050,7 +164383,7 @@
       "analysisNeededIds": [],
       "briefIds": [],
       "candidateCount": 3,
-      "rankingNote": "公开热度数据暂缺，按编辑关注度、原始发表日期排序；这不是全网热度榜。 分数为20×ln(1+HF论文累计投票)+10×ln(1+可归属仓库累计stars)，未知分量不提供信号；累计量不是当日增量。共享基础框架不归到单篇；仅表示本轮可测来源范围，历史观测保留各自时间。",
+      "rankingNote": "公开热度数据暂缺，按编辑关注度、原始发表日期排序；这不是全网热度榜。 热度采用 20×ln(1+HF论文投票)+10×ln(1+可归属仓库累计stars)。累计数非当日新增；未取得项为null。9/21晚间HF已刷新，GitHub API触发限流后停止，既有stars保留各自历史观测时间。",
       "rankingVersion": 1
     },
     {
@@ -165196,7 +166529,7 @@
       "analysisNeededIds": [],
       "briefIds": [],
       "candidateCount": 5,
-      "rankingNote": "1 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 分数为20×ln(1+HF论文累计投票)+10×ln(1+可归属仓库累计stars)，未知分量不提供信号；累计量不是当日增量。共享基础框架不归到单篇；仅表示本轮可测来源范围，历史观测保留各自时间。",
+      "rankingNote": "1 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 热度采用 20×ln(1+HF论文投票)+10×ln(1+可归属仓库累计stars)。累计数非当日新增；未取得项为null。9/21晚间HF已刷新，GitHub API触发限流后停止，既有stars保留各自历史观测时间。",
       "rankingVersion": 1
     },
     {
@@ -165640,7 +166973,7 @@
       "analysisNeededIds": [],
       "briefIds": [],
       "candidateCount": 2,
-      "rankingNote": "公开热度数据暂缺，按编辑关注度、原始发表日期排序；这不是全网热度榜。 分数为20×ln(1+HF论文累计投票)+10×ln(1+可归属仓库累计stars)，未知分量不提供信号；累计量不是当日增量。共享基础框架不归到单篇；仅表示本轮可测来源范围，历史观测保留各自时间。",
+      "rankingNote": "公开热度数据暂缺，按编辑关注度、原始发表日期排序；这不是全网热度榜。 热度采用 20×ln(1+HF论文投票)+10×ln(1+可归属仓库累计stars)。累计数非当日新增；未取得项为null。9/21晚间HF已刷新，GitHub API触发限流后停止，既有stars保留各自历史观测时间。",
       "rankingVersion": 1
     },
     {
@@ -168214,7 +169547,7 @@
       "analysisNeededIds": [],
       "briefIds": [],
       "candidateCount": 7,
-      "rankingNote": "5 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 分数为20×ln(1+HF论文累计投票)+10×ln(1+可归属仓库累计stars)，未知分量不提供信号；累计量不是当日增量。共享基础框架不归到单篇；仅表示本轮可测来源范围，历史观测保留各自时间。",
+      "rankingNote": "5 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 热度采用 20×ln(1+HF论文投票)+10×ln(1+可归属仓库累计stars)。累计数非当日新增；未取得项为null。9/21晚间HF已刷新，GitHub API触发限流后停止，既有stars保留各自历史观测时间。",
       "rankingVersion": 1
     },
     {
@@ -230490,11 +231823,1386 @@
         "arxiv:2609.04355"
       ],
       "candidateCount": 935,
-      "rankingNote": "102 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 分数为20×ln(1+HF论文累计投票)+10×ln(1+可归属仓库累计stars)，未知分量不提供信号；累计量不是当日增量。共享基础框架不归到单篇；仅表示本轮可测来源范围，历史观测保留各自时间。",
+      "rankingNote": "102 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 热度采用 20×ln(1+HF论文投票)+10×ln(1+可归属仓库累计stars)。累计数非当日新增；未取得项为null。9/21晚间HF已刷新，GitHub API触发限流后停止，既有stars保留各自历史观测时间。",
+      "rankingVersion": 1
+    },
+    {
+      "id": "2026-09-21-1700",
+      "label": "2026年9月21日晚报",
+      "startedAt": "2026-09-21T09:02:02.481Z",
+      "completedAt": "2026-09-21T09:27:30.037288+00:00",
+      "windowStart": "2026-09-07T09:02:02Z",
+      "windowEnd": "2026-09-21T09:27:30.037288+00:00",
+      "status": "partial",
+      "summary": "新收录3份可核验公开研究报告；5篇历史简讯补为完整分析，其中1篇包含已核实的v2结论更正。保存来源覆盖缺口及待核线索。",
+      "dailySummary": "今日合并周度补查与早晚检索：世界动作模型、策略评测及学习补足经典控制持续更新。晚间新增DiVE主动感知与两份跨平台IMU报告，补全基元引导MPC、Harness VLA等旧简讯；VLA适配诊断v2收窄全量微调对照结论。原始日期与编辑补读分开，Top 5按可测累计关注信号排序。",
+      "sourceChecks": [
+        {
+          "name": "arXiv",
+          "status": "ok",
+          "windowStart": "2026-09-14T09:02:02Z",
+          "windowEnd": "2026-09-21T09:27:30.037288+00:00",
+          "lastSuccessAt": "2026-09-21T09:04:51.160800+00:00",
+          "queries": [
+            "https://arxiv.org/list/cs.RO/new",
+            "https://export.arxiv.org/api/query?search_query=cat%3Acs.RO+OR+%28%28cat%3Acs.LG+OR+cat%3Acs.CV+OR+cat%3Acs.AI+OR+cat%3Aeess.SY+OR+cat%3Amath.OC%29+AND+%28all%3Arobot+OR+all%3Arobotic%29%29&sortBy=lastUpdatedDate&sortOrder=descending&start=0&max_results=500",
+            "https://export.arxiv.org/api/query?search_query=cat%3Acs.RO+OR+%28%28cat%3Acs.LG+OR+cat%3Acs.CV+OR+cat%3Acs.AI+OR+cat%3Aeess.SY+OR+cat%3Amath.OC%29+AND+%28all%3Arobot+OR+all%3Arobotic%29%29&sortBy=lastUpdatedDate&sortOrder=descending&start=500&max_results=500",
+            "https://export.arxiv.org/api/query?search_query=cat%3Acs.RO+OR+%28%28cat%3Acs.LG+OR+cat%3Acs.CV+OR+cat%3Acs.AI+OR+cat%3Aeess.SY+OR+cat%3Amath.OC%29+AND+%28all%3Arobot+OR+all%3Arobotic%29%29&sortBy=submittedDate&sortOrder=descending&start=0&max_results=500"
+          ],
+          "note": "公告、新提交和修订API串行分页至7天边界；1500返回行/1000去重身份，相对早间无新ID或版本变化。遗留两稿对照核完，另有HTML404缺口保留。"
+        },
+        {
+          "name": "Hugging Face",
+          "status": "partial",
+          "windowStart": "2026-09-14T09:02:02Z",
+          "windowEnd": "2026-09-21T09:27:30.037288+00:00",
+          "queries": [
+            "8个日榜页面（9/14–9/21）",
+            "robotics models/datasets按lastModified降序分页至边界"
+          ],
+          "note": "模型1300行、数据400行，索引窗口完整；87张变化卡85成功、2返回401。补读13份方法/评分/旧卡；热度刷新使2篇历史简讯进入各自前30并补全文。"
+        },
+        {
+          "name": "机构与会议原站",
+          "status": "partial",
+          "windowStart": "2026-09-07T09:02:02Z",
+          "windowEnd": "2026-09-21T09:27:30.037288+00:00",
+          "queries": [
+            "https://www.physicalintelligence.company/blog",
+            "https://deepmind.google/discover/blog/",
+            "https://research.nvidia.com/research-area/robotics",
+            "https://developer.nvidia.com/blog/tag/robotics/",
+            "https://blogs.nvidia.com/blog/category/robotics/",
+            "https://bair.berkeley.edu/blog/",
+            "https://ai.stanford.edu/blog/",
+            "https://www.tri.global/news",
+            "https://www.skild.ai/blogs",
+            "https://generalistai.com/blog",
+            "https://news.mit.edu/topic/robotics",
+            "https://www.roboticsproceedings.org/",
+            "https://griffinlabs.ai/blog/griffin-alpha-s",
+            "https://spectrum.ieee.org/topic/robotics/",
+            "https://rai-inst.com/resources/blog/bimanual-robot-for-dynamic-manipulation/",
+            "https://www.reuters.com/technology/",
+            "https://www.jiqizhixin.com/",
+            "https://www.qbitai.com/",
+            "https://www.microsoft.com/en-us/research/",
+            "https://alejp.me/blog/blog-post-ssrr-2026-ugv-uav.html",
+            "https://www.umiacs.umd.edu/news-events/news/one-robot-many-bodies-new-system-helps-four-legged-robots-adapt",
+            "https://www.nature.com/articles/s44182-026-00114-y",
+            "https://www.umiacs.umd.edu/news-events/news/one-robot-many-bodies-new-system-helps-four-legged-robots-adapt",
+            "https://www.ieee-ras.org/news/robots-are-learning-to-feel/"
+          ],
+          "note": "24次普通原页请求（23个唯一URL），覆盖PI、DeepMind、NVIDIA、BAIR、Stanford、Skild、Generalist、RSS等；部分网页403或反爬挑战，无法视为完整覆盖。"
+        },
+        {
+          "name": "新闻与中文公开索引",
+          "status": "partial",
+          "windowStart": "2026-09-07T09:02:02Z",
+          "windowEnd": "2026-09-21T09:27:30.037288+00:00",
+          "queries": [
+            "Reuters/IEEE/MIT近7天；量子位/机器之心；微信与小红书公开索引近14天"
+          ],
+          "note": "量子位9/21 RPent报道已追溯论文、仓库和官方评测并合并；Reuters401。微信/小红书检索缺少可核验新原文，索引缺口不代表平台无新增。"
+        },
+        {
+          "name": "X / Twitter",
+          "status": "partial",
+          "windowStart": "2026-09-14T09:02:02Z",
+          "windowEnd": "2026-09-21T09:27:30.037288+00:00",
+          "queries": [
+            "site:x.com robotics/VLA/WAM after:2026-09-18 before:2026-09-22",
+            "site:x.com 重点机构robot after:2026-09-14"
+          ],
+          "note": "公开搜索未提供足够相关原帖，不能声称覆盖账号时间线或全网。"
+        },
+        {
+          "name": "学习补足经典理论",
+          "status": "ok",
+          "queries": [
+            "robot residual September 2026",
+            "robot learning-based MPC after:2026-09-07",
+            "robot Gaussian process control after:2026-09-07",
+            "imitation learning motion planning after:2026-09-14"
+          ],
+          "note": "结合主动检索、遗留全文和新项目，补充基元MPC、DiVE、Harness VLA及IMU先验的七字段对照；明确经典基线证据不足与不可观测性边界。"
+        },
+        {
+          "name": "公开热度",
+          "status": "partial",
+          "note": "8日HF榜中18项已归档论文票数刷新。GitHub API于09:09 UTC返回限流403即停；保留既有stars独立时间戳，RPent共享框架702stars不直接归因单篇。DiVE专属项目页观测0stars。"
+        }
+      ],
+      "addedIds": [
+        "hf:leesuyun/DiVE",
+        "hf:xunden/tartanimu-xunden-iros2026",
+        "hf:xiaojx/2026-tartaimu-challenge"
+      ],
+      "updatedIds": [
+        "arxiv:2609.18084"
+      ],
+      "promotedIds": [
+        "arxiv:2609.18084",
+        "arxiv:2609.14868",
+        "arxiv:2607.08448",
+        "arxiv:2609.18620",
+        "arxiv:2609.20669"
+      ],
+      "briefAddedIds": [],
+      "briefUpdatedIds": [],
+      "candidateIds": [
+        "hf:leesuyun/DiVE",
+        "hf:xunden/tartanimu-xunden-iros2026",
+        "hf:xiaojx/2026-tartaimu-challenge",
+        "arxiv:2609.18084",
+        "arxiv:2609.14868",
+        "arxiv:2607.08448",
+        "arxiv:2609.18620",
+        "arxiv:2609.20669"
+      ],
+      "recordsSnapshot": [
+        {
+          "id": "arxiv:2609.18084",
+          "title": "Not All Layers Need Tuning: Diagnosing and Directing Adaptation in Vision-Language-Action Models",
+          "zhTitle": "VLA 适配诊断：v2 收窄全量微调对照结论",
+          "authors": [
+            "Shahram Najam Syed",
+            "Arthur Jakobsson",
+            "Prayuj Sachdev",
+            "Jeffrey Ichnowski"
+          ],
+          "category": "vla",
+          "tags": [
+            "vla"
+          ],
+          "type": "arXiv预印本",
+          "contentTypes": [
+            "paper"
+          ],
+          "publishedAt": "2026-09-16T03:44:51Z",
+          "sourceUpdatedAt": "2026-09-17T02:52:21Z",
+          "version": "v2",
+          "canonicalUrl": "https://arxiv.org/abs/2609.18084",
+          "source": "arXiv",
+          "summary": "先诊断目标域变化落在哪些网络区域，再分配微调容量；v2提醒：同训练轮数胜出，不等于胜过各自最佳早停模型。",
+          "innovation": "将基于源域缓存的表征/敏感度诊断，与目标侧梯度代理及随机失活不确定性结合，以Fréchet分布距离调节诊断来源，再按区域需求冻结参数或分配LoRA秩。无标签的是预诊断，不是整个适配流程：真机训练仍使用有标签示范。",
+          "editorialPriority": 95,
+          "editorialPriorityBasis": "按机器人直接相关性、方法可复用性、关键问题与验证价值的编辑排序；不是公开热度。",
+          "status": "verified",
+          "reviewStatus": "full_source_read",
+          "changeType": "new",
+          "backfill": false,
+          "checkedAt": "2026-09-21T09:22:59.063374+00:00",
+          "dateNote": "保留中央官方索引的原始提交和最新版本日期；本次首次收录，未将版本号视作已证实实质修订。",
+          "dateEvidence": {
+            "url": "https://arxiv.org/abs/2609.18084",
+            "location": "中央arXiv API published/updated和版本元数据",
+            "published": "2026-09-16T03:44:51Z",
+            "updated": "2026-09-16T03:44:51Z"
+          },
+          "links": [
+            {
+              "label": "论文原文",
+              "url": "https://arxiv.org/abs/2609.18084"
+            },
+            {
+              "label": "当前全文",
+              "url": "https://arxiv.org/html/2609.18084v1"
+            },
+            {
+              "label": "v2 更正全文",
+              "url": "https://arxiv.org/html/2609.18084v2"
+            }
+          ],
+          "evidence": "已读v1与v2全文、方法与真机统计说明，逐一比较16张HTML表格；未复现实验。",
+          "evidenceDetails": [
+            {
+              "url": "https://arxiv.org/html/2609.18084v2",
+              "location": "§3–4诊断与适配方法；真机实验设置",
+              "supports": "无标签诊断与20段有标签适配不同；五种VLA、参数预算及统一10轮检查点",
+              "checkedAt": "2026-09-21T09:22:59.063374+00:00"
+            },
+            {
+              "url": "https://arxiv.org/html/2609.18084v2",
+              "location": "真机结果、Scene B及统计检验说明",
+              "supports": "语言21/30对22/30、约0.04%参数；逐项精确McNemar、未校正多重比较；四类显著对FT结论",
+              "checkedAt": "2026-09-21T09:22:59.063374+00:00"
+            },
+            {
+              "url": "https://arxiv.org/html/2609.18084v1",
+              "location": "v1/v2逐表及叙述对比",
+              "supports": "16张表内容相同，改变的是早停比较和统计结论口径",
+              "checkedAt": "2026-09-21T09:22:59.063374+00:00"
+            }
+          ],
+          "popularity": {
+            "status": "unmeasured",
+            "score": null,
+            "metrics": {
+              "githubStars": null,
+              "hfUpvotes": null
+            },
+            "evidence": [],
+            "basis": "仅为已核实公开关注信号；未知不当零，累计数不代表当日新增或研究质量。"
+          },
+          "discoveredAt": "2026-09-17T02:39:11.180Z",
+          "updatedAt": "2026-09-21T09:27:30.037288+00:00",
+          "lastSeenAt": "2026-09-21T09:27:30.037288+00:00",
+          "reviewedAt": "2026-09-21T09:22:59.063374+00:00",
+          "substantiveUpdate": true,
+          "reviewedVersion": "v2",
+          "changeId": "arxiv:2609.18084:v2",
+          "changeNote": "逐表核对v1/v2，16张HTML表格未变；v2将真机结论限定为统一第10轮训练检查点，撤除对独立早停全量微调的泛化优势表述，并明确逐项McNemar检验未做多重比较校正。",
+          "background": "VLA适配中均匀配置LoRA可能把预算花在不需要变化的区域；少量目标数据又容易让全量微调过拟合。论文希望在正式训练前，用少量无标签观察判断视觉、语言和动作区域的适配需求。",
+          "experiments": "研究跨五种VLA及LIBERO/CALVIN设置，并在真机六类偏移下使用每类20段标注示范、统一训练10轮和30个配对初始条件。语言偏移上Adaptive为21/30、全量微调22/30，Adaptive可训练参数约0.04%；不能据此断言统计等价。Scene B五类测试中，v2仅在外观、新物体、affordance和混合偏移报告相对FT的显著优势；对其他PEFT的2–6次成功差距在该样本量下不显著。",
+          "conclusion": "诊断式资源分配在测试设置中支持更节省参数的适配。v2的重要变化是统计和比较口径：表格数字没有新实验增量，结论限定统一训练轮数，不证明胜过独立选择最佳早停点的全量微调。",
+          "evaluation": "编辑评价：这次修订提升了可解释性，尤其避免将训练协议差异归因于算法本身。真机遮挡偏移中诊断分散，Adaptive并无显著优势；逐项精确McNemar检验没有多重比较校正。源域诊断缓存及其构建成本也不能忽略，部署方未必已拿到这些缓存。",
+          "futureDirections": "研究假设：让该诊断模块选择残差适配器的作用区域，并与保守在线更新联用。验证应给FT、均匀LoRA和诊断LoRA相同示范/调参预算，各自用独立验证集早停，再做多随机种子、配对初始状态及多重比较校正；重点观察遮挡失效与旧技能遗忘。",
+          "leadDiscoveredAt": "2026-09-18T03:44:26.626948+00:00",
+          "briefHistory": [
+            {
+              "promotedAt": "2026-09-21T09:27:30.037288+00:00",
+              "previous": {
+                "id": "arxiv:2609.18084",
+                "title": "Not All Layers Need Tuning: Diagnosing and Directing Adaptation in Vision-Language-Action Models",
+                "zhTitle": "VLA适配诊断：按区域需求分配微调容量",
+                "authors": [
+                  "Shahram Najam Syed",
+                  "Arthur Jakobsson",
+                  "Prayuj Sachdev",
+                  "Jeffrey Ichnowski"
+                ],
+                "category": "vla",
+                "tags": [
+                  "vla"
+                ],
+                "type": "arXiv预印本",
+                "contentTypes": [
+                  "paper"
+                ],
+                "publishedAt": "2026-09-16T03:44:51Z",
+                "sourceUpdatedAt": "2026-09-16T03:44:51Z",
+                "version": "v1",
+                "canonicalUrl": "https://arxiv.org/abs/2609.18084",
+                "source": "arXiv",
+                "summary": "先从少量无标签目标观察估计视觉、语言与动作区域的适配代价，再按诊断分配微调资源，避免均匀配置适配器。",
+                "innovation": "先从少量无标签目标观察估计视觉、语言与动作区域的适配代价，再按诊断分配微调资源，避免均匀配置适配器。",
+                "editorialPriority": 95,
+                "editorialPriorityBasis": "按机器人直接相关性、方法可复用性、关键问题与验证价值的编辑排序；不是公开热度。",
+                "status": "brief_verified",
+                "reviewStatus": "innovation_verified",
+                "changeType": "new",
+                "backfill": false,
+                "checkedAt": "2026-09-17T02:13:23.743876+00:00",
+                "dateNote": "保留中央官方索引的原始提交和最新版本日期；本次首次收录，未将版本号视作已证实实质修订。",
+                "dateEvidence": {
+                  "url": "https://arxiv.org/abs/2609.18084",
+                  "location": "中央arXiv API published/updated和版本元数据",
+                  "published": "2026-09-16T03:44:51Z",
+                  "updated": "2026-09-16T03:44:51Z"
+                },
+                "links": [
+                  {
+                    "label": "论文原文",
+                    "url": "https://arxiv.org/abs/2609.18084"
+                  },
+                  {
+                    "label": "当前全文",
+                    "url": "https://arxiv.org/html/2609.18084v1"
+                  }
+                ],
+                "evidence": "已读本轮中央缓存的官方摘要，完整实验尚待核验。",
+                "evidenceDetails": [
+                  {
+                    "url": "https://arxiv.org/abs/2609.18084",
+                    "location": "Abstract; published/updated metadata",
+                    "supports": "研究身份、时间、范围及创新简讯"
+                  }
+                ],
+                "popularity": {
+                  "status": "unmeasured",
+                  "score": null,
+                  "metrics": {
+                    "githubStars": null,
+                    "hfUpvotes": null
+                  },
+                  "evidence": [],
+                  "basis": "仅为已核实公开关注信号；未知不当零，累计数不代表当日新增或研究质量。"
+                },
+                "discoveredAt": "2026-09-17T02:39:11.180Z",
+                "updatedAt": "2026-09-17T02:39:11.180Z",
+                "lastSeenAt": "2026-09-17T02:39:11.180Z",
+                "revisionEvents": []
+              }
+            }
+          ],
+          "aliasIds": []
+        },
+        {
+          "id": "arxiv:2609.14868",
+          "title": "Primitive-Informed Sampling-Based MPC for Multi-Fingered Dexterous Manipulation",
+          "authors": [
+            "Küçüktabak, Emek Barış",
+            "Patel, Karankumar",
+            "Cui, Jinda",
+            "Yang, Zhaodong",
+            "Sasabuchi, Kazuhiro",
+            "Takamatsu, Jun"
+          ],
+          "publishedAt": "2026-09-14T00:36:17+00:00",
+          "sourceUpdatedAt": "2026-09-16T02:35:33Z",
+          "version": "v2",
+          "canonicalUrl": "https://arxiv.org/abs/2609.14868",
+          "sourceLinks": [],
+          "comments": null,
+          "priorPublicationContext": null,
+          "dateEvidence": {
+            "url": "https://arxiv.org/abs/2609.14868",
+            "location": "Submission history",
+            "history": "Submission history From: Emek Baris Kucuktabak [ view email ] [v1] Mon, 14 Sep 2026 00:36:17 UTC (8,446 KB)",
+            "versions": [
+              {
+                "version": "v1",
+                "date": "2026-09-14T00:36:17+00:00"
+              }
+            ]
+          },
+          "checkedAt": "2026-09-21T09:22:59.063374+00:00",
+          "category": "theory",
+          "zhTitle": "基元引导 MPC：学习协同动作，保留在线残差优化",
+          "innovation": "动作写成均值姿态、低维协同基元与关节残差之和；采样协方差结合低秩基元结构和独立关节扰动，数字孪生检查轨迹约束。基元可以从SAC轨迹或人类抓握数据中PCA提取。在线残差由CEM优化，不能称为在线RL残差；完整关节修正仍保留，也不是简单减少总优化维度。",
+          "editorialPriority": 87,
+          "tags": [
+            "learning_control",
+            "MPC",
+            "灵巧操作"
+          ],
+          "type": "arXiv预印本",
+          "contentTypes": [
+            "paper"
+          ],
+          "summary": "用学习或人类动作提取的协同基元引导CEM采样，再让MPC优化全关节残差，救回无支撑灵巧手接触切换中的低效搜索。",
+          "status": "verified",
+          "evidence": "已读v1/v2全文及项目页，核对采样、消融、统计单位与硬件；本次编辑升级不构造实质修订事件。",
+          "evidenceDetails": [
+            {
+              "url": "https://arxiv.org/html/2609.14868v2",
+              "location": "方法：Primitive parameterization、CEM与约束；实验设置",
+              "supports": "低秩与全关节残差、350候选约37.7毫秒及192线程硬件",
+              "checkedAt": "2026-09-21T09:22:59.063374+00:00"
+            },
+            {
+              "url": "https://arxiv.org/html/2609.14868v2",
+              "location": "In-hand rotation与ablation表",
+              "supports": "10×3分钟、86/86完整转动；无基元0/30、无残差0/10；模型质量失配18掉落/30分钟",
+              "checkedAt": "2026-09-21T09:22:59.063374+00:00"
+            },
+            {
+              "url": "https://arxiv.org/html/2609.14868v2",
+              "location": "Grasping / reorientation",
+              "supports": "人类基元9/10对0/10；小角度纯关节规划可以成功",
+              "checkedAt": "2026-09-21T09:22:59.063374+00:00"
+            }
+          ],
+          "links": [
+            {
+              "label": "论文原文",
+              "url": "https://arxiv.org/abs/2609.14868"
+            },
+            {
+              "label": "v2 全文",
+              "url": "https://arxiv.org/html/2609.14868v2"
+            },
+            {
+              "label": "实验项目",
+              "url": "https://primitive-informed-mpc.github.io/"
+            }
+          ],
+          "reviewedAt": "2026-09-21T09:22:59.063374+00:00",
+          "reviewedVersion": "v2",
+          "announcementDate": "2026-09-15",
+          "changeType": "backfill",
+          "discoveryNote": "本轮普通官方9/15公告首次发现；原始提交、最新版本与收录时间分别保留。",
+          "popularity": {
+            "score": null,
+            "status": "unmeasured",
+            "metrics": {
+              "githubStars": null,
+              "hfUpvotes": null
+            },
+            "basis": "热度由本轮唯一协调者统一观测并合并；尚缺指标为null。",
+            "evidence": [],
+            "checkedAt": "2026-09-15T09:16:58.016375+00:00"
+          },
+          "backfill": true,
+          "leadDiscoveredAt": "2026-09-18T09:39:21.834Z",
+          "discoveredAt": "2026-09-15T09:35:25.032Z",
+          "updatedAt": "2026-09-21T09:27:30.037288+00:00",
+          "lastSeenAt": "2026-09-21T09:27:30.037288+00:00",
+          "reviewStatus": "full_source_read",
+          "substantiveUpdate": false,
+          "background": "无支撑手内转动需要连续切换接触与手指步态。直接在高维关节空间采样，预算常被不产生有效接触的轨迹消耗；这属于所测经典采样控制器的计算和搜索瓶颈，而非物理不可行。",
+          "experiments": "真机Allegro手搭配Franka。40毫米六角柱旋转中，350条候选的完整方法在10次、每次3分钟的试验里完成86/86次完整转动；86是转动次数，不是独立试验数。非结构化关节CEM在100/350/600候选下均未完成一整圈；移除基元0/30，移除残差0/10。350候选优化约37.7毫秒，使用192线程Threadripper工作站。人类基元抓握为9/10，对照0/10；较小角度重定向里纯关节采样本来就能奏效。",
+          "conclusion": "学习到的协同结构与经典在线纠偏互补：基元提高有效采样率，残差让计划越出基元子空间。更高候选数并不自动更好，延迟和反馈频率共同影响真机结果。",
+          "evaluation": "编辑评价：直接对照和消融清楚，适合关注“学习补足经典理论”。但系统依赖高频动作捕捉数字孪生和较强CPU，不能直接外推到普通嵌入式平台。质量低估50%的模型失配下仍出现18次掉落/30分钟；未给出广泛接触稳定性保证。v1/v2核对未发现足以作为新实验事件的变化，本次为旧简讯补读。",
+          "futureDirections": "研究假设：将该低秩采样接口与不确定性感知的学习动力学结合，同时保留显式接触/力约束。以相同墙钟预算比较纯CEM、基元CEM、基元加残差和学习动力学版本，在未知形状、摩擦及质量误差下报告完整试验成功率、掉落、延迟和重规划失败，避免只统计成功转动片段。",
+          "learningClassical": {
+            "mode": "hybrid",
+            "baseline": "不带动作基元的关节空间CEM采样MPC。",
+            "cornerCase": "无支撑连续转动与接触切换下，有效轨迹在高维采样中稀疏；是特定预算下的工程性能瓶颈。",
+            "learningRole": "离线SAC或人类轨迹提供PCA协同基元；在线低秩采样加全关节残差由MPC优化，约束检查仍由数字孪生负责。",
+            "evidence": "相同平台和任务下，完整350候选方法10个3分钟试验完成86/86次转动；无基元及无残差均不能完成整圈。小角度任务纯关节采样可成功，显示学习并非处处必要。",
+            "limitations": "所需计算为192线程工作站；依赖状态测量和模型。质量失配仍导致掉落，连续转动次数不能代替独立样本量；没有全局稳定性证明。",
+            "nextTest": "固定墙钟预算和状态估计质量，跨未知摩擦/质量/几何做配对试验，同时计入约束违背、掉落及最坏延迟；验证学习模型不确定性是否帮助决定何时回退。"
+          },
+          "briefHistory": [
+            {
+              "promotedAt": "2026-09-21T09:27:30.037288+00:00",
+              "previous": {
+                "id": "arxiv:2609.14868",
+                "title": "Primitive-Informed Sampling-Based MPC for Multi-Fingered Dexterous Manipulation",
+                "authors": [
+                  "Küçüktabak, Emek Barış",
+                  "Patel, Karankumar",
+                  "Cui, Jinda",
+                  "Yang, Zhaodong",
+                  "Sasabuchi, Kazuhiro",
+                  "Takamatsu, Jun"
+                ],
+                "publishedAt": "2026-09-14T00:36:17+00:00",
+                "sourceUpdatedAt": "2026-09-14T00:36:17+00:00",
+                "version": "v1",
+                "canonicalUrl": "https://arxiv.org/abs/2609.14868",
+                "sourceLinks": [],
+                "comments": null,
+                "priorPublicationContext": null,
+                "dateEvidence": {
+                  "url": "https://arxiv.org/abs/2609.14868",
+                  "location": "Submission history",
+                  "history": "Submission history From: Emek Baris Kucuktabak [ view email ] [v1] Mon, 14 Sep 2026 00:36:17 UTC (8,446 KB)",
+                  "versions": [
+                    {
+                      "version": "v1",
+                      "date": "2026-09-14T00:36:17+00:00"
+                    }
+                  ]
+                },
+                "checkedAt": "2026-09-15T09:09:35.395039+00:00",
+                "category": "theory",
+                "zhTitle": "操作基元与关节残差共同引导灵巧手采样MPC",
+                "innovation": "用低维协同手指基元偏置采样，同时优化关节级残差，并在前向数字孪生中拒绝不满足任务约束的轨迹，以提高接触操作的有效采样率。",
+                "editorialPriority": 87,
+                "tags": [
+                  "机器人理论与控制"
+                ],
+                "type": "arXiv预印本",
+                "contentTypes": [
+                  "paper"
+                ],
+                "summary": "用低维协同手指基元偏置采样，同时优化关节级残差，并在前向数字孪生中拒绝不满足任务约束的轨迹，以提高接触操作的有效采样率。",
+                "status": "brief_verified",
+                "evidence": "普通官方摘要及提交历史已核对；简讯仅概述已披露创新，非全文评审",
+                "evidenceDetails": [
+                  {
+                    "url": "https://arxiv.org/abs/2609.14868",
+                    "location": "Abstract",
+                    "supports": "简讯创新点与机器人关联"
+                  },
+                  {
+                    "url": "https://arxiv.org/abs/2609.14868",
+                    "location": "Submission history",
+                    "supports": "原始提交日期及最新版本日期"
+                  }
+                ],
+                "links": [
+                  {
+                    "label": "论文原文",
+                    "url": "https://arxiv.org/abs/2609.14868"
+                  }
+                ],
+                "reviewedAt": "2026-09-15T09:16:58.016375+00:00",
+                "reviewedVersion": "v1",
+                "announcementDate": "2026-09-15",
+                "changeType": "backfill",
+                "discoveryNote": "本轮普通官方9/15公告首次发现；原始提交、最新版本与收录时间分别保留。",
+                "popularity": {
+                  "score": null,
+                  "status": "unmeasured",
+                  "metrics": {
+                    "githubStars": null,
+                    "hfUpvotes": null
+                  },
+                  "basis": "热度由本轮唯一协调者统一观测并合并；尚缺指标为null。",
+                  "evidence": [],
+                  "checkedAt": "2026-09-15T09:16:58.016375+00:00"
+                },
+                "backfill": true,
+                "leadDiscoveredAt": "2026-09-15T09:16:58.016375+00:00",
+                "discoveredAt": "2026-09-15T09:35:25.032Z",
+                "updatedAt": "2026-09-15T09:35:25.032Z",
+                "lastSeenAt": "2026-09-15T09:35:25.032Z",
+                "revisionEvents": []
+              }
+            }
+          ],
+          "aliasIds": []
+        },
+        {
+          "id": "arxiv:2607.08448",
+          "title": "Harness VLA: Steering Frozen VLAs into Reliable Manipulation Primitives via Memory-Guided Agents",
+          "zhTitle": "Harness VLA / RPent：经典运动基元与冻结 VLA 分工",
+          "authors": [
+            "Yixian Zhang",
+            "Huanming Zhang",
+            "Feng Gao",
+            "Xiao Li",
+            "Zhihao Liu",
+            "Chunyang Zhu",
+            "Jiaxing Qiu",
+            "Yuchen Yan",
+            "Jiyuan Liu",
+            "Wenhao Tang",
+            "Zhengru Fang",
+            "Yi Nie",
+            "Changxu Wei",
+            "Yu Wang",
+            "Wenbo Ding",
+            "Chao Yu"
+          ],
+          "publishedAt": "2026-07-09T13:08:54Z",
+          "sourceUpdatedAt": "2026-09-02T13:36:23Z",
+          "version": "v4",
+          "reviewedVersion": "v4",
+          "canonicalUrl": "https://arxiv.org/abs/2607.08448",
+          "category": "vla",
+          "tags": [
+            "learning_control",
+            "VLA",
+            "分层规划"
+          ],
+          "type": "arXiv预印本",
+          "contentTypes": [
+            "paper",
+            "news",
+            "report"
+          ],
+          "summary": "以解析控制承担移动和重新定位，以冻结VLA处理接触，再通过记忆、反馈和重试组合长任务；本次补全文分析并合并今日报道。",
+          "innovation": "固定基元库中加入可重试的vla_act：高层规划器从RGB-D和状态决定接触前姿态、调用时机、早停及失败后重新定位。单参考场景探索保存可参数化的任务轨迹，另存通用成功规则和失败知识；测试冻结记忆并禁止reset。VLA在部署时冻结，但不同基准使用不同已训练底座。",
+          "status": "verified",
+          "evidence": "已读v4全文、官方RPent仓库、排行榜与Flash文档；新闻仅用于发现和关联，未确认当前排行榜数据的首次更新时间。",
+          "evidenceDetails": [
+            {
+              "url": "https://arxiv.org/html/2607.08448v4",
+              "location": "§2–3；Tables 2,3,6；§3.3；Limitations",
+              "supports": "固定基元、记忆协议；384/400、82.4对50.0、58.4对50.4及样本；部分格子均值局限",
+              "checkedAt": "2026-09-21T09:22:59.063374+00:00"
+            },
+            {
+              "url": "https://rpent.readthedocs.io/zh-cn/latest/rst_source/leaderboard/performance.html",
+              "location": "LIBERO-PRO表与脚注",
+              "supports": "741/800由Long157/200和其他584/600合并，两份冻结memory",
+              "checkedAt": "2026-09-21T09:22:59.063374+00:00"
+            },
+            {
+              "url": "https://rpent.readthedocs.io/zh-cn/latest/rst_source/usage/flash.html",
+              "location": "全系列LIBERO-PRO性能与执行时间",
+              "supports": "581/800；成功计划单episode耗时抽样，不能与全量planner耗时直接等价",
+              "checkedAt": "2026-09-21T09:22:59.063374+00:00"
+            }
+          ],
+          "links": [
+            {
+              "label": "论文原文",
+              "url": "https://arxiv.org/abs/2607.08448"
+            },
+            {
+              "label": "论文全文",
+              "url": "https://arxiv.org/html/2607.08448v4"
+            },
+            {
+              "label": "RPent 项目",
+              "url": "https://github.com/RLinf/RPent"
+            },
+            {
+              "label": "官方评测",
+              "url": "https://rpent.readthedocs.io/zh-cn/latest/rst_source/leaderboard/performance.html"
+            },
+            {
+              "label": "Flash 说明",
+              "url": "https://rpent.readthedocs.io/zh-cn/latest/rst_source/usage/flash.html"
+            },
+            {
+              "label": "今日报道",
+              "url": "https://www.qbitai.com/2026/09/493218.html"
+            }
+          ],
+          "editorialPriority": 50,
+          "discoveryNote": "周度30天补查首次收录；原稿可能早于本窗口，近期修订触发检索，不冒充今日新论文。",
+          "checkedAt": "2026-09-21T09:22:59.063374+00:00",
+          "popularity": {
+            "score": null,
+            "status": "unmeasured",
+            "metrics": {
+              "githubStars": null,
+              "hfUpvotes": null
+            },
+            "basis": "尚未取得可归属的数值热度信号；缺失为null。",
+            "evidence": [],
+            "checkedAt": "2026-09-21T02:50:27.325645+00:00"
+          },
+          "reviewStatus": "full_source_read",
+          "discoveredAt": "2026-09-21T03:15:56.151807+00:00",
+          "updatedAt": "2026-09-21T09:27:30.037288+00:00",
+          "lastSeenAt": "2026-09-21T09:27:30.037288+00:00",
+          "reviewedAt": "2026-09-21T09:22:59.063374+00:00",
+          "substantiveUpdate": false,
+          "background": "解析IK、姿态和夹爪基元易于指定目标，但在不规则抓取、受限放置及关节物体交互上较脆弱。端到端VLA擅长局部接触，却常在指令重绑定、布局变化与长任务中沿用训练行为。",
+          "experiments": "v4论文中，标准LIBERO的CC版本384/400，直接冻结底座95.3%；LIBERO-Pro完整八格，CC为82.4%，同协议底座50.0%。RoboTwin使用50任务×5随机种子，CC58.4%，相同冻结LingBot底座50.4%。当前官方文档另报LIBERO-Pro 741/800=92.63%，但Long与其他六套件用了两份分别探索后冻结的memory，不是所有回合共享同一快照，不能混为v4论文实验。Flash为581/800；其耗时按最终计划的成功episode采样，与Codex所有planner记录并非同口径，不能直接照搬媒体“7倍”速度结论。",
+          "conclusion": "在所测仿真平台，把可解释的非接触运动与学习接触技能分开可以提升部署鲁棒性。原稿七月已发布，今日新闻不是首次开源证据；当前榜单属于可核验的官方自报结果，其确切新增日期仍未确认。",
+          "evaluation": "编辑评价：接口和失败恢复比单纯扩大策略参数更值得复用。但论文摘要以只覆盖部分格子的RATS整体均值作“提升38.6点”对比，范围不齐，不宜当严格同任务提升。终止谓词由最后哪类动作触发，也不是证明该类动作独立必要性的因果消融；缺少纯解析控制同预算基线及全面真机验证。",
+          "futureDirections": "研究假设：将vla_act替换或补充为基元引导MPC的接触技能，给高层返回成功置信度、接触约束与重试代价。固定探索预算、统一冻结memory与墙钟预算，比较纯解析、纯VLA及混合版本；在未知接触和长时任务中测成功、误判成功、重试次数和碰撞，检验分工本身的收益。",
+          "learningClassical": {
+            "mode": "hybrid",
+            "baseline": "解析运动/IK、姿态、夹爪与导航基元组成的控制接口；端到端冻结VLA另作性能对照。",
+            "cornerCase": "不规则抓取、受限放置、关节交互及接触失败后恢复；是解析技能库表达与工程鲁棒性不足，不证明经典控制理论不可能。",
+            "learningRole": "冻结VLA只承担接触阶段，高层记忆规划器绑定目标与重试；非接触运输和重新定位继续使用解析控制。",
+            "evidence": "论文给出相同冻结VLA底座的同协议对照及调用次数分析，支持混合系统优于直接VLA；缺少纯解析同预算消融，对“补足经典”仍属机制与案例证据。",
+            "limitations": "任务级探索有成本；不同基准使用不同底座。当前榜单memory分批，Flash耗时抽样与成功率样本不同；主要定量证据为仿真且没有稳定性保证。",
+            "nextTest": "同一记忆、相同探索与推理预算比较解析、VLA、混合三者，按接触与非接触失败分解；加入安全约束及检测失败后回退，量化代价。"
+          },
+          "relatedCoverage": [
+            {
+              "url": "https://www.qbitai.com/2026/09/493218.html",
+              "publishedAt": "2026-09-21T14:22:37+08:00",
+              "note": "当天跟进报道，非首次开源日期"
+            }
+          ],
+          "briefHistory": [
+            {
+              "promotedAt": "2026-09-21T09:27:30.037288+00:00",
+              "previous": {
+                "id": "arxiv:2607.08448",
+                "title": "Harness VLA: Steering Frozen VLAs into Reliable Manipulation Primitives via Memory-Guided Agents",
+                "zhTitle": "Harness VLA: Steering Frozen VLAs into Reliable Manipulation Primitives via Memory-Guided Agents",
+                "authors": [
+                  "Yixian Zhang",
+                  "Huanming Zhang",
+                  "Feng Gao",
+                  "Xiao Li",
+                  "Zhihao Liu",
+                  "Chunyang Zhu",
+                  "Jiaxing Qiu",
+                  "Yuchen Yan",
+                  "Jiyuan Liu",
+                  "Wenhao Tang",
+                  "Zhengru Fang",
+                  "Yi Nie",
+                  "Changxu Wei",
+                  "Yu Wang",
+                  "Wenbo Ding",
+                  "Chao Yu"
+                ],
+                "publishedAt": "2026-07-09T13:08:54Z",
+                "sourceUpdatedAt": "2026-09-02T13:36:23Z",
+                "version": "v4",
+                "reviewedVersion": "v4",
+                "canonicalUrl": "https://arxiv.org/abs/2607.08448",
+                "category": "vla",
+                "tags": [],
+                "type": "arXiv预印本",
+                "contentTypes": [
+                  "paper"
+                ],
+                "summary": "作者方法摘句：“We present Harness VLA, a memory-augmented agentic framework that exposes a frozen VLA as a retryable contact-rich primitive and composes it with a small…”（周度补收，英文原句节选；实验未全文核读）",
+                "innovation": "作者方法摘句：“We present Harness VLA, a memory-augmented agentic framework that exposes a frozen VLA as a retryable contact-rich primitive and composes it with a small…”（周度补收，英文原句节选；实验未全文核读）",
+                "status": "brief_verified",
+                "evidence": "arXiv原始摘要与版本元数据已取得；此简讯保留英文方法摘句，完整实验尚未核读，不表示已验证作者性能结论。",
+                "evidenceDetails": [
+                  {
+                    "url": "https://arxiv.org/abs/2607.08448",
+                    "location": "arXiv API entry: title / summary / published / updated",
+                    "supports": "论文身份、原始日期、当前版本与方法摘句",
+                    "checkedAt": "2026-09-21T02:50:27.325645+00:00"
+                  }
+                ],
+                "links": [
+                  {
+                    "label": "论文原文",
+                    "url": "https://arxiv.org/abs/2607.08448"
+                  }
+                ],
+                "editorialPriority": 50,
+                "discoveryNote": "周度30天补查首次收录；原稿可能早于本窗口，近期修订触发检索，不冒充今日新论文。",
+                "checkedAt": "2026-09-21T02:50:27.325645+00:00",
+                "popularity": {
+                  "score": null,
+                  "status": "unmeasured",
+                  "metrics": {
+                    "githubStars": null,
+                    "hfUpvotes": null
+                  },
+                  "basis": "尚未取得可归属的数值热度信号；缺失为null。",
+                  "evidence": [],
+                  "checkedAt": "2026-09-21T02:50:27.325645+00:00"
+                },
+                "reviewStatus": "official_abstract_only",
+                "discoveredAt": "2026-09-21T03:15:56.151807+00:00",
+                "updatedAt": "2026-09-21T03:15:56.151807+00:00",
+                "lastSeenAt": "2026-09-21T03:15:56.151807+00:00",
+                "revisionEvents": []
+              }
+            }
+          ],
+          "aliasIds": []
+        },
+        {
+          "id": "hf:leesuyun/DiVE",
+          "title": "Learning Decomposed Visibility for Efficient Active Exploration of Cluttered Scenes",
+          "zhTitle": "DiVE：学习何时换视角、何时推动物体",
+          "authors": [
+            "Suyun Lee",
+            "Minsoo Choi",
+            "Jihwan Gong",
+            "Unghui Nam",
+            "Minji Bae",
+            "Byonghyo Shim"
+          ],
+          "category": "embodied",
+          "tags": [
+            "learning_control",
+            "主动感知",
+            "遮挡"
+          ],
+          "contentTypes": [
+            "report"
+          ],
+          "type": "公开技术报告与模型",
+          "publishedAt": "2026-09-21T05:00:40.000Z",
+          "sourceUpdatedAt": "2026-09-21T05:23:30.000Z",
+          "version": "403ceffff85822b742fb4a03144149ae2a83c35e",
+          "canonicalUrl": "https://huggingface.co/leesuyun/DiVE",
+          "links": [
+            {
+              "label": "技术报告 / 模型",
+              "url": "https://huggingface.co/leesuyun/DiVE"
+            },
+            {
+              "label": "项目与实验",
+              "url": "https://lee-su-yun.github.io/DiVE/"
+            },
+            {
+              "label": "代码进展",
+              "url": "https://github.com/lee-su-yun/DiVE"
+            }
+          ],
+          "status": "verified",
+          "reviewStatus": "primary_report_read",
+          "checkedAt": "2026-09-21T09:22:59.063374+00:00",
+          "dateNote": "2026-09-21为HF权重仓库创建日期；项目自称CoRL 2026，论文发表日未确认。",
+          "dateEvidence": {
+            "url": "https://huggingface.co/leesuyun/DiVE",
+            "location": "HF公开API createdAt / lastModified",
+            "createdAt": "2026-09-21T05:00:40.000Z",
+            "lastModified": "2026-09-21T05:23:30.000Z"
+          },
+          "popularity": {
+            "score": null,
+            "status": "unmeasured",
+            "metrics": {
+              "githubStars": null,
+              "hfUpvotes": null
+            },
+            "evidence": [],
+            "checkedAt": "2026-09-21T09:22:59.063374+00:00",
+            "basis": "没有可归属的论文投票或专属仓库stars；HF模型likes未替代论文投票。"
+          },
+          "editorialPriority": 92,
+          "summary": "把遮挡分解为可通过观察和可通过推动揭示的两类，减少逐动作前瞻的规划开销；目前依据官方项目报告与开放权重，全文尚未发布。",
+          "background": "统一占据或不确定性地图指出哪里未知，却未说明换视角是否有用。物体完全挡住后方区域时，仅改变相机视角可能一直无收益；允许物理交互的方法又常依赖昂贵候选模拟或人工平衡阈值。",
+          "innovation": "共享骨干预测view-resolvable与push-resolvable两张递归可见性图，将“状态频率”和“推动后的变化”换算到同一预期可见性变化尺度，先选观察/推动，再一次前向排名具体动作。它学习的是动作对可见性的作用，不是让网络凭空恢复从未看到的真实物体。",
+          "experiments": "官方项目以Isaac Sim中UR5、货架与YCB物体对比CNABU、View-Only和随机选择，训练低/高遮挡并留出极端遮挡。作者报极端遮挡IoU提升11.3%，页面未明确该数是相对增幅还是百分点，本文不重解释；100个episode的计算比较报规划19.8倍、总步骤13.2倍加速。Piper真机10个货架场景、20步预算，初始遮挡物体发现率79.2±23.3%，View-Only为54.2±35.4%，是跨场景均值及离散度，不是成功率置信区间。",
+          "conclusion": "公开结果支持在测试货架上联合学习观察与交互选择；仅换视角的性能平台可通过适当推动改善。但页面中grasp-resolvable扩展仅验证表示可行性，不能当成已完成抓取系统。",
+          "evaluation": "编辑评价：可复用的价值在于统一两种动作的收益接口，并有固定重建器、只改选择策略的比较。论文、完整代码和训练数据仍标coming soon，无法核查全部超参、预算及计算硬件；当前属于作者项目报告，不是独立复现。真机只有10场景，推物碰撞、物品损伤及失败细分尚不完整。",
+          "futureDirections": "研究假设：将两张图作为经典下一最佳视角/推物规划器的候选优先级，再加碰撞和易损物体约束。固定状态估计器、动作库、相同墙钟预算比较启发式、CNABU与学习收益；报告新增发现、无效推物、误识别及损伤风险，并检验相机/物体变化下收益是否校准。",
+          "learningClassical": {
+            "mode": "planner",
+            "baseline": "只移动相机的View-Only主动感知，以及靠候选动作前瞻或阈值平衡观察/推动的规划。CNABU本身含学习组件，不能统称纯经典理论。",
+            "cornerCase": "某些区域对所有候选观察视角均遮挡，视角动作受物理可见性限制；推物改变场景可解除遮挡。跨动作收益计算另有工程开销。",
+            "learningRole": "预测观察/推动各自可揭示区域并统一收益单位，替代逐候选后验预测和人工跨模式阈值。",
+            "evidence": "作者真机10场景20动作下发现率79.2±23.3%对54.2±35.4%；仿真固定重建器比较选择方法。全文未开放，同硬件/安全预算仍待查。",
+            "limitations": "增加接触带来新的碰撞、推坏场景与感知误分类；数据、完整代码及硬件成本未齐，未证明泛化安全。物理不可见性靠行动改变条件，不是被学习违反。",
+            "nextTest": "同动作集和墙钟预算对比经典信息增益、候选模拟与学习收益，跨遮挡/材质/相机评测发现率、误判、无效推物和安全约束违背。"
+          },
+          "evidence": "官方项目全文、固定HF模型卡与公开文件索引已读；论文和完整代码/数据尚未公开，不声称已读论文或复现。",
+          "evidenceDetails": [
+            {
+              "url": "https://lee-su-yun.github.io/DiVE/",
+              "location": "Method / Mode and Action Selection",
+              "supports": "双可见性图及统一收益尺度；候选排名",
+              "checkedAt": "2026-09-21T09:22:59.063374+00:00"
+            },
+            {
+              "url": "https://lee-su-yun.github.io/DiVE/",
+              "location": "Results / Where the gain comes from",
+              "supports": "极端遮挡11.3%原始表述；100episode计算比较19.8×/13.2×及固定重建器对照",
+              "checkedAt": "2026-09-21T09:22:59.063374+00:00"
+            },
+            {
+              "url": "https://lee-su-yun.github.io/DiVE/",
+              "location": "Real-world experiments / table",
+              "supports": "10场景20动作；79.2±23.3与54.2±35.4的遮挡物体发现率",
+              "checkedAt": "2026-09-21T09:22:59.063374+00:00"
+            },
+            {
+              "url": "https://huggingface.co/leesuyun/DiVE/blob/403ceffff85822b742fb4a03144149ae2a83c35e/README.md",
+              "location": "Checkpoints / validation / availability",
+              "supports": "模型开放，选择器排名准确率并非闭环机器人成功率；全文与数据待开放",
+              "checkedAt": "2026-09-21T09:22:59.063374+00:00"
+            }
+          ],
+          "discoveredAt": "2026-09-21T09:27:30.037288+00:00",
+          "updatedAt": "2026-09-21T09:27:30.037288+00:00",
+          "lastSeenAt": "2026-09-21T09:27:30.037288+00:00"
+        },
+        {
+          "id": "hf:xunden/tartanimu-xunden-iros2026",
+          "title": "TartanIMU Challenge 2026 — Xunden unified model",
+          "zhTitle": "Xunden IMU 报告：统一惯性模型与可核对逐序列成绩",
+          "authors": [
+            "Xunden team"
+          ],
+          "category": "embodied",
+          "tags": [],
+          "contentTypes": [
+            "report"
+          ],
+          "type": "公开技术报告与模型",
+          "publishedAt": "2026-09-19T13:38:19.000Z",
+          "sourceUpdatedAt": "2026-09-21T03:19:47.000Z",
+          "version": "ffb9dfb40605d8a9215b1f444426f6a5f6e531c3",
+          "canonicalUrl": "https://huggingface.co/xunden/tartanimu-xunden-iros2026",
+          "links": [
+            {
+              "label": "技术报告 / 模型",
+              "url": "https://huggingface.co/xunden/tartanimu-xunden-iros2026"
+            },
+            {
+              "label": "逐平台及序列成绩",
+              "url": "https://huggingface.co/xunden/tartanimu-xunden-iros2026/blob/ffb9dfb40605d8a9215b1f444426f6a5f6e531c3/eval/scoring_service.json"
+            }
+          ],
+          "status": "verified",
+          "reviewStatus": "primary_report_read",
+          "checkedAt": "2026-09-21T09:22:59.063374+00:00",
+          "dateNote": "日期为公开仓库创建时间，不等同论文发表或当前完整报告首次上传日。",
+          "dateEvidence": {
+            "url": "https://huggingface.co/xunden/tartanimu-xunden-iros2026",
+            "location": "HF公开API createdAt / lastModified",
+            "createdAt": "2026-09-19T13:38:19.000Z",
+            "lastModified": "2026-09-21T03:19:47.000Z"
+          },
+          "popularity": {
+            "score": null,
+            "status": "unmeasured",
+            "metrics": {
+              "githubStars": null,
+              "hfUpvotes": null
+            },
+            "evidence": [],
+            "checkedAt": "2026-09-21T09:22:59.063374+00:00",
+            "basis": "没有可归属的论文投票或专属仓库stars；HF模型likes未替代论文投票。"
+          },
+          "editorialPriority": 75,
+          "summary": "遗留线索补齐89条测试轨迹结果：以统一网络估计跨平台速度，公开逐序列分数与确定性复现说明，同时保留明显的飞行平台短板。",
+          "background": "跨汽车、手持、四足和飞行器的惯性速度估计承受不同运动频谱与传感器误差，单一平台专用网络不易直接迁移。该挑战报告检验一套共享权重能覆盖多少已有平台分布。",
+          "innovation": "使用膨胀ResNet窗口编码、双向LSTM和注意力，输入结合原始IMU、差分、动态加速度、重力及频谱信息。单checkpoint内部有softmax加权专家，不能把“没有切换模型”误读为“没有专家或路由”。发布自含归一化与架构配置的权重，并开放逐序列评分文件。",
+          "experiments": "作者发布的官方评分服务导出覆盖89条测试轨迹：综合分0.25535、ATE20为0.70062米、AVE为0.20281米/秒，越低越好；Kaggle公开榜0.33229是不同评估范围。90.4M参数模型以train+val共475条轨迹训练200轮，选择196轮；同一权重的重叠上下文和三对齐位置平均为0.25535，单次推理0.25852，不能称无测试时平均。飞行器在综合分中占60.6%的误差贡献。",
+          "conclusion": "该发布提供了可对照的统一多平台基线与失败数据，尚不能说明接近最好方法或对未见平台成立。版本差异主要补齐逐序列文件和bit-exact复现说明，成绩并非本晚新跑出的实验。",
+          "evaluation": "编辑评价：明确披露共享网络内部专家和推理平均，优于只给排行榜数值。我们核对了发布JSON/CSV与卡片一致，未运行大模型，也未独立向评分服务提交。双向上下文并非严格因果，开发过程中使用评分服务反馈，测试选择影响尚需审计；没有同协议经典积分基线，不把它列为已证实替代经典估计的突破。",
+          "futureDirections": "研究假设：将网络速度作为带校准协方差的伪观测接入经典滤波器，而非直接替换状态估计。固定训练数据与在线延迟，比较因果模型、双向离线模型、单次及多视角平均；按飞行振动、传感器变化与初始速度分层报告漂移、尾部错误和失效检测。",
+          "evidence": "完整固定版本模型卡、发布评分JSON和逐序列CSV已读；原pending的结果披露缺口已解除，仍为作者报告而非独立复现。",
+          "evidenceDetails": [
+            {
+              "url": "https://huggingface.co/xunden/tartanimu-xunden-iros2026/blob/ffb9dfb40605d8a9215b1f444426f6a5f6e531c3/README.md",
+              "location": "Model / Reproducing / Compliance / Negative results",
+              "supports": "90.4M、475轨迹、200轮、196轮选择；内部专家与三偏移平均；无实时/跨域保证",
+              "checkedAt": "2026-09-21T09:22:59.063374+00:00"
+            },
+            {
+              "url": "https://huggingface.co/xunden/tartanimu-xunden-iros2026/blob/ffb9dfb40605d8a9215b1f444426f6a5f6e531c3/eval/scoring_service.json",
+              "location": "overall / platform / sequence",
+              "supports": "89序列、0.25535、0.70062m、0.20281m/s及飞行误差份额60.6%",
+              "checkedAt": "2026-09-21T09:22:59.063374+00:00"
+            }
+          ],
+          "leadDiscoveredAt": "2026-09-20T02:52:36.723960+00:00",
+          "discoveredAt": "2026-09-21T09:27:30.037288+00:00",
+          "updatedAt": "2026-09-21T09:27:30.037288+00:00",
+          "lastSeenAt": "2026-09-21T09:27:30.037288+00:00"
+        },
+        {
+          "id": "hf:xiaojx/2026-tartaimu-challenge",
+          "title": "Learning Cross-Platform Velocity Estimation through Structured Masked IMU Reconstruction",
+          "zhTitle": "结构化 IMU 掩码预训练：用运动先验估计跨平台速度",
+          "authors": [
+            "Jinxi Xiao"
+          ],
+          "category": "embodied",
+          "tags": [
+            "learning_control",
+            "惯性估计",
+            "自监督"
+          ],
+          "contentTypes": [
+            "report"
+          ],
+          "type": "公开技术报告与模型",
+          "publishedAt": "2026-09-17T04:48:16.000Z",
+          "sourceUpdatedAt": "2026-09-21T02:59:10.000Z",
+          "version": "93bc45018579be896cc2b46df2cd4ffa147af4a3",
+          "canonicalUrl": "https://huggingface.co/xiaojx/2026-tartaimu-challenge",
+          "links": [
+            {
+              "label": "技术报告 / 模型",
+              "url": "https://huggingface.co/xiaojx/2026-tartaimu-challenge"
+            },
+            {
+              "label": "完整技术报告",
+              "url": "https://huggingface.co/xiaojx/2026-tartaimu-challenge/blob/93bc45018579be896cc2b46df2cd4ffa147af4a3/report/IMU_Challenge_Report_Template/main.tex"
+            }
+          ],
+          "status": "verified",
+          "reviewStatus": "primary_report_read",
+          "checkedAt": "2026-09-21T09:22:59.063374+00:00",
+          "dateNote": "日期为公开仓库创建时间，不等同论文发表或当前完整报告首次上传日。",
+          "dateEvidence": {
+            "url": "https://huggingface.co/xiaojx/2026-tartaimu-challenge",
+            "location": "HF公开API createdAt / lastModified",
+            "createdAt": "2026-09-17T04:48:16.000Z",
+            "lastModified": "2026-09-21T02:59:10.000Z"
+          },
+          "popularity": {
+            "score": null,
+            "status": "unmeasured",
+            "metrics": {
+              "githubStars": null,
+              "hfUpvotes": null
+            },
+            "evidence": [],
+            "checkedAt": "2026-09-21T09:22:59.063374+00:00",
+            "basis": "没有可归属的论文投票或专属仓库stars；HF模型likes未替代论文投票。"
+          },
+          "editorialPriority": 84,
+          "summary": "将带连续缺口的IMU重建预训练用于跨平台速度估计；报告认真区分了学习运动先验与惯性观测本身不能确定初始速度的边界。",
+          "background": "即使姿态和重力已知，积分加速度只给速度变化，绝对速度仍需初值。学习方法可利用训练分布的运动规律补充先验，却不能让一般不可观测问题变得唯一可解；挑战进一步要求一套模型处理汽车、人持、四足和无人机。",
+          "innovation": "在10秒IMU上下文中以连续段与独立patch混合掩码做重建，再将局部/全局特征送入共享基底加残差专家的速度头。平台分类与几何辅助损失只参与训练；推理不使用平台标签、不做测试时适配。残差是网络回归头的残差，不能等同物理模型残差补偿。",
+          "experiments": "完整技术报告89序列综合分为0.26486，ATE20=0.68557米、AVE=0.21683米/秒，RTE@5秒=0.97086米；RTE不进入排名。相同下游训练协议中，无辅助的随机初始化为0.42376，掩码预训练0.26761，代价是额外预训练；加入微调辅助后0.26486。随机掩码替代混合连续掩码为0.28390，普通MLP替代残差MoE为0.28080。全部是单种子对照，未测联合消融或显著性。",
+          "conclusion": "结果支持在已经覆盖的多平台分布上使用结构化自监督初始化。10秒双向上下文是离线估计条件，不能写成实时机器人速度观测器；没有未见平台迁移、独立LIMU-BERT同协议比较或经典积分同条件优越性证据。",
+          "evaluation": "编辑评价：方法与负结果披露较完整，尤其说明公开榜参与跨run选型，因此全量测试成绩也不能当完全未触碰评估。飞行器AVE为0.63214米/秒，显著高于其他平台；尚无校准不确定性或故障检测。README的公开榜0.32898与完整89序列0.26486属于不同范围，不能混算提升。",
+          "futureDirections": "研究假设：先把双向编码器蒸馏为因果版本，再把速度和校准不确定性接入EKF/因子图。固定传感器输入和延迟，比较已知初速度的积分、传统滤波、纯学习以及融合版本；用未见传感器、恒速歧义和振动段验证先验何时救回、何时误导，并记录在线重建适配是否引起速度漂移。",
+          "learningClassical": {
+            "mode": "model",
+            "baseline": "经典惯性积分需要初始速度；噪声和偏置会累积，单靠有限IMU历史不能一般性唯一恢复绝对速度。",
+            "cornerCase": "初速度不可观测是信息条件限制，不是训练即可消除的理论问题。跨运动平台与振动造成额外分布偏移。",
+            "learningRole": "用自监督时序表示与监督速度头学习分布先验，补充输入不能唯一决定的量；未实际接入物理滤波闭环。",
+            "evidence": "同下游协议随机初始化0.42376对预训练0.26761；完整89序列最终0.26486。没有经典积分/滤波同条件对照，所以对经典方法的净提升待验证。",
+            "limitations": "10秒双向上下文非严格因果，额外预训练算力、单种子与测试榜选型；飞行误差大，无不确定性、失败检测或稳定性保证。",
+            "nextTest": "保留可观测性边界，比较同初值/同传感器条件下积分、因果网络及滤波融合；刻意构造相同加速度不同初速和未见平台，评估错误置信与漂移。"
+          },
+          "evidence": "完整原始技术报告LaTeX、研究说明及模型卡已读；未执行代码或独立评分，报告中全量测试与公开榜口径分开。",
+          "evidenceDetails": [
+            {
+              "url": "https://huggingface.co/xiaojx/2026-tartaimu-challenge/blob/93bc45018579be896cc2b46df2cd4ffa147af4a3/report/IMU_Challenge_Report_Template/main.tex",
+              "location": "Introduction / Method / Data processing",
+              "supports": "绝对速度不可观测说明、10秒双向上下文、共享残差MoE、辅助监督",
+              "checkedAt": "2026-09-21T09:22:59.063374+00:00"
+            },
+            {
+              "url": "https://huggingface.co/xiaojx/2026-tartaimu-challenge/blob/93bc45018579be896cc2b46df2cd4ffa147af4a3/report/IMU_Challenge_Report_Template/main.tex",
+              "location": "Official Challenge Performance / Ablation Studies / Appendix",
+              "supports": "89序列0.26486及三个误差；0.42376对0.26761、0.28390/0.28080消融；单种子",
+              "checkedAt": "2026-09-21T09:22:59.063374+00:00"
+            },
+            {
+              "url": "https://huggingface.co/xiaojx/2026-tartaimu-challenge/blob/93bc45018579be896cc2b46df2cd4ffa147af4a3/report/IMU_Challenge_Report_Template/main.tex",
+              "location": "Training Data / Generalization / Failure-mode analysis",
+              "supports": "公开榜选run、未测未见平台、飞行AVE0.63214、无校准不确定性",
+              "checkedAt": "2026-09-21T09:22:59.063374+00:00"
+            }
+          ],
+          "discoveredAt": "2026-09-21T09:27:30.037288+00:00",
+          "updatedAt": "2026-09-21T09:27:30.037288+00:00",
+          "lastSeenAt": "2026-09-21T09:27:30.037288+00:00"
+        },
+        {
+          "id": "arxiv:2609.18620",
+          "title": "DeformSmith: Physics Harness-Guided Hierarchical Generation of Deformable Assets for Robot Manipulation",
+          "zhTitle": "DeformSmith：以物理测试和机器人交互校验柔性资产",
+          "category": "systems",
+          "tags": [
+            "机器人系统"
+          ],
+          "type": "arXiv预印本",
+          "contentTypes": [
+            "paper"
+          ],
+          "authors": [
+            "Can Li",
+            "Jie Gu",
+            "Zishun Deng",
+            "Jingmin Chen",
+            "Lei Sun"
+          ],
+          "canonicalUrl": "https://arxiv.org/abs/2609.18620",
+          "publishedAt": "2026-09-16T13:10:34Z",
+          "sourceUpdatedAt": "2026-09-16T13:10:34Z",
+          "version": "v1",
+          "reviewedVersion": "v1官方摘要及已缓存正文范围核对",
+          "checkedAt": "2026-09-21T09:24:37.180021+00:00",
+          "editorialPriority": 86,
+          "summary": "将柔性资产生成拆成几何、物理初始化、材料与机器人交互四层，通过受约束的仿真反馈迭代；当前证明物理观感与仿真可用性，不等同真实材料辨识。",
+          "innovation": "L0建立对齐几何、粒子和Gaussian外观；L1固定质量、体积与接触条件；L2在均匀各向同性neo-Hookean假设下搜索材料参数；L3用抓取运输反馈调整动作或材料。LLM提出结构化修订，物理探针和规则负责验收；改材料必须重过独立测试，失败交互也留作诊断。",
+          "links": [
+            {
+              "label": "论文",
+              "url": "https://arxiv.org/abs/2609.18620"
+            },
+            {
+              "label": "最新版本原文",
+              "url": "https://arxiv.org/html/2609.18620v1"
+            },
+            {
+              "label": "作者项目/代码",
+              "url": "https://can-lee.github.io/deformsmith-web/"
+            }
+          ],
+          "evidence": "已读v1全文、方法、全部主结果与消融；本次为热度变化触发的旧简讯全文升级，不是论文实质更新。",
+          "evidenceDetails": [
+            {
+              "url": "https://arxiv.org/html/2609.18620v1",
+              "location": "§III-A–C / §IV",
+              "supports": "四层构建、MPM、neo-Hookean假设、接触与修改权限",
+              "checkedAt": "2026-09-21T09:24:37.180021+00:00"
+            },
+            {
+              "url": "https://arxiv.org/html/2609.18620v1",
+              "location": "§V-A–B / Tables I–II",
+              "supports": "39案例、40名盲评参与者、5秒视频；68/73/75%偏好胜率排除平局",
+              "checkedAt": "2026-09-21T09:24:37.180021+00:00"
+            },
+            {
+              "url": "https://arxiv.org/html/2609.18620v1",
+              "location": "§V-C / Table III",
+              "supports": "40→73、17→7、14次仿真；6×5交互试验、40→67及27→57，统计分母不同",
+              "checkedAt": "2026-09-21T09:24:37.180021+00:00"
+            },
+            {
+              "url": "https://arxiv.org/html/2609.18620v1",
+              "location": "§V-D / VI",
+              "supports": "真实材料辨识仅为潜在应用；均匀材料和接触局限",
+              "checkedAt": "2026-09-21T09:24:37.180021+00:00"
+            }
+          ],
+          "status": "verified",
+          "reviewStatus": "full_source_read",
+          "popularity": {
+            "score": null,
+            "status": "unmeasured",
+            "metrics": {
+              "githubStars": null,
+              "hfUpvotes": null
+            },
+            "basis": "仅为已核实公开关注信号；未知不当零，累计数不代表当日新增或研究质量。",
+            "evidence": []
+          },
+          "dateEvidence": "保留官方API原始提交与最新版本更新时间；本轮首次发现，版本号本身不证明实质变化。",
+          "backfill": false,
+          "changeType": "new",
+          "discoveryDateNote": "本轮扫描开始时间，非逐论文访问时刻。",
+          "discoveredAt": "2026-09-17T02:39:11.180Z",
+          "updatedAt": "2026-09-21T09:27:30.037288+00:00",
+          "lastSeenAt": "2026-09-21T09:27:30.037288+00:00",
+          "reviewedAt": "2026-09-21T09:24:37.180021+00:00",
+          "substantiveUpdate": false,
+          "background": "文本或单图能提示外观，但不能唯一决定质量、弹性、阻尼和接触参数。看起来合理的三维物体仍可能在抓取或落地时崩坏，因此机器人数据生成需要同时检查外观与互动响应。",
+          "experiments": "共39案例，包括30文本、9图像输入。40名参与者盲评相同5秒落地交互，物理合理性相对PhysGen3D/PhysGM/PhysX-Omni的胜率为68%/73%/75%，平局排除，指标是偏好。材料反馈使目标满足40%→73%、硬失败17%→7%，但增加平均14次构建仿真，不能归因为纯算法等算力收益。机器人反馈消融为6资产×5留出条件：任务40%→67%、联合任务与材料27%→57%；材料通过率按资产统计，另两项按试验统计。",
+          "conclusion": "分层构建与物理反馈在所测生成资产中提高了可感知质量和仿真互动可用性。真实机器人视频辅助材料参数估计仍是潜在应用，文中未证明完成准确的真实材料恢复或sim-to-real策略提升。",
+          "evaluation": "编辑评价：把修改权限、物理验收和失败日志纳入生成过程是可复用贡献。但观感评分不是材料参数真值，LLM评委也不是物理测量。模型只涵盖均匀体积柔性固体，接触近似，流体/颗粒材料不在范围；材料与动作同时可修订，需要防止为了任务成功将物体“改容易”。",
+          "futureDirections": "研究假设：以固定真实物体的RGB-D/力觉轨迹约束参数识别，禁止下游任务任意改材料，再用这些资产训练接触策略。用未参与参数拟合的加载/摩擦条件验证形变和力误差；固定仿真调用预算比较规则搜索与LLM反馈，最终以真机迁移而非视频偏好判断价值。",
+          "briefHistory": [
+            {
+              "promotedAt": "2026-09-21T09:27:30.037288+00:00",
+              "previous": {
+                "id": "arxiv:2609.18620",
+                "title": "DeformSmith: Physics Harness-Guided Hierarchical Generation of Deformable Assets for Robot Manipulation",
+                "zhTitle": "DeformSmith：机器人交互反馈驱动可变形资产生成",
+                "category": "systems",
+                "tags": [
+                  "机器人系统"
+                ],
+                "type": "arXiv预印本",
+                "contentTypes": [
+                  "paper"
+                ],
+                "authors": [
+                  "Can Li",
+                  "Jie Gu",
+                  "Zishun Deng",
+                  "Jingmin Chen",
+                  "Lei Sun"
+                ],
+                "canonicalUrl": "https://arxiv.org/abs/2609.18620",
+                "publishedAt": "2026-09-16T13:10:34Z",
+                "sourceUpdatedAt": "2026-09-16T13:10:34Z",
+                "version": "v1",
+                "reviewedVersion": "v1官方摘要及已缓存正文范围核对",
+                "checkedAt": "2026-09-17T02:15:58.476212+00:00",
+                "editorialPriority": 86,
+                "summary": "层级智能体逐步构造几何、物理与材料模型，在共享物理测试框架中用机器人操作反馈修正资产，形成可重放交互数据。",
+                "innovation": "层级智能体逐步构造几何、物理与材料模型，在共享物理测试框架中用机器人操作反馈修正资产，形成可重放交互数据。",
+                "links": [
+                  {
+                    "label": "论文",
+                    "url": "https://arxiv.org/abs/2609.18620"
+                  },
+                  {
+                    "label": "最新版本原文",
+                    "url": "https://arxiv.org/html/2609.18620v1"
+                  },
+                  {
+                    "label": "作者项目/代码",
+                    "url": "https://can-lee.github.io/deformsmith-web/"
+                  }
+                ],
+                "evidence": "元数据与摘要来自根代理本轮统一arXiv API；本分支仅读缓存及已到达原文，不将摘要简讯标成完整分析。",
+                "evidenceDetails": [
+                  {
+                    "url": "https://arxiv.org/abs/2609.18620",
+                    "location": "官方摘要；原始published及最新updated元数据",
+                    "supports": "层级智能体逐步构造几何、物理与材料模型，在共享物理测试框架中用机器人操作反馈修正资产，形成可重放交互数据。"
+                  }
+                ],
+                "status": "brief",
+                "reviewStatus": "abstract_verified",
+                "popularity": {
+                  "score": null,
+                  "status": "unmeasured",
+                  "metrics": {
+                    "githubStars": null,
+                    "hfUpvotes": null
+                  },
+                  "basis": "仅为已核实公开关注信号；未知不当零，累计数不代表当日新增或研究质量。",
+                  "evidence": []
+                },
+                "dateEvidence": "保留官方API原始提交与最新版本更新时间；本轮首次发现，版本号本身不证明实质变化。",
+                "backfill": false,
+                "changeType": "new",
+                "discoveryDateNote": "本轮扫描开始时间，非逐论文访问时刻。",
+                "discoveredAt": "2026-09-17T02:39:11.180Z",
+                "updatedAt": "2026-09-17T02:39:11.180Z",
+                "lastSeenAt": "2026-09-17T02:39:11.180Z",
+                "revisionEvents": []
+              }
+            }
+          ],
+          "aliasIds": []
+        },
+        {
+          "id": "arxiv:2609.20669",
+          "title": "Learning Foresight without Explicit Trajectories for 3D Diffusion Policies",
+          "zhTitle": "Movement Trend Guidance：以未来监督塑造隐变量，不输出硬轨迹",
+          "category": "embodied",
+          "authors": [
+            "Zhongbo Zhang",
+            "Zaibin Zhang",
+            "Yifan Wang",
+            "Changbo Yan",
+            "Lijun Wang",
+            "Huchuan Lu"
+          ],
+          "contentTypes": [
+            "paper"
+          ],
+          "type": "研究论文",
+          "publishedAt": "2026-09-17T16:44:13Z",
+          "sourceUpdatedAt": "2026-09-17T16:44:13Z",
+          "version": "v1",
+          "canonicalUrl": "https://arxiv.org/abs/2609.20669",
+          "links": [
+            {
+              "label": "论文原文",
+              "url": "https://arxiv.org/abs/2609.20669"
+            },
+            {
+              "label": "阅读全文",
+              "url": "https://arxiv.org/html/2609.20669v1"
+            }
+          ],
+          "tags": [
+            "cs.RO",
+            "cs.CV"
+          ],
+          "summary": "用训练时的稀疏未来夹爪状态学习运动趋势隐变量，再温和调制3D扩散策略；推理只看过去和当前观测，不读取未来真值。",
+          "innovation": "由三帧点云和机器人状态编码256维趋势，以训练时四个未来夹爪位置/状态提供辅助监督。趋势进入全局条件，额外门控FiLM只放在UNet瓶颈；解码未来点在推理时丢弃，策略仍滚动生成和执行稠密动作。这是辅助表征监督，不是先规划轨迹再跟踪。",
+          "evidence": "已读v1完整方法、实验、消融及失败分析；本轮HF投票变化触发全文升级，无新版本事件。",
+          "evidenceDetails": [
+            {
+              "url": "https://arxiv.org/html/2609.20669v1",
+              "location": "§III / Eqs.3,15–18",
+              "supports": "3帧、256维、未来夹爪训练监督；推理不用未来点，门控只在瓶颈",
+              "checkedAt": "2026-09-21T09:24:37.180021+00:00"
+            },
+            {
+              "url": "https://arxiv.org/html/2609.20669v1",
+              "location": "§IV-A–D / Tables I,II,IV",
+              "supports": "50任务混合训练56.1→62.8；LIBERO6000评估及rollout种子标准差；真机49→72；4090延迟与3.52%参数",
+              "checkedAt": "2026-09-21T09:24:37.180021+00:00"
+            },
+            {
+              "url": "https://arxiv.org/html/2609.20669v1",
+              "location": "§V-B / Table V / §IV-C2 / §IV-E",
+              "supports": "等参数无未来监督44.87，完整71.93；DexArt最好5检查点；遮挡失败",
+              "checkedAt": "2026-09-21T09:24:37.180021+00:00"
+            }
+          ],
+          "dateEvidence": {
+            "url": "https://arxiv.org/abs/2609.20669",
+            "location": "arXiv首次提交时间；与本轮发现/修订日期分开"
+          },
+          "checkedAt": "2026-09-21T09:24:37.180021+00:00",
+          "reviewStatus": "full_source_read",
+          "status": "verified",
+          "editorialPriority": 0,
+          "editorialPriorityBasis": "缺少可比热度时按直接机器人关联、证据完整性与方法可复用性补充排序；非公开互动量。",
+          "popularity": {
+            "status": "unmeasured",
+            "score": null,
+            "metrics": {
+              "githubStars": null,
+              "hfUpvotes": null
+            },
+            "evidence": [],
+            "checkedAt": "2026-09-18T09:32:32.367453+00:00",
+            "basis": "仅为已核实公开关注信号；未知不当零，累计数不代表当日新增或研究质量。"
+          },
+          "discoveredAt": "2026-09-18T09:39:21.834Z",
+          "updatedAt": "2026-09-21T09:27:30.037288+00:00",
+          "lastSeenAt": "2026-09-21T09:27:30.037288+00:00",
+          "reviewedAt": "2026-09-21T09:24:37.180021+00:00",
+          "substantiveUpdate": false,
+          "background": "3D扩散策略善于从当前几何生成局部动作，但多阶段任务的后续交互意图往往只能隐式学习。显式未来轨迹又容易把策略束缚在不准的中间目标上。",
+          "experiments": "RoboTwin2.0混合训练50任务、每任务50示范和100次评估，DP3与新法同用64维任务嵌入，成功率56.1%→62.8%。LIBERO-40固定1000轮检查点、3组rollout种子、每任务每种子50次，共6000次：37.08±1.21%→71.93±0.49%，±为三个评估种子间样本标准差，不是独立训练种子。五项SO101真机任务各50示范、20次评估，均值49%→72%。4090、batch1、10DDIM步下平均推理50.28→50.90毫秒，参数增加3.52%。",
+          "conclusion": "趋势辅助在所测学习策略和任务中有效：LIBERO等参数但无未来监督为44.87%，完整71.93%，支持收益不只来自新增容量。DexArt使用最好五个检查点平均，与LIBERO固定轮数不可直接横比。",
+          "evaluation": "编辑评价：未来监督和调制位置有相对清楚的消融，但不能由三个rollout种子的窄离散度推断跨训练种子稳定。真机每任务仅20次；机械臂遮挡物体时点云与趋势同时失真。与DP3的对照并非经典规划基线，因此本条不因采用滚动执行就自动归入“学习补足经典理论”。",
+          "futureDirections": "研究假设：用趋势隐变量给经典接触规划器提供候选优先级或短时目标分布，再由可行性和碰撞检查决定是否采用。先做多训练种子、同数据与延迟预算复测，加入遮挡、相机标定漂移及新物体；检查趋势不确定时退回无引导策略是否减少新增失败。",
+          "briefHistory": [
+            {
+              "promotedAt": "2026-09-21T09:27:30.037288+00:00",
+              "previous": {
+                "id": "arxiv:2609.20669",
+                "title": "Learning Foresight without Explicit Trajectories for 3D Diffusion Policies",
+                "zhTitle": "Movement Trend Guidance：隐式前瞻的3D扩散策略",
+                "category": "rl",
+                "authors": [
+                  "Zhongbo Zhang",
+                  "Zaibin Zhang",
+                  "Yifan Wang",
+                  "Changbo Yan",
+                  "Lijun Wang",
+                  "Huchuan Lu"
+                ],
+                "contentTypes": [
+                  "paper"
+                ],
+                "type": "研究论文",
+                "publishedAt": "2026-09-17T16:44:13Z",
+                "sourceUpdatedAt": "2026-09-17T16:44:13Z",
+                "version": "v1",
+                "canonicalUrl": "https://arxiv.org/abs/2609.20669",
+                "links": [
+                  {
+                    "label": "论文原文",
+                    "url": "https://arxiv.org/abs/2609.20669"
+                  },
+                  {
+                    "label": "阅读全文",
+                    "url": "https://arxiv.org/html/2609.20669v1"
+                  }
+                ],
+                "tags": [
+                  "cs.RO",
+                  "cs.CV"
+                ],
+                "summary": "训练时用稀疏未来夹爪状态监督紧凑趋势潜变量，部署仅以历史观测产生的潜变量调制动作生成。",
+                "innovation": "训练时用稀疏未来夹爪状态监督紧凑趋势潜变量，部署仅以历史观测产生的潜变量调制动作生成。",
+                "evidence": "已核验arXiv原始API的标题、摘要、首次提交与最新修订时间；简讯依据作者摘要，不视作独立复现。",
+                "evidenceDetails": [
+                  {
+                    "url": "https://arxiv.org/abs/2609.20669",
+                    "location": "Abstract；Submission history；arXiv API published/updated字段",
+                    "supports": "训练时用稀疏未来夹爪状态监督紧凑趋势潜变量，部署仅以历史观测产生的潜变量调制动作生成。",
+                    "checkedAt": "2026-09-18T09:32:32.367453+00:00"
+                  }
+                ],
+                "dateEvidence": {
+                  "url": "https://arxiv.org/abs/2609.20669",
+                  "location": "arXiv首次提交时间；与本轮发现/修订日期分开"
+                },
+                "checkedAt": "2026-09-18T09:32:32.367453+00:00",
+                "reviewStatus": "abstract_verified",
+                "status": "brief_verified",
+                "editorialPriority": 0,
+                "editorialPriorityBasis": "缺少可比热度时按直接机器人关联、证据完整性与方法可复用性补充排序；非公开互动量。",
+                "popularity": {
+                  "status": "unmeasured",
+                  "score": null,
+                  "metrics": {
+                    "githubStars": null,
+                    "hfUpvotes": null
+                  },
+                  "evidence": [],
+                  "checkedAt": "2026-09-18T09:32:32.367453+00:00",
+                  "basis": "仅为已核实公开关注信号；未知不当零，累计数不代表当日新增或研究质量。"
+                },
+                "discoveredAt": "2026-09-18T09:39:21.834Z",
+                "updatedAt": "2026-09-18T09:39:21.834Z",
+                "lastSeenAt": "2026-09-18T09:39:21.834Z",
+                "revisionEvents": []
+              }
+            }
+          ],
+          "aliasIds": []
+        }
+      ],
+      "briefsSnapshot": [],
+      "rankedIds": [
+        "arxiv:2609.18620",
+        "arxiv:2609.20669",
+        "hf:leesuyun/DiVE",
+        "arxiv:2609.18084",
+        "arxiv:2609.14868",
+        "hf:xiaojx/2026-tartaimu-challenge",
+        "hf:xunden/tartanimu-xunden-iros2026",
+        "arxiv:2607.08448"
+      ],
+      "featuredIds": [
+        "arxiv:2609.18620",
+        "arxiv:2609.20669",
+        "hf:leesuyun/DiVE",
+        "arxiv:2609.18084",
+        "arxiv:2609.14868",
+        "hf:xiaojx/2026-tartaimu-challenge",
+        "hf:xunden/tartanimu-xunden-iros2026",
+        "arxiv:2607.08448"
+      ],
+      "analysisNeededIds": [],
+      "briefIds": [],
+      "candidateCount": 8,
+      "rankingNote": "3 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 热度采用 20×ln(1+HF论文投票)+10×ln(1+可归属仓库累计stars)。累计数非当日新增；未取得项为null。9/21晚间HF已刷新，GitHub API触发限流后停止，既有stars保留各自历史观测时间。",
       "rankingVersion": 1
     }
   ],
-  "lastScanAt": "2026-09-21T03:15:56.151807+00:00",
+  "lastScanAt": "2026-09-21T09:27:30.037288+00:00",
   "briefs": [
     {
       "id": "arxiv:2608.30396",
@@ -231142,24 +233850,24 @@
         }
       ],
       "popularity": {
-        "score": 41.59,
+        "score": 43.94,
         "status": "verified",
         "metrics": {
           "githubStars": null,
-          "hfUpvotes": 7
+          "hfUpvotes": 8
         },
         "evidence": [
           {
             "url": "https://huggingface.co/papers/2609.13053",
-            "apiUrl": "https://huggingface.co/api/daily_papers?date=2026-09-15",
             "metric": "hf_paper_upvotes",
-            "value": 7,
-            "checkedAt": "2026-09-20T09:05:19.486154+00:00",
-            "scope": "公开论文累计投票；非本日新增"
+            "value": 8,
+            "checkedAt": "2026-09-21T09:05:20.276108+00:00",
+            "scope": "论文累计公开投票；不是今日新增",
+            "apiUrl": "https://huggingface.co/api/daily_papers?date=2026-09-15"
           }
         ],
-        "basis": "HF论文累计投票7；可归属GitHub stars未知。仅为已测来源代理排序，不是当日增量或全网排名。",
-        "checkedAt": "2026-09-20T09:05:19.486154+00:00",
+        "basis": "HF论文累计投票 8；每项观测时间见证据，非本日新增。",
+        "checkedAt": "2026-09-21T09:05:20.276108+00:00",
         "missingMetrics": [
           "github_stars"
         ]
@@ -237072,24 +239780,24 @@
         }
       ],
       "popularity": {
-        "score": 32.19,
+        "score": 43.94,
         "status": "verified",
         "metrics": {
           "githubStars": null,
-          "hfUpvotes": 4
+          "hfUpvotes": 8
         },
         "evidence": [
           {
             "url": "https://huggingface.co/papers/2609.06251",
-            "apiUrl": "https://huggingface.co/api/daily_papers?date=2026-09-14",
             "metric": "hf_paper_upvotes",
-            "value": 4,
-            "checkedAt": "2026-09-20T09:05:23.277201+00:00",
-            "scope": "公开论文累计投票；非本日新增"
+            "value": 8,
+            "checkedAt": "2026-09-21T09:05:29.055832+00:00",
+            "scope": "论文累计公开投票；不是今日新增",
+            "apiUrl": "https://huggingface.co/api/daily_papers?date=2026-09-14"
           }
         ],
-        "basis": "HF论文累计投票4；可归属GitHub stars未知。仅为已测来源代理排序，不是当日增量或全网排名。",
-        "checkedAt": "2026-09-20T09:05:23.277201+00:00",
+        "basis": "HF论文累计投票 8；每项观测时间见证据，非本日新增。",
+        "checkedAt": "2026-09-21T09:05:29.055832+00:00",
         "missingMetrics": [
           "github_stars"
         ]
@@ -252833,91 +255541,6 @@
       ],
       "reviewedAt": "2026-09-15T09:16:58.016375+00:00",
       "reviewedVersion": "v2",
-      "announcementDate": "2026-09-15",
-      "changeType": "backfill",
-      "discoveryNote": "本轮普通官方9/15公告首次发现；原始提交、最新版本与收录时间分别保留。",
-      "popularity": {
-        "score": null,
-        "status": "unmeasured",
-        "metrics": {
-          "githubStars": null,
-          "hfUpvotes": null
-        },
-        "basis": "热度由本轮唯一协调者统一观测并合并；尚缺指标为null。",
-        "evidence": [],
-        "checkedAt": "2026-09-15T09:16:58.016375+00:00"
-      },
-      "backfill": true,
-      "leadDiscoveredAt": "2026-09-15T09:16:58.016375+00:00",
-      "discoveredAt": "2026-09-15T09:35:25.032Z",
-      "updatedAt": "2026-09-15T09:35:25.032Z",
-      "lastSeenAt": "2026-09-15T09:35:25.032Z",
-      "revisionEvents": []
-    },
-    {
-      "id": "arxiv:2609.14868",
-      "title": "Primitive-Informed Sampling-Based MPC for Multi-Fingered Dexterous Manipulation",
-      "authors": [
-        "Küçüktabak, Emek Barış",
-        "Patel, Karankumar",
-        "Cui, Jinda",
-        "Yang, Zhaodong",
-        "Sasabuchi, Kazuhiro",
-        "Takamatsu, Jun"
-      ],
-      "publishedAt": "2026-09-14T00:36:17+00:00",
-      "sourceUpdatedAt": "2026-09-14T00:36:17+00:00",
-      "version": "v1",
-      "canonicalUrl": "https://arxiv.org/abs/2609.14868",
-      "sourceLinks": [],
-      "comments": null,
-      "priorPublicationContext": null,
-      "dateEvidence": {
-        "url": "https://arxiv.org/abs/2609.14868",
-        "location": "Submission history",
-        "history": "Submission history From: Emek Baris Kucuktabak [ view email ] [v1] Mon, 14 Sep 2026 00:36:17 UTC (8,446 KB)",
-        "versions": [
-          {
-            "version": "v1",
-            "date": "2026-09-14T00:36:17+00:00"
-          }
-        ]
-      },
-      "checkedAt": "2026-09-15T09:09:35.395039+00:00",
-      "category": "theory",
-      "zhTitle": "操作基元与关节残差共同引导灵巧手采样MPC",
-      "innovation": "用低维协同手指基元偏置采样，同时优化关节级残差，并在前向数字孪生中拒绝不满足任务约束的轨迹，以提高接触操作的有效采样率。",
-      "editorialPriority": 87,
-      "tags": [
-        "机器人理论与控制"
-      ],
-      "type": "arXiv预印本",
-      "contentTypes": [
-        "paper"
-      ],
-      "summary": "用低维协同手指基元偏置采样，同时优化关节级残差，并在前向数字孪生中拒绝不满足任务约束的轨迹，以提高接触操作的有效采样率。",
-      "status": "brief_verified",
-      "evidence": "普通官方摘要及提交历史已核对；简讯仅概述已披露创新，非全文评审",
-      "evidenceDetails": [
-        {
-          "url": "https://arxiv.org/abs/2609.14868",
-          "location": "Abstract",
-          "supports": "简讯创新点与机器人关联"
-        },
-        {
-          "url": "https://arxiv.org/abs/2609.14868",
-          "location": "Submission history",
-          "supports": "原始提交日期及最新版本日期"
-        }
-      ],
-      "links": [
-        {
-          "label": "论文原文",
-          "url": "https://arxiv.org/abs/2609.14868"
-        }
-      ],
-      "reviewedAt": "2026-09-15T09:16:58.016375+00:00",
-      "reviewedVersion": "v1",
       "announcementDate": "2026-09-15",
       "changeType": "backfill",
       "discoveryNote": "本轮普通官方9/15公告首次发现；原始提交、最新版本与收录时间分别保留。",
@@ -272408,78 +275031,6 @@
       "revisionEvents": []
     },
     {
-      "id": "arxiv:2609.18084",
-      "title": "Not All Layers Need Tuning: Diagnosing and Directing Adaptation in Vision-Language-Action Models",
-      "zhTitle": "VLA适配诊断：按区域需求分配微调容量",
-      "authors": [
-        "Shahram Najam Syed",
-        "Arthur Jakobsson",
-        "Prayuj Sachdev",
-        "Jeffrey Ichnowski"
-      ],
-      "category": "vla",
-      "tags": [
-        "vla"
-      ],
-      "type": "arXiv预印本",
-      "contentTypes": [
-        "paper"
-      ],
-      "publishedAt": "2026-09-16T03:44:51Z",
-      "sourceUpdatedAt": "2026-09-16T03:44:51Z",
-      "version": "v1",
-      "canonicalUrl": "https://arxiv.org/abs/2609.18084",
-      "source": "arXiv",
-      "summary": "先从少量无标签目标观察估计视觉、语言与动作区域的适配代价，再按诊断分配微调资源，避免均匀配置适配器。",
-      "innovation": "先从少量无标签目标观察估计视觉、语言与动作区域的适配代价，再按诊断分配微调资源，避免均匀配置适配器。",
-      "editorialPriority": 95,
-      "editorialPriorityBasis": "按机器人直接相关性、方法可复用性、关键问题与验证价值的编辑排序；不是公开热度。",
-      "status": "brief_verified",
-      "reviewStatus": "innovation_verified",
-      "changeType": "new",
-      "backfill": false,
-      "checkedAt": "2026-09-17T02:13:23.743876+00:00",
-      "dateNote": "保留中央官方索引的原始提交和最新版本日期；本次首次收录，未将版本号视作已证实实质修订。",
-      "dateEvidence": {
-        "url": "https://arxiv.org/abs/2609.18084",
-        "location": "中央arXiv API published/updated和版本元数据",
-        "published": "2026-09-16T03:44:51Z",
-        "updated": "2026-09-16T03:44:51Z"
-      },
-      "links": [
-        {
-          "label": "论文原文",
-          "url": "https://arxiv.org/abs/2609.18084"
-        },
-        {
-          "label": "当前全文",
-          "url": "https://arxiv.org/html/2609.18084v1"
-        }
-      ],
-      "evidence": "已读本轮中央缓存的官方摘要，完整实验尚待核验。",
-      "evidenceDetails": [
-        {
-          "url": "https://arxiv.org/abs/2609.18084",
-          "location": "Abstract; published/updated metadata",
-          "supports": "研究身份、时间、范围及创新简讯"
-        }
-      ],
-      "popularity": {
-        "status": "unmeasured",
-        "score": null,
-        "metrics": {
-          "githubStars": null,
-          "hfUpvotes": null
-        },
-        "evidence": [],
-        "basis": "仅为已核实公开关注信号；未知不当零，累计数不代表当日新增或研究质量。"
-      },
-      "discoveredAt": "2026-09-17T02:39:11.180Z",
-      "updatedAt": "2026-09-17T02:39:11.180Z",
-      "lastSeenAt": "2026-09-17T02:39:11.180Z",
-      "revisionEvents": []
-    },
-    {
       "id": "arxiv:2609.17745",
       "title": "REVERSAL-BENCH: A Reversibility Axis and Reset Oracle for Measuring the Reset-Free RL Cliff",
       "zhTitle": "REVERSAL-BENCH：复位自由RL的不可逆性悬崖",
@@ -276493,77 +279044,6 @@
           "url": "https://arxiv.org/abs/2609.18650",
           "location": "官方摘要；原始published及最新updated元数据",
           "supports": "用无机器人硬件的VR游戏采集目标操作，再提取接触点和子目标等跨本体可供性，少量真机示范适配下游策略。"
-        }
-      ],
-      "status": "brief",
-      "reviewStatus": "abstract_verified",
-      "popularity": {
-        "score": null,
-        "status": "unmeasured",
-        "metrics": {
-          "githubStars": null,
-          "hfUpvotes": null
-        },
-        "basis": "仅为已核实公开关注信号；未知不当零，累计数不代表当日新增或研究质量。",
-        "evidence": []
-      },
-      "dateEvidence": "保留官方API原始提交与最新版本更新时间；本轮首次发现，版本号本身不证明实质变化。",
-      "backfill": false,
-      "changeType": "new",
-      "discoveryDateNote": "本轮扫描开始时间，非逐论文访问时刻。",
-      "discoveredAt": "2026-09-17T02:39:11.180Z",
-      "updatedAt": "2026-09-17T02:39:11.180Z",
-      "lastSeenAt": "2026-09-17T02:39:11.180Z",
-      "revisionEvents": []
-    },
-    {
-      "id": "arxiv:2609.18620",
-      "title": "DeformSmith: Physics Harness-Guided Hierarchical Generation of Deformable Assets for Robot Manipulation",
-      "zhTitle": "DeformSmith：机器人交互反馈驱动可变形资产生成",
-      "category": "systems",
-      "tags": [
-        "机器人系统"
-      ],
-      "type": "arXiv预印本",
-      "contentTypes": [
-        "paper"
-      ],
-      "authors": [
-        "Can Li",
-        "Jie Gu",
-        "Zishun Deng",
-        "Jingmin Chen",
-        "Lei Sun"
-      ],
-      "canonicalUrl": "https://arxiv.org/abs/2609.18620",
-      "publishedAt": "2026-09-16T13:10:34Z",
-      "sourceUpdatedAt": "2026-09-16T13:10:34Z",
-      "version": "v1",
-      "reviewedVersion": "v1官方摘要及已缓存正文范围核对",
-      "checkedAt": "2026-09-17T02:15:58.476212+00:00",
-      "editorialPriority": 86,
-      "summary": "层级智能体逐步构造几何、物理与材料模型，在共享物理测试框架中用机器人操作反馈修正资产，形成可重放交互数据。",
-      "innovation": "层级智能体逐步构造几何、物理与材料模型，在共享物理测试框架中用机器人操作反馈修正资产，形成可重放交互数据。",
-      "links": [
-        {
-          "label": "论文",
-          "url": "https://arxiv.org/abs/2609.18620"
-        },
-        {
-          "label": "最新版本原文",
-          "url": "https://arxiv.org/html/2609.18620v1"
-        },
-        {
-          "label": "作者项目/代码",
-          "url": "https://can-lee.github.io/deformsmith-web/"
-        }
-      ],
-      "evidence": "元数据与摘要来自根代理本轮统一arXiv API；本分支仅读缓存及已到达原文，不将摘要简讯标成完整分析。",
-      "evidenceDetails": [
-        {
-          "url": "https://arxiv.org/abs/2609.18620",
-          "location": "官方摘要；原始published及最新updated元数据",
-          "supports": "层级智能体逐步构造几何、物理与材料模型，在共享物理测试框架中用机器人操作反馈修正资产，形成可重放交互数据。"
         }
       ],
       "status": "brief",
@@ -282333,77 +284813,6 @@
       ],
       "dateEvidence": {
         "url": "https://arxiv.org/abs/2609.20670",
-        "location": "arXiv首次提交时间；与本轮发现/修订日期分开"
-      },
-      "checkedAt": "2026-09-18T09:32:32.367453+00:00",
-      "reviewStatus": "abstract_verified",
-      "status": "brief_verified",
-      "editorialPriority": 0,
-      "editorialPriorityBasis": "缺少可比热度时按直接机器人关联、证据完整性与方法可复用性补充排序；非公开互动量。",
-      "popularity": {
-        "status": "unmeasured",
-        "score": null,
-        "metrics": {
-          "githubStars": null,
-          "hfUpvotes": null
-        },
-        "evidence": [],
-        "checkedAt": "2026-09-18T09:32:32.367453+00:00",
-        "basis": "仅为已核实公开关注信号；未知不当零，累计数不代表当日新增或研究质量。"
-      },
-      "discoveredAt": "2026-09-18T09:39:21.834Z",
-      "updatedAt": "2026-09-18T09:39:21.834Z",
-      "lastSeenAt": "2026-09-18T09:39:21.834Z",
-      "revisionEvents": []
-    },
-    {
-      "id": "arxiv:2609.20669",
-      "title": "Learning Foresight without Explicit Trajectories for 3D Diffusion Policies",
-      "zhTitle": "Movement Trend Guidance：隐式前瞻的3D扩散策略",
-      "category": "rl",
-      "authors": [
-        "Zhongbo Zhang",
-        "Zaibin Zhang",
-        "Yifan Wang",
-        "Changbo Yan",
-        "Lijun Wang",
-        "Huchuan Lu"
-      ],
-      "contentTypes": [
-        "paper"
-      ],
-      "type": "研究论文",
-      "publishedAt": "2026-09-17T16:44:13Z",
-      "sourceUpdatedAt": "2026-09-17T16:44:13Z",
-      "version": "v1",
-      "canonicalUrl": "https://arxiv.org/abs/2609.20669",
-      "links": [
-        {
-          "label": "论文原文",
-          "url": "https://arxiv.org/abs/2609.20669"
-        },
-        {
-          "label": "阅读全文",
-          "url": "https://arxiv.org/html/2609.20669v1"
-        }
-      ],
-      "tags": [
-        "cs.RO",
-        "cs.CV"
-      ],
-      "summary": "训练时用稀疏未来夹爪状态监督紧凑趋势潜变量，部署仅以历史观测产生的潜变量调制动作生成。",
-      "innovation": "训练时用稀疏未来夹爪状态监督紧凑趋势潜变量，部署仅以历史观测产生的潜变量调制动作生成。",
-      "evidence": "已核验arXiv原始API的标题、摘要、首次提交与最新修订时间；简讯依据作者摘要，不视作独立复现。",
-      "evidenceDetails": [
-        {
-          "url": "https://arxiv.org/abs/2609.20669",
-          "location": "Abstract；Submission history；arXiv API published/updated字段",
-          "supports": "训练时用稀疏未来夹爪状态监督紧凑趋势潜变量，部署仅以历史观测产生的潜变量调制动作生成。",
-          "checkedAt": "2026-09-18T09:32:32.367453+00:00"
-        }
-      ],
-      "dateEvidence": {
-        "url": "https://arxiv.org/abs/2609.20669",
         "location": "arXiv首次提交时间；与本轮发现/修订日期分开"
       },
       "checkedAt": "2026-09-18T09:32:32.367453+00:00",
@@ -314947,77 +317356,6 @@
       "revisionEvents": []
     },
     {
-      "id": "arxiv:2607.08448",
-      "title": "Harness VLA: Steering Frozen VLAs into Reliable Manipulation Primitives via Memory-Guided Agents",
-      "zhTitle": "Harness VLA: Steering Frozen VLAs into Reliable Manipulation Primitives via Memory-Guided Agents",
-      "authors": [
-        "Yixian Zhang",
-        "Huanming Zhang",
-        "Feng Gao",
-        "Xiao Li",
-        "Zhihao Liu",
-        "Chunyang Zhu",
-        "Jiaxing Qiu",
-        "Yuchen Yan",
-        "Jiyuan Liu",
-        "Wenhao Tang",
-        "Zhengru Fang",
-        "Yi Nie",
-        "Changxu Wei",
-        "Yu Wang",
-        "Wenbo Ding",
-        "Chao Yu"
-      ],
-      "publishedAt": "2026-07-09T13:08:54Z",
-      "sourceUpdatedAt": "2026-09-02T13:36:23Z",
-      "version": "v4",
-      "reviewedVersion": "v4",
-      "canonicalUrl": "https://arxiv.org/abs/2607.08448",
-      "category": "vla",
-      "tags": [],
-      "type": "arXiv预印本",
-      "contentTypes": [
-        "paper"
-      ],
-      "summary": "作者方法摘句：“We present Harness VLA, a memory-augmented agentic framework that exposes a frozen VLA as a retryable contact-rich primitive and composes it with a small…”（周度补收，英文原句节选；实验未全文核读）",
-      "innovation": "作者方法摘句：“We present Harness VLA, a memory-augmented agentic framework that exposes a frozen VLA as a retryable contact-rich primitive and composes it with a small…”（周度补收，英文原句节选；实验未全文核读）",
-      "status": "brief_verified",
-      "evidence": "arXiv原始摘要与版本元数据已取得；此简讯保留英文方法摘句，完整实验尚未核读，不表示已验证作者性能结论。",
-      "evidenceDetails": [
-        {
-          "url": "https://arxiv.org/abs/2607.08448",
-          "location": "arXiv API entry: title / summary / published / updated",
-          "supports": "论文身份、原始日期、当前版本与方法摘句",
-          "checkedAt": "2026-09-21T02:50:27.325645+00:00"
-        }
-      ],
-      "links": [
-        {
-          "label": "论文原文",
-          "url": "https://arxiv.org/abs/2607.08448"
-        }
-      ],
-      "editorialPriority": 50,
-      "discoveryNote": "周度30天补查首次收录；原稿可能早于本窗口，近期修订触发检索，不冒充今日新论文。",
-      "checkedAt": "2026-09-21T02:50:27.325645+00:00",
-      "popularity": {
-        "score": null,
-        "status": "unmeasured",
-        "metrics": {
-          "githubStars": null,
-          "hfUpvotes": null
-        },
-        "basis": "尚未取得可归属的数值热度信号；缺失为null。",
-        "evidence": [],
-        "checkedAt": "2026-09-21T02:50:27.325645+00:00"
-      },
-      "reviewStatus": "official_abstract_only",
-      "discoveredAt": "2026-09-21T03:15:56.151807+00:00",
-      "updatedAt": "2026-09-21T03:15:56.151807+00:00",
-      "lastSeenAt": "2026-09-21T03:15:56.151807+00:00",
-      "revisionEvents": []
-    },
-    {
       "id": "arxiv:2609.02575",
       "title": "Pre-Lane-change Signal in Transitional Autonomous Vehicles: Results from Controlled Experiments",
       "zhTitle": "Pre-Lane-change Signal in Transitional Autonomous Vehicles: Results from Controlled Experiments",
@@ -347467,7 +349805,7 @@
         "arxiv:2609.01281"
       ],
       "summary": "Show-Harness：用语义动作接口连接 VLM 与机器人：模型选择平移、旋转、夹爪等语义单元，机体解释器负责尺度、坐标转换及低层控制；感知、子任务规划、历史和恢复模块形成反馈循环。GUMI 让人与代理通过同样的按钮采集示范，小模型可沿用原生词表学习动作，无需新增动作头。\n\nOpenWAM：用开放模块化实验寻找世界动作模型的预训练配方：提供模块化Infra、受控Study和OpenWAM-α。实验归纳出独立动作容量、世界到动作的信息流、同步联合去噪与人类第一视角/机器人数据单阶段共训的重要性。\n\nPuffin-World：给生成世界加入重力方向与深度，减少视角漂移：把重力与纬度、深度、外观作为原生状态；Omni-Camera融合绝对朝向与相对射线几何，并沿已知相机轨迹传播重力参照。\n\nRoboSPA：把空间辨认、动作执行和长程记忆的失败分开诊断：围绕空间推理与长程规划建立56个基础任务、五级难度、280个变体，报告约52.7万条仿真轨迹。用校正随机选择的目标准确度和子任务进度指标补充终局成功率，并提供细分失败类型。\n\nEmbodiedSkills：用可执行技能契约连接规划、VLA和结果验证：技能使用带类型的输入输出、前置条件和失败状态；运行时检查有效性与证据新鲜度，再执行有限动作块并收集验证结果。统一轨迹记录支持分别训练规划器、验证器和底层VLA，而无需改写整个闭环。",
-      "rankingNote": "17 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 分数为20×ln(1+HF论文累计投票)+10×ln(1+可归属仓库累计stars)，未知分量不提供信号；累计量不是当日增量。共享基础框架不归到单篇；仅表示本轮可测来源范围，历史观测保留各自时间。",
+      "rankingNote": "17 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 热度采用 20×ln(1+HF论文投票)+10×ln(1+可归属仓库累计stars)。累计数非当日新增；未取得项为null。9/21晚间HF已刷新，GitHub API触发限流后停止，既有stars保留各自历史观测时间。",
       "editionIds": [
         "2026-09-13-initial",
         "2026-09-13-1700",
@@ -347484,7 +349822,7 @@
         "arxiv:2609.03199"
       ],
       "summary": "今日Top 5仍聚焦Qwen-Drive、Zetta、WMRL、Marigold v2和RoboTok，分别连接驾驶、机器人基础模型、世界模型训练、单目几何与动作表征。晚间DriveZero与Isaac 0.5补充了可控监督和数据效率的证据；离线指标能否转化为真实闭环鲁棒性，仍值得持续跟踪。",
-      "rankingNote": "58 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 分数为20×ln(1+HF论文累计投票)+10×ln(1+可归属仓库累计stars)，未知分量不提供信号；累计量不是当日增量。共享基础框架不归到单篇；仅表示本轮可测来源范围，历史观测保留各自时间。",
+      "rankingNote": "58 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 热度采用 20×ln(1+HF论文投票)+10×ln(1+可归属仓库累计stars)。累计数非当日新增；未取得项为null。9/21晚间HF已刷新，GitHub API触发限流后停止，既有stars保留各自历史观测时间。",
       "editionIds": [
         "2026-09-14-1000",
         "2026-09-14-1700"
@@ -347500,7 +349838,7 @@
         "arxiv:2609.15195"
       ],
       "summary": "今日Top 5连接视频动作模型、开放数据与导航验证：Zero-WAM用人类视频提示未见任务，ACE-Ego-0开放相机坐标动作数据，Habitat-GS以动态高斯场景支持导航仿真，PhysBrain 1.5用离散词表连接理解、动作和未来状态，SEA-Nav结合强化学习与几何控制应对杂乱环境。晚间新证据提醒我们，仿真逼真度和任务成功率需要同时检查碰撞、干预与真机条件；模型开放和高成功率本身仍不足以证明安全泛化。",
-      "rankingNote": "41 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 分数为20×ln(1+HF论文累计投票)+10×ln(1+可归属仓库累计stars)，未知分量不提供信号；累计量不是当日增量。共享基础框架不归到单篇；仅表示本轮可测来源范围，历史观测保留各自时间。",
+      "rankingNote": "41 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 热度采用 20×ln(1+HF论文投票)+10×ln(1+可归属仓库累计stars)。累计数非当日新增；未取得项为null。9/21晚间HF已刷新，GitHub API触发限流后停止，既有stars保留各自历史观测时间。",
       "editionIds": [
         "2026-09-15-1000",
         "2026-09-15-1700"
@@ -347516,7 +349854,7 @@
         "arxiv:2509.06285"
       ],
       "summary": "今日 Top 5 合并早晚结果：N0-VTLA 新增触觉条件八任务权重，ACE-Ego-0 补充双臂真机数据，EBench 细分移动操作能力与泛化，HumanEgo 探索人类视频迁移，DCReg 改善退化场景点云配准。N0的新检查点分数尚不能归因于触觉输入；榜单按可归属的累计公开关注排序，包含旧研究补录，不代表当天首发或性能排名。",
-      "rankingNote": "41 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 分数为20×ln(1+HF论文累计投票)+10×ln(1+可归属仓库累计stars)，未知分量不提供信号；累计量不是当日增量。共享基础框架不归到单篇；仅表示本轮可测来源范围，历史观测保留各自时间。",
+      "rankingNote": "41 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 热度采用 20×ln(1+HF论文投票)+10×ln(1+可归属仓库累计stars)。累计数非当日新增；未取得项为null。9/21晚间HF已刷新，GitHub API触发限流后停止，既有stars保留各自历史观测时间。",
       "editionIds": [
         "2026-09-16-1000",
         "2026-09-16-1700"
@@ -347532,7 +349870,7 @@
         "arxiv:2605.00416"
       ],
       "summary": "今日关注重点随已核实累计关注更新：ActionPiece的动作分词、太初空间理解模型、患者专属手术导航配准、部署中强化学习与机器人视觉推理。晚间补充联邦RL、光学实验室闭环、部署与数据更新；旧论文补录保留原始日期。",
-      "rankingNote": "39 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 分数为20×ln(1+HF论文累计投票)+10×ln(1+可归属仓库累计stars)，未知分量不提供信号；累计量不是当日增量。共享基础框架不归到单篇；仅表示本轮可测来源范围，历史观测保留各自时间。",
+      "rankingNote": "40 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 热度采用 20×ln(1+HF论文投票)+10×ln(1+可归属仓库累计stars)。累计数非当日新增；未取得项为null。9/21晚间HF已刷新，GitHub API触发限流后停止，既有stars保留各自历史观测时间。",
       "editionIds": [
         "2026-09-17-1000",
         "2026-09-17-1700"
@@ -347548,7 +349886,7 @@
         "arxiv:2609.20817"
       ],
       "summary": "今日关注机器人预测、记忆与接触执行：JEPA-Anything的因子化世界模型在不同控制环境中收益不一，PonderPounce补上真机记忆实验；触觉WAM、人类示教共训与经典规划组合提供提效思路。Figure Helix2.5报告30个未见家庭测试，须区分新环境与新任务。晚间补齐早间arXiv访问受限的候选，修订与新稿分别记录。",
-      "rankingNote": "16 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 分数为20×ln(1+HF论文累计投票)+10×ln(1+可归属仓库累计stars)，未知分量不提供信号；累计量不是当日增量。共享基础框架不归到单篇；仅表示本轮可测来源范围，历史观测保留各自时间。",
+      "rankingNote": "17 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 热度采用 20×ln(1+HF论文投票)+10×ln(1+可归属仓库累计stars)。累计数非当日新增；未取得项为null。9/21晚间HF已刷新，GitHub API触发限流后停止，既有stars保留各自历史观测时间。",
       "editionIds": [
         "2026-09-18-1000",
         "2026-09-18-1700"
@@ -347564,7 +349902,7 @@
         "doi:10.1002/adrr.70163"
       ],
       "summary": "今日围绕价值估计、可执行动作与真实数据展开：SeeQ用子任务价值筛选动作，Dream.exe揭示视频转动作的深度瓶颈；晚间补录MorFiC的跨机型critic校准，新增空地机器人语音协作搜救分析，并核验React七个新触觉片段。ActiveScale代码与ActSafeGuard的附表限制保留在对应记录。",
-      "rankingNote": "2 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 分数为20×ln(1+HF论文累计投票)+10×ln(1+可归属仓库累计stars)，未知分量不提供信号；累计量不是当日增量。共享基础框架不归到单篇；仅表示本轮可测来源范围，历史观测保留各自时间。",
+      "rankingNote": "2 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 热度采用 20×ln(1+HF论文投票)+10×ln(1+可归属仓库累计stars)。累计数非当日新增；未取得项为null。9/21晚间HF已刷新，GitHub API触发限流后停止，既有stars保留各自历史观测时间。",
       "editionIds": [
         "2026-09-19-1000",
         "2026-09-19-1000-correction",
@@ -347581,7 +349919,7 @@
         "report:g1-dex3-brainco-handover-20260919"
       ],
       "summary": "今天新增“学习补足经典理论”专题，聚焦残差插书、ToIA动力学修正与G1换手的传统基线困难。晚间新增EdgeArm、OGBench操作审计及AGOO可复现性检查；同时补读LIT、Pelican-Sim、HarnessVLN和Fingers as Legs四篇历史简讯。Top 5按已测公开信号更新，旧论文仍显示原始日期；生成质量、仿真结果和真机可靠性分别评价。",
-      "rankingNote": "6 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 分数为20×ln(1+HF论文累计投票)+10×ln(1+可归属仓库累计stars)，未知分量不提供信号；累计量不是当日增量。共享基础框架不归到单篇；仅表示本轮可测来源范围，历史观测保留各自时间。",
+      "rankingNote": "6 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 热度采用 20×ln(1+HF论文投票)+10×ln(1+可归属仓库累计stars)。累计数非当日新增；未取得项为null。9/21晚间HF已刷新，GitHub API触发限流后停止，既有stars保留各自历史观测时间。",
       "editionIds": [
         "2026-09-20-1000",
         "2026-09-20-learning-control",
@@ -347597,14 +349935,15 @@
         "arxiv:2608.09892",
         "arxiv:2606.00307"
       ],
-      "summary": "周度补查与今日新增合并整理：世界动作模型、策略评测和经典几何系统是本轮重点；新增受限残差扰动补偿、学习逆运动学与人形安全边界的对照分析。τ₀-VLA新增可下载LIBERO低层检查点，LIFD／AdaDE／VLA-Precision更新报告值或实验条件。补收记录保留原始日期；热度为可测累计信号。",
-      "rankingNote": "102 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 分数为20×ln(1+HF论文累计投票)+10×ln(1+可归属仓库累计stars)，未知分量不提供信号；累计量不是当日增量。共享基础框架不归到单篇；仅表示本轮可测来源范围，历史观测保留各自时间。",
+      "summary": "今日合并周度补查与早晚检索：世界动作模型、策略评测及学习补足经典控制持续更新。晚间新增DiVE主动感知与两份跨平台IMU报告，补全基元引导MPC、Harness VLA等旧简讯；VLA适配诊断v2收窄全量微调对照结论。原始日期与编辑补读分开，Top 5按可测累计关注信号排序。",
+      "rankingNote": "105 项有已核实的公开热度信号并优先排序；其余按编辑关注度、原始发表日期补充，缺失数据不视为零热度。 热度采用 20×ln(1+HF论文投票)+10×ln(1+可归属仓库累计stars)。累计数非当日新增；未取得项为null。9/21晚间HF已刷新，GitHub API触发限流后停止，既有stars保留各自历史观测时间。",
       "editionIds": [
-        "2026-09-21-1000"
+        "2026-09-21-1000",
+        "2026-09-21-1700"
       ],
-      "candidateCount": 935
+      "candidateCount": 942
     }
   },
-  "rankingMethodNote": "分数为20×ln(1+HF论文累计投票)+10×ln(1+可归属仓库累计stars)，未知分量不提供信号；累计量不是当日增量。共享基础框架不归到单篇；仅表示本轮可测来源范围，历史观测保留各自时间。",
-  "popularityCheckedAt": "2026-09-21T03:15:56.151807+00:00"
+  "rankingMethodNote": "热度采用 20×ln(1+HF论文投票)+10×ln(1+可归属仓库累计stars)。累计数非当日新增；未取得项为null。9/21晚间HF已刷新，GitHub API触发限流后停止，既有stars保留各自历史观测时间。",
+  "popularityCheckedAt": "2026-09-21T09:18:20.170466+00:00"
 }
