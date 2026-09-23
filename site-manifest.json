@@ -1,10 +1,10 @@
 {
   "appVersion": "2026-09-21-reader-v2.6-fast-loading",
-  "assetsVersion": "7be4972bca701ef487b4",
-  "readerVersion": "d7be9e485992af4a156c",
-  "latestEditionId": "2026-09-22-1700",
-  "records": 382,
-  "briefs": 1984,
-  "lastScanAt": "2026-09-22T09:48:12.825616+00:00",
-  "contentHash": "823b0af61bce160cb127cf8f85a3f672c401515c576d3f605a3e13ce95082a39"
+  "assetsVersion": "88fcc78155c61d3622a4",
+  "readerVersion": "edd23bd5bc6bb1d3566c",
+  "latestEditionId": "2026-09-23-1000",
+  "records": 413,
+  "briefs": 2096,
+  "lastScanAt": "2026-09-23T02:46:15.566820+00:00",
+  "contentHash": "19b67460ec0b3526498f8021cb1de26ae7b8a7ffba8695e491664da0adf634dc"
 }
