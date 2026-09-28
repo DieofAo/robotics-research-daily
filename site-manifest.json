@@ -1,10 +1,10 @@
 {
   "appVersion": "2026-09-21-reader-v2.6-fast-loading",
-  "assetsVersion": "f45569f3954f7057b210",
-  "readerVersion": "5e651c3525ba19148e26",
-  "latestEditionId": "2026-09-27-badminton-editorial",
-  "records": 554,
-  "briefs": 2272,
-  "lastScanAt": "2026-09-27T10:44:14.074808+00:00",
-  "contentHash": "d6c1239269e57f0ee452e5ec6858a7580fa8fee20b3f83949bbe5fdaf2b31543"
+  "assetsVersion": "0754a4a5efcfb8d8c3cf",
+  "readerVersion": "863c3306a80365f7bd34",
+  "latestEditionId": "2026-09-28-1000",
+  "records": 583,
+  "briefs": 2374,
+  "lastScanAt": "2026-09-28T02:43:52.918042+00:00",
+  "contentHash": "1f69e65ee2604950f6b8f687c1a957bc898c7eae35e50df3ea8d125cf08c3f6f"
 }
