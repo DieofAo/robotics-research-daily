@@ -93,7 +93,7 @@ h1 { font-size: clamp(29px, 2.4vw, 39px); letter-spacing: -.9px; margin: 0 0 8px
 .day-stamp { font-size: 58px; font-weight: 650; font-variant-numeric: tabular-nums; letter-spacing: -3px; line-height: 1; color: #c5d5f0; flex: none; }
 
 /* Search is a compact tool surface, with the reading content directly below. */
-.search-panel { margin: 0 0 28px; padding: 18px 20px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow); }
+.search-panel { margin: 0 0 28px; padding: 18px 20px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow); scroll-margin-top: 90px; }
 .search-title { display: block; margin-bottom: 9px; font-size: 16px; font-weight: 650; color: var(--ink); }
 .search-row { display: flex; align-items: center; gap: 10px; }
 .search { position: relative; min-width: 0; flex: 1; display: flex; align-items: center; gap: 12px; background: #f7f9fd; border: 1px solid #cbd7e8; border-radius: 11px; padding: 0 16px; min-height: 54px; }
@@ -105,6 +105,13 @@ h1 { font-size: clamp(29px, 2.4vw, 39px); letter-spacing: -.9px; margin: 0 0 8px
 .search-submit:hover { background: var(--accent-dark); }
 .clear-search { display: grid; place-content: center; flex: none; width: 36px; height: 44px; font-size: 27px; line-height: 1; color: var(--muted); border-radius: 8px; }
 .clear-search:hover { background: var(--accent-soft); color: var(--accent-dark); }
+.search-shortcut { flex: none; min-height: 44px; color: var(--muted); }
+.search-shortcut:hover { color: var(--accent); }
+.search-shortcut:disabled { opacity: .5; cursor: default; }
+.search-panel kbd { display: inline-block; padding: 0 6px; border: 1px solid #d5deeb; border-bottom-width: 2px; border-radius: 5px; background: #f7f9fd; font: 12px/1.7 ui-monospace, SFMono-Regular, Consolas, monospace; white-space: nowrap; }
+.shortcut-help { display: flex; flex-wrap: wrap; gap: 4px 18px; }
+.shortcut-help span { white-space: nowrap; }
+@media (hover: none) and (pointer: coarse) { .search-shortcut, .shortcut-help { display: none; } }
 .search-options { display: flex; flex-wrap: wrap; gap: 4px 22px; align-items: center; margin-top: 9px; font-size: 14px; color: #4c5d78; }
 .search-options label { display: inline-flex; align-items: center; gap: 9px; min-height: 44px; }
 .search-options select { min-height: 38px; max-width: 160px; border: 1px solid var(--line); border-radius: 8px; background: white; padding: 4px 9px; color: var(--ink); font-size: 14px; }

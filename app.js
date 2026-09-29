@@ -1,5 +1,5 @@
 'use strict';
-const APP_VERSION = '2026-09-21-reader-v2.6-fast-loading';
+const APP_VERSION = '2026-09-29-reader-v2.7-keyboard-search';
 const FAVORITES_KEY = 'robotics-daily-favorites-v1';
 const FAVORITES_SEEN_KEY = 'robotics-daily-favorites-seen-v1';
 let db = window.ROBOTICS_DAILY || { records: [], editions: [], briefs: [] };
@@ -288,7 +288,7 @@ function setLoading(message = '', failed = false) {
   node.hidden = !message;
   node.innerHTML = message ? `${esc(message)}${failed ? ' <button type="button" data-retry="true">重试加载</button>' : ''}` : '';
   const partial = !!db.archivePreview || !db.editions.length;
-  for (const id of ['search', 'search-scope', 'all-history', 'export-favorites']) $(id).disabled = partial;
+  for (const id of ['search', 'search-shortcut', 'search-scope', 'all-history', 'export-favorites']) $(id).disabled = partial;
 }
 async function fetchJSON(url, timeout = 25000) {
   const controller = new AbortController(), timer = setTimeout(() => controller.abort(), timeout);
@@ -384,12 +384,37 @@ $('latest-day').addEventListener('click', () => setDay([...dateMap.keys()].sort(
 $('all-history').addEventListener('click', () => setDay('all'));
 $('clear-filters').addEventListener('click', resetFilters);
 let composingSearch = false;
+function focusSearch() {
+  const input = $('search');
+  if (input.disabled) return false;
+  input.focus({ preventScroll: true });
+  input.select();
+  $('research-search').scrollIntoView({ block: 'nearest', behavior: 'instant' });
+  return true;
+}
+function clearSearch() { clearTimeout(refreshTimer); $('search').value = ''; state.query = ''; render(); $('search').focus(); }
+const searchShortcutLabel = /Mac|iPhone|iPad|iPod/i.test(typeof navigator === 'undefined' ? '' : navigator.platform) ? '⌘ K' : 'Ctrl K';
+$('search-shortcut-key').textContent = searchShortcutLabel;
+$('search-shortcut').addEventListener('click', focusSearch);
+document.addEventListener('keydown', event => {
+  if (event.defaultPrevented || event.isComposing || composingSearch || event.keyCode === 229) return;
+  const key = event.key.toLowerCase(), target = event.target;
+  const modified = event.metaKey || event.ctrlKey || event.altKey;
+  const editing = target.isContentEditable || target.closest('input, textarea, select, [role="textbox"], [role="searchbox"], [role="combobox"]');
+  if (((event.metaKey || event.ctrlKey) && !event.altKey && !event.shiftKey && key === 'k') || (key === '/' && !modified && !editing)) {
+    if (focusSearch()) event.preventDefault();
+  } else if (key === 'escape' && !modified && document.activeElement === $('search')) {
+    event.preventDefault();
+    if ($('search').value || state.query) clearSearch();
+    else $('search').blur();
+  }
+});
 function updateSearch() { state.query = $('search').value.trim(); clearTimeout(refreshTimer); refreshTimer = setTimeout(render, 120); }
 $('search').addEventListener('input', event => { if (!composingSearch && !event.isComposing) updateSearch(); });
 $('search').addEventListener('compositionstart', () => { composingSearch = true; clearTimeout(refreshTimer); });
 $('search').addEventListener('compositionend', () => { composingSearch = false; updateSearch(); });
 $('research-search').addEventListener('submit', event => { event.preventDefault(); if (composingSearch) return; clearTimeout(refreshTimer); state.query = $('search').value.trim(); render(); });
-$('clear-search').addEventListener('click', () => { clearTimeout(refreshTimer); $('search').value = ''; state.query = ''; render(); $('search').focus(); });
+$('clear-search').addEventListener('click', clearSearch);
 $('search-scope').addEventListener('change', event => { state.searchScope = event.target.value === 'day' ? 'day' : 'all'; render(); });
 $('fuzzy-search').addEventListener('change', event => { state.fuzzy = event.target.checked; render(); });
 $('refresh').addEventListener('click', () => refreshData(true));
