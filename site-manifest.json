@@ -1,10 +1,10 @@
 {
   "appVersion": "2026-09-29-reader-v2.7-keyboard-search",
-  "assetsVersion": "ac0c22955abf691ee72b",
-  "readerVersion": "573b001406ffa8b0611b",
-  "latestEditionId": "2026-09-30-1000",
-  "records": 653,
-  "briefs": 2706,
-  "lastScanAt": "2026-09-30T02:52:01.984573+00:00",
-  "contentHash": "5aac54eebad601d413c6122e0bd34b6dca1fcd27a7b37c66fbf06c75429a580b"
+  "assetsVersion": "92d35a05e0e062262584",
+  "readerVersion": "834f1bf715d65e15c646",
+  "latestEditionId": "2026-09-30-1700",
+  "records": 689,
+  "briefs": 2853,
+  "lastScanAt": "2026-09-30T09:55:17.829278+00:00",
+  "contentHash": "59eb216c852b112a11268236f5b744ee3c2adccb13202e4801ae4d5f6ca3fa1c"
 }
