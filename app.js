@@ -110,15 +110,17 @@ function searchingAllDates() { return state.mode !== 'favorites' && !!state.quer
 function rebuild() {
   db.records = array(db.records); db.editions = array(db.editions); db.briefs = array(db.briefs);
   lookup = new Map([...db.briefs, ...db.records].map(record => [record.id, record]));
+  const canonicalIds = new Map([...lookup.values()].flatMap(record => array(record.aliasIds).map(id => [id, record.id])));
+  const canonicalId = id => canonicalIds.get(id) || id;
   dateMap = new Map(); searchIndex = new WeakMap();
   for (const edition of [...db.editions].sort((a, b) => String(a.startedAt || '').localeCompare(String(b.startedAt || '')))) {
     const day = editionDay(edition); if (!day) continue;
     if (!dateMap.has(day)) dateMap.set(day, { editions: [], records: new Map(), briefIds: new Set(), fullIds: new Set(), ids: new Set() });
     const group = dateMap.get(day); group.editions.push(edition);
-    const snapshots = new Map([...array(edition.briefsSnapshot), ...array(edition.recordsSnapshot)].map(record => [record.id, record]));
-    const ids = unique([...array(edition.addedIds), ...array(edition.updatedIds), ...array(edition.rankedIds), ...array(edition.featuredIds), ...array(edition.briefIds), ...snapshots.keys()]);
-    const ranked = array(edition.rankedIds).length ? edition.rankedIds : ids.filter(id => lookup.has(id)).sort((a, b) => compareRecords(lookup.get(a), lookup.get(b)));
-    const full = Array.isArray(edition.featuredIds) ? edition.featuredIds : ranked.filter(id => lookup.get(id)?.background || snapshots.get(id)?.background).slice(0, 30);
+    const snapshots = new Map([...array(edition.briefsSnapshot), ...array(edition.recordsSnapshot)].map(record => [canonicalId(record.id), { ...record, id: canonicalId(record.id) }]));
+    const ids = unique([...array(edition.addedIds), ...array(edition.updatedIds), ...array(edition.rankedIds), ...array(edition.featuredIds), ...array(edition.briefIds), ...snapshots.keys()].map(canonicalId));
+    const ranked = array(edition.rankedIds).length ? unique(edition.rankedIds.map(canonicalId)) : ids.filter(id => lookup.has(id)).sort((a, b) => compareRecords(lookup.get(a), lookup.get(b)));
+    const full = Array.isArray(edition.featuredIds) ? unique(edition.featuredIds.map(canonicalId)) : ranked.filter(id => lookup.get(id)?.background || snapshots.get(id)?.background).slice(0, 30);
     for (const id of ids) {
       const latest = lookup.get(id), snapshot = snapshots.get(id);
       const comparison = snapshot?.learningClassical || (snapshot?.version === latest?.version ? latest?.learningClassical : undefined);
