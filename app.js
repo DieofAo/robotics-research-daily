@@ -1,5 +1,5 @@
 'use strict';
-const APP_VERSION = '2026-09-29-reader-v2.7-keyboard-search';
+const APP_VERSION = '2026-10-27-reader-v2.8-date-precision';
 const FAVORITES_KEY = 'robotics-daily-favorites-v1';
 const FAVORITES_SEEN_KEY = 'robotics-daily-favorites-seen-v1';
 let db = window.ROBOTICS_DAILY || { records: [], editions: [], briefs: [] };
@@ -10,8 +10,8 @@ const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&a
 const safeUrl = value => { try { const url = new URL(value); return ['https:', 'http:'].includes(url.protocol) ? url.href : '#'; } catch { return '#'; } };
 const validDate = value => value && !Number.isNaN(new Date(value).getTime());
 const dayOf = value => validDate(value) ? new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Shanghai', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date(value)) : '';
-const sourceDate = value => /^\d{4}-\d{2}-\d{2}/.exec(String(value || ''))?.[0] || '';
-const shortTime = value => validDate(value) ? new Intl.DateTimeFormat('zh-CN', { timeZone: 'Asia/Shanghai', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hour12: false }).format(new Date(value)) : '待更新';
+const sourceDate = value => /^(?:\d{4}-\d{2}-\d{2}|\d{4}-\d{2}$|\d{4}$)/.exec(String(value || ''))?.[0] || '';
+const shortTime = value => /^\d{4}-\d{2}-\d{2}$/.test(String(value || '')) ? value.slice(5).replace('-', '/') : validDate(value) ? new Intl.DateTimeFormat('zh-CN', { timeZone: 'Asia/Shanghai', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hour12: false }).format(new Date(value)) : '待更新';
 const titleOf = value => categories.find(category => category[0] === value)?.[1] || '其他研究';
 const shortCategory = value => titleOf(value).split(' · ')[0];
 const recordTitle = record => record.zhTitle || record.title || '未命名研究';
