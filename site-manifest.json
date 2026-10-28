@@ -1,10 +1,10 @@
 {
   "appVersion": "2026-10-27-reader-v2.8-date-precision",
-  "assetsVersion": "ab6d3b192821e29f64ee",
-  "readerVersion": "487024680560b609faf7",
-  "latestEditionId": "2026-10-27-1700",
-  "records": 1361,
-  "briefs": 5410,
-  "lastScanAt": "2026-10-27T10:48:16.780519+00:00",
-  "contentHash": "03f279e3ac0c94761824e3d1eae46997ee2c6efaea3ff32aa0518daae86ee690"
+  "assetsVersion": "aa0d5b24f9296a0a68b5",
+  "readerVersion": "32c5092e2966822265c8",
+  "latestEditionId": "2026-10-28-1000",
+  "records": 1391,
+  "briefs": 5500,
+  "lastScanAt": "2026-10-28T03:31:30.080292+00:00",
+  "contentHash": "a630699cbd0ca35f5af891d3744c0c8df3ccb6e2ad7f8ce6fcbe83730165216d"
 }
