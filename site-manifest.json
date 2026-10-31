@@ -1,10 +1,10 @@
 {
-  "appVersion": "2026-10-27-reader-v2.8-date-precision",
-  "assetsVersion": "746f5eac29c242feae23",
-  "readerVersion": "7e3560868b17f4c8278c",
-  "latestEditionId": "2026-10-30-1700",
-  "records": 1481,
-  "briefs": 5612,
-  "lastScanAt": "2026-10-30T10:13:11.051941+00:00",
-  "contentHash": "01b4de9201f0bf3ff144244f0bb07c4be18a92661fea3c91c6bffeb650b7508f"
+  "appVersion": "2026-10-31-reader-v2.9-favorite-alias-signatures",
+  "assetsVersion": "b6b77897471b6867c73b",
+  "readerVersion": "584238cc2f21094d4caf",
+  "latestEditionId": "2026-10-31-1000",
+  "records": 1511,
+  "briefs": 5586,
+  "lastScanAt": "2026-10-31T03:20:04.027026+00:00",
+  "contentHash": "79c168a10fa8bfeea29e6a0bd0c953790d599e3a82b72878c8d8950a07215e94"
 }

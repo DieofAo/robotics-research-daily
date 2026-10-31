@@ -1,5 +1,5 @@
 'use strict';
-const APP_VERSION = '2026-10-27-reader-v2.8-date-precision';
+const APP_VERSION = '2026-10-31-reader-v2.9-favorite-alias-signatures';
 const FAVORITES_KEY = 'robotics-daily-favorites-v1';
 const FAVORITES_SEEN_KEY = 'robotics-daily-favorites-seen-v1';
 let db = window.ROBOTICS_DAILY || { records: [], editions: [], briefs: [] };
@@ -162,7 +162,13 @@ function normalizeFavoriteAliases() {
     const canonical = aliases.get(id);
     if (!canonical || canonical === id) continue;
     favoriteIds.delete(id); favoriteIds.add(canonical);
-    if (!favoriteSeen[canonical] && favoriteSeen[id]) favoriteSeen[canonical] = favoriteSeen[id];
+    if (!favoriteSeen[canonical] && favoriteSeen[id]) {
+      const record = lookup.get(canonical), migration = record?.aliasFavoriteSignatures?.[id];
+      // Only an audited identity merge may translate a seen signature. A later
+      // research change or an unknown saved signature must keep its update alert.
+      const sameMerge = typeof migration?.previousSignature === 'string' && typeof migration.canonicalSignature === 'string' && favoriteSeen[id] === migration.previousSignature && signature(record) === migration.canonicalSignature;
+      favoriteSeen[canonical] = sameMerge ? migration.canonicalSignature : favoriteSeen[id];
+    }
     delete favoriteSeen[id]; changed = true;
   }
   if (changed) storeFavorites();
