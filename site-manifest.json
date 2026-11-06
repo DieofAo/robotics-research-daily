@@ -1,10 +1,10 @@
 {
   "appVersion": "2026-10-31-reader-v2.9-favorite-alias-signatures",
-  "assetsVersion": "0e11adfafb470fa67ad8",
-  "readerVersion": "411417aa125adc9eb9b7",
-  "latestEditionId": "2026-11-05-1700",
-  "records": 1672,
-  "briefs": 6088,
-  "lastScanAt": "2026-11-05T10:42:19.576147+00:00",
-  "contentHash": "82b0fac8bcec17c9e2a1eddeb27f00f66c16bc7001b58601f2a0b6b5d180aa43"
+  "assetsVersion": "37c51abb44ab80bc058c",
+  "readerVersion": "4dce544581cc60e95bf0",
+  "latestEditionId": "2026-11-06-1000",
+  "records": 1702,
+  "briefs": 6087,
+  "lastScanAt": "2026-11-06T03:44:54.549573+00:00",
+  "contentHash": "77bb7b25a5eb5901761d93d90284b7af3eea9a4eb8dc431c3ec77039d6f81782"
 }
